@@ -1,0 +1,31 @@
+// Add to TOP of AR0046
+IF
+	OnCreation()
+	Global("X3RebQuest","GLOBAL",2)
+THEN
+	RESPONSE #100
+		FadeToColor([0.0],0)
+		MoveViewObject(Player1,INSTANT)
+		SetInterrupt(FALSE)
+		ClearAllActions()
+		StartCutSceneMode()
+		MultiPlayerSync()
+		Explore()
+		Wait(1)
+		SetGlobal("X3RebQuest","GLOBAL",3)
+		ActionOverride(Player1,JumpToPoint([1058.38]))
+		ActionOverride(Player2,JumpToPoint([1132.88]))
+		ActionOverride(Player3,JumpToPoint([1110.28]))
+		ActionOverride(Player4,JumpToPoint([1174.75]))
+		ActionOverride(Player5,JumpToPoint([1026.44]))
+		ActionOverride(Player6,JumpToPoint([1163.132]))
+		CreateCreature("RETHUG01",[358.436],NE)  // Thug
+		CreateCreature("RETHUG01",[432.330],NE)  // Thug
+		CreateCreature("RETHUG02",[836.554],NW)  // Mage
+		CreateCreature("RETHUG03",[722.690],NW)  // Thug
+		CreateCreature("RETHUG03",[880.440],NW)  // Thug
+		CreateCreature("X3RAMB1",[577.470],NE)  // Leader
+		Wait(1)
+		StartCutScene("X3RCut01")
+END
+

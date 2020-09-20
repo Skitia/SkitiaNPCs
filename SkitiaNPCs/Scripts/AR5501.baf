@@ -1,0 +1,20 @@
+IF
+InParty("X3Vie")
+Global("X3VieQuest","GLOBAL",3) // Only spawns if Vienxay got to a certain point in her quest. 
+Global("X3VieSageSpawn","AR5501",0)
+THEN
+RESPONSE #100
+SetGlobal("X3VieSageSpawn","AR5501",1)
+CreateCreature("X3VSAG25",[688.284],2)
+Continue()
+END
+
+IF 
+Global("X3HelToBQuest","GLOBAL",3) // Only spawns if Helga quest started.
+Global("X3HelScrySpawn","AR5501",0)
+THEN
+RESPONSE #100
+SetGlobal("X3HelScrySpawn","AR5501",1)
+CreateCreature("X3HSCRY",[623.381],2)
+Continue()
+END

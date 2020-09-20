@@ -1,0 +1,22 @@
+
+IF
+Global("X3EmiQuest","GLOBAL",2)
+GlobalLT("Chapter","GLOBAL",18)
+Global("X3EGVJSpawn","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3EGVJSpawn","GLOBAL",1)
+CreateCreature("X3EGVJ",[246.489],15)
+CreateCreature("X3EGUARD",[327.489],5)
+Continue()
+END
+
+IF 
+GlobalGT("Chapter","GLOBAL",17)
+Global("X3EGVJSpawn","GLOBAL",1)
+THEN RESPONSE #100 
+SetGlobal("X3EGVJSpawn","GLOBAL",2)
+ActionOverride("X3EGVJ",DestroySelf())
+ActionOverride("X3EGUARD",DestroySelf())
+Continue()
+END 

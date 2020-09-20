@@ -1,0 +1,14 @@
+
+IF
+Global("X3HelSpawns","AR0709",0)
+// EET Checks.
+GlobalLT("chapter","GLOBAL",20)
+!StateCheck("X3Helga",STATE_REALLY_DEAD)
+THEN
+RESPONSE #100
+SetGlobal("X3HelSpawns","AR0709",1)
+CreateCreature("X3Hel",[968.441],SW)
+CreateCreature("X3HArv",[871.447],E)
+Continue()
+END
+

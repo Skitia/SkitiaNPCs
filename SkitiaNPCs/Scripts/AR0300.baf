@@ -1,0 +1,35 @@
+// This file moves Jillian/Bryce to AR0302 
+IF
+Global("X3KGarrisionSpawns","AR0300",0)
+Global("X3KalQuest","GLOBAL",3)
+THEN
+RESPONSE #100
+AddMapNote([3482.1124],~Garrision~) 
+SetGlobal("X3KGarrisionSpawns","AR0300",1)
+CreateCreature("X3KJIL",[3516.1153],SW)
+CreateCreature("X3KBRYCE",[3516.1153],SW)
+SmallWait(1)
+ActionOverride("X3KJIL",EscapeAreaMove("AR0332",273,369,SW))
+ActionOverride("X3KBRYCE",EscapeAreaMove("AR0332",596,191,S))
+Continue()
+END
+
+IF 
+Global("X3KalQuest","GLOBAL",5) 
+Global("X3KSuspectSpawns","AR0300",0) 
+THEN RESPONSE #100 
+SetGlobal("X3KSuspectSpawns","AR0300",1)
+CreateCreature("X3KC",[1780.2734],SW)
+CreateCreature("X3KD",[4000.2977],SW)
+CreateCreature("X3KF",[2122.2505],SW)
+CreateCreature("X3KM",[1905.2907],SW)
+Continue()
+END 
+
+IF 
+Global("X3KSuspectTalk","GLOBAL",4)
+Global("X3KQuest","AR0300",0)
+THEN RESPONSE #100 
+SetGlobal("X3KQuest","AR0300",1)
+AddJournalEntry(@7,QUEST)
+END 

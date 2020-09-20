@@ -1,0 +1,8 @@
+IF 
+InParty("X3Reb")
+Global("X3RebToBEvent","GLOBAL",0)
+THEN RESPONSE #100 
+SetGlobal("X3RebToBEvent","GLOBAL",1)
+CreateCreature("X3RM25",[732.863],15) // X3RM
+Continue()
+END 

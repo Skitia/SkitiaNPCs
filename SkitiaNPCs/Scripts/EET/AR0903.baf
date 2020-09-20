@@ -1,0 +1,22 @@
+// Area Files cannot benefit from the name source change, thus manual EET seperation.
+IF
+Global("X3EmiQuest","GLOBAL",2)
+Global("X3ECHSpawn","GLOBAL",0)
+GlobalLT("Chapter","GLOBAL",18)
+THEN
+RESPONSE #100
+SetGlobal("X3ECHSpawn","GLOBAL",1)
+CreateCreature("X3ECH",[930.1532],15)
+CreateCreature("X3EGOD",[1030.1467],15)
+Continue()
+END
+
+IF 
+GlobalGT("Chapter","GLOBAL",17)
+Global("X3ECHSpawn","GLOBAL",1)
+THEN RESPONSE #100 
+SetGlobal("X3EGVJSpawn","GLOBAL",2)
+ActionOverride("X3ECH",DestroySelf())
+ActionOverride("X3EGOD",DestroySelf())
+Continue()
+END 

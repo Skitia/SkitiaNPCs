@@ -1,0 +1,9 @@
+IF
+Global("X3HelSonSpawn","AR5000",0)
+InParty("X3Hel")
+THEN
+RESPONSE #100
+SetGlobal("X3HelSonSpawn","AR5000",1)
+CreateCreature("X3HSon",[1917.473],NE)
+Continue()
+END

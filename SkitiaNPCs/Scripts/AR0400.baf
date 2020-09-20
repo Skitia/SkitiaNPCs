@@ -1,0 +1,23 @@
+// Kale and Helga both use AR0400, but Kale's library installs it.
+IF
+Global("X3KalSpawns","AR0400",0)
+// EET Checks.
+GlobalLT("chapter","GLOBAL",20)
+!StateCheck("X3Kale",STATE_REALLY_DEAD)
+THEN
+RESPONSE #100
+SetGlobal("X3KalSpawns","AR0400",1)
+CreateCreature("X3Kal",[2644.2344],SW)
+Continue()
+END
+
+// Helga's Poor Guy Talk.
+IF 
+InParty("X3Hel")
+// Quest not Started.
+Global("X3HPOORAlertSpawns","AR0400",0) 
+THEN RESPONSE #100 
+SetGlobal("X3HPOORAlertSpawns","AR0400",1) 
+CreateCreature("X3HPOOR",[1822.2729],SW)
+Continue()
+END 

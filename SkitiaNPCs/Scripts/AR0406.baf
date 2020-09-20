@@ -1,0 +1,122 @@
+// Spawning of Arena NPCs
+IF
+Global("X3HRLSpawn","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3HRLSpawn","GLOBAL",1)
+CreateCreature("X3HRL",[1261.1798],15)
+//CreateCreature("X3HRM",[1220.1877],15)
+Continue()
+END
+
+IF 
+GlobalTimerExpired("X3HGauntletTimer","GLOBAL")
+Global("X3HelQuest","GLOBAL",5)
+THEN 
+RESPONSE #100
+SetGlobal("X3HelQuest","GLOBAL",6)
+CreateCreature("X3HDD",[1396.1848],15)
+Continue()
+END 
+// Player 2 Selected
+IF
+Global("X3P2Arena","AR0406",1)
+THEN RESPONSE #100 
+ActionOverride(Player2,JumpToPoint([769.1728]))
+ActionOverride(Player2,Face(W))
+SetGlobal("X3P2Arena","AR0406",2)
+Continue()
+END
+// Player 3 Selected
+IF
+Global("X3P3Arena","AR0406",1)
+THEN RESPONSE #100 
+ActionOverride(Player3,JumpToPoint([767.1755]))
+ActionOverride(Player3,Face(W))
+SetGlobal("X3P3Arena","AR0406",2)
+Continue()
+END
+// Player 4 Selected
+IF
+Global("X3P4Arena","AR0406",1)
+THEN RESPONSE #100 
+ActionOverride(Player4,JumpToPoint([767.1767]))
+ActionOverride(Player4,Face(W))
+SetGlobal("X3P4Arena","AR0406",2)
+Continue()
+END
+// Player 5 Selected
+IF
+Global("X3P5Arena","AR0406",1)
+THEN RESPONSE #100 
+ActionOverride(Player5,JumpToPoint([765.1793]))
+ActionOverride(Player5,Face(W))
+SetGlobal("X3P5Arena","AR0406",2)
+Continue()
+END
+// Player 6 Selected
+IF
+Global("X3P6Arena","AR0406",1)
+THEN RESPONSE #100 
+ActionOverride(Player6,JumpToPoint([763.1823]))
+ActionOverride(Player6,Face(W))
+SetGlobal("X3P6Arena","AR0406",2)
+Continue()
+END
+// Defeated everyone in first round
+IF 
+Dead("X3HR1F1")
+Dead("X3HR1F2")
+Dead("X3HR1R")
+Global("X3HRoundComplete","GLOBAL",0)
+THEN RESPONSE #100
+Wait(3)
+SetGlobal("X3HRoundComplete","GLOBAL",1)
+FadeToColor([30.0],0)
+Wait(1)
+StartCutSceneMode()
+StartCutScene("X3HCut02")
+Continue()
+END 
+// Defeated everyone in second round 
+IF 
+Dead("X3HR2C1")
+Dead("X3HR2M1")
+Dead("X3HR2F1")
+Global("X3HRoundComplete","GLOBAL",1)
+THEN RESPONSE #100
+Wait(3)
+SetGlobal("X3HRoundComplete","GLOBAL",2)
+FadeToColor([30.0],0)
+Wait(1)
+StartCutSceneMode()
+StartCutScene("X3HCut02")
+Continue()
+END
+// Defeated everyone in final round
+IF 
+Dead("X3HDD")
+Dead("X3HDC")
+Dead("X3HDB")
+Global("X3HRoundComplete","GLOBAL",2)
+THEN RESPONSE #100
+Wait(3)
+SetGlobal("X3HRoundComplete","GLOBAL",3)
+FadeToColor([30.0],0)
+Wait(1)
+StartCutSceneMode()
+StartCutScene("X3HCut02")
+Continue()
+END
+
+IF 
+GlobalTimerExpired("X3Pit","GLOBAL")
+Global("X3PitMove","GLOBAL",1)
+THEN RESPONSE #100 
+SetGlobal("X3PitMove","GLOBAL",0)
+FadeToColor([30.0],0)
+Wait(1)
+ActionOverride(Player1,JumpToPoint([1000.1817]))
+Wait(1)
+FadeFromColor([30.0],0)
+END 

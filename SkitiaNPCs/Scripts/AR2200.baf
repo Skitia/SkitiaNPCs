@@ -1,0 +1,8 @@
+IF
+Global("X3VieQuest","GLOBAL",5) // Only spawns if Vienxay knows to even do the quest.
+THEN
+RESPONSE #100
+SetGlobal("X3VieQuest","GLOBAL",6)
+CreateCreature("X3VSAMIR",[3144.1661],15)
+Continue()
+END

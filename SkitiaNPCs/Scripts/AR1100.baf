@@ -1,0 +1,11 @@
+IF
+Global("X3VieQuest","GLOBAL",2) // Only spawns if Vienxay's quest number isn't past 2 (I.E. hasn't gone to underdark.)
+THEN
+RESPONSE #100
+SetGlobal("X3VieQuest","GLOBAL",3)
+CreateCreature("X3VSAGE",[3968.2700],15)
+CreateCreature("WOLFWI01",[206.1519],15)
+CreateCreature("X3VWOLF",[167.1419],15)
+CreateCreature("WOLFWI01",[436.1319],15)
+Continue()
+END

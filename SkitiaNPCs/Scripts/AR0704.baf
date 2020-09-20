@@ -1,0 +1,29 @@
+
+IF
+Global("X3EmiSpawns","AR0704",0)
+// EET Checks, if old Emily died, she doesn't spawn. Chapter will always be less for everyone else.
+GlobalLT("chapter","GLOBAL",20)
+!StateCheck("X3mily",STATE_REALLY_DEAD)
+THEN
+RESPONSE #100
+SetGlobal("X3EmiSpawns","AR0704",1)
+CreateCreature("X3Emi",[531.622],SE)
+CreateCreature("X3ECath",[598.622],W)
+Continue()
+END
+
+IF 
+Global("X3EmiQuest","GLOBAL",3)
+InMyArea(Player1) // Make sure Player1 is in the area
+InMyArea("X3Emi") // Make sure Emily is in the area 
+THEN RESPONSE #100
+SetGlobal("X3EmiQuest","GLOBAL",4)
+CreateCreature("X3EBRO",[428.411],SW)
+CreateCreature("X3EDAR",[491.398],SW)
+CreateCreature("X3EFATH",[364.446],SE)
+//CreateCreature("X3Emi",[323.478],NE)->This is where Emily will go to when the cutscene starts.
+CreateCreature("X3ECATH",[396.551],NW)
+CreateCreature("X3ECH",[574.440],SW)
+CreateCreature("X3EGVJ",[550.490],SW)
+Continue()
+END 

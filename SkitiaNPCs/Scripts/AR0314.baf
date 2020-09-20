@@ -1,0 +1,10 @@
+// Add to BOTTOM of AR0314
+IF
+	Global("X3RebQuest","GLOBAL",8)
+THEN
+	RESPONSE #100
+		SetGlobal("X3RebQuest","GLOBAL",9)
+		CreateCreature("X3REMOVE",[701.268],SW)
+		CreateCreature("X3RTANYA",[810.332],SW)
+		Continue()
+END

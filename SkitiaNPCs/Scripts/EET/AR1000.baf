@@ -1,0 +1,30 @@
+IF 
+GlobalGT("X3EGVJTalkResult","GLOBAL",0)
+Global("X3EThomasMeeting","AR1000",0)
+GlobalLT("Chapter","GLOBAL",18)
+THEN RESPONSE #100 
+SetGlobal("X3EThomasMeeting","AR1000",1)
+CreateCreature("X3EBRO",[3212.2851],SE)
+CreateCreature("X3EDAR",[3266.2814],SE)
+Continue()
+END 
+
+IF 
+Global("X3EThomasMeeting","AR1000",1)
+GlobalGT("Chapter","GLOBAL",17)
+THEN RESPONSE #100 
+SetGlobal("X3EThomasMeeting","AR1000",2)
+ActionOverride("X3EBRO",DestroySelf())
+ActionOverride("X3EDAR",DestroySelf())
+Continue()
+END 
+// The merchants don't really break anything if they aren't despawned. Keep them with one set.
+IF 
+Global("X3EGVJQuest","GLOBAL",1)
+Global("X3EMerchantSpawn","AR1000",0)
+THEN RESPONSE #100 
+SetGlobal("X3EMerchantSpawn","AR1000",1)
+CreateCreature("X3EMYR",[1999.2172],SE)
+CreateCreature("X3EDER",[2088.2234],NW)
+Continue()
+END 

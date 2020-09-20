@@ -1,0 +1,10 @@
+//This can be added to the bottom, all it does is add a map marker for Chester's home.
+IF 
+Global("X3KalQuest","GLOBAL",7)
+Global("X3KaleMapNote","AR0500",0)
+// Some fire once global 
+THEN RESPONSE #100
+SetGlobal("X3KaleMapNote","AR0500",1)
+AddMapNote([2982.702],~Chester's Home~)
+Continue() 
+END

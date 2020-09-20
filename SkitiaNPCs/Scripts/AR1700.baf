@@ -1,0 +1,14 @@
+IF 
+Global("X3RebVampire","GLOBAL",2) 
+Global("X3RBanditSpawn","AR1700",0)
+THEN RESPONSE #100 
+SetGlobal("X3RBanditSpawn","AR1700",1)
+CreateCreature("X3RB1",[2227.1528],S)
+CreateCreature("X3RB2",[2307.1308],SW)
+CreateCreature("X3RB3",[2348.1514],S)
+CreateCreature("X3RB4",[2291.1498],S)
+CreateCreature("X3RB5",[2098.1308],SE)
+CreateCreature("X3RB6",[2161.1444],SE)
+Continue()
+END 
+

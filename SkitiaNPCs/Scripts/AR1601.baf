@@ -1,0 +1,10 @@
+IF 
+Global("X3RebQuest","GLOBAL",11)
+THEN RESPONSE #100 
+SetGlobal("X3RebQuest","GLOBAL",12)
+CreateCreature("X3RPHEL",[327.332],15) // X3RPHEL
+CreateCreature("X3RPIR4",[268.449],8)
+CreateCreature("X3RM",[220.362],15) // X3RM
+CreateCreature("X3RKID",[120.361],15) // X3RKID 
+Continue()
+END 

@@ -1,0 +1,79 @@
+//Emily goes into the altar (Well, on, but container wise, in).
+IF
+Global("X3EmiVampire","GLOBAL",1)
+Global("X3SaveVampire","AR0809",0)
+THEN
+RESPONSE #100
+ActionOverride("Altar1",CreateItem("X3EBody",0,0,0))
+SetGlobal("X3SaveVampire","AR0809",1)
+END
+// Emily is Taken from altar
+IF 
+	PartyHasItem("X3EBody")
+	Global("X3EmiVampire","GLOBAL",1)
+	CombatCounter(0)
+THEN RESPONSE #100 
+SetInterrupt(FALSE) // We don't want this to be interrupted
+StartCutSceneMode()
+Wait(1)
+DisplayStringHead(Player1,~You pull Emily from the altar. She is alive, if barely.~)
+Wait(1)
+FadeToColor([30.0],0)
+Wait(1)
+MoveGlobal("AR0809","X3Emi",[1700.186]) 
+ApplyDamagePercent("X3Emi",55,SLASHING)
+Wait(1)
+ActionOverride(Player1,JumpToPoint([1753.215]))
+ActionOverride(Player2,JumpToPoint([1650.216]))
+ActionOverride(Player3,JumpToPoint([1711.251]))
+ActionOverride(Player4,JumpToPoint([1804.237]))
+ActionOverride(Player5,JumpToPoint([987.362]))
+ActionOverride(Player6,JumpToPoint([1607.218]))
+ActionOverride("X3Emi",FaceObject(Player1))
+ActionOverride(Player1,FaceObject("X3Emi"))
+ActionOverride(Player2,FaceObject("X3Emi"))
+ActionOverride(Player3,FaceObject("X3Emi"))
+ActionOverride(Player4,FaceObject("X3Emi"))
+ActionOverride(Player5,FaceObject("X3Emi"))
+ActionOverride(Player6,FaceObject("X3Emi"))
+Wait(1)
+ActionOverride("X3Emi",PlayDeadInterruptible(60))
+SetGlobal("X3EmiVampire","GLOBAL",2)
+Wait(2)
+FadeFromColor([30.0],0)
+Wait(1)
+SetInterrupt(TRUE)
+Wait(1)
+ActionOverride("X3Emi",StartDialogueNoSet(Player1))
+END
+//Kale Spawns in as a Vampire
+IF
+Global("X3KalVampire","GLOBAL",1)
+THEN
+RESPONSE #100
+CreateCreature("X3KalV",[1473.332],2) 
+SetGlobal("X3KalVampire","GLOBAL",2)
+END
+
+// Recorder's body goes into the altar
+IF
+Global("X3RebVampire","GLOBAL",1)
+Global("X3RebBody","AR0809",0)
+THEN
+RESPONSE #100
+ActionOverride("Altar1",CreateItem("X3RBody",0,0,0))
+SetGlobal("X3RebBody","AR0809",1)
+END
+
+IF
+	PartyHasItem("X3RBody")
+	Global("X3RebBody","AR0809",1)
+	IsValidForPartyDialogue(Player1)
+THEN
+  RESPONSE #100
+	Wait(2)
+	CreateCreature("X3RFER",[1705.252],NE)
+	SetGlobal("X3RebBody","AR0809",2)
+	ActionOverride(Player1,StartDialog("player1",Player1))
+	Continue()
+END

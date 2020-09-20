@@ -1,0 +1,65 @@
+
+IF
+	Global("CheckMad","AR2202",1)
+	OR(2)
+		InParty("X3Emi")  // X3Emi
+		InMyArea(Player1)
+	!Dead("X3Emi")  // X3Emi
+	OR(2)
+		Global("X3EmiRomanceActive","Global",1)
+		Global("X3EmiRomanceActive","Global",2)
+THEN
+	RESPONSE #100
+		SetGlobal("X3EmiCheckMad1","GLOBAL",1)
+		SetGlobal("CheckMad","AR2202",2)
+		Continue()
+END
+// In Fairness, Kale does not get that angry, but we'll keep the convention.
+IF
+	Global("CheckMad","AR2202",1)
+	OR(2)
+		InParty("X3Kal")  // X3Kal
+		InMyArea(Player1)
+	!Dead("X3Kal")  // X3Kal
+	OR(2)
+		Global("X3KalRomanceActive","Global",1)
+		Global("X3KalRomanceActive","Global",2)
+THEN
+	RESPONSE #100
+		SetGlobal("X3KalCheckMad1","GLOBAL",1)
+		SetGlobal("CheckMad","AR2202",2)
+		Continue()
+END
+
+IF
+	Global("CheckMad","AR2202",1)
+	OR(2)
+		InParty("X3Reb")  // X3Reb
+		InMyArea(Player1)
+	!Dead("X3Reb")  // X3Reb
+	OR(2)
+		Global("X3RebRomanceActive","Global",1)
+		Global("X3RebRomanceActive","Global",2)
+THEN
+	RESPONSE #100
+		SetGlobal("X3RebCheckMad1","GLOBAL",1)
+		SetGlobal("CheckMad","AR2202",2)
+		Continue()
+END
+
+
+IF
+	Global("CheckMad","AR2202",1)
+	OR(2)
+		InParty("X3Vie")  // X3Vie
+		InMyArea(Player1)
+	!Dead("X3Vie")  // X3Vie
+	OR(2)
+		Global("X3VieRomanceActive","Global",1)
+		Global("X3VieRomanceActive","Global",2)
+THEN
+	RESPONSE #100
+		SetGlobal("X3VieCheckMad1","GLOBAL",1)
+		SetGlobal("CheckMad","AR2202",2)
+		Continue()
+END

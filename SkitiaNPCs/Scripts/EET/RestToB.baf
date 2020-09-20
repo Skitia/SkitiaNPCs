@@ -1,0 +1,7 @@
+IF 
+Global("RestTalkStart","GLOBAL",0)
+GlobalGT("Chapter","GLOBAL",20)
+THEN RESPONSE #100 
+SetGlobal("RestTalkStart","GLOBAL",1)
+SetGlobalTimer("X3RestTimer","GLOBAL",SEVEN_DAYS)
+END 

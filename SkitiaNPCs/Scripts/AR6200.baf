@@ -1,0 +1,419 @@
+//Emily Default Non-Romanced Ending 
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Emi")
+!Global("X3EmiRomanceActive","GLOBAL",2)
+!Global("X3EmiHeir","GLOBAL",1)
+Global("X3EmiBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3EmiBio","GLOBAL",1)
+TextScreen("X3EmiDN")
+SmallWait(1)
+Continue()
+END
+//Emily Default Romanced No Essence Ending 
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Emi")
+Global("X3EmiRomanceActive","GLOBAL",2)
+!Global("X3EmiHeir","GLOBAL",1)
+!Global("PlayerChoseEssence","GLOBAL",1)
+Global("X3EmiBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3EmiBio","GLOBAL",1)
+TextScreen("X3EmiDR")
+SmallWait(1)
+Continue()
+END
+//Emily Default Romance Ascended Ending 
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Emi")
+Global("X3EmiRomanceActive","GLOBAL",2)
+!Global("X3EmiHeir","GLOBAL",1)
+Global("PlayerChoseEssence","GLOBAL",1)
+Global("X3EmiBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3EmiBio","GLOBAL",1)
+TextScreen("X3EmiDA")
+SmallWait(1)
+Continue()
+END
+//Emily Heir Non-Romanced Ending 
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Emi")
+!Global("X3EmiRomanceActive","GLOBAL",2)
+Global("X3EmiHeir","GLOBAL",1)
+Global("X3EmiBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3EmiBio","GLOBAL",1)
+TextScreen("X3EmiHN")
+SmallWait(1)
+Continue()
+END
+//Emily Heir Romanced No Essence Ending 
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Emi")
+Global("X3EmiRomanceActive","GLOBAL",2)
+Global("X3EmiHeir","GLOBAL",1)
+!Global("PlayerChoseEssence","GLOBAL",1)
+Global("X3EmiBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3EmiBio","GLOBAL",1)
+TextScreen("X3EmiHR")
+SmallWait(1)
+Continue()
+END
+//Emily Heir Romance Ascended Ending 
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Emi")
+Global("X3EmiRomanceActive","GLOBAL",2)
+Global("X3EmiHeir","GLOBAL",1)
+Global("PlayerChoseEssence","GLOBAL",1)
+Global("X3EmiBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3EmiBio","GLOBAL",1)
+TextScreen("X3EmiHA")
+SmallWait(1)
+Continue()
+END
+//Helga Default Ending 
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Hel")
+!Global("X3HelToBQuest","GLOBAL",6)
+Global("X3HelBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3HelBio","GLOBAL",1)
+TextScreen("X3Hel01")
+SmallWait(1)
+Continue()
+END
+//Helga Berk Dead Ending 
+
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Hel")
+Global("X3HelToBQuest","GLOBAL",6)
+Global("X3HelBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3HelBio","GLOBAL",1)
+TextScreen("X3Hel02")
+SmallWait(1)
+Continue()
+END
+// Kale Default Ending
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Kal")
+!Global("X3KalRomanceActive","GLOBAL",2)
+!Global("X3KalMazzyEnd","GLOBAL",1)
+Global("X3KalBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3KalBio","GLOBAL",1)
+TextScreen("X3Kal01")
+SmallWait(1)
+Continue()
+END
+// Kale-Mazzy Ending (Does not replace Mazzy's.)
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Kal")
+!Global("X3KalRomanceActive","GLOBAL",2)
+!Global("X3KalMazzyEnd","GLOBAL",1)
+Global("X3KalBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3KalBio","GLOBAL",1)
+TextScreen("X3Kal02")
+SmallWait(1)
+Continue()
+END
+//Kale-Romance Ending Female Default 
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Kal")
+Gender(Player1,FEMALE)
+Global("X3KalRomanceActive","GLOBAL",2)
+!Global("PlayerChoseEssence","GLOBAL",1)
+Global("X3KalBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3KalBio","GLOBAL",1)
+TextScreen("X3KalRF")
+SmallWait(1)
+Continue()
+END
+//Kale-Romance Ending Male Default 
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Kal")
+!Gender(Player1,FEMALE)
+Global("X3KalRomanceActive","GLOBAL",2)
+!Global("PlayerChoseEssence","GLOBAL",1)
+Global("X3KalBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3KalBio","GLOBAL",1)
+TextScreen("X3KalRM")
+SmallWait(1)
+Continue()
+END
+//Kale-Romance Ending Player Ascended 
+//Kale-Romance Ending Female Default 
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Kal")
+Global("X3KalRomanceActive","GLOBAL",2)
+Global("PlayerChoseEssence","GLOBAL",1)
+Global("X3KalBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3KalBio","GLOBAL",1)
+TextScreen("X3KalRA")
+SmallWait(1)
+Continue()
+END
+//Recorder 
+
+// Recorder Not Romanced Default or Romanced - Player Ascended & Raban Not Found
+
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Reb")
+OR(2)
+!Global("X3RebRomanceActive","GLOBAL",2)
+Global("PlayerChoseEssence","GLOBAL",1)
+!Global("X3RebQuest","GLOBAL",15)
+Global("X3RebBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3RebBio","GLOBAL",1)
+TextScreen("X3Reb01")
+SmallWait(1)
+Continue()
+END
+
+// Recorder Not Romanced Default Saved Son
+
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Reb")
+!Global("X3RebRomanceActive","GLOBAL",2)
+Global("X3RebQuest","GLOBAL",15)
+Global("X3RebBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3RebBio","GLOBAL",1)
+TextScreen("X3Reb02")
+SmallWait(1)
+Continue()
+END
+
+// Recorder Romanced Default, Raban not saved, Player did not ascend and is male
+
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Reb")
+Gender(Player1,MALE)
+Global("X3RebRomanceActive","GLOBAL",2)
+!Global("PlayerChoseEssence","GLOBAL",1)
+!Global("X3RebQuest","GLOBAL",15)
+Global("X3RebBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3RebBio","GLOBAL",1)
+TextScreen("X3Reb3M")
+SmallWait(1)
+Continue()
+END
+
+// Recorder Romanced, Raban saved, Player did not ascend and is male
+
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Reb")
+Gender(Player1,MALE)
+Global("X3RebRomanceActive","GLOBAL",2)
+!Global("PlayerChoseEssence","GLOBAL",1)
+Global("X3RebQuest","GLOBAL",15)
+Global("X3RebBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3RebBio","GLOBAL",1)
+TextScreen("X3Reb4M")
+SmallWait(1)
+Continue()
+END
+
+// Recorder Romanced Default, Raban not saved, Player did not ascend and is female
+
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Reb")
+!Gender(Player1,MALE)
+Global("X3RebRomanceActive","GLOBAL",2)
+!Global("PlayerChoseEssence","GLOBAL",1)
+!Global("X3RebQuest","GLOBAL",15)
+Global("X3RebBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3RebBio","GLOBAL",1)
+TextScreen("X3Reb4M")
+SmallWait(1)
+Continue()
+END
+
+// Recorder Romanced, Raban saved, Player did not ascend and is female
+
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Reb")
+!Gender(Player1,MALE)
+Global("X3RebRomanceActive","GLOBAL",2)
+!Global("PlayerChoseEssence","GLOBAL",1)
+Global("X3RebQuest","GLOBAL",15)
+Global("X3RebBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3RebBio","GLOBAL",1)
+TextScreen("X3Reb4F")
+SmallWait(1)
+Continue()
+END
+
+//Recorder Romanced, Raban saved, Player ascended 
+
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Reb")
+Global("X3RebRomanceActive","GLOBAL",2)
+Global("PlayerChoseEssence","GLOBAL",1)
+Global("X3RebQuest","GLOBAL",15)
+Global("X3RebBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3RebBio","GLOBAL",1)
+TextScreen("X3Reb05")
+SmallWait(1)
+Continue()
+END
+
+//Vienxay 
+
+// Vienxay Not Romanced or Romanced - Player Ascended & Still Exiled
+
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Vie")
+OR(2)
+!Global("X3VieRomanceActive","GLOBAL",2)
+Global("PlayerChoseEssence","GLOBAL",1)
+!Global("X3VEvermeetEnd","GLOBAL",1)
+Global("X3VieBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3VieBio","GLOBAL",1)
+TextScreen("X3Vie01")
+SmallWait(1)
+Continue()
+END
+
+// Vienxay Not Romanced and Vienxay Unexiled
+
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Vie")
+!Global("X3VieRomanceActive","GLOBAL",2)
+Global("X3VEvermeetEnd","GLOBAL",1)
+Global("X3VieBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3VieBio","GLOBAL",1)
+TextScreen("X3Vie02")
+SmallWait(1)
+Continue()
+END
+
+// Vienxay Romanced Default, Vienxay is Exiled 
+
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Vie")
+Global("X3VieRomanceActive","GLOBAL",2)
+!Global("PlayerChoseEssence","GLOBAL",1)
+!Global("X3VEvermeetEnd","GLOBAL",1)
+Global("X3VieBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3VieBio","GLOBAL",1)
+TextScreen("X3Vie03")
+SmallWait(1)
+Continue()
+END
+
+// Recorder Romanced, Vienxay Unexiled, Player is Not Elf 
+
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Vie")
+!Race(Player1,ELF)
+Global("X3VieRomanceActive","GLOBAL",2)
+!Global("PlayerChoseEssence","GLOBAL",1)
+Global("X3VEvermeetEnd","GLOBAL",1)
+Global("X3VieBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3VieBio","GLOBAL",1)
+TextScreen("X3Vie4D")
+SmallWait(1)
+Continue()
+END
+
+// Recorder Romanced, Vienxay Unexiled, Player is Elf 
+
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Vie")
+!Race(Player1,ELF)
+Global("X3VieRomanceActive","GLOBAL",2)
+!Global("PlayerChoseEssence","GLOBAL",1)
+Global("X3VEvermeetEnd","GLOBAL",1)
+Global("X3VieBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3VieBio","GLOBAL",1)
+TextScreen("X3Vie4E")
+SmallWait(1)
+Continue()
+END
+
+//Vienxay Romanced, Player Ascended, Unexiled 
+
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Vie")
+Global("X3VieRomanceActive","GLOBAL",2)
+Global("PlayerChoseEssence","GLOBAL",1)
+Global("X3VEvermeetEnd","GLOBAL",1)
+Global("X3VieBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3VieBio","GLOBAL",1)
+TextScreen("X3Vie05")
+SmallWait(1)
+Continue()
+END
+

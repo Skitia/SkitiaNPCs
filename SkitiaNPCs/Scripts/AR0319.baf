@@ -1,0 +1,25 @@
+IF
+Global("X3RebSpawns","AR0319",0)
+// EET Checks.
+GlobalLT("chapter","GLOBAL",20)
+!StateCheck("X3Rec",STATE_REALLY_DEAD)
+THEN
+RESPONSE #100
+SetGlobal("X3RebSpawns","AR0319",1)
+CreateCreature("X3Reb",[504.290],SW)
+CreateCreature("X3RMOM",[638.268],SW)
+Continue()
+END
+
+IF
+Global("X3RebSpawns","AR0319",0)
+// EET Checks.
+GlobalLT("chapter","GLOBAL",20)
+StateCheck("X3Rec",STATE_REALLY_DEAD)
+THEN
+RESPONSE #100
+SetGlobal("X3RebSpawns","AR0319",1)
+CreateCreature("X3RMOM",[638.268],SW)
+Continue()
+END
+

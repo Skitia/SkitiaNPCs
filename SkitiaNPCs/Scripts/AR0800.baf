@@ -1,0 +1,20 @@
+
+IF
+	GlobalTimerExpired("X3VieDelay","GLOBAL")
+	Global("X3VieVampire","GLOBAL",2)
+	CombatCounter(0)
+THEN
+	RESPONSE #100
+		ClearAllActions()
+		StartCutSceneMode()
+		MoveGlobalObject("X3Vie",Player1)  // Neera
+		ActionOverride("X3Vie",MakeUnselectable(1))
+		PlaySound("ACT_07")
+		Wait(1)
+		ActionOverride("X3Vie",JoinParty())
+		SetGlobal("X3VieVampire","GLOBAL",3)
+		EndCutSceneMode()
+		Wait(1)
+		ActionOverride("X3Vie",StartDialogueNoSet(Player1)
+		Continue()
+END

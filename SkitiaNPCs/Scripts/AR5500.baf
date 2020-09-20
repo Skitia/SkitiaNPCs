@@ -1,0 +1,8 @@
+IF 
+Global("X3HelGemSpawn","AR5500",0)
+THEN
+RESPONSE #100
+SetGlobal("X3HelGemSpawn","AR5500",1)
+CreateCreature("X3HGEM",[2798.1573],2)
+Continue()
+END

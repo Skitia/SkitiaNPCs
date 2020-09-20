@@ -1,0 +1,41 @@
+// Branwen's abduction, Amanautor's altar. Contains("O#BranB") means that there's Branwen's body inside.
+IF
+Contains("X3RBody","Container1") // Recorder's Body 
+!Contains("X3RGem","Container1")
+Global("X3RebSave","AR1800",0) // Purple iolite gem 
+THEN
+RESPONSE #100
+SetGlobal("X3RebSave","AR1800",1)
+DisplayStringHead(Player1,~Recorder's body remains still. Something is missing.~)
+END
+
+IF
+Contains("X3RBody","Container1")  //Recorder's Body 
+Contains("X3RGem","Container1")  //Purple iolite gem 
+THEN
+RESPONSE #100
+SetInterrupt(FALSE) // We don't want this to be interrupted
+ClearAllActions()
+StartCutSceneMode()
+Wait(1)
+FadeToColor([30.0],0)
+Wait(1)
+SetGlobal("X3RebSave","AR1800",2)
+MoveGlobal("AR1800","X3Reb",[1537.555])  
+Wait(1)
+FadeFromColor([30.0],0)
+ActionOverride(Player1,DestroyItem("X3RFer"))
+ActionOverride("Container1",DestroyItem("X3RBody")     
+ActionOverride("Container1",DestroyItem("X3RGem")
+CreateVisualEffect("ICCLKFR2",[1544.515]) // some pretty visual effects
+CreateVisualEffect("ICCLKFR2",[1576.536])
+Wait(1)
+CreateVisualEffect("SPFLESHS",[1537.555])
+ApplySpellRES("X3Raise","X3Reb")
+Wait(1)
+CreateCreature("X3RFER",[1530.550],SE)
+SetInterrupt(TRUE)
+Wait(1)
+
+ActionOverride("X3Reb",StartDialogueNoSet(Player1))
+END
