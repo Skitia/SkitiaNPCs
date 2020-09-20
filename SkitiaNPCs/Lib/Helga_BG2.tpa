@@ -1,0 +1,451 @@
+LOAD_TRA ~%MOD_FOLDER%/Tra/English/Helga_bg2.tra~
+LAF HANDLE_AUDIO
+  STR_VAR
+    audio_path = ~SkitiaNPCs/Audio/Helga~
+    oggdec_path = ~SkitiaNPCs/Audio~
+    sox_path = ~SkitiaNPCs/Audio/Helga~
+END
+
+
+ADD_KIT ~X3cleric~
+	~X3cleric 1 1 1 1 1 1 1 1~
+ // appended column-wise to WEAPPROF.2da
+//11                                T   S           F   Q             S S
+//10                                W   C           L   U             W I
+//9                         B L S   O   I   W       A   A             O N
+//8                         A O H   H   M   A       I   R C   S       R G
+//7         L S           M S N O   A   I   R     H L   T R L H     2 D L 2                 E E E E E E E E E E E
+//6         _ _       S   I T G R   N K T D H     A M   E O O O     H A E W E E E E E E E E X X X X X X X X X X X
+//5         S S   S B P   S A S T   D A A A A   S L O   R S N R   S A N W E X X X X X X X X T T T T T T T T T T T
+//4         W W   P L I   S R W S   E T R G M C P B R M S S G T D L N D E A T T T T T T T T R R R R R R R R R R R
+//3         O O B E U K A I D O W A D A W G M L E E N A T B B B A I D S A P R R R R R R R R A A A A A A A A A A A
+//2         R R O A N E X L S R O X S N A E E U A R I C A O O O R N E H P O A A A A A A A A 1 1 1 1 1 1 1 1 1 1 2
+//1         D D W R T D E E W D R E W A K R R B R D N E F W W W T G D I O N 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0
+ ~X3cleric	0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 1 1 0 0 1 1 1 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+
+ 	~X3cleric 8 3 12 9 9 7~
+	~X3cleric 0 0 0 0 0 0~
+	~X3cleric 0 0 0 0 0 0~
+    ~X3cleric 0 0 0 0 17 0~
+	~X3cleric 0 0 0 1 0 0 1 1 0~
+	~X3cleric 0 0 0 0 0 0~
+	~%MOD_FOLDER%/2da/X3helcl.2da~
+	~~ /*Set this to ~K_C_D~ and not ~~ if you want to play it.*/
+	~0x00080000 3~
+	~CL0~
+	~* * * * * * * * * * * * * * * * * * *  *~
+	SAY ~Priest of Haela~
+	SAY ~Priest of Haela~
+	SAY ~PRIEST OF HAELA: Renown amongst the dwarves for their risk-taking, berserker tendencies, clerics of Haela Brightaxe are loved and feared for their fury when they enter the fray, able to shrug off and deliver dangerous strikes. Most are female, called Kaxanar, or blood maidens, and their name is very much earned in their pleasure in seeking out battle wherever it may be. 
+
+Advantages: 
+
+-May Cast Hurl Stone Once Per Day. Gains one use at level one and an additional use every five levels thereafter. 
+
+HURL STONE: The priest creates a magical stone the size of their palm, which flies out of their hand and into the intended target. The stone does 1d6 direct magic damage per five levels with no save, although it does not bypass magic resistance. If the creature fails a save vs spell, they are also knocked down for two rounds.
+
+-May Cast Flamebolt Once Per Day. Gains one use at level one and an additional use every ten levels thereafter. 
+
+FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as a fighter with mastery in the weapon. The magic weapon does 1d10+1 fire damage per 5 levels, with a THACO bonus of 3. The blade acts at a speed factor of nine and lasts for one turn.
+
+Disadvantages:
+-Dwarf only. 
+-May only be CN, CG, and NG.~ 
+
+LAF fl#add_kit_ee
+	STR_VAR
+		kit_name = ~X3cleric~
+		clswpbon = ~1 0 3~
+		numwslot = ~2~
+		hpclass = ~HPPRS~
+		clsrcreq = ~0 0 0 1 0 0 0~
+		clasthac = ~0~
+END
+
+COPY	"%MOD_FOLDER%/Spells/X3HBolt.spl" override
+SAY NAME1 ~Flamebolt~
+SAY NAME2 ~Flamebolt~
+SAY 0x50  ~FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as a fighter with mastery in the weapon. The magic weapon does 1d10+1 fire damage per 5 levels, with a THACO bonus of 3. The blade acts at a speed factor of nine and lasts for one turn.
+
+Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR.
+Damage: 1d10, +1 Fire Damage
+THAC0: +3
+Speed Factor: 9
+Proficiency Type: Greatsword
+Type: Two-handed~
+COPY	"%MOD_FOLDER%/Spells/X3HurlS.spl" override
+	SAY NAME1 ~Hurl Stone~
+	SAY NAME2 ~Hurl Stone~
+	SAY 0x50 ~The priest creates a magical stone the size of their palm, which flies out of their hand and into the intended target. The stone does 1d6 direct magic damage per five levels with no save, although it does not bypass magic resistance. If the creature fails a save vs spell, they are also knocked down for two rounds..~ 
+COPY	"%MOD_FOLDER%/Items/x3HSW.bam" override
+
+// Store 
+COPY ~%MOD_FOLDER%/Items/X3HGEM.STO~ override
+
+COPY_EXISTING ~%MOD_FOLDER%/Items/x3ERing.itm~ ~override/x3ERing.itm~
+SAY NAME1 ~Engagement Ring~
+SAY NAME2 ~Engagement Ring~
+SAY DESC ~Rings like this are often given to a lover to propose marriage. Weaved in gold and with a heart signet, it could be a suiting gift for someone to love if you are willing to commit.
+More expensive engagement rings often contain a few enchantments to ensure the recipient is safe and protected up to marriage and beyond.
+
+Weight: 1~ 
+  
+// Character SoA
+
+COPY ~%MOD_FOLDER%/Cre/X3Hel.cre~ ~override/X3Hel.cre~
+  SAY NAME1 ~Helga~
+  SAY NAME2 ~Helga~
+  WRITE_ASCII 0x248 ~X3Hel~ #8  //override script
+  WRITE_ASCII 0x280 ~X3Hel~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3Hel~ #8   //pre-joining dialogue file
+  WRITE_ASCII 0X34 ~X3HelM~ #8   //small portrait
+  WRITE_ASCII 0x3c ~X3HelL~ #8   //medium portrait
+  SAY BIO ~Helga pauses at a question addresses at her past and not the battlefield, her lips forming almost into a grumpy frown. She talks of being a wild child in her youngest years, longing to make her place in the faithful of Haela after being enchanted by the tales of their ferocity and feats. She briefly trails away from the subject, launching into the details of a former battle with the interests of detailing every strike as if she was passionately describing art, not war. But then weariness touches her face, and with a groan she admits her body is not what it used to be. Not even her healing spells can undo all the wear and tear given by growing old. "But I'd rather go out in a blaze than gently." She adds. "I'll know death as nothing else but a foe of equal strength."~
+  SAY MORALE ~We must get out of here!~ [X3HeFear] //
+  SAY HAPPY ~I knew this would go well!~ [X3HeHap] //
+  SAY UNHAPPY_ANNOYED ~This better be a minor setback.~
+  SAY UNHAPPY_SERIOUS ~My patience is running thin with yer constant evil. Do you want to be enemies?~
+  SAY UNHAPPY_BREAKING_POINT ~Our parternship has ended. I'll not give Haela's gifts to ye a second longer.~
+  SAY LEADER ~Follow me closely, now.~ [X3HeLead]  //
+  SAY TIRED ~I believe we should rest soon.~ [X3HeRest]  //
+  SAY BORED ~I don't see what we're accomplishing, sitting around like this.~ [X3HeBore] //
+  SAY BATTLE_CRY1 ~For honor and glory!~ [X3HeCry1] //
+  SAY BATTLE_CRY2 ~~ [X3HeCry2] // 
+  SAY BATTLE_CRY3 ~By the blood of the all father!~ [X3HeCry3] //
+  SAY BATTLE_CRY4 ~Fall before me!~ [X3HeCry4] //
+  SAY BATTLE_CRY5 ~Give me a hand, here!~ [X3HeCry5] //
+  SAY DAMAGE ~~ [X3HeDam] //
+  SAY DYING ~~ [X3HeDead] //
+  SAY HURT ~If  yer going to do something, do it fast!~ [X3HeHeal] //
+  SAY AREA_FOREST ~We should stick together here.~ [X3HeGrup] 
+  SAY AREA_CITY ~What bloody battles are we going to find in a city?~ []
+  SAY AREA_DUNGEON ~I must admit, I'm looking rather forward to exploring some of the ruins we'll find here.~ [X3HeRuin]
+  SAY AREA_DAY ~Isn't it Grand?~[X3HeGran]
+  SAY AREA_NIGHT ~The most dangerous battles come in the form of darkness.~ []
+  SAY SELECT_COMMON1 ~What now?~ [X3HeCom1] //
+  SAY SELECT_COMMON2 ~Yes? What do ye need?.~ [X3HeCom2] //
+  SAY SELECT_COMMON3 ~Well met.~ [X3HeCom3]
+  SAY SELECT_COMMON4 ~Hmm.~ [X3HeAct7]
+  SAY SELECT_COMMON5 ~I have a suggestion.~ [X3HeSug]
+  SAY SELECT_COMMON6 ~Well met.~ [X3HeCom3]
+  SAY SELECT_ACTION1 ~Indeed.~ [X3HeAct1]
+  SAY SELECT_ACTION2 ~Mmm. That may work.~ [X3HeAct2]
+  SAY SELECT_ACTION3 ~Allow me.~ [X3HeAct3]
+  SAY SELECT_ACTION4 ~Let me see.~ [X3HeAct4]
+  SAY SELECT_ACTION5 ~Yes, of course.~ [X3HeAct5]
+  SAY SELECT_ACTION6 ~I appreciate that.~ [X3HeAct6]
+  SAY SELECT_ACTION7 ~All done here.~ [X3HeDone]
+  SAY CRITICAL_HIT ~~[X3HeCrit] //
+  SAY CRITICAL_MISS ~By Clangeddin's Beard.~ [X3HeCrtM] //
+  SAY TARGET_IMMUNE ~My weapon cannot hurt this one.~ [X3HeInff] // 
+  SAY INVENTORY_FULL ~I can't carry that. We'll have to leave something behind.~ [X3HeEnc] //
+  SAY SPELL_DISRUPTED ~What? Now my magic is failing?~ [X3HeSpel] // 
+  SAY SET_A_TRAP ~~ []
+  SAY HIDDEN_IN_SHADOWS ~~ []
+  SAY PICKED_POCKET ~~ []	  
+  SAY SELECT_RARE1 ~Indeed.~ [X3HeAct1]
+  SAY SELECT_RARE2 ~Indeed.~ [X3HeAct1]  
+  WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~X3cleric~))
+  
+ // Character ToB 
+ 
+ COPY ~%MOD_FOLDER%/Cre/X3Hel25.cre~ ~override/X3Hel25.cre~
+  SAY NAME1 ~Helga~
+  SAY NAME2 ~Helga~
+  WRITE_ASCII 0x248 ~X3Hel25~ #8  //override script
+  WRITE_ASCII 0x280 ~X3Hel~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3Hel25~ #8   //pre-joining dialogue file
+  WRITE_ASCII 0X34 ~X3HelM~ #8   //small portrait
+  WRITE_ASCII 0x3c ~X3HelL~ #8   //medium portrait
+  SAY BIO ~Helga pauses at a question addresses at her past and not the battlefield, her lips forming almost into a grumpy frown. She talks of being a wild child in her youngest years, longing to make her place in the faithful of Haela after being enchanted by the tales of their ferocity and feats. She briefly trails away from the subject, launching into the details of a former battle with the interests of detailing every strike as if she was passionately describing art, not war. But then weariness touches her face, and with a groan she admits her body is not what it used to be. Not even her healing spells can undo all the wear and tear given by growing old. "But I'd rather go out in a blaze than gently." She adds. "I'll know death as nothing else but a foe of equal strength."~
+  SAY MORALE ~We must get out of here!~ [X3HeFear] //
+  SAY HAPPY ~I knew this would go well!~ [X3HeHap] //
+  SAY UNHAPPY_ANNOYED ~This better be a minor setback.~
+  SAY UNHAPPY_SERIOUS ~My patience is running thin with yer constant evil. Do you want to be enemies?~
+  SAY UNHAPPY_BREAKING_POINT ~Our parternship has ended. I'll not give Haela's gifts to ye a second longer.~
+  SAY LEADER ~Follow me closely, now.~ [X3HeLead]  //
+  SAY TIRED ~I believe we should rest soon.~ [X3HeRest]  //
+  SAY BORED ~I don't see what we're accomplishing, sitting around like this.~ [X3HeBore] //
+  SAY BATTLE_CRY1 ~For honor and glory!~ [X3HeCry1] //
+  SAY BATTLE_CRY2 ~~ [X3HeCry2] // 
+  SAY BATTLE_CRY3 ~By the blood of the all father!~ [X3HeCry3] //
+  SAY BATTLE_CRY4 ~Fall before me!~ [X3HeCry4] //
+  SAY BATTLE_CRY5 ~Give me a hand, here!~ [X3HeCry5] //
+  SAY DAMAGE ~~ [X3HeDam] //
+  SAY DYING ~~ [X3HeDead] //
+  SAY HURT ~If  yer going to do something, do it fast!~ [X3HeHeal] //
+  SAY AREA_FOREST ~We should stick together here.~ [X3HeGrup] 
+  SAY AREA_CITY ~What bloody battles are we going to find in a city?~ []
+  SAY AREA_DUNGEON ~I must admit, I'm looking rather forward to exploring some of the ruins we'll find here.~ [X3HeRuin]
+  SAY AREA_DAY ~Isn't it Grand?~[X3HeGran]
+  SAY AREA_NIGHT ~The most dangerous battles come in the form of darkness.~ []
+  SAY SELECT_COMMON1 ~What now?~ [X3HeCom1] //
+  SAY SELECT_COMMON2 ~Yes? What do ye need?.~ [X3HeCom2] //
+  SAY SELECT_COMMON3 ~Well met.~ [X3HeCom3]
+  SAY SELECT_COMMON4 ~Hmm.~ [X3HeAct7]
+  SAY SELECT_COMMON5 ~I have a suggestion.~ [X3HeSug]
+  SAY SELECT_COMMON6 ~Well met.~ [X3HeCom3]
+  SAY SELECT_ACTION1 ~Indeed.~ [X3HeAct1]
+  SAY SELECT_ACTION2 ~Mmm. That may work.~ [X3HeAct2]
+  SAY SELECT_ACTION3 ~Allow me.~ [X3HeAct3]
+  SAY SELECT_ACTION4 ~Let me see.~ [X3HeAct4]
+  SAY SELECT_ACTION5 ~Yes, of course.~ [X3HeAct5]
+  SAY SELECT_ACTION6 ~I appreciate that.~ [X3HeAct6]
+  SAY SELECT_ACTION7 ~All done here.~ [X3HeDone]
+  SAY CRITICAL_HIT ~~[X3HeCrit] //
+  SAY CRITICAL_MISS ~By Clangeddin's Beard.~ [X3HeCrtM] //
+  SAY TARGET_IMMUNE ~My weapon cannot hurt this one.~ [X3HeInff] // 
+  SAY INVENTORY_FULL ~I can't carry that. We'll have to leave something behind.~ [X3HeEnc] //
+  SAY SPELL_DISRUPTED ~What? Now my magic is failing?~ [X3HeSpel] // 
+  SAY SET_A_TRAP ~~ []
+  SAY HIDDEN_IN_SHADOWS ~~ []
+  SAY PICKED_POCKET ~~ []	  
+  SAY SELECT_RARE1 ~Indeed.~ [X3HeAct1]
+  SAY SELECT_RARE2 ~Indeed.~ [X3HeAct1]
+  WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~X3cleric~))
+  
+  APPEND ~pdialog.2da~
+~X3Hel       X3HelP             X3HelJ			X3HelD~
+UNLESS ~X3Hel ~
+UNLESS ~25POST~
+
+APPEND ~pdialog.2da~
+~X3Hel        X3HelP             X3HelJ            X3HelD             X3Hel25P             X3Hel25J		X3Hel25D		X3Hel25~
+UNLESS ~X3Hel~
+IF ~25POST~
+
+APPEND ~interdia.2da~
+~X3Hel       BX3Hel~
+UNLESS ~X3Hel~
+UNLESS ~25FILE~
+
+APPEND ~interdia.2da~
+~X3Hel       BX3Hel       BX3Hel25~
+UNLESS ~X3Hel~
+IF ~25FILE~
+ //Epilogues
+COPY ~%MOD_FOLDER%/Epilogue/X3HelEp.2da~ ~override/X3Hel01.2da~
+REPLACE ~99999~ @51
+
+COPY ~%MOD_FOLDER%/Epilogue/X3HelEp.2da~ ~override/X3Hel02.2da~
+REPLACE ~99999~ @52 
+ // Journal Entries 
+ADD_JOURNAL TITLE (@1) @2 @3 @4 @5 @6 @7 @8 @9 @10 USING ~%MOD_FOLDER%/Tra/english/Helga_bg2.tra~ // Rulendo's Gauntlet 
+ADD_JOURNAL TITLE (@11) @12 @13 @14 @15 @16 @17 @18 @19 @20 @21 @22 USING ~%MOD_FOLDER%/Tra/english/Helga_bg2.tra~ // Helga's Son  
+  
+  // Portraits 
+  		COPY ~%MOD_FOLDER%/Portraits/X3HelL.bmp~ ~override/X3HelL.bmp~
+		COPY ~%MOD_FOLDER%/Portraits/X3HelM.bmp~ ~override/X3HelM.bmp~
+// ITEMS
+COPY	"%MOD_FOLDER%/Items/x3HBlade.itm" override
+SAY NAME1 ~Flamebolt~
+SAY NAME2 ~Flamebolt~
+SAY DESC  ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon.
+
+Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR. May not cast spells.
+Damage: 1d10, +1 Fire Damage
+THAC0: +1
+Speed Factor: 9
+Proficiency Type: Greatsword
+Type: Two-handed~
+
+COPY	"%MOD_FOLDER%/Items/x3HBlad2.itm" override
+SAY NAME1 ~Flamebolt~
+SAY NAME2 ~Flamebolt~
+SAY DESC  ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon.
+
+Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR. May not cast spells.
+Damage: 1d10, +2 Fire Damage
+THAC0: +2
+Speed Factor: 9
+Proficiency Type: Greatsword
+Type: Two-handed~
+
+COPY	"%MOD_FOLDER%/Items/x3HBlad3.itm" override
+SAY NAME1 ~Flamebolt~
+SAY NAME2 ~Flamebolt~
+SAY DESC  ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon.
+
+Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR. May not cast spells.
+Damage: 1d10, +3 Fire Damage
+THAC0: +3
+Speed Factor: 9
+Proficiency Type: Greatsword
+Type: Two-handed~
+
+COPY	"%MOD_FOLDER%/Items/x3HBlad4.itm" override
+SAY NAME1 ~Flamebolt~
+SAY NAME2 ~Flamebolt~
+SAY DESC  ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon.
+
+Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR. May not cast spells.
+Damage: 1d10, +4 Fire Damage
+THAC0: +4
+Speed Factor: 9
+Proficiency Type: Greatsword
+Type: Two-handed~
+
+COPY	"%MOD_FOLDER%/Items/x3HBlad5.itm" override
+SAY NAME1 ~Flamebolt~
+SAY NAME2 ~Flamebolt~
+SAY DESC  ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon.
+
+Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR. May not cast spells.
+Damage: 1d10, +5 Fire Damage
+THAC0: +5
+Speed Factor: 9
+Proficiency Type: Greatsword
+Type: Two-handed~
+
+COPY_EXISTING ~%MOD_FOLDER%/Items/X3HPC.itm~ ~override/X3HPC.itm~
+SAY NAME1 ~Potion of Bodily Health~
+SAY NAME2 ~Potion of Bodily Health~
+SAY DESC ~Sought out by many a warrior, very few apothecaries are capable of making potions that improve the health and body of a person, and those who do keep it very secretive and sell it to only select clients.
+
+It is quite often that a less than sincere adventure will attempt to steal or even murder the maker to get their hands on these. The potion is rumoured to take years to craft from all sorts of rare ingredients and herbs, though the recipe remains unknown.
+
+When ingested, the potion permamently raises the constitution of the drinker by one.
+
+STATISTICS:
+
+Constitution: Raised by 1 point permanently
+
+Weight: 1~
+COPY_EXISTING ~%MOD_FOLDER%/Items/X3HPW.itm~ ~override/X3HPW.itm~
+SAY NAME1 ~Potion of Understanding~
+SAY NAME2 ~Potion of Understanding~
+SAY DESC ~The Temple of Ilmater one year was said to receive a raving mad man found in a burnt home into their care that could only repeat the same sentence of doom. Sensing their mind was addled, they requested and comission a potion brewer for a solution.
+
+This potion was said to be the creation, permamently raising the wisdom of the drinker by one. Unfortunately, when the mad man drank the potion, he was such in grief with his new understanding that he took his own life. Presumably, he had accidentally burned alive his own family.
+
+STATISTICS:
+
+Wisdom: Raised by 1 point permanently
+
+Weight: 1~		
+COPY_EXISTING ~%MOD_FOLDER%/Items/X3HGEM.itm~ ~override/X3HGEM.itm~
+SAY NAME1 ~Scrying Crystal~
+SAY NAME2 ~Scrying Crystal~
+SAY DESC ~This beautiful purple crystal glows with a faint light. Used by scriers as a component, it helps them to locate their desired target, no matter where in the realms they may be.~	
+
+		// Creatures 
+COPY ~%MOD_FOLDER%/Cre/X3HARV.cre~ ~override/X3HARV.cre~
+  WRITE_ASCII 0x248 ~X3HARV~ #8  //override script
+  WRITE_ASCII 0x280 ~X3HARV~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3HARV~ #8   // Dialogue 
+  SAY NAME1 ~Arvora~
+  SAY NAME2 ~Arvora~
+COPY ~%MOD_FOLDER%/Cre/X3HPOOR.cre~ ~override/X3HPOOR.cre~
+  WRITE_ASCII 0x248 ~X3HPOOR~ #8  //override script
+  WRITE_ASCII 0x280 ~X3HPOOR~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3HPOOR~ #8   // Dialogue 
+  SAY NAME1 ~Poor Man~
+  SAY NAME2 ~Poor Man~  
+COPY ~%MOD_FOLDER%/Cre/X3HRL.cre~ ~override/X3HRL.cre~
+  WRITE_ASCII 0x248 ~X3HRL~ #8  //override script
+  WRITE_ASCII 0x280 ~X3HRL~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3HRL~ #8   // Dialogue 
+  SAY NAME1 ~Rulendo~
+  SAY NAME2 ~Rulendo~ 
+COPY ~%MOD_FOLDER%/Cre/X3HR1F1.cre~ ~override/X3HR1F1.cre~
+  WRITE_ASCII 0x280 ~X3HR1F1~ #32  //DV
+  WRITE_ASCII 0x248 ~X3HR1F1~ #8  //override script
+  WRITE_ASCII 0x2cc ~X3HR1F1~ #8   // Dialogue   
+  SAY NAME1 ~Warrior~
+  SAY NAME2 ~Warrior~  
+COPY ~%MOD_FOLDER%/Cre/X3HR1F2.cre~ ~override/X3HR1F2.cre~
+  WRITE_ASCII 0x280 ~X3HR1F2~ #32  //DV
+  WRITE_ASCII 0x248 ~X3HR1F2~ #8  //override script  
+  SAY NAME1 ~Warrior~
+  SAY NAME2 ~Warrior~   
+COPY ~%MOD_FOLDER%/Cre/X3HR1R.cre~ ~override/X3HR1R.cre~
+  WRITE_ASCII 0x280 ~X3HR1R~ #32  //DV
+  WRITE_ASCII 0x248 ~X3HR1R~ #8  //override script  
+  SAY NAME1 ~Rogue~
+  SAY NAME2 ~Rogue~    
+COPY ~%MOD_FOLDER%/Cre/X3HR2M1.cre~ ~override/X3HR2M1.cre~
+  WRITE_ASCII 0x280 ~X3HR2M1~ #32  //DV
+  WRITE_ASCII 0x248 ~X3HR2M1~ #8  //override script
+  WRITE_ASCII 0x2cc ~X3HR2M1~ #8   // Dialogue   
+  SAY NAME1 ~Mage~
+  SAY NAME2 ~Mage~  
+COPY ~%MOD_FOLDER%/Cre/X3HR2F1.cre~ ~override/X3HR2F1.cre~
+  WRITE_ASCII 0x280 ~X3HR2F1~ #32  //DV
+  WRITE_ASCII 0x248 ~X3HR2F1~ #8  //override script  
+  SAY NAME1 ~Warrior~
+  SAY NAME2 ~Warrior~   
+COPY ~%MOD_FOLDER%/Cre/X3HR2C1.cre~ ~override/X3HR2C1.cre~
+  WRITE_ASCII 0x280 ~X3HR2C1~ #32  //DV
+  WRITE_ASCII 0x248 ~X3HR2C1~ #8  //override script  
+  SAY NAME1 ~Cleric~
+  SAY NAME2 ~Cleric~  
+COPY ~%MOD_FOLDER%/Cre/X3HDD.cre~ ~override/X3HDD.cre~
+  WRITE_ASCII 0x280 ~X3HDD~ #32  //DV
+  WRITE_ASCII 0x248 ~X3HDD~ #8  //override script
+  WRITE_ASCII 0x2cc ~X3HDD~ #8   // Dialogue   
+  SAY NAME1 ~Boris the Unyielding~
+  SAY NAME2 ~Boris the Unyielding~  
+COPY ~%MOD_FOLDER%/Cre/X3HDC.cre~ ~override/X3HDC.cre~
+  WRITE_ASCII 0x280 ~X3HDC~ #32  //DV
+  WRITE_ASCII 0x248 ~X3HDC~ #8  //override script  
+  SAY NAME1 ~Duncan Righthammer~
+  SAY NAME2 ~Duncan Righthammer~   
+COPY ~%MOD_FOLDER%/Cre/X3HDB.cre~ ~override/X3HDB.cre~
+  WRITE_ASCII 0x280 ~X3HDB~ #32  //DV
+  WRITE_ASCII 0x248 ~X3HDB~ #8  //override script  
+  SAY NAME1 ~Harim Battlebringer~
+  SAY NAME2 ~Harim Battlebringer~   
+COPY ~%MOD_FOLDER%/Cre/X3HSON.cre~ ~override/X3HSON.cre~
+  WRITE_ASCII 0x280 ~X3HSON~ #32  //DV
+  WRITE_ASCII 0x248 ~X3HSON~ #8  //override script
+  WRITE_ASCII 0x2cc ~X3HSON~ #8   // Dialogue   
+  SAY NAME1 ~Berk~
+  SAY NAME2 ~Berk~   
+COPY ~%MOD_FOLDER%/Cre/X3HGEM.cre~ ~override/X3HGEM.cre~
+  WRITE_ASCII 0x280 ~X3HGEM~ #32  //DV
+  WRITE_ASCII 0x248 ~X3HGEM~ #8  //override script
+  WRITE_ASCII 0x2cc ~X3HGEM~ #8   // Dialogue   
+  SAY NAME1 ~Gigi~
+  SAY NAME2 ~Gigi~ 
+COPY ~%MOD_FOLDER%/Cre/X3HSCRY.cre~ ~override/X3HSCRY.cre~
+  WRITE_ASCII 0x280 ~X3HSCRY~ #32  //DV
+  WRITE_ASCII 0x248 ~X3HSCRY~ #8  //override script
+  WRITE_ASCII 0x2cc ~X3HSCRY~ #8   // Dialogue   
+  SAY NAME1 ~Abermon~
+  SAY NAME2 ~Abermon~    
+// Creature Scripts 
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Scripts/X3Hel.baf~ 
+~%MOD_FOLDER%/Scripts/X3HelD.baf~ 
+~%MOD_FOLDER%/Scripts/X3Hel25.baf~ 
+~%MOD_FOLDER%/Scripts/X3HPOOR.baf~ 
+~%MOD_FOLDER%/Scripts/X3HPit.baf~ 
+~%MOD_FOLDER%/Scripts/X3HDD.baf~ 
+~%MOD_FOLDER%/Scripts/X3HRL.baf~
+~%MOD_FOLDER%/Scripts/X3HSON.baf~
+// Area Scripts 
+/*Helga does use AR0400, if there is a change in Kale's script that changes his spawn point, uncomment the below */
+//EXTEND_TOP ~ar0400.bcs~ ~%MOD_FOLDER%/Scripts/ar0400.baf~
+  EXTEND_TOP ~ar0709.bcs~ ~%MOD_FOLDER%/Scripts/ar0709.baf~
+    EXTEND_TOP ~ar0406.bcs~ ~%MOD_FOLDER%/Scripts/ar0406.baf~
+    EXTEND_BOTTOM ~ar5000.bcs~ ~%MOD_FOLDER%/Scripts/ar5000.baf~	
+	    EXTEND_TOP ~ar5500.bcs~ ~%MOD_FOLDER%/Scripts/ar5500.baf~
+	// Helga uses AR5501, but Vienxay already grabs this file. Uncomment if that changes.
+//		    EXTEND_BOTTOM ~ar5501.bcs~ ~%MOD_FOLDER%/Scripts/ar5501.baf~
+ // Cutscenes 
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Scripts/X3HCut01.baf~  
+~%MOD_FOLDER%/Scripts/X3HCut02.baf~  
+~%MOD_FOLDER%/Scripts/X3HCut03.baf~ 
+~%MOD_FOLDER%/Scripts/X3HCut04.baf~ 
+~%MOD_FOLDER%/Scripts/X3HCut05.baf~ //Cutscene if Scrier does the spell
+  //Dialogue 
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3Hel.d~
+~%MOD_FOLDER%/Dialogue/X3Hel25.d~
+~%MOD_FOLDER%/Dialogue/X3HRL.d~
+~%MOD_FOLDER%/Dialogue/X3HDD.d~
+~%MOD_FOLDER%/Dialogue/X3HSON.d~
+~%MOD_FOLDER%/Dialogue/X3HGEM.d~
+~%MOD_FOLDER%/Dialogue/X3HSCRY.d~
+~%MOD_FOLDER%/Dialogue/BX3Hel.d~
+~%MOD_FOLDER%/Dialogue/X3HelJ.d~
+~%MOD_FOLDER%/Dialogue/BX3Hel25.d~
+~%MOD_FOLDER%/Dialogue/X3Hel25J.d~

@@ -1,0 +1,595 @@
+LOAD_TRA ~%MOD_FOLDER%/Tra/English/RECORDER_bg2.tra~
+
+LAF HANDLE_AUDIO
+  STR_VAR
+    audio_path = ~SkitiaNPCs/Audio/Recorder~
+    oggdec_path = ~SkitiaNPCs/Audio~
+    sox_path = ~SkitiaNPCs/Audio/Recorder~
+END
+
+
+ADD_KIT ~X3Bard~
+	~X3Bard 1 1 1 1 1 1 1 1~
+ // appended column-wise to WEAPPROF.2da
+//11                                T   S           F   Q             S S
+//10                                W   C           L   U             W I
+//9                         B L S   O   I   W       A   A             O N
+//8                         A O H   H   M   A       I   R C   S       R G
+//7         L S           M S N O   A   I   R     H L   T R L H     2 D L 2                 E E E E E E E E E E E
+//6         _ _       S   I T G R   N K T D H     A M   E O O O     H A E W E E E E E E E E X X X X X X X X X X X
+//5         S S   S B P   S A S T   D A A A A   S L O   R S N R   S A N W E X X X X X X X X T T T T T T T T T T T
+//4         W W   P L I   S R W S   E T R G M C P B R M S S G T D L N D E A T T T T T T T T R R R R R R R R R R R
+//3         O O B E U K A I D O W A D A W G M L E E N A T B B B A I D S A P R R R R R R R R A A A A A A A A A A A
+//2         R R O A N E X L S R O X S N A E E U A R I C A O O O R N E H P O A A A A A A A A 1 1 1 1 1 1 1 1 1 1 2
+//1         D D W R T D E E W D R E W A K R R B R D N E F W W W T G D I O N 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0
+ ~X3Bard	0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 1 1 0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+
+ 	~X3Bard 3 3 3 12 12 3~
+	~X3Bard 0 0 0 0 0 0~
+	~X3Bard 0 0 0 0 0 0~
+    ~X3Bard 0 0 0 17 17 0~
+	~X3Bard 1 1 1 1 1 1 1 1 1~
+	~X3Bard 1 1 1 1 0 0~
+	~%MOD_FOLDER%/2da/X3Bardcl.2da~
+	~~ 
+	~0x00080000 5~
+	~X3R~
+	~* * * * * * * * * * * * * * * * * * *  *~
+	SAY ~lorekeeper~
+	SAY ~Lorekeeper~
+	SAY ~LOREKEEPER: Lorekeepers are bards that focus less on a generalist skill set and lean more towards spell casting, where their prodigious memory and knowledge makes them better casters than most other bards. They make excellent librarians, historians, and advisors with their large capacity for learning and recalling, and their innate skills ensure information is not lost.
+
+Advantages:
+- +20 bonus to lore.
+- +2 Spell Slots for every spell level. 
+- May use SONATA in place of the regular Bard Song.
+
+SONATA: This song provides varying levels of intelligence, save bonuses, and mind protection depending on the level of the bard:
+
+Level 1: +1 Int, +1 Saves vs Spells, Immunity to Charm and Sleep. 
+Level 15: +2 Int, +2 Saves vs Spells, Immunity to Charm, Sleep, and Rigid/Feeblemind.
+Level 20: +3 Int, +3 Saves vs Spells, Immunity to Charm, Sleep, Rigid/Feeblemind and Confusion
+
+Disadvantages:
+- No Pickpocketing Skill.
+- Can only be proficient in club, dagger, crossbow, and quarterstaff.~
+
+LAF fl#add_kit_ee
+	STR_VAR
+		kit_name = ~X3Bard~ 
+		clswpbon = ~0 0 3~		
+		numwslot = ~2~ // This determines the number of non-off hand weapon slots you have. You can have up to four of these, though mages/bards/thieves have two, so we picked two.
+		thiefscl = ~0 0 0 0 0 0 0 0~
+		hpclass = ~HPROG~ // Bards use the rogue hit point table. You can make your own, but it's easiest to use already existing hit point progressions. 
+		clsrcreq = ~1 1 1 1 1 1 1~ // This is CHARGEN choices.
+		clasthac = ~0~
+END
+//HLA 
+COPY	"%MOD_FOLDER%/2da/LUX3R.2da" override
+//Spell
+COPY	"%MOD_FOLDER%/Spells/x3rpkit.spl" override
+COPY	"%MOD_FOLDER%/Spells/x3rpkit3.spl" override
+COPY    "%MOD_FOLDER%/Spells/X3RBS.bam" override 
+COPY    "%MOD_FOLDER%/Spells/X3RHLA.spl" override 
+SAY NAME1 ~Symphony of Scholars~
+SAY NAME2 ~Symphony of Scholars~
+SAY 0x50 ~Symphony of Scholars: A powerful song unique to lorekeepers, the song gives the bard a 6 point bonus to their AC, and 10% magic resistance due to the magic of the song. As well, the bard’s party receives +4 Intelligence, +2 to all saves, +5% MR, +15% chance of a critical hit, and immunity to charm, domination, sleep, rigid/feeblemind, confusion, and fear. 
+This ability replaces the current bard song. It does not stack with Sonata, Enhanced Bard Song or other song sources. Additionally, the Lorekeeper cannot learn both Symphony of Scholars if Enhanced Bard Song is learned, and vice-versa.
+~
+COPY    "%MOD_FOLDER%/Spells/X3RHLAS.spl" override 
+SAY NAME1 ~Symphony of Scholars~
+SAY NAME2 ~Symphony of Scholars~
+SAY 0x50 ~Symphony of Scholars: A powerful song unique to lorekeepers, the song gives the bard a 6 point bonus to their AC, and 10% magic resistance due to the magic of the song. As well, the bard’s party receives +4 Intelligence, +2 to all saves, +5% MR, +15% chance of a critical hit, and immunity to charm, domination, sleep, rigid/feeblemind, confusion, and fear. 
+This ability replaces the current bard song. It does not stack with Sonata, Enhanced Bard Song or other song sources, and cannot be learned if Enhanced Bard Song is known.
+~
+COPY	"%MOD_FOLDER%/Spells/x3rpkit2.spl" override
+	SAY NAME1 ~Sonata~
+	SAY NAME2 ~Sonata~
+	SAY 0x50 ~SONATA: This song provides varying levels of intelligence, save bonuses, and mind protection depending on the level of the bard:
+
+Level 1: +1 Int, +1 Saves vs Spells, Immunity to Charm and Sleep. 
+Level 15: +2 Int, +2 Saves vs Spells, Immunity to Charm, Sleep, and Rigid/Feeblemind.
+Level 20: +3 Int, +3 Saves vs Spells, Immunity to Charm, Sleep, Rigid/Feeblemind and Confusion~
+
+COPY	"%MOD_FOLDER%/Spells/x3rpkit4.spl" override
+	SAY NAME1 ~Sonata~
+	SAY NAME2 ~Sonata~
+	SAY 0x50 ~SONATA: This song provides varying levels of intelligence, save bonuses, and mind protection depending on the level of the bard:
+
+Level 1: +1 Int, +1 Saves vs Spells, Immunity to Charm and Sleep. 
+Level 15: +2 Int, +2 Saves vs Spells, Immunity to Charm, Sleep, and Rigid/Feeblemind.
+Level 20: +3 Int, +3 Saves vs Spells, Immunity to Charm, Sleep, Rigid/Feeblemind and Confusion~
+
+COPY "%MOD_FOLDER%/Spells/X3RSum.SPL" override 
+SAY NAME1 ~Send Gustav~
+SAY NAME2 ~Send Gustav~
+SAY 0x50 ~Send Gustav
+
+Range: 30 ft.
+Duration: 2 Turns
+Casting Time: 0
+Area of Effect: Any point in range
+Saving Throw: None
+
+Sends out Gustav the ferret to scout, once a day. For two turns, Gustav will perform any action of the equivalent ferret familiar. If hit below 25% hitpoints, he will flee.~
+
+COPY "%MOD_FOLDER%/Spells/X3RDOOR.SPL" override 
+SAY NAME1 ~Teleport~
+SAY NAME2 ~Teleport~
+SAY DESC ~NPC Spell: Causes NPC and Target to destroy self after a long casting. In this case, the PC must interrupt the spell else Recorder's child is forever out of reach.
+This is not a player spell and a player should not see this text in the game itself.~
+
+
+//Items 
+COPY	"%MOD_FOLDER%/Items/CX3BRD02.bam" override
+COPY	"%MOD_FOLDER%/Items/IX3BRD02.bam" override
+COPY	"%MOD_FOLDER%/Items/X3RFlute.itm" override
+SAY NAME1 ~Recorder's Flute~
+SAY NAME2 ~Recorder's Flute~
+SAY DESC  ~This flute was crafted by gnomes in Lantan. Recorder says it was a gift from her father, and it seems quite small, though adjusts to fit her size when she takes it out of her pack. Tiny engravings of flowers, winding vines, and wispy clouds cover the length of the flute. When played, listeners find themselves moving in tempo with one another, harmonizing their movements and teamwork, making it more difficult for an enemy to find an opening.  
+ 
+Charge Abilities (Twice Per Day)
+When played, the spell Defensive Harmony is cast from the flute.
+Weight: 3~
+    LPF ADD_ITEM_EQEFFECT
+    INT_VAR
+      opcode = 319
+	  target = 1
+	  timing = 2
+	  parameter2 = 11
+	  power = 1
+	  special = RESOLVE_STR_REF (~Recorder~)
+	STR_VAR
+	  resource = X3Reb
+END	
+
+	  
+COPY "%MOD_FOLDER%/Items/X3Rfer.itm" override 
+SAY NAME1 ~Gustav~
+SAY NAME2 ~Gustav~
+SAY DESC ~This ferret appears quite well fed and occasionally pokes its head out of Recorder's pack. When asked how her mother purchased it from the grand markets of Amn, introducing it to her in the evening dinner. The pair have been inseparable ever since.
+
+Weight: 1~
+	OUTER_SET strref = RESOLVE_STR_REF (~The Ferret growls when you try to remove it from its comfortable spot in Recorder's pack.~ [X3RF3])
+	APPEND item_use.2da ~X3RFER Recorder %strref% 3~
+
+COPY "%MOD_FOLDER%/Items/X3RARM.bam" override 
+COPY "%MOD_FOLDER%/Items/X3RLEAT.itm" override 
+SAY NAME1 ~Sonneter's Leather~
+SAY NAME2 ~Sonneter's Leather~
+SAY DESC ~This leather armor of Recorder's is enchanted to not encumber spell-casting. It can fit any gnome, dwarf, or halfling, though it's armor has no more additional protections than standard leather.
+
+
+STATISTICS:
+
+Armor Class: 8 (10 vs. piercing and missile)
+Special: Can cast arcane spells while worn.
+Requires:
+ 4 Strength
+ Dwarf, Halfling, or Gnome
+
+Weight: 10~  
+
+COPY "%MOD_FOLDER%/Items/X3RBOUNT.itm" override 
+SAY NAME1 ~Bounty Notice~ 
+SAY NAME2 ~Bounty Notice~ 
+SAY DESC ~BOUNTY BY ORDER OF THE REMOVER
+
+The client Phelgrim has put a large bounty on one gnome named Rebecca. She may be masquerading under the false name of Recorder, and has been sighted in Althkata.
+
+The one to bring proof of her demise, and any with her, should bring proof to the Remover in the Sea's Bounty Tavern.
+
+Good hunting.~
+COPY "%MOD_FOLDER%/Items/X3RNOTE.itm" override 
+SAY NAME1 ~Note from Phelgrim~ 
+SAY NAME2 ~Note from Phelgrim~ 
+SAY DESC ~It has come to my attention that my "darling" wife has returned to Brynnlaw. If you see her, bring her head to me. Likely she foolishly comes to try to take away my property.
+
+See to it that she never gets the chance.
+
+Phelgrim~
+COPY "%MOD_FOLDER%/Items/X3RSCI.itm" override 
+SAY NAME1 ~Scimitar of Talona~ 
+SAY NAME2 ~Scimitar of Talona~ 
+SAY DESC ~A scimitar such as this would have likely originated amongst the faith of Talona. The weapon cruelly has a chance upon connecting with an enemy of injecting a deadly venom that is excruciatingly painful for several seconds. Its origins have it favor souls who are not benevolent, and would be more likely to use the blade 
+for its more malicious, intended purposes.
+
+STATISTICS:
+
+THAC0: +2
+Damage: 1d8+2 (slashing), + 3 poison damage over six seconds unless target makes save vs. death
+Speed Factor: 3
+Proficiency Type: Scimitar/Wakizashi/Ninjatō
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 2~
+
+COPY ~%MOD_FOLDER%/items/X3RBody.bam~ ~override/X3RBody.bam~
+COPY ~%MOD_FOLDER%/items/X3RBody.itm~ ~override/X3RBody.itm~
+SAY NAME1 ~Recorder's Body~
+SAY NAME2 ~Recorder's Body~
+SAY DESC ~Recorder was able to somehow protect herself from Bodhi's attempt to infect her with vampirism with the spell that took her own life but also preventing her from being raised by conventional means. There may be some way to revive her, though you don't know what it would be. Perhaps the temple of Oghma may be of assistance.
+
+STATISTICS:
+
+Weight: 40~
+
+COPY ~%MOD_FOLDER%/items/X3RGEM.itm~ ~override/X3RGEM.itm~
+SAY NAME1 ~Purple Iolite~
+SAY NAME2 ~Purple Iolite~
+SAY DESC ~This rare purple Iolite is prized by clerics and wizards both for its power in rituals and for being able to be fashioned as a sparkling component of jewelry.
+
+WEIGHT: 1~
+
+COPY_EXISTING ~%MOD_FOLDER%/Items/x3RingR.itm~ ~override/x3RingR.itm~
+SAY NAME1 ~Recorder's Engagement Ring~
+SAY NAME2 ~Recorder's Engagement Ring~
+SAY DESC ~Weaved in gold and with a heart signet, you gave this ring to Recorder as a promise of marriage. Whether you will be able to deliver is up to fate.
+The ring's enchantments have taken affect with its wearer's acceptance, and they will surely help to keep Recorder safer for the battles to come.
+
+STATISTICS:
+
+Equipped abilities:
+-Regenerates one hitpoint every six seconds 
+-Armor Class: +2
+-Save vs. Death: +3
+-An additional Level 5 and Level 6 Magic Slot.
+
+Weight: 1~ 
+    LPF ADD_ITEM_EQEFFECT
+    INT_VAR
+      opcode = 319
+	  target = 1
+	  timing = 2
+	  parameter2 = 11
+	  power = 1
+	  special = RESOLVE_STR_REF (~Recorder~)
+	STR_VAR
+	  resource = X3Reb
+END
+
+// Character SoA 
+COPY ~%MOD_FOLDER%/Cre/X3Reb.cre~ ~override/X3Reb.cre~
+  SAY NAME1 ~Recorder~
+  SAY NAME2 ~Recorder~
+  WRITE_ASCII 0x248 ~X3Reb~ #8  //override script
+  WRITE_ASCII 0x280 ~X3Reb~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3Reb~ #8   //pre-joining dialogue file
+  WRITE_ASCII 0X34 ~X3RebM~ #8   
+  WRITE_ASCII 0x3c ~X3RebL~ #8  
+  SAY BIO ~Recorder looks reluctant when you press her about her past, advising that it "isn’t anything grand." A daughter of a priestess and bookbinder, Recorder grew up around with books and tomes in easy reach in a cozy cottage in Lantan. When one day she found sheets and excerpts of music, she fell in love and found her dual passion realized: music and historical recording. When her parents separated and her mother moved to Amn, she purchased a ferret, who she named Gustav, and they've been inseparable since. She does however, apologize in advance if any rations mysteriously go missing. Ferrets, she says, are notorious for not asking first. She keeps a large tome full of notes of both your prior journey and your current one, though is very protective of both any sneak peeks into its contents and damage via blood, magic, or ferret claw.~
+  SAY INITIAL_MEETING ~Wait.~ [X3RInn]
+  SAY MORALE ~It's...all over.~ [X3RFear] 
+  SAY HAPPY  ~That was impressive.~ [X3RHap]
+  SAY UNHAPPY_ANNOYED ~Unbelievable.~ [X3RAnn]
+  SAY UNHAPPY_SERIOUS ~What were you thinking?~ [X3RSer]
+  SAY UNHAPPY_BREAKING_POINT ~~ [] 
+  SAY LEADER ~We walk together.~ [X3RLead]
+  SAY TIRED ~I must rest.~ [X3RRest]
+  SAY BORED ~*Plays flute.*~ [X3RBored]
+  SAY BATTLE_CRY1 ~Time for your final bow!~ [X3RCry1]
+  SAY BATTLE_CRY2 ~Care for an encore?~ [X3RCry2]
+  SAY BATTLE_CRY3 ~Don't be reckless!~ [X3RCry3]
+  SAY BATTLE_CRY4 ~We won't lose!~ [X3RCry4]
+  SAY BATTLE_CRY5 ~Rest in peace.~ [X3RCry5]
+  SAY DAMAGE ~~ [X3RDam]
+  SAY DYING ~~ [X3RDead]
+  SAY HURT ~So this...is how it ends...~ [X3RHurt]
+  SAY AREA_FOREST ~My heart is singing.~ [X3RFor]
+  SAY AREA_CITY ~Don't go scurrying off, Gustav. I'll lose you in the crowds.~ [X3RF2]
+  SAY AREA_DUNGEON ~We can do this.~ [X3RDun]
+  SAY AREA_DAY ~Daybreak always brings new hope. And if you have long hair, more tangles.~ [X3RDay]
+  SAY AREA_NIGHT ~Be careful.~ [X3RNight]
+  SAY SELECT_COMMON1 ~Choose your path.~ [X3RCom1]
+  SAY SELECT_COMMON2 ~I'm with you.~ [X3RCom2]
+  SAY SELECT_COMMON3 ~Please, take your time.~ [X3RCom3]
+  SAY SELECT_COMMON4 ~Go on.~ [X3RCom4]
+  SAY SELECT_COMMON5 ~Hrm.~ [X3RCom5]
+  SAY SELECT_COMMON6 ~How are you?~ [X3RGreet]
+  SAY SELECT_ACTION1 ~Let's go.~ [X3RGo]
+  SAY SELECT_ACTION2 ~We need each other.~ [X3RLove]
+  SAY SELECT_ACTION3 ~No need to worry.~ [X3RNNTW]
+  SAY SELECT_ACTION4 ~We can see this through.~ [X3RAct3]
+  SAY SELECT_ACTION5 ~I have faith in you.~ [X3RAct4]
+  SAY SELECT_ACTION6 ~The path is yours to climb.~ [X3RAct0]
+  SAY SELECT_ACTION7 ~I'm with you.~ [X3RCom2]
+  SAY SELECT_ACTION7 ~Like a ship upon the waves.~ [X3RAct8]
+  SAY CRITICAL_HIT ~It's over!~ [X3RCrit]
+  SAY CRITICAL_MISS ~Goodness gracious!~ [X3RMiss]
+  SAY TARGET_IMMUNE ~Oh my.~ [X3RImm]
+  SAY INVENTORY_FULL ~I think not.~ [X3RInv]
+  SAY SPELL_DISRUPTED ~My apologies.~ [X3RSpell]
+  SAY SET_A_TRAP ~~ []
+  SAY HIDDEN_IN_SHADOWS ~~ []
+  SAY PICKED_POCKET ~~ []
+  SAY SELECT_RARE1 ~No matter what may come.~ [X3RAct9]
+  SAY SELECT_RARE2 ~Anything I can do to help you, I will.~ [X3RRare]
+  WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~X3Bard~)) 
+ // Character ToB 
+COPY ~%MOD_FOLDER%/Cre/X3Reb25.cre~ ~override/X3Reb25.cre~
+  SAY NAME1 ~Recorder~
+  SAY NAME2 ~Recorder~
+  WRITE_ASCII 0x248 ~X3Reb25~ #8  //override script
+  WRITE_ASCII 0x280 ~X3Reb~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3Reb25~ #8   //pre-joining dialogue file
+  WRITE_ASCII 0X34 ~X3RebM~ #8   
+  WRITE_ASCII 0x3c ~X3RebL~ #8  
+  SAY BIO ~Recorder looks reluctant when you press her about her past, advising that it "isn’t anything grand." A daughter of a priestess and bookbinder, Recorder grew up around with books and tomes in easy reach in a cozy cottage in Lantan. When one day she found sheets and excerpts of music, she fell in love and found her dual passion realized: music and historical recording. When her parents separated and her mother moved to Amn, she purchased a ferret, who she named Gustav, and they've been inseparable since. She does however, apologize in advance if any rations mysteriously go missing. Ferrets, she says, are notorious for not asking first. She keeps a large tome full of notes of both your prior journey and your current one, though is very protective of both any sneak peeks into its contents and damage via blood, magic, or ferret claw.~
+  SAY INITIAL_MEETING ~Wait.~ [X3RInn]
+  SAY MORALE ~It's...all over.~ [X3RFear] 
+  SAY HAPPY  ~That was impressive.~ [X3RHap]
+  SAY UNHAPPY_ANNOYED ~Unbelievable.~ [X3RAnn]
+  SAY UNHAPPY_SERIOUS ~What were you thinking?~ [X3RSer]
+  SAY UNHAPPY_BREAKING_POINT ~~ [] 
+  SAY LEADER ~We walk together.~ [X3RLead]
+  SAY TIRED ~I must rest.~ [X3RRest]
+  SAY BORED ~*Plays flute.*~ [X3RBored]
+  SAY BATTLE_CRY1 ~Time for your final bow!~ [X3RCry1]
+  SAY BATTLE_CRY2 ~Care for an encore?~ [X3RCry2]
+  SAY BATTLE_CRY3 ~Don't be reckless!~ [X3RCry3]
+  SAY BATTLE_CRY4 ~We won't lose!~ [X3RCry4]
+  SAY BATTLE_CRY5 ~Rest in peace.~ [X3RCry5]
+  SAY DAMAGE ~~ [X3RDam]
+  SAY DYING ~~ [X3RDead]
+  SAY HURT ~So this...is how it ends...~ [X3RHurt]
+  SAY AREA_FOREST ~My heart is singing.~ [X3RFor]
+  SAY AREA_CITY ~Don't go scurrying off, Gustav. I'll lose you in the crowds.~ [X3RF2]
+  SAY AREA_DUNGEON ~We can do this.~ [X3RDun]
+  SAY AREA_DAY ~Daybreak always brings new hope. And if you have long hair, more tangles.~ [X3RDay]
+  SAY AREA_NIGHT ~Be careful.~ [X3RNight]
+  SAY SELECT_COMMON1 ~Choose your path.~ [X3RCom1]
+  SAY SELECT_COMMON2 ~Go on.~ [X3RCom4]
+  SAY SELECT_COMMON3 ~Please, take your time.~ [X3RCom3]
+  SAY SELECT_COMMON4 ~I vow to bear you up~ [X3RCom7]
+  SAY SELECT_COMMON5 ~Hrm.~ [X3RCom5]
+  SAY SELECT_COMMON6 ~How are you?~ [X3RGreet]
+  SAY SELECT_ACTION1 ~Let's go.~ [X3RGo]
+  SAY SELECT_ACTION2 ~We need each other.~ [X3RLove]
+  SAY SELECT_ACTION3 ~No need to worry.~ [X3RNNTW]
+  SAY SELECT_ACTION4 ~We can see this through.~ [X3RAct3]
+  SAY SELECT_ACTION5 ~I have faith in you.~ [X3RAct4]
+  SAY SELECT_ACTION6 ~The path is yours to climb.~ [X3RAct0]
+  SAY SELECT_ACTION7 ~I'm with you.~ [X3RCom2]
+  SAY SELECT_ACTION7 ~Like a ship upon the waves.~ [X3RAct8]
+  SAY CRITICAL_HIT ~It's over!~ [X3RCrit]
+  SAY CRITICAL_MISS ~Goodness gracious!~ [X3RMiss]
+  SAY TARGET_IMMUNE ~Oh my.~ [X3RImm]
+  SAY INVENTORY_FULL ~I think not.~ [X3RInv]
+  SAY SPELL_DISRUPTED ~My apologies.~ [X3RSpell]
+  SAY SET_A_TRAP ~~ []
+  SAY HIDDEN_IN_SHADOWS ~~ []
+  SAY PICKED_POCKET ~~ []
+  SAY SELECT_RARE1 ~No matter what may come.~ [X3RAct9]
+  SAY SELECT_RARE2 ~Anything I can do to help you, I will.~ [X3RRare]
+  WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~X3Bard~)) 
+  
+    APPEND ~pdialog.2da~
+~X3Reb       X3RebP             X3RebJ			X3RebD~
+UNLESS ~X3Reb ~
+UNLESS ~25POST~
+
+APPEND ~pdialog.2da~
+~X3Reb        X3RebP             X3RebJ            X3RebD             X3Reb25P             X3Reb25J		X3Reb25D		X3Reb25~
+UNLESS ~X3Reb~
+IF ~25POST~
+
+APPEND ~interdia.2da~
+~X3Reb       BX3Reb~
+UNLESS ~X3Reb~
+UNLESS ~25FILE~
+
+APPEND ~interdia.2da~
+~X3Reb       BX3Reb       BX3Reb25~
+UNLESS ~X3Reb~
+IF ~25FILE~
+
+//Epilogues
+COPY ~%MOD_FOLDER%/Epilogue/X3RebEp.2da~ ~override/X3Reb01.2da~
+REPLACE ~99999~ @51
+
+COPY ~%MOD_FOLDER%/Epilogue/X3RebEp.2da~ ~override/X3Reb02.2da~
+REPLACE ~99999~ @52
+
+COPY ~%MOD_FOLDER%/Epilogue/X3RebEp.2da~ ~override/X3Reb3M.2da~
+REPLACE ~99999~ @53
+
+COPY ~%MOD_FOLDER%/Epilogue/X3RebEp.2da~ ~override/X3Reb4M.2da~
+REPLACE ~99999~ @54
+
+COPY ~%MOD_FOLDER%/Epilogue/X3RebEp.2da~ ~override/X3Reb3F.2da~
+REPLACE ~99999~ @55
+
+COPY ~%MOD_FOLDER%/Epilogue/X3RebEp.2da~ ~override/X3Reb4F.2da~
+REPLACE ~99999~ @56
+
+COPY ~%MOD_FOLDER%/Epilogue/X3RebEp.2da~ ~override/X3Reb05.2da~
+REPLACE ~99999~ @57
+
+// Journal Entries 
+ADD_JOURNAL TITLE (@3) @4 @5 @6 @7 USING ~%MOD_FOLDER%/Tra/english/Recorder_bg2.tra~ // The Remover Quest
+ADD_JOURNAL TITLE (@8) @9 @10 @11 @12 @13 @14 USING ~%MOD_FOLDER%/Tra/english/Recorder_bg2.tra~ // Phelgrim
+
+
+
+  // Portraits 
+
+		COPY ~%MOD_FOLDER%/Portraits/X3RebL.bmp~ ~override/X3RebL.bmp~
+		COPY ~%MOD_FOLDER%/Portraits/X3RebM.bmp~ ~override/X3RebM.bmp~
+// Creatures 
+COPY ~%MOD_FOLDER%/Cre/X3RMOM.cre~ ~override/X3RMOM.cre~
+  WRITE_ASCII 0x248 ~X3RMOM~ #8  //override script
+  WRITE_ASCII 0x280 ~X3RMOM~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3RMOM~ #8   // Dialogue 
+  SAY NAME1 ~Siria~
+  SAY NAME2 ~Siria~
+// Creatures 
+COPY ~%MOD_FOLDER%/Cre/X3RFER.cre~ ~override/X3RFER.cre~
+  WRITE_ASCII 0x248 ~X3RFER~ #8  //override script
+  WRITE_ASCII 0x280 ~X3RFER~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3RFER~ #8   // Dialogue 
+  SAY NAME1 ~Gustav~
+  SAY NAME2 ~Gustav~  
+COPY ~%MOD_FOLDER%/Cre/X3RAMB1.cre~ ~override/X3RAMB1.cre~
+  WRITE_ASCII 0x248 ~X3RAMB1~ #8  //override script
+  WRITE_ASCII 0x280 ~X3RAMB1~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3RAMB1~ #8   // Dialogue 
+  SAY NAME1 ~Bounty Hunter~
+  SAY NAME2 ~Bounty Hunter~   
+COPY ~%MOD_FOLDER%/Cre/X3RAMB2.cre~ ~override/X3RAMB2.cre~
+  WRITE_ASCII 0x248 ~X3RAMB2~ #8  //override script
+  WRITE_ASCII 0x280 ~X3RAMB2~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3RAMB2~ #8   // Dialogue 
+  SAY NAME1 ~Hired Killer~
+  SAY NAME2 ~Hired Killer~    
+COPY ~%MOD_FOLDER%/Cre/X3REMOVE.cre~ ~override/X3REMOVE.cre~
+  WRITE_ASCII 0x248 ~X3REMOVE~ #8  //override script
+  WRITE_ASCII 0x280 ~X3REMOVE~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3REMOVE~ #8   // Dialogue 
+  SAY NAME1 ~The Remover~
+  SAY NAME2 ~The Remover~  
+COPY ~%MOD_FOLDER%/Cre/X3RTANYA.cre~ ~override/X3RTANYA.cre~
+  WRITE_ASCII 0x248 ~X3RTANYA~ #8  //override script
+  WRITE_ASCII 0x280 ~X3RTANYA~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3RTANYA~ #8   // Dialogue 
+  SAY NAME1 ~Tanya~
+  SAY NAME2 ~Tanya~  
+COPY ~%MOD_FOLDER%/Cre/X3RKID.cre~ ~override/X3RKID.cre~
+  WRITE_ASCII 0x248 ~X3RKID~ #8  //override script
+  WRITE_ASCII 0x280 ~X3RKID~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3RKID~ #8   // Dialogue 
+  SAY NAME1 ~Raban~
+  SAY NAME2 ~Raban~ 
+COPY ~%MOD_FOLDER%/Cre/X3RKID.cre~ ~override/X3Rlove.cre~
+  WRITE_ASCII 0x248 ~X3Rlove~ #8  //override script
+  WRITE_ASCII 0x280 ~X3Rlove~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3Rlove~ #8   // Dialogue 
+  SAY NAME1 ~Raban~
+  SAY NAME2 ~Raban~  
+COPY ~%MOD_FOLDER%/Cre/X3RPIR1.cre~ ~override/X3RPIR1.cre~
+  WRITE_ASCII 0x248 ~X3RPIR1~ #8  //override script
+  WRITE_ASCII 0x280 ~X3RPIR1~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3RPIR1~ #8   // Dialogue 
+  SAY NAME1 ~Pirate~
+  SAY NAME2 ~Pirate~   
+COPY ~%MOD_FOLDER%/Cre/X3RPIR2.cre~ ~override/X3RPIR2.cre~
+  WRITE_ASCII 0x248 ~X3RPIR2~ #8  //override script
+  WRITE_ASCII 0x280 ~X3RPIR2~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3RPIR2~ #8   // Dialogue 
+  SAY NAME1 ~Pirate~
+  SAY NAME2 ~Pirate~    
+COPY ~%MOD_FOLDER%/Cre/X3RPIR3.cre~ ~override/X3RPIR3.cre~
+  WRITE_ASCII 0x248 ~X3RPIR3~ #8  //override script
+  WRITE_ASCII 0x280 ~X3RPIR3~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3RPIR3~ #8   // Dialogue 
+  SAY NAME1 ~Pirate~
+  SAY NAME2 ~Pirate~    
+COPY ~%MOD_FOLDER%/Cre/X3RPIR4.cre~ ~override/X3RPIR4.cre~
+  WRITE_ASCII 0x248 ~X3RPIR4~ #8  //override script
+  WRITE_ASCII 0x280 ~X3RPIR4~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3RPIR4~ #8   // Dialogue 
+  SAY NAME1 ~Pirate~
+  SAY NAME2 ~Pirate~   
+COPY ~%MOD_FOLDER%/Cre/X3RM.cre~ ~override/X3RM.cre~
+  WRITE_ASCII 0x248 ~X3RM~ #8  //override script
+  WRITE_ASCII 0x280 ~X3RM~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3RM~ #8   // Dialogue 
+  SAY NAME1 ~Aerik~
+  SAY NAME2 ~Aerik~  
+COPY ~%MOD_FOLDER%/Cre/X3RM25.cre~ ~override/X3RM25.cre~
+  WRITE_ASCII 0x248 ~X3RM25~ #8  //override script
+  WRITE_ASCII 0x280 ~X3RM25~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3RM25~ #8   // Dialogue 
+  SAY NAME1 ~Aerik~
+  SAY NAME2 ~Aerik~    
+COPY ~%MOD_FOLDER%/Cre/X3RPHEL.cre~ ~override/X3RPHEL.cre~
+  WRITE_ASCII 0x248 ~X3RPHEL~ #8  //override script
+  WRITE_ASCII 0x280 ~X3RPHEL~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3RPHEL~ #8   // Dialogue 
+  SAY NAME1 ~Phelgrim~
+  SAY NAME2 ~Phelgrim~   
+COPY ~%MOD_FOLDER%/Cre/X3RB1.cre~ ~override/X3RB1.cre~
+  WRITE_ASCII 0x248 ~X3RB1~ #8  //override script
+  WRITE_ASCII 0x280 ~X3RB1~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3RB1~ #8   // Dialogue 
+  SAY NAME1 ~Bandit~
+  SAY NAME2 ~Bandit~ 
+COPY ~%MOD_FOLDER%/Cre/X3RB2.cre~ ~override/X3RB2.cre~
+  WRITE_ASCII 0x248 ~X3RB2~ #8  //override script
+  WRITE_ASCII 0x280 ~X3RB2~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3RB~ #8   // Dialogue 
+  SAY NAME1 ~Bandit~
+  SAY NAME2 ~Bandit~    
+COPY ~%MOD_FOLDER%/Cre/X3RB3.cre~ ~override/X3RB3.cre~
+  WRITE_ASCII 0x248 ~X3RB3~ #8  //override script
+  WRITE_ASCII 0x280 ~X3RB3~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3RB~ #8   // Dialogue 
+  SAY NAME1 ~Bandit~
+  SAY NAME2 ~Bandit~  
+COPY ~%MOD_FOLDER%/Cre/X3RB4.cre~ ~override/X3RB4.cre~
+  WRITE_ASCII 0x248 ~X3RB4~ #8  //override script
+  WRITE_ASCII 0x280 ~X3RB4~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3RB~ #8   // Dialogue 
+  SAY NAME1 ~Bandit~
+  SAY NAME2 ~Bandit~   
+COPY ~%MOD_FOLDER%/Cre/X3RB5.cre~ ~override/X3RB5.cre~
+  WRITE_ASCII 0x248 ~X3RB5~ #8  //override script
+  WRITE_ASCII 0x280 ~X3RB5~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3RB~ #8   // Dialogue 
+  SAY NAME1 ~Bandit~
+  SAY NAME2 ~Bandit~   
+COPY ~%MOD_FOLDER%/Cre/X3RB6.cre~ ~override/X3RB6.cre~
+  WRITE_ASCII 0x248 ~X3RB6~ #8  //override script
+  WRITE_ASCII 0x280 ~X3RB6~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3RB~ #8   // Dialogue 
+  SAY NAME1 ~Bandit~
+  SAY NAME2 ~Bandit~   
+// Creature and Cutscene Scripts 
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Scripts/X3RMOM.baf~ 
+~%MOD_FOLDER%/Scripts/X3Reb.baf~ 
+~%MOD_FOLDER%/Scripts/X3RebD.baf~
+~%MOD_FOLDER%/Scripts/X3Reb25.baf~ 
+~%MOD_FOLDER%/Scripts/X3Reb25D.baf~ 
+~%MOD_FOLDER%/Scripts/X3RCut01.baf~ 
+~%MOD_FOLDER%/Scripts/X3RCut02.baf~
+~%MOD_FOLDER%/Scripts/X3RCut03.baf~//Cutscene for Helga Spell 
+~%MOD_FOLDER%/Scripts/X3Rbodhi.baf~
+~%MOD_FOLDER%/Scripts/X3RPIR1.baf~
+~%MOD_FOLDER%/Scripts/X3RPIR4.baf~
+~%MOD_FOLDER%/Scripts/X3RPHEL.baf~
+~%MOD_FOLDER%/Scripts/X3RM.baf~ 
+~%MOD_FOLDER%/Scripts/X3RB1.baf~ 
+~%MOD_FOLDER%/Scripts/X3RW1.baf~ 
+~%MOD_FOLDER%/Scripts/X3RM25.baf~ 
+
+// Area Scripts 
+	EXTEND_TOP ~ar0046.bcs~ ~%MOD_FOLDER%/Scripts/ar0046.baf~
+	EXTEND_TOP ~ar0041.bcs~ ~%MOD_FOLDER%/Scripts/ar0041.baf~	
+  EXTEND_TOP ~ar0319.bcs~ ~%MOD_FOLDER%/Scripts/ar0319.baf~
+    EXTEND_BOTTOM ~ar0314.bcs~ ~%MOD_FOLDER%/Scripts/ar0314.baf~
+    EXTEND_BOTTOM ~ar1600.bcs~ ~%MOD_FOLDER%/Scripts/ar1600.baf~
+	EXTEND_BOTTOM ~ar1700.bcs~ ~%MOD_FOLDER%/Scripts/ar1700.baf~
+	EXTEND_BOTTOM ~ar1800.bcs~ ~%MOD_FOLDER%/Scripts/ar1800.baf~
+    EXTEND_BOTTOM ~ar1601.bcs~ ~%MOD_FOLDER%/Scripts/ar1601.baf~
+	    EXTEND_BOTTOM ~ar5003.bcs~ ~%MOD_FOLDER%/Scripts/ar5003.baf~
+  //Dialogue 
+COMPILE	EVALUATE_BUFFER 
+~%MOD_FOLDER%/Dialogue/X3Reb.d~
+~%MOD_FOLDER%/Dialogue/X3Reb25.d~
+~%MOD_FOLDER%/Dialogue/X3RAMB.d~	
+~%MOD_FOLDER%/Dialogue/X3Remove.d~
+~%MOD_FOLDER%/Dialogue/X3RMOM.d~
+~%MOD_FOLDER%/Dialogue/X3RFER.d~
+~%MOD_FOLDER%/Dialogue/X3RPHEL.d~
+~%MOD_FOLDER%/Dialogue/X3RPIR1.d~
+~%MOD_FOLDER%/Dialogue/X3RM25.d~
+~%MOD_FOLDER%/Dialogue/X3RB1.d~
+~%MOD_FOLDER%/Dialogue/BX3Reb.d~
+~%MOD_FOLDER%/Dialogue/X3RebJ.d~
+~%MOD_FOLDER%/Dialogue/BX3Reb25.d~	
+~%MOD_FOLDER%/Dialogue/X3Reb25J.d~	
+
+
+
+LOAD_TRA ~%MOD_FOLDER%/Tra/english/setup.tra~
