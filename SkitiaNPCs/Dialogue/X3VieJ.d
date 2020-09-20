@@ -4331,9 +4331,10 @@ IF ~~ EXIT
 END 
 
 IF ~~ RomanceInt.Talk
-SAY ~Evermeet prides itself on its beauty, male or female, noble or commoner.~
-= ~I am to be pleasing to the eyes, to be more beautiful than anyone else. I admit, you are somewhat rather pleasing yourself.~ 
-++ ~We are two attractive people then. What should we do about that?~ DO ~IncrementGlobal("X3VieApp","GLOBAL",3)
+SAY ~Hrmph. How forward. Is that how the approach works outside of Evermeet?~ 
+= ~Evermeet prides itself on its beauty, male or female, noble or commoner.~
+= ~As for your question, I aim to be pleasing to the eyes, to be more beautiful than anyone else. But I will admit, you appear rather attractive yourself.~ 
+++ ~Ah, two attractive people then. What should we do about that?~ DO ~IncrementGlobal("X3VieApp","GLOBAL",3)
 DisplayStringNoNameDlg(Player1,@513)~ + RI.1
 ++ ~You are certainly very pleasing.~ DO ~IncrementGlobal("X3VieApp","GLOBAL",6)
 DisplayStringNoNameDlg(Player1,@516)~ + RI.2
