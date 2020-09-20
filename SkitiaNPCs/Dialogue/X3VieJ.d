@@ -4331,8 +4331,8 @@ IF ~~ EXIT
 END 
 
 IF ~~ RomanceInt.Talk
-SAY ~Hrmph. How forward. Is that how the approach works outside of Evermeet?~ 
-= ~Evermeet prides itself on its beauty, male or female, noble or commoner.~
+SAY ~What a very forward comment. Is this technique common with the local customs?~ 
+= ~We who hail of Evermeet pride ourselves on our beauty, male or female, noble or commoner.~
 = ~As for your question, I aim to be pleasing to the eyes, to be more beautiful than anyone else. But I will admit, you appear rather attractive yourself.~ 
 ++ ~Ah, two attractive people then. What should we do about that?~ DO ~IncrementGlobal("X3VieApp","GLOBAL",3)
 DisplayStringNoNameDlg(Player1,@513)~ + RI.1
