@@ -1,0 +1,113 @@
+@0 = ~The Tome of Myth Drannor~
+@1 = ~The Tome of Myth Drannor
+
+Vienxay has shared her purpose for coming to Amn: She was searching for a lost tome from Myth Drannor, and was starting by looking for a sage named Sules'terim.
+She believes someone in the temple of Oghma in the Temple of District may know where he is.~
+//This is in RECORDER_bg2.tra, as it uses her mother's files.
+@2 = ~The Tome of Myth Drannor 
+
+Siria of the Temple of Oghma has told us that the sage Sules'terim is on an academic vacation in Imnesvale, in the Umar Hills. We may find him there.~
+
+@3 = ~The Tome of Myth Drannor 
+
+Sules'terim has lost his notes from a pack of wolves somewhere in the Umar Hills. He may tell us about the tome after we find them for him.~
+
+@4 = ~The Tome of Myth Drannor 
+
+Sules'terim told us the tale on how the tome of Myth Drannor was lost. He believes recovering it from the underdark impossible, but if for some reason 
+we were ever able to retrieve it, he asks we return it to him.~
+
+@5 = ~The Tome of Myth Drannor 
+
+We found Samir, one of the members of the expedition that lost the tome of Myth Drannor. An old slave now, he claims his master has the tome, who may be in the Male Fighters' Society.~
+
+@6 = ~The Tome of Myth Drannor 
+
+We managed to retrieve the tome of Myth Drannor. After Vienxay quickly scoured through it, she determined that it could be used to help further one of our understanding of the weave.
+She also admitted that her people would love it returned and stored, not destroyed for its knowledge. I told her that it was best that her people have it once more, and that we will return it to Sules'terim in the Umar Hills. It is up to me now to follow through on my words.~
+
+@7 = ~The Tome of Myth Drannor 
+
+We managed to retrieve the tome of Myth Drannor. After Vienxay quickly scoured through it, she determined that it could be used to help further one of our understanding of the weave.
+She also admitted that her people would love it returned and stored, not destroyed for its knowledge. I told her that it was best used for ourselves. Any half-elven or elven party member can make use of it, although Vienxay strongly recommends herself.~
+@8 = ~The Tome of Myth Drannor 
+
+We managed to retrieve the tome of Myth Drannor. After Vienxay quickly scoured through it, she determined that it could be used to help further one of our understanding of the weave.
+She also admitted that her people would love it returned and stored, not destroyed for its knowledge. I will have to make a decision at some point to use it or give it to the Sage Sules'terim back in Umar Hills.~
+
+@9 = ~The Tome of Myth Drannor 
+
+We returned the Tome of Myth Drannor to Sules'terim, and he was ecstatic. He rewarded us with a Tome of Elven Grace anyone of half-elven or elven blood could absorb, and this may one day allow Vienxay an opportunity to return to her people.~
+// The below only occurs if the Tome of Myth Drannor was returned to Sules'terim, otherwise this cannot happen.
+@10 = ~Evermeet: Vienxay Redeemed~
+
+@11 = ~Evermeet: Vienxay Redeemed
+
+Due to Vienxay's actions in Faerun and for returning the tome of Myth Drannor to the Evermeet people, the sage Sules'terim informed Vienxay she was no longer exiled, and could return home immediately. I've promised to return with her when our adventures here are over.~
+
+@12 = ~Evermeet: Vienxay Redeemed
+
+Due to Vienxay's actions in Faerun and for returning the tome of Myth Drannor to the Evermeet people, the sage Sules'terim informed Vienxay she was no longer exiled, and could return home immediately. Vienxay declined to return because I could not join her there, and decided she would keep her path with mine.~
+
+@13 = ~Evermeet: Vienxay Redeemed
+
+Due to Vienxay's actions in Faerun and for returning the tome of Myth Drannor to the Evermeet people, the sage Sules'terim informed Vienxay she was no longer exiled, and could return home immediately. I let Vienxay leave the party to return home.~
+
+@14 = ~Evermeet: Vienxay Redeemed
+
+Due to Vienxay's actions in Faerun and for returning the tome of Myth Drannor to the Evermeet people, the sage Sules'terim informed Vienxay she was no longer exiled, and could return home immediately. Vienxay declined to return immediately, instead choosing to wait until our adventure here was over, and then sail home when it has concluded.~
+
+@15 = ~Vienxay reluctantly admitted she could scry Berk, as long as she had a scrying crystal and was in the pocket plane. We should keep an eye out for any jewelers.~
+@19 = ~Vienxay scried Berk and mentioned he was dead. We could tell Helga the truth or lie to her.~
+
+//Epilogues 
+@51 = ~Parting with <CHARNAME> brought Vienxay a sense of loneliness, and she set out to find herself an apprentice to convince to join her on her travels. But instead, they sought her, prospective mages of all races fascinated by her prowess in magic art and illusion both. Her apprentices became of such a great number that she went on to form a mages guild of some power and influence in Amn that even the Cowled Wizards feared. 
+In later years she would become a powerful if controversial political figure in Suldanessellar, until she was dismissed for the most colorful, vile language ever heard in the court to the queen over an edict she abhorrently despised. Some elves, they say, are just awful. Vienxay it seems, would always be one of them.~
+
+@52 = ~At the end of her journey with <CHARNAME>, Vienxay was overjoyed to return home at long last. But it was not the same place as she left it, and while she was forgiven, the people of Evermeet would not forget. She would not stay long, leaving to explore islands far to the west, occasionally returning to bringing 
+back artifacts and impressive tomes of power and knowledge, often with an apprentice or two willing to overlook her past. Her deeds eventually won her trust, and she won a trusted seat in Evermeet's court, until she was dismissed for giving the queen the most vicious rebuke of one of her new edicts. Some elves, they say, are just awful. Vienxay it seems, would always be one of them.~
+
+@53 = ~Vienxay continued her adventures with <CHARNAME> long after leaving Tethyr. There was always one more artifact, one more tome to be found, and Vienxay's thirst for power and knowledge was only matched by her love for <CHARNAME>. Their fame and legend would only grow, and on their wedding day in Baldur's Gate it was said the crowd was numbered in the ten thousands, full of thankful scholars, nobles, admirers, 
+and a few new apprentices of Vienxay's collection, who had eagerly sought her tutelage upon the closure of her adventures. <CHARNAME> would become an influential political figure with Vienxay always by his side...or insulting the local commoners. She gained an unpopular reputation checked only by her love for <CHARNAME>, but some elves were just awful like that, and Vienxay would always be one of them.~
+
+@54 = ~Vienxay would leave <CHARNAME>'s side only once, to return home to the island she had been banished from for so long. When she returned, she found and embraced the family she had missed and loved, and found little had changed, yet she herself had changed immensely.  She had gained what she had always wanted, but Evermeet was no longer her home. She would return to the only place that could be given such a title,
+ and that was <CHARNAME>'s side. She bid farewell to them all and rejoined <PRO_HIMHER>, and it was said they would go on many adventures before settling down in Baldur's Gate, where they were married. <CHARNAME> would become an influential political figure in the city with Vienxay always by his side...or insulting the local nobility, who found her just awful. Some elves were like that, and Vienxay would always be one of them.~
+
+@55 = ~Vienxay and <CHARNAME> would journey to Vienxay's homeland, where her exile had ended at last. There, she would rejoin her family she had dearly missed, and it was there she and <CHARNAME> would be married, visited by elves from all across the realm, many wishing a glimpse of the great hero and the elf who had found redemption by his side. <CHARNAME> would rise to become an important member of the court, and Vienxay would 
+spend her time mentoring young mages eager to learn from her mastery of illusion and grasp shadow magic. But Evermeet did not bring the joy the rest of the realms had given to Vienxay's thirst, and she and <CHARNAME> would depart years later, though not before Vienxay caused a minor scandal amongst the nobility for a vicious public rebuke of the queen using rather colorful language. Some elves, they say, are just awful. Vienxay it seems, would always be one of them.~
+
+@56 = ~Vienxay immediately knew loneliness upon <CHARNAME>'s ascension, and with no other path to go, she set out to return to her homeland of Evermeet. For a time, she found joy, embracing the family she had thought she would never see again, and traveling amongst the trees and cities she had thought of every day in her banishment. But while Evermeet had not changed, it lacked the face that Vienxay had come to hold dearest.
+She would bid farewell to them all and travel the realms, mentoring mages across the realms and even of high courts and homes through the lessons she had learned by <CHARNAME>'s side. Eventually she would go on to found a school of magic in Baldur's Gate, at least until she caused such a scandal amongst the nobility they demanded her departure. Some elves they say, are just awful. Vienxay would always be one of them, but she would never forget the <PRO_MANWOMAN> that made her slightly less so.~
+
+@99 = ~^0xFFFF00FFYou have established a deep bond with Vienxay. Your synergy has improved her capabilities.^-~
+
+@103 = ~^REmily slightly dissaproves.^-~
+@106 = ~^REmily dissaproves.^-~
+@109 = ~^REmily greatly dissaproves.^-~
+@113 = ~^GEmily slightly approves^-~
+@116 = ~^GEmily approves^-~
+@119 = ~^GEmily greatly approves^-~
+@203 = ~^RHelga slightly dissaproves.^-~
+@206 = ~^RHelga dissaproves.^-~
+@209 = ~^RHelga greatly dissaproves.^-~
+@213 = ~^GHelga slightly approves^-~
+@216 = ~^GHelga approves^-~
+@219 = ~^GHelga greatly approves^-~
+@303 = ~^RKale slightly dissaproves.^-~
+@306 = ~^RKale dissaproves.^-~
+@309 = ~^RKale greatly dissaproves.^-~
+@313 = ~^GKale slightly approves^-~
+@316 = ~^GKale approves^-~
+@319 = ~^GKale greatly approves^-~
+@403 = ~^RRecorder slightly dissaproves.^-~
+@406 = ~^RRecorder dissaproves.^-~
+@409 = ~^RRecorder greatly dissaproves.^-~
+@413 = ~^GRecorder slightly approves^-~
+@416 = ~^GRecorder approves^-~
+@419 = ~^GRecorder greatly approves^-~
+@503 = ~^RVienxay slightly dissaproves.^-~
+@506 = ~^RVienxay dissaproves.^-~
+@509 = ~^RVienxay greatly dissaproves.^-~
+@513 = ~^GVienxay slightly approves^-~
+@516 = ~^GVienxay approves^-~
+@519 = ~^GVienxay greatly approves^-~

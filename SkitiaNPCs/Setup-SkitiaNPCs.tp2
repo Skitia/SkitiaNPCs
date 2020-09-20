@@ -1,12 +1,12 @@
-BACKUP ~SkitiaNPCs\backup~
-AUTHOR ~Skitia https://skitias-stories.com~
-VERSION ~1.0~
+BACKUP ~SkitiaNPCs\Backup~
+AUTHOR ~Skitia https://skitias-stories.com/contact.php~
+VERSION ~0.82~
 
-AUTO_TRA ~%MOD_FOLDER%/tra/%s~
+AUTO_TRA ~%MOD_FOLDER%/Tra/%s~
 
 ALWAYS
-INCLUDE ~%MOD_FOLDER%/lib/qd_multiclass.tpa~
-INCLUDE ~%MOD_FOLDER%/lib/fl#add_kit_ee.tpa~
+INCLUDE ~%MOD_FOLDER%/Lib/qd_multiclass.tpa~
+INCLUDE ~%MOD_FOLDER%/Lib/fl#add_kit_ee.tpa~
   ACTION_IF (GAME_IS ~eet~) BEGIN
     OUTER_SET bg2_chapter = 12
   END ELSE BEGIN
@@ -22,20 +22,20 @@ END
 
 LANGUAGE ~English~
          ~English~
-         ~%MOD_FOLDER%/tra/english/setup.tra~
+         ~%MOD_FOLDER%/Tra/English/setup.tra~
 
 BEGIN ~Skitia NPCs for Baldur's Gate 2~ 
 
 
 // Initialize all party NPC dialogue. Required.
-COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/Start.d~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/Start.d~
  
 // Install individual data. Required.
-INCLUDE ~%MOD_FOLDER%/lib/Emily_BG2.tpa~
-INCLUDE ~%MOD_FOLDER%/lib/Helga_BG2.tpa~
-INCLUDE ~%MOD_FOLDER%/lib/Kale_BG2.tpa~
-INCLUDE ~%MOD_FOLDER%/lib/Recorder_BG2.tpa~
-INCLUDE ~%MOD_FOLDER%/lib/Vienxay_BG2.tpa~
+INCLUDE ~%MOD_FOLDER%/Lib/Emily_BG2.tpa~
+INCLUDE ~%MOD_FOLDER%/Lib/Helga_BG2.tpa~
+INCLUDE ~%MOD_FOLDER%/Lib/Kale_BG2.tpa~
+INCLUDE ~%MOD_FOLDER%/Lib/Recorder_BG2.tpa~
+INCLUDE ~%MOD_FOLDER%/Lib/Vienxay_BG2.tpa~
 
 
 //Vampire events 
@@ -54,7 +54,7 @@ EXTEND_TOP ~AR6200.bcs~ ~%MOD_FOLDER%/Scripts/ar6200.baf~
 //Raise Dead Spell with no VFX in case move global moves them dead. 
 COPY	"%MOD_FOLDER%/Spells/X3Raise.spl" override
 /* Rest Talks*/
-COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/RestTalk.d~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/RestTalk.d~
 ACTION_IF GAME_IS ~eet~ BEGIN
  EXTEND_BOTTOM ~player1D.bcs~ ~%MOD_FOLDER%/Scripts/EET/RestTalk.baf~
  EXTEND_TOP ~baldur.bcs~ ~%MOD_FOLDER%/Scripts/EET/RestSoA.baf~
@@ -90,7 +90,7 @@ ACTION_IF GAME_IS ~eet~ BEGIN
       override_SoA = "X3Emi"
       override_ToB = "X3Emi25"
       dialog_ToB = "X3Emi25"
-      //traFile = "%MOD_FOLDER%/tra/%LANGUAGE%/setup.tra"
+      //traFile = "%MOD_FOLDER%/Tra/%LANGUAGE%/setup.tra"
       //string = "@1"
       string = "Bring me Emily, the aasimar archer."
       stringPosDV = "Skie"
@@ -105,7 +105,7 @@ ACTION_IF GAME_IS ~eet~ BEGIN
       override_SoA = "X3Hel"
       override_ToB = "X3Hel25"
       dialog_ToB = "X3Hel25"
-      //traFile = "%MOD_FOLDER%/tra/%LANGUAGE%/setup.tra"
+      //traFile = "%MOD_FOLDER%/Tra/%LANGUAGE%/setup.tra"
       //string = "@1"
       string = "Bring me Helga, the priestess of Haela."
       stringPosDV = "Skie"
@@ -120,7 +120,7 @@ ACTION_IF GAME_IS ~eet~ BEGIN
       override_SoA = "X3Kal"
       override_ToB = "X3Kal25"
       dialog_ToB = "X3Kal25"
-      //traFile = "%MOD_FOLDER%/tra/%LANGUAGE%/setup.tra"
+      //traFile = "%MOD_FOLDER%/Tra/%LANGUAGE%/setup.tra"
       //string = "@1"
       string = "Bring me Kale, the halfling warrior."
       stringPosDV = "Skie"
@@ -135,7 +135,7 @@ ACTION_IF GAME_IS ~eet~ BEGIN
       override_SoA = "X3Reb"
       override_ToB = "X3Reb25"
       dialog_ToB = "X3Reb25"
-      //traFile = "%MOD_FOLDER%/tra/%LANGUAGE%/setup.tra"
+      //traFile = "%MOD_FOLDER%/Tra/%LANGUAGE%/setup.tra"
       //string = "@1"
       string = "Bring me Recorder, the gnome lorekeeper."
       stringPosDV = "Skie"
@@ -150,13 +150,13 @@ ACTION_IF GAME_IS ~eet~ BEGIN
       override_SoA = "X3Vie"
       override_ToB = "X3Vie25"
       dialog_ToB = "X3Vie25"
-      //traFile = "%MOD_FOLDER%/tra/%LANGUAGE%/setup.tra"
+      //traFile = "%MOD_FOLDER%/Tra/%LANGUAGE%/setup.tra"
       //string = "@1"
       string = "Bring me Vienxay, the elf shadowmage."
       stringPosDV = "Skie"
   END  
 END ELSE BEGIN
-  COMPILE ~%MOD_FOLDER%/dialogue/FATESP.d~
+  COMPILE ~%MOD_FOLDER%/Dialogue/FATESP.d~
 END	  
 //All Optional Additions 
 

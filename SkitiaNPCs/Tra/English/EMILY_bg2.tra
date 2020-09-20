@@ -1,0 +1,84 @@
+@1 = ~To Be Heir~
+@2 = ~Emily informed us that she needs to speak with two nobles, Charmaine Hornkeeper and Gregory Von Jurgenson, for their support to be the heir of her noble family and the successor of the estate and its responsibilities.
+Lady Hornkeeper can be found in the Radiant's Halls in the Temple District, while Gregory Von Jurgenson can be found in the Government District in the Jysstev Family Residence.~
+@3 = ~Lady Hornkeeper informed us that she would not support us unless we had more prestige. If we can increase our reputation, and thus our standing with the populace, we may be able to gain her support for Emily's cause.~
+@4 = ~Lady Hornkeeper has given us her support for the coming selection of Heir.~
+@5 = ~Lord Jurgenson has asked us to resolve a dispute between two merchants. We can find them north of the state, near a large fountain in the government district.~
+@6 = ~We were unable to resolve the dilemma between Myron and Derrick, with Myron quitting business with the Jurgenson estate. We should inform Lord Jurgenson of the bad news.~
+@7 = ~We were unable to resolve the dilemma between Myron and Derrick, with Derrick quitting business with the Jurgenson estate. We should inform Lord Jurgenson of the bad news.~
+@8 = ~We were able to resolve the dilemma between Myron and Derrick. We should inform Lord Jurgenson of the good news.~
+@9 = ~Lord Jurgenson was pleased with the results of the test he gave us and has pledged Emily his support.~
+@10 = ~Lord Jurgenson, as expected, decided to put his support behind Emily's brother, Thomas, after we failed the test he gave us.~
+@11 = ~A messenger has informed Emily that her father's announcement for heir is taking place in the Mithrest inn very soon. We agreed that we would head there as soon as possible.~
+@12 = ~A messenger has informed Emily that her father's announcement for heir is taking place in the Mithrest inn very soon. We could not go with her, and wished her luck.~
+@13 = ~Emily left our party, after we took too long to head to the Mithrest inn for her father's announcement of heir. We could perhaps head there later if we still need her to see how the outcome played out.~
+@14 = ~Emily's brother ultimately had more support than Emily in the bid to be heir and became the leader of House Castilla. His first act was to remove Emily as a house member, seperating her from her name forever.~
+@15 = ~There was a draw in the support to be heir, and before Emily's father could announce his choice, Thomas has called on Emily to duel him, claiming old rights to be able to challenge for succession by combat. We must head to the Copper Coronet for the duel, and the end of this conflict.~
+@16 = ~Emily died and lost the duel with Thomas, who is now the leader of House Castilla.~
+@17 = ~We defeated Thomas during the duel with him in the pit, and decided to take his life as per his own wishes. Emily is now indisputably heir and will lead her family when her time with us is over.~
+@18 = ~We defeated Thomas during the duel with him in the pit, and decided to spare his life against his own wishes. He wished us well and Emily a good leadership. She will lead her family when her time with us is over.~
+@19 = ~Emily defeated Thomas during the duel with him in the pit and spared his life. She is now indisputably heir and will lead her family when her time with us is over.~
+@20 = ~Emily had more support than Thomas and was named heir to her family. She will lead her family when her time with us is over.~
+// Extra for the player that wonders what happens if you attack Thomas before the duel is started. 
+@21 = ~Attacking Thomas at the announcement was foolish. Whatever chance Emily had to lead her house is now gone.~
+//Bodhi Encounter 
+@31 = ~The Final Battle with Bodhi.
+
+Bodhi appeared in an ambush shortly before I reached her haven, warning me that she was aware of my pursuit and stealing from me the one person that is dearest to my heart: Emily.  Before she vanished and unleashed more of her undead creations upon me, Bodhi warned me that if I continue I will lose even more than I thought possible.  I cannot give up on the Rhynn Lanthorn... but now the life and immortal soul of the one I love is at stake, as well!~
+
+@32 = ~The Final Battle with Bodhi.
+
+It appears Bodhi was unable to convert Emily into vampirism thanks to her aasimar lineage, though Emily was still nearly killed in the effort. Some healing and rest will see to her full recovery.~
+
+//Epilogues
+//Not Heir, Not Romanced  
+@51 = ~At first, Emily found her time away from <CHARNAME> difficult. Banished from her home by the hatred of her own brother, she had no home to go to, so she departed Tethyr and traveled all across the realms, aiding any who needed protection with her good will. She would uproot bandit lairs and push ogres and trolls out of trade roads reportedly all on her lonesome, just to make travel safer. She became known as the Guardian Angel, and was so popular with the masses that she received a summons from the royalty of Tethyr, who offered her a position on the court despite her banishment, enraging her brother.
+ To the suprise of all, she bowed and declined, stating her service was to all the people. Little is known of her fate, although it is alleged that a painting that hangs in the Tethyrian Palace depicting <CHARNAME> and their party was of her personal creation, to immortalize her treasured memory of them for all time.~
+// Not Heir, Romanced Not Ascended 
+@52 = ~The time after the Bhaalspawn Saga was filled with new experiences for Emily. First came motherhood to <CHARNAME>'s child, a daughter, and soon after, a second girl. Parenting however, did little to lull her desire for adventure, and she and <CHARNAME> would adventure whenever they heard the slightest call of need, though Emily was always sure that their children felt no neglect, occassionaly staying behind rather than joining <CHARNAME>. In their teen years however, the family would face a significant threat in the form of Planar Hunters, a vengeful, radical group intent on removing all creatures of planar descent from the realm.
+ They would attack while <CHARNAME> was away, intent on killing Emily and taking away her children. <CHARNAME> returned and destroyed all remnants of the planar hunters, but Emily's wounds were too much, and she would die in his arms. Her children would continue her legacy as adventurers in their own right, and while <CHARNAME>'s fate remained uncertain, he would always remember his beloved quirky angel.~
+// Not Heir, Romance Ascended 
+@53 = ~At first, Emily found her time away from her beloved <CHARNAME> difficult. Banished from her home by the hatred of her own brother, she had no home to go to, so she departed Tethyr and traveled for a time, aiding any who needed protection with her good will. She would uproot bandit lairs and push ogres and trolls out of trade roads reportedly all on her lonesome, just to make travel safer. She became known as the Guardian Angel, and was so popular with the masses that she received a summons from the royalty of Tethyr, who offered her a position on the court despite her banishment, enraging her brother.
+ To the suprise of all, she bowed and declined, stating her service was to all the people. Soon after she would give birth to <CHARNAME>'s daughter, and dissapear from the public eye thereafter. Little is known of her fate, although it is alleged that a painting that hangs in the Tethyrian Palace depicting <CHARNAME> was of her personal creation, to immortalize her love and treasured memory of them for all time.~
+//Heir Not Romanced 
+@54 = ~At first, Emily found the time after the Bhaalspawn Saga a challenge. Tethyr had faced much ruin, and as soon as she stepped back into her family estate, she assumed her duties as the head of House Castilla. She brought many changes, unpopular to the old noble blood but respected and revered by all others, and established a small order within the estate to assist in Tethyr's safety. A few saw it for what it was, Emily's personal adventuring company who she would set out with for days at a time, fulfilling her great hunger at accomplishing some good or peace she could not with her powers in the house. She would eventually marry childhood friend Godfrey Hornkeeper and have two children, and when they became of age she would pass on the responsiblity to them and depart the estate, caving for her desire to bring good to all the realm.
+ Little is known of her fate, although it is alleged that a painting that hangs in the Tethyrian Palace depicting <CHARNAME> and their party was of her personal creation, to immortalize her treasured memory of them for all time.~
+//Heir Romanced Not Ascended 
+@55 = ~The time after the Bhaalspawn Saga was filled with new experiences for Emily. First came the leading of her family estate, a responsibility finally formally acknowledged when she returned to joyous friends and resentful rivals. Then it was motherhood, in the blessing of <CHARNAME>'s daughter, and later, a second girl born between them. <CHARNAME> would prove to be a clever advisor, and together they would create policies and changes that eventually inspired actions that copied their framework across most of the noble houses of Tethyr. Such was their popularity that they received a summons from the royalty of Tethyr as a member of the royal privy council. It was there in Darromar that they would finally be married, with family, friends and admirers coming in from all over the realm to witness their wedding. Years later, she and <CHARNAME> would hand off their duties to theri grown daughters. Adventure's calling it seemed, could no longer be resisted, and they would write new pages in the books of the realms.~
+//Heir Romanced Ascended 
+@56 = ~At first, Emily found her time away from her beloved <CHARNAME> difficult. First there was the leading of her family estate, new responsibilities and a role she was still not altogether comfortable with, but the people looked up to her in hope. Then soon after, was the birth of her and <CHARNAME>'s daughter. She managed both as well as she could, pushing policies of reform that were unpopular with the old Tethyrian blood but popular with the common folk and the younger nobility. She proved to be so influential and shrewd in politics that she was offered a seat on the Queen's royal privy council, a position she reluctantly accepted. Years later however, she could no longer ignore her love of adventuring, and she bestowed her daughter as the new head of estate and resumed her adventures, bringing good will and hope to all the people she touched, earning the name Guardian Angel. Little is known of her fate, although it is alleged that a painting that hangs in the Tethyrian Palace depicting <CHARNAME> was of her personal creation,
+ to immortalize her love and treasured memory of them for all time.~
+
+
+@99 = ~^0xFFFF00FFYou have established a deep bond with Emily. Your synergy has improved her capabilities.^-~
+
+@103 = ~^REmily slightly dissaproves.^-~
+@106 = ~^REmily dissaproves.^-~
+@109 = ~^REmily greatly dissaproves.^-~
+@113 = ~^GEmily slightly approves^-~
+@116 = ~^GEmily approves^-~
+@119 = ~^GEmily greatly approves^-~
+@203 = ~^RHelga slightly dissaproves.^-~
+@206 = ~^RHelga dissaproves.^-~
+@209 = ~^RHelga greatly dissaproves.^-~
+@213 = ~^GHelga slightly approves^-~
+@216 = ~^GHelga approves^-~
+@219 = ~^GHelga greatly approves^-~
+@303 = ~^RKale slightly dissaproves.^-~
+@306 = ~^RKale dissaproves.^-~
+@309 = ~^RKale greatly dissaproves.^-~
+@313 = ~^GKale slightly approves^-~
+@316 = ~^GKale approves^-~
+@319 = ~^GKale greatly approves^-~
+@403 = ~^RRecorder slightly dissaproves.^-~
+@406 = ~^RRecorder dissaproves.^-~
+@409 = ~^RRecorder greatly dissaproves.^-~
+@413 = ~^GRecorder slightly approves^-~
+@416 = ~^GRecorder approves^-~
+@419 = ~^GRecorder greatly approves^-~
+@503 = ~^RVienxay slightly dissaproves.^-~
+@506 = ~^RVienxay dissaproves.^-~
+@509 = ~^RVienxay greatly dissaproves.^-~
+@513 = ~^GVienxay slightly approves^-~
+@516 = ~^GVienxay approves^-~
+@519 = ~^GVienxay greatly approves^-~

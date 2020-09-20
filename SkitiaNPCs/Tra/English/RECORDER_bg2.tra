@@ -1,0 +1,123 @@
+//Quests
+@0 = ~Kale's Father
+
+The priestess Siria of Oghma has agreed to study the cheese we gave her. She needs only an hour to get more information for us.~
+@1 = ~Kale's Father
+
+Siria has revealed to us that the cheese is Spring Luiren Cheese, a drug that weakens the mind and body of halflings. It was also laced with rat poison.
+I could take this information to question the suspects again if they are agreeable to talk if I haven't already, before returning to Jillian.~
+
+@2 = ~The Tome of Myth Drannor 
+
+Siria of the Temple of Oghma has told us that the sage Sules'terim is on an academic vacation in Imnesvale, in the Umar Hills. We may find him there.~
+
+@3 = ~Hunted~
+@4 = ~Hunted
+We were approached and attacked by some Bounty Hunters. What they want with me remains unclear.~
+@5 = ~Hunted 
+It's clear now after another attack from bounty hunters that they are after Recorder. A Remover appears to be responsible for sending them. 
+If we want to put a stop to this, we should confront the Remover.~
+@6 = ~Hunted 
+We confronted the Remover. He's confidently stated that while he has no further men to bring upon us, that Recorder's Husband, a gnome named Phelgrim who is the one who hired him to hunting her, always gets his way.
+We will have to learn more of this from Recorder, but at least the hunt on us has ended, for now.~
+@7 = ~Hunted 
+We've confronted the Remover. However, we've learned that he was hired by Recorder's husband. While the problem may be over for now, Recorder still owes us answers.~
+@8 = ~Phelgrim~
+@9 = ~Phelgrim 
+Recorder has warned us that she may attract trouble with pirates and slavers on Brynnlaw that could be working for Phelgrim.
+We should take care during our stay, or if an opportunity arises to learn where he is, confront him once and for all.~
+@10 = ~Phelgrim
+We've learned that Phelgrim is a guest of Desharik, and that Recorder's son is still alive. If we can find a way in his manor, we could confront him.~
+@11 = ~Phelgrim 
+We've spoken with Phelgrim. With no interest in helping Recorder and complete focus on getting into spellhold, I took his offer to get me inside as a deviant.~
+@12 = ~Phelgrim 
+Phelgrim's henchman whisked away Recorder's son. Recorder was naturally grieved about the fact she may never see him again.~
+@13 = ~Phelgrim 
+We've managed to best Phelgrim and keep Recorder's boy from being taken. All that remains is finding him a way off. There may be someone in Brynnlaw that could help us.~
+@14 = ~Phelgrim 
+We've paid Calahan to help get Recorder's son, Raban off of Brynnlaw. All that remains is telling him the good news.~
+@15 = ~Phelgrim 
+We've informed Raban that Calahan will provide him harbor to Ulgoth's Beard. His parting with Recorder was sad to see, but one day they may be reunited again.~
+
+@16 = ~We've run into a slaver mage who had helped keep Recorder's son from her. Unfortunately there was no way to get her son from him. Perhaps one day she may be able to find him again, but for our adventures, he appears out of reach.~
+
+@19 = ~Recorder mentioned she could indeed scry Berk, but she would need a scrying crystal and to be in the pocket plane. She suggested we look out for a jeweler who may possess such a thing.~
+
+@20 = ~Recorder scried Berk and mentioned he was dead. We could tell Helga the truth or lie to her.~
+//Epilogues: Non Romanced Default or Player ascended
+@31 = ~The Final Battle with Bodhi.
+
+Bodhi appeared in an ambush shortly before I reached her haven, warning me that she was aware of my pursuit and attempting to steal from me the one person that is dearest to my heart: Recorder. However, Recorder chose to take her own life rather than be a vampire under Bodhi's influence. Before she vanished and unleashed more of her undead creations upon me, Bodhi stole Recorder's body and warned me that if I continue I will lose even more than I thought possible.  I cannot give up on the Rhynn Lanthorn... but now the life and immortal soul of the one I love is at stake, as well!~
+
+@32 = ~The Final Battle with Bodhi.
+
+While I defeated Bodhi, it seems that she has succeeded in exacting one final revenge on me by taking away Recorder forever... whatever Recorder did to prevent herself from being turned has also rendered any means of restoring her to life ineffective. I have no power to do anything, but perhaps her colleagues in the temple of Oghma could help us.~
+
+@33 = ~The Final Battle with Bodhi.
+
+It appears Recorder transferred her own soul into Gustav, her ferret. The Temple of Oghma suggests that a purple iolite and an altar in the North Forest can seperate her from her animal and back into her body. However, the only purple iolite the church was expecting was lost in the Small Teeth's pass.~
+
+@34 = ~The Final Battle with Bodhi. 
+
+We've recovered a purple iolite. We can take this to an altar in the North Forest to try to recover Recorder.~
+
+@35 = ~Miraculously, the gem and altar worked and Recorder with myself once more! Recorder seems shaken by her experience with death, though quite grateful for her return.~
+
+@51 = ~The recording of the tale of <CHARNAME> was not the end of Recorder's own story. For years, she would restlessly scour the realms, seeking the whereabouts of her lost son, Raban. She traveled from city to city, from pirate den to slaver hide out, hoping the next slave she freed held the face of her child.  
+She stumbled upon a small group of children taken captive in Sembia in one of her searches, and realized they had no family to return to. She took them back to her own home, and taught them to read and write, to play music, and the life lessons she had learned through the journey she had recorded so intimately in her travels with <CHARNAME>. Raising them gave her a gift, a joy of motherhood she had thought all but lost forever. 
+She never found Raban, but she at last found forgiveness and peace for herself.~ 
+//Non Romanced: Saved Raban 
+@52 = ~The recording of the tale of <CHARNAME> was not the end of Recorder's own story. After she returned to Althkata to presented all she had seen and written in her travels, there was one last great trek to make. Alone, she made the journey to Ulgoth's Beard, greeted on the road by young bards eager to learn her craft or hear her retell stories she had witnessed with her own eyes. 
+But no inn nor promisng plea of curious bard could keep her from her destination: her son, Raban. The meeting was the most joyous moment of her life, and they would spend the years until his adulthood catching up on precious stolen time. It is said after he came of age and left to see the world that she traveled to Beregost, and built a new school in what was once the Ulcaster Ruins, where she taught promisng bards and loremasters until the end of her days.~
+//Romance: Default Male
+@53 = ~Before Recorder and <CHARNAME> even returned to the temple of Oghma in Althkata, the tales of their adventures had spread far and wide. But there was still one great task that they seeked to do. After they were married, for the next several years, they searched far and wide for Raban, Recorder's lost son. Their adventures decimated the slave trade in Western Faerun, and there was no slaver's den or hideout safe in the realms in their search. 
+In time Recorder conceived <CHARNAME>'s daughter, forcing her to pause her search for a while. It was in the years that followed of raising her little girl that she finally found the second chance she sought to forgive herself, teaching her all of life's lessons and joys she never could with her first. Even still, she and <CHARNAME> never stopped looking for Raban, and never would.~
+//Romance: Saved Raban Male
+@54 = ~Before Recorder and <CHARNAME> even returned to the temple of Oghma in Althkata, the tales of their adventures had spread far and wide. But there was one last trek still for the couple. They would journey to Ulgoth's Beard, where they would reunite with Recorder's son, Raban. It was there, where everything was back in place in Recorder's life, that they would marry. In time they would have another child, a daughter, and Recorder would found a new school in what was once the Ulcaster Ruins while, teaching promising bards and loremasters, who were always eager
+for the chance to meet the most special of guests to occasional show up, her spouse. Recorder left the life of adventuring herself soon after, but her wisdom and experience created a new generation of bards to record the history still yet to come..~
+//Romance: Default Female 
+@55 = ~Before Recorder and <CHARNAME> even returned to the temple of Oghma in Althkata, the tales of their adventures had spread far and wide. But there was still one great task that they seeked to do. After they were married, for the next several years, they searched far and wide for Raban, Recorder's lost son. Their adventures decimated the slave trade in Western Faerun, and there was no slaver's den or hideout safe in the realms in their search. 
+In time they would take care of a child they rescued from slavers in Sembia, which forced them to pause their search for a while to raise the girl properly. It was in the years that followed of raising her adopted daughter that she finally found the second chance she sought to forgive herself, teaching her all of life's lessons and joys she never could with her first. Even still, she and <CHARNAME> never stopped looking for Raban, and never would.~
+//Romance: Saved Raban Female
+@56 = ~Before Recorder and <CHARNAME> even returned to the temple of Oghma in Althkata, the tales of their adventures had spread far and wide. But there was one last trek still for the couple. They would journey to Ulgoth's Beard, where they would reunite with Recorder's son, Raban. It was there, where everything was back in place in Recorder's life, that they would marry. In time Recorder would found a new school in what was once the Ulcaster Ruins while, teaching promising bards and loremasters, who were always eager
+for the chance to meet the most special of guests to occasional show up, her spouse. Recorder left the life of adventuring herself soon after, but her wisdom and experience created a new generation of bards to record the history still yet to come.~
+//Romance: Saved Raban but <CHARNAME> ascended 
+@57 = ~The recording of the tale of <CHARNAME>'s ascension was not the end of Recorder's own story. After she returned to Althkata to presented all she had seen and written in her travels, there was one last great trek to make. Alone, she made the journey to Ulgoth's Beard, greeted on the road by young bards eager to learn her craft or hear her retell stories she had witnessed with her own eyes. 
+But no inn nor promisng plea of curious bard could keep her from her destination: her son, Raban. The meeting was the most joyous moment of her life, and they would spend the years until his adulthood catching up on precious stolen time. It is said after he came of age and left to see the world that she traveled to Beregost, and built a new school in what was once the Ulcaster Ruins, where she taught promising bards and loremasters, and shared songs dedicated to her beloved. In time she would pass in a ripe old age, but her recorded work would be immortalized in libraries across the realms forever.~
+
+//Romance: Saved Raban: Player chose to ascend (Slight variation of Non-Romanced: Saved Raban)
+
+//Romance: 
+//Max Approval Bonus Message 
+@99 = ~^0xFFFF00FFYou have established a deep bond with Recorder. Your synergy has improved her capabilities.^-~
+//Approval Messages 
+@103 = ~^REmily slightly dissaproves.^-~
+@106 = ~^REmily dissaproves.^-~
+@109 = ~^REmily greatly dissaproves.^-~
+@113 = ~^GEmily slightly approves^-~
+@116 = ~^GEmily approves^-~
+@119 = ~^GEmily greatly approves^-~
+@203 = ~^RHelga slightly dissaproves.^-~
+@206 = ~^RHelga dissaproves.^-~
+@209 = ~^RHelga greatly dissaproves.^-~
+@213 = ~^GHelga slightly approves^-~
+@216 = ~^GHelga approves^-~
+@219 = ~^GHelga greatly approves^-~
+@303 = ~^RKale slightly dissaproves.^-~
+@306 = ~^RKale dissaproves.^-~
+@309 = ~^RKale greatly dissaproves.^-~
+@313 = ~^GKale slightly approves^-~
+@316 = ~^GKale approves^-~
+@319 = ~^GKale greatly approves^-~
+@403 = ~^RRecorder slightly dissaproves.^-~
+@406 = ~^RRecorder dissaproves.^-~
+@409 = ~^RRecorder greatly dissaproves.^-~
+@413 = ~^GRecorder slightly approves^-~
+@416 = ~^GRecorder approves^-~
+@419 = ~^GRecorder greatly approves^-~
+@503 = ~^RVienxay slightly dissaproves.^-~
+@506 = ~^RVienxay dissaproves.^-~
+@509 = ~^RVienxay greatly dissaproves.^-~
+@513 = ~^GVienxay slightly approves^-~
+@516 = ~^GVienxay approves^-~
+@519 = ~^GVienxay greatly approves^-~

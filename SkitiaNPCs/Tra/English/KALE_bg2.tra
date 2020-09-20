@@ -1,0 +1,80 @@
+@0 = ~Kale's Father~
+@1 = ~Kale asked for some help in finding out what happened to his father. To start, we should retrieve his belongings that the church of Ilmater is holding onto for him.~
+@2 = ~We've retrieved the belongings recovered from Kale's father home from the Ilmater temple, which included only a journal. Perhaps there is information we could look into inside of it.~
+@3 = ~Kale suggested as a starting point we speak to Jillian, who works with the guard in the Docks.~
+@4 = ~After speaking to Jillian, she mentioned she tried to look into what happened with Percy but that she was quickly unable to proceed. She mentioned if we wanted to take a look ourselves, that the Temple of Oghma could be of help with the bag of cheese we were given.
+She also suggested checking the store that sold them in the Bridge District.~
+@5 = ~With a suspect having been killed, Jillian will no longer be able to investigate what happened to Percy's father. There is nothing more we can accomplish digging into Percy's death.~
+@6 = ~Jillian is dead, and any work on the investigation into Percy's death dies with her.~ 
+@7 = ~I've spoken to all the suspects. If I've learned anything new from one, I could speak to another again, or I could give my conclusions on who I believe is guilty to Jillian.~
+@8 = ~We've accused Dallie of murdering Percy and she's been taken in by Jillian. We can meet Jillian again in a day at the Garrision to see if our accusation was accurate.~
+@9 = ~We've accused Martin of murdering Percy and he's been taken in by Jillian. We can meet Jillian again in a day at the Garrision to see if our accusation was accurate.~
+@10 = ~We've accused Flora of murdering Percy and she's been taken in by Jillian. We can meet Jillian again in a day at the Garrision to see if our accusation was accurate.~
+@11 = ~Dallie was determined to be innocent. We did not do our due diligence, and we are unable to investigate further. Whoever killed Kale's father remains at large.~ 
+@12 = ~Martin was determined to be innocent. We did not do our due diligence, and we are unable to investigate further. Whoever killed Kale's father remains at large.~ 
+@13 = ~Flora was determined to be innocent. We did not do our due diligence, and we are unable to investigate further. Whoever killed Kale's father remains at large.~ 
+@14 = ~We accused Chester of murdering Percy, but upon Jillian going to confront him he was suspiciously missing from his shop and we were ambushed by mercenaries. 
+We need to track Chester down, and either turn him in to Jillian, or execute his punishment ourselves.~
+@15 = ~It appears Bryce was in league with Chester after all. Once Bryce is out of the way, we should confront Chester and decide his fate.~
+@16 = ~We decided to take Chester's life for his drugging and killing of Percy and other halflings. All that remains is returning to Jillian and letting her know his fate.~
+@17 = ~Jillian wasn't overly happy with Chester being killed, and it appears that she would have preferred he had been turned in alive. Still, the city is safer for the halfling people for it, and she was thankful for that.~
+@18 = ~Jillian was pleased when we came back to the garrision with Chester in tow. Perhaps in a city full of thieves and other evils, justice can have its moments.~
+
+@31 = ~The Final Battle with Bodhi.
+
+Bodhi appeared in an ambush shortly before I reached her haven, warning me that she was aware of my pursuit and stealing from me the one person that is dearest to my heart: Kale.  Before she vanished and unleashed more of her undead creations upon me, Bodhi warned me that if I continue I will lose even more than I thought possible.  I cannot give up on the Rhynn Lanthorn... but now the life and immortal soul of the one I love is at stake, as well!~
+
+@32 = ~The Final Battle with Bodhi.
+
+While I had feared for some time that Bodhi's final revenge on me would be to take away Kale forever, it seems that the information in the lorebook was right... Amaunator's idol has restored Kale not only to life, but has removed the vampiric curse from him, as well.~
+
+
+@51 = ~Even when Kale's adventures with <CHARNAME> were over, his path home brought him constant reminders from the bards singing of their legend and commoners gossiping and sharing every detail. He thought himself truly in <CHARNAME>'s shadow until he finally arrived in Gullykin, where before him was a large statue of none other than himself.
+ His kin had celebrated him like a hero of legend, and every ale and meal was free, and company frequently desired. Adventurers would beg him to join their companies, and invitations for his presence extended from all the realms. But the attention did not distract from what Kale had truly returned home for: his old love. It was there in his village he would handfast her,
+  and begin his favorite legend of husband, father, and exaggerative story-teller. He passed at an old age, his grave marked with his name graced with a title from his greatest tale: Kale the Dragonslapper, immortalizing his mythical tall tale for all time.~
+
+@52 = ~Kale was not quite ready to put down his adventuring days even from his deep taste under <CHARNAME>'s shadow. When Mazzy formed the Fentan Knights, he was the first of its members, battling monsters across the realms while persistently chasing his leader's heart. Perhaps his greatest feat was leaping atop a rogue dragon its lair, and bringing his tall-tale of life and slapping it in the eye.
+ He nearly lost his life, but mad luck and his party's strong stand won the day. It was this courage that would finally see him become Kale Fentan, although his wife fervently disagrees it was formed from only a single moment. Even out of truth it seems, Kale continues to spin his own myths into his legend. He lived in a happy, adventerous marriage for the rest of his life, his tales forever immortalized in the songs and tales told from bards. With slight exaggerations, of course, for all agreed
+ the story of Kale could be told no other way.~
+ 
+@53 = ~Kale and <CHARNAME> continued adventuring until their recognized and well told of everywhere where they went. So renown were they that their targets would flee and surrender before they even arrived to deal with them, or so Kale would say when asked. Eventually however, the yearning of home took Kale, and he and <CHARNAME> made the journey to Gullykin, where everyone from his community stepped out to greet the heroes of legend.
+ It was here that Kale and <CHARNAME> were properly wed, in front of family and friends Kale had known all his life, and even strangers from all the way across the realms. Never before such a day had Gullykin been swarming with life. Afterwards, it was said they would retire to private lives, with children, and then grandchildren, although every now and then a new tale would spin of the company of two venturing off into some new adventure, and a new chapter of their legend..~
+
+@54 =  ~Kale and <CHARNAME> continued adventuring until their recognized and well told of everywhere where they went. So renown were they that their targets would flee and surrender before they even arrived to deal with them, or so Kale would say when asked. Eventually however, the yearning of home took Kale, and he and <CHARNAME> made the journey to Gullykin, where everyone from his community stepped out to greet the heroes of legend.
+ It was here that Kale and <CHARNAME> were properly wed, in front of family and friends Kale had known all his life, and even strangers from all the way across the realms. Never before such a day had Gullykin been swarming with life. Afterwards, it was said they would retire to private lives, although every now and then a new wild tale would spin of the company of two venturing off into some new adventures, and a new chapter of their legend.~
+
+@55 = ~When <CHARNAME> ascended, Kale became disillusioned. Destiny, it seemed to him, was a fixed affair, but what was his purpose? He ventured to Gullykin, to retirement, ignoring the calls of neighbors eager to see the great hero and only departing to take care of his mother's needs. It was one such year however, that the village came under threat of a warlord eager to repeat the history of Meiritin. Standing alone against the marchers of malicious men, Kale battled them back on his own strength, rallying his people to crush the would be conquerors using all the lessons he had learned while in <CHARNAME>'s company to keep himself and his kin alive.
+ The battle's conclusion reignited his faith in himself, and he became a guardian of Gullykin and eventually its mayor, his first act to building a statue to his beloved, who even as a god, would always be his eternal source of inspiration.~
+
+@99 = ~^0xFFFF00FFYou have established a deep bond with Kale. Your synergy has improved his capabilities.^-~
+
+@103 = ~^REmily slightly dissaproves.^-~
+@106 = ~^REmily dissaproves.^-~
+@109 = ~^REmily greatly dissaproves.^-~
+@113 = ~^GEmily slightly approves^-~
+@116 = ~^GEmily approves^-~
+@119 = ~^GEmily greatly approves^-~
+@203 = ~^RHelga slightly dissaproves.^-~
+@206 = ~^RHelga dissaproves.^-~
+@209 = ~^RHelga greatly dissaproves.^-~
+@213 = ~^GHelga slightly approves^-~
+@216 = ~^GHelga approves^-~
+@219 = ~^GHelga greatly approves^-~
+@303 = ~^RKale slightly dissaproves.^-~
+@306 = ~^RKale dissaproves.^-~
+@309 = ~^RKale greatly dissaproves.^-~
+@313 = ~^GKale slightly approves^-~
+@316 = ~^GKale approves^-~
+@319 = ~^GKale greatly approves^-~
+@403 = ~^RRecorder slightly dissaproves.^-~
+@406 = ~^RRecorder dissaproves.^-~
+@409 = ~^RRecorder greatly dissaproves.^-~
+@413 = ~^GRecorder slightly approves^-~
+@416 = ~^GRecorder approves^-~
+@419 = ~^GRecorder greatly approves^-~
+@503 = ~^RVienxay slightly dissaproves.^-~
+@506 = ~^RVienxay dissaproves.^-~
+@509 = ~^RVienxay greatly dissaproves.^-~
+@513 = ~^GVienxay slightly approves^-~
+@516 = ~^GVienxay approves^-~
+@519 = ~^GVienxay greatly approves^-~
