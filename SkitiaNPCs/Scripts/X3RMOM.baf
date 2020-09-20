@@ -1,0 +1,14 @@
+  IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    Allegiance(Myself,NEUTRAL)
+  THEN
+    RESPONSE #100
+      Enemy()
+	  ActionOverride("X3Reb",EquipRanged())
+	  	  ActionOverride("X3Reb",Enemy())
+		  ActionOverride("X3Reb",Attack(NearestEnemyOf(Myself)))
+		  Attack(NearestEnemyOf(Myself))
+  END 
+  
+
+   

@@ -1,0 +1,807 @@
+// Tome Conversation #1 
+IF 
+InParty(Myself)
+GlobalGT("X3VieQuest","GLOBAL",4)
+See(Player1)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+CombatCounter(0)
+!See([ENEMY])
+Global("X3VieQuestStart","LOCALS",0)
+THEN RESPONSE #100 
+IncrementGlobal("X3VieQuestStart","LOCALS",1)
+StartDialogueNoSet(Player1)
+END 
+
+
+//Tome Conversation #2
+
+IF 
+InParty(Myself)
+PartyHasItem("X3VTome1")
+See(Player1)
+!See("X3VDROW")
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+CombatCounter(0)
+!See([ENEMY])
+Global("X3VieQuest","GLOBAL",8)
+THEN RESPONSE #100 
+IncrementGlobal("X3VieQuest","GLOBAL",1)
+StartDialogueNoSet(Player1)
+END 
+
+// Romance Check 
+IF 
+//Requirements 
+Global("X3VieInterest","LOCALS",1) // Interest Shown
+GlobalGT("X3VieApp","GLOBAL",29)
+GlobalGT("X3VieTalk","LOCALS",10)
+Global("X3VieRomanceActive","GLOBAL",0)
+InParty(Myself) 
+//No Other Romance Alive
+!Global("AerieRomanceActive","GLOBAL",2) // And no one else active. 
+!Global("JaheiraRomanceActive","GLOBAL",2)
+!Global("ViconiaRomanceActive","GLOBAL",2)
+!Global("AnomenRomanceActive","GLOBAL",2)
+!Global("RasaadRomanceActive","GLOBAL",2)
+!Global("NeeraRomanceActive","GLOBAL",2)
+!Global("X3KalRomanceActive","GLOBAL",2)
+!Global("X3RebRomanceActive","GLOBAL",2)
+!Global("X3EmiRomanceActive","GLOBAL",2)
+!Global("DornRomanceActive","GLOBAL",2)
+!Global("HexxatRomanceActive","GLOBAL",2)
+!Global("L3PetsyRomanceActive","GLOBAL",2)
+!Global("YvetteRomanceActive","GLOBAL",2)
+!Global("C0SireneRomanceActive","GLOBAL",2)
+THEN RESPONSE #100 
+RealSetGlobalTimer("X3VieLoveTimer","GLOBAL",3500)
+SetGlobal("X3VieRomanceActive","GLOBAL",1)
+SetGlobal("X3VieLoveTalk","LOCALS",1)
+END 
+
+
+//Talk Initialization 
+IF 
+InParty(Myself)
+Global("X3VieTalk","LOCALS",0)
+THEN RESPONSE #100 
+RealSetGlobalTimer("X3VieTalkTimer","GLOBAL",3500)
+SetGlobal("X3VieTalk","LOCALS",1)
+END 
+
+//Underdark Talk Initialization
+IF 
+InParty(Myself)
+AreaCheck("AR2100")
+Global("X3VieUTalk","LOCALS",0)
+THEN RESPONSE #100 
+SetGlobal("X3VieUTalk","LOCALS",1)
+SetGlobalTimer("X3VieUnderdarkTimer","GLOBAL",TWO_ROUNDS)
+END 
+
+IF 
+GlobalTimerExpired("X3VieUnderdarkTimer","GLOBAL")
+InParty(Myself)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+See(Player1)
+CombatCounter(0)
+!See([ENEMY])
+Global("X3VieUTalk","LOCALS",1)
+THEN RESPONSE #100 
+IncrementGlobal("X3VieUTalk","LOCALS",1)
+END 
+//Temple Talk 
+IF 
+Global("X3VTempleTalk","LOCALS",0)
+InParty(Myself)
+AreaCheck("AR0900")
+THEN RESPONSE #100 
+SetGlobal("X3VTempleTalk","LOCALS",1)
+SetGlobalTimer("X3VieTempleTimer","GLOBAL",THREE_ROUNDS)
+END 
+
+IF 
+GlobalTimerExpired("X3VieTempleTimer","GLOBAL")
+InParty(Myself)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+See(Player1)
+CombatCounter(0)
+!See([ENEMY])
+Global("X3VTempleTalk","LOCALS",1)
+THEN RESPONSE #100 
+IncrementGlobal("X3VTempleTalk","LOCALS",1)
+StartDialogueNoSet(Player1)
+END 
+//After Rest LoveTalks
+IF
+	PartyRested()
+	!Global("X3VieRomanceActive","GLOBAL",3) 
+	GlobalGT("X3VieApp","GLOBAL",29)
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+	CombatCounter(0)
+    !See([ENEMY])
+	OR(2)
+	Global("X3VieLoveTalk","LOCALS",17)
+	Global("X3VieLoveTalk","LOCALS",25)
+THEN RESPONSE #100 
+	IncrementGlobal("X3VieLoveTalk","LOCALS",1)
+END 
+ 
+//Normal Love Talk Checker
+IF
+	RealGlobalTimerExpired("X3VieLoveTimer","GLOBAL")
+	!Global("X3VieRomanceActive","GLOBAL",3) 
+	GlobalGT("X3VieApp","GLOBAL",29)
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+	CombatCounter(0)
+    !See([ENEMY])
+	!AreaType(DUNGEON)
+	OR(9)
+	Global("X3VieLoveTalk","LOCALS",1)
+	Global("X3VieLoveTalk","LOCALS",3)
+	Global("X3VieLoveTalk","LOCALS",5)
+	Global("X3VieLoveTalk","LOCALS",7)
+	Global("X3VieLoveTalk","LOCALS",9)
+	Global("X3VieLoveTalk","LOCALS",11)
+	Global("X3VieLoveTalk","LOCALS",13)
+	Global("X3VieLoveTalk","LOCALS",19)
+	Global("X3VieLoveTalk","LOCALS",21)
+THEN RESPONSE #100 
+	IncrementGlobal("X3VieLoveTalk","LOCALS",1)
+END
+//Slayer LoveTalk 
+IF 
+	RealGlobalTimerExpired("X3VieLoveTimer","GLOBAL")
+	!Global("X3VieRomanceActive","GLOBAL",3) 
+	Global("DrowTalk","GLOBAL",5)
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+	CombatCounter(0)
+    !See([ENEMY])
+	!AreaType(DUNGEON)
+	Global("X3VieLoveTalk","LOCALS",27)
+THEN RESPONSE #100 	
+	IncrementGlobal("X3VieLoveTalk","LOCALS",1)
+END
+//Underdark LoveTalk 
+IF 
+	Global("X3VieRomanceActive","GLOBAL",2) 
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+	CombatCounter(0)
+    !See([ENEMY])
+	AreaCheck("AR2100")
+	Global("X3VieLoveTalk","LOCALS",29)
+THEN RESPONSE #100 	
+	RealSetGlobalTimer("X3VieLoveTimer","GLOBAL",30)
+	IncrementGlobal("X3VieLoveTalk","LOCALS",1)
+END
+//Ust Natha LoveTalk 
+IF 
+	Global("X3VieRomanceActive","GLOBAL",2) 
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+	CombatCounter(0)
+    !See([ENEMY])
+	AreaCheck("AR2600")
+	Global("X3VieLoveTalk","LOCALS",31)
+THEN RESPONSE #100 	
+	RealSetGlobalTimer("X3VieLoveTimer","GLOBAL",30)
+	IncrementGlobal("X3VieLoveTalk","LOCALS",1)
+END
+//Free of Underdark Lovetalk 
+IF 
+	Global("X3VieRomanceActive","GLOBAL",2) 
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+	CombatCounter(0)
+    !See([ENEMY])
+	AreaCheck("AR2600")
+	Global("X3VieLoveTalk","LOCALS",33)
+THEN RESPONSE #100 	
+	RealSetGlobalTimer("X3VieLoveTimer","GLOBAL",60)
+	IncrementGlobal("X3VieLoveTalk","LOCALS",1)
+END
+//Suldanessellar 
+IF 
+	Global("X3VieRomanceActive","GLOBAL",2) 
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+	CombatCounter(0)
+    !See([ENEMY])
+	AreaCheck("AR2800")
+	Global("X3VieLoveTalk","LOCALS",35)
+THEN RESPONSE #100 	
+	RealSetGlobalTimer("X3VieLoveTimer","GLOBAL",30)
+	IncrementGlobal("X3VieLoveTalk","LOCALS",1)
+END
+//Love Talk Firing
+IF 
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    CombatCounter(0)
+    !See([ENEMY])
+    OR(12)
+    Global("X3VieLoveTalk","LOCALS",2)
+	Global("X3VieLoveTalk","LOCALS",4)
+	Global("X3VieLoveTalk","LOCALS",6)
+	Global("X3VieLoveTalk","LOCALS",8)
+	Global("X3VieLoveTalk","LOCALS",10)
+	Global("X3VieLoveTalk","LOCALS",12)
+	Global("X3VieLoveTalk","LOCALS",14)
+	Global("X3VieLoveTalk","LOCALS",18)
+	Global("X3VieLoveTalk","LOCALS",20)
+	Global("X3VieLoveTalk","LOCALS",22)
+	Global("X3VieLoveTalk","LOCALS",26)
+	Global("X3VieLoveTalk","LOCALS",28)
+THEN RESPONSE #100 
+	PlaySong(0)
+	RealSetGlobalTimer("X3VieLoveTimer","GLOBAL",3500)
+	StartDialogueNoSet(Player1)
+END 
+// These are the last three, seperated by a check for a brief timer after their criteria is met.
+IF 
+	RealGlobalTimerExpired("X3VieLoveTimer","GLOBAL")
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    CombatCounter(0)
+    !See([ENEMY])
+    OR(3)
+    	Global("X3VieLoveTalk","LOCALS",30)
+		Global("X3VieLoveTalk","LOCALS",32)
+		Global("X3VieLoveTalk","LOCALS",34)
+THEN RESPONSE #100 
+	PlaySong(0)
+	StartDialogueNoSet(Player1)
+END 
+
+//Friendship Talk Checkers
+
+IF
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    RealGlobalTimerExpired("X3VieTalkTimer","GLOBAL")
+    CombatCounter(0)
+    !See([ENEMY])
+	!AreaType(DUNGEON)
+	GlobalGT("X3VieApp","GLOBAL",0)
+    OR(5)
+     Global("X3VieTalk","LOCALS",1)
+	 Global("X3VieTalk","LOCALS",3)
+     Global("X3VieTalk","LOCALS",5)
+	 Global("X3VieTalk","LOCALS",7)
+	 Global("X3VieTalk","LOCALS",9)
+THEN
+  RESPONSE #100
+	IncrementGlobal("X3VieTalk","LOCALS",1)
+END
+
+IF
+	!Global("X3VieRomanceActive","GLOBAL",1)
+	!Global("X3VieRomanceActive","GLOBAL",2)
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    RealGlobalTimerExpired("X3VieTalkTimer","GLOBAL")
+    CombatCounter(0)
+    !See([ENEMY])
+	!AreaType(DUNGEON)
+	GlobalGT("X3VieApp","GLOBAL",0)
+	Global("SelfTalk","GLOBAL",3)
+    Global("X3VieTalk","LOCALS",11)
+THEN
+  RESPONSE #100
+	IncrementGlobal("X3VieTalk","LOCALS",1)
+END
+
+IF
+	!Global("X3VieRomanceActive","GLOBAL",1)
+	!Global("X3VieRomanceActive","GLOBAL",2)
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    CombatCounter(0)
+    !See([ENEMY])
+	GlobalGT("X3VieApp","GLOBAL",0)
+	AreaCheck("AR2200")
+    Global("X3VieTalk","LOCALS",13)
+THEN
+  RESPONSE #100
+	RealSetGlobalTimer("X3VieTalkTimer","GLOBAL",60)
+	IncrementGlobal("X3VieTalk","LOCALS",1)
+END
+//Suldanesellar non romance 
+IF
+	!Global("X3VieRomanceActive","GLOBAL",1)
+	!Global("X3VieRomanceActive","GLOBAL",2)
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    CombatCounter(0)
+    !See([ENEMY])
+	GlobalGT("X3VieApp","GLOBAL",0)
+	AreaCheck("AR2800")
+    Global("X3VieTalk","LOCALS",15)
+THEN
+  RESPONSE #100
+    RealSetGlobalTimer("X3VieTalkTimer","GLOBAL",60)
+	IncrementGlobal("X3VieTalk","LOCALS",1)
+END
+
+
+
+//Friendship Talk Fire 
+IF 
+	RealGlobalTimerExpired("X3VieTalkTimer","GLOBAL")
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    CombatCounter(0)
+    !See([ENEMY])
+    OR(8)
+    Global("X3VieTalk","LOCALS",2)
+	Global("X3VieTalk","LOCALS",4)
+    Global("X3VieTalk","LOCALS",6)
+	Global("X3VieTalk","LOCALS",8)	
+	Global("X3VieTalk","LOCALS",10)
+	Global("X3VieTalk","LOCALS",12)
+	Global("X3VieTalk","LOCALS",14)
+	Global("X3VieTalk","LOCALS",16)
+THEN RESPONSE #100 
+	RealSetGlobalTimer("X3VieTalkTimer","GLOBAL",3500)
+	StartDialogueNoSet(Player1)
+END 	
+//Undertalk Fire 
+IF 
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    CombatCounter(0)
+    !See([ENEMY])
+	Global("X3VieUTalk","LOCALS",2)
+THEN RESPONSE #100 	
+	StartDialogueNoSet(Player1)
+END 	
+
+//Phaere ->Warning #1 
+IF
+	IsValidForPartyDialogue(Myself)
+	See(Player1)
+	Global("X3VieCheckMad1","GLOBAL",1)
+	Global("PhaereInnuendo","GLOBAL",1)
+	!Range("Phaere",6)  // Phaere
+	Global("X3VieMad1","LOCALS",0)
+	OR(2)
+		Global("X3VieRomanceActive","GLOBAL",1)
+		Global("X3VieRomanceActive","GLOBAL",2)
+	CombatCounter(0)
+THEN
+	RESPONSE #100
+		StartDialogNoSet([PC])
+END
+//Phaere ->Slept or did not sleep
+IF
+	IsValidForPartyDialogue(Myself)
+	See(Player1)
+	Global("X3VieCheckMad2","GLOBAL",1)
+	OR(2)
+	Global("PhaereInnuendo","GLOBAL",2)
+	Global("PhaereInnuendo","GLOBAL",3)
+	!Range("Phaere",6)  // Phaere
+	Global("X3VieMad2","LOCALS",0)
+	OR(2)
+		Global("X3VieRomanceActive","GLOBAL",1)
+		Global("X3VieRomanceActive","GLOBAL",2)
+	CombatCounter(0)
+THEN
+	RESPONSE #100
+		StartDialogNoSet([PC])
+END
+
+//App Shifts 
+IF 
+InParty(Myself)
+Switch("X3VieAppChange","GLOBAL")
+THEN RESPONSE #1
+SetGlobal("X3VieAppChange","GLOBAL",0)
+IncrementGlobal("X3VieApp","GLOBAL",-10)
+DisplayStringNoNameDlg(Player1,@509)
+RESPONSE #2
+SetGlobal("X3VieAppChange","GLOBAL",0)
+IncrementGlobal("X3VieApp","GLOBAL",-8)
+DisplayStringNoNameDlg(Player1,@509)
+RESPONSE #3
+SetGlobal("X3VieAppChange","GLOBAL",0)
+IncrementGlobal("X3VieApp","GLOBAL",-6)
+DisplayStringNoNameDlg(Player1,@506)
+RESPONSE #4
+SetGlobal("X3VieAppChange","GLOBAL",0)
+IncrementGlobal("X3VieApp","GLOBAL",-4)
+DisplayStringNoNameDlg(Player1,@506)
+RESPONSE #5
+SetGlobal("X3VieAppChange","GLOBAL",0)
+IncrementGlobal("X3VieApp","GLOBAL",-2)
+DisplayStringNoNameDlg(Player1,@503)
+RESPONSE #6
+SetGlobal("X3VieAppChange","GLOBAL",0)
+RESPONSE #7
+SetGlobal("X3VieAppChange","GLOBAL",0)
+IncrementGlobal("X3VieApp","GLOBAL",2)
+DisplayStringNoNameDlg(Player1,@513)
+RESPONSE #8
+SetGlobal("X3VieAppChange","GLOBAL",0)
+IncrementGlobal("X3VieApp","GLOBAL",4)
+DisplayStringNoNameDlg(Player1,@516)
+RESPONSE #9
+SetGlobal("X3VieAppChange","GLOBAL",0)
+IncrementGlobal("X3VieApp","GLOBAL",6)
+DisplayStringNoNameDlg(Player1,@516)
+RESPONSE #10
+SetGlobal("X3VieAppChange","GLOBAL",0)
+IncrementGlobal("X3VieApp","GLOBAL",8)
+DisplayStringNoNameDlg(Player1,@519)
+RESPONSE #11
+SetGlobal("X3VieAppChange","GLOBAL",0)
+IncrementGlobal("X3VieApp","GLOBAL",10)
+DisplayStringNoNameDlg(Player1,@519)
+END 
+
+// If not in party, it should be reset with no approval changes. 
+IF 
+!InParty(Myself) 
+!Global("X3VieAppChange","GLOBAL",0)
+THEN RESPONSE #100 
+SetGlobal("X3VieAppChange","GLOBAL",0)
+END
+
+
+//Reset to 90 if past max/reward bonus stats.
+IF 
+GlobalGT("X3VieApp","GLOBAL",90)
+InParty(Myself)
+Switch("X3VieAppMaxBonus","GLOBAL")
+THEN RESPONSE #0
+SetGlobal("X3VieApp","GLOBAL",90)
+SetGlobal("X3VieAppMaxBonus","GLOBAL",1)
+ChangeStat(Myself,DEX,1,ADD)
+ChangeStat(Myself,STR,1,ADD)
+DisplayStringNoNameDlg(Player1,@99)
+RESPONSE #1 
+SetGlobal("X3VieApp","GLOBAL",90)
+END 
+
+IF 
+GlobalLT("X3VieApp","GLOBAL",-39)
+InParty(Myself)
+Switch("X3Leave","LOCALS")
+THEN RESPONSE #0
+SetGlobal("X3Break","LOCALS",1)
+StartDialogueNoSet(Player1)
+RESPONSE #2
+SetGlobal("X3Break","LOCALS",3)
+StartDialogueNoSet(Player1) // Leaves for Good
+END 
+
+//Approval Low/In Romance: Breakup Conversation
+IF 
+Global("X3VieRomanceActive","GLOBAL",2)
+GlobalLT("X3VieApp","GLOBAL",50)
+InParty(Myself)
+CombatCounter(0)
+!See([ENEMY])
+Global("X3BreakUp","LOCALS",0)
+THEN RESPONSE #100 
+SetGlobalTimer("X3BreakUp","GLOBAL",THREE_DAYS)
+SetGlobal("X3BreakUp","LOCALS",1)
+END 
+
+IF 
+Global("X3VieRomanceActive","GLOBAL",2)
+GlobalTimerExpired("X3BreakUp","GLOBAL")
+GlobalLT("X3VieApp","GLOBAL",50)
+See(Player1)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+CombatCounter(0)
+!AreaType(DUNGEON)
+!See([ENEMY])
+Global("X3BreakUp","LOCALS",1)
+THEN RESPONSE #100 
+SetGlobal("X3BreakUp","LOCALS",2)
+StartDialogueNoSet(Player1)
+END 
+
+IF 
+Global("X3BreakUp","LOCALS",1)
+GlobalTimerExpired("X3BreakUp","GLOBAL")
+GlobalGT("X3VieApp","GLOBAL",49)
+InParty("X3Vie")
+CombatCounter(0)
+!See([ENEMY])
+THEN RESPONSE #100 
+SetGlobal("X3BreakUp","LOCALS",0)
+END 
+
+// Romance Conflicts
+
+IF
+InParty(Myself)
+Global("X3VieRomanceActive","GLOBAL",1)
+GlobalGT("X3VieLoveTalk","LOCALS",22)
+Global("X3VieRomanceConflict","GLOBAL",0)
+OR(11)
+Global("AerieRomanceActive","GLOBAL",1)
+Global("JaheiraRomanceActive","GLOBAL",1)
+Global("AnomenRomanceActive","GLOBAL",1)
+Global("ViconiaRomanceActive","GLOBAL",1)
+Global("RasaadRomanceActive","GLOBAL",1)
+Global("NeeraRomanceActive","GLOBAL",1)
+Global("DornRomanceActive","GLOBAL",1)
+Global("HexxatRomanceActive","GLOBAL",1)
+Global("L3PetsyRomanceActive","GLOBAL",1)
+Global("YvetteRomanceActive","GLOBAL",1)
+Global("C0SireneRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+RealSetGlobalTimer("X3VieRomanceConflictTimer","GLOBAL",600)
+SetGlobal("X3VieRomanceConflict","GLOBAL",1)
+END
+
+IF
+InParty(Myself)
+RealGlobalTimerExpired("X3VieRomanceConflictTimer","GLOBAL")
+Global("X3VieRomanceConflict","GLOBAL",1)
+Global("X3VieRomanceActive","GLOBAL",1)
+GlobalGT("X3VieLovetalk","GLOBAL",22)
+OR(11)
+Global("AerieRomanceActive","GLOBAL",1)
+Global("JaheiraRomanceActive","GLOBAL",1)
+Global("AnomenRomanceActive","GLOBAL",1)
+Global("ViconiaRomanceActive","GLOBAL",1)
+Global("RasaadRomanceActive","GLOBAL",1)
+Global("NeeraRomanceActive","GLOBAL",1)
+Global("DornRomanceActive","GLOBAL",1)
+Global("HexxatRomanceActive","GLOBAL",1)
+Global("L3PetsyRomanceActive","GLOBAL",1)
+Global("YvetteRomanceActive","GLOBAL",1)
+Global("C0SireneRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END
+
+
+//Experience
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,1249999)
+  XPLT(Myself,1250000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,1250000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,999999)
+  XPLT(Myself,1000000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,1000000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,749999)
+  XPLT(Myself,750000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,750000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,499999)
+  XPLT(Myself,500000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,500000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,249999)
+  XPLT(Myself,250000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,250000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,124999)
+  XPLT(Myself,125000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,125000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPLT(Player1,89001)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    SetInterrupt(TRUE)
+END
+
+// Auto-kill romances
+
+IF
+Global("X3VieRomanceActive","GLOBAL",1)
+OR(14)
+Global("AerieRomanceActive","GLOBAL",2)
+Global("JaheiraRomanceActive","GLOBAL",2)
+Global("AnomenRomanceActive","GLOBAL",2)
+Global("ViconiaRomanceActive","GLOBAL",2)
+Global("RasaadRomanceActive","GLOBAL",2)
+Global("NeeraRomanceActive","GLOBAL",2)
+Global("X3KalRomanceActive","GLOBAL",2)
+Global("X3RebRomanceActive","GLOBAL",2)
+Global("X3EmiRomanceActive","GLOBAL",2)
+Global("DornRomanceActive","GLOBAL",2)
+Global("HexxatRomanceActive","GLOBAL",2)
+Global("L3PetsyRomanceActive","GLOBAL",2)
+Global("YvetteRomanceActive","GLOBAL",2)
+Global("C0SireneRomanceActive","GLOBAL",2)
+THEN
+RESPONSE #100
+SetGlobal("X3VieRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3VieRomanceActive","GLOBAL",2)
+Global("AerieRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("AerieRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3VieRomanceActive","GLOBAL",2)
+Global("JaheiraRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("JaheiraRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3VieRomanceActive","GLOBAL",2)
+Global("AnomenRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("AnomenRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3VieRomanceActive","GLOBAL",2)
+Global("ViconiaRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("ViconiaRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3VieRomanceActive","GLOBAL",2)
+Global("RasaadRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("RasaadRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3VieRomanceActive","GLOBAL",2)
+Global("NeeraRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("NeeraRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3VieRomanceActive","GLOBAL",2)
+Global("DornRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("DornRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3VieRomanceActive","GLOBAL",2)
+Global("HexxatRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("HexxatRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3VieRomanceActive","GLOBAL",2)
+Global("L3PetsyRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("L3PetsyRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3VieRomanceActive","GLOBAL",2)
+Global("YvetteRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("YvetteRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3VieRomanceActive","GLOBAL",2)
+Global("X3EmiRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("X3EmiRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3VieRomanceActive","GLOBAL",2)
+Global("X3RebRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("X3RebRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3VieRomanceActive","GLOBAL",2)
+Global("X3KalRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("X3KalRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3VieRomanceActive","GLOBAL",2)
+Global("C0SireneRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("C0SireneRomanceActive","GLOBAL",3)
+END

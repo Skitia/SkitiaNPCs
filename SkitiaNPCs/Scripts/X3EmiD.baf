@@ -1,0 +1,35 @@
+IF 
+	RealGlobalTimerExpired("X3EmiLoveTimer","GLOBAL")
+	GlobalGT("X3EmiApp","GLOBAL",29)
+	!Global("X3EmiRomanceActive","GLOBAL",3) 
+	Global("X3EmiLoveTalk","LOCALS",19)
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+THEN RESPONSE #100 
+	PlaySong(0)
+	RealSetGlobalTimer("X3EmiLoveTimer","GLOBAL",3200)
+	IncrementGlobal("X3EmiLoveTalk","LOCALS",1)
+	StartDialogueNoSet(Player1)
+END 
+
+IF 
+	Global("X3EmiRomanceActive","GLOBAL",2) 
+	Global("X3EmiLoveTalk","LOCALS",29)
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+	OR(10)
+	AreaCheck("AR0704")
+	AreaCheck("AR0709")
+	AreaCheck("AR0406")
+	AreaCheck("AR0513")
+	AreaCheck("AR0509")
+	AreaCheck("AR0021")
+	AreaCheck("AR0313")
+	AreaCheck("AR1105")
+	AreaCheck("AR2010")
+	AreaCheck("AR1602")	
+THEN RESPONSE #100 
+	PlaySong(0)
+	IncrementGlobal("X3EmiLoveTalk","LOCALS",1)
+	StartDialogueNoSet(Player1)
+END 	

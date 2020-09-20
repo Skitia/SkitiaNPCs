@@ -1,0 +1,19 @@
+ IF 
+   See(Player1)   
+   Global("X3PreTalk","LOCALS",0)
+   AreaCheck("AR0332")
+  THEN
+    RESPONSE #100
+	SetGlobal("X3PreTalk","LOCALS",1)
+	StartDialogueNoSet(Player1)	
+END 
+
+ IF 
+   See(Player1)   
+   Global("X3PostTalk","LOCALS",0)
+   AreaCheck("AR0527")
+  THEN
+    RESPONSE #100
+	SetGlobal("X3PostTalk","LOCALS",1)
+	StartDialogueNoSet(Player1)	
+END 

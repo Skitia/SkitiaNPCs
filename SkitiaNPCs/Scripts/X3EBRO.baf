@@ -1,0 +1,85 @@
+  IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    Allegiance(Myself,NEUTRAL)
+	GlobalLT("Chapter","GLOBAL",%bg2_chapter_6%)
+  THEN
+    RESPONSE #100
+	  DisplayStringHead("X3EBRO",~How uncivilized. Let us go, Darlene.~)
+	  EscapeArea()
+ END 
+ 
+  IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    Allegiance(Myself,NEUTRAL)
+	GlobalGT("Chapter","GLOBAL",%bg2_chapter_5%)
+	GlobalLT("X3EmiQuest","GLOBAL",7)
+  THEN
+    RESPONSE #100
+	  ActionOverride("X3EFATH",DisplayStringHead("X3EFATH",~You should be ashamed, Emily. You are no daughter of mine.~))	
+	  ActionOverride("X3EFATH",EscapeArea())
+	  ActionOverride("X3EDAR",EscapeArea())
+	  ActionOverride("X3ECH",EscapeArea())
+	  ActionOverride("X3EGVJ",EscapeArea())
+	  ActionOverride("X3ECATH",EscapeArea())	  
+	  DisplayStringHead("X3EBRO",~This clear public attack proves I am worthy of Heir. Let us find safety and escape this madwoman and her friends.~)
+	  EscapeArea()
+	  AddJournalEntry(@21,QUEST_DONE) 
+	  SetGlobal("X3EmiQuest","GLOBAL",10)
+ END  
+
+IF 
+   See("X3Emi")
+   AreaCheck("AR1000")
+   Global("X3ThomasMet","LOCALS",0)
+THEN
+    RESPONSE #100
+	SetGlobal("X3ThomasMet","LOCALS",1)
+	StartDialogueNoSet("X3Emi")
+END 
+
+IF
+Global("X3EmiQuest","GLOBAL",7)
+Global("EquipWeapon","LOCALS",0)
+THEN
+  RESPONSE #100
+  SetGlobal("EquipWeapon","LOCALS",1)
+    EquipMostDamagingMelee()
+	ApplySpell(Myself,WARRIOR_RESIST_MAGIC)
+END
+
+IF 
+HPPercentLT(Myself,50)
+Global("UsePotion","LOCALS",0)
+THEN RESPONSE #100 
+SetGlobal("UsePotion","LOCALS",1)
+UseItem("POTN14",Myself)
+END 
+
+IF 
+HPLT(Myself,25)
+Global("Surrender","LOCALS",0)
+THEN RESPONSE #100 
+SetGlobal("Surrender","LOCALS",1)
+// Clear All actions 
+// Change Stance if you want. 
+StartDialogueNoSet("X3Emi")
+END 
+
+IF 
+Die()
+Global("X3EmiQuest","GLOBAL",7)
+THEN RESPONSE #100 
+SetGlobal("X3EmiQuest","GLOBAL",8)
+FadeToColor([30.0],0)
+ActionOverride(Player1,JumpToPoint([1337.1969]))
+ActionOverride("X3Emi",JumpToPoint([1304.1945]))
+Wait(1)
+ActionOverride(Player1,Face(NW))
+ActionOverride("X3Emi",Face(SE))
+		SetInterrupt(FALSE)
+		ClearAllActions()
+		StartCutSceneMode()
+		MultiPlayerSync()
+		Wait(1)
+		StartCutScene("X3ECut03")
+END 

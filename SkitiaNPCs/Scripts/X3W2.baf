@@ -1,0 +1,39 @@
+IF 
+Global("X3LovedOne","GLOBAL",1) 
+THEN
+  RESPONSE #100
+    CutSceneId("X3ELOVE")
+    CreateVisualEffectObject("SPFLESHS",Myself)
+    Wait(1)
+    ChangeAnimation("HGWRA02")
+END
+
+IF 
+Global("X3LovedOne","GLOBAL",2) 
+THEN
+  RESPONSE #100
+    CutSceneId("X3KLOVE")
+    CreateVisualEffectObject("SPFLESHS",Myself)
+    Wait(1)
+    ChangeAnimation("HGWRA02")
+END
+
+IF 
+Global("X3LovedOne","GLOBAL",3) 
+THEN
+  RESPONSE #100
+    CutSceneId("X3RLOVE")
+    CreateVisualEffectObject("SPFLESHS",Myself)
+    Wait(1)
+    ChangeAnimation("HGWRA02")
+END
+
+IF 
+Global("X3LovedOne","GLOBAL",4) 
+THEN
+  RESPONSE #100
+    CutSceneId("X3VLOVE")
+    CreateVisualEffectObject("SPFLESHS",Myself)
+    Wait(1)
+    ChangeAnimation("HGWRA02")
+END

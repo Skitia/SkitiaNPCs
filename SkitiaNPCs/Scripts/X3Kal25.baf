@@ -1,0 +1,359 @@
+// Talk immediately when summoned. 
+IF
+Global("X3KalSummoned","GLOBAL",1)
+THEN
+RESPONSE #100
+Wait(1)
+StartDialogueNoSet([PC])
+END
+
+//Talk Initialization 
+IF 
+InParty(Myself)
+Global("X3KalToBTalk","LOCALS",0)
+GlobalGT("X3KalApp","GLOBAL",0)
+!Global("X3KalRomanceActive","GLOBAL",2)
+THEN RESPONSE #100 
+RealSetGlobalTimer("X3KalToBTalkTimer","GLOBAL",3300)
+SetGlobal("X3KalToBTalk","LOCALS",1)
+END 
+
+//Love Talk Initialization 
+IF 
+InParty(Myself)
+Global("X3KalToBLoveTalk","LOCALS",0)
+Global("X3KalRomanceActive","GLOBAL",2)
+THEN RESPONSE #100 
+RealSetGlobalTimer("X3KalToBLoveTimer","GLOBAL",3300)
+SetGlobal("X3KalToBLoveTalk","LOCALS",1)
+END
+
+
+//Love Talks 
+IF
+	RealGlobalTimerExpired("X3KalToBLoveTimer","GLOBAL")
+	Global("X3KalRomanceActive","GLOBAL",2) 
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+	CombatCounter(0)
+    !See([ENEMY])
+	!AreaType(DUNGEON)
+	OR(3)
+	Global("X3KalToBLoveTalk","LOCALS",1)
+	Global("X3KalToBLoveTalk","LOCALS",3)
+	Global("X3KalToBLoveTalk","LOCALS",5)
+THEN RESPONSE #100 
+	IncrementGlobal("X3KalToBLoveTalk","LOCALS",1)
+END
+//Wraith Talk 
+IF 
+	Global("X3LovedOne","GLOBAL",2)
+	Global("X3KalRomanceActive","GLOBAL",2)	
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    CombatCounter(0)
+    !See([ENEMY])
+	Global("X3KalWraithTalk","LOCALS",0)	
+THEN RESPONSE #100 
+	IncrementGlobal("X3KalWraithTalk","LOCALS",1)
+END 
+//Post Rest Love Talk 
+IF
+	PartyRested()
+	RealGlobalTimerExpired("X3KalToBLoveTimer","GLOBAL")
+	Global("X3KalRomanceActive","GLOBAL",2) 
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+	CombatCounter(0)
+    !See([ENEMY])
+	!AreaType(DUNGEON)
+	Global("X3KalToBLoveTalk","LOCALS",7)
+THEN RESPONSE #100 
+	IncrementGlobal("X3KalToBLoveTalk","LOCALS",1)
+END
+
+// Saradush Sacked Post Talk 
+IF 
+	RealGlobalTimerExpired("X3KalToBLoveTimer","GLOBAL")
+	Global("X3KalRomanceActive","GLOBAL",2) 
+	Global("SaradushSacked","GLOBAL",1)
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+	CombatCounter(0)
+    !See([ENEMY])
+	!AreaType(DUNGEON)
+	Global("X3KalToBLoveTalk","LOCALS",9)
+THEN RESPONSE #100 
+	IncrementGlobal("X3KalToBLoveTalk","LOCALS",1)
+END
+
+// Abazigal Killed Post Talk 
+IF 
+	Dead("Abazigal")
+	RealGlobalTimerExpired("X3KalToBLoveTimer","GLOBAL")
+	Global("X3KalRomanceActive","GLOBAL",2) 
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+	CombatCounter(0)
+    !See([ENEMY])
+	!AreaType(DUNGEON)
+	Global("X3KalToBLoveTalk","LOCALS",11)
+THEN RESPONSE #100 
+	IncrementGlobal("X3KalToBLoveTalk","LOCALS",1)
+END
+
+// Challenges Done Post Talk 
+IF 
+	Global("ChallengesDone","GLOBAL",1)
+	RealGlobalTimerExpired("X3KalToBLoveTimer","GLOBAL")
+	Global("X3KalRomanceActive","GLOBAL",2) 
+	Global("ChallengesDone","GLOBAL",1)
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+	CombatCounter(0)
+    !See([ENEMY])
+	Global("X3KalToBLoveTalk","LOCALS",13)
+THEN RESPONSE #100 
+	IncrementGlobal("X3KalToBLoveTalk","LOCALS",1)
+END
+//Wraith Talk Fire 
+IF 
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    CombatCounter(0)
+    !See([ENEMY])
+	Global("X3KalRomanceActive","GLOBAL",2) 
+	Global("X3KalWraithTalk","LOCALS",1) 
+THEN RESPONSE #100 
+	StartDialogueNoSet(Player1)
+END 
+
+IF 
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    CombatCounter(0)
+    !See([ENEMY])
+	Global("X3KalRomanceActive","GLOBAL",2) 
+    OR(6)
+    Global("X3KalToBLoveTalk","LOCALS",2)
+	Global("X3KalToBLoveTalk","LOCALS",4)
+	Global("X3KalToBLoveTalk","LOCALS",6)
+	Global("X3KalToBLoveTalk","LOCALS",8)
+	Global("X3KalToBLoveTalk","LOCALS",10)
+	Global("X3KalToBLoveTalk","LOCALS",12)
+	Global("X3KalToBLoveTalk","LOCALS",14)
+THEN RESPONSE #100 
+	PlaySong(0)
+	RealSetGlobalTimer("X3KalToBLoveTimer","GLOBAL",3300)
+	StartDialogueNoSet(Player1)
+END 
+
+//Friendship Talks 
+IF 
+	RealGlobalTimerExpired("X3KalToBTalkTimer","GLOBAL")
+	CombatCounter(0)
+    !See([ENEMY])
+	!AreaType(DUNGEON)
+	GlobalGT("X3KalApp","GLOBAL",0)
+	OR(3)
+	 Global("X3KalToBTalk","LOCALS",1)
+	 Global("X3KalToBTalk","LOCALS",3)
+	 Global("X3KalToBTalk","LOCALS",5)
+THEN
+  RESPONSE #100
+	IncrementGlobal("X3KalToBTalk","LOCALS",1)
+END
+
+IF 
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    CombatCounter(0)
+    !See([ENEMY])
+    OR(3)
+    Global("X3KalToBTalk","LOCALS",2)
+	Global("X3KalToBTalk","LOCALS",4)
+	Global("X3KalToBTalk","LOCALS",6)
+THEN RESPONSE #100 
+	RealSetGlobalTimer("X3KalToBTalkTimer","GLOBAL",3300)
+	StartDialogueNoSet(Player1)
+END 
+
+//App Shifts 
+IF 
+InParty(Myself)
+Switch("X3KalAppChange","GLOBAL")
+THEN RESPONSE #1
+SetGlobal("X3KalAppChange","GLOBAL",0)
+IncrementGlobal("X3KalApp","GLOBAL",-10)
+DisplayStringNoNameDlg(Player1,@309)
+RESPONSE #2
+SetGlobal("X3KalAppChange","GLOBAL",0)
+IncrementGlobal("X3KalApp","GLOBAL",-8)
+DisplayStringNoNameDlg(Player1,@309)
+RESPONSE #3
+SetGlobal("X3KalAppChange","GLOBAL",0)
+IncrementGlobal("X3KalApp","GLOBAL",-6)
+DisplayStringNoNameDlg(Player1,@306)
+RESPONSE #4
+SetGlobal("X3KalAppChange","GLOBAL",0)
+IncrementGlobal("X3KalApp","GLOBAL",-4)
+DisplayStringNoNameDlg(Player1,@306)
+RESPONSE #5
+SetGlobal("X3KalAppChange","GLOBAL",0)
+IncrementGlobal("X3KalApp","GLOBAL",-2)
+DisplayStringNoNameDlg(Player1,@303)
+RESPONSE #6
+SetGlobal("X3KalAppChange","GLOBAL",0)
+RESPONSE #7
+SetGlobal("X3KalAppChange","GLOBAL",0)
+IncrementGlobal("X3KalApp","GLOBAL",2)
+DisplayStringNoNameDlg(Player1,@313)
+RESPONSE #8
+SetGlobal("X3KalAppChange","GLOBAL",0)
+IncrementGlobal("X3KalApp","GLOBAL",4)
+DisplayStringNoNameDlg(Player1,@316)
+RESPONSE #9
+SetGlobal("X3KalAppChange","GLOBAL",0)
+IncrementGlobal("X3KalApp","GLOBAL",6)
+DisplayStringNoNameDlg(Player1,@316)
+RESPONSE #10
+SetGlobal("X3KalAppChange","GLOBAL",0)
+IncrementGlobal("X3KalApp","GLOBAL",8)
+DisplayStringNoNameDlg(Player1,@319)
+RESPONSE #11
+SetGlobal("X3KalAppChange","GLOBAL",0)
+IncrementGlobal("X3KalApp","GLOBAL",10)
+DisplayStringNoNameDlg(Player1,@319)
+END 
+
+// If not in party, it should be reset with no approval changes. 
+IF 
+!InParty(Myself) 
+!Global("X3KalAppChange","GLOBAL",0)
+THEN RESPONSE #100 
+SetGlobal("X3KalAppChange","GLOBAL",0)
+END
+
+//Reset to 90 if past max/reward bonus stats.
+IF 
+GlobalGT("X3KalApp","GLOBAL",90)
+InParty(Myself)
+Switch("X3KalAppMaxBonus","GLOBAL")
+THEN RESPONSE #0
+SetGlobal("X3KalApp","GLOBAL",90)
+SetGlobal("X3KalAppMaxBonus","GLOBAL",1)
+ChangeStat(Myself,STR,1,ADD)
+ChangeStat(Myself,CON,1,ADD)
+DisplayStringNoNameDlg(Player1,@99)
+RESPONSE #1 
+SetGlobal("X3KalApp","GLOBAL",90)
+END 
+
+IF 
+GlobalLT("X3KalApp","GLOBAL",-39)
+InParty(Myself)
+Switch("X3Leave","LOCALS")
+THEN RESPONSE #0
+SetGlobal("X3Break","LOCALS",1)
+StartDialogueNoSet(Player1)
+RESPONSE #2
+SetGlobal("X3Break","LOCALS",3)
+StartDialogueNoSet(Player1) // Leaves for Good
+END 
+
+IF
+ReputationLT(Player1,6)
+Global("X3BadRepAppLoss","LOCALS",0)
+InParty(Myself)
+THEN RESPONSE #100
+SetGlobal("X3BadRepAppLoss","LOCALS",1)
+IncrementGlobal("X3KalApp","GLOBAL",-3)
+DisplayStringNoNameDlg(Player1,@303)
+END
+IF
+ReputationLT(Player1,4)
+Global("X3BadRepAppLoss","LOCALS",1)
+InParty(Myself)
+THEN RESPONSE #100
+SetGlobal("X3BadRepAppLoss","LOCALS",2)
+IncrementGlobal("X3KalApp","GLOBAL",-6)
+DisplayStringNoNameDlg(Player1,@306)
+END
+IF
+ReputationLT(Player1,2)
+Global("X3BadRepAppLoss","LOCALS",2)
+InParty(Myself)
+THEN RESPONSE #100
+SetGlobal("X3BadRepAppLoss","LOCALS",3)
+IncrementGlobal("X3KalApp","GLOBAL",-9)
+DisplayStringNoNameDlg(Player1,@309)
+END
+
+//Engagement Ring 
+IF 
+HasItemEquiped("X3ERing",Myself)
+Global("X3Engagement","LOCALS",0)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+CombatCounter(0)
+!See([ENEMY])
+THEN RESPONSE #100 
+IncrementGlobal("X3Engagement","LOCALS",1)
+StartDialogueNoSet(Player1)
+END  
+
+IF 
+HasItemEquiped("X3ERing",Myself)
+Global("X3Engagement","LOCALS",2)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+CombatCounter(0)
+!See([ENEMY])
+THEN RESPONSE #100 
+DisplayString("X3Kal",~Nope. Not for me, mate.~)
+ActionOverride(Player1,TakePartyItem("X3ERing"))
+END 
+
+//Approval Low/In Romance: Breakup Conversation
+IF 
+Global("X3KalRomanceActive","GLOBAL",2)
+GlobalLT("X3KalApp","GLOBAL",50)
+InParty(Myself)
+CombatCounter(0)
+!See([ENEMY])
+Global("X3BreakUp","LOCALS",0)
+THEN RESPONSE #100 
+SetGlobalTimer("X3BreakUp","GLOBAL",THREE_DAYS)
+SetGlobal("X3BreakUp","LOCALS",1)
+END 
+
+IF 
+GlobalTimerExpired("X3BreakUp","GLOBAL")
+Global("X3KalRomanceActive","GLOBAL",2)
+GlobalLT("X3KalApp","GLOBAL",50)
+See(Player1)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+CombatCounter(0)
+!AreaType(DUNGEON)
+!See([ENEMY])
+Global("X3BreakUp","LOCALS",1)
+THEN RESPONSE #100 
+SetGlobal("X3BreakUp","LOCALS",2)
+StartDialogueNoSet(Player1)
+END 
+
+IF 
+Global("X3BreakUp","LOCALS",1)
+GlobalTimerExpired("X3BreakUp","GLOBAL")
+GlobalGT("X3KalApp","GLOBAL",49)
+InParty("X3Kal")
+CombatCounter(0)
+!See([ENEMY])
+THEN RESPONSE #100 
+SetGlobal("X3BreakUp","LOCALS",0)
+END 

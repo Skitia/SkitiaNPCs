@@ -1,0 +1,21 @@
+IF 
+See(Player1)
+Global("X3RBanditSpawn","AR1700",1)
+THEN RESPONSE #100 
+SetGlobal("X3RBanditSpawn","AR1700",2)
+StartDialogueNoSet(Player1)
+END 
+
+  IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    Allegiance(Myself,NEUTRAL)
+  THEN
+    RESPONSE #100
+	  ActionOverride("X3RB2",Enemy())
+	  ActionOverride("X3RB3",Enemy())
+	  ActionOverride("X3RB4",Enemy())
+	  ActionOverride("X3RB5",Enemy())
+	  ActionOverride("X3RB6",Enemy())
+	  Enemy()
+	  ApplySpell(Myself,WARRIOR_POWER_ATTACK)
+ END 

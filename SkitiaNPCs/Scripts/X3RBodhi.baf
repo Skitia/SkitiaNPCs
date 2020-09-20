@@ -1,0 +1,17 @@
+// Recorder's Death, adding to Bodhi's script
+IF
+  True()
+THEN
+  RESPONSE #100
+	CutsceneId(Player1)
+	SetGlobal("X3VieVampire","GLOBAL",1)
+    Wait(1)
+	CreateVisualEffectObject("SPMINDAT","X3Reb")
+	Wait(1)
+	// Could change this out with a vfx, as this spell actually kills her.
+    ActionOverride("X3Reb",ReallyForceSpell(Myself,TRANSFORMATION_DEATH)) 
+	SmallWait(1)
+	ActionOverride("X3Reb",ApplySpell(Myself,CUTSCENE_DAMAGE_1))
+	Wait(1)
+	ActionOverride("BODHIAMB",StartDialogueNoSet(Player1))
+END

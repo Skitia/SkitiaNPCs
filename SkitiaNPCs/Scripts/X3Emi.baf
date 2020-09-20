@@ -1,0 +1,849 @@
+//Talk Initialization 
+IF 
+InParty(Myself)
+Global("X3EmiTalk","LOCALS",0)
+THEN RESPONSE #100 
+RealSetGlobalTimer("X3EmiTalkTimer","GLOBAL",3400)
+SetGlobal("X3EmiTalk","LOCALS",1)
+END 
+
+// Romance Check 
+IF 
+//Requirements 
+Global("X3EmiInterest","LOCALS",1) // Interest Shown
+GlobalGT("X3EmiApp","GLOBAL",29)
+GlobalGT("X3EmiTalk","LOCALS",10)
+Global("X3EmiRomanceActive","GLOBAL",0)
+InParty(Myself) 
+Gender(Player1,MALE)
+!Alignment(Player1,MASK_EVIL)
+//No Other Romance Alive
+!Global("AerieRomanceActive","GLOBAL",2) // And no one else active. 
+!Global("JaheiraRomanceActive","GLOBAL",2)
+!Global("ViconiaRomanceActive","GLOBAL",2)
+!Global("AnomenRomanceActive","GLOBAL",2)
+!Global("RasaadRomanceActive","GLOBAL",2)
+!Global("NeeraRomanceActive","GLOBAL",2)
+!Global("X3EmiRomanceActive","GLOBAL",2) // In case she is recruited later.
+!Global("X3KalRomanceActive","GLOBAL",2)
+!Global("X3VieRomanceActive","GLOBAL",2)
+!Global("DornRomanceActive","GLOBAL",2)
+!Global("HexxatRomanceActive","GLOBAL",2)
+!Global("L3PetsyRomanceActive","GLOBAL",2)
+!Global("YvetteRomanceActive","GLOBAL",2)
+!Global("C0SireneRomanceActive","GLOBAL",2)
+THEN RESPONSE #100 
+RealSetGlobalTimer("X3EmiLoveTimer","GLOBAL",3400)
+SetGlobal("X3EmiRomanceActive","GLOBAL",1)
+SetGlobal("X3EmiLoveTalk","LOCALS",1)
+END 
+//Friendship Talks 
+IF
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    RealGlobalTimerExpired("X3EmiTalkTimer","GLOBAL")
+    CombatCounter(0)
+    !See([ENEMY])
+	!AreaType(DUNGEON)
+	GlobalGT("X3EmiApp","GLOBAL",0)
+    OR(6)
+     Global("X3EmiTalk","LOCALS",1)
+	 Global("X3EmiTalk","LOCALS",3)
+     Global("X3EmiTalk","LOCALS",5)
+	 Global("X3EmiTalk","LOCALS",7)
+	 Global("X3EmiTalk","LOCALS",9)
+THEN
+  RESPONSE #100
+	IncrementGlobal("X3EmiTalk","LOCALS",1)
+END
+
+IF 
+GlobalGT("X3ECHQuest","GLOBAL",0)
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+	!See([ENEMY])
+    CombatCounter(0)
+    !AreaCheck("AR0903")
+	Global("X3EmiCharmTalk","LOCALS",0)	
+THEN RESPONSE #100 
+	IncrementGlobal("X3EmiCharmTalk","LOCALS",1)
+END 
+
+IF 
+GlobalGT("X3EGVJQuest","GLOBAL",0)
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+	!See([ENEMY])
+    CombatCounter(0)
+    !AreaCheck("AR1006")
+	Global("X3EmiGregTalk","LOCALS",0)	
+THEN RESPONSE #100 
+	IncrementGlobal("X3EmiGregTalk","LOCALS",1)
+END 
+
+IF 
+	RealGlobalTimerExpired("X3EmiTalkTimer","GLOBAL")
+	Global("SelfTalk","GLOBAL",3)
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+	!See([ENEMY])
+    CombatCounter(0)
+	Global("X3EmiTalk","LOCALS",11)	
+THEN RESPONSE #100 
+	IncrementGlobal("X3EmiTalk","LOCALS",1)
+END 	
+IF 
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    CombatCounter(0)
+    !See([ENEMY])
+    OR(9)
+    Global("X3EmiTalk","LOCALS",2)
+	Global("X3EmiTalk","LOCALS",4)
+    Global("X3EmiTalk","LOCALS",6)
+	Global("X3EmiTalk","LOCALS",8)	
+	Global("X3EmiTalk","LOCALS",10)
+	Global("X3EmiTalk","LOCALS",12)
+	Global("X3EmiGregTalk","LOCALS",1)
+	Global("X3EmiCharmTalk","LOCALS",1)
+THEN RESPONSE #100 
+	RealSetGlobalTimer("X3EmiTalkTimer","GLOBAL",3400)
+	StartDialogueNoSet(Player1)
+END 
+
+
+//Romance Talks 
+IF 
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    RealGlobalTimerExpired("X3EmiLoveTimer","GLOBAL")
+    CombatCounter(0)
+    !See([ENEMY])
+	!AreaType(DUNGEON)
+	GlobalGT("X3EmiApp","GLOBAL",29)
+	!Global("X3EmiRomanceActive","GLOBAL",3)
+    OR(9)
+     Global("X3EmiLoveTalk","LOCALS",1)
+	 Global("X3EmiLoveTalk","LOCALS",3)
+     Global("X3EmiLoveTalk","LOCALS",5)
+	 Global("X3EmiLoveTalk","LOCALS",7)
+	 Global("X3EmiLoveTalk","LOCALS",9)
+	 Global("X3EmiLoveTalk","LOCALS",13)
+	 Global("X3EmiLoveTalk","LOCALS",15)
+	 Global("X3EmiLoveTalk","LOCALS",17)
+	 Global("X3EmiLoveTalk","LOCALS",25)	
+THEN RESPONSE #100 
+	IncrementGlobal("X3EmiLoveTalk","LOCALS",1)
+END 
+
+//Romance Talk Set 2
+IF 
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    RealGlobalTimerExpired("X3EmiLoveTimer","GLOBAL")
+    CombatCounter(0)
+    !See([ENEMY])
+	!AreaType(DUNGEON)
+	GlobalGT("X3EmiApp","GLOBAL",79)
+     Global("X3EmiLoveTalk","LOCALS",21)
+THEN RESPONSE #100 
+	IncrementGlobal("X3EmiLoveTalk","LOCALS",1)
+END 
+
+
+IF 
+	!Global("X3EmiRomanceActive","GLOBAL",3)
+	PartyRested()
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    RealGlobalTimerExpired("X3EmiLoveTimer","GLOBAL")
+    CombatCounter(0)
+    !See([ENEMY])
+	!AreaType(DUNGEON)
+	GlobalGT("X3EmiApp","GLOBAL",29)
+    OR(2)
+     Global("X3EmiLoveTalk","LOCALS",11)
+	 Global("X3EmiLoveTalk","LOCALS",23)
+THEN RESPONSE #100 
+	IncrementGlobal("X3EmiLoveTalk","LOCALS",1)
+END 
+	
+//Bodhi Defeated Talk 
+IF 
+	Global("X3EmiLoveTalk","LOCALS",27)
+	AreaType(OUTDOOR)
+	PartyHasItem("C6LANTHO")
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    CombatCounter(0)
+    !See([ENEMY])
+	!AreaType(DUNGEON)
+THEN RESPONSE #100 
+IncrementGlobal("X3EmiLoveTalk","LOCALS",1)
+END 
+
+//Fire Romance Talk Sets
+IF 
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    CombatCounter(0)
+    !See([ENEMY])
+    OR(13)
+    Global("X3EmiLoveTalk","LOCALS",2)
+	Global("X3EmiLoveTalk","LOCALS",4)
+	Global("X3EmiLoveTalk","LOCALS",6)
+	Global("X3EmiLoveTalk","LOCALS",8)
+	Global("X3EmiLoveTalk","LOCALS",10)	
+	Global("X3EmiLoveTalk","LOCALS",12)
+	Global("X3EmiLoveTalk","LOCALS",14)
+	Global("X3EmiLoveTalk","LOCALS",16)
+	Global("X3EmiLoveTalk","LOCALS",18)
+	Global("X3EmiLoveTalk","LOCALS",22)
+	Global("X3EmiLoveTalk","LOCALS",24)
+	Global("X3EmiLoveTalk","LOCALS",26)
+	Global("X3EmiLoveTalk","LOCALS",28)
+THEN RESPONSE #100 
+	PlaySong(0)
+	RealSetGlobalTimer("X3EmiLoveTimer","GLOBAL",3300)
+	StartDialogueNoSet(Player1)
+END 
+
+//Drow Transform Romance Talk 
+IF 
+	Global("X3EmiRomanceActive","GLOBAL",2)
+	Global("X3EmiLoveDrow","LOCALS",0)
+	Global("PlayerLooksLikeDrow","GLOBAL",1)
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    CombatCounter(0)
+    !See([ENEMY])
+THEN RESPONSE #100 
+	SetGlobal("X3EmiLoveDrow","LOCALS",1)
+	StartDialogueNoSet(Player1)
+END 
+
+//Slept Talk 
+IF 
+	PartyRested()
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    CombatCounter(0)
+    !See([ENEMY])
+	Global("X3Slept","LOCALS",1)
+THEN RESPONSE #100 
+	StartDialogueNoSet(Player1)
+END 
+
+//Quests 
+IF 
+InParty("X3Emi")
+Global("X3EmiQuest","GLOBAL",0)
+!AreaCheck("AR0704")
+See(Player1)
+CombatCounter(0)
+!See([ENEMY])
+GlobalLT("Chapter","GLOBAL",%bg2_chapter_6%)
+THEN RESPONSE #100 
+SetGlobal("X3EmiQuest","GLOBAL",1)
+StartDialogueNoSet(Player1)
+END 
+
+IF 
+GlobalGT("Chapter","GLOBAL",%bg2_chapter_5%)
+InParty("X3Emi")
+AreaType(CITY)
+!AreaCheck("AR0800")
+Global("X3EmiQuest","GLOBAL",2)
+Global("X3EmiMesSpawn","GLOBAL",0)
+THEN RESPONSE #100 
+SetGlobal("X3EmiMesSpawn","GLOBAL",1)
+CreateCreature("X3EMES",[-1.-1],15)
+Continue()
+END 
+
+IF 
+Global("X3EmiQuest","GLOBAL",3)
+AreaCheck("AR2600")
+THEN RESPONSE #100 
+StartDialogueNoSet(Player1)
+END 
+
+IF 
+InParty("X3Emi")
+Global("X3EmiQuest","GLOBAL",4)
+Range("X3EFATH",15)
+THEN RESPONSE #100
+SetGlobal("X3EmiQuest","GLOBAL",5)
+StartDialogueNoSet(Player1)
+END 
+
+IF 
+InParty("X3Emi")
+Global("X3EmiQuest","GLOBAL",6)
+Global("X3EmiQuestInterject","LOCALS",0)
+AreaCheck("AR0700")
+See(Player1)
+THEN RESPONSE #100
+SetGlobal("X3EmiQuestInterject","LOCALS",1)
+StartDialogueNoSet(Player1)
+END 
+
+IF 
+InParty("X3Emi")
+Global("X3EmiQuest","GLOBAL",11)
+AreaCheck("AR0700")
+See(Player1)
+THEN RESPONSE #100
+StartDialogueNoSet(Player1)
+END 
+
+//Phaere ->Warning #1 
+IF
+	IsValidForPartyDialogue(Myself)
+	See(Player1)
+	Global("X3EmiCheckMad1","GLOBAL",1)
+	Global("PhaereInnuendo","GLOBAL",1)
+	!Range("Phaere",6)  // Phaere
+	Global("X3EmiMad1","LOCALS",0)
+	OR(2)
+		Global("X3EmiRomanceActive","GLOBAL",1)
+		Global("X3EmiRomanceActive","GLOBAL",2)
+	CombatCounter(0)
+THEN
+	RESPONSE #100
+		StartDialogNoSet([PC])
+END
+//Phaere ->Slept or did not sleep
+IF
+	IsValidForPartyDialogue(Myself)
+	See(Player1)
+	Global("X3EmiCheckMad2","GLOBAL",1)
+	OR(2)
+	Global("PhaereInnuendo","GLOBAL",2)
+	Global("PhaereInnuendo","GLOBAL",3)
+	!Range("Phaere",6)  // Phaere
+	Global("X3EmiMad2","LOCALS",0)
+	OR(2)
+		Global("X3EmiRomanceActive","GLOBAL",1)
+		Global("X3EmiRomanceActive","GLOBAL",2)
+	CombatCounter(0)
+THEN
+	RESPONSE #100
+		StartDialogNoSet([PC])
+END
+
+//Approval Shifts 
+
+IF 
+InParty(Myself)
+Switch("X3EmiAppChange","GLOBAL")
+THEN RESPONSE #1
+SetGlobal("X3EmiAppChange","GLOBAL",0)
+IncrementGlobal("X3EmiApp","GLOBAL",-10)
+DisplayStringNoNameDlg(Player1,@109)
+RESPONSE #2
+SetGlobal("X3EmiAppChange","GLOBAL",0)
+IncrementGlobal("X3EmiApp","GLOBAL",-8)
+DisplayStringNoNameDlg(Player1,@109)
+RESPONSE #3
+SetGlobal("X3EmiAppChange","GLOBAL",0)
+IncrementGlobal("X3EmiApp","GLOBAL",-6)
+DisplayStringNoNameDlg(Player1,@106)
+RESPONSE #4
+SetGlobal("X3EmiAppChange","GLOBAL",0)
+IncrementGlobal("X3EmiApp","GLOBAL",-4)
+DisplayStringNoNameDlg(Player1,@106)
+RESPONSE #5
+SetGlobal("X3EmiAppChange","GLOBAL",0)
+IncrementGlobal("X3EmiApp","GLOBAL",-2)
+DisplayStringNoNameDlg(Player1,@103)
+RESPONSE #6
+SetGlobal("X3EmiAppChange","GLOBAL",0)
+RESPONSE #7
+SetGlobal("X3EmiAppChange","GLOBAL",0)
+IncrementGlobal("X3EmiApp","GLOBAL",2)
+DisplayStringNoNameDlg(Player1,@113)
+RESPONSE #8
+SetGlobal("X3EmiAppChange","GLOBAL",0)
+IncrementGlobal("X3EmiApp","GLOBAL",4)
+DisplayStringNoNameDlg(Player1,@116)
+RESPONSE #9
+SetGlobal("X3EmiAppChange","GLOBAL",0)
+IncrementGlobal("X3EmiApp","GLOBAL",6)
+DisplayStringNoNameDlg(Player1,@116)
+RESPONSE #10
+SetGlobal("X3EmiAppChange","GLOBAL",0)
+IncrementGlobal("X3EmiApp","GLOBAL",8)
+DisplayStringNoNameDlg(Player1,@119)
+RESPONSE #11
+SetGlobal("X3EmiAppChange","GLOBAL",0)
+IncrementGlobal("X3EmiApp","GLOBAL",10)
+DisplayStringNoNameDlg(Player1,@119)
+END 
+
+// If not in party, it should be reset with no approval changes. 
+IF 
+!InParty(Myself) 
+!Global("X3EmiAppChange","GLOBAL",0)
+THEN RESPONSE #100 
+SetGlobal("X3EmiAppChange","GLOBAL",0)
+END
+
+//Reset to 90 if past max/reward bonus stats.
+IF 
+GlobalGT("X3EmiApp","GLOBAL",90)
+InParty(Myself)
+Switch("X3EmiAppMaxBonus","LOCALS")
+THEN RESPONSE #0
+SetGlobal("X3EmiApp","GLOBAL",90)
+SetGlobal("X3EmiAppMaxBonus","LOCALS",1)
+ChangeStat(Myself,DEX,1,ADD)
+ChangeStat(Myself,INT,1,ADD)
+DisplayStringNoNameDlg(Player1,@99)
+RESPONSE #1 
+SetGlobal("X3EmiApp","GLOBAL",90)
+END 
+
+
+IF 
+Die()
+Global("X3EmiDuel","GLOBAL",1)
+THEN RESPONSE #100 
+LeaveParty() // Gone for Good
+ChangeEnemyAlly("X3EBRO",NEUTRAL)
+FadeToColor([30.0],0)
+Wait(1)
+SetInterrupt(FALSE)
+ClearAllActions()
+StartCutSceneMode()
+MultiPlayerSync()
+Wait(1)
+ActionOverride(Player1,JumpToPoint([1337.1969]))
+ActionOverride("X3EBRO",JumpToPoint([1304.1945]))
+MoveViewObject("X3EFATH",INSTANT)	
+ActionOverride(Player1,FaceObject("X3EBRO"))
+ActionOverride("X3EBRO",FaceObject(Player1))
+StartCutScene("X3ECut04")	
+END 	
+
+//Experience
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,1249999)
+  XPLT(Myself,1250000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,1250000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,999999)
+  XPLT(Myself,1000000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,1000000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,749999)
+  XPLT(Myself,750000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,750000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,499999)
+  XPLT(Myself,500000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,500000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,249999)
+  XPLT(Myself,250000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,250000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,124999)
+  XPLT(Myself,125000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,125000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPLT(Player1,89001)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    SetInterrupt(TRUE)
+END
+
+IF 
+GlobalLT("X3EmiApp","GLOBAL",-39)
+InParty(Myself)
+Switch("X3Leave","LOCALS")
+THEN RESPONSE #0
+SetGlobal("X3Break","LOCALS",1)
+StartDialogueNoSet(Player1)
+RESPONSE #2
+SetGlobal("X3Break","LOCALS",3)
+StartDialogueNoSet(Player1) // Leaves for Good
+END 
+
+//Reputation Changes 
+IF
+Reputation(Player1,20)
+Global("X3GoodRepAppGain","LOCALS",0)
+InParty(Myself)
+THEN RESPONSE #100
+SetGlobal("X3GoodRepAppGain","LOCALS",1)
+IncrementGlobal("X3EmiApp","GLOBAL",6)
+DisplayStringNoNameDlg(Player1,@116)
+END
+IF
+ReputationLT(Player1,7)
+Global("X3BadRepAppLoss","LOCALS",0)
+InParty(Myself)
+THEN RESPONSE #100
+SetGlobal("X3BadRepAppLoss","LOCALS",1)
+IncrementGlobal("X3EmiApp","GLOBAL",-6)
+DisplayStringNoNameDlg(Player1,@106)
+END
+IF
+ReputationLT(Player1,6)
+Global("X3BadRepAppLoss","LOCALS",1)
+InParty(Myself)
+THEN RESPONSE #100
+SetGlobal("X3BadRepAppLoss","LOCALS",2)
+IncrementGlobal("X3EmiApp","GLOBAL",-9)
+DisplayStringNoNameDlg(Player1,@109)
+END
+IF
+ReputationLT(Player1,5)
+Global("X3BadRepAppLoss","LOCALS",2)
+InParty(Myself)
+THEN RESPONSE #100
+SetGlobal("X3BadRepAppLoss","LOCALS",3)
+IncrementGlobal("X3EmiApp","GLOBAL",-45)
+DisplayStringNoNameDlg(Player1,@109)
+END
+IF
+ReputationLT(Player1,4)
+Global("X3BadRepAppLoss","LOCALS",3)
+InParty(Myself)
+THEN RESPONSE #100
+SetGlobal("X3BadRepAppLoss","LOCALS",4)
+IncrementGlobal("X3EmiApp","GLOBAL",-45)
+DisplayStringNoNameDlg(Player1,@109)
+END
+IF
+ReputationLT(Player1,3)
+Global("X3BadRepAppLoss","LOCALS",4)
+InParty(Myself)
+THEN RESPONSE #100
+SetGlobal("X3BadRepAppLoss","LOCALS",5)
+IncrementGlobal("X3EmiApp","GLOBAL",-90)
+DisplayStringNoNameDlg(Player1,@109)
+END
+
+//Approval Low/In Romance: Breakup Conversation
+IF 
+Global("X3EmiRomanceActive","GLOBAL",2)
+GlobalLT("X3EmiApp","GLOBAL",50)
+InParty(Myself)
+CombatCounter(0)
+!See([ENEMY])
+Global("X3BreakUp","LOCALS",0)
+THEN RESPONSE #100 
+SetGlobalTimer("X3BreakUp","GLOBAL",THREE_DAYS)
+SetGlobal("X3BreakUp","LOCALS",1)
+END 
+
+IF 
+Global("X3EmiRomanceActive","GLOBAL",2)
+GlobalTimerExpired("X3BreakUp","GLOBAL")
+GlobalLT("X3EmiApp","GLOBAL",50)
+See(Player1)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+CombatCounter(0)
+!AreaType(DUNGEON)
+!See([ENEMY])
+Global("X3BreakUp","LOCALS",1)
+THEN RESPONSE #100 
+SetGlobal("X3BreakUp","LOCALS",2)
+StartDialogueNoSet(Player1)
+END 
+
+IF 
+Global("X3BreakUp","LOCALS",1)
+GlobalTimerExpired("X3BreakUp","GLOBAL")
+GlobalGT("X3EmiApp","GLOBAL",49)
+InParty("X3Emi")
+CombatCounter(0)
+!See([ENEMY])
+THEN RESPONSE #100 
+SetGlobal("X3BreakUp","LOCALS",0)
+END 
+
+// Dorn Conflict 
+IF
+OR(2)
+Global("X3EmiDornConflict","LOCALS",0)
+Global("X3EmiDornConflict","LOCALS",2)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+IsValidForPartyDialogue("Dorn")
+CombatCounter(0)
+!See([ENEMY])
+THEN RESPONSE #100 
+SetGlobal("X3EmiDornConflict","LOCALS",1)
+StartDialogueNoSet(Player1)
+END 
+// Hexxat Conflict 
+
+IF 
+OR(2)
+Global("X3EmiHexxatConflict","LOCALS",0)
+Global("X3EmiHexxatConflict","LOCALS",2)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+IsValidForPartyDialogue("HEXXAT")
+CombatCounter(0)
+!See([ENEMY])
+THEN RESPONSE #100 
+SetGlobal("X3EmiHexxatConflict","LOCALS",1) 
+StartDialogueNoSet(Player1)
+END 
+// Romance Conflicts
+
+IF
+InParty(Myself)
+Global("X3EmiRomanceActive","GLOBAL",1)
+GlobalGT("X3EmiLoveTalk","LOCALS",20)
+Global("X3EmiRomanceConflict","GLOBAL",0)
+OR(11)
+Global("AerieRomanceActive","GLOBAL",1)
+Global("JaheiraRomanceActive","GLOBAL",1)
+Global("AnomenRomanceActive","GLOBAL",1)
+Global("ViconiaRomanceActive","GLOBAL",1)
+Global("RasaadRomanceActive","GLOBAL",1)
+Global("NeeraRomanceActive","GLOBAL",1)
+Global("DornRomanceActive","GLOBAL",1)
+Global("HexxatRomanceActive","GLOBAL",1)
+Global("L3PetsyRomanceActive","GLOBAL",1)
+Global("YvetteRomanceActive","GLOBAL",1)
+Global("C0SireneRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+RealSetGlobalTimer("X3EmiRomanceConflictTimer","GLOBAL",600)
+SetGlobal("X3EmiRomanceConflict","GLOBAL",1)
+END
+
+IF
+InParty(Myself)
+RealGlobalTimerExpired("X3EmiRomanceConflictTimer","GLOBAL")
+Global("X3EmiRomanceConflict","GLOBAL",1)
+Global("X3EmiRomanceActive","GLOBAL",1)
+GlobalGT("X3EmiLovetalk","GLOBAL",22)
+OR(11)
+Global("AerieRomanceActive","GLOBAL",1)
+Global("JaheiraRomanceActive","GLOBAL",1)
+Global("AnomenRomanceActive","GLOBAL",1)
+Global("ViconiaRomanceActive","GLOBAL",1)
+Global("RasaadRomanceActive","GLOBAL",1)
+Global("NeeraRomanceActive","GLOBAL",1)
+Global("DornRomanceActive","GLOBAL",1)
+Global("HexxatRomanceActive","GLOBAL",1)
+Global("L3PetsyRomanceActive","GLOBAL",1)
+Global("YvetteRomanceActive","GLOBAL",1)
+Global("C0SireneRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END
+
+//Auto Break Romances 
+IF
+Global("X3EmiRomanceActive","GLOBAL",1)
+OR(14)
+Global("AerieRomanceActive","GLOBAL",2)
+Global("JaheiraRomanceActive","GLOBAL",2)
+Global("AnomenRomanceActive","GLOBAL",2)
+Global("ViconiaRomanceActive","GLOBAL",2)
+Global("RasaadRomanceActive","GLOBAL",2)
+Global("NeeraRomanceActive","GLOBAL",2)
+Global("X3KalRomanceActive","GLOBAL",2)
+Global("X3RebRomanceActive","GLOBAL",2)
+Global("X3EmiRomanceActive","GLOBAL",2)
+Global("DornRomanceActive","GLOBAL",2)
+Global("HexxatRomanceActive","GLOBAL",2)
+Global("L3PetsyRomanceActive","GLOBAL",2)
+Global("YvetteRomanceActive","GLOBAL",2)
+Global("C0SireneRomanceActive","GLOBAL",2)
+THEN
+RESPONSE #100
+SetGlobal("X3EmiRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3EmiRomanceActive","GLOBAL",2)
+Global("AerieRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("AerieRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3EmiRomanceActive","GLOBAL",2)
+Global("JaheiraRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("JaheiraRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3EmiRomanceActive","GLOBAL",2)
+Global("AnomenRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("AnomenRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3EmiRomanceActive","GLOBAL",2)
+Global("ViconiaRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("ViconiaRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3EmiRomanceActive","GLOBAL",2)
+Global("RasaadRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("RasaadRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3EmiRomanceActive","GLOBAL",2)
+Global("NeeraRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("NeeraRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3EmiRomanceActive","GLOBAL",2)
+Global("DornRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("DornRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3EmiRomanceActive","GLOBAL",2)
+Global("HexxatRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("HexxatRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3EmiRomanceActive","GLOBAL",2)
+Global("L3PetsyRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("L3PetsyRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3EmiRomanceActive","GLOBAL",2)
+Global("YvetteRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("YvetteRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3EmiRomanceActive","GLOBAL",2)
+Global("X3RebRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("X3RebRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3EmiRomanceActive","GLOBAL",2)
+Global("X3VieRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("X3VieRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3EmiRomanceActive","GLOBAL",2)
+Global("X3KalRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("X3KalRomanceActive","GLOBAL",3)
+END
+
+IF
+Global("X3EmiRomanceActive","GLOBAL",2)
+Global("C0SireneRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("C0SireneRomanceActive","GLOBAL",3)
+END

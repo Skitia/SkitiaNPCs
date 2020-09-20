@@ -1,0 +1,27 @@
+IF
+	RealGlobalTimerExpired("X3KalLoveTimer","GLOBAL")
+	!Global("X3KalRomanceActive","GLOBAL",3) 
+	GlobalGT("X3KalApp","GLOBAL",29)
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+	Global("X3KalLoveTalk","LOCALS",11)	
+THEN RESPONSE #100 
+	PlaySong(0)
+	RealSetGlobalTimer("X3KalTalkTimer","GLOBAL",3200)
+	IncrementGlobal("X3KalLoveTalk","LOCALS",1)
+	StartDialogueNoSet(Player1)
+END 
+
+IF 
+	RealGlobalTimerExpired("X3KalLoveTimer","GLOBAL")
+	GlobalGT("X3KalApp","GLOBAL",79)
+	!Global("X3KalRomanceActive","GLOBAL",3) 
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+	Global("X3KalLoveTalk","LOCALS",21)	
+THEN RESPONSE #100 
+	PlaySong(0)
+	RealSetGlobalTimer("X3KalTalkTimer","GLOBAL",3200)
+	IncrementGlobal("X3KalLoveTalk","LOCALS",1)
+	StartDialogueNoSet(Player1)
+END 

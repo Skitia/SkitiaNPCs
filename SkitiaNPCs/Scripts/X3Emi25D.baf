@@ -1,0 +1,16 @@
+//Saradush Post Talk 
+IF 
+	Global("SaradushSacked","GLOBAL",1)
+	RealGlobalTimerExpired("X3EmiToBLoveTimer","GLOBAL")
+	Global("X3EmiRomanceActive","GLOBAL",2)	
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    CombatCounter(0)
+    !See([ENEMY])
+	Global("X3EmiToBLoveTalk","LOCALS",3)	
+THEN RESPONSE #100 
+	PlaySong(0)
+	IncrementGlobal("X3EmiToBLoveTalk","LOCALS",1)
+	StartDialogueNoSet(Player1)
+END 	

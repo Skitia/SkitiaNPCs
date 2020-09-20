@@ -1,0 +1,27 @@
+IF
+	RealGlobalTimerExpired("X3VieLoveTimer","GLOBAL")
+	!Global("X3VieRomanceActive","GLOBAL",3) 
+	GlobalGT("X3VieApp","GLOBAL",29)
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+	Global("X3VieLoveTalk","LOCALS",15)	
+THEN RESPONSE #100 
+	PlaySong(0)
+	RealSetGlobalTimer("X3VieTalkTimer","GLOBAL",3200)
+	IncrementGlobal("X3VieLoveTalk","LOCALS",1)
+	StartDialogueNoSet(Player1)
+END 
+
+IF 
+	RealGlobalTimerExpired("X3VieLoveTimer","GLOBAL")
+	GlobalGT("X3VieApp","GLOBAL",79)
+	!Global("X3VieRomanceActive","GLOBAL",3) 
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+	Global("X3VieLoveTalk","LOCALS",23)	
+THEN RESPONSE #100 
+	PlaySong(0)
+	RealSetGlobalTimer("X3VieTalkTimer","GLOBAL",3200)
+	IncrementGlobal("X3VieLoveTalk","LOCALS",1)
+	StartDialogueNoSet(Player1)
+END 

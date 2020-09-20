@@ -1,0 +1,48 @@
+IF 
+Dead("X3KJIL")
+Global("X3KaleQuestJillianDied","LOCALS",0)
+THEN RESPONSE #100
+SetGlobal("X3KaleQuestJillianDied","LOCALS",1)
+AddJournalEntry(@6,QUEST_DONE) // Quest is over because Jillian died.
+//Though the player can still continue as far as they are able to if they are on the Chester route.
+END 
+
+IF 
+Global("X3KalQuest","GLOBAL",9)
+THEN RESPONSE #100
+StartDialogueNoSet(Player1)
+END
+
+IF 
+See("X3KMERC")
+!Dead("X3KMERC")
+THEN RESPONSE #100 
+Attack("X3KMERC")
+END 
+
+IF 
+See("X3KMERC2")
+Dead("X3KMERC")
+!Dead("X3KMERC2")
+THEN RESPONSE #100 
+Attack("X3KMERC2")
+END 
+
+IF 
+See("X3KMERC3")
+Dead("X3KMERC")
+Dead("X3KMERC2")
+!Dead("X3KMERC3")
+THEN RESPONSE #100 
+Attack("X3KMERC3")
+END 
+
+IF 
+Global("X3KalQuest","GLOBAL",6)
+Dead("X3KMERC3")
+Dead("X3KMERC2")
+Dead("X3KMERC")
+THEN RESPONSE #100 
+Wait(1)
+StartDialogueNoSet(Player1)
+END

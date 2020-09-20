@@ -1,0 +1,16 @@
+IF
+	RealGlobalTimerExpired("X3RebLoveTimer","GLOBAL")
+	!Global("X3RebRomanceActive","GLOBAL",3) 
+	GlobalGT("X3RebApp","GLOBAL",29)
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+	OR(3)
+	Global("X3RebLoveTalk","LOCALS",17)	
+	Global("X3RebLoveTalk","LOCALS",21)	
+	Global("X3RebLoveTalk","LOCALS",27)	
+THEN RESPONSE #100 
+	PlaySong(0)
+	RealSetGlobalTimer("X3RebTalkTimer","GLOBAL",3200)
+	IncrementGlobal("X3RebLoveTalk","LOCALS",1)
+	StartDialogueNoSet(Player1)
+END 

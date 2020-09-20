@@ -1,0 +1,386 @@
+IF 
+   See([PC])
+   AreaCheck("AR0709")
+   Global("X3HelPreMet","GLOBAL",0)
+  THEN
+    RESPONSE #100
+	SetGlobal("X3HelPreMet","GLOBAL",1)
+	StartDialogueNoSet([PC])	
+END 
+
+//Talk Initialization 
+IF 
+InParty(Myself)
+Global("X3HelTalk","LOCALS",0)
+THEN RESPONSE #100 
+RealSetGlobalTimer("X3HelTalkTimer","GLOBAL",3600)
+SetGlobal("X3HelTalk","LOCALS",1)
+END 
+//Underdark Talk Initialization
+IF 
+InParty(Myself)
+AreaCheck("AR2100")
+Global("X3HelUTalk","LOCALS",0)
+THEN RESPONSE #100 
+SetGlobal("X3HelUTalk","LOCALS",1)
+SetGlobalTimer("X3HelUnderdarkTimer","GLOBAL",FOUR_ROUNDS)
+END 
+
+IF 
+GlobalTimerExpired("X3HelUnderdarkTimer","GLOBAL")
+InParty(Myself)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+See(Player1)
+CombatCounter(0)
+!See([ENEMY])
+Global("X3HelUTalk","LOCALS",1)
+THEN RESPONSE #100 
+IncrementGlobal("X3HelUTalk","LOCALS",1)
+END 
+
+//Slum Talk 
+IF 
+Global("X3HSlumTalk","LOCALS",0)
+GlobalGT("Chapter","GLOBAL",%bg2_chapter_2%)
+InParty(Myself)
+AreaCheck("AR0900")
+THEN RESPONSE #100 
+SetGlobal("X3HSlumTalk","LOCALS",1)
+SetGlobalTimer("X3HelSlumTimer","GLOBAL",THREE_ROUNDS)
+END 
+
+IF 
+GlobalTimerExpired("X3HelSlumTimer","GLOBAL")
+InParty(Myself)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+See(Player1)
+CombatCounter(0)
+!See([ENEMY])
+Global("X3HSlumTalk","LOCALS",1)
+THEN RESPONSE #100 
+IncrementGlobal("X3HSlumTalk","LOCALS",1)
+StartDialogueNoSet(Player1)
+END 
+
+//Final talk Initialization 
+IF 
+InParty(Myself)
+!AreaCheck("AR2500")
+Global("Chapter","GLOBAL",%bg2_chapter_6%)
+Global("X3HelFTalk","LOCALS",0)
+THEN RESPONSE #100 
+SetGlobal("X3HelFTalk","LOCALS",1)
+SetGlobalTimer("X3HelFinalTimer","GLOBAL",FOUR_ROUNDS)
+END 
+
+IF 
+GlobalTimerExpired("X3HelFinalTimer","GLOBAL")
+InParty(Myself)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+See(Player1)
+CombatCounter(0)
+!See([ENEMY])
+Global("X3HelFTalk","LOCALS",1)
+THEN RESPONSE #100 
+IncrementGlobal("X3HelFTalk","LOCALS",1)
+END 
+//Check Friendship Talks 
+IF
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    RealGlobalTimerExpired("X3HelTalkTimer","GLOBAL")
+    CombatCounter(0)
+    !See([ENEMY])
+	!AreaType(DUNGEON)
+	GlobalGT("X3HelApp","GLOBAL",0)
+    OR(5)
+     Global("X3HelTalk","LOCALS",1)
+	 Global("X3HelTalk","LOCALS",3)
+     Global("X3HelTalk","LOCALS",7)
+	 Global("X3HelTalk","LOCALS",9)
+	 Global("X3HelTalk","LOCALS",15)
+THEN
+  RESPONSE #100
+	IncrementGlobal("X3HelTalk","LOCALS",1)
+END
+//Friendship Talk #6 
+IF 
+	GlobalGT("X3HelQuest","GLOBAL",1)
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    RealGlobalTimerExpired("X3HelTalkTimer","GLOBAL")
+    CombatCounter(0)
+    !See([ENEMY])
+	!AreaType(DUNGEON)
+	GlobalGT("X3HelApp","GLOBAL",0)
+    Global("X3HelTalk","LOCALS",11)
+THEN
+  RESPONSE #100
+	RealSetGlobalTimer("X3HelTalkTimer","GLOBAL",60)
+	IncrementGlobal("X3HelTalk","LOCALS",1)
+END
+//Friendship Talk#7 
+IF 
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    RealGlobalTimerExpired("X3HelTalkTimer","GLOBAL")
+    CombatCounter(0)
+    !See([ENEMY])
+	!AreaType(DUNGEON)
+	GlobalGT("X3HelApp","GLOBAL",0)
+    Global("X3HelTalk","LOCALS",13)
+	OR(15)
+	Global("AerieRomanceActive","GLOBAL",2)
+	Global("JaheiraRomanceActive","GLOBAL",2)
+	Global("AnomenRomanceActive","GLOBAL",2)
+	Global("ViconiaRomanceActive","GLOBAL",2)
+	Global("RasaadRomanceActive","GLOBAL",2)
+	Global("NeeraRomanceActive","GLOBAL",2)
+	Global("X3VieRomanceActive","GLOBAL",2)
+	Global("X3RebRomanceActive","GLOBAL",2)
+	Global("X3EmiRomanceActive","GLOBAL",2)
+	Global("X3HelRomanceActive","GLOBAL",2)
+	Global("DornRomanceActive","GLOBAL",2)
+	Global("HexxatRomanceActive","GLOBAL",2)
+	Global("L3PetsyRomanceActive","GLOBAL",2)
+	Global("YvetteRomanceActive","GLOBAL",2)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+	RealSetGlobalTimer("X3HelTalkTimer","GLOBAL",60)
+	IncrementGlobal("X3HelTalk","LOCALS",1)
+END
+
+//Fire Friendship Talks
+IF 
+	RealGlobalTimerExpired("X3HelTalkTimer","GLOBAL")
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    CombatCounter(0)
+    !See([ENEMY])
+    OR(9)
+    Global("X3HelTalk","LOCALS",2)
+	Global("X3HelTalk","LOCALS",4)
+    Global("X3HelTalk","LOCALS",8)
+	Global("X3HelTalk","LOCALS",10)	
+	Global("X3HelTalk","LOCALS",12)
+	Global("X3HelTalk","LOCALS",14)
+	Global("X3HelTalk","LOCALS",16)
+	Global("X3HelUTalk","LOCALS",2)
+	Global("X3HelFTalk","LOCALS",2)
+THEN RESPONSE #100 
+	RealSetGlobalTimer("X3HelTalkTimer","GLOBAL",3600)
+	StartDialogueNoSet(Player1)
+END 
+
+//Experience
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,1249999)
+  XPLT(Myself,1250000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,1250000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,999999)
+  XPLT(Myself,1000000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,1000000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,749999)
+  XPLT(Myself,750000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,750000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,499999)
+  XPLT(Myself,500000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,500000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,249999)
+  XPLT(Myself,250000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,250000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,124999)
+  XPLT(Myself,125000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,125000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPLT(Player1,89001)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    SetInterrupt(TRUE)
+END
+
+//App Shifts 
+
+IF 
+InParty(Myself)
+Switch("X3HelAppChange","GLOBAL")
+THEN RESPONSE #1
+SetGlobal("X3HelAppChange","GLOBAL",0)
+IncrementGlobal("X3HelApp","GLOBAL",-10)
+DisplayStringNoNameDlg(Player1,@209)
+RESPONSE #2
+SetGlobal("X3HelAppChange","GLOBAL",0)
+IncrementGlobal("X3HelApp","GLOBAL",-8)
+DisplayStringNoNameDlg(Player1,@209)
+RESPONSE #3
+SetGlobal("X3HelAppChange","GLOBAL",0)
+IncrementGlobal("X3HelApp","GLOBAL",-6)
+DisplayStringNoNameDlg(Player1,@206)
+RESPONSE #4
+SetGlobal("X3HelAppChange","GLOBAL",0)
+IncrementGlobal("X3HelApp","GLOBAL",-4)
+DisplayStringNoNameDlg(Player1,@206)
+RESPONSE #5
+SetGlobal("X3HelAppChange","GLOBAL",0)
+IncrementGlobal("X3HelApp","GLOBAL",-2)
+DisplayStringNoNameDlg(Player1,@203)
+RESPONSE #6
+SetGlobal("X3HelAppChange","GLOBAL",0)
+RESPONSE #7
+SetGlobal("X3HelAppChange","GLOBAL",0)
+IncrementGlobal("X3HelApp","GLOBAL",2)
+DisplayStringNoNameDlg(Player1,@213)
+RESPONSE #8
+SetGlobal("X3HelAppChange","GLOBAL",0)
+IncrementGlobal("X3HelApp","GLOBAL",4)
+DisplayStringNoNameDlg(Player1,@216)
+RESPONSE #9
+SetGlobal("X3HelAppChange","GLOBAL",0)
+IncrementGlobal("X3HelApp","GLOBAL",6)
+DisplayStringNoNameDlg(Player1,@216)
+RESPONSE #10
+SetGlobal("X3HelAppChange","GLOBAL",0)
+IncrementGlobal("X3HelApp","GLOBAL",8)
+DisplayStringNoNameDlg(Player1,@219)
+RESPONSE #11
+SetGlobal("X3HelAppChange","GLOBAL",0)
+IncrementGlobal("X3HelApp","GLOBAL",10)
+DisplayStringNoNameDlg(Player1,@219)
+END 
+
+// If not in party, it should be reset with no approval changes. 
+IF 
+!InParty(Myself) 
+!Global("X3HelAppChange","GLOBAL",0)
+THEN RESPONSE #100 
+SetGlobal("X3HelAppChange","GLOBAL",0)
+END
+
+//Reputation Changes 
+IF
+ReputationLT(Player1,6)
+Global("X3BadRepAppLoss","LOCALS",0)
+InParty(Myself)
+THEN RESPONSE #100
+SetGlobal("X3BadRepAppLoss","LOCALS",1)
+IncrementGlobal("X3HelApp","GLOBAL",-3)
+DisplayStringNoNameDlg(Player1,@203)
+END
+IF
+ReputationLT(Player1,4)
+Global("X3BadRepAppLoss","LOCALS",1)
+InParty(Myself)
+THEN RESPONSE #100
+SetGlobal("X3BadRepAppLoss","LOCALS",2)
+IncrementGlobal("X3HelApp","GLOBAL",-6)
+DisplayStringNoNameDlg(Player1,@206)
+END
+IF
+ReputationLT(Player1,2)
+Global("X3BadRepAppLoss","LOCALS",2)
+InParty(Myself)
+THEN RESPONSE #100
+SetGlobal("X3BadRepAppLoss","LOCALS",3)
+IncrementGlobal("X3HelApp","GLOBAL",-9)
+DisplayStringNoNameDlg(Player1,@209)
+END
+
+//Reset to 90 if past max/reward bonus stats.
+IF 
+GlobalGT("X3HelApp","GLOBAL",90)
+InParty(Myself)
+Switch("X3HelAppMaxBonus","GLOBAL")
+THEN RESPONSE #0
+SetGlobal("X3HelApp","GLOBAL",90)
+SetGlobal("X3HelAppMaxBonus","GLOBAL",1)
+ChangeStat(Myself,WIS,1,ADD)
+ChangeStat(Myself,CON,1,ADD)
+DisplayStringNoNameDlg(Player1,@99)
+RESPONSE #1 
+SetGlobal("X3HelApp","GLOBAL",90)
+END 
+
+
+IF 
+GlobalLT("X3HelApp","GLOBAL",-39)
+InParty(Myself)
+Switch("X3Leave","LOCALS")
+THEN RESPONSE #0
+SetGlobal("X3Break","LOCALS",1)
+StartDialogueNoSet(Player1)
+RESPONSE #2
+SetGlobal("X3Break","LOCALS",3)
+StartDialogueNoSet(Player1) // Leaves for Good
+END 

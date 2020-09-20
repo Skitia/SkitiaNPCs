@@ -1,0 +1,49 @@
+// Branwen's abduction, Branwen's new script during the abduction. Note that there's another script for the vampire Branwen in Bodhi's crypt - it's not the same
+IF
+Global("X3CleanseVampire","AR1401",2)
+Global("X3KalVampire","GLOBAL",3)
+Name("X3Kal",Myself)
+AreaCheck("AR1401")
+THEN
+RESPONSE #100
+SetGlobal("X3KalVampire","GLOBAL",4)
+DialogInterrupt(TRUE)
+ChangeAIScript("X3Kal",OVERRIDE) // setting script back when restored via Amaunator's altar
+END
+
+IF
+Global("X3SaveVampire","AR0809",1)
+Global("X3EmiVampire","GLOBAL",3)
+Name("X3Emi",Myself)
+AreaCheck("AR0809")
+THEN
+RESPONSE #100
+SetGlobal("X3EmiVampire","GLOBAL",4)
+DialogInterrupt(TRUE)
+ChangeAIScript("X3Emi",OVERRIDE) // setting script back when recovered from Crypt Altar.
+END
+
+
+IF
+OR(2)
+Global("X3KalVampire","GLOBAL",1)
+Global("X3EmiVampire","GLOBAL",1)
+Global("X3RomanceVampire","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3RomanceVampire","GLOBAL",1)
+Continue()
+END
+
+IF
+OR(2)
+Global("X3KalVampire","GLOBAL",1)
+Global("X3EmiVampire","GLOBAL",1)
+Global("X3RomanceVampireTeleport","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3RomanceVampireTeleport","GLOBAL",1)
+CreateVisualEffectObject("SPDIMNDR",Myself)   
+Wait(2)
+DestroySelf()
+END

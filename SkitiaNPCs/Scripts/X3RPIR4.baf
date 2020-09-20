@@ -1,0 +1,12 @@
+ IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    Allegiance(Myself,NEUTRAL)
+  THEN
+    RESPONSE #100
+	ActionOverride("X3RPHEL",Enemy())
+	ActionOverride("X3RM",Enemy())
+	ActionOverride("PPDESH",Enemy())
+	Enemy()
+	  IncrementGlobal("X3RMSpell","GLOBAL",1) // Will cast the spell!
+  END 
+

@@ -1,0 +1,10 @@
+/*IF 
+HP(Myself,1)
+  THEN
+    RESPONSE #100
+IncrementGlobal("X3HPitEnemyCount","AR0406",1)	
+ApplySpell(Myself,SURE_SLEEP)
+Wait(2)
+CreateVisualEffectObject("spdimndr",Myself)
+DestroySelf()
+END */

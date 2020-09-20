@@ -1,0 +1,110 @@
+//Use extend bottom, as nothing at the bottom will stop this.
+//Note Emily refuses to join Dorn, and cannot be in this list.
+//Helga
+IF
+	Global("OHD_ritual","MYAREA",3)
+	IsOverMe("X3Hel")  // Helga
+THEN
+	RESPONSE #100
+		SetGlobal("OHD_ritual","MYAREA",4)
+		SetGlobal("X3_ritual_target","MYAREA",1)
+END
+
+IF
+	Global("X3_ritual_target","MYAREA",1)
+	Global("OHD_ritual","MYAREA",5)
+THEN
+	RESPONSE #100
+		ClearAllActions()
+		DisplayStringHead("X3Hel",~Bloody coward! Fight me! Fight meeeee!~)  
+		Wait(1)
+		ActionOverride("X3Hel",MakeUnselectable(5))
+		Wait(1)
+		CreateVisualEffectObject("SPFLESHS","X3Hel")  // Helga
+		ForceSpell("X3Hel",HELL_HOLD)  // Helga
+		Wait(1)
+		Kill("X3Hel")  // Helga
+		ActionOverride("X3Hel",LeaveParty())
+		SetGlobal("OHD_ritual","MYAREA",6)
+END
+//Kale 
+IF
+	Global("OHD_ritual","MYAREA",3)
+	IsOverMe("X3Kal")  // Kale
+THEN
+	RESPONSE #100
+		SetGlobal("OHD_ritual","MYAREA",4)
+		SetGlobal("X3_ritual_target","MYAREA",2)
+END
+
+IF
+	Global("X3_ritual_target","MYAREA",2)
+	Global("OHD_ritual","MYAREA",5)
+THEN
+	RESPONSE #100
+		ClearAllActions()
+		DisplayStringHead("X3Kal",~Nooooooo!~ [X3KNO])   
+		Wait(1)
+		ActionOverride("X3Kal",MakeUnselectable(5))
+		Wait(1)
+		CreateVisualEffectObject("SPFLESHS","X3Kal")  // Kale
+		ForceSpell("X3Kal",HELL_HOLD)  // Kale
+		Wait(1)
+		Kill("X3Kal")  // Kale
+		ActionOverride("X3Kal",LeaveParty())
+		SetGlobal("OHD_ritual","MYAREA",6)
+END
+//Recorder 
+IF
+	Global("OHD_ritual","MYAREA",3)
+	IsOverMe("X3Reb")  // Recorder
+THEN
+	RESPONSE #100
+		SetGlobal("OHD_ritual","MYAREA",4)
+		SetGlobal("X3_ritual_target","MYAREA",3)
+END
+
+IF
+	Global("X3_ritual_target","MYAREA",3)
+	Global("OHD_ritual","MYAREA",5)
+THEN
+	RESPONSE #100
+		ClearAllActions()
+		DisplayStringHead("X3Reb",~Oh mother! I should have listened to your warning. Forgive me...~)   
+		Wait(1)
+		ActionOverride("X3Reb",MakeUnselectable(5))
+		Wait(1)
+		CreateVisualEffectObject("SPFLESHS","X3Reb")  // Recorder
+		ForceSpell("X3Reb",HELL_HOLD)  // Recorder
+		Wait(1)
+		Kill("X3Reb")  // Recorder
+		ActionOverride("X3Reb",LeaveParty())
+		SetGlobal("OHD_ritual","MYAREA",6)
+END
+//Vienxay 
+IF
+	Global("OHD_ritual","MYAREA",3)
+	IsOverMe("X3Vie")  // Vienxay
+THEN
+	RESPONSE #100
+		SetGlobal("OHD_ritual","MYAREA",4)
+		SetGlobal("X3_ritual_target","MYAREA",4)
+END
+
+IF
+	Global("X3_ritual_target","MYAREA",4)
+	Global("OHD_ritual","MYAREA",5)
+THEN
+	RESPONSE #100
+		ClearAllActions()
+		DisplayStringHead("X3Vie",~No! I will have my revenge y- aaaaaah!~)   
+		Wait(1)
+		ActionOverride("X3Vie",MakeUnselectable(5))
+		Wait(1)
+		CreateVisualEffectObject("SPFLESHS","X3Vie")  // Vienxay
+		ForceSpell("X3Vie",HELL_HOLD)  // Vienxay
+		Wait(1)
+		Kill("X3Vie")  // Vienxay
+		ActionOverride("X3Vie",LeaveParty())
+		SetGlobal("OHD_ritual","MYAREA",6)
+END

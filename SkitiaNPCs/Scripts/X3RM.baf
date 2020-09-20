@@ -1,0 +1,110 @@
+  IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    Allegiance(Myself,NEUTRAL)
+  THEN
+    RESPONSE #100
+	ActionOverride("X3RPHEL",Enemy())
+	ActionOverride("X3RM",Enemy())
+	ActionOverride("X3RPIR4",Enemy())
+	ActionOverride("PPDESH",Enemy())
+	Enemy()
+	  IncrementGlobal("X3RMSpell","GLOBAL",1) // Will cast the spell!
+  END 
+  
+IF 
+HPPercentLT(Myself,10)
+THEN RESPONSE #100 
+DisplayStringHead(Myself,~I'll not die for Phelgrim. Not here!~) 
+CreateVisualEffectObject("spdimndr",Myself)
+Wait(1)
+DestroySelf()
+END   
+  
+IF 
+Global("X3RMSpell","GLOBAL",1) // Violence 
+THEN RESPONSE #100
+ReallyForceSpell(Myself,WIZARD_STONE_SKIN)
+ReallyForceSpell(Myself,WIZARD_MIRROR_IMAGE)
+IncrementGlobal("X3RMSpell","GLOBAL",1)
+SpellNoDecRES("X3RDOOR","X3RKID")
+END 
+
+IF
+Global("X3RMSpell","GLOBAL",3)// Non-Violence2
+THEN RESPONSE #100
+IncrementGlobal("X3RMSpell","GLOBAL",1)
+SpellNoDecRES("X3RDOOR","X3RKID")
+END 
+
+
+
+IF 
+See(NearestEnemyOf(Myself))
+HaveSpell(WIZARD_IMPROVED_INVISIBILITY)
+THEN RESPONSE #100
+Spell(Myself,WIZARD_IMPROVED_INVISIBILITY)
+END 
+
+IF 
+See(NearestEnemyOf(Myself))
+HaveSpell(WIZARD_IMPROVED_HASTE)
+THEN RESPONSE #100
+Spell(Myself,WIZARD_IMPROVED_HASTE)
+END 
+
+IF 
+See(NearestEnemyOf(Myself))
+HaveSpell(WIZARD_MONSTER_SUMMONING_3)
+THEN RESPONSE #100
+Spell(Myself,WIZARD_MONSTER_SUMMONING_3)
+END 
+
+IF 
+See(NearestEnemyOf(Myself))
+HaveSpell(WIZARD_SLOW)
+THEN RESPONSE #100
+Spell(NearestEnemyOf(),WIZARD_SLOW)
+END 
+
+IF 
+See(NearestEnemyOf(Myself))
+HaveSpell(WIZARD_SHADOW_DOOR)
+THEN RESPONSE #100
+Spell(Myself,WIZARD_SHADOW_DOOR)
+END 
+
+IF 
+See(NearestEnemyOf(Myself))
+HaveSpell(WIZARD_FLAME_ARROW)
+THEN RESPONSE #100
+Spell(NearestEnemyOf(),WIZARD_FLAME_ARROW)
+END 
+
+IF 
+See(NearestEnemyOf(Myself))
+HaveSpell(WIZARD_MAGIC_MISSILE)
+THEN RESPONSE #100
+Spell(NearestEnemyOf(),WIZARD_MAGIC_MISSILE)
+END 
+
+IF 
+See(NearestEnemyOf(Myself))
+HaveSpell(WIZARD_MELF_ACID_ARROW)
+THEN RESPONSE #100
+Spell(NearestEnemyOf(),WIZARD_MELF_ACID_ARROW)
+END 
+
+IF 
+See(NearestEnemyOf(Myself))
+HaveSpell(WIZARD_BLINDNESS)
+THEN RESPONSE #100
+Spell(NearestEnemyOf(),WIZARD_BLINDNESS)
+END 
+
+// Will fire when they do not have any spells left, thus must be at bottom.
+IF 
+See(NearestEnemyOf(Myself))
+!HaveSpell(WIZARD_FLAME_ARROW)
+THEN RESPONSE #100
+ForceSpell(NearestEnemyOf(),WIZARD_FLAME_ARROW)
+END 

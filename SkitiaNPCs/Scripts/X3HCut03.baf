@@ -1,0 +1,20 @@
+IF
+True()
+THEN RESPONSE #100
+	CutSceneId(Player1)  
+	CreateCreature("X3HR2F1",[471.1798],15)
+	CreateCreature("X3HR2M1",[462.1673],15)
+	CreateCreature("X3HR2C1",[460.1747],15)
+	JumpToPoint([772.1693])
+	SmallWait(1)
+	ActionOverride("X3HR2F1",Face(13))
+	ActionOverride("X3HR2M1",Face(13))
+	ActionOverride("X3HR2C1",Face(13))
+	Face(W)
+	SmallWait(1)
+	FadeFromColor([30.0],0)
+	Wait(1)
+	DisplayStringHead("X3HR2M1",~Behold, my magic!~)
+	Wait(3)
+	EndCutSceneMode()
+END

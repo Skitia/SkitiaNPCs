@@ -1,0 +1,28 @@
+ IF 
+   See("X3Reb")
+   InParty("X3Reb")
+   Global("X3PreTalk","LOCALS",0)
+  THEN
+    RESPONSE #100
+	SetGlobal("X3PreTalk","LOCALS",1)
+	StartDialogueNoSet("X3Reb")	
+END 
+
+ IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    Allegiance(Myself,NEUTRAL)
+  THEN
+    RESPONSE #100
+	ActionOverride("X3RPIR4",Enemy())
+	ActionOverride("X3RM",Enemy())
+	ActionOverride("PPDESH",Enemy())
+	Enemy()
+	  IncrementGlobal("X3RMSpell","GLOBAL",1) // Will cast the spell!
+  END 
+
+IF 
+See(NearestEnemyOf(Myself))
+HaveSpell(BERSERKER_RAGE)
+THEN RESPONSE #100
+Spell(Myself,BERSERKER_RAGE)
+END 

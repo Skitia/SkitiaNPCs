@@ -1,0 +1,350 @@
+// Talk immediately when summoned. 
+IF
+Global("X3RebSummoned","GLOBAL",1)
+THEN
+RESPONSE #100
+Wait(1)
+StartDialogueNoSet([PC])
+END
+
+//Talk Initialization 
+IF 
+InParty(Myself)
+Global("X3RebToBTalk","LOCALS",0)
+GlobalGT("X3RebApp","GLOBAL",0)
+!Global("X3RebRomanceActive","GLOBAL",2)
+THEN RESPONSE #100 
+RealSetGlobalTimer("X3RebToBTalkTimer","GLOBAL",3100)
+SetGlobal("X3RebToBTalk","LOCALS",1)
+END 
+
+//Love Talk Initialization 
+IF 
+InParty(Myself)
+Global("X3RebToBLoveTalk","LOCALS",0)
+Global("X3RebRomanceActive","GLOBAL",2)
+THEN RESPONSE #100 
+RealSetGlobalTimer("X3RebToBLoveTimer","GLOBAL",3100)
+SetGlobal("X3RebToBLoveTalk","LOCALS",1)
+END 
+
+//Post Mage Talk 
+IF 
+Global("X3RebToBEvent","GLOBAL",2)
+!AreaCheck("AR5003")
+See(Player1)
+IsValidForPartyDialogue(Player1)
+IsValidForPartyDialogue(Myself)
+CombatCounter(0)
+!See([ENEMY])
+THEN RESPONSE #100 
+StartDialogueNoSet([PC])
+END 
+
+//Friendship Talks 
+IF 
+	RealGlobalTimerExpired("X3RebToBTalkTimer","GLOBAL")
+	CombatCounter(0)
+    !See([ENEMY])
+	!AreaType(DUNGEON)
+	GlobalGT("X3RebApp","GLOBAL",0)
+	OR(3)
+	 Global("X3RebToBTalk","LOCALS",1)
+	 Global("X3RebToBTalk","LOCALS",3)
+	 Global("X3RebToBTalk","LOCALS",5)
+THEN
+  RESPONSE #100
+	IncrementGlobal("X3RebToBTalk","LOCALS",1)
+END
+
+
+
+IF 
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    CombatCounter(0)
+    !See([ENEMY])
+    OR(3)
+    Global("X3RebToBTalk","LOCALS",2)
+	Global("X3RebToBTalk","LOCALS",4)
+	Global("X3RebToBTalk","LOCALS",6)
+THEN RESPONSE #100 
+	RealSetGlobalTimer("X3RebToBTalkTimer","GLOBAL",3100)
+	StartDialogueNoSet(Player1)
+END 
+
+//Love Talks 
+IF
+	RealGlobalTimerExpired("X3RebToBLoveTimer","GLOBAL")
+	Global("X3RebRomanceActive","GLOBAL",2) 
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+	CombatCounter(0)
+    !See([ENEMY])
+	!AreaType(DUNGEON)
+	OR(5)
+	Global("X3RebToBLoveTalk","LOCALS",1)
+	Global("X3RebToBLoveTalk","LOCALS",3)
+	Global("X3RebToBLoveTalk","LOCALS",7)
+	Global("X3RebToBLoveTalk","LOCALS",9)
+	Global("X3RebToBLoveTalk","LOCALS",11)
+THEN RESPONSE #100 
+	IncrementGlobal("X3RebToBLoveTalk","LOCALS",1)
+END
+//Wraith Post Talk 
+IF 
+	Global("X3RebRomanceActive","GLOBAL",2) 
+	Global("X3LovedOne","GLOBAL",3)
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+	CombatCounter(0)
+    !See([ENEMY])
+	!AreaType(DUNGEON)
+	Global("X3RebWraithTalk","LOCALS",0)
+THEN RESPONSE #100 
+	IncrementGlobal("X3RebWraithTalk","LOCALS",1)
+	StartDialogueNoSet(Player1)
+END
+// Saradush Sacked Post Talk 
+IF 
+	RealGlobalTimerExpired("X3RebToBLoveTimer","GLOBAL")
+	Global("X3RebRomanceActive","GLOBAL",2) 
+	Global("SaradushSacked","GLOBAL",1)
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+	CombatCounter(0)
+    !See([ENEMY])
+	!AreaType(DUNGEON)
+	Global("X3RebToBLoveTalk","LOCALS",9)
+THEN RESPONSE #100 
+	IncrementGlobal("X3RebToBLoveTalk","LOCALS",1)
+END
+// Challenges Done Post Talk 
+IF 
+	Global("ChallengesDone","GLOBAL",1)
+	RealGlobalTimerExpired("X3RebToBLoveTimer","GLOBAL")
+	Global("X3RebRomanceActive","GLOBAL",2) 
+	Global("ChallengesDone","GLOBAL",1)
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+	CombatCounter(0)
+    !See([ENEMY])
+	Global("X3RebToBLoveTalk","LOCALS",13)
+THEN RESPONSE #100 
+	IncrementGlobal("X3RebToBLoveTalk","LOCALS",1)
+END
+
+IF 
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    CombatCounter(0)
+    !See([ENEMY])
+	Global("X3RebRomanceActive","GLOBAL",2) 
+    OR(6)
+    Global("X3RebToBLoveTalk","LOCALS",2)
+	Global("X3RebToBLoveTalk","LOCALS",4)
+	Global("X3RebToBLoveTalk","LOCALS",8)
+	Global("X3RebToBLoveTalk","LOCALS",10)
+	Global("X3RebToBLoveTalk","LOCALS",12)
+	Global("X3RebToBLoveTalk","LOCALS",14)
+THEN RESPONSE #100 
+	PlaySong(0)
+	RealSetGlobalTimer("X3RebLoveTimer","GLOBAL",3100)
+	StartDialogueNoSet(Player1)
+END 
+
+
+IF 
+InParty(Myself)
+Switch("X3RebAppChange","GLOBAL")
+THEN RESPONSE #1
+SetGlobal("X3RebAppChange","GLOBAL",0)
+IncrementGlobal("X3RebApp","GLOBAL",-10)
+DisplayStringNoNameDlg(Player1,@409)
+RESPONSE #2
+SetGlobal("X3RebAppChange","GLOBAL",0)
+IncrementGlobal("X3RebApp","GLOBAL",-8)
+DisplayStringNoNameDlg(Player1,@409)
+RESPONSE #3
+SetGlobal("X3RebAppChange","GLOBAL",0)
+IncrementGlobal("X3RebApp","GLOBAL",-6)
+DisplayStringNoNameDlg(Player1,@406)
+RESPONSE #4
+SetGlobal("X3RebAppChange","GLOBAL",0)
+IncrementGlobal("X3RebApp","GLOBAL",-4)
+DisplayStringNoNameDlg(Player1,@406)
+RESPONSE #5
+SetGlobal("X3RebAppChange","GLOBAL",0)
+IncrementGlobal("X3RebApp","GLOBAL",-2)
+DisplayStringNoNameDlg(Player1,@403)
+RESPONSE #6
+SetGlobal("X3RebAppChange","GLOBAL",0)
+RESPONSE #7
+SetGlobal("X3RebAppChange","GLOBAL",0)
+IncrementGlobal("X3RebApp","GLOBAL",2)
+DisplayStringNoNameDlg(Player1,@413)
+RESPONSE #8
+SetGlobal("X3RebAppChange","GLOBAL",0)
+IncrementGlobal("X3RebApp","GLOBAL",4)
+DisplayStringNoNameDlg(Player1,@416)
+RESPONSE #9
+SetGlobal("X3RebAppChange","GLOBAL",0)
+IncrementGlobal("X3RebApp","GLOBAL",6)
+DisplayStringNoNameDlg(Player1,@416)
+RESPONSE #10
+SetGlobal("X3RebAppChange","GLOBAL",0)
+IncrementGlobal("X3RebApp","GLOBAL",8)
+DisplayStringNoNameDlg(Player1,@419)
+RESPONSE #11
+SetGlobal("X3RebAppChange","GLOBAL",0)
+IncrementGlobal("X3RebApp","GLOBAL",10)
+DisplayStringNoNameDlg(Player1,@419)
+END 
+// If not in party, it should be reset with no approval changes. 
+IF 
+!InParty(Myself) 
+!Global("X3RebAppChange","GLOBAL",0)
+THEN RESPONSE #100 
+SetGlobal("X3RebAppChange","GLOBAL",0)
+END  
+//Reset to 120 if past max/reward bonus stats.
+IF 
+GlobalGT("X3RebApp","GLOBAL",120)
+InParty(Myself)
+Switch("X3RebAppMaxBonus","LOCALS")
+THEN RESPONSE #0
+SetGlobal("X3RebApp","GLOBAL",120)
+SetGlobal("X3RebAppMaxBonus","LOCALS",1)
+ChangeStat(Myself,DEX,1,ADD)
+ChangeStat(Myself,CHR,1,ADD)
+DisplayStringNoNameDlg(Player1,@99)
+RESPONSE #1 
+SetGlobal("X3RebApp","GLOBAL",120)
+END 
+//
+IF 
+GlobalLT("X3RebApp","GLOBAL",-39)
+InParty(Myself)
+Switch("X3Leave","LOCALS")
+THEN RESPONSE #0
+SetGlobal("X3Break","LOCALS",1)
+StartDialogueNoSet(Player1)
+RESPONSE #2
+SetGlobal("X3Break","LOCALS",3)
+StartDialogueNoSet(Player1) // Leaves for Good
+END 
+
+
+//Reputation Changes 
+IF
+Reputation(Player1,20)
+Global("X3GoodRepAppGain","LOCALS",0)
+InParty(Myself)
+THEN RESPONSE #100
+SetGlobal("X3GoodRepAppGain","LOCALS",1)
+IncrementGlobal("X3RebApp","GLOBAL",6)
+DisplayStringNoNameDlg(Player1,@416)
+END
+IF
+ReputationLT(Player1,7)
+Global("X3BadRepAppLoss","LOCALS",0)
+InParty(Myself)
+THEN RESPONSE #100
+SetGlobal("X3BadRepAppLoss","LOCALS",1)
+IncrementGlobal("X3RebApp","GLOBAL",-6)
+DisplayStringNoNameDlg(Player1,@406)
+END
+IF
+ReputationLT(Player1,5)
+Global("X3BadRepAppLoss","LOCALS",1)
+InParty(Myself)
+THEN RESPONSE #100
+SetGlobal("X3BadRepAppLoss","LOCALS",2)
+IncrementGlobal("X3RebApp","GLOBAL",-9)
+DisplayStringNoNameDlg(Player1,@409)
+END
+IF
+ReputationLT(Player1,3)
+Global("X3BadRepAppLoss","LOCALS",2)
+InParty(Myself)
+THEN RESPONSE #100
+SetGlobal("X3BadRepAppLoss","LOCALS",3)
+IncrementGlobal("X3RebApp","GLOBAL",-45)
+DisplayStringNoNameDlg(Player1,@409)
+END
+IF
+Reputation(Player1,1)
+Global("X3BadRepAppLoss","LOCALS",3)
+InParty(Myself)
+THEN RESPONSE #100
+SetGlobal("X3BadRepAppLoss","LOCALS",4)
+IncrementGlobal("X3RebApp","GLOBAL",-90)
+DisplayStringNoNameDlg(Player1,@409)
+END
+
+//Engagement Ring 
+IF 
+HasItemEquiped("X3ERing",Myself)
+Global("X3Engagement","LOCALS",0)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+CombatCounter(0)
+!See([ENEMY])
+THEN RESPONSE #100 
+IncrementGlobal("X3Engagement","LOCALS",1)
+StartDialogueNoSet(Player1)
+END  
+
+IF 
+HasItemEquiped("X3ERing",Myself)
+Global("X3Engagement","LOCALS",2)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+CombatCounter(0)
+!See([ENEMY])
+THEN RESPONSE #100 
+DisplayString("X3Reb",~Sorry, this ring holds too much meaning for me to be comfortable wearing it.~)
+ActionOverride(Player1,TakePartyItem("X3ERing"))
+END 
+
+//Approval Low/In Romance: Breakup Conversation
+IF 
+Global("X3RebRomanceActive","GLOBAL",2)
+GlobalLT("X3RebApp","GLOBAL",50)
+InParty(Myself)
+CombatCounter(0)
+!See([ENEMY])
+Global("X3BreakUp","LOCALS",0)
+THEN RESPONSE #100 
+SetGlobalTimer("X3BreakUp","GLOBAL",THREE_DAYS)
+SetGlobal("X3BreakUp","LOCALS",1)
+END 
+
+IF 
+GlobalTimerExpired("X3BreakUp","GLOBAL")
+Global("X3RebRomanceActive","GLOBAL",2)
+GlobalLT("X3RebApp","GLOBAL",50)
+See(Player1)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+CombatCounter(0)
+!AreaType(DUNGEON)
+!See([ENEMY])
+Global("X3BreakUp","LOCALS",1)
+THEN RESPONSE #100 
+SetGlobal("X3BreakUp","LOCALS",2)
+StartDialogueNoSet(Player1)
+END 
+
+IF 
+Global("X3BreakUp","LOCALS",1)
+GlobalTimerExpired("X3BreakUp","GLOBAL")
+GlobalGT("X3RebApp","GLOBAL",49)
+InParty("X3Reb")
+CombatCounter(0)
+!See([ENEMY])
+THEN RESPONSE #100 
+SetGlobal("X3BreakUp","LOCALS",0)
+END 

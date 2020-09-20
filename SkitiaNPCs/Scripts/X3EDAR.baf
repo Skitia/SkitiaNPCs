@@ -1,0 +1,28 @@
+  IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    Allegiance(Myself,NEUTRAL)
+	GlobalLT("Chapter","GLOBAL",%bg2_chapter_6%)
+  THEN
+    RESPONSE #100
+	  DisplayStringHead("X3EBRO",~How uncivilized. Let us go, Darlene.~)
+	  EscapeArea()
+ END 
+ 
+  IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    Allegiance(Myself,NEUTRAL)
+	GlobalGT("Chapter","GLOBAL",%bg2_chapter_5%)
+	GlobalLT("X3EmiQuest","GLOBAL",7)
+  THEN
+    RESPONSE #100
+	  ActionOverride("X3EFATH",DisplayStringHead("X3EFATH",~You should be ashamed, Emily. You are no daughter of mine.~))	
+	  ActionOverride("X3EFATH",EscapeArea())
+	  ActionOverride("X3EDAR",EscapeArea())
+	  ActionOverride("X3ECH",EscapeArea())
+	  ActionOverride("X3EGVJ",EscapeArea())
+	  ActionOverride("X3ECATH",EscapeArea())	  
+	  DisplayStringHead("X3EBRO",~This clear public attack proves I am worthy of Heir. Let us find safety and escape this madwoman and her friends.~)
+	  EscapeArea()
+	  AddJournalEntry(@21,QUEST_DONE) 
+	  SetGlobal("X3EmiQuest","GLOBAL",10)
+ END 

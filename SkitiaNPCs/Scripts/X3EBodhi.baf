@@ -1,0 +1,29 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId("X3Emi")  // X3Emi
+		CreateCreatureObjectEffect("VAMPAMB","SPFLESHS","X3Emi")  // Vampire
+		SetGlobal("X3EmiVampire","GLOBAL",1)
+		Wait(1)
+		CreateVisualEffectObject("SPDISPMA",Myself)
+		DropInventory()
+		SetLeavePartyDialogFile()
+		ChangeAIScript("VAMPAMB",OVERRIDE)
+		ChangeAIScript("",DEFAULT)
+		DialogueInterrupt(FALSE)
+		LeaveParty()
+		EndCutSceneMode()
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId("bodhiamb")  // Bodhi
+		DialogueInterrupt(FALSE)
+		CreateCreatureObjectEffect("VAMPIM01","",Myself)  // Vampire
+		CreateCreatureObjectEffect("VAMPIM01","",Myself)  // Vampire
+		CreateCreatureObjectEffect("VAMPIM01","",Myself)  // Vampire
+		CreateCreatureObjectEffect("VAMPIM01","",Myself)  // Vampire
+END

@@ -1,0 +1,10 @@
+IF 
+Global("X3LovedOne","GLOBAL",1) 
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    CreateVisualEffect("SPFLESHS",[1454.1398])
+    Wait(1)
+    CreateCreature("X3Elove",[1454.1398],SE)
+    ActionOverride("X3Elove",StartDialogueNoSet(Player1))
+END

@@ -1,0 +1,18 @@
+// Recorder's Death, adding to Bodhi's script
+IF
+  True()
+THEN
+  RESPONSE #100
+	CutsceneId(Player1)
+	SetGlobal("X3VieVampire","GLOBAL",1)
+	Wait(1)
+	DisplayStringHead("X3Vie",~Shadows, to me!~)  
+    Wait(1)
+	CreateVisualEffectObject("SPMINDAT","X3Vie")
+	Wait(1)
+	PlaySound("ACT_07")
+	ActionOverride("X3Vie",LeaveParty())
+	ActionOverride("X3Vie",DestroySelf())
+	Wait(1)
+	ActionOverride("BODHIAMB",StartDialogueNoSet(Player1))
+END

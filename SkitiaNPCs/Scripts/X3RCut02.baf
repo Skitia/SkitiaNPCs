@@ -1,0 +1,21 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		FadeFromColor([15.0],0)
+		MoveViewObject(Player1,INSTANT)
+		Wait(1)
+		MoveViewPoint([519.495],BD_NORMAL)
+		ActionOverride(Player2,MoveToPoint([702.381]))
+		ActionOverride(Player3,MoveToPoint([603.472]))
+		ActionOverride(Player4,MoveToPoint([680.429]))
+		ActionOverride(Player5,MoveToPoint([618.384]))
+		ActionOverride(Player6,MoveToPoint([658.352]))
+		MoveToPointNoInterrupt([539.421])
+		Wait(1)
+		MultiPlayerSync()
+		EndCutSceneMode()
+		SetInterrupt(TRUE)
+		ActionOverride("X3RAMB2",StartDialogueNoSet(Player1))
+END

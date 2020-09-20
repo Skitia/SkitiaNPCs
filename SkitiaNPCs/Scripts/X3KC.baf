@@ -1,0 +1,16 @@
+IF 
+AreaCheck("AR0528")
+Dead("X3KBRYCE")
+See(Player1)
+Global("X3Caught","LOCALS",0)
+THEN RESPONSE #100 
+SetGlobal("X3Caught","LOCALS",1)
+StartDialogueNoSet(Player1)
+END 
+
+IF 
+Die()
+THEN RESPONSE #100
+AddJournalEntry(@16,QUEST)
+END 
+

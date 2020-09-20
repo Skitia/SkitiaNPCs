@@ -1,0 +1,21 @@
+IF
+True()
+THEN RESPONSE #100
+	CutSceneId(Player1)  
+	CreateCreature("X3HDC",[471.1798],15)
+	CreateCreature("X3HDD",[462.1673],15)
+	CreateCreature("X3HDB",[460.1747],15)
+	JumpToPoint([772.1693])
+	SmallWait(1)
+	ActionOverride("X3HDC",Face(13))
+	ActionOverride("X3HDD",Face(13))
+	ActionOverride("X3HDB",Face(13))
+	Face(W)
+	SmallWait(1)
+	ActionOverride("X3HDD",Enemy())
+	FadeFromColor([30.0],0)
+	Wait(1)
+	DisplayStringHead("X3HDD",~The final battle boys. Show them why we're the best dwarven band in the lands.~)
+	Wait(3)
+	EndCutSceneMode()
+END

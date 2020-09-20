@@ -1,0 +1,75 @@
+
+
+
+IF 
+See(NearestEnemyOf(Myself))
+HaveSpell(WIZARD_IMPROVED_INVISIBILITY)
+THEN RESPONSE #100
+ReallyForceSpell(Myself,WIZARD_STONE_SKIN)
+ReallyForceSpell(Myself,WIZARD_MIRROR_IMAGE)
+Spell(Myself,WIZARD_IMPROVED_INVISIBILITY)
+END 
+
+IF 
+See(NearestEnemyOf(Myself))
+HaveSpell(WIZARD_IMPROVED_HASTE)
+THEN RESPONSE #100
+Spell(Myself,WIZARD_IMPROVED_HASTE)
+END 
+
+IF 
+See(NearestEnemyOf(Myself))
+HaveSpell(WIZARD_MONSTER_SUMMONING_3)
+THEN RESPONSE #100
+Spell(Myself,WIZARD_MONSTER_SUMMONING_3)
+END 
+
+IF 
+See(NearestEnemyOf(Myself))
+HaveSpell(WIZARD_SLOW)
+THEN RESPONSE #100
+Spell(NearestEnemyOf(),WIZARD_SLOW)
+END 
+
+IF 
+See(NearestEnemyOf(Myself))
+HaveSpell(WIZARD_SHADOW_DOOR)
+THEN RESPONSE #100
+Spell(Myself,WIZARD_SHADOW_DOOR)
+END 
+
+IF 
+See(NearestEnemyOf(Myself))
+HaveSpell(WIZARD_FLAME_ARROW)
+THEN RESPONSE #100
+Spell(NearestEnemyOf(),WIZARD_FLAME_ARROW)
+END 
+
+IF 
+See(NearestEnemyOf(Myself))
+HaveSpell(WIZARD_MAGIC_MISSILE)
+THEN RESPONSE #100
+Spell(NearestEnemyOf(),WIZARD_MAGIC_MISSILE)
+END 
+
+IF 
+See(NearestEnemyOf(Myself))
+HaveSpell(WIZARD_MELF_ACID_ARROW)
+THEN RESPONSE #100
+Spell(NearestEnemyOf(),WIZARD_MELF_ACID_ARROW)
+END 
+
+IF 
+See(NearestEnemyOf(Myself))
+HaveSpell(WIZARD_BLINDNESS)
+THEN RESPONSE #100
+Spell(NearestEnemyOf(),WIZARD_BLINDNESS)
+END 
+
+// Will fire when they do not have any spells left, thus must be at bottom.
+IF 
+See(NearestEnemyOf(Myself))
+!HaveSpell(WIZARD_FLAME_ARROW)
+THEN RESPONSE #100
+ForceSpell(NearestEnemyOf(),WIZARD_FLAME_ARROW)
+END 

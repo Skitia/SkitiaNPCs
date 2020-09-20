@@ -1,0 +1,6 @@
+IF 
+Die()
+!Global("X3HelQuest","GLOBAL",9)
+THEN RESPONSE #100
+AddJournalEntry(@10,QUEST_DONE) // Quest is over because Rulendo Died
+END 

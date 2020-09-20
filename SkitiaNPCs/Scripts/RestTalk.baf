@@ -1,0 +1,53 @@
+IF 
+GlobalLT("Chapter","GLOBAL",8)
+OR(11)
+AreaCheck("AR0704")
+AreaCheck("AR0709")
+AreaCheck("AR0406")
+AreaCheck("AR0513")
+AreaCheck("AR0509")
+AreaCheck("AR0021")
+AreaCheck("AR0313")
+AreaCheck("AR1105")
+AreaCheck("AR2010")
+AreaCheck("AR1602")
+AreaType(OUTDOOR)
+OR(2)
+GlobalTimerExpired("X3RestTimer","GLOBAL")
+GlobalGT("X3RestInvite","GLOBAL",0)
+//If ever done for all main game NPCs, this can be removed.
+OR(5)
+IsValidForPartyDialogue("X3Emi")
+IsValidForPartyDialogue("X3Hel")
+IsValidForPartyDialogue("X3Kal")
+IsValidForPartyDialogue("X3Reb")
+IsValidForPartyDialogue("X3Vie")
+Global("X3RestActivated","GLOBAL",0)
+THEN RESPONSE #100
+SetGlobalTimer("X3RestTimer","GLOBAL",SEVEN_DAYS)
+SetGlobal("X3RestActivated","GLOBAL",1)
+ActionOverride(Player1,StartDialog("X3Rest",Player1))
+END 
+
+//ToB Version
+IF 
+GlobalGT("Chapter","GLOBAL",7)
+OR(3)
+AreaType(OUTDOOR)
+AreaCheck("AR5501")
+AreaCheck("AR5003")
+OR(2)
+GlobalTimerExpired("X3RestTimer","GLOBAL")
+GlobalGT("X3RestInvite","GLOBAL",0)
+OR(5)
+IsValidForPartyDialogue("X3Emi")
+IsValidForPartyDialogue("X3Hel")
+IsValidForPartyDialogue("X3Kal")
+IsValidForPartyDialogue("X3Reb")
+IsValidForPartyDialogue("X3Vie")
+Global("X3RestActivated","GLOBAL",0)
+THEN RESPONSE #100
+SetGlobalTimer("X3RestTimer","GLOBAL",SEVEN_DAYS)
+SetGlobal("X3RestActivated","GLOBAL",1)
+ActionOverride(Player1,StartDialog("X3Rest",Player1))
+END 

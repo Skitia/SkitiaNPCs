@@ -1,0 +1,13 @@
+  IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    Allegiance(Myself,NEUTRAL)
+	InParty("X3Emi")
+  THEN
+    RESPONSE #100
+	  ActionOverride("X3Emi",ChangeAIScript("",DEFAULT))
+	  ActionOverride("X3Emi",ChangeAIScript("",GENERAL))
+	  ActionOverride("X3Emi",LeaveParty())
+	  ActionOverride("X3Emi",Enemy())
+	  Enemy()
+      EscapeArea()
+ END 
