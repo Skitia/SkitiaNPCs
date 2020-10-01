@@ -14,6 +14,8 @@ InParty(Myself)
 Global("X3EmiToBTalk","LOCALS",0)
 GlobalGT("X3EmiApp","GLOBAL",0)
 !Global("X3EmiRomanceActive","GLOBAL",2)
+!AreaCheck("AR4000")
+!AreaCheck("AR4500")
 THEN RESPONSE #100 
 RealSetGlobalTimer("X3EmiToBTalkTimer","GLOBAL",3400)
 SetGlobal("X3EmiToBTalk","LOCALS",1)
@@ -128,9 +130,23 @@ IF
     See(Player1)
     CombatCounter(0)
     !See([ENEMY])
-	Global("X3EmiToBLoveTalk","LOCALS",7)	
+	Global("X3EmiToBLoveCrown","LOCALS",0)	
 THEN RESPONSE #100 
-	IncrementGlobal("X3EmiToBLoveTalk","LOCALS",1)	
+	IncrementGlobal("X3EmiToBLoveCrown","LOCALS",1)	
+	SetGlobalTimer("X3EmiLoveCrown","GLOBAL",FIVE_ROUNDS)
+END
+
+IF 
+	GlobalTimerExpired("X3EmiLoveCrown","GLOBAL")
+	Global("X3EmiRomanceActive","GLOBAL",2)	
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    CombatCounter(0)
+    !See([ENEMY])
+	Global("X3EmiToBLoveCrown","LOCALS",1)	
+THEN RESPONSE #100 
+	IncrementGlobal("X3EmiToBLoveCrown","LOCALS",1)	
 END
 //Post Balthazar Death 
 IF 
@@ -141,7 +157,7 @@ IF
     See(Player1)
     CombatCounter(0)
     !See([ENEMY])
-	Global("X3EmiToBLoveTalk","LOCALS",11)	
+	Global("X3EmiToBLoveTalk","LOCALS",9)	
 THEN RESPONSE #100 
 	IncrementGlobal("X3EmiToBLoveTalk","LOCALS",1)	
 END
@@ -183,7 +199,7 @@ IF
 	Global("X3EmiToBLoveTalk","LOCALS",8)
 	Global("X3EmiToBLoveTalk","LOCALS",10)
 	Global("X3EmiToBLoveTalk","LOCALS",12)
-	Global("X3EmiToBLoveTalk","LOCALS",14)
+	Global("X3EmiToBLoveCrown","LOCALS",2)	
 THEN RESPONSE #100 
 	PlaySong(0)
 	RealSetGlobalTimer("X3EmiLoveTimer","GLOBAL",3200)
@@ -246,23 +262,23 @@ THEN RESPONSE #100
 SetGlobal("X3EmiAppChange","GLOBAL",0)
 END
 
-//Reset to 90 if past max/reward bonus stats.
+//Reset to 120 if past max/reward bonus stats.
 IF 
-GlobalGT("X3EmiApp","GLOBAL",90)
+GlobalGT("X3EmiApp","GLOBAL",120)
 InParty(Myself)
 Switch("X3EmiAppMaxBonus","LOCALS")
 THEN RESPONSE #0
-SetGlobal("X3EmiApp","GLOBAL",90)
+SetGlobal("X3EmiApp","GLOBAL",120)
 SetGlobal("X3EmiAppMaxBonus","LOCALS",1)
 ChangeStat(Myself,DEX,1,ADD)
 ChangeStat(Myself,INT,1,ADD)
 DisplayStringNoNameDlg(Player1,@99)
 RESPONSE #1 
-SetGlobal("X3EmiApp","GLOBAL",90)
+SetGlobal("X3EmiApp","GLOBAL",120)
 END 
 
 IF 
-GlobalLT("X3EmiApp","GLOBAL",-39)
+GlobalLT("X3EmiApp","GLOBAL",-30)
 InParty(Myself)
 Switch("X3Leave","LOCALS")
 THEN RESPONSE #0
@@ -357,7 +373,7 @@ END
 //Approval Low/In Romance: Breakup Conversation
 IF 
 Global("X3EmiRomanceActive","GLOBAL",2)
-GlobalLT("X3EmiApp","GLOBAL",50)
+GlobalLT("X3EmiApp","GLOBAL",60)
 InParty(Myself)
 CombatCounter(0)
 !See([ENEMY])
@@ -370,7 +386,7 @@ END
 IF 
 Global("X3EmiRomanceActive","GLOBAL",2)
 GlobalTimerExpired("X3BreakUp","GLOBAL")
-GlobalLT("X3EmiApp","GLOBAL",50)
+GlobalLT("X3EmiApp","GLOBAL",60)
 See(Player1)
 IsValidForPartyDialogue(Myself)
 IsValidForPartyDialogue(Player1)
@@ -386,7 +402,7 @@ END
 IF 
 Global("X3BreakUp","LOCALS",1)
 GlobalTimerExpired("X3BreakUp","GLOBAL")
-GlobalGT("X3EmiApp","GLOBAL",49)
+GlobalGT("X3EmiApp","GLOBAL",59)
 InParty("X3Emi")
 CombatCounter(0)
 !See([ENEMY])

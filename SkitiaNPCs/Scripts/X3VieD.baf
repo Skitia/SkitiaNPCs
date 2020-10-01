@@ -1,7 +1,7 @@
 IF
 	RealGlobalTimerExpired("X3VieLoveTimer","GLOBAL")
 	!Global("X3VieRomanceActive","GLOBAL",3) 
-	GlobalGT("X3VieApp","GLOBAL",29)
+	GlobalGT("X3VieApp","GLOBAL",24)
     IsValidForPartyDialogue(Myself)
 	IsValidForPartyDialogue(Player1)
 	Global("X3VieLoveTalk","LOCALS",15)	
@@ -14,7 +14,7 @@ END
 
 IF 
 	RealGlobalTimerExpired("X3VieLoveTimer","GLOBAL")
-	GlobalGT("X3VieApp","GLOBAL",79)
+	GlobalGT("X3VieApp","GLOBAL",64)
 	!Global("X3VieRomanceActive","GLOBAL",3) 
     IsValidForPartyDialogue(Myself)
 	IsValidForPartyDialogue(Player1)

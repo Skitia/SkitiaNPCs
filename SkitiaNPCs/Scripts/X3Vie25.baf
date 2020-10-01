@@ -14,12 +14,14 @@ InParty(Myself)
 Global("X3VieToBTalk","LOCALS",0)
 GlobalGT("X3VieApp","GLOBAL",0)
 !Global("X3VieRomanceActive","GLOBAL",2)
+!AreaCheck("AR4000")
+!AreaCheck("AR4500")
 THEN RESPONSE #100 
 RealSetGlobalTimer("X3VieToBTalkTimer","GLOBAL",3200)
 SetGlobal("X3VieToBTalk","LOCALS",1)
 END 
 
-//Love Talk Initialization 
+//Love Talk Initialization: These can fire earlier.
 IF 
 InParty(Myself)
 Global("X3VieToBLoveTalk","LOCALS",0)
@@ -238,23 +240,23 @@ SetGlobal("X3VieAppChange","GLOBAL",0)
 END
 
 
-//Reset to 90 if past max/reward bonus stats.
+//Reset to 100 if past max/reward bonus stats.
 IF 
-GlobalGT("X3VieApp","GLOBAL",90)
+GlobalGT("X3VieApp","GLOBAL",100)
 InParty(Myself)
 Switch("X3VieAppMaxBonus","GLOBAL")
 THEN RESPONSE #0
-SetGlobal("X3VieApp","GLOBAL",90)
+SetGlobal("X3VieApp","GLOBAL",100)
 SetGlobal("X3VieAppMaxBonus","GLOBAL",1)
 ChangeStat(Myself,DEX,1,ADD)
 ChangeStat(Myself,STR,1,ADD)
 DisplayStringNoNameDlg(Player1,@99)
 RESPONSE #1 
-SetGlobal("X3VieApp","GLOBAL",90)
+SetGlobal("X3VieApp","GLOBAL",100)
 END 
 
 IF 
-GlobalLT("X3VieApp","GLOBAL",-39)
+GlobalLT("X3VieApp","GLOBAL",-40)
 InParty(Myself)
 Switch("X3Leave","LOCALS")
 THEN RESPONSE #0

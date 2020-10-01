@@ -201,7 +201,7 @@ END
 
 
 IF 
-GlobalLT("X3HelApp","GLOBAL",-39)
+GlobalLT("X3HelApp","GLOBAL",-30)
 InParty(Myself)
 Switch("X3Leave","LOCALS")
 THEN RESPONSE #0

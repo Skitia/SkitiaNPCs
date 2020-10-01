@@ -1,4 +1,12 @@
-
+//Friendship Bonus 
+IF 
+InParty(Myself) 
+Global("X3KalPartyBG1","GLOBAL",1)
+Global("X3KalAppBonus","LOCALS",0)
+THEN RESPONSE #100
+SetGlobal("X3KalAppBonus","LOCALS",1)
+IncrementGlobal("X3KalApp","GLOBAL",15)
+END 
 
 //Talk Initialization 
 IF 
@@ -39,7 +47,7 @@ END
 IF 
 //Requirements 
 Global("X3KalInterest","LOCALS",1) // Interest Shown
-GlobalGT("X3KalApp","GLOBAL",29)
+GlobalGT("X3KalApp","GLOBAL",24)
 GlobalGT("X3KalTalk","LOCALS",12)
 Global("X3KalRomanceActive","GLOBAL",0)
 InParty(Myself) 
@@ -70,7 +78,7 @@ END
 IF
 	RealGlobalTimerExpired("X3KalLoveTimer","GLOBAL")
 	!Global("X3KalRomanceActive","GLOBAL",3) 
-	GlobalGT("X3KalApp","GLOBAL",29)
+	GlobalGT("X3KalApp","GLOBAL",24)
     IsValidForPartyDialogue(Myself)
 	IsValidForPartyDialogue(Player1)
 	CombatCounter(0)
@@ -526,24 +534,24 @@ THEN RESPONSE #100
 SetGlobal("X3KalAppChange","GLOBAL",0)
 END
 
-//Reset to 90 if past max/reward bonus stats.
+//Reset to 100 if past max/reward bonus stats.
 IF 
-GlobalGT("X3KalApp","GLOBAL",90)
+GlobalGT("X3KalApp","GLOBAL",100)
 InParty(Myself)
 Switch("X3KalAppMaxBonus","GLOBAL")
 THEN RESPONSE #0
-SetGlobal("X3KalApp","GLOBAL",90)
+SetGlobal("X3KalApp","GLOBAL",100)
 SetGlobal("X3KalAppMaxBonus","GLOBAL",1)
 ChangeStat(Myself,STR,1,ADD)
 ChangeStat(Myself,CON,1,ADD)
 DisplayStringNoNameDlg(Player1,@99)
 RESPONSE #1 
-SetGlobal("X3KalApp","GLOBAL",90)
+SetGlobal("X3KalApp","GLOBAL",100)
 END 
 
 
 IF 
-GlobalLT("X3KalApp","GLOBAL",-39)
+GlobalLT("X3KalApp","GLOBAL",-40)
 InParty(Myself)
 Switch("X3Leave","LOCALS")
 THEN RESPONSE #0

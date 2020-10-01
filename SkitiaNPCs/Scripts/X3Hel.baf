@@ -1,3 +1,14 @@
+//Friendship Bonus 
+IF 
+InParty(Myself) 
+Global("X3HelPartyBG1","GLOBAL",1)
+Global("X3HelAppBonus","LOCALS",0)
+THEN RESPONSE #100
+SetGlobal("X3HelAppBonus","LOCALS",1)
+IncrementGlobal("X3HelApp","GLOBAL",14)
+END 
+
+
 IF 
    See([PC])
    AreaCheck("AR0709")
@@ -374,7 +385,7 @@ END
 
 
 IF 
-GlobalLT("X3HelApp","GLOBAL",-39)
+GlobalLT("X3HelApp","GLOBAL",-30)
 InParty(Myself)
 Switch("X3Leave","LOCALS")
 THEN RESPONSE #0

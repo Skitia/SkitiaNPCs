@@ -1,3 +1,12 @@
+//Friendship Bonus 
+IF 
+InParty(Myself) 
+Global("X3RebPartyBG1","GLOBAL",1)
+Global("X3RebAppBonus","LOCALS",0)
+THEN RESPONSE #100
+SetGlobal("X3RebAppBonus","LOCALS",1)
+IncrementGlobal("X3RebApp","GLOBAL",10)
+END 
 
 //Talk Initialization 
 IF 
@@ -96,7 +105,7 @@ END
 IF
 	RealGlobalTimerExpired("X3RebLoveTimer","GLOBAL")
 	!Global("X3RebRomanceActive","GLOBAL",3) 
-	GlobalGT("X3RebApp","GLOBAL",79)
+	GlobalGT("X3RebApp","GLOBAL",69)
     IsValidForPartyDialogue(Myself)
 	IsValidForPartyDialogue(Player1)
 	CombatCounter(0)
@@ -458,21 +467,21 @@ SetGlobal("X3RebAppChange","GLOBAL",0)
 END  
 //Reset to 120 if past max/reward bonus stats.
 IF 
-GlobalGT("X3RebApp","GLOBAL",120)
+GlobalGT("X3RebApp","GLOBAL",110)
 InParty(Myself)
 Switch("X3RebAppMaxBonus","LOCALS")
 THEN RESPONSE #0
-SetGlobal("X3RebApp","GLOBAL",120)
+SetGlobal("X3RebApp","GLOBAL",110)
 SetGlobal("X3RebAppMaxBonus","LOCALS",1)
 ChangeStat(Myself,DEX,1,ADD)
 ChangeStat(Myself,CHR,1,ADD)
 DisplayStringNoNameDlg(Player1,@99)
 RESPONSE #1 
-SetGlobal("X3RebApp","GLOBAL",120)
+SetGlobal("X3RebApp","GLOBAL",110)
 END 
 //
 IF 
-GlobalLT("X3RebApp","GLOBAL",-39)
+GlobalLT("X3RebApp","GLOBAL",-40)
 InParty(Myself)
 Switch("X3Leave","LOCALS")
 THEN RESPONSE #0
@@ -624,7 +633,7 @@ END
 //Approval Low/In Romance: Breakup Conversation
 IF 
 Global("X3RebRomanceActive","GLOBAL",2)
-GlobalLT("X3RebApp","GLOBAL",50)
+GlobalLT("X3RebApp","GLOBAL",55)
 InParty(Myself)
 CombatCounter(0)
 !See([ENEMY])
@@ -637,7 +646,7 @@ END
 IF 
 GlobalTimerExpired("X3BreakUp","GLOBAL")
 Global("X3RebRomanceActive","GLOBAL",2)
-GlobalLT("X3RebApp","GLOBAL",50)
+GlobalLT("X3RebApp","GLOBAL",55)
 See(Player1)
 IsValidForPartyDialogue(Myself)
 IsValidForPartyDialogue(Player1)
@@ -653,7 +662,7 @@ END
 IF 
 Global("X3BreakUp","LOCALS",1)
 GlobalTimerExpired("X3BreakUp","GLOBAL")
-GlobalGT("X3RebApp","GLOBAL",49)
+GlobalGT("X3RebApp","GLOBAL",54)
 InParty("X3Reb")
 CombatCounter(0)
 !See([ENEMY])
