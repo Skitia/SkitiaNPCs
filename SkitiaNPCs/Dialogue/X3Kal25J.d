@@ -55,7 +55,52 @@ I_C_T GORODR1 44 X3KalGORODR1-44
 == X3Kal25J IF ~IsValidForPartyDialogue("X3Kal")GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ THEN ~Hey mate, you mind giving us a heads up before you bury us alive? Appreciate it.~
 END 
 
+//Pre-Saradush 
+
+I_C_T SAREV25A 0 X3KalSAREV25A
+== X3Kal25J IF ~IsValidForPartyDialogue("X3Kal")Global("X3KalPartyBG1","GLOBAL",1)~ THEN ~Damn. I thought we were done with this guy.~
+END
+
+I_C_T SAREV25A 10 X3KalSAREV25A
+== X3Kal25J IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~I don't trust him. Any deal from this guy is probably going to be slimy.~
+END
+
 //Saradush Interjects 
+
+A_T_T SARPROVM 0 ~!Global("X3RebRomanceActive","GLOBAL",2)!Global("X3KalRomanceActive","GLOBAL",2)!Global("X3VieRomanceActive","GLOBAL",2)~ DO 0
+
+EXTEND_BOTTOM SARPROVF 0
+IF ~Global("X3KalRomanceActive","GLOBAL",2)~ EXTERN X3Kal25J SARPROVF-Care
+END
+
+CHAIN X3Kal25J SARPROVF-Care 
+~I'd normally be offended, but uh, I'm guessing they have some sort of secret thing they'll only say in private. Find out for me, eh?~
+EXTERN SARPROVF 1
+
+EXTEND_BOTTOM SARPROVM 0
+IF ~Global("X3KalRomanceActive","GLOBAL",2)~ EXTERN X3Kal25J SARPROVF-Care
+END
+
+CHAIN X3Kal25J SARPROVM-Care 
+~I'd normally be offended, but uh, I'm guessing they have some sort of secret thing they'll only say in private. Find out for me, eh?~
+EXTERN SARPROVM 1
+
+
+I_C_T SARCNT01 9 X3KalSARCNT01-9
+== X3KalJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~Sounds like fitting work for us. A bit of fame and fortune both. I'm sure this fellow that has her stands no chance.~
+END 
+
+I_C_T SARBAR01 21 X3KalSARBAR01-21
+== X3KalJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~I swear, the folk that preach about staying pure always are the ones getting secretly dirty.~
+END 
+
+I_C_T SARBHA02 1 X3HelSARBHA02-1
+== X3Kal25J IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~Wish I could help you, kin-fellow. But a bit too late to yell at your mother and her taste in men.~
+END
+
+I_C_T SARMEL01 45 X3KalSARMEL01-45
+== X3Kal25J IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~Criminy. Couldn't have been a simple kobold to hack. What are these gifts this bloke has?~
+END
 
 EXTEND_BOTTOM SARPRO01 11
 IF ~Global("X3KalRomanceActive","GLOBAL",2)IsValidForPartyDialog("X3Kal") Gender(Player1,MALE)~  EXTERN X3Kal25J SarPro_No 
@@ -74,7 +119,7 @@ EXTERN SARPRO01 3
 
 CHAIN X3Kal25J SarPro_Break 
 ~Damn. Usually it's me doing something like this. Well...do what you want, mate. Just don't expect me to take you back after this.~
-DO ~SetGlobal("X3KalRomanceActive","GLOBAL",3)SetGlobal("X3KalAppChange","GLOBAL",-9)DisplayStringNoNameDlg(Player1,@409)~
+DO ~SetGlobal("X3KalRomanceActive","GLOBAL",3)SetGlobal("X3KalApp","GLOBAL",-9)DisplayStringNoNameDlg(Player1,@409)~
 EXTERN SARPRO01 12 
 
 // Volo's obligatory interjection in Saradush.
@@ -96,6 +141,13 @@ EXTERN X3Kal25J X3KalVoloBio
 CHAIN X3Kal25J X3KalVoloBio
 ~Aww yes! This is the day. Kale's legend is spoken across the land by a legend! I knew it would come.~
 EXTERN SARVOLO 9
+
+//Marching Mountains 
+
+I_C_T HGNYA01 15 X3KalHGNYA01-15
+== X3Kal25J IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~What are they, undead? Nah, they don't look like it, but how do these blokes live without their heart? It's making my head hurt.~
+END
+
 
 // Solar, final interjections at the Throne of Bhaal and <CHARNAME>'s choice for the romanced protagonists.
 
@@ -618,7 +670,7 @@ DO ~SetGlobal("X3LovedOne","GLOBAL",2)~
 EXTERN HGWRA01 24
 
 EXTEND_BOTTOM HGWRA01 24
-IF ~Global("X3KalRomanceActive","GLOBAL",2)~ DO ~ClearAllActions() StartCutSceneMode() StartCutScene("X3KW1")~ EXIT
+IF ~Global("X3LovedOne","GLOBAL",2)~ DO ~ClearAllActions() StartCutSceneMode() StartCutScene("X3KW1")~ EXIT
 END
 
 BEGIN X3KLove 

@@ -74,15 +74,62 @@ I_C_T GORIMP01 0 X3VieGORIMP01
 == X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ THEN ~As if this imp could do much of anything to deter us. Still, it may know something.~
 END  
 
+//Pre-Saradush 
+I_C_T SAREV25A 0 X3VieSAREV25A
+== X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")Global("X3ViePartyBG1","GLOBAL",1)~ THEN ~What a fool. Give me the command and I will gladly destroy him twice over.~
+END
 
-
-//Story/Romance/Essential Interjects 
 
 //Saradush Interjects 
+
+EXTEND_BOTTOM SARPROVF 0
+IF ~Global("X3VieRomanceActive","GLOBAL",2)~ EXTERN X3Vie25J SARPROVF-Care
+END
+
+CHAIN X3Vie25J SARPROVF-Care 
+~Oh, you are so lucky that I can tell what you are trying to do. 'Tis foolish to be brought alone to hear what they truly want without us near you, but, do as you wish.~
+EXTERN SARPROVF 1
+
+EXTEND_BOTTOM SARPROVM 0
+IF ~Global("X3VieRomanceActive","GLOBAL",2)~ EXTERN X3Vie25J SARPROVF-Care
+END
+
+CHAIN X3Vie25J SARPROVM-Care 
+~Oh, you are so lucky that I can tell what you are trying to do. 'Tis foolish to be brought alone to hear what they truly want without us near you, but, do as you wish.~
+EXTERN SARPROVM 1
+
+I_C_T SARKIS01 25 X3VieSARKIS01-25
+== X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Hrmph. His rubbish fear of magic is quite plain. I am suddenly completely averse to aiding him at all.~
+END
+
+I_C_T SARTHF1 13 X3VieSARTHF1-12
+== X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")Alignment("X3Vie",NEUTRAL)~ THEN ~Use the shadows, human. Bide your time and then become unseen. You cannot be harmed if no one knows you are there.~
+DO ~SetGlobal("X3VieApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@516)~
+== SARTHF1 ~I...I will keep your advice in mind. Thank you.~
+END 
+
+I_C_T SARTHF1 12 X3VieSARTHF1-12
+== X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")Alignment("X3Vie",NEUTRAL_EVIL)!IsValidForPartyDialogue("X3Emi")!IsValidForPartyDialogue("X3Reb")~ THEN ~This will be sweet to observe.~
+DO ~SetGlobal("X3VieApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@516)~
+== SARTHF1 ~Freedom!~
+END 
 
 EXTEND_BOTTOM SARPRO01 11
 IF ~Global("X3VieRomanceActive","GLOBAL",2)IsValidForPartyDialog("X3Vie") Gender(Player1,MALE)~  EXTERN X3Vie25J SarPro_No 
 END 
+
+I_C_T SARBUL05 2 X3VieSarbul05-2 
+== X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Damn you! My kin deserve better!~
+DO ~IncrementGlobal("X3VieApp","GLOBAL",-12)DisplayStringNoNameDlg(Player1,@509)~
+END
+
+I_C_T SARBUL05 5 X3VieSarbul05-5 
+== X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~We should have killed them. No matter. I will remember their faces.~
+DO ~IncrementGlobal("X3VieApp","GLOBAL",2)DisplayStringNoNameDlg(Player1,@513)~
+END
+
+
+
 
 CHAIN X3Vie25J SarPro_No 
 ~<CHARNAME>. Hello? Have you lost your mind?~
@@ -97,7 +144,7 @@ EXTERN SARPRO01 3
 
 CHAIN X3Vie25J SarPro_Break 
 ~Well then. You know exactly what this means. Have your fun, but I will not forgive you.~
-DO ~SetGlobal("X3VieRomanceActive","GLOBAL",3)SetGlobal("X3VieAppChange","GLOBAL",-12)DisplayStringNoNameDlg(Player1,@509)~
+DO ~SetGlobal("X3VieRomanceActive","GLOBAL",3)IncrementGlobal("X3VieAppChange","GLOBAL",-12)DisplayStringNoNameDlg(Player1,@509)~
 EXTERN SARPRO01 12 
 
 // Volo's obligatory interjection in Saradush.
@@ -119,6 +166,19 @@ EXTERN X3Vie25J X3VieVoloBio
 CHAIN X3Vie25J X3VieVoloBio
 ~Hrmph. And I thought he was a bard of legend.~
 EXTERN SARVOLO 9
+
+//Marching Mountains 
+
+I_C_T HGNYA01 29 X3VieHGNYA01-29
+== X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Hrmph. I would find this amusing, if she wasn't preparing to attack us, the fool.~
+END
+
+//
+
+I_C_T BALTH 20 X3VieBalth20
+== X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~I am tired of us being the pawns of all of these humans! All the better that these games of yours are coming to an end, Balthazar.~
+== X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~The elf has the right of it, and that nay please me to say.~
+END
 
 // Solar, final interjections at the Throne of Bhaal and <CHARNAME>'s choice for the romanced protagonists.
 
@@ -383,7 +443,7 @@ DO ~IncrementGlobal("X3VieToBTalk","LOCALS",1)SetGlobal("X3VieAppChange","GLOBAL
 END 
 ++ ~You sound a little too excited.~ + FT.1
 ++ ~You have grown more powerful. But be mindful of the responsibility that comes with it.~ + FT.2 
-++ ~I have enjoyed watching your spellcasting.~ DO ~SetGlobal("X3VieAppChange","GLOBAL",1)~ + FT.4
+++ ~I have enjoyed watching your spellcasting.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + FT.4
 
 CHAIN X3Vie25J FT.1 
 ~Please, how can someone be too excited?~
@@ -397,15 +457,15 @@ CHAIN X3Vie25J FT.3
 ~Are you seriously suggesting that I am irresponsible?~
 END 
 ++ ~Not irresponsible. But what you can do is greater and more dangerous than before.~ + FT.7
-++ ~Well, yes.~ DO ~SetGlobal("X3VieAppChange","GLOBAL",-2)~ + FT.7
+++ ~Well, yes.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",-2)~ + FT.7
 ++ ~I am just saying to be careful.~ + FT.7
 
 CHAIN X3Vie25J FT.7 
 ~Hrmph! Well stop fretting! I am in full control, I know what I am doing.~
 = ~I suppose...your concern is touching, I will admit. Now, can we drop it?~
 END 
-++ ~As long as you understand. I don't want you to accidentally hurt yourself or anyone else.~ DO ~SetGlobal("X3VieAppChange","GLOBAL",1)~ + FT.8
-++ ~It's not something to be "dropped", Vienxay. Keep in mind what I said.~ DO ~SetGlobal("X3VieAppChange","GLOBAL",-1)~ + FT.10
+++ ~As long as you understand. I don't want you to accidentally hurt yourself or anyone else.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + FT.8
+++ ~It's not something to be "dropped", Vienxay. Keep in mind what I said.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",-1)~ + FT.10
 ++ ~All right, I'll drop it.~ + FT.9
 
 CHAIN X3Vie25J FT.8
@@ -432,7 +492,7 @@ CHAIN X3Vie25J FT.5
 ~Yes. I have told you before how I felt so powerless. Now...it is the precise opposite. I could crush anyone! Oh, so many lessons I could teach of those who have wronged me with ease.~
 END 
 ++ ~Just don't get carried away, now.~ + FT.3 
-++ ~And teach them all, Vienxay. No one deserves to test your patience.~ DO ~SetGlobal("X3VieAppChange","GLOBAL",2)~ + FT.6
+++ ~And teach them all, Vienxay. No one deserves to test your patience.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",2)~ + FT.6
 ++ ~I think you're letting this get to your head a bit.~ + FT.3 
 
 CHAIN X3Vie25J FT.6 
@@ -621,7 +681,7 @@ DO ~SetGlobal("X3LovedOne","GLOBAL",4)~
 EXTERN HGWRA01 24
 
 EXTEND_BOTTOM HGWRA01 24
-IF ~Global("X3VieRomanceActive","GLOBAL",2)~ DO ~ClearAllActions() StartCutSceneMode() StartCutScene("X3VW1")~ EXIT
+IF ~Global("X3LovedOne","GLOBAL",4)~ DO ~ClearAllActions() StartCutSceneMode() StartCutScene("X3VW1")~ EXIT
 END
 
 BEGIN X3VLOVE 

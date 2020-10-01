@@ -3409,6 +3409,28 @@ END
 ++ ~Then I won't argue. Let's find some privacy.~ DO ~IncrementGlobal("X3KalAppChange","GLOBAL",1)~ + 16.4
 ++ ~We aren't stopping. Irenicus is ahead and he will be mine.~ DO ~IncrementGlobal("X3KalAppChange","GLOBAL",-1)~ + 16.3
 
+
+CHAIN X3KalJ DSR
+~Oh. With what I last said...this makes this kind of awkward.~
+DO ~SetGlobal("X3DSRomance","GLOBAL",1)~
+= ~I said I wanted to be out of your shadow for a while, and now I'm right back in it. I don't know why, or what that means.~
+= ~I don't want this to be a choking bind though either. Let's just let things go rather than give anything a label. If things reform naturally, they do. If they don't, they don't. Simpler that way, don't you agree?~
+END 
+++ ~I agree. Let's just let the pieces fall as they will.~ + DSR.7
+++ ~If that's what you want, Kale.~ + DSR.7
+++ ~Uncommital as ever. Forget it.~ + DSR.8 
+
+CHAIN X3KalJ DSR.7
+~So now that awkwardness is out of the way, back to our adventures, eh? Just leave a bit of room for me to shine now and then, will ya?~
+DO ~SetGlobal("X3KalInterest","LOCALS",1)IncrementGlobal("X3KalAppChange","GLOBAL",3)~ 
+EXIT 
+
+CHAIN X3KalJ DSR.8 
+~All right, mate. I'll forget it. Better that way for us both.~
+DO ~SetGlobal("X3KalRomanceActive","GLOBAL",3)IncrementGlobal("X3KalAppChange","GLOBAL",-3)~
+EXIT 
+
+
 // Group Kiss from PID 
 CHAIN X3KalJ Group.Kiss 
 ~Um, but what about the rest of the party?~
@@ -3530,7 +3552,7 @@ IF ~~ DO ~SetGlobal("X3Break","LOCALS",4)LeaveParty()EscapeArea()~
 EXIT 
 END 
 
-IF ~IsGabber(Player1) CombatCounter(0) !Detect([ENEMY]) !GlobalGT("X3EmiApp","GLOBAL",44)~ THEN BEGIN Normal.PID 
+IF ~IsGabber(Player1) CombatCounter(0) !Detect([ENEMY]) !GlobalGT("X3KalApp","GLOBAL",44)~ THEN BEGIN Normal.PID 
 SAY ~Yeah? You want something, I bet.~  [KaleCom1]
 ++ ~I have a question for you.~ + Question.PID 
 +~NumInPartyGT(2)~+ ~Can I ask something personal?~ + PersonalGroup.PID 
@@ -3538,7 +3560,7 @@ SAY ~Yeah? You want something, I bet.~  [KaleCom1]
 ++ ~Never mind.~ EXIT 
 END 
 
-IF ~IsGabber(Player1) CombatCounter(0) !Detect([ENEMY]) GlobalGT("X3EmiApp","GLOBAL",44)~ THEN BEGIN High.PID2
+IF ~IsGabber(Player1) CombatCounter(0) !Detect([ENEMY]) GlobalGT("X3KalApp","GLOBAL",44)~ THEN BEGIN High.PID2
 SAY ~Well, heh, how's it going?~ [X3KWHIG] 
 ++ ~I have something I want to ask.~ + Question.PID 
 +~NumInPartyGT(2)~+ ~Can I ask something personal?~ + PersonalGroup.PID 
@@ -3724,6 +3746,7 @@ END
 IF ~~ PersonalGroup.PID 
 SAY ~Well, it's not just us, but ask anyway.~
 // Kale is Rest Invite #3. If the player invites a different NPC, then it will flag them for the rest invite instead, unless they ask Emily again before resting.
++~Global("X3KalRomanceActive","GLOBAL",0)Global("X3DSRomance","GLOBAL",0)Global("X3KalPartyBG1","GLOBAL",1)~+ ~Back in Dragonspear...is there still anything between us?~ + DSR
 +~!Global("X3KalRomanceActive","GLOBAL",2)~+ ~Mind spending some time together when we next rest somewhere safe?~ DO ~SetGlobal("X3RestInvite","GLOBAL",3)~ + ForceRestTalk.Normal 
 +~Global("X3KalRomanceActive","GLOBAL",2)~+ ~Mind spending some time together when we next rest somewhere safe?~ DO ~SetGlobal("X3RestInvite","GLOBAL",3)~ + ForceRestTalk.Love
 +~Global("X3KalRomanceActive","GLOBAL",2)~+ ~(Kiss him)~ + Group.Kiss
@@ -3735,6 +3758,7 @@ END
 
 IF ~~ PersonalAlone.PID 
 SAY ~Well, it's just the two of us. Ask away.~
++~Global("X3KalRomanceActive","GLOBAL",0)Global("X3DSRomance","GLOBAL",0)Global("X3KalPartyBG1","GLOBAL",1)~+ ~Back in Dragonspear...is there still anything between us?~ + DSR
 // Kale is Rest Invite #3. If the player invites a different NPC, then it will flag them for the rest invite instead, unless they ask Emily again before resting.
 +~!Global("X3KalRomanceActive","GLOBAL",2)~+ ~Mind spending some time together when we next rest somewhere safe? When it's a safe place, of course.~ DO ~SetGlobal("X3RestInvite","GLOBAL",3)~ + ForceRestTalk.Normal 
 +~Global("X3KalRomanceActive","GLOBAL",2)~+ ~Mind spending some time together when we next rest somewhere safe? When it's a safe place, of course.~ DO ~SetGlobal("X3RestInvite","GLOBAL",3)~ + ForceRestTalk.Love

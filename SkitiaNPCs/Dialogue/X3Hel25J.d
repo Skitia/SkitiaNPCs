@@ -51,8 +51,39 @@ I_C_T GORODR1 35 X3HELGORODR1-35
 == X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ THEN ~Traitors and cowards both! I nay fault <CHARNAME> if they saw fit to take your life.~
 END 
 
+//Pre-Saradush 
 
-// Volo's obligatory interjection in Saradush.
+I_C_T SAREV25A 0 X3HelSAREV25A
+== X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")Global("X3HelPartyBG1","GLOBAL",1)~ THEN ~I care not how he crawled here. I be ready to send him back.~
+END
+
+//Saradush 
+
+I_C_T SARKIS01 36 X3HelSARKIS01-36
+== X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~Nay anyone tells me where my wrath goes. But I be caring not if we take this rogue or the mage...my weapons be too dry as it is.~
+END
+
+
+I_C_T SARDW01 2 X3HelSARDW01-2
+== X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~Aye, that's the spirit. Let's beat them!~
+DO ~IncrementGlobal("X3HelApp","GLOBAL",4)
+DisplayStringNoNameDlg(Player1,@216)~ 
+END
+
+I_C_T SARBUL06 6 X3HelSARBUL06-6
+== X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~Should have smacked them, not fed the damn bully gold.~
+DO ~IncrementGlobal("X3HelApp","GLOBAL",-3)
+DisplayStringNoNameDlg(Player1,@203)~ 
+END
+
+I_C_T SARBHA01 1 X3HelSARBHA01-1
+== X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~I nay believe it. Too soft, nay a tough bone in yer body from the looks of ye.~
+END
+
+I_C_T SARMEL01 43 X3HelSARMEL01-43
+== X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~He could be twice as tall. He still will be falling from our fury in no time.~
+END
+
 
 EXTEND_TOP SARVOLO 9 #2
 + ~IsValidForPartyDialogue("X3Hel")~ + ~Tell me about Helga.~ + X3HelVoloBio1
@@ -65,6 +96,19 @@ EXTERN X3Hel25J X3HelVoloBio
 CHAIN X3Hel25J X3HelVoloBio
 ~Aye, that be bloody right, bard!~
 EXTERN SARVOLO 9
+
+//Marching Mountains 
+
+I_C_T HGNYA01 29 X3HelHGNYA01-29
+== X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~I would complain, but be more honorable for her to fight us than nay!~
+END
+
+// Amektrhan and Beyond 
+
+I_C_T BALTH 6 X3HelBalth6
+== X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~He does nay sound grateful. We be taking out threats to this grand land.~
+== X3Kal25J IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~Trying for all he knows. If they're anything like Yaga-shura, this is another near-suicidal task ahead of us.~
+END
 
 // Solar, final interjection at the Throne of Bhaal
 

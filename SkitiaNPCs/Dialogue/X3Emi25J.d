@@ -193,16 +193,96 @@ IF ~Global("X3EmiXBow","LOCALS",13)~ DO ~TakeItemReplace("X3XBow13","XBow13","X3
 
 // Quest-Based Interjects 
 I_C_T AMTGEN01 0 X3milyAMTGEN01H
-== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")Global("X3EmiHeir","GLOBAL",1)~ THEN ~Wait! I am Emily, the head of House Castella. <CHARNAME> has done nothing against our nation, I can assure it.~
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")Global("X3EmiHeir","GLOBAL",1)~ THEN ~Wait! I am Emily, the head of House Castilla. <CHARNAME> has done nothing against our nation, I can assure it.~
 == AMTGEN01 ~You are a liar and a traitor to Tethyr, and may join them in their fate.~
 END 
 
 I_C_T AMTGEN01 0 X3milyAMTGEN01NH
-== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")!Global("X3EmiHeir","GLOBAL",1)~ THEN ~Wait! I am Emily, formerly of House Castella. <CHARNAME> has done nothing against our nation, I can assure it.~
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")!Global("X3EmiHeir","GLOBAL",1)~ THEN ~Wait! I am Emily, formerly of House Castilla. <CHARNAME> has done nothing against our nation, I can assure it.~
 == AMTGEN01 ~You are an exile of your own house. Your word means *nothing*. Worse, you may even be a traitor to Tethyr by being by their side.~
 END 
 
+//Pre-Saradush 
+
+I_C_T SAREV25A 0 X3EmiSAREV25A
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")Global("X3EmiPartyBG1","GLOBAL",1)~ THEN ~Sarevok? What is he doing here?~
+END
+
+I_C_T SAREV25A 10 X3EmiSAREV25A
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~We could hear him out. It's not like he can hurt us. Not in his present form, anyway.~
+END
+
+
 //Saradush Interjects 
+
+A_T_T SARPROVF 0 ~!Global("X3RebRomanceActive","GLOBAL",2)!Global("X3EmiRomanceActive","GLOBAL",2)!Global("X3KalRomanceActive","GLOBAL",2)!Global("X3VieRomanceActive","GLOBAL",2)~ DO 0
+
+EXTEND_BOTTOM SARPROVF 0
+IF ~Global("X3EmiRomanceActive","GLOBAL",2)~ EXTERN X3Emi25J SARPROVF-Care
+END
+
+CHAIN X3Emi25J SARPROVF-Care 
+~Wait, what are y- no. You must be thinking there's more to this than the eye sees. Just be careful, <CHARNAME>.~
+EXTERN SARPROVF 1
+
+
+I_C_T SARKIS01 25 X3EmiSARKIS01-25
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~I don't like this. We should not help this sick man at all.~
+END
+
+I_C_T SARBAR01 7 X3EmiSARBAR01-7
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~Good for her. Especially in times like this. The city needs people like that.~
+END 
+
+I_C_T SARCNT01 14 X3EmiSARCNT01-14
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~Your heart is as black as night, <CHARNAME>. I oppose you in this. Anyone who agrees, stand with me!~
+DO ~LeaveParty()Enemy()~
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")!Global("X3RebRomanceActive","GLOBAL",2)~ THEN ~I do. I am sorry, <CHARNAME>, but I don't have the heart to watch you do this and then write this in my journal afterwards...I will fight you!~
+DO ~LeaveParty()Enemy()~
+== SARCNT01 ~Guards!~
+END 
+
+I_C_T SARTHF1 12 X3VieSARTHF1
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")!IsValidForPartyDialogue("X3Reb")~ THEN ~What? <CHARNAME>, you know it w- Wait, don't read it!~
+DO ~SetGlobal("X3EmiApp","GLOBAL",-6)DisplayStringNoNameDlg(Player1,@106)~
+== X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")Alignment("X3Vie",NEUTRAL_EVIL)~ THEN ~This will be sweet to observe.~
+DO ~SetGlobal("X3VieApp","GLOBAL",4)DisplayStringNoNameDlg(Player1,@516)~
+== SARTHF1 ~Freedom!~
+END 
+
+I_C_T ORPHAN1 1 X3EmiORPHAN1-1
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~Even if we weren't going to do anything, there's no need to be so rough to the child.~
+DO ~SetGlobal("X3EmiApp","GLOBAL",-6)DisplayStringNoNameDlg(Player1,@106)~
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~Oh, surely that was not called for. The poor child.~
+DO ~SetGlobal("X3RebAppChange","GLOBAL",-5)DisplayStringNoNameDlg(Player1,@406)~
+== ORPHAN1 ~Eek! Help me, help me!~
+END
+
+I_C_T ORPHAN2 3 X3EmiORPHAN2-3
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~You should find cover. There's no telling where or when another blast like that will hit.~
+DO ~SetGlobal("X3EmiApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@116)~
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~I am so glad we could keep that family together. I just hope they stay that way.~
+DO ~SetGlobal("X3RebAppChange","GLOBAL",5)DisplayStringNoNameDlg(Player1,@416)~
+== ORPHAN2 ~Thank you for everything!~
+END
+//Player has to be evil for this, but still adding this in...
+I_C_T SARTEM01 16 X3EmiSARTEM01-16
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~And what now, we'll...shoot her in the back? Think before you follow through with this.~
+DO ~SetGlobal("X3EmiApp","GLOBAL",-6)DisplayStringNoNameDlg(Player1,@106)~
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~We don't have to hurt her. Maybe there's another way in, isntead.~
+DO ~SetGlobal("X3EmiApp","GLOBAL",-4)DisplayStringNoNameDlg(Player1,@406)~
+== SARTEM01 ~Begone from this place. I will give you no aid.~
+END
+
+I_C_T SARBUL05 2 X3EmiSarbul05-2 
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~What are you doing, encouraging them like that? The elves did nothing to you!~
+DO ~SetGlobal("X3EmiApp","GLOBAL",-5)DisplayStringNoNameDlg(Player1,@106)~
+END
+
+
+I_C_T SARMEL01 7 X3EmiSARMEL01
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~I do recognize the buildings. This is definitely Saradush, minus the fighting and screaming.~
+END
 
 EXTEND_BOTTOM SARPRO01 11
 IF ~Global("X3EmiRomanceActive","GLOBAL",2)IsValidForPartyDialog("X3Emi") Gender(Player1,MALE)~  EXTERN X3Emi25J SarPro_No 
@@ -221,7 +301,7 @@ EXTERN SARPRO01 3
 
 CHAIN X3Emi25J SarPro_Break 
 ~Okay. If you want to throw away everything we had...do it. Be a jerk. But I'm not letting you crawl back to me ever. Know that well.~
-DO ~SetGlobal("X3EmiRomanceActive","GLOBAL",3)SetGlobal("X3EmiAppChange","GLOBAL",-18)DisplayStringNoNameDlg(Player1,@409)~
+DO ~SetGlobal("X3EmiRomanceActive","GLOBAL",3)SetGlobal("X3EmiAppChange","GLOBAL",-18)DisplayStringNoNameDlg(Player1,@109)~
 EXTERN SARPRO01 12 
 
 // Volo's obligatory interjection in Saradush.
@@ -243,6 +323,32 @@ EXTERN X3Emi25J X3EmiVoloBio
 CHAIN X3Emi25J X3EmiVoloBio
 ~I am honored, sir bard. I'll try to keep up your high image of me!~
 EXTERN SARVOLO 9
+
+//Marching Mountains 
+
+I_C_T HGKAR01 10 X3EmiHGKAR01-10
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~Are you that mad for just a few bit of gold and trinkets?~
+DO ~SetGlobal("X3EmiApp","GLOBAL",-9)DisplayStringNoNameDlg(Player1,@109)~
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~<CHARNAME>, we don't need his gold or things, don't hurt him!~
+DO ~SetGlobal("X3RebApp","GLOBAL",-7)DisplayStringNoNameDlg(Player1,@409)~
+== HGKAR01 ~Aaaah!~
+END
+
+I_C_T YAGCON 5 X3EmiYAGCON-5
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~What money or goods do you think she'll even have? Let's either release her, or let her be if you're not sure about her.~
+DO ~SetGlobal("X3RebApp","GLOBAL",-3)DisplayStringNoNameDlg(Player1,@403)~
+END
+
+// Amektrhan and Beyond 
+
+I_C_T BALTH 6 X3HelBalth6
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~He's right about them not being far...it's doubtful, but maybe this will change the crown's opinion on us.~
+== X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Please, don't be naive. Until this is completely over, your precious kingdom is no friend of ours.~
+END
+
+I_C_T BALTH 20 X3VieBalth20
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~You know, if people just said their intentions more plainly, this would be so much easier.~
+END
 
 // Solar, final interjections at the Throne of Bhaal and <CHARNAME>'s choice for the romanced protagonists.
 
@@ -580,7 +686,7 @@ EXIT
 // Romance Talks 
 CHAIN IF ~Global("X3EmiToBLoveTalk","LOCALS",2)~ THEN X3Emi25J LoveTalk1 
 ~I am becoming worried for my homeland, my love. People are already dying and suffering from the atrocities and chaos.~
-DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)SetGlobal("X3EmiToBLoveTalk","LOCALS",1)~
+DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiToBLoveTalk","LOCALS",1)~
 END 
 ++ ~That is the cost of this war between Bhaalspawn.~ + 1.2
 ++ ~We will help who we can, but my priority is to fulfill my destiny.~ + 1.1 
@@ -671,7 +777,7 @@ DO ~SetGlobal("X3LovedOne","GLOBAL",1)~
 EXTERN HGWRA01 24
 
 EXTEND_BOTTOM HGWRA01 24
-IF ~Global("X3EmiRomanceActive","GLOBAL",2)~ DO ~ClearAllActions() StartCutSceneMode() StartCutScene("X3EW1")~ EXIT
+IF ~Global("X3LovedOne","GLOBAL",1)~ DO ~ClearAllActions() StartCutSceneMode() StartCutScene("X3EW1")~ EXIT
 END
 
 BEGIN X3ELOVE 
@@ -750,7 +856,7 @@ EXIT
 // Saradush at rest. 
 CHAIN IF ~Global("X3EmiToBLoveTalk","LOCALS",4)~ THEN X3Emi25J LoveTalk2 
 ~I still can't believe it. Saradush...in ruins. The bodies...the blood...the people. My fellow countrymen and women...it's so hard to believe.~
-DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)SetGlobal("X3EmiToBLoveTalk","LOCALS",1)~
+DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiToBLoveTalk","LOCALS",1)~
 END 
 ++ ~It happened. I'm suprised you're not used to this by now.~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",-1)~ + 2.1 
 ++ ~It won't stop until there's only one of us left.~ + 2.1
@@ -816,6 +922,7 @@ EXIT
 // Wake Up Post LoveTalk#2
 CHAIN IF ~Global("X3EmiToBLoveTalk","LOCALS",6)~ THEN X3Emi25J LoveTalk3 
 ~Everytime I wake up next to you, I just like to watch your face. You have such a nice nose. And noses aren't often pretty. And eyelashes too.~
+DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiToBLoveTalk","LOCALS",1)~
 END 
 ++ ~Nose and eyelashes?~ + 3.1
 ++ ~It's not fair to admire me when I can't return the favor.~ + 3.2 
@@ -849,9 +956,9 @@ CHAIN X3Emi25J 3.5
 ~Right, the world won't just pause forever, and the others I think are stirring. Still, I can't wait for our next rest already.~
 EXIT 
 
-CHAIN IF ~Global("X3EmiToBLoveTalk","LOCALS",8)~ THEN X3Emi25J LoveTalk4 
+CHAIN IF ~Global("X3EmiToBLoveCrown","LOCALS",2)~ THEN X3Emi25J LoveTalk4 
 ~Things are getting even worse. The Tethyrian crown declaring you a threat? I don't know what to think anymore.~
-DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)SetGlobal("X3EmiToBLoveTalk","LOCALS",1)~
+DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiToBLoveCrown","LOCALS",1)~
 END 
 ++ ~Can you blame them? With everything that is happening because of the Bhaalspawn, their reaction is understandable.~ + 4.1
 ++ ~There are very few people we can trust now.~ + 4.1
@@ -900,9 +1007,9 @@ EXTERN X3Emi25J 4.8
 
 // Love Talk #5
 
-CHAIN IF ~Global("X3EmiToBLoveTalk","LOCALS",10)~ THEN X3Emi25J LoveTalk5 
+CHAIN IF ~Global("X3EmiToBLoveTalk","LOCALS",8)~ THEN X3Emi25J LoveTalk5 
 ~I had such a pleasant dream. It was odd but welcome, given everything going on lately that was stressing me. So soothing and hopeful and bright in this bit of darkness.~
-DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)SetGlobal("X3EmiToBLoveTalk","LOCALS",1)~
+DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiToBLoveTalk","LOCALS",1)~
 END  
 ++ ~Oh? Tell me about it.~ + 5.2 
 ++ ~I imagine all of your dreams are odd.~ + 5.1
@@ -987,9 +1094,9 @@ EXIT
 
 // Romance Talk 6.
 
-CHAIN IF ~Global("X3EmiToBLoveTalk","LOCALS",12)~ THEN X3Emi25J LoveTalk6 
+CHAIN IF ~Global("X3EmiToBLoveTalk","LOCALS",10)~ THEN X3Emi25J LoveTalk6 
 ~It's sad we had to kill Balthazar. I didn't like his monks much...but the man's philosophy and beliefs...he seemed a good man. It's just a shame he was so stubborn.~
-DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)SetGlobal("X3EmiToBLoveTalk","LOCALS",1)~
+DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiToBLoveTalk","LOCALS",1)~
 END 
 ++ ~I wish we could have worked together.~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",1)~ + 6.1 
 ++ ~We had little choice in the matter.~ + 6.1 
@@ -1021,9 +1128,9 @@ EXIT
 
 // Romance Talk 7
 
-CHAIN IF ~Global("X3EmiToBLoveTalk","LOCALS",14)~ THEN X3Emi25J LoveTalk7
+CHAIN IF ~Global("X3EmiToBLoveTalk","LOCALS",12)~ THEN X3Emi25J LoveTalk7
 ~...So this is really it. Or close to it, isn't it?~
-DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)SetGlobal("X3EmiToBLoveTalk","LOCALS",1)~
+DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiToBLoveTalk","LOCALS",1)~
 END 
 ++ ~It is. Are you ready?~ + 7.1 
 ++ ~One way or another.~ + 7.2 
@@ -1437,7 +1544,7 @@ END
 
 
 IF ~~ PMother.1  
-SAY ~Father was pushed to lead House Castella, as my grandfather was become unwell and sick, and the clerics could not cure it. And my family could not accept a non-human wife.~
+SAY ~Father was pushed to lead House Castilla, as my grandfather was become unwell and sick, and the clerics could not cure it. And my family could not accept a non-human wife.~
 = ~And so because she loved him, and wished him the best, she left without warning. She returned only to birth me in the castle, and leave me with him and his new wife, because she couldn't take me with her on the road.~
 = ~My father was always bitter about that. I think he just wished a way where she would have fought for him to try to still be with her. I think he would have said yes.~
 ++ ~Why isn't your family okay with an elf?~ + PMother.3 
@@ -1494,7 +1601,7 @@ END
 
 IF ~~ Heir.AftermathWon
 SAY ~It's starting to settle in. I'll have so much responsibility soon. I'm forming some ideas and plans I'd like to try to enact when I return, and people to talk to for advice and assistance. I want to lead right and well.~
-= ~But right now my devotion is to your goals and cause. House Castella will wait.~
+= ~But right now my devotion is to your goals and cause. House Castilla will wait.~
 ++ ~Let's talk about something else.~ + main.PID 
 ++ ~Let's keep moving.~ EXIT 
 END 

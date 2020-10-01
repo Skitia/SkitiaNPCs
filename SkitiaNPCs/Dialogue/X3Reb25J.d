@@ -75,7 +75,74 @@ I_C_T GORODR1 19 X3RebGORODR1-19
 == X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ THEN ~The imprisoned one...I can't recall any mention of this in the records we had in our temple. I'm afraid I can't offer any insight of my own.~
 END 
 
+//Pre-Saradush 
+
+I_C_T SAREV25A 0 X3RebSAREV25A
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")Global("X3RebPartyBG1","GLOBAL",1)~ THEN ~Oh, I remember him. Surely what he wants can be nothing good.~
+END
+
 //Saradush Interjects 
+
+EXTEND_BOTTOM SARPROVF 0
+IF ~Global("X3RebRomanceActive","GLOBAL",2)~ EXTERN X3Reb25J SARPROVF-Care
+END
+
+CHAIN X3Reb25J SARPROVF-Care 
+~I would be heart broken if I did not know your true intentions. Still, please be careful.~
+EXTERN SARPROVF 1
+
+EXTEND_BOTTOM SARPROVM 0
+IF ~Global("X3RebRomanceActive","GLOBAL",2)~ EXTERN X3Reb25J SARPROVF-Care
+END
+
+CHAIN X3Reb25J SARPROVM-Care 
+~I would be heart broken if I did not know your true intentions. Still, please be careful.~
+EXTERN SARPROVM 1
+
+
+I_C_T SARCNT01 19 X3RebSARCNT01-19
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~I am so glad we could reunite her with her son. Mother and son...they should never be torn apart like that.~
+DO ~SetGlobal("X3RebApp","GLOBAL",5)DisplayStringNoNameDlg(Player1,@416)~ 
+== SARCNT01 ~May the gods bless you for all you have done for me.~
+END 
+
+I_C_T SARCNT01 20 X3RebSARCNT01-20
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")!Global("X3RebQuest","GLOBAL",15)~ THEN ~I am so sorry, miss. I know what you are going through and-~
+== SARCNT01 ~I do not wish your sympathy. Only your lack of company.~
+END 
+
+I_C_T ORPHAN1 1 X3EmiORPHAN1-1
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")IsValidForPartyDialogue("X3Emi")~ THEN ~Oh, surely that was not called for. The poor child.~
+DO ~SetGlobal("X3RebApp","GLOBAL",-5)DisplayStringNoNameDlg(Player1,@406)~
+== ORPHAN1 ~Eek! Help me, help me!~
+END
+
+I_C_T ORPHAN2 3 X3EmiORPHAN2-3
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~I am so glad we could keep that family together. I just hope they stay that way.~
+DO ~SetGlobal("X3RebApp","GLOBAL",5)DisplayStringNoNameDlg(Player1,@416)~
+== ORPHAN2 ~Thank you for everything!~
+END
+
+I_C_T SARTHF2 6 X3RebSARTHF2-6 
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~Oh, surely there wasn't any need for that, was there?~
+DO ~SetGlobal("X3RebApp","GLOBAL",-2)DisplayStringNoNameDlg(Player1,@403)~
+END
+
+I_C_T SARTHF1 12 X3RebSARTHF1-12
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~Oh no. He'll...~
+DO ~SetGlobal("X3RebApp","GLOBAL",-4)DisplayStringNoNameDlg(Player1,@406)~
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~What? <CHARNAME>, you know it w- Wait, don't read it!~
+DO ~SetGlobal("X3EmiApp","GLOBAL",-6)DisplayStringNoNameDlg(Player1,@106)~
+== X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")Alignment("X3Vie",NEUTRAL_EVIL)~ THEN ~This will be sweet to observe.~
+DO ~SetGlobal("X3VieApp","GLOBAL",4)DisplayStringNoNameDlg(Player1,@516)~
+== SARTHF1 ~Freedom!~
+END 
+
+I_C_T SARTEM01 16 X3EmiSARTEM01-16
+== X3RebJ IF ~!IsValidForPartyDialogue("X3Emi")IsValidForPartyDialogue("X3Reb")~ THEN ~We don't have to hurt her. Maybe there's another way in, isntead.~
+DO ~SetGlobal("X3RebApp","GLOBAL",-4)DisplayStringNoNameDlg(Player1,@406)~
+== SARTEM01 ~Begone from this place. I will give you no aid.~
+END
 
 EXTEND_BOTTOM SARPRO01 11
 IF ~Global("X3RebRomanceActive","GLOBAL",2)IsValidForPartyDialog("X3Reb") Gender(Player1,MALE)~  EXTERN X3Reb25J SarPro_No 
@@ -120,6 +187,29 @@ EXTERN X3Reb25J X3RebVoloBio
 CHAIN X3Reb25J X3RebVoloBio
 ~You are so talented with words, Master Volo. I'm honored to come from your lips at all!~
 EXTERN SARVOLO 9
+
+//Marching Mountains 
+
+I_C_T HGKAR01 10 X3RebHGKAR01-10
+== X3Emi25J IF ~!IsValidForPartyDialogue("X3Emi")IsValidForPartyDialogue("X3Reb")~ THEN ~<CHARNAME>, we don't need his gold or things, don't hurt him!~
+DO ~SetGlobal("X3RebApp","GLOBAL",-7)DisplayStringNoNameDlg(Player1,@409)~
+== HGKAR01 ~Aaaah!~
+END
+
+I_C_T HGNYA01 29 X3RebHGNYA01-29
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~Oh, I can't blame her change of heart. I am sorry we have to do this.~
+END
+
+// Amektrhan 
+
+I_C_T BALTH 7 X3RebBalth7
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ ~Oh, I am sure we won't be any trouble, but why does he say it like that?~
+END 
+
+I_C_T BALTH 23 X3RebBalth23
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~That sounds almost noble. Surely though, <CHARNAME> can be spared all of this?~
+== X3Kal25J IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~Pfeh, noble? The guy's lost his mind if he thinks killing himself will fix everything. Could be another left we're all missing for all we know.~
+END
 
 // Solar, final interjections at the Throne of Bhaal and <CHARNAME>'s choice for the romanced protagonists.
 
@@ -246,7 +336,7 @@ DO ~SetGlobal("X3LovedOne","GLOBAL",3)~
 EXTERN HGWRA01 24
 
 EXTEND_BOTTOM HGWRA01 24
-IF ~Global("X3RebRomanceActive","GLOBAL",2)~ DO ~ClearAllActions() StartCutSceneMode() StartCutScene("X3RW1")~ EXIT
+IF ~Global("X3LovedOne","GLOBAL",3)~ DO ~ClearAllActions() StartCutSceneMode() StartCutScene("X3RW1")~ EXIT
 END
 
 BEGIN X3RLOVE 

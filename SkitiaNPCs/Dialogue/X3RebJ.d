@@ -4064,7 +4064,25 @@ END
 IF ~~ DO ~GiveItemCreate("X3RFER",Player1,0,0,0)DestroySelf()~ UNSOLVED_JOURNAL @32
 EXIT
 
+CHAIN X3RebJ DSR
+~I...thought my words in Dragonspear were the end of it. Maybe I was too harsh with my words then.~
+DO ~SetGlobal("X3DSRomance","GLOBAL",1)~
+= ~I like you, <CHARNAME>. I do. But last time we got close things happened and...I don't know if I am ready.~
+= ~I hope you understand. It's not...a never. But it's not a now. Let's see what happens?~
+END 
+++ ~I understand, Recorder. Let's see what happens.~ + DSR.7
+++ ~As you wish.~ + DSR.7
+++ ~No, actually. I have no interest in waiting around for you.~ + DSR.8 
 
+CHAIN X3RebJ DSR.7
+~Thank you, <CHARNAME>. I do like you. Do know that, please, despite all of this, I do like you a lot.~
+DO ~SetGlobal("X3RebInterest","LOCALS",1)IncrementGlobal("X3RebAppChange","GLOBAL",4)~ 
+EXIT 
+
+CHAIN X3RebJ DSR.8 
+~I am sorry for making you angry. Let's just...not talk about this again.~
+DO ~SetGlobal("X3RebRomanceActive","GLOBAL",3)IncrementGlobal("X3RebAppChange","GLOBAL",-4)~
+EXIT 
 
 
 // Group Kiss from PID 
@@ -4414,6 +4432,7 @@ END
 
 IF ~~ PersonalGroup.PID 
 SAY ~It is not just the two of us, but please, ask.~
++~Global("X3RebRomanceActive","GLOBAL",0)!Alignment(Player1,MASK_EVIL)Global("X3DSRomance","GLOBAL",0)Global("X3RebPartyBG1","GLOBAL",1)~+ ~Back in Dragonspear...is there still anything between us?~ + DSR
 // Recorder is Rest Invite #4. If the player invites a different NPC, then it will flag them for the rest invite instead, unless they ask them again before resting.
 +~!Global("X3RebRomanceActive","GLOBAL",2)~+ ~I'd like to spend time together when we next make to rest.~ DO ~SetGlobal("X3RestInvite","GLOBAL",4)~ + ForceRestTalk.Normal 
 +~Global("X3RebRomanceActive","GLOBAL",2)~+ ~I'd like to spend time together when we next make to rest.~ DO ~SetGlobal("X3RestInvite","GLOBAL",4)~ + ForceRestTalk.Love
@@ -4426,6 +4445,7 @@ END
 
 IF ~~ PersonalAlone.PID 
 SAY ~It is just the two of us. Please, ask.~
++~Global("X3RebRomanceActive","GLOBAL",0)!Alignment(Player1,MASK_EVIL)Global("X3DSRomance","GLOBAL",0)Global("X3RebPartyBG1","GLOBAL",1)~+ ~Back in Dragonspear...is there still anything between us?~ + DSR
 // Recorder is Rest Invite #4. If the player invites a different NPC, then it will flag them for the rest invite instead, unless they ask them again before resting.
 +~!Global("X3RebRomanceActive","GLOBAL",2)~+ ~I'd like to spend time together when we next make to rest.~ DO ~SetGlobal("X3RestInvite","GLOBAL",4)~ + ForceRestTalk.Normal 
 +~Global("X3RebRomanceActive","GLOBAL",2)~+ ~I'd like to spend time together when we next make to rest.~ DO ~SetGlobal("X3RestInvite","GLOBAL",4)~ + ForceRestTalk.Love

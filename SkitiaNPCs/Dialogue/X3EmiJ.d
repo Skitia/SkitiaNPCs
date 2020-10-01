@@ -2025,13 +2025,14 @@ EXTERN X3EmiJ Q1.1
 CHAIN X3EmiJ Q1.5 
 ~Sure, ask away.~
 END 
-+~!Alignment(Player1,MASK_EVIL)Gender(Player1,MALE)Global("X3EmiPartyBG1","GLOBAL",1)~+ ~Back in Dragonspear...is there still anything between us?~ + Q1.6 
++~!Alignment(Player1,MASK_EVIL)Global("X3DSRomance","GLOBAL",0)Gender(Player1,MALE)Global("X3EmiPartyBG1","GLOBAL",1)~+ ~Back in Dragonspear...is there still anything between us?~ + Q1.6 
 +~Global("X3EmiPartyBG1","GLOBAL",1)~+ ~What were you up to since we separated?~ + Q1.10 
 ++ ~Do you really want to be lead your house?~ + Q1.11
 ++ ~Nevermind. Let's go.~ + Q1.Exit 
 
 CHAIN X3EmiJ Q1.6 
 ~I was...dreading this question.~
+DO ~SetGlobal("X3DSRomance","GLOBAL",1)~
 == X3EmiJ ~I enjoyed everything that happened with us, but there's just so much going on and it's been a while. I don't feel comfortable just winding back the clock, not with this stress of succession.~
 == X3EmiJ ~Maybe when everything is sorted and I can think again...and that just makes me think too much. I'm sorry, <CHARNAME>.~
 END 
@@ -2230,7 +2231,7 @@ EXTERN X3EmiJ bq.6
 // Player killed Thomas 
 CHAIN IF ~Global("X3EmiQuest","GLOBAL",8)Dead("X3EBRO")!Global("X3EmiDuel","GLOBAL",1)~ THEN X3EmiJ Thomas_killed 
 ~Thank goodness you are okay, <CHARNAME>. Though seeing Thomas killed...I wish it could have ended differently.~ [X3Blank]
-DO ~AddJournalEntry(@19,QUEST_DONE)SetGlobal("X3EmiQuest","GLOBAL",10)SetGlobal("X3EmiAppChange","GLOBAL",6)AddexperienceParty(29750)~
+DO ~AddJournalEntry(@19,QUEST_DONE)SetGlobal("X3EmiHeir","GLOBAL",1)SetGlobal("X3EmiQuest","GLOBAL",10)SetGlobal("X3EmiAppChange","GLOBAL",6)AddexperienceParty(29750)~
 END 
 +~Global("X3EmiRomanceActive","GLOBAL",2)~+ ~(Embrace her)~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",1)~ + embrace 
 ++ ~I took no joy in it, but it was necessary.~ + heir_now 
@@ -2238,7 +2239,7 @@ END
 // Player spared Thomas 
 CHAIN IF ~Global("X3EmiQuest","GLOBAL",8)!Dead("X3EBRO")!Global("X3EmiDuel","GLOBAL",1)~ THEN X3EmiJ Thomas_spared 
 ~Thank goodness you are okay, <CHARNAME>. I'm glad you spared Thomas, even if he wouldn't speak to me afterwards.~ [X3Blank]
-DO ~AddJournalEntry(@19,QUEST_DONE)SetGlobal("X3EmiQuest","GLOBAL",10)AddexperienceParty(29750)SetGlobal("X3EmiAppChange","GLOBAL",7)~
+DO ~AddJournalEntry(@19,QUEST_DONE)SetGlobal("X3EmiHeir","GLOBAL",1)SetGlobal("X3EmiQuest","GLOBAL",10)AddexperienceParty(29750)SetGlobal("X3EmiAppChange","GLOBAL",7)~
 END 
 ++ ~He needs time. Perhaps your relationship can mend when things are over.~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",1)~ + heir_now
 ++ ~He finally understood that he let his anger over-rule his reason.~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",1)~ + heir_now
@@ -2309,7 +2310,7 @@ EXIT
 
 CHAIN IF ~Global("X3EmiQuest","GLOBAL",8)Global("X3EmiDuel","GLOBAL",1)~ THEN X3EmiJ Emily_won
 ~It doesn't feel as grand as I thought it would, winning. But...it's done.~ [X3Blank]
-DO ~SetGlobal("X3EmiDuel","GLOBAL",2)SetGlobal("X3EmiAppChange","GLOBAL",6)AddJournalEntry(@19,QUEST_DONE)SetGlobal("X3EmiQuest","GLOBAL",10)AddexperienceParty(29750)~ // To turn off Emily's permanent death.
+DO ~SetGlobal("X3EmiDuel","GLOBAL",2)SetGlobal("X3EmiHeir","GLOBAL",1)SetGlobal("X3EmiAppChange","GLOBAL",6)AddJournalEntry(@19,QUEST_DONE)SetGlobal("X3EmiQuest","GLOBAL",10)AddexperienceParty(29750)~ // To turn off Emily's permanent death.
 END 
 +~Global("X3EmiRomanceActive","GLOBAL",2)~+ ~(Embrace her)~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",2)~ + embrace 
 ++ ~You fought well, Emily. Congratulations.~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",2)~ + traveling_helped 
@@ -4808,6 +4809,7 @@ END
 
 IF ~~ PersonalGroup.PID 
 SAY ~Well, we aren't alone but...what did you want to ask?~
++~Global("X3EmiRomanceActive","GLOBAL",0)!Alignment(Player1,MASK_EVIL)Global("X3DSRomance","GLOBAL",0)Gender(Player1,MALE)Global("X3EmiPartyBG1","GLOBAL",1)~+ ~Back in Dragonspear...is there still anything between us?~ + Q1.6 
 // Emily is Rest Invite #1. If the player invites a different NPC, then it will flag them for the rest invite instead, unless they ask Emily again before resting.
 +~!Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Can we spend some time together when we next make for rest somewhere safe?~ DO ~SetGlobal("X3RestInvite","GLOBAL",1)~ + ForceRestTalk.Normal 
 +~Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Can we spend some time together when we next make for rest somewhere safe?~ DO ~SetGlobal("X3RestInvite","GLOBAL",1)~ + ForceRestTalk.Love
@@ -4820,6 +4822,7 @@ END
 
 IF ~~ PersonalAlone.PID 
 SAY ~Well, it's just the two of us. What did you want to ask?~
++~Global("X3EmiRomanceActive","GLOBAL",0)!Alignment(Player1,MASK_EVIL)Global("X3DSRomance","GLOBAL",0)Gender(Player1,MALE)Global("X3EmiPartyBG1","GLOBAL",1)~+ ~Back in Dragonspear...is there still anything between us?~ + Q1.6 
 // Emily is Rest Invite #1. If the player invites a different NPC, then it will flag them for the rest invite instead, unless they ask Emily again before resting.
 +~!Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Can we spend some time together when we next make for rest somewhere safe?~ DO ~SetGlobal("X3RestInvite","GLOBAL",1)~ + ForceRestTalk.Normal 
 +~Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Can we spend some time together when we next make for rest somewhere safe?~ DO ~SetGlobal("X3RestInvite","GLOBAL",1)~ + ForceRestTalk.Love

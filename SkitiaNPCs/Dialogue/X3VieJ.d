@@ -1659,7 +1659,7 @@ END
 
 CHAIN IF ~Global("X3VTempleTalk","LOCALS",2)~ THEN X3VieJ TempleTalk
 ~Why does this human city not even have a temple dedicated to Mystra? I miss Evermeet's temples to the Seldarine, but I had hoped at the very least Mystra would have representation.~
-DO ~IncrementGlobal("X3VieTalk","LOCALS",1)SetGlobal("X3VieAppChange","GLOBAL",6)~
+DO ~IncrementGlobal("X3VTempleTalk","LOCALS",1)SetGlobal("X3VieAppChange","GLOBAL",6)~
 END 
 ++ ~Considering their distaste for magic, I would be suprised if they did.~ + TT.2
 ++ ~We can look for one, if you like.~  DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + TT.1
@@ -3997,6 +3997,27 @@ CHAIN X3VieJ 18.3
 ~Good. I will give him a thousand stabs and shadow bolts, whatever it takes to put him down.~
 EXIT 
 
+CHAIN X3VieJ DSR
+~You speak of Dragonspear? I am not the same person as I was then, not so weak and desiring to fill that hole the loss of my homeland created.~
+DO ~SetGlobal("X3DSRomance","GLOBAL",1)~
+= ~And yet you were sweet and treated me well. You still treat me well. I am...quite grateful for that.~
+= ~But I cannot just give you what you desire. Time has passed. Circumstances are different...but if you are truly insistent, let us wait and see if we still even have chemistry.~
+= ~I think it is foolish, love makes you weaker, more distracted. But you are quite stubborn.~
+END 
+++ ~That I am. I'd like to see what happens.~ + DSR.7
+++ ~ I'll wait for now.~ + DSR.7
+++ ~If you think it is foolish, don't bother. I'll not waste time.~ + DSR.8 
+
+CHAIN X3VieJ DSR.7
+~Hrmph. As stubborn as I said you were. I will admit I am flattered, and intrigued and e- ugh. I will admit nothing more!~
+DO ~SetGlobal("X3VieInterest","LOCALS",1)IncrementGlobal("X3VieAppChange","GLOBAL",2)~ 
+EXIT 
+
+CHAIN X3VieJ DSR.8 
+~Good. This is the best for us all, then.~
+DO ~SetGlobal("X3VieRomanceActive","GLOBAL",3)IncrementGlobal("X3VieAppChange","GLOBAL",-2)~
+EXIT 
+
 // Group Kiss from PID 
 CHAIN X3VieJ Group.Kiss 
 ~And do you really enjoy having an audience?~
@@ -4293,6 +4314,7 @@ END
 
 IF ~~ PersonalGroup.PID 
 SAY ~Well we don't have privacy. But you can ask.~
++~Global("X3VieRomanceActive","GLOBAL",0)Global("X3DSRomance","GLOBAL",0)Global("X3ViePartyBG1","GLOBAL",1)~+ ~Back in Dragonspear...is there still anything between us?~ + DSR
 // Vienxay is Rest Invite #5. If the player invites a different NPC, then it will flag them for the rest invite instead, unless they ask them again before resting.
 +~!Global("X3VieRomanceActive","GLOBAL",2)~+ ~I'd like to spend time together when we next rest in a safe place~ DO ~SetGlobal("X3RestInvite","GLOBAL",5)~ + ForceRestTalk.Normal 
 +~Global("X3VieRomanceActive","GLOBAL",2)~+ ~I'd like to spend time together when we next rest in a safe place~ DO ~SetGlobal("X3RestInvite","GLOBAL",5)~ + ForceRestTalk.Love
@@ -4305,6 +4327,7 @@ END
 
 IF ~~ PersonalAlone.PID 
 SAY ~Well it is just you and me. Speak.~
++~Global("X3VieRomanceActive","GLOBAL",0)Global("X3DSRomance","GLOBAL",0)Global("X3ViePartyBG1","GLOBAL",1)~+ ~Back in Dragonspear...is there still anything between us?~ + DSR
 // Vienxay is Rest Invite #5. If the player invites a different NPC, then it will flag them for the rest invite instead, unless they ask them again before resting.
 +~!Global("X3VieRomanceActive","GLOBAL",2)~+ ~I'd like to spend time together when we next rest in a safe place.~ DO ~SetGlobal("X3RestInvite","GLOBAL",5)~ + ForceRestTalk.Normal 
 +~Global("X3VieRomanceActive","GLOBAL",2)~+ ~I'd like to spend time together when we next rest in a safe place~ DO ~SetGlobal("X3RestInvite","GLOBAL",5)~ + ForceRestTalk.Love
