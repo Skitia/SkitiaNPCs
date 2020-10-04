@@ -95,7 +95,6 @@ PartyRested()
 RealGlobalTimerExpired("X3HelgaQuestTimerToB","GLOBAL")
 See(Player1)
 !See([ENEMY])
-!Range([NEUTRAL],10)
 CombatCounter(0)
 Global("X3HelToBQuest","GLOBAL",1)
 THEN RESPONSE #100 

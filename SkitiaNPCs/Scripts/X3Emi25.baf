@@ -119,6 +119,20 @@ IF
 THEN RESPONSE #100 
 	IncrementGlobal("X3EmiToBLoveTalk","LOCALS",1)	
 END 
+//LoveTalk #5(3 Technically) 
+IF 
+	PartyRested()
+	RealGlobalTimerExpired("X3EmiToBLoveTimer","GLOBAL")
+	Global("X3EmiRomanceActive","GLOBAL",2)	
+    IsValidForPartyDialogue(Myself)
+	IsValidForPartyDialogue(Player1)
+    See(Player1)
+    CombatCounter(0)
+    !See([ENEMY])
+	Global("X3EmiToBLoveTalk","LOCALS",7)	
+THEN RESPONSE #100 
+	IncrementGlobal("X3EmiToBLoveTalk","LOCALS",1)	
+END 
 
 //Post Hearing of Crown Declaration 
 IF 
