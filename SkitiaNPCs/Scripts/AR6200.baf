@@ -132,7 +132,7 @@ IF
 Global("StartEndBios","AR6200",1)
 InParty("X3Kal")
 !Global("X3KalRomanceActive","GLOBAL",2)
-!Global("X3KalMazzyEnd","GLOBAL",1)
+Global("X3KalMazzyEnd","GLOBAL",1)
 Global("X3KalBio","GLOBAL",0)
 THEN
 RESPONSE #100
