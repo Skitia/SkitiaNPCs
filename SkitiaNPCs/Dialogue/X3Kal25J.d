@@ -148,6 +148,27 @@ I_C_T HGNYA01 15 X3KalHGNYA01-15
 == X3Kal25J IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~What are they, undead? Nah, they don't look like it, but how do these blokes live without their heart? It's making my head hurt.~
 END
 
+// Amkethran and Beyond
+
+I_C_T AMMAYOR 5 X3KalAMMAYOR-5
+== X3Kal25J IF ~IsValidForPartyDialogue("X3Kal")!IsValidForPartyDialogue("X3Vie")~ THEN ~Heh, this is why we halflings live on the motto "Don't get caught", if we're going to walk the crime lines.~
+END
+
+I_C_T AMMONK02 3 X3KalAMMONK02-3
+== X3Kal25J IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~Damn it's nice to be known. Although not sure if I'm not sure if that's so by these guys.~
+END
+
+I_C_T AMSAEMON 0 X3KalAMSAEMON2
+== X3Kal25J IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~You got to be kidding me. This guy, again?~
+END
+
+I_C_T AMSMITH 16 X3KalAMSMITH-16
+== X3Kal25J IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~Criminy. Those pants you have been carrying around all this time actually will be useful? I'd have never guessed.~
+END 
+
+I_C_T BAZEYE01 9 X3KalBAZEYE9
+== X3Kal25J IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~Pfft, I've had good cheese. Smelled good cheese. This? Not even close.~
+END 
 
 // Solar, final interjections at the Throne of Bhaal and <CHARNAME>'s choice for the romanced protagonists.
 

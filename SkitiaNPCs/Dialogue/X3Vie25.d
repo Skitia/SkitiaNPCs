@@ -11,7 +11,7 @@ SAY ~It is done. You will not like what I have to say.~ [] // Use the It is done
 END 
 
 IF ~~ ScryDead 
-SAY ~I am afraid so. Dead under a rubble of the tower. With the number of bolts I saw in him, he went down fighting hard.~
+SAY ~Dead under a rubble of the tower. With the number of bolts I saw in him, he went down fighting hard at least.~
 = ~Now you could tell the dwarf this, break her heart, and have her moping for the rest of our adventure for all I care.~
 = ~Or for making her at least continue to be marginally useful, you could lie to her and say I saw him alive. I'm sure you can see the benefits. It is your choice.~
 ++ ~I am not going to lie to her. Why would you even suggest it?~ + ScryDead.1

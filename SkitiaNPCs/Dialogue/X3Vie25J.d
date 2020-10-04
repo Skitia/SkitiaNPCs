@@ -173,12 +173,53 @@ I_C_T HGNYA01 29 X3VieHGNYA01-29
 == X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Hrmph. I would find this amusing, if she wasn't preparing to attack us, the fool.~
 END
 
-//
+//Amkethran and Beyond
 
 I_C_T BALTH 20 X3VieBalth20
 == X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~I am tired of us being the pawns of all of these humans! All the better that these games of yours are coming to an end, Balthazar.~
 == X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~The elf has the right of it, and that nay please me to say.~
 END
+
+I_C_T AMMAYOR 5 X3VIEAMMAYOR-5
+== X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~If you are going to steal, either don't get caught, run quickly, or fight hard.~
+END
+
+I_C_T AMASANA 3 X3VieAMASANA-3
+== X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")!IsValidForPartyDialogue("X3Reb")~ THEN ~Steal better next time. Noble deaths serve nothing.~
+== AMASANA ~I will heed your advice.~
+END
+
+I_C_T AMSAEMON 0 X3VieAMSAEMON2
+== X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Whatever happens to this foolish human is hardly our concern.~
+END
+
+I_C_T AMCLER01 8 X3HelAMCLER01-8
+== X3Vie25J IF ~Alignment("X3Vie",NEUTRAL_EVIL)IsValidForPartyDialogue("X3Vie")!IsValidForPartyDialogue("X3Emi")!IsValidForPartyDialogue("X3Hel")~ THEN ~Hrmph. They can help themselves. Our gold is our gold for a reason.~
+DO ~IncrementGlobal("X3VieApp","GLOBAL",-4)
+DisplayStringNoNameDlg(Player1,@506)~ 
+== AMCLER01 ~Farewell!~
+END 
+
+I_C_T AMSMITH 16 X3VieAMSMITH-16
+== X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Finally, we are rid of those idiotic things.~
+END 
+
+I_C_T MARLOWE 52 X3EmiMARLOWE-52 
+== X3Vie25J IF ~Alignment("X3Vie",NEUTRAL_EVIL)IsValidForPartyDialogue("X3Vie")!IsValidForPartyDialogue("X3Reb")!IsValidForPartyDialogue("X3Emi")~ THEN ~He deserved all of this. And this item may have power. A worthwhile opportunity.~
+DO ~IncrementGlobal("X3VieApp","GLOBAL",6)
+DisplayStringNoNameDlg(Player1,@516)~ 
+== MARLOWE ~I hope to never meet any of you again!~
+END 
+
+I_C_T BAZEYE01 16 X3VieBAZEYE16
+== X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Perfect. Let us free them and then they can repay their debt by doing this for us.~
+END 
+
+I_C_T BAZPAT01 16 X3VieBAZPAT01-16
+== X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Ugh. No wonder why they were so easily defeated. They lack any sense.~
+== X3Kal25J IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~You don't have to tell me, Vienxay. At least I knew what I was doing when I started out.~
+== X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~Bah. Ye were nay any better in the green days.~
+END 
 
 // Solar, final interjections at the Throne of Bhaal and <CHARNAME>'s choice for the romanced protagonists.
 
@@ -1184,7 +1225,7 @@ SAY ~It is done. You will not like what I have to say.~ [] // Use the It is done
 END 
 
 IF ~~ ScryDead 
-SAY ~I am afraid so. Dead under a rubble of the tower. With the number of bolts I saw in him, he went down fighting hard.~
+SAY ~Dead under a rubble of the tower. With the number of bolts I saw in him, he went down fighting hard at least.~
 = ~Now you could tell the dwarf this, break her heart, and have her moping for the rest of our adventure for all I care.~
 = ~Or for making her at least continue to be marginally useful, you could lie to her and say I saw him alive. I'm sure you can see the benefits. It is your choice.~
 ++ ~I am not going to lie to her. Why would you even suggest it?~ + ScryDead.1

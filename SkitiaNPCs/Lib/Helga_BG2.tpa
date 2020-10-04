@@ -86,7 +86,7 @@ COPY_EXISTING ~%MOD_FOLDER%/Items/x3ERing.itm~ ~override/x3ERing.itm~
 SAY NAME1 ~Engagement Ring~
 SAY NAME2 ~Engagement Ring~
 SAY DESC ~Rings like this are often given to a lover to propose marriage. Weaved in gold and with a heart signet, it could be a suiting gift for someone to love if you are willing to commit.
-More expensive engagement rings often contain a few enchantments to ensure the recipient is safe and protected up to marriage and beyond.
+More expensive engagement rings often contain a few enchantments to ensure the recipient is safe and protected up to marriage and beyond. These enchantments are different for each recipient, and only reveal themselves once given to the token of your love.
 
 Weight: 1~ 
   

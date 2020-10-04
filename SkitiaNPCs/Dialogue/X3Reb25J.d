@@ -200,7 +200,7 @@ I_C_T HGNYA01 29 X3RebHGNYA01-29
 == X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~Oh, I can't blame her change of heart. I am sorry we have to do this.~
 END
 
-// Amektrhan 
+// Amkethran and Beyond
 
 I_C_T BALTH 7 X3RebBalth7
 == X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ ~Oh, I am sure we won't be any trouble, but why does he say it like that?~
@@ -210,6 +210,65 @@ I_C_T BALTH 23 X3RebBalth23
 == X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~That sounds almost noble. Surely though, <CHARNAME> can be spared all of this?~
 == X3Kal25J IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~Pfeh, noble? The guy's lost his mind if he thinks killing himself will fix everything. Could be another left we're all missing for all we know.~
 END
+
+I_C_T AMMAYOR 5 X3RebAMMAYOR-5
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~Oh the poor girl. She was just wanting to do the right thing.~
+END
+
+I_C_T AMMERC04 2 X3RebAMMERC04
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~Oh, what a cruel, cruel world.~
+DO ~SetGlobal("X3RebApp","GLOBAL",-6)DisplayStringNoNameDlg(Player1,@406)~
+END
+
+I_C_T AMASANA 3 X3RebAMASANA-3
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")!IsValidForPartyDialogue("X3Emi")~ THEN ~Be careful, child. I know you are brave, but your father would dearly miss you if you were lost.~
+DO ~SetGlobal("X3RebApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@416)~
+== X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Steal better next time. Noble deaths serve nothing.~
+== AMASANA ~I will heed your advice.~
+END
+
+I_C_T MARLOWE 15 X3RebMARLOWE15
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~He didn't do anything, he doesn't deserve this.~
+DO ~IncrementGlobal("X3RebApp","GLOBAL",-9)
+DisplayStringNoNameDlg(Player1,@409)~ 
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~What are you doing, <CHARNAME>?!~
+DO ~IncrementGlobal("X3EmiApp","GLOBAL",-12)
+DisplayStringNoNameDlg(Player1,@109)~ 
+== MARLOWE ~Help me!~
+END 
+
+I_C_T MARLOWE 51 X3EmiMARLOWE-51
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")!IsValidForPartyDialogue("X3Emi")~ THEN ~I hope he learned from this. Your child never deserves the weight of your own mistakes.~
+DO ~IncrementGlobal("X3RebApp","GLOBAL",7)
+DisplayStringNoNameDlg(Player1,@419)~ 
+== MARLOWE ~I will never forget this!~
+END 
+
+I_C_T MARLOWE 52 X3EmiMARLOWE-52 
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")!IsValidForPartyDialogue("X3Emi")~ THEN ~This is awful. Why do we need it? Why can't we just bring her back?~
+DO ~IncrementGlobal("X3EmiApp","GLOBAL",-12)
+DisplayStringNoNameDlg(Player1,@409)~ 
+== X3Vie25J IF ~Alignment("X3Vie",NEUTRAL_EVIL)IsValidForPartyDialogue("X3Vie")~ THEN ~He deserved all of this. And this item may have power. A worthwhile opportunity.~
+DO ~IncrementGlobal("X3VieApp","GLOBAL",6)
+DisplayStringNoNameDlg(Player1,@516)~ 
+== MARLOWE ~I hope to never meet any of you again!~
+END 
+
+I_C_T AMSMITH 16 X3RebAMSMITH-16
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~This is going to make a very...strange entry in my records.~
+END 
+
+I_C_T BAZEYE01 16 X3RebBAZEYE16
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~We should help them regardless, even if we do it ourselves. The poor souls.~
+END 
+
+I_C_T BAZPAT01 4 X3EmiBAZPAT01
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")!IsValidForPartyDialogue("X3Emi")~ THEN ~I dread the passages that I have to write sometimes.~
+DO ~IncrementGlobal("X3RebApp","GLOBAL",-7)
+DisplayStringNoNameDlg(Player1,@409)~ 
+== BAZPAT01 ~Attack!~
+END 
+
 
 // Solar, final interjections at the Throne of Bhaal and <CHARNAME>'s choice for the romanced protagonists.
 

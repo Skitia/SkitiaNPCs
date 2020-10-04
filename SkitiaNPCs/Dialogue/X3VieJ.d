@@ -2933,7 +2933,7 @@ END
 IF ~Global("X3EmiRomanceActive","GLOBAL",1)~ EXTERN X3VieJ 6.Emily 
 IF ~!Global("X3EmiRomanceActive","GLOBAL",1)Global("X3KalRomanceActive","GLOBAL",1)~ EXTERN X3VieJ 6.Kale 
 IF ~!Global("X3EmiRomanceActive","GLOBAL",1)!Global("X3KalRomanceActive","GLOBAL",1)Global("X3RebRomanceActive","GLOBAL",1)~ EXTERN X3VieJ 6.Recorder 
-IF ~Global("X3EmiRomanceActive","GLOBAL",1)!Global("X3KalRomanceActive","GLOBAL",1)!Global("X3RebRomanceActive","GLOBAL",1)~ EXTERN X3VieJ 6.6
+IF ~!Global("X3EmiRomanceActive","GLOBAL",1)!Global("X3KalRomanceActive","GLOBAL",1)!Global("X3RebRomanceActive","GLOBAL",1)~ EXTERN X3VieJ 6.6
 
 CHAIN X3VieJ 6.6B 
 ~That was...we were not lovers. It was just a moment. Though an enjoyable one.~

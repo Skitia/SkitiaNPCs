@@ -103,11 +103,72 @@ I_C_T HGNYA01 29 X3HelHGNYA01-29
 == X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~I would complain, but be more honorable for her to fight us than nay!~
 END
 
-// Amektrhan and Beyond 
+// Amkethran and Beyond 
 
 I_C_T BALTH 6 X3HelBalth6
 == X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~He does nay sound grateful. We be taking out threats to this grand land.~
 == X3Kal25J IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~Trying for all he knows. If they're anything like Yaga-shura, this is another near-suicidal task ahead of us.~
+END
+
+I_C_T AMMAYOR 5 X3HelAMMAYOR-5
+== X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~Bah, I don't buy the lasses's tale. Just a blasted thief trying to make herself appear noble.~
+END
+
+I_C_T AMMONK02 3 X3HelAMMONK02-3
+== X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~They nay like us being here from that glint in their eyes.~
+END
+
+I_C_T AMCLER01 7 X3HelAMCLER01-7
+== X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~Was a good excuse for a fight, if nothing else. Bloody monks.~
+DO ~IncrementGlobal("X3HelApp","GLOBAL",4)
+DisplayStringNoNameDlg(Player1,@216)~ 
+== AMCLER01 ~Farewell!~
+END 
+
+I_C_T AMCLER01 8 X3HelAMCLER01-8
+== X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~Was a good excuse for a fight, if nothing else. Bloody monks.~
+DO ~IncrementGlobal("X3HelApp","GLOBAL",4)
+DisplayStringNoNameDlg(Player1,@216)~ 
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~You have no idea what this means to me, <CHARNAME>. Thank you for doing this!~
+DO ~IncrementGlobal("X3EmiApp","GLOBAL",9)
+DisplayStringNoNameDlg(Player1,@519)~ 
+== X3Vie25J IF ~Alignment("X3Vie",NEUTRAL_EVIL)IsValidForPartyDialogue("X3Vie")~ THEN ~Hrmph. They can help themselves. Our gold is our gold for a reason.~
+DO ~IncrementGlobal("X3VieApp","GLOBAL",-4)
+DisplayStringNoNameDlg(Player1,@506)~ 
+== AMCLER01 ~Farewell!~
+END 
+
+I_C_T2 AMARCH02 5 X3HelAMARCH02-5
+== X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~Yer funeral, blasted fools!~
+DO ~IncrementGlobal("X3HelApp","GLOBAL",6)
+DisplayStringNoNameDlg(Player1,@216)~ 
+END 
+
+I_C_T AMSMITH 16 X3HelAMSMITH-16
+== X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~Moradin's beard, a smith that works with pantaloons. I must be bloody drunk.~
+END 
+
+I_C_T BAZEYE01 12 X3HelBAZEYE12
+== X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~Kobolds? I could slay them in me sleep. Forget the damn scroll, slaying the dragon would be more fun.~
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~Right, because it's about your fun, Helga. We should make all of our decisions around that.~
+END 
+
+I_C_T BAZDRA03 6 X3HelBAZDRA03
+== X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")!IsValidForPartyDialogue("X3Emi")~ THEN ~Battle is the most glorious form of respect for ye, wyrm!~
+DO ~IncrementGlobal("X3HelApp","GLOBAL",6)
+DisplayStringNoNameDlg(Player1,@216)~ 
+== BAZDRA03 ~You or I...one...shall...die.~
+END 
+
+I_C_T BAZDRA03 14 X3HelBAZDRA03-14
+== X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")!IsValidForPartyDialogue("X3Emi")~ THEN ~Nay! If need be, respect shall be taken from your corpse!~
+DO ~IncrementGlobal("X3HelApp","GLOBAL",6)
+DisplayStringNoNameDlg(Player1,@216)~ 
+== BAZDRA03 ~No. You alone shall die!~
+END 
+
+I_C_T SENGUA03 4 X3HelSENGUA03-4
+== X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")!IsValidForPartyDialogue("X3Emi")~ THEN ~A good ol' pit fight! Kick his blasted arse, <CHARNAME>.~
 END
 
 // Solar, final interjection at the Throne of Bhaal
@@ -219,7 +280,7 @@ CHAIN X3Hel25J 2.4
 ~I have one idea, a way we can know if he is okay. Though I nay know how feasible it may just be.~
 = ~There are finger wagglers who can scry, or see people from far away distances. I nay know if we may find such a mage on our travels, but if we do, ask them what is necessary to achieve this.~
 END 
-++ ~We may never find such a person, Helga.~ DO ~IncrementGlobal("X3HelAppChange","GLOBAL",-1)~ + 2.5
+++ ~There's no point. We'll never find anyone to do that.~ DO ~IncrementGlobal("X3HelAppChange","GLOBAL",-1)~ + 2.5
 ++ ~I will keep an eye out, but I can't promise we'll find anyone.~ + 2.5
 +~InParty("X3Vie")~+ ~What about Vienxay? She is a powerful mage now. She could be able to do this.~ + 2.6
 +~InParty("X3Reb")~+ ~What about Recorder? She might know a few things.~ + 2.7
@@ -556,6 +617,7 @@ END
 
 IF ~IsGabber(Player1) CombatCounter(0) !Detect([ENEMY]) GlobalGT("X3EmiApp","GLOBAL",44)~ THEN BEGIN High.PID 
 SAY  ~Well met.~ [X3HeCom3]
++~Global("X3HelToBQuest","GLOBAL",4)~+ ~We were able to attempt a scry on your son.~ + Scry
 ++ ~I have a question.~ + Question.PID 
 ++ ~Do you mind if I meet with you when we next make rest somewhere safe?~ DO ~SetGlobal("X3RestInvite","GLOBAL",2)~ + ForceRestTalk
 ++ ~Nothing for now.~ EXIT 

@@ -4,7 +4,7 @@ BEGIN X3VSAGE
 CHAIN IF ~GlobalGT("X3VieQuest","GLOBAL",3)~ THEN X3VSAGE spoke_before 
 ~How fare you this day?~
 END 
-+~PartyHasItem("X3VTOME1")~+ ~Here, I have the tome from Myth Drannor.~ + tome_recovered
++~PartyHasItem("X3VTOME1")~+ ~Here, I have the tome from Myth Drannor.~ DO ~TakePartyItem("X3VTOME1")~ + tome_recovered
 +~Global("X3VieQuest","GLOBAL",4)PartyHasItem("X3VNOTES")~+ ~I managed to recover your notes.~ DO ~TakePartyItem("X3VNOTES")IncrementGlobal("X3VieQuest","GLOBAL",1)AddexperienceParty(10000)~ + notes 
 +~Global("X3VieQuest","GLOBAL",4)~+ ~I haven't found your notes yet.~ + no_notes 
 ++ ~Just fine, thank you.~ EXIT 

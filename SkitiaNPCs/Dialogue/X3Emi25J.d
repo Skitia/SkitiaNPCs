@@ -336,10 +336,10 @@ END
 
 I_C_T YAGCON 5 X3EmiYAGCON-5
 == X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~What money or goods do you think she'll even have? Let's either release her, or let her be if you're not sure about her.~
-DO ~SetGlobal("X3RebApp","GLOBAL",-3)DisplayStringNoNameDlg(Player1,@403)~
+DO ~SetGlobal("X3EmiApp","GLOBAL",-3)DisplayStringNoNameDlg(Player1,@103)~
 END
 
-// Amektrhan and Beyond 
+// Amkethran and Beyond 
 
 I_C_T BALTH 6 X3HelBalth6
 == X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~He's right about them not being far...it's doubtful, but maybe this will change the crown's opinion on us.~
@@ -349,6 +349,93 @@ END
 I_C_T BALTH 20 X3VieBalth20
 == X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~You know, if people just said their intentions more plainly, this would be so much easier.~
 END
+
+I_C_T AMMAYOR 5 X3EmiAMMAYOR-5
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~Here's a thought, we could all just see the hungry seen to rather than the thieves doing what these mercenaries should have done for them.~
+END
+
+I_C_T AMMERC04 2 X3EmiAMMERC04
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~I hate this. I hate watching a good person die because leaders do nothing.~
+DO ~SetGlobal("X3EmiApp","GLOBAL",-7)DisplayStringNoNameDlg(Player1,@109)~
+END
+
+I_C_T AMASANA 3 X3RebAMASANA-3
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~I'm glad it ended this way. Do take care of yourself now, hmm?~
+DO ~SetGlobal("X3EmiApp","GLOBAL",4)DisplayStringNoNameDlg(Player1,@116)~
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~Be careful, child. I know you are brave, but your father would dearly miss you if you were lost.~
+DO ~SetGlobal("X3RebApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@416)~
+== X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Steal better next time. Noble deaths serve nothing.~
+== AMASANA ~I will heed your advice.~
+END
+
+I_C_T AMCLER01 8 X3EmiAMCLER01-8
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")!IsValidForPartyDialogue("X3Hel")~ THEN ~You have no idea what this means to me, <CHARNAME>. Thank you for doing this!~
+DO ~IncrementGlobal("X3EmiApp","GLOBAL",9)
+DisplayStringNoNameDlg(Player1,@519)~ 
+== X3Vie25J IF ~Alignment("X3Vie",NEUTRAL_EVIL)IsValidForPartyDialogue("X3Vie")~ THEN ~Hrmph. They can help themselves. Our gold is our gold for a reason.~
+DO ~IncrementGlobal("X3VieApp","GLOBAL",-4)
+DisplayStringNoNameDlg(Player1,@506)~ 
+== AMCLER01 ~Farewell!~
+END 
+
+I_C_T MARLOWE 15 X3EmiMARLOWE15
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")!IsValidForPartyDialogue("X3Reb")~ THEN ~What are you doing, <CHARNAME>?!~
+DO ~IncrementGlobal("X3EmiApp","GLOBAL",-12)
+DisplayStringNoNameDlg(Player1,@109)~ 
+== MARLOWE ~Help me!~
+END 
+
+I_C_T AMSMITH 16 X3EmiAMSMITH-16
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~And I thought I was weird.~
+END 
+
+I_C_T MARLOWE 51 X3EmiMARLOWE-51
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~Just make the most of this second chance. If it were anyone else, you would have a doomed man.~
+DO ~IncrementGlobal("X3EmiApp","GLOBAL",6)
+DisplayStringNoNameDlg(Player1,@116)~ 
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~I hope he learned from this. Your child never deserves the weight of your own mistakes.~
+DO ~IncrementGlobal("X3RebApp","GLOBAL",7)
+DisplayStringNoNameDlg(Player1,@419)~ 
+== MARLOWE ~I will never forget this!~
+END 
+
+I_C_T MARLOWE 52 X3EmiMARLOWE-52 
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~Really <CHARNAME>? What do we even need an innocent's soul for? Sometimes, I wonder about the company I keep.~
+DO ~IncrementGlobal("X3EmiApp","GLOBAL",-12)
+DisplayStringNoNameDlg(Player1,@109)~ 
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~This is awful. Why do we need it? Why can't we just bring her back?~
+DO ~IncrementGlobal("X3EmiApp","GLOBAL",-12)
+DisplayStringNoNameDlg(Player1,@409)~ 
+== X3Vie25J IF ~Alignment("X3Vie",NEUTRAL_EVIL)IsValidForPartyDialogue("X3Vie")~ THEN ~He deserved all of this. And this item may have power. A worthwhile opportunity.~
+DO ~IncrementGlobal("X3VieApp","GLOBAL",6)
+DisplayStringNoNameDlg(Player1,@516)~ 
+== MARLOWE ~I hope to never meet any of you again!~
+END 
+
+I_C_T BAZEYE01 22 X3EmiBAZEYE22
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~Wow. The perfect excuse: I'm just following orders. I don't even know what to say to that.~
+END 
+
+I_C_T BAZPAT01 4 X3EmiBAZPAT01
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~So we...saved them to fight them? Where is your logic?!~
+DO ~IncrementGlobal("X3EmiApp","GLOBAL",-9)
+DisplayStringNoNameDlg(Player1,@109)~ 
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~I dread the passages that I have to write sometimes.~
+DO ~IncrementGlobal("X3RebApp","GLOBAL",-7)
+DisplayStringNoNameDlg(Player1,@409)~ 
+== BAZPAT01 ~Attack!~
+END 
+
+I_C_T BAZDRA03 6 X3EmiBAZDRA03
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~Wait, we could just-~
+DO ~IncrementGlobal("X3EmiApp","GLOBAL",-3)
+DisplayStringNoNameDlg(Player1,@103)~ 
+== X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~Nay. Battle is the most glorious form of respect for this wyrm.~
+DO ~IncrementGlobal("X3HelApp","GLOBAL",6)
+DisplayStringNoNameDlg(Player1,@216)~ 
+== BAZDRA03 ~You or I...one...shall...die.~
+END 
+
 
 // Solar, final interjections at the Throne of Bhaal and <CHARNAME>'s choice for the romanced protagonists.
 
@@ -955,7 +1042,7 @@ EXTERN X3Emi25J 3.5
 CHAIN X3Emi25J 3.5
 ~Right, the world won't just pause forever, and the others I think are stirring. Still, I can't wait for our next rest already.~
 EXIT 
-
+//Crown 
 CHAIN IF ~Global("X3EmiToBLoveCrown","LOCALS",2)~ THEN X3Emi25J LoveTalk4 
 ~Things are getting even worse. The Tethyrian crown declaring you a threat? I don't know what to think anymore.~
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiToBLoveCrown","LOCALS",1)~
@@ -1008,7 +1095,7 @@ EXTERN X3Emi25J 4.8
 // Love Talk #5
 
 CHAIN IF ~Global("X3EmiToBLoveTalk","LOCALS",8)~ THEN X3Emi25J LoveTalk5 
-~I had such a pleasant dream. It was odd but welcome, given everything going on lately that was stressing me. So soothing and hopeful and bright in this bit of darkness.~
+~I had such a pleasant dream last night. It was odd but welcome, given everything going on lately that was stressing me. So soothing and hopeful and bright in this bit of darkness.~
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiToBLoveTalk","LOCALS",1)~
 END  
 ++ ~Oh? Tell me about it.~ + 5.2 
@@ -1050,7 +1137,7 @@ EXTERN X3Emi25J 5.7H
 CHAIN X3Emi25J 5.7H
 ~I would like to have children someday. If...you are still here at least. It's expected of me, and something I would dearly want.~
 END 
-++ ~I would. As many as you like.~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",3)~ + 5.8
+++ ~I would. As many as you like.~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",3)~ + 5.12
 ++ ~I don't know what will happen. It would have to wait to be talked about.~ + 5.9
 ++ ~Definitely not.~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",-2)~ + 5.10
 ++ ~I plan to take my father's place, Emily. No such future could be had.~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",-3)~ + 5.10
@@ -1071,13 +1158,13 @@ EXTERN X3Emi25J 5.7
 CHAIN X3Emi25J 5.7
 ~Not anytime soon, but someday. I want to travel about Tethyr and help improve things after this is all over for a while. But... would you like children someday, <CHARNAME>?~
 END 
-++ ~I would. As many as you like.~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",3)~ + 5.8
+++ ~I would. As many as you like.~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",3)~ + 5.12
 ++ ~I don't know what will happen. It would have to wait to be talked about.~ + 5.9
 ++ ~Definitely not.~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",-2)~ + 5.10
 ++ ~I plan to take my father's place, Emily. No such future could be had.~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",-3)~ + 5.10
 
 CHAIN X3Emi25J 5.12
-~I will *so* remember you said that I could have as many as I wanted.~
+~I will *so* remember you said that I could have as many as I wanted. Don't worry, I won't request something too crazy in number.~
 EXTERN X3Emi25J 5.11 
 
 CHAIN X3Emi25J 5.9
