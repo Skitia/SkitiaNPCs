@@ -3582,7 +3582,7 @@ EXIT
 
 CHAIN IF ~Global("X3RebLoveTalk","LOCALS",24)~ THEN X3RebJ LoveTalk12
 ~There is something I find difficult when I am taking the time to write down our travels. And it's how to describe you, physically that is.~ [X3RLS]
-DO ~IncrementGlobal("X3RevLoveTalk","LOCALS",1)SetGlobal("X3RebAppChange","GLOBAL",7)~
+DO ~IncrementGlobal("X3RebLoveTalk","LOCALS",1)SetGlobal("X3RebAppChange","GLOBAL",7)~
 END 
 ++ ~Is it so hard? I could give you a closer preview if you need to find the words.~  + 12.1 
 ++ ~I could give you a few suggestions, if you like.~ + 12.2 
