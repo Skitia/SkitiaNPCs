@@ -3645,7 +3645,7 @@ CHAIN X3RebJ 12.3
 EXTERN X3RebJ 12.7
 
 
-// This talk will set the love trigger to 2. Approval must be at 80.
+// This talk will set the love trigger to 2. 
 CHAIN IF ~Global("X3RebLoveTalk","LOCALS",26)~ THEN X3RebJ LoveTalk13
 ~Your life has been constant adventure since you left home, hasn't it? Do you see...something peaceful down the road? Settling down, with a partner, maybe?~ [X3RLS]
 DO ~IncrementGlobal("X3RebLoveTalk","LOCALS",1)SetGlobal("X3RebAppChange","GLOBAL",6)~
@@ -3688,6 +3688,7 @@ EXTERN X3RebJ 13.7
 
 CHAIN X3RebJ 13.7
 ~I'm truly glad you said that, <CHARNAME>. Maybe we can find some more time later for eachother.~
+DO ~SetGlobal("X3RebRomanceActive","GLOBAL",2)~
 EXIT 
 
 CHAIN X3RebJ 13.5
