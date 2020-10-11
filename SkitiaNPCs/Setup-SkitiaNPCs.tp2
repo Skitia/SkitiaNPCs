@@ -1,6 +1,6 @@
 BACKUP ~SkitiaNPCs\Backup~
 AUTHOR ~Skitia https://skitias-stories.com/contact.php~
-VERSION ~0.86~
+VERSION ~0.87~
 
 AUTO_TRA ~%MOD_FOLDER%/Tra/%s~
 
@@ -161,7 +161,7 @@ END
 //All Optional Additions 
 
 BEGIN ~Arcane Archer (Fighter Kit)~
-SUBCOMPONENT ~Choose an alternate class for Emily?~
+SUBCOMPONENT ~Emily Alternate Class: Arcane Archer Kit~
 REQUIRE_COMPONENT ~ArtisansKitpack.tp2~ ~0~ ~This component requires Artisan's Kitpack to be installed~
 
 COPY ~%MOD_FOLDER%/cre/X3EmiA.cre~ ~override/X3Emi.cre~
@@ -278,7 +278,7 @@ COPY ~%MOD_FOLDER%/cre/X3EmiA25.cre~ ~override/X3Emi25.cre~
 
 
 BEGIN ~Arcane Archer/Mage (Fighter/Mage Kit))~
-SUBCOMPONENT ~Choose an alternate class for Emily?~
+SUBCOMPONENT ~Emily Alternate Class: Arcane Archer Kit~
 REQUIRE_COMPONENT ~ArtisansKitpack.tp2~ ~0~ ~This component requires Artisan's Kitpack to be installed~
 
 COPY ~%MOD_FOLDER%/cre/X3EmiM.cre~ ~override/X3Emi.cre~
@@ -392,5 +392,33 @@ COPY ~%MOD_FOLDER%/cre/X3EmiM25.cre~ ~override/X3Emi25.cre~
   SAY SELECT_RARE2 ~Come with me.~ [Emilead]
   SAY REACT_TO_DIE_GENERAL ~Blast, not now!~ [X3Ertdg]
   WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~c0aa~))  
-  
- 
+
+BEGIN ~Romance Theme Music~
+SUBCOMPONENT ~Skitia NPCs: Romance Theme Soundtrack~
+
+
+	COPY_EXISTING ~sw1h01.itm~ ~override/bg1npcmusic.g3~
+
+	MKDIR ~music/blank~
+	COPY ~%MOD_FOLDER%/Music/blank.mus~ ~music~
+		~%MOD_FOLDER%/Music/blank.acm~ ~music/blank/blanka.acm~
+
+	COPY_EXISTING ~songlist.2da~ ~override~
+  		SET_2DA_ENTRY 0 0 2 ~2DA_V1.0~
+  		SET_2DA_ENTRY 0 1 2 ~~
+  		SET_2DA_ENTRY 0 0 2 ~IDOBEK Name~
+  		SET_2DA_ENTRY 1 2 3 ~Blank.mus~
+		SET_2DA_ENTRY 1 1 3 ~BLANK~
+  		SET_2DA_ENTRY 0 0 3 ~~
+  		REPLACE_TEXTUALLY CASE_INSENSITIVE ~2DA_V1.0~ ~2DA V1.0~
+
+LAF HANDLE_AUDIO
+  STR_VAR
+    audio_path = ~SkitiaNPCs/Music~
+    oggdec_path = ~SkitiaNPCs/Music~
+    sox_path = ~SkitiaNPCs/Music~
+END  
+
+BEGIN ~No Romance Theme Music~
+ SUBCOMPONENT ~Skitia NPCs: Romance Theme Soundtrack~
+ PRINT ~Installing no music.~
