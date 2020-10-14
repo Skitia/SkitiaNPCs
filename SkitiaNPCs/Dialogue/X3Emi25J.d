@@ -772,7 +772,7 @@ EXIT
 
 // Romance Talks 
 CHAIN IF ~Global("X3EmiToBLoveTalk","LOCALS",2)~ THEN X3Emi25J LoveTalk1 
-~I am becoming worried for my homeland, my love. People are already dying and suffering from the atrocities and chaos.~
+~I am becoming worried for my homeland, my love. People are already dying and suffering from the atrocities and chaos.~ [X3ELS]
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiToBLoveTalk","LOCALS",1)~
 END 
 ++ ~That is the cost of this war between Bhaalspawn.~ + 1.2
@@ -942,7 +942,7 @@ EXIT
 
 // Saradush at rest. 
 CHAIN IF ~Global("X3EmiToBLoveTalk","LOCALS",4)~ THEN X3Emi25J LoveTalk2 
-~I still can't believe it. Saradush...in ruins. The bodies...the blood...the people. My fellow countrymen and women...it's so hard to believe.~
+~I still can't believe it. Saradush...in ruins. The bodies...the blood...the people. My fellow countrymen and women...it's so hard to believe.~ [X3ELS]
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiToBLoveTalk","LOCALS",1)~
 END 
 ++ ~It happened. I'm suprised you're not used to this by now.~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",-1)~ + 2.1 
@@ -1008,7 +1008,7 @@ DO ~RestParty()~
 EXIT 
 // Wake Up Post LoveTalk#2
 CHAIN IF ~Global("X3EmiToBLoveTalk","LOCALS",6)~ THEN X3Emi25J LoveTalk3 
-~Everytime I wake up next to you, I just like to watch your face. You have such a nice nose. And noses aren't often pretty. And eyelashes too.~
+~Everytime I wake up next to you, I just like to watch your face. You have such a nice nose. And noses aren't often pretty. And eyelashes too.~ [X3ELS]
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiToBLoveTalk","LOCALS",1)~
 END 
 ++ ~Nose and eyelashes?~ + 3.1
@@ -1044,7 +1044,7 @@ CHAIN X3Emi25J 3.5
 EXIT 
 //Crown 
 CHAIN IF ~Global("X3EmiToBLoveCrown","LOCALS",2)~ THEN X3Emi25J LoveTalk4 
-~Things are getting even worse. The Tethyrian crown declaring you a threat? I don't know what to think anymore.~
+~Things are getting even worse. The Tethyrian crown declaring you a threat? I don't know what to think anymore.~ 
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiToBLoveCrown","LOCALS",1)~
 END 
 ++ ~Can you blame them? With everything that is happening because of the Bhaalspawn, their reaction is understandable.~ + 4.1
@@ -1095,7 +1095,7 @@ EXTERN X3Emi25J 4.8
 // Love Talk #5
 
 CHAIN IF ~Global("X3EmiToBLoveTalk","LOCALS",8)~ THEN X3Emi25J LoveTalk5 
-~I had such a pleasant dream last night. It was odd but welcome, given everything going on lately that was stressing me. So soothing and hopeful and bright in this bit of darkness.~
+~I had such a pleasant dream last night. It was odd but welcome, given everything going on lately that was stressing me. So soothing and hopeful and bright in this bit of darkness.~ [X3ELS]
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiToBLoveTalk","LOCALS",1)~
 END  
 ++ ~Oh? Tell me about it.~ + 5.2 
@@ -1182,7 +1182,7 @@ EXIT
 // Romance Talk 6.
 
 CHAIN IF ~Global("X3EmiToBLoveTalk","LOCALS",10)~ THEN X3Emi25J LoveTalk6 
-~It's sad we had to kill Balthazar. I didn't like his monks much...but the man's philosophy and beliefs...he seemed a good man. It's just a shame he was so stubborn.~
+~It's sad we had to kill Balthazar. I didn't like his monks much...but the man's philosophy and beliefs...he seemed a good man. It's just a shame he was so stubborn.~ [X3ELS]
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiToBLoveTalk","LOCALS",1)~
 END 
 ++ ~I wish we could have worked together.~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",1)~ + 6.1 
@@ -1216,7 +1216,7 @@ EXIT
 // Romance Talk 7
 
 CHAIN IF ~Global("X3EmiToBLoveTalk","LOCALS",12)~ THEN X3Emi25J LoveTalk7
-~...So this is really it. Or close to it, isn't it?~
+~...So this is really it. Or close to it, isn't it?~ [X3ELS]
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiToBLoveTalk","LOCALS",1)~
 END 
 ++ ~It is. Are you ready?~ + 7.1 

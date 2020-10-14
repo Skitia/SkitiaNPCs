@@ -494,7 +494,7 @@ EXIT
 //Romance Talks 
 
 CHAIN IF ~Global("X3KalToBLoveTalk","LOCALS",2)~ THEN X3Kal25J LoveTalk1 
-~Seems like only yesterday we were being paraded about like proper heroes in Suldanessellar. Damn I miss it already.~
+~Seems like only yesterday we were being paraded about like proper heroes in Suldanessellar. Damn I miss it already.~ [X3KLS]
 DO ~IncrementGlobal("X3KalToBLoveTalk","LOCALS",1)~
 END 
 ++ ~Suldanessellar isn't our home. We couldn't stay forever.~ + 1.1 
@@ -552,7 +552,7 @@ CHAIN X3Kal25J 1.10
 EXIT 
 
 CHAIN IF ~Global("X3KalToBLoveTalk","LOCALS",4)~ THEN X3Kal25J LoveTalk2
-~Gullykin seems so far away now. Wasn't so long ago I was just hoping to find a group to get out of there and make a name.~
+~Gullykin seems so far away now. Wasn't so long ago I was just hoping to find a group to get out of there and make a name.~ [X3KLS]
 DO ~IncrementGlobal("X3KalToBLoveTalk","LOCALS",1)SetGlobal("X3KalAppChange","GLOBAL",6)~
 END 
 ++ ~Why are you so fond of that village, if you were wanting to leave it?~ + 2.1
@@ -631,7 +631,7 @@ CHAIN X3Kal25J 2.12
 EXIT 
 
 CHAIN IF ~Global("X3KalToBLoveTalk","LOCALS",6)~ THEN X3Kal25J LoveTalk3 
-~So if you really, really did decide to pick up your mantle...I mean what does a god do day in and day out?~
+~So if you really, really did decide to pick up your mantle...I mean what does a god do day in and day out?~ [X3KLS]
 DO ~IncrementGlobal("X3KalToBLoveTalk","LOCALS",1)SetGlobal("X3KalAppChange","GLOBAL",6)~
 END 
 ++ ~I may find out soon enough.~ + 3.1 
@@ -758,7 +758,7 @@ EXIT
 
 //Love Talk #4
 CHAIN IF ~Global("X3KalToBLoveTalk","LOCALS",8)~ THEN X3Kal25J LoveTalk4 
-~Aaaah! *Sigh* Just another damn nightmare.~
+~Aaaah! *Sigh* Just another damn nightmare.~ [X3KLS]
 DO ~IncrementGlobal("X3KalToBLoveTalk","LOCALS",1)SetGlobal("X3KalAppChange","GLOBAL",6)~
 END 
 ++ ~Are you all right, Kale?~ DO ~IncrementGlobal("X3KalAppChange","GLOBAL",1)~ + 4.1
@@ -845,7 +845,7 @@ EXIT
 
 // Love Talk #5
 CHAIN IF ~Global("X3KalToBLoveTalk","LOCALS",10)~ THEN X3Kal25J LoveTalk5 
-~Damn. The smoke. The death. The bodies. I've seen many things, but that many in one place? Makes you glad to be alive.~
+~Damn. The smoke. The death. The bodies. I've seen many things, but that many in one place? Makes you glad to be alive.~ [X3KLS]
 DO ~IncrementGlobal("X3KalToBLoveTalk","LOCALS",1)SetGlobal("X3KalAppChange","GLOBAL",6)~
 END 
 ++ ~Do you have no sorrow for any of the fallen?~ DO ~IncrementGlobal("X3KalAppChange","GLOBAL",-1)~ + 5.1 
@@ -900,7 +900,7 @@ CHAIN X3Kal25J 5.6
 EXIT 
 
 CHAIN IF ~Global("X3KalToBLoveTalk","LOCALS",12)~ THEN X3Kal25J LoveTalk6
-~Damn. We didn't take out just one dragon, but two dragons. Half Bhaalspawn Dragons. The legend ever grows!~
+~Damn. We didn't take out just one dragon, but two dragons. Half Bhaalspawn Dragons. The legend ever grows!~ [X3KLS]
 DO ~IncrementGlobal("X3KalToBLoveTalk","LOCALS",1)SetGlobal("X3KalAppChange","GLOBAL",6)~
 END 
 ++ ~You seem very excited about this.~ + 6.1 
@@ -938,7 +938,7 @@ EXTERN X3Kal25J 6.6
 // Final Love Talk 
 
 CHAIN IF ~Global("X3KalToBLoveTalk","LOCALS",14)~ THEN X3Kal25J LoveTalk7
-~I know this may be...a strange time to present this, but I have a bit of rope here.~
+~I know this may be...a strange time to present this, but I have a bit of rope here.~ [X3KLS]
 DO ~IncrementGlobal("X3KalToBLoveTalk","LOCALS",1)SetGlobal("X3KalAppChange","GLOBAL",6)~
 END 
 ++ ~Er. Okay?~ + 7.1

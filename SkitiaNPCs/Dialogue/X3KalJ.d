@@ -2050,7 +2050,7 @@ EXIT
 
 //Romance Talks 
 CHAIN IF ~Global("X3KalLoveTalk","LOCALS",2)~ THEN X3KalJ LoveTalk1 
-~You know when I was a more inexperienced fighter, I used to growl and scrap and fight anyway which possible. A bit like the dwarven berserkers, Helga used to tell me. Not anymore.~
+~You know when I was a more inexperienced fighter, I used to growl and scrap and fight anyway which possible. A bit like the dwarven berserkers, Helga used to tell me. Not anymore.~ [X3KLS]
 DO ~IncrementGlobal("X3KalLoveTalk","LOCALS",1)SetGlobal("X3KalAppChange","GLOBAL",6)~
 END 
 ++ ~You don't seem to fight much like a berserker at all.~ + 1.1
@@ -2145,7 +2145,7 @@ EXIT
 //Love Talk #2
 
 CHAIN IF ~Global("X3KalLoveTalk","LOCALS",4)~ THEN X3KalJ LoveTalk2 
-~I wish Gast was still with me. You know he'd probably fit in right with our group. He'd be a damn helpful addition too.~
+~I wish Gast was still with me. You know he'd probably fit in right with our group. He'd be a damn helpful addition too.~ [X3KLS]
 DO ~IncrementGlobal("X3KalLoveTalk","LOCALS",1)SetGlobal("X3KalAppChange","GLOBAL",6)~
 END 
 ++ ~What is it about this gnome that makes him so special to you?~ + 2.1
@@ -2211,8 +2211,8 @@ EXTERN X3KalJ 2.9
 
 //Kale Love Talk #6
 
-CHAIN IF ~Global("X3KalLoveTalk","LOCALS",3)~ THEN X3KalJ LoveTalk3 
-~You have this way, <CHARNAME>, of making the impossible seem quite possible. My last adventuring group only took on what seemed a reasonable risk, but you seem to be aiming pretty high.~
+CHAIN IF ~Global("X3KalLoveTalk","LOCALS",6)~ THEN X3KalJ LoveTalk3 
+~You have this way, <CHARNAME>, of making the impossible seem quite possible. My last adventuring group only took on what seemed a reasonable risk, but you seem to be aiming pretty high.~ [X3KLS]
 DO ~IncrementGlobal("X3KalLoveTalk","LOCALS",1)SetGlobal("X3KalAppChange","GLOBAL",6)~
 END 
 ++ ~What do you mean by that?~ + 3.1
@@ -2281,10 +2281,10 @@ CHAIN X3KalJ 3.10
 ~Heh, every good tale has it. But Stormaxe's fall was told exactly as it should be: making him a worthy legend to remember.~
 EXIT 
 
-// Love Talk #8
+// Love Talk #4
 
 CHAIN IF ~Global("X3KalLoveTalk","LOCALS",8)~ THEN X3KalJ LoveTalk4 
-~I've got a question for you, <CHARNAME>, something I am curious about.~
+~I've got a question for you, <CHARNAME>, something I am curious about.~ [X3KLS]
 DO ~IncrementGlobal("X3KalLoveTalk","LOCALS",1)SetGlobal("X3KalAppChange","GLOBAL",6)~
 END 
 +~GlobalGT("Chapter","GLOBAL",%bg2_chapter_3%)~+ ~Sure, I have time for a question.~ + 4.1A 
@@ -2358,8 +2358,10 @@ CHAIN X3KalJ 4.8
 ~Well if it's just a prison as I understand, you aren't really meant to die in that place. Guess there's no rush, eh?~
 EXTERN X3KalJ 4.7
 
+//LoveTalk #5
+
 CHAIN IF ~Global("X3KalLoveTalk","LOCALS",10)~ THEN X3KalJ LoveTalk5 
-~You ever lost anyone traveling, <CHARNAME>? I told you about Gast and Stormaxe. Wondering if you ever went through the same.~
+~You ever lost anyone traveling, <CHARNAME>? I told you about Gast and Stormaxe. Wondering if you ever went through the same.~ [X3KLS]
 DO ~IncrementGlobal("X3KalLoveTalk","LOCALS",1)SetGlobal("X3KalAppChange","GLOBAL",6)~
 END 
 +~Global("X3KalPartyBG1","GLOBAL",1)~+ ~Recently? Khalid and Dynaheir.~ + 5.1 
@@ -2473,7 +2475,7 @@ EXIT
 // Friendship Talk #6 - Rest
 
 CHAIN IF ~Global("X3KalLoveTalk","LOCALS",12)~ THEN X3KalJ LoveTalk6 
-~You know, if we're settling down for a bit, want to share a smoke? I've got a bit of Guaji still left. Good stuff.~
+~You know, if we're settling down for a bit, want to share a smoke? I've got a bit of Guaji still left. Good stuff.~ [X3KLS]
 DO ~IncrementGlobal("X3KalLoveTalk","LOCALS",1)SetGlobal("X3KalAppChange","GLOBAL",6)~
 END 
 ++ ~Sure, hit me up.~ + 6.1
@@ -2585,10 +2587,10 @@ EXIT
  ~Damn, saw right to what I was talking about, I mean...your face. Clearly. Pfft, why does everyone think Kale is like that?~
  EXTERN X3KalJ 6.17
 
-// Friendship Talk #7
+// Love Talk #7
 
 CHAIN IF ~Global("X3KalLoveTalk","LOCALS",14)~ THEN X3KalJ LoveTalk7
-~Soooo...~
+~Soooo...~ [X3KLS]
 DO ~IncrementGlobal("X3KalLoveTalk","LOCALS",1)SetGlobal("X3KalAppChange","GLOBAL",6)~
 END 
 ++ ~Uh, so what?~ + 7.1 
@@ -2696,10 +2698,10 @@ CHAIN X3KalJ 7.11
 ~Not if you never give yourself a bit of reward for all of your work.~
 EXTERN X3KalJ 7.12 
 
-// Friendship Talk #8
+// Love Talk #8
 
 CHAIN IF ~Global("X3KalLoveTalk","LOCALS",16)~ THEN X3KalJ LoveTalk8
-~Sooo. I've been trying to decide which one of us is luckier. I, who gets to travel with the attractive you, or you, who gets to travel with the dashing and attractive me.~
+~Sooo. I've been trying to decide which one of us is luckier. I, who gets to travel with the attractive you, or you, who gets to travel with the dashing and attractive me.~ [X3KLS]
 DO ~IncrementGlobal("X3KalLoveTalk","LOCALS",1)SetGlobal("X3KalAppChange","GLOBAL",6)~
 END 
 ++ ~Definitely you.~  + 8.2
@@ -2799,10 +2801,10 @@ CHAIN X3KalJ 8.17
 ~I am sure you can imagine the answer to that, mate. Take all the time you need.~
 EXTERN X3KalJ 8.7
 
-//  Friendship Talk #9
+//  Love Talk #9
 
 CHAIN IF ~Global("X3KalLoveTalk","LOCALS",18)~ THEN X3KalJ LoveTalk9 
-~Uh...some of the things I say to you, you know about your looks and skills, they don't come across offensive, do they?~
+~Uh...some of the things I say to you, you know about your looks and skills, they don't come across offensive, do they?~ [X3KLS]
 DO ~IncrementGlobal("X3KalLoveTalk","LOCALS",1)SetGlobal("X3KalAppChange","GLOBAL",6)~
 END 
 ++ ~What do you mean offensive?~ + 9.1 
@@ -2914,10 +2916,10 @@ CHAIN X3KalJ 9.19
 ~Best we get going before we get some jealous onlookers, eh?~
 EXIT 
 
-//Friendship Talk #10
+//Love Talk #10
 
 CHAIN IF ~Global("X3KalLoveTalk","LOCALS",20)~ THEN X3KalJ LoveTalk10 
-~Soooo.~
+~Soooo.~ [X3KLS]
 DO ~IncrementGlobal("X3KalLoveTalk","LOCALS",1)SetGlobal("X3KalAppChange","GLOBAL",6)~
 END 
 ++ ~Soooo.~ + 10.1
@@ -3120,9 +3122,9 @@ SetGlobal("X3VieRomanceConflict","GLOBAL",2)~
 EXIT
 
 
-
+//Love Talk #11
 CHAIN IF ~Global("X3KalLoveTalk","LOCALS",22)~ THEN X3KalJ LoveTalk11 
-~I'm not sure how to ask you this mate, been kind of...thinking about it for hours about what I would say right now.~
+~I'm not sure how to ask you this mate, been kind of...thinking about it for hours about what I would say right now.~ [X3KLS]
 DO ~SetGlobal("X3KalRomanceActive","GLOBAL",2)IncrementGlobal("X3KalLoveTalk","LOCALS",1)SetGlobal("X3KalAppChange","GLOBAL",6)~
 END 
 ++ ~Just say it, Kale.~ + 11.1
@@ -3239,7 +3241,7 @@ EXIT
 //Slayer Talk 
 
 CHAIN IF ~Global("X3KalLoveTalk","LOCALS",24)~ THEN X3KalJ LoveTalk13 
-~I swore I would always protect you. But I have no idea how the hell I protect you from yourself...from whatever monster you're able to turn into now.~
+~I swore I would always protect you. But I have no idea how the hell I protect you from yourself...from whatever monster you're able to turn into now.~ [X3KLS]
 DO ~IncrementGlobal("X3KalLoveTalk","LOCALS",1)SetGlobal("X3KalAppChange","GLOBAL",6)~
 END 
 ++ ~It won't happen again Kale. Trust me.~ DO ~IncrementGlobal("X3KalAppChange","GLOBAL",1)~ + 13.1 
@@ -3313,7 +3315,7 @@ EXIT
 // Love Talk #15
 
 CHAIN IF ~Global("X3KalLoveTalk","LOCALS",26)~ THEN X3KalJ LoveTalk15
-~You hanging in there mate? I'm glad we're out of that Underdark, but I'm a bit worried about you, you know after what happened with Irenicus.~
+~You hanging in there mate? I'm glad we're out of that Underdark, but I'm a bit worried about you, you know after what happened with Irenicus.~ [X3KLS]
 DO ~IncrementGlobal("X3KalLoveTalk","LOCALS",1)SetGlobal("X3KalAppChange","GLOBAL",6)~
 END 
 ++ ~I am fine Kale. But soon, he won't be.~ + 15.1 
@@ -3359,7 +3361,7 @@ EXIT
 
 
 CHAIN IF ~Global("X3KalLoveTalk","LOCALS",28)~ THEN X3KalJ LoveTalk16 
-~I don't know about you mate, but I could use a breather before we march on. Just a few hours to really get everything together...especially in my head. Damn I'm terrified.~
+~I don't know about you mate, but I could use a breather before we march on. Just a few hours to really get everything together...especially in my head. Damn I'm terrified.~ [X3KLS]
 DO ~IncrementGlobal("X3KalLoveTalk","LOCALS",1)SetGlobal("X3KalAppChange","GLOBAL",6)~
 END 
 ++ ~There's nothing to be afraid of, Kale. We defeated Bodhi, we can defeat Irenicus too.~ + 16.1 

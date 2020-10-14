@@ -2950,7 +2950,7 @@ EXTERN X3EmiJ T8.4
 //Love Talk #1
 
 CHAIN IF ~Global("X3EmiLoveTalk","LOCALS",2)~ THEN X3EmiJ LoveTalk1 
-~You know, I kind of wish I hadn't neglected some of my combat lessons before I started traveling.~
+~You know, I kind of wish I hadn't neglected some of my combat lessons before I started traveling.~ [X3ELS]
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiLoveTalk","LOCALS",1)~
 END 
 ++ ~What do you mean? Your archery is spectacular.~ DO ~IncrementGlobal("X3EmiAppChange","LOCALS",1)~  + 1.1 
@@ -3018,7 +3018,7 @@ EXIT
 //Love Talk #2, two versions 
 
 CHAIN IF ~!InParty("IMOEN")Global("X3EmiLoveTalk","LOCALS",4)~ THEN X3EmiJ LoveTalk2A 
-~Do you ever think about her? Imoen, I mean.~
+~Do you ever think about her? Imoen, I mean.~ [X3ELS]
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiLoveTalk","LOCALS",1)~
 END 
 ++ ~Of course I do. What kind of question is that?~ + 2.1 
@@ -3027,7 +3027,7 @@ END
 ++ ~I'd rather not talk about Imoen, Emily.~ + 2.X 
 
 CHAIN IF ~InParty("IMOEN")Global("X3EmiLoveTalk","LOCALS",4)~ THEN X3EmiJ LoveTalk2B
-~You and Imoen seem to get along. I think. Right?~
+~You and Imoen seem to get along. I think. Right?~ [X3ELS]
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiLoveTalk","LOCALS",1)~
 END 
 ++ ~I'm kind of confused about your question, Emily.~ + 2.1B 
@@ -3127,7 +3127,7 @@ EXTERN X3EmiJ 2.10
 // Love Talk #3
 
 CHAIN IF ~Global("X3EmiLoveTalk","LOCALS",6)~ THEN X3EmiJ LoveTalk3 
-~You know, if you think about it, if the kings and queens and councilors had a bit more active hand in things, they could send knights and soldiers to do some of the work we have done.~
+~You know, if you think about it, if the kings and queens and councilors had a bit more active hand in things, they could send knights and soldiers to do some of the work we have done.~ [X3ELS]
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiLoveTalk","LOCALS",1)~
 END 
 ++ ~It seems more complicated than that to me.~ + 3.1 
@@ -3201,7 +3201,7 @@ EXTERN X3EmiJ 3.9
 //Love Talk #4 
 
 CHAIN IF ~Global("X3EmiLoveTalk","LOCALS",8)~ THEN X3EmiJ LoveTalk4
-~You know, there are so many beautiful temples in Amn. I've always prayed in several different ones as I traveled this region, but, I've always wondered who I felt closest too.~
+~You know, there are so many beautiful temples in Amn. I've always prayed in several different ones as I traveled this region, but, I've always wondered who I felt closest too.~ [X3ELS]
 = ~Are you very religious yourself, <CHARNAME>?~
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiLoveTalk","LOCALS",1)~
 END 
@@ -3289,7 +3289,7 @@ EXIT
 // Love Talk #5
 
 CHAIN IF ~Global("X3EmiLoveTalk","LOCALS",10)~ THEN X3EmiJ LoveTalk5 
-~Sune. That's who.~
+~Sune. That's who.~ [X3ELS]
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiLoveTalk","LOCALS",1)~
 END 
 ++ ~What are you talking about?~ + 5.1 
@@ -3345,7 +3345,7 @@ EXTERN X3EmiJ 5.4
 
 // Romance #6: Post Rest Talk 
 CHAIN IF ~Global("X3EmiLoveTalk","LOCALS",12)~ THEN X3EmiJ LoveTalk6
-~Aah! No, no no!~
+~Aah! No, no no!~ [X3ELS]
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiLoveTalk","LOCALS",1)~
 END 
 +~GlobalLT("X3EmiQuest","GLOBAL",10)~+ ~Emily, it's just a nightmare. Are you all right?~ DO ~IncrementGlobal("X3EmiAppChange","LOCALS",1)~ + 6.1 
@@ -3440,7 +3440,7 @@ EXIT
 // Love Talk 7
 
 CHAIN IF ~Global("X3EmiLoveTalk","LOCALS",14)~ THEN X3EmiJ LoveTalk7
-~We see so many dark things when we travel, but have you ever stopped to see some of the little beautiful things around, <CHARNAME>?~
+~We see so many dark things when we travel, but have you ever stopped to see some of the little beautiful things around, <CHARNAME>?~ [X3ELS]
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiLoveTalk","LOCALS",1)~
 END 
 ++ ~What do you mean?~ + 7.1 
@@ -3508,7 +3508,7 @@ CHAIN X3EmiJ 7.4
 EXTERN X3EmiJ 7.5
 
 CHAIN IF ~Global("X3EmiLoveTalk","LOCALS",16)~ THEN X3EmiJ LoveTalk8
-~So, endless walking, dry, plain tasting rations, getting shot at by bandits and monster spells, which will you miss the most when your adventures are over?~
+~So, endless walking, dry, plain tasting rations, getting shot at by bandits and monster spells, which will you miss the most when your adventures are over?~ [X3ELS]
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiLoveTalk","LOCALS",1)~
 END 
 ++ ~None of them are quite appealing when you say it like that.~ + 8.1
@@ -3571,7 +3571,7 @@ EXTERN X3EmiJ 8.5
 // Love Talk #9
 
 CHAIN IF ~Global("X3EmiLoveTalk","LOCALS",18)~ THEN X3EmiJ LoveTalk9 
-~You are...amazing, you know that?~
+~You are...amazing, you know that?~ [X3ELS]
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiLoveTalk","LOCALS",1)~
 END 
 ++ ~What makes you say that?~ + 9.1 
@@ -3659,7 +3659,7 @@ EXIT
 
 //Love Talk 10
 CHAIN IF ~Global("X3EmiLoveTalk","LOCALS",20)~ THEN X3EmiJ LoveTalk10
-~We're resting then? I thought...maybe I could explain myself now that I'm not so embarrassed and have had time to think.~
+~We're resting then? I thought...maybe I could explain myself now that I'm not so embarrassed and have had time to think.~ [X3ELS]
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiLoveTalk","LOCALS",1)~
 END 
 ++ ~It's just words, Emily. They aren't difficult to speak.~  + 10.1
@@ -3741,7 +3741,7 @@ EXIT
 //Friendship Talk #11
 
 CHAIN IF ~Global("X3EmiLoveTalk","LOCALS",22)~ THEN X3EmiJ LoveTalk11 
-~I've been thinking. And rethinking. And thinking some more.~
+~I've been thinking. And rethinking. And thinking some more.~ [X3ELS]
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiLoveTalk","LOCALS",1)~
 END 
 ++ ~And what have you come up with?~ + 11.1 
@@ -4011,7 +4011,7 @@ EXIT
  
 // Post Rest 
 CHAIN IF ~Global("X3EmiLoveTalk","LOCALS",24)~ THEN X3EmiJ LoveTalk12 
-~You're awake. Here, I got you something.~
+~You're awake. Here, I got you something.~ [X3ELS]
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiLoveTalk","LOCALS",1)~
 END 
 ++ ~Is it food? I'm starved.~ + 12.2 
@@ -4071,7 +4071,7 @@ EXIT
 // Emily LoveTalk #13
 
 CHAIN IF ~Global("X3EmiLoveTalk","LOCALS",26)~ THEN X3EmiJ LoveTalk13
-~I can't wait to show you the estate someday. There are all sorts of friends I'd love for you to meet.~
+~I can't wait to show you the estate someday. There are all sorts of friends I'd love for you to meet.~ [X3ELS]
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiLoveTalk","LOCALS",1)~
 END 
 ++ ~The estate? You're talking about your home. That's a bit far from here.~ + 13.1 
@@ -4144,7 +4144,7 @@ CHAIN X3EmiJ 13.7
 EXTERN X3EmiJ 13.8
 
 CHAIN IF ~Global("X3EmiLoveDrow","LOCALS",1)~ THEN X3EmiJ LoveTalk14 // Only happens if the dragon wasn't killed.
-~Wow. So we survive spellhold, brave through the underdark, enter a silver dragon's lair...and we are now drow. This is...crazy. Am I the only one?~
+~Wow. So we survive spellhold, brave through the underdark, enter a silver dragon's lair...and we are now drow. This is...crazy. Am I the only one?~ [X3ELS]
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiLoveDrow","LOCALS",1)~
 END 
 ++ ~Easy love. You'll have to start acting more like a drow once we enter the city.~ + 14.1 
@@ -4189,7 +4189,7 @@ EXIT
 
 //Bodhi Defeated Talk
 CHAIN IF ~Global("X3EmiLoveTalk","LOCALS",28)~ THEN X3EmiJ LoveTalk15
-~So only Irenicus remains then, now that Bodhi has fallen.~
+~So only Irenicus remains then, now that Bodhi has fallen.~ [X3ELS]
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiLoveTalk","LOCALS",1)~
 END 
 ++ ~Indeed. And he will fall.~ + 15.2
@@ -4220,7 +4220,7 @@ EXIT
 // Final LoveTalk
 
 CHAIN IF ~Global("X3EmiLoveTalk","LOCALS",30)~ THEN X3EmiJ LoveTalk16 
-~(You're all settled in to an inn room for the night and about to darken the room when you hear a slight rap on your room door.~
+~(You're all settled in to an inn room for the night and about to darken the room when you hear a slight rap on your room door.~ [X3ELS]
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiLoveTalk","LOCALS",1)~
 END 
 ++ ~It's unlocked. Come on in.~ + 16.2
@@ -4352,7 +4352,7 @@ EXTERN X3EmiJ 16.18
 
 // Romance #17
 CHAIN IF ~Global("X3Slept","LOCALS",1)~ THEN X3EmiJ LoveTalk17
-~That...was some of the best rest I have had.~
+~That...was some of the best rest I have had.~ [X3ELS]
 DO ~SetGlobal("X3Slept","LOCALS",2)SetGlobal("X3EmiAppChange","GLOBAL",6)~
 END 
 ++ ~Well, I'm glad I could please.~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",1)~ + 17.1 
