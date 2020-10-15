@@ -838,7 +838,7 @@ EXIT
 
 // Romance 
 CHAIN IF ~Global("X3RebToBLoveTalk","LOCALS",2)~ THEN X3Reb25J LoveTalk1 
-~It seems we haven't had much chance to enjoy any sort of peace. I didn't even get a chance to share with the church any of my records so far.~
+~It seems we haven't had much chance to enjoy any sort of peace. I didn't even get a chance to share with the church any of my records so far.~ [X3RLS]
 DO ~IncrementGlobal("X3RebToBLoveTalk","LOCALS",1)~
 END 
 ++ ~Are you running out of parchment?~ + 1.1
@@ -887,7 +887,7 @@ CHAIN X3Reb25J 1.8
 EXIT 
 
 CHAIN IF ~Global("X3RebToBLoveTalk","LOCALS",4)~ THEN X3Reb25J LoveTalk2
-~Do you have any regrets, <CHARNAME>? Things you could have tried to change, if you could?~
+~Do you have any regrets, <CHARNAME>? Things you could have tried to change, if you could?~ [X3RLS]
 DO ~IncrementGlobal("X3RebToBLoveTalk","LOCALS",1)SetGlobal("X3RebAppChange","GLOBAL",7)~
 END 
 ++ ~If I could? Perhaps not be a spawn of Bhaal.~ + 2.1 
@@ -993,7 +993,7 @@ EXIT
 
 // This one happens post rest.
 CHAIN IF ~Global("X3RebToBLoveTalk","LOCALS",6)~ THEN X3Reb25J LoveTalk3
-~(You haven't fully fallen into sleep when you notice a presence near you. As you prepare to protect yourself, you notice it is just Recorder approaching you.)~
+~(You haven't fully fallen into sleep when you notice a presence near you. As you prepare to protect yourself, you notice it is just Recorder approaching you.)~ [X3RLS]
 == X3Reb25J ~I don't mean to wake you, <CHARNAME>. Maybe this is a bad time.~
 DO ~IncrementGlobal("X3RebToBLoveTalk","LOCALS",1)SetGlobal("X3RebChangeApp","GLOBAL",6)~
 END 
@@ -1053,7 +1053,7 @@ EXIT
 //Love Talk #4
 
 CHAIN IF ~Global("X3RebToBLoveTalk","LOCALS",8)~ THEN X3Reb25J LoveTalk4
-~All of those bodies...those people. The burning...I've never seen such horror with my own eyes. I mourn for the losses in Saradush.~
+~All of those bodies...those people. The burning...I've never seen such horror with my own eyes. I mourn for the losses in Saradush.~ [X3RLS]
 DO ~IncrementGlobal("X3RebToBLoveTalk","LOCALS",1)SetGlobal("X3RebAppChange","GLOBAL",6)~
 END 
 ++ ~There is nothing we can do for them.~ + 4.1 
@@ -1119,7 +1119,7 @@ EXIT
 // Lovetalk #5
 
 CHAIN IF ~Global("X3RebToBLoveTalk","LOCALS",10)~ THEN X3Reb25J LoveTalk5
-~Have you...ever given thoughts about children, <CHARNAME>?~
+~Have you...ever given thoughts about children, <CHARNAME>?~ [X3RLS]
 DO ~IncrementGlobal("X3RebToBLoveTalk","LOCALS",1)SetGlobal("X3RebAppChange","GLOBAL",6)~
 END 
 ++ ~About whether I like them or not, or having them?~ + 5.1 
@@ -1239,7 +1239,7 @@ EXIT
 
 
 CHAIN IF ~Global("X3RebToBLoveTalk","LOCALS",12)~ THEN X3Reb25J LoveTalk6
-~I've been thinking of the choice that lays ahead of you. About potentially taken your father's place as a god. What do you see yourself deciding?~
+~I've been thinking of the choice that lays ahead of you. About potentially taken your father's place as a god. What do you see yourself deciding?~ [X3RLS]
 DO ~IncrementGlobal("X3RebToBLoveTalk","LOCALS",1)SetGlobal("X3RebAppChange","GLOBAL",6)~
 END 
 ++ ~What do you want me to decide?~ + 6.1
@@ -1295,7 +1295,7 @@ CHAIN X3Reb25J 6.5
 EXTERN X3Reb25J 6.6
 
 CHAIN IF ~Global("X3RebToBLoveTalk","LOCALS",14)~ THEN X3Reb25J LoveTalk7 
-~It is near the end, my love, isn't it? One way, or another.~
+~It is near the end, my love, isn't it? One way, or another.~ [X3RLS]
 DO ~IncrementGlobal("X3RebToBLoveTalk","LOCALS",1)SetGlobal("X3RebAppChange","GLOBAL",6)~
 END 
 ++ ~Aye. And I am ready to face it.~ + 7.1 

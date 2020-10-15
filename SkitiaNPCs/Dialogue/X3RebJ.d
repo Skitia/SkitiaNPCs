@@ -3813,7 +3813,7 @@ EXIT
 // Lovetalk at Ust Natha
 
 CHAIN IF ~Global("X3RebUstNathaLovetalk","GLOBAL",1)~ THEN X3RebJ LoveTalk16
-~Erm, Veldrin? Do you have a moment?~ [C0BLANK]
+~Erm, Veldrin? Do you have a moment?~ [X3RLS]
 DO ~SetGlobal("X3RebUstNathaLovetalk","GLOBAL",2)~
 END
 + ~Gender(Player1,MALE)~ + ~What is it, my mistress?~ + 16.1 
