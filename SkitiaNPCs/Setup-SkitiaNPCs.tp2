@@ -1,6 +1,6 @@
 BACKUP ~SkitiaNPCs\Backup~
 AUTHOR ~Skitia https://skitias-stories.com/contact.php~
-VERSION ~0.89~
+VERSION ~0.90~
 
 AUTO_TRA ~%MOD_FOLDER%/Tra/%s~
 
