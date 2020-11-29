@@ -125,7 +125,7 @@ DO ~SetGlobal("X3HelJanToB","GLOBAL",1)~
 == BJAN25 ~You have a daughter? I thought you were well past that age. I do remember having quite the outing with a lovely female dwarf once. Completely bald. Hairless from head to toe, and proud of it too.
 Sober too, and never drank a single glass of ale. Entirely remarkable for her kind, and a sweet soul. Unfortunately she had gotten into the smuggling business with sweet potatoes, and wound up in one jail and then another. Dangerous business, but excellent profits if you're clever enough.
 It was in fact in-between her imprisoned states that I met her, trying to sell me some sweet potatoes to take back home for dinner that night. I couldn't even finish deciding whether to take the deal before the guards came right up on her. And I thought they were there for me. Convenient, that.~
-== BX3HEL25 ~Ye know what? Nevermind. I love my daughter too much to bring yer endless prattling hell into her world.~
+== BX3HEL25 ~Ye know what? Never mind. I love my daughter too much to bring yer endless prattling hell into her world.~
 EXIT 
 
 // JAHEIRA #25
@@ -137,7 +137,7 @@ Global("X3HelJAHEIRAToB","GLOBAL",0)~ THEN BX3HEL25 X3HelJAHEIRA1
 ~The times are bloodier. More battles. More killings. More ways to die.~ [X3Blank]
 DO ~SetGlobal("X3HelJAHEIRAToB","GLOBAL",1)~
 == BJAHEI25 ~Not everyone is going to revel in death, Helga.~
-== BX3Hel25 ~Aye, there is little reason to revel in death, but triumph and living. I am a high bloodmaiden of Haela, now. And I will continue to fight for me people until my hand fails me.~
+== BX3Hel25 ~Aye, there is little reason to revel in death, but triumph and living. I am a High Bloodmaiden of Haela, now. And I will continue to fight for me people until my hand fails me.~
 == BJAHEI25 ~Not all battles are won by weapons. You would do well to open your thinking.~
 == BX3Hel25 ~Bah, I don't have time for your speak. Battle is around the corner one way or another. Best ye bring your best fighting to it.~
 EXIT 
@@ -166,7 +166,7 @@ Global("X3HelKorganToB","GLOBAL",0)~ THEN BKORGA25 X3HelKorgan1
 ~My axe is bloody dry. Ye come out where you hide! So ye can be picked and die!~ [X3Blank]
 DO ~SetGlobal("X3HelKorganToB","GLOBAL",1)~
 == BX3Hel25 ~Trying out some new rhymes, Korgan?~
-== BKORGA25 ~I grew tired and restless waiting for the next slaughter, Helga. Ye have the bloodlust as I. Ye know the pain of waiting.~
+== BKORGA25 ~I grew tired and restless waiting for the next slaughter, Helga. Ye have the blood lust as I. Ye know the pain of waiting.~
 == BX3Hel25 ~Aye, the waiting can be long. But if you are going to try and rhyme about it, do it a bit quieter. Your poetry is lacking.~
 EXIT 
 
@@ -195,7 +195,7 @@ Global("X3RebMINSC","GLOBAL",0)~ THEN BX3Reb25 X3RebMINSC1
 ~Look Minsc! Gustav and Boo seem to be finally getting along.~ [X3Blank]
 DO ~SetGlobal("X3RebMINSC","GLOBAL",1)~
 == BMINSC25 ~Ah! Friends they are, yes Recorder?~
-== BX3Reb25 ~I'll miss this, I think, when we go our seperate ways. In all of the danger we go through, their play and arguments always brings a bright spot.~
+== BX3Reb25 ~I'll miss this, I think, when we go our separate ways. In all of the danger we go through, their play and arguments always brings a bright spot.~
 == BMINSC25 ~Boo will forever remember the brave ferret, yes. But not his swiping. No, Boo did not appreciate the swiping.~
 == BX3Reb25 ~Oh, trust me, Recorder also does not appreciate it when Gustav gets grabby. I have no idea where he got that thieving habits from.~
 EXIT 
@@ -262,7 +262,7 @@ DO ~SetGlobal("X3HelSAREVOKToB","GLOBAL",1)~
 == BX3Hel25 ~Nay. <CHARNAME> said you live, and so you live. I nay have issues with a fine warrior's company.~
 == BSAREV25 ~You and your god takes no issue with my existence?~
 == BX3Hel25 ~Quite the opposite. A true warrior should be allowed to fight on. Ye may fight violently, but in that I am yer sister, for I do as well. So long as our weapons fight as one, I am quite comfortable.~
-== BSAREV25 ~Your words are an interesting suprise, cleric. I will quite enjoy fighting next to you, I think.~
+== BSAREV25 ~Your words are an interesting surprise, cleric. I will quite enjoy fighting next to you, I think.~
 EXIT 
 
 // Valygar
@@ -336,7 +336,7 @@ DO ~SetGlobal("X3HelX3RebToB1","LOCALS",1)~
 == BX3Hel25 IF ~Global("X3RebQuest","GLOBAL",15)~ THEN ~Yer boy's gone on without ye for a while, lass. A little longer won't kill him. Ye'll have a world of time to make up for it when ye get back.~
 == BX3Reb25 IF ~Global("X3RebQuest","GLOBAL",15)~ THEN ~I hope so. I really do.~
 == BX3Reb25 IF ~!Global("X3RebQuest","GLOBAL",15)~ THEN ~He is in great danger. And worse...I don't even know where.~
-== BX3Hel25 IF ~!Global("X3RebQuest","GLOBAL",15)~ THEN ~Ye can always go look, lass. Ye needn't stay with us. Yer a lot stornger than ye used to be.~
+== BX3Hel25 IF ~!Global("X3RebQuest","GLOBAL",15)~ THEN ~Ye can always go look, lass. Ye needn't stay with us. Yer a lot stronger than ye used to be.~
 == BX3Reb25 IF ~!Global("X3RebQuest","GLOBAL",15)~ THEN ~I need to finish what I started with <CHARNAME>...but when it's over? I think I will do just that, Helga, no matter how long it takes.~
 EXIT 
 
@@ -361,7 +361,7 @@ See("X3Vie")
 Global("X3HelX3VieToB1","LOCALS",0)~ THEN BX3Hel25 X3HelX3Vie1
 ~Took a while elf, but ye've finally come slightly more bearable with that usefulness.~
 DO ~SetGlobal("X3HelX3VieToB1","LOCALS",1)~
-== BX3Vie25 ~Oh, I suppose you enjoy your witless remarks. Your leg limp must have finally dissapeared.~
+== BX3Vie25 ~Oh, I suppose you enjoy your witless remarks. Your leg limp must have finally disappeared.~
 == BX3Hel25 ~Aye, observant of thee. Haela's blessed me to finally take care of it with all of the glorious battles I've done in her name.~
 == BX3Vie25 IF ~!Alignment("X3Vie",NEUTRAL)~ THEN ~Battles which *I* have kept you alive with. Where is my reward?~
 == BX3Hel25 IF ~!Alignment("X3Vie",NEUTRAL)~ THEN ~Yer reward is that ye can pray with me to Haela this night if ye wish.~
@@ -389,6 +389,6 @@ DO ~SetGlobal("X3HelX3VieToB2","LOCALS",1)~
 == BX3Hel25 ~Aye, aye, ye are right. But it be strange to see you mature after all this time. Hate to say it lass, never thought ye'd get a chance like this.~
 == BX3Vie25 ~I didn't either. I am overjoyed it has happened.~
 == BX3Hel25 ~Well...I be glad for thee. I take back what I said. I think I'll...bah, I'll miss ye.~
-== BX3Vie25 ~I will miss you too. Now let us never say those words again to eachother.~
+== BX3Vie25 ~I will miss you too. Now let us never say those words again to each other.~
 == BX3Hel25 ~Agreed!~
 EXIT 

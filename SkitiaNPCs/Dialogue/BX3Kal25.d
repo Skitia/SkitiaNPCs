@@ -15,13 +15,13 @@ DO ~SetGlobal("X3KalMazzyToB","GLOBAL",1)~
 == BX3KAL25 ~All right. But I might still tell it once. Too fun of a tale to pass up.~
 EXIT 
 
-//Mazzy#2: Unlock's Kale Mazzy Ending.
+//Mazzy#2: Unlocks Kale Mazzy Ending.
 CHAIN 
 IF ~IsValidForPartyDialogue("Mazzy")
 IsValidForPartyDialogue("X3Kal")
 See("Mazzy")
 Global("X3KalMazzyToB","GLOBAL",0)Alignment("X3Kal",LAWFUL_NEUTRAL)!Global("X3KalRomanceActive","GLOBAL",2)!Global("_bMazzyRomance","GLOBAL",2)~ THEN BX3Kal25 KaleMazzy2
-~Sooo. We won't be going about with <CHARNAME> forever. Where are we going after this, Mazzy?~ [X3KSO]
+~Soooo. We won't be going about with <CHARNAME> forever. Where are we going after this, Mazzy?~ [X3KSO]
 DO ~SetGlobal("X3KalMazzyToB","GLOBAL",1)SetGlobal("X3KalMazzyEnd","GLOBAL",1)~
 == BMAZZY25 ~We, Kale?~
 == BX3Kal25 ~We compliment each other well enough. And we're both keen on traveling. Why split?~
@@ -60,7 +60,7 @@ Global("X3KalAERIEToB","GLOBAL",0)~ THEN BAERIE25 X3KalAERIE1
 ~Kale, I'm still not quite able to figure you out. Why do you feel the need to tell such wild re-tellings of our tales when we camp all the time.~ [X3Blank]
 DO ~SetGlobal("X3KalAERIEToB","GLOBAL",1)~
 == BX3Kal25 ~It's called reliving the moment. We've had some harrowing calls, exciting, blood pumping moments all over the place on our road together. You don't want to re-think of it just once?~
-== BAERIE25 ~I...I think back on things, sometimes. It makes me happy that we're still all in one piece, but...your re-tellings are just non-sensical.~
+== BAERIE25 ~I...I think back on things, sometimes. It makes me happy that we're still all in one piece, but...your re-tellings are just non-nonsensical.~
 == BX3Kal25 ~Well, think of it this way. We could barely believe we've made it sometimes. I'm just trying to recapture that emotion.~
 == BAERIE25 ~I don't see how swinging a dragon into the air by its tail into a second dragon that was not even there recapturing anything.~
 == BX3Kal25 ~Well, once I teach you the art of story-telling sometime, you'll get it all down.~
@@ -72,10 +72,10 @@ IF ~IsValidForPartyDialogue("ANOMEN")
 IsValidForPartyDialogue("X3Kal")
 See("ANOMEN")
 Global("X3KalANOMENToB","GLOBAL",0)~ THEN BX3Kal25 X3KalANOMEN1
-~Soo. We make quite a good team, Anomen. I do the striking, and you do the healing.~ [X3Blank]
+~Heh, we make quite the team, Anomen. I do the striking, and you do the healing.~ [X3Blank]
 DO ~SetGlobal("X3KalANOMENToB","GLOBAL",1)~
 == BANOME25 ~It isn't just your arm that is swinging forward, halfling. But we do work well together. What is your point?~
-== BX3Kal25 ~Weeell. I was just thinking that when I tell this tale back in some tavern, I'll have to give you a bit of credit.~
+== BX3Kal25 ~Well. I was just thinking that when I tell this tale back in some tavern, I'll have to give you a bit of credit.~
 == BANOME25 ~A bit? How many times have my healing spells kept you on your feet? You practically throw yourself into getting wounded constantly.~
 == BX3Kal25 ~Come on, mate. I'd usually omit any names, especially <CHARNAME>. You mention them and I tell you everyone will be asking about them over you. Not that I mind terribly, but it takes all the fun of getting a bit of recognition.~
 == BX3Kal25 ~So uh, saying I'd include yours is well, my way of saying "thanks", you understand?~
@@ -94,7 +94,7 @@ DO ~SetGlobal("X3KalCERNDToB","GLOBAL",1)~
 == BX3Kal25 ~Praise, now eh? Keep it coming.~
 == BCERND25 ~You do however, have the penchant for their tall tales and eating, perhaps more intense than any I have met.~
 == BX3Kal25 ~Heh. You can stop now.~
-== BCERND25 ~I believe in fact, such is your apetitite that I found some of my own rations missing the night before.~
+== BCERND25 ~I believe in fact, such is your appetite that I found some of my own rations missing the night before.~
 == BX3Kal25 IF ~IsValidForPartyDialogue("MAZZY")~ THEN ~Who could it have been...oh, Mazzy! It was her!~
 == BMAZZY25 IF ~IsValidForPartyDialogue("MAZZY")~ THEN ~Please, show some maturity, Kale.~
 == BX3Kal25 ~Damn. Guilty as charged, mate. Well. I'll buy you the next round of food when we get the chance, eh?~
@@ -113,7 +113,7 @@ DO ~SetGlobal("X3KalDornToB","GLOBAL",1)~
 == BDORN25 ~We could put that to the test. See how many pieces you split into.~
 == BX3Kal25 ~Eh, well, I'd take you on, but I work better next to someone. But don't underestimate me either, mate. I'm in knee-cap and groin range.~
 == BDORN25 ~You think that will make a difference?~
-== BX3Kal25 ~Not really, no. Nevermind.~
+== BX3Kal25 ~Not really.~
 EXIT 
 
 // EDWIN
@@ -137,7 +137,7 @@ IF ~IsValidForPartyDialogue("HAERDALIS")
 IsValidForPartyDialogue("X3Kal")
 See("HAERDALIS")
 Global("X3KalHAERDALISToB","GLOBAL",0)~ THEN BX3Kal25 X3KalHAERDALIS1
-~You know, I kind of like being called a hound by you, Haer'daelis. Reminds me of Urogalan.~ [X3Blank]
+~You know, I kind of like being called a hound by you, Haer'dalis. Reminds me of Urogalan.~ [X3Blank]
 DO ~SetGlobal("X3KalHAERDALISToB","GLOBAL",1)~
 == BHAERD25 ~And who is this actor who you introduce to the stage?. A hero? A friend?~
 == BX3Kal25 ~He's the god of death of my people. I like to think I'm doing his work, on this bloody path of <CHARNAME>'s. Only way to really digest it all.~
@@ -238,7 +238,7 @@ DO ~SetGlobal("X3KalHexxatToB","GLOBAL",1)~
 == BHEXXA25 ~I doubt they would ask.~
 == BX3KAL25 ~I don't know, maybe you get hungry one day and see a few people, just say something before you feed on them.~
 == BHEXXA25 ~They do not tend to survive the feeding.~
-== BX3KAL25 ~Uh...you know what? Nevermind. I might leave this part out.~
+== BX3KAL25 ~Uh...you know what? Never mind. I might leave this part out.~
 EXIT 
 // Jan 
 CHAIN
@@ -246,7 +246,7 @@ IF ~IsValidForPartyDialogue("Jan")
 IsValidForPartyDialogue("X3KAl")
 See("Jan")
 Global("X3KAlJanToB","GLOBAL",0)~ THEN BX3KAl25 X3KAlJan1
-~Soo. You're a conneisuer of a good story, I bet Jan. You ever hear my tale about how I beat a dragon with one good slap?~ [X3KSO]
+~You're a connoisseur of a good story, I bet Jan. You ever hear my tale about how I beat a dragon with one good slap?~ [X3KSO]
 DO ~SetGlobal("X3KAlJanToB","GLOBAL",1)~
 == BJAN25 ~Smacking a dragon? You know that reminds me of a time way back when Burt Wunderkind flew his griffon straight into what he thought was a wyvern, but was actually a dangerous green dragon. The creature took one look at him and nearly glomped his griffon in two. If it weren't for his quick thinking, there'd be two Burt Wunderkin's. And probably two Griffon's. Neither alive.~
 == BX3KAl25 ~Pfft, but he didn't slap a dragon. He just nearly died. Not as great.~
@@ -264,7 +264,7 @@ IF ~IsValidForPartyDialogue("NALIA")
 IsValidForPartyDialogue("X3Kal")
 See("Nalia")
 Global("X3KalNALIAToB","GLOBAL",0)~ THEN BX3Kal25 X3KalNALIA1
-~Soo. You're a powerful archmage now, Nalia. Magic's been looking mightily impressive, at least.~ [X3KSO]
+~You're a powerful archmage now, Nalia. Magic's been looking mightily impressive, at least.~ [X3KSO]
 DO ~SetGlobal("X3KalNALIAToB","GLOBAL",1)~
 == BNALIA25 ~Not now, Kale. I am trying to concentrate.~
 == BX3Kal25 ~Sheesh, so serious. You can't tell me you've never thought of using your spells just for fun.~
@@ -305,7 +305,7 @@ DO ~SetGlobal("X3KalRasaadToB","GLOBAL",1)~
 == BRASAA25 ~To perform the technique, one first must come to an understanding of how mind and body work in conjunction.~
 == BX3Kal25 ~Aww, come on, I just want a cool move to show off when I tell one of my stories.~
 == BRASAA25 ~You have your blade, do you not? You can perform what you did with it, for you have not fought with your fists.~
-== BX3Kal25 ~Yeah, heh. Guess you are right, mate. Nevermind.~
+== BX3Kal25 ~Yeah, heh. Guess you are right, mate. Never mind.~
 EXIT 
 
 
@@ -315,7 +315,7 @@ IF ~IsValidForPartyDialogue("SAREVOK")
 IsValidForPartyDialogue("X3Kal")
 See("SAREVOK")
 Global("X3KalSAREVOKToB","GLOBAL",0)~ THEN BX3Kal25 X3KalSAREVOK1
-~Sooo. Sarevok.~ [X3KSO]
+~Soooo. Sarevok.~ [X3KSO]
 DO ~SetGlobal("X3KalSAREVOKToB","GLOBAL",1)~
 == BSAREV25 ~What is it, Kale? Make it quick or be silent.~
 == BX3Kal25 ~So what's death like? Not often you get a first person perspective.~
@@ -332,7 +332,7 @@ IF ~IsValidForPartyDialogue("Valygar")
 IsValidForPartyDialogue("X3Kal")
 See("Valygar")
 Global("X3KalValygarToB","GLOBAL",0)~ THEN BX3Kal25 X3KalValygar1
-~Sooo. I've been thinking, Valygar.~ 
+~Soooo. I've been thinking, Valygar.~ 
 DO ~SetGlobal("X3KalValygarToB","GLOBAL",1)~
 == BVALYG25 ~*Sigh*. Just say it and get it over with.~
 == BX3Kal25 ~Well, you and I, we're probably the greatest members of our party. I've got the flashiness, you have the calm and collected persona people like.~
@@ -379,7 +379,7 @@ See("X3Reb")
 Global("X3KalX3RebToB1","LOCALS",0)~ THEN BX3Kal25 X3KalX3Reb1
 ~Been a long, journey, hasn't it, Recorder?~
 DO ~SetGlobal("X3KalX3RebToB1","LOCALS",1)~
-== BX3Reb25 ~I am a little worried I am going to run out of pages. Given where our travels are now, it's not likely I'll find parchment to add to th end if I run out.~
+== BX3Reb25 ~I am a little worried I am going to run out of pages. Given where our travels are now, it's not likely I'll find parchment to add to the end if I run out.~
 == BX3Kal25 ~You can keep it in your head. Long as people get the gist, that's all that matters..~
 == BX3Reb25 ~Accuracy matters too, Kale. With all the spells and knowledge I know, now, I'd rather not keep too much in my head.~
 == BX3Kal25 ~Well, what if I help keep everything memorized, eh?~
@@ -394,7 +394,7 @@ IF ~IsValidForPartyDialogue("X3Reb")
 IsValidForPartyDialogue("X3Kal")
 See("X3Reb")
 Global("X3KalX3RebToB1","LOCALS",1)~ THEN BX3Kal25 X3KalX3Reb2
-~Sooo. You sure you still don't need help with that book? I took a peek and you're almost at the end.~ [X3KSO]
+~Soooo. You sure you still don't need help with that book? I took a peek and you're almost at the end.~ [X3KSO]
 DO ~SetGlobal("X3KalX3RebToB1","LOCALS",2)~
 == BX3Reb25 ~Kale! That is private.~
 == BX3Kal25 ~Don't worry, sheesh. I can barely read that fancy writing of yours. It's so tiny.~
@@ -403,7 +403,7 @@ DO ~SetGlobal("X3KalX3RebToB1","LOCALS",2)~
 == BX3Reb25 ~Um...it's empty?~
 == BX3Kal25 ~Yeah...I never wrote in it. Just kept it for the looks. But I thought it might make your writing easier.~
 == BX3Reb25 ~You are kind, Kale. Thank you. I'll find a way to repay you for this, I promise.~
-== BX3Kal25 ~Weeeell. If you're mentioning it, I wouldn't mind a little bit more prominence. Maybe I could have a tiny bit of Bhaalspawn blood, or I don't know, godly strength?~
+== BX3Kal25 ~Well, heh. If you're mentioning it, I wouldn't mind a little bit more prominence. Maybe I could have a tiny bit of Bhaalspawn blood, or I don't know, godly strength?~
 == BX3Reb25 ~Heehee, no. I won't do that. But...I can put an anecdote of one of the stories you've told around the fire. I think it will help people get a picture of what you are like more.~
 == BX3Kal25 ~Deal! Woohoo! Fame is going to come my way!~
 EXIT 
@@ -435,7 +435,7 @@ IsValidForPartyDialogue("X3Kal")
 See("X3Vie")
 !Global("X3VieEvermeet","GLOBAL",1)
 Global("X3KalX3VieToB1","LOCALS",1)~ THEN BX3Kal25 X3KalX3Vie2
-~Sooo. You going to keep traveling? Or going to go home one day.~ [X3KSO]
+~Soooo. You going to keep traveling? Or going to go home one day.~ [X3KSO]
 DO ~SetGlobal("X3KalX3VieToB1","LOCALS",2)~
 == BX3Vie25 ~For as long as my forehead is marked, there is no going home.~
 == BX3Kal25 ~Sheesh. I'd hate to have that ugly thing on my head.~

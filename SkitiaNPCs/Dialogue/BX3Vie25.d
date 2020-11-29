@@ -21,7 +21,7 @@ Global("X3VieANOMENToB","GLOBAL",0)~ THEN BX3Vie25 X3VieANOMEN1
 ~This chaos would never happen in Evermeet. All of this death and destruction. Humans are as ever, hopeless.~ [X3Blank]
 DO ~SetGlobal("X3VieANOMENToB","GLOBAL",1)~
 == BANOME25 ~Talking like you are so great again, Vienxay? If it weren't for the Order, many of these so called threats you dismiss as laughable would be at your doorstep.~
-== BX3Vie25 ~Oh, such blind bragging. If Evermeet was not watching the seas, what horrible fates would be at your dockstep? We could very well live without the Order, and perhaps be better for it.~
+== BX3Vie25 ~Oh, such blind bragging. If Evermeet was not watching the seas, what horrible fates would be at your harbors? We could very well live without the Order, and perhaps be better for it.~
 == BANOME25 ~And yet where is Evermeet now? Nowhere. But they seemed to have enough sense to be rid of your nonsense.~
 == BX3Vie25 ~Predictable. Stooping so low. If you have no other insult to use, I believe we're done here.~
 EXIT 
@@ -105,7 +105,7 @@ See("X3Vie")
 Global("X3VieHexxatToB","GLOBAL",0)~ THEN BHEXXA25 RebHexxat1
 ~You have become a powerful archmage of Shadows, Vienxay.~ [X3Blank]
 DO ~SetGlobal("X3VieHexxatToB","GLOBAL",1)~
-== BX3Vie25 ~Of course I have. I hardly need your acknowledgement of the obvious.~
+== BX3Vie25 ~Of course I have. I hardly need your acknowledgment of the obvious.~
 == BHEXXA25 ~You have also become even more prideful. Beware.~
 == BX3Vie25 ~Please. The last person I need a warning from is a vampire.~
 == BHEXXA25 ~If you are not careful, I will be the last person you get a warning from.~
@@ -155,7 +155,7 @@ DO ~SetGlobal("X3VieKELDORNToB","GLOBAL",1)~
 == BKELDO25 ~Your presence is why I counsel <CHARNAME> all the more strongly on the right path. But if you ever push them into the path of darkness, we will be at odds.~
 == BX3Vie25 ~...Perhaps I was wrong. I do not want <CHARNAME> to repeat my mistakes, even if I do not believe in your ridiculous black and white ideals.~
 == BKELDO25 ~Grey is the excuse to do nothing. Evil festers at actionless men.~
-== BX3Vie25 ~Evil festers because people are denied anything at all by the tyranny of order. But I see we will not change eachother's minds. Let us drop this and catch up to <CHARNAME> before they get angry at our bickering.~ 
+== BX3Vie25 ~Evil festers because people are denied anything at all by the tyranny of order. But I see we will not change each other's minds. Let us drop this and catch up to <CHARNAME> before they get angry at our bickering.~ 
 EXIT 
 
 // Korgan #25
@@ -181,7 +181,7 @@ Global("X3VieNALIAToB","GLOBAL",0)~ THEN BNALIA25 X3VieNALIA1
 ~Vienxay, you have been glaring at me for hours now. If you have something to say, say it like an adult.~ [X3BLANk]
 DO ~SetGlobal("X3VieNALIAToB","GLOBAL",1)~
 == BX3Vie25 ~Ugh. Well, despite your *stupid* ideals, I have always considered you a rival. And yet I am forced to admit you are the superior mage, despite my more numerous years of experience.~
-== BNALIA25 ~That was suprisingly mature of you, Vienxay. But this isn't a competition. We work together, after all.~
+== BNALIA25 ~That was surprisingly mature of you, Vienxay. But this isn't a competition. We work together, after all.~
 == BX3Vie25 ~Of course it is a competition. I am not going to let you remain supreme. Your mantle will be mine soon enough.~
 == BNALIA25 ~If I am what drives you to do better, Vienxay, then...I won't say anything. Do your best.~
 == BX3Vie25 ~Ugh, and now I feel like I am being treated like a child. You will rue this day, Nalia. Yes, you will rue this day.~
@@ -281,9 +281,9 @@ Global("X3VieValygarToB","GLOBAL",0)~ THEN BX3Vie25 X3VieValygar1
 ~After all of our time together, Valygar, do you still think magic so horrible, when it has saved our lives many times?~ 
 DO ~SetGlobal("X3VieValygarToB","GLOBAL",1)~
 == BVALYG25 ~It has also nearly ended it, many more. Far more than I would consider it good.~
-== BX3Vie25 ~A dissapointing response. And what of me? I use magic. Do you think myself evil?~
+== BX3Vie25 ~A disappointing response. And what of me? I use magic. Do you think myself evil?~
 == BVALYG25 IF ~!Alignment("X3Vie",NEUTRAL)~ THEN ~You've not changed, Vienxay. My opinion of you remains the same as it ever will, only more reinforced.~
-== BX3Vie25 IF ~!Alignment("X3Vie",NEUTRAL)~ THEN ~And I thought you had potential human. You are another dissapointment.~
+== BX3Vie25 IF ~!Alignment("X3Vie",NEUTRAL)~ THEN ~And I thought you had potential human. You are another disappointment.~
 == BVALYG25 IF ~Alignment("X3Vie",NEUTRAL)~ THEN ~You've...changed. Perhaps my first perceptions were fortunate wrong, or battle injuries have knocked sense into you.~
 == BX3Vie25 IF ~Alignment("X3Vie",NEUTRAL)~ THEN ~The former. I have always been sensible, and like I would ever risk scars to my beauty.~
 EXIT 

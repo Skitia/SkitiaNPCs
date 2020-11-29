@@ -26,7 +26,7 @@ DO ~SetGlobal("X3RebAERIE","GLOBAL",1)~
 == BX3Reb ~No, your reaction is understandable. I um, was thinking, maybe I could ask you some questions about your thoughts of the things we've gone through.~
 == BAERIE ~My opinions? What for?~
 == BX3Reb ~Often personal quotes can really help enrich a story or people to understand how you were thinking or feeling. And, it might be easier if you know that your own words are being preserved.~
-== BAERIE ~You are really kind to try to take in account of my feelings. I wouldn't mind doing that for you sometimee. Just ask.~
+== BAERIE ~You are really kind to try to take in account of my feelings. I wouldn't mind doing that for you sometime. Just ask.~
 EXIT 
 
 // Aerie #3
@@ -38,7 +38,7 @@ Global("X3RebAERIE","GLOBAL",0)~ THEN BAERIE  X3RebAERIE3
 ~I know the pain you feel, Recorder. I understand why you don't talk about being taken. I don't like to talk about it either.~ [X3Blank]
 DO ~SetGlobal("X3RebAERIE","GLOBAL",1)~
 == BX3Reb ~Aerie...~
-== BAERIE ~But maybe we should? With eachother, I mean. Now that I know, I can't help but want to see if you are okay.~
+== BAERIE ~But maybe we should? With each other, I mean. Now that I know, I can't help but want to see if you are okay.~
 == BX3Reb ~It was a long time ago, Aerie. I... would rather forget about it.~
 == BAERIE ~I can't forget about. One look at my back and...~
 == BX3Reb ~You are right. Forgetting doesn't work. S-so if you are serious about listening...I can try sometime. I trust you.~
@@ -115,7 +115,7 @@ DO ~SetGlobal("X3RebDORN","GLOBAL",1)~
 == BDORN ~You hesitate and tremble. How did you become to join this party? We do not need the baggage.~
 == BX3Reb ~I am not baggage. I barely want to stay with a murderer...but I do so for <CHARNAME>.~
 == BDORN ~If you do not have stomach to kill, bard, then you do not have the stomach for adventuring..~
-== BX3Reb ~I have killed before, Dorn. I hate it everytime we must.~
+== BX3Reb ~I have killed before, Dorn. I hate it every time we must.~
 == BDORN ~And yet you still do. Why?~
 == BX3Reb ~Because...because...of my friends. Of ideals you have long discarded and burned in your service to horrible creatures. No, I will talk to you no more of this.~
 EXIT
@@ -128,7 +128,7 @@ See("Edwin")
 Global("X3RebEDWIN","GLOBAL",0)~ THEN BX3Reb X3RebEDWIN1
 ~...~ [X3RFL1]
 DO ~SetGlobal("X3RebEDWIN","GLOBAL",1)~
-== BEDWIN ~Gnome, there are a reasons why there are no bard practitioners amongst your race. You have just proven it with your atrocious performance.~
+== BEDWIN ~Gnome, there are a reasons why there are no bard practitioners among your race. You have just proven it with your atrocious performance.~
 == BX3Reb ~I am sorry, Edwin. If there is any music you know from Thay, I could play that instead.~
 == BEDWIN ~Would that I know nor cared to tell you anything. I do not. (Nor do I think this monkey could even comprehend taste.)~
 == BX3Reb ~Um...I can hear  you Edwin.~
@@ -212,7 +212,7 @@ DO ~SetGlobal("X3RebIMOEN","GLOBAL",1)~
 == IMOEN2J ~Not important. But I couldn't help but notice some of the things you were writing.~
 == BX3Reb ~...You didn't...take it, did you?~
 == IMOEN2J ~Hey, I gave it back, didn't I? What kind of thief would return goods? Anyway, I saw a rather interesting poem written between the margins.~
-== BX3Reb IF ~!Global("X3RebRomanceActive","GLOBAL",1)!Global("X3RebRomanceActive","GLOBAL",2)~ THEN ~Oh. Oh dear. I feel so embarrased.~
+== BX3Reb IF ~!Global("X3RebRomanceActive","GLOBAL",1)!Global("X3RebRomanceActive","GLOBAL",2)~ THEN ~Oh. Oh dear. I feel so embarrassed.~
 == IMOEN2J IF ~!Global("X3RebRomanceActive","GLOBAL",1)!Global("X3RebRomanceActive","GLOBAL",2)~ THEN ~I never saw that side of you. You can be a saucy poet. Do you have more?~
 == BX3Reb IF ~!Global("X3RebRomanceActive","GLOBAL",1)!Global("X3RebRomanceActive","GLOBAL",2)~ THEN ~No no no. Thank you, but we should focus! On anything else!~
 == IMOEN2J IF ~!Global("X3RebRomanceActive","GLOBAL",1)!Global("X3RebRomanceActive","GLOBAL",2)~ THEN ~You won't get out of this that easy, Recorder. Just wait.~
@@ -251,7 +251,7 @@ See("Jan")
 Global("X3RebJan","GLOBAL",0)~ THEN BX3Reb X3RebJan1
 ~Jan, you tell such grand stories. Have you ever considered the bards trade?~ [X3Blank]
 DO ~SetGlobal("X3RebJan","GLOBAL",1)~
-== BJAN ~Well, Recorder, I did make an attempt at the trade way back. Back when I was a younger gnome, sailing to the distant waterdeep, I took a gander at one of the colleges. There was an instrument shortage, and I had very few things on my person, so I decided to pick up a ale mug as my try out instrument.~
+== BJAN ~Well, Recorder, I did make an attempt at the trade way back. Back when I was a younger gnome, sailing to the distant Waterdeep, I took a gander at one of the colleges. There was an instrument shortage, and I had very few things on my person, so I decided to pick up a ale mug as my try out instrument.~
 == BX3Reb ~I...~
 == BJAN ~Now, my skills with any instrument were not the best, but an ale mug was a real challenge. The music of the glass was quite resonating, a pretty little peppery spew of air that had the sound of a turnip being lightly plucked from the soil.~
 == BX3Reb ~Did you make it?~
@@ -286,7 +286,7 @@ DO ~SetGlobal("X3RebJan","GLOBAL",3)~
 == BJAN ~Gustav loves his Uncle Jan. Don't you, Gustav? He likes his new best friend.~
 == BX3Reb ~Um, are you going to give him back at some point?~
 == BJAN ~Give who back? I didn't take anything from you.~
-== BX3Reb ~Um...nevermind. You two look so adorable together I won't pry him away.~
+== BX3Reb ~Um...never mind. You two look so adorable together I won't pry him away.~
 == BMINSC IF ~IsValidForPartyDialogue("Minsc")~ THEN ~Better the ferret than you, Boo.~
 EXIT 
 
@@ -299,7 +299,7 @@ Global("X3RebJan","GLOBAL",2)~ THEN BX3Reb X3RebJan4
 ~Jan...have you considered getting your own Ferret? You've even taken to have Gustav sleep next to you.~ 
 DO ~SetGlobal("X3RebJan","GLOBAL",3)~
 == BJAN ~Well now, are you offering to give up your ferret? I would gladly take him off your hands.~
-== BX3Reb ~No! Never that. I was being considerate. But he is my companion. If we ever seperate, he isn't going with you, but you seem to enjoy having an animal around.~
+== BX3Reb ~No! Never that. I was being considerate. But he is my companion. If we ever separate, he isn't going with you, but you seem to enjoy having an animal around.~
 == BJAN ~You make a good point there, Recorder. But I don't think there would be any ferret like Gustav.~
 == BX3Reb ~You're a good friend, Jan, even if you're stranger than I am. So maybe I could at least help you find a pet. Maybe if not a ferret, a dog or those griffons you always talk about.~
 == BJAN ~Well, my ex-brother in law, Burt Wunderkind, didn't buy his griffons in a store. Why, he baited them, dove right into their nest with a wyvern as a steed, and threw some really fine insults. Ah, definitely not appropriate to recount them.~
@@ -317,7 +317,7 @@ DO ~SetGlobal("X3RebJAHEIRA","GLOBAL",1)~
 == BJAHEIR ~Take care of your distractions, Recorder. You would not want to be caught unawares.~
 == BX3Reb ~If something happened, I would be ready right away, I swear.~
 == BJAHEIR ~Would you now? If it is not the pet, it is your music, or your books. I swear your eyes are almost never on the road ahead.~
-== BX3Reb ~I know it may seem a bit dangerous but...I am juggling a lot of responsiblities. Gustav needs love, it can be easy to forget small details if you don't write them down quickly, and music eases my own nerves.~
+== BX3Reb ~I know it may seem a bit dangerous but...I am juggling a lot of responsibilities. Gustav needs love, it can be easy to forget small details if you don't write them down quickly, and music eases my own nerves.~
 == BJAHEIR ~Perhaps at least keep close to the party, then. I will keep a second eye on you, but find a better time for things where you can.~
 == BX3Reb ~Yes, Jaheira. I will keep your words in mind.~
 EXIT 
@@ -342,7 +342,7 @@ IF ~IsValidForPartyDialogue("KELDORN")
 IsValidForPartyDialogue("X3Reb")
 See("X3Reb")
 Global("X3ReBKELDOR","GLOBAL",0)~ THEN BKELDOR X3ReBKELDOR1
-~Recorder, your music is beautiful. Why are you tragically on the road, and not delighting the thousands with your music in a prestigous house or castle for entertainment?~ [X3Blank]
+~Recorder, your music is beautiful. Why are you tragically on the road, and not delighting the thousands with your music in a prestigious house or castle for entertainment?~ [X3Blank]
 DO ~SetGlobal("X3ReBKELDOR","GLOBAL",1)~
 == BX3Reb ~I am a bard, Keldorn, but no performer. I have a duty to history first.~
 == BKELDOR ~Duty, then. This I can understand. Duty before all else.~
@@ -374,11 +374,11 @@ See("X3Reb")
 Global("X3RebKorgan","GLOBAL",0)~ THEN BKORGAN X3KalKorgan1
 ~This be no place for a gnome maiden. Ye weak, shorter than me, and lack any strength.~ [X3Blank]
 DO ~SetGlobal("X3RebKorgan","GLOBAL",1)~
-== BX3Reb ~Um...I have spells, and, well a bit of music. I know I can find a way to make mysef useful.~
-== BKORGAN ~Ye can cook the stew and play the evening entertainment. All things I can do just fine, hah. Useless.~
+== BX3Reb ~Um...I have spells, and, well a bit of music. I know I can find a way to make myself useful.~
+== BKORGAN ~Ye can cook the stew and play the evening entertainment. All things I can do in me sleep. Useless.~
 == BX3Reb ~I don't know if your voice was very in-tune the last time you tried to sing, but...~
 == BKORGAN ~Ye insulting me, girl?~
-== BX3Reb ~No! I was...nevermind. I didn't say anything.~
+== BX3Reb ~No! I was...never mind. I didn't say anything.~
 == BKORGAN ~Coward. When this one gets wasted, <CHARNAME>, don't waste yer coin on reviving them.~
 EXIT 
 
@@ -390,7 +390,7 @@ IsValidForPartyDialogue("X3Reb")
 See("X3Reb")
 Global("X3RebNalia","GLOBAL",0)
 AreaType(CITY)~ THEN BNALIA X3RebNalia2
-~I hate seeing inns around the city. They are the source of so much ill. Drunkedness and draining of wealth.~ [X3Blank]
+~I hate seeing inns around the city. They are the source of so much ill. Drunkenness and draining of wealth.~ [X3Blank]
 DO ~SetGlobal("X3RebNalia","GLOBAL",1)~
 == BX3Reb ~They are also places of rest and a bit of music. A small reprieve from the day's labor.~
 == BNALIA ~At what cost, Recorder?~
@@ -409,8 +409,8 @@ Global("X3RebNalia","GLOBAL",1)~ THEN BX3Reb X3RebNalia2
 DO ~SetGlobal("X3RebNalia","GLOBAL",2)~
 == BNALIA ~I was wanting to ask what your life was like...while you were enslaved, if that is all right.~ [X3Blank]
 == BX3Reb ~Oh. I... would rather not, Nalia.~
-== BNALIA ~If I am to understand the poor's suffering, I need to know. I want to listen.~
-== BX3Reb ~But I do not want to tell. I am not poor, Nalia. Do you want to hear it was horrible? It was. Somedays gave false hope, some days I laughed, some days I cried. Some days I smiled, and others I desired to die. In the end, it's just one collection of horrible memories.~
+== BNALIA ~If I am to understand the suffering of the poor, I need to know. I want to listen.~
+== BX3Reb ~But I do not want to tell. I am not poor, Nalia. Do you want to hear it was horrible? It was. Some days gave false hope, some days I laughed, some days I cried. Some days I smiled, and others I desired to die. In the end, it's just one collection of horrible memories.~
 == BNALIA ~I... am sorry, Recorder. It is wrong of me to press.~
 == BX3Reb ~It isn't you. Just thinking about it makes me so...angry. Let us speak no more of it.~
 EXIT 
@@ -446,10 +446,10 @@ DO ~SetGlobal("X3RebMazzy","GLOBAL",2)~
 == BX3Reb ~I didn't do it out of just fear, Mazzy. I hate myself for everything I went through.~
 == BMAZZY ~You cannot blame yourself for the evil you suffered unto others. That sin is theirs alone.~
 == BX3Reb ~How can I? I lost someone I loved, Mazzy...I do not think you can imagine what that is like.~
-== BMAZZY ~I too have lost someone I hold dear to my heart, Recorder. But perhaps I have mistepped. If this is truly difficult for you, then I will let it be.~
+== BMAZZY ~I too have lost someone I hold dear to my heart, Recorder. But perhaps I have misstepped. If this is truly difficult for you, then I will let it be.~
 == BX3Reb ~I know what you are trying to say though. I'm just not strong enough to do that. And I don't think I ever will be.~
 EXIT 
-//Mazzie#3
+//Mazzy #3
 CHAIN 
 IF ~IsValidForPartyDialogue("Mazzy")
 IsValidForPartyDialogue("X3Reb")
@@ -472,7 +472,7 @@ See("MINSC")
 Global("X3RebMINSC","GLOBAL",0)~ THEN BX3Reb X3RebMINSC1
 ~Gustav, no! Don't chase the good hamster.~ [X3RF2]
 DO ~SetGlobal("X3RebMINSC","GLOBAL",1)~
-== BMINSC ~Ah, Boo booped his nose! Gustav just thought it meant to play.~
+== BMINSC ~Ah, Boo bopped his nose! Gustav just thought it meant to play.~
 == BX3Reb ~Sorry. I'm just a bit worried since Gustav is much bigger.~
 == BMINSC ~Boo may seem small but his heart is big. He is not afraid of the ferret. No, ferret is friend.~
 == BX3Reb ~Okay...I'll not be so restrictive of them, then.~
@@ -579,7 +579,7 @@ DO ~SetGlobal("X3RebValygar","GLOBAL",1)~
 == BX3Reb ~You are different than me in that way. I think I play so I don't have to think when something troubles me. I just want to be a little  at ease.~
 == BVALYGA ~Something is on your mind then?~
 == BX3Reb ~All the time recently. I'm trying to write and keep this tale in one piece, but my own contributions or lack thereof influence the very records I am keeping. It makes me question my own bias.~
-== BVALYGA ~Being truly neutral is an impossibility. We all have a judgement one way or another.~
+== BVALYGA ~Being truly neutral is an impossibility. We all have a judgment one way or another.~
 == BX3Reb ~Perhaps you are right, Valygar. I shouldn't let it bother my mind.~
 == BVALYGA ~Why don't you...pick up your flute and play again? It was not a bad tune.~
 == BX3Reb ~I will, Valygar. But I will play just a bit quieter. I wish for you to have solace as much as I.~
@@ -609,7 +609,7 @@ Global("X3RebYoshimo","GLOBAL",0)~ THEN BX3Reb X3RebYoshimo1
 DO ~SetGlobal("X3RebYoshimo","GLOBAL",1)~
 == BYOSHIM ~Indeed I am, lovely Recorder. And I have many questions I could ask of yourself. How is it someone like yourself came into the bard's trade?~
 == BX3Reb ~I always had a passion for the arts. I know it's odd for a gnome, and most of us like to focus in some sort of artifice, but I just find music to be so beautiful and powerful.~
-== BYOSHIM ~I fine answer friend. Tell me, do you not find music to be rigid? Here I have found it based on numbers and rhythym over the natural human breath.~
+== BYOSHIM ~I fine answer friend. Tell me, do you not find music to be rigid? Here I have found it based on numbers and rhythm over the natural human breath.~
 == BX3Reb ~Are you suggesting the music of your homeland doesn't focus on patterns and rhythms? That's quite interesting.~
 == BYOSHIM ~If you ever get the chance to meet the bards of Kara-Tur, my lovely friend, you may certainly find an entire differing philosophy to the art of music.~
 == BX3Reb ~I would love the opportunity to go there. Someday.~
@@ -660,7 +660,7 @@ DO ~SetGlobal("X3RebX3Vie1","LOCALS",3)~
 == BX3Reb ~I do speak elven, Vienxay. As well as a few other languages.~
 == BX3Vie ~Whatever. Regardless, it was not for your eyes. It is for my people's...as it should be.~
 == BX3Reb ~You've walked on the continent for this long. Do you still distrust everyone?~
-== BX3Vie ~In all of my expereince, yes, only more cause to distrust humans. And while you may be trustable, you would share knowledge, and that can get into dangerous hands.~
+== BX3Vie ~In all of my experience, yes, only more cause to distrust humans. And while you may be trustable, you would share knowledge, and that can get into dangerous hands.~
 == BX3Reb ~But if we keep all knowledge a secret, wouldn't we deter progress? There is so much we could learn.~
 == BX3Vie ~Given present times? I think that is best. Perhaps one day human kind can be trusted. But that is not now.~
 EXIT 

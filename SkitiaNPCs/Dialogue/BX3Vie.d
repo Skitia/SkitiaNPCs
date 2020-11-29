@@ -25,7 +25,7 @@ DO ~SetGlobal("X3VieAERIE","GLOBAL",2)~
 == BX3Vie ~Did I say something cruel to you?~
 == BAERIE ~Not to me, but I've seen how you treat others. You look down on everyone.~
 == BX3Vie ~As we should. We are elves, Aerie. First born and of longer life. Meanwhile, these humans are ungrateful brats, and don't let me get started on the dwarves.~
-== BX3Hel IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~Or ye could shut it while yer're already making a fool of yerself.~
+== BX3Hel IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~Or ye could shut it while ye be already making a fool of yerself.~
 == BAERIE ~But some of them are kind. Uncle Quayle took me in and saved my life. They aren't less or bad, Vienxay.~
 == BX3Vie ~Given everything that has happened to you, Aerie. I can understand why you think as you do. But remember the slavers of this world are human. Those who destroy our land are human. Those who destroy forests? Human.~
 == BAERIE ~I know, I just...I just don't see the need to be so hateful.~
@@ -129,7 +129,7 @@ IsValidForPartyDialogue("X3Vie")
 See("X3Vie")
 Alignment("X3Vie",NEUTRAL)
 Global("X3VieDORN","GLOBAL",1)~ THEN BDORN X3VieDORN2
-~You dissapoint me, Vienxay. For one previously driven to seek power, you have practically cast it into a scholar's hands.~ [X3Blank]
+~You disappoint me, Vienxay. For one previously driven to seek power, you have practically cast it into a scholar's hands.~ [X3Blank]
 DO ~SetGlobal("X3VieDORN","GLOBAL",2)~
 == BX3Vie ~My people have received something precious to them.~
 == BDORN ~And still you will never be taken back. You have shown your true weakness. Chained by your own love for your people.~
@@ -148,7 +148,7 @@ Global("X3VieEDWIN","GLOBAL",0)~ THEN BEDWIN X3VieEDWIN1
 DO ~SetGlobal("X3VieEDWIN","GLOBAL",1)~
 == BX3Vie ~Can you repeat that, lesser? I could not hear you. It sounded like some squeaky mutter.~
 == BEDWIN ~Lesser? I have grasped the art of magic in years in the time it took you to grasp it in decades. Care who you throw your words at, your place is far below me.~
-== BX3Vie ~One of these days, I will give you the duel of spells you so desire, human. I will just wait for your change of allegiance. Underestimate my shadowmagic at your own risk.~
+== BX3Vie ~One of these days, I will give you the duel of spells you so desire, human. I will just wait for your change of allegiance. Underestimate my shadow magic at your own risk.~
 == BEDWIN ~Your ignorance will be your undoing. When you are ready for a proper education, I will gladly give you a taste of my power.~ [X3Blank]
 EXIT 
 
@@ -262,7 +262,7 @@ See("JAHEIRA")
 Global("X3VieJAHEIRA","GLOBAL",0)~ THEN BX3Vie X3VieJAHEIRA1
 ~Watch where your eyes, linger, mutt. I've little time for the glares of half-bloods~ [X3Blank]
 DO ~SetGlobal("X3VieJAHEIRA","GLOBAL",1)~
-== BJAHEIR ~Your arrogance does you no favors, Vienxay. I dissaprove that <CHARNAME> ever helped you out. A prison humbles you well.~
+== BJAHEIR ~Your arrogance does you no favors, Vienxay. I disapprove that <CHARNAME> ever helped you out. A prison humbles you well.~
 == BX3Vie ~I tire of human imprisonment as it is. Besides, don't you find them most unnatural? Metal bars that trap you. It is no different than hunters keeping animals in cages.~
 == BJAHEIR ~Do not speak of me of natural order, Vienxay. Not until your head is several sizes smaller.~
 EXIT 
@@ -277,7 +277,7 @@ Global("X3VieJAHEIRA","GLOBAL",1)~ THEN BX3Vie X3VieJAHEIRA2
 ~I thought we had spoken about this, but I see you looking my way again, Jaheira. Leer elsewhere.~ [X3BLANK]
 DO ~SetGlobal("X3VieJAHEIRA","GLOBAL",2)~
 == BJAHEIR ~I only wished to say it was good of you to give up the power of the tome and hand it to the sage.~
-== BX3Vie ~A compliment? That is suprising.~
+== BX3Vie ~A compliment? That is surprising.~
 == BJAHEIR ~I had far lower expectations, and you surpassed them. The praise is deserved.~
 == BX3Vie ~I will take it for what it is, if it will stop your glances...but thank you.~
 EXIT 
@@ -307,7 +307,7 @@ DO ~SetGlobal("X3VieKorgan","GLOBAL",1)~
 == BX3HEL IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~She never shuts up.~
 == BKORGAN ~A dwarf would do you good, elf girl. Skilled with many weapons. I can show ye one that is long, hard and waiting for yer touch.~
 == BX3Vie ~Sick sick sick! Ugh! Filthy creature!~
-== BKORGAN ~Hah. Ye cower and cry out like the priviliged gal ye are. But ye all bleed the same red blood when it's gutted out of ye.~
+== BKORGAN ~Hah. Ye cower and cry out like the privileged gal ye are. But ye all bleed the same red blood when it's gutted out of ye.~
 EXIT 
 
 // Korgan #2
@@ -320,8 +320,8 @@ Global("X3VieKorgan","GLOBAL",1)~ THEN BKORGAN X3VieKorgan2
 DO ~SetGlobal("X3VieKorgan","GLOBAL",2)~
 == BX3Vie ~Please, you are far too short to look at all.~
 == BKORGAN ~Watch yer tongue, for my axe be dry, and yer mouth be the perfect coat for its steel.~
-== BX3Vie ~Ugh! This is torture. Correlon kill me now.~
-== BKORGAN ~Correlon nay be necessary for that if ye keep staring at me.~
+== BX3Vie ~Ugh! This is torture. Corellon kill me now.~
+== BKORGAN ~Corellon nay be necessary for that if ye keep staring at me.~
 EXIT 
 
 // Korgan #3
@@ -390,10 +390,10 @@ Global("X3KAlJan","GLOBAL",0)~ THEN BX3Vie X3KAlJan1
 DO ~SetGlobal("X3KAlJan","GLOBAL",1)~
 == BJAN ~Ah, I didn't know you were an inventor, Vienxay. Have you figured out the design of the perfect turnip peeler?~
 == BX3Vie ~What? Why would I even bother with inventing. Magic is Mystra's gift. Artifice and invention are worthless.~
-== BJAN ~Why, I thought you would have the intelligence to make things with your hands. That's dissapointing, I guess you are ugly and stupid as they say about the elves of the island.~
+== BJAN ~Why, I thought you would have the intelligence to make things with your hands. That's disappointing, I guess you are ugly and stupid as they say about the elves of the island.~
 == BX3Vie ~What did you say?! Do you wish to test my power, you idiot gnome?!~
 == BJAN ~Well you said you have not bothered with inventing, and they say the elves of the island have magic whisk everything for them. They don't lift a finger or think with their mind. Are they so little trusted with anything, I wonder? No one has told me if they suffer from some strange disease of mind yet.~
-== BX3Vie ~Shut up for your own good! Ugh! You are the most untolerable creature I have ever met!~
+== BX3Vie ~Shut up for your own good! Ugh! You are the most intolerable creature I have ever met!~
 EXIT 
 
 //Nalia #1
@@ -405,7 +405,7 @@ Global("X3VieNalia","GLOBAL",0)
 ~ THEN BX3Vie X3VieNalia2
 ~Let me give you a valuable lesson, Nalia. Your opinions and ideals of aiding the poor are foolish. You believe you aid them, but you are only hindering them.~ [X3Blank]
 DO ~SetGlobal("X3VieNalia","GLOBAL",1)~
-== BNALIA ~Vienxay, how unsuprising that you would hold such an opinion. You don't care about anyone other than yourself.~
+== BNALIA ~Vienxay, how unsurprising that you would hold such an opinion. You don't care about anyone other than yourself.~
 == BX3Vie ~Determination is the way of life. If the poor cannot learn to take care of themselves, they are not worthy. The great rise from rags to riches. Others can scrap up a status quo. The rest are not meant to be hand-walked when they should be in a grave.~
 == BNALIA ~And how does aiding them hurt you, Vienxay? Live the way you want to live, but do not tell others how they should walk.~
 == BX3Vie ~I have had everything taken from me, Nalia. When I was put at the shores of this coast, banished from my homeland, I only had the clothes on my back and a few belongings. I had no income. I had no friends. And yet here I am, with no one's hand but my own. Take away that determinism, and you leave them weaker, less capable, and dependent on that very aid. What when that aid runs out? Do you even think so far?~
@@ -441,7 +441,7 @@ DO ~SetGlobal("X3VieNeera","GLOBAL",1)~
 == BX3Vie ~Please, you know who I am talking about.~
 == BNEERA ~I really don't know. I'm pretty sure my name is Neera.~
 == BX3Vie ~Are you changing the subject because you actually agree your wild magic talents are worthless?~
-== BNEERA ~I can't hear you Vienxay. It's like your voice is this mousey screech.~
+== BNEERA ~I can't hear you Vienxay. It's like your voice is this mousy screech.~
 == BX3Vie ~Play deaf all you want. It hardly denies the truth.~
 EXIT 
 
@@ -456,7 +456,7 @@ DO ~SetGlobal("X3VieNeera","GLOBAL",2)~
 == BNEERA ~Are you still going on about this? Are you that insecure, Vienxay?~
 == BX3Vie ~Hardly. I am just confused on why <CHARNAME> would even let you around.~
 == BNEERA ~Why don't you ask <PRO_HIMHER>? They are right over there.~
-== BX3Vie ~Please. The answer would probably just be dissapointing.~
+== BX3Vie ~Please. The answer would probably just be disappointing.~
 == BNEERA ~Are you always this jealous?~
 == BX3Vie ~Of what? Your unpredictable, dangerous surges? I think not.~
 == BNEERA ~Say whatever you want. But I somehow am getting under your skin, and you clearly don't like it.~
@@ -484,7 +484,7 @@ Global("X3VieRasaad","GLOBAL",1)~ THEN BX3Vie X3VieRasaad2
 ~I understand you are trying to avenge your brother~ [X3Blank]
 DO ~SetGlobal("X3VieRasaad","GLOBAL",2)~
 == BRASAAD ~It is so, yes. I seek to avenge my brother, Gamaz.~
-== BX3Vie ~I know such feelings quite well. Still, I find it suprising someone like yourself would seek it. Hrmph. Lathander's monks are liars after all.~
+== BX3Vie ~I know such feelings quite well. Still, I find it surprising someone like yourself would seek it. Hrmph. Lathander's monks are liars after all.~
 == BRASAAD ~Pardon? That is quite an accusation. You do not know my order, Vienxay.~
 == BX3Vie ~More interesting is that I understand your brother's death was by your own hand...as was the same death I blamed my own master, a death by my own hand.~
 == BRASAAD ~Why do you compare us, Vienxay? I have never said that I was your better.~

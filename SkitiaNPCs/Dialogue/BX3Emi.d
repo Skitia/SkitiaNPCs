@@ -1,3 +1,4 @@
+
 // Aerie #1
 CHAIN
 IF ~IsValidForPartyDialogue("AERIE")
@@ -6,7 +7,7 @@ See("AERIE")
 Global("X3EmiAERIE","GLOBAL",0)~ THEN BX3Emi X3EmiAERIE1
 ~Aerie, you grew up in the circus. What sort of acts did you do?~ [X3Blank]
 DO ~SetGlobal("X3EmiAERIE","GLOBAL",1)~
-== BAERIE ~I didn't grow up in the circus, Emily. I am from Faenya Dail. It was so grand and majestic, so beautiful.~
+== BAERIE ~I didn't grow up in the circus, Emily. I am from Faenya-Dail. It was so grand and majestic, so beautiful.~
 == BX3Emi ~You sound like you really miss it. Any plans to go back?~
 == BAERIE ~I do not have my wings, Emily. I don't know if I could ever go back. I don't know if my people would accept me.~
 == BX3Emi ~But you don't need wings to travel, and you are one of them! Surely you could try.~
@@ -53,8 +54,8 @@ See("ANOMEN")
 Global("X3EmiANOMEN","GLOBAL",0)~ THEN BX3Emi X3EmiANOMEN1
 ~Anomen, you are of house Delryn, are you not?~ [X3Blank]
 DO ~SetGlobal("X3EmiANOMEN","GLOBAL",1)~
-== BANOMEN ~And you are of house Castille. What of it, my lady?~
-== BX3Emi ~I just recall my father meeting a group of nobles, and one of them was from house Delryn, your father if I recall. It did not go very well.~
+== BANOMEN ~And you are of House Castilla. What of it, my lady?~
+== BX3Emi ~I just recall my father meeting a group of nobles, and one of them was from House Delryn, your father if I recall. It did not go very well.~
 == BANOMEN ~If he was of the group my father hosted that I was thinking of, ha! You Tethyrians are not well known for your nobility's class.~
 == BX3Emi ~And here I was trying to strike up a friendly conversation about grumbling fathers about ridiculous politics, and somehow I wind up insulted. Let's drop this.~
 EXIT 
@@ -67,12 +68,12 @@ See("X3Emi")
 Global("X3EmiANOMEN","GLOBAL",1)~ THEN BANOMEN X3EmiANOMEN2
 ~I have a curious question to ask of you. What does a noble woman like yourself do on this adventurous path. Especially a possible heir.~ [X3Blank]
 DO ~SetGlobal("X3EmiANOMEN","GLOBAL",2)~
-== BX3Emi ~Well, there is little one can do for the world while still waiting for your destiny to be decided. And being couped in the politics of the estate only made me yearn more to get away. And I wanted to meet my birth mother.~
-== BANOMEN ~Your parents seperated?~
+== BX3Emi ~Well, there is little one can do for the world while still waiting for your destiny to be decided. And being forced into the politics of the estate only made me yearn more to get away. And I wanted to meet my birth mother.~
+== BANOMEN ~Your parents separated?~
 == BX3Emi ~Well...she was an elf, he was a human, he had an arrangement with another human, and rather than say "No", he...let her go.~
 == BANOMEN ~But that would make you a b-~
 == BX3Emi ~No need to say it out loud! But yes, it would. Still, shouldn't love matter more than duty, Anomen?~
-== BANOMEN ~There is no such pressure in House Delyrn to choose between such. Not that I would stoop to marry any low-born myself. Your father chose wisely.~
+== BANOMEN ~There is no such pressure in House Delryn to choose between such. Not that I would stoop to marry any low-born myself. Your father chose wisely.~
 == BX3Emi ~So you're saying my mother is low-born? See Anomen? These talks start out so well and then you somehow insult me again.~
 EXIT 
 
@@ -102,7 +103,7 @@ Global("X3EmiCERND","GLOBAL",1)~ THEN BCERND X3EmiCERND2
 ~I have not met an aasimar such as yourself. The heavens and the natural world are not meant to inter-mix.~ [X3Blank]
 DO ~SetGlobal("X3EmiCERND","GLOBAL",2)~
 == BX3Emi ~Well, when two people are enchanted with one another, odd things like that do happen.~
-== BCERND ~When a horse and a donkey come together, they produce a mule. Such unnatural joinings are not able to continue. Yours have.~
+== BCERND ~When a horse and a donkey come together, they produce a mule. Such an unnatural joining is not able to continue. Yours have.~
 == BX3Emi ~Yeah...it's weird, isn't it? To be honest Cernd, I would not mind just being a normal human.~
 == BCERND ~You are as you were made. This cannot be shifted into what you are not.~
 == BX3Emi ~Right. That. Honestly, I'm not sure what we are talking about anymore.~
@@ -170,8 +171,8 @@ DO ~SetGlobal("X3EmiIMOEN","GLOBAL",1)~
 == IMOEN2J ~Not exactly. But I've noticed you've done something different with your hair.~ [X3Blank]
 == BX3Emi ~Oh did I? I must have brushed it in reverse. I sometimes comb with the other hand. No reason really.~
 == IMOEN2J ~Is that the reason? Or are you trying to impress someone? Like <CHARNAME>?~
-== BX3Emi IF ~!Global("X3EmiRomanceActive","GLOBAL",1)!Global("X3EmiRomanceActive","GLOBAL",2)~ THEN ~Haha, we're just friends. You're a bit of a mischief. Kind of suprising for a bhaalspawn. I thought you were all grimly.~
-== BX3Emi IF ~OR(2)Global("X3EmiRomanceActive","GLOBAL",1)Global("X3EmiRomanceActive","GLOBAL",2)~ THEN ~Ssshh! I'm sure he can hear us. You are such a mischief. Kind of suprising for a bhaalspawn. I thought you were all grimly.~
+== BX3Emi IF ~!Global("X3EmiRomanceActive","GLOBAL",1)!Global("X3EmiRomanceActive","GLOBAL",2)~ THEN ~Haha, we're just friends. You're a bit of a mischief. Kind of surprising for a bhaalspawn. I thought you were all grimly.~
+== BX3Emi IF ~OR(2)Global("X3EmiRomanceActive","GLOBAL",1)Global("X3EmiRomanceActive","GLOBAL",2)~ THEN ~Ssshh! I'm sure he can hear us. You are such a mischief. Kind of surprising for a bhaalspawn. I thought you were all grimly.~
 == IMOEN2J ~Oh, <CHARNAME> already has that all reserved up. No room for me to take that role.~
 == BX3Emi ~Well, I like it. But if you really want to know, let's talk over uh, here...~
 EXIT 
@@ -185,10 +186,10 @@ See("Jan")
 Global("X3EmiJan","GLOBAL",0)~ THEN BX3Emi X3EmiJan1
 ~Jan, your...gadgets, or such? What do you call them, the flasher?~ [X3Blank]
 DO ~SetGlobal("X3EmiJan","GLOBAL",1)~
-== BJAN ~Ah yes, my flashers. The finest fantabulous flashing firing mechanism of the Jansen Family Household. No returns after thirty days.~
+== BJAN ~Ah yes, my flashers. The finest fabulous flashing firing mechanism of the Jansen Family Household. No returns after thirty days.~
 == BX3Emi ~...Okay. I was just curious why you would even use that as ammunition? It looks highly unstable.~
 == BJAN ~Oh they are just fine. As long as you stand a respectable distance. My Uncle Flippy had quite the fright after getting too close to one.
-Smoked up his hair and singed his best briches. Now wherever he walked, he always checked twice for a bit of powder, just in case one was too close.
+Smoked up his hair and singed his best britches. Now wherever he walked, he always checked twice for a bit of powder, just in case one was too close.
 Once we hid a keg behind his favorite sitting place as a trick. When he saw it he turned around and bolted and screamed. It brings quite the laugh on family get-togethers.~
 == BX3Emi ~Okay. That answers *everything* I was asking. I feel enlightened. Say no more.~
 == BJAN ~But I didn't even get t-~
@@ -201,7 +202,7 @@ IF ~IsValidForPartyDialogue("JAHEIRA")
 IsValidForPartyDialogue("X3Emi")
 See("JAHEIRA")
 Global("X3EmiJAHEIRA","GLOBAL",0)~ THEN BX3Emi X3EmiJAHEIRA1
-~I am kind of suprised you seem so at ease when we are in the cities, Jaheira. I would think a druid would not find it so comfortable.~ [X3Blank]
+~I am kind of surprised you seem so at ease when we are in the cities, Jaheira. I would think a druid would not find it so comfortable.~ [X3Blank]
 DO ~SetGlobal("X3EmiJAHEIRA","GLOBAL",1)~
 == BJAHEIR ~I would prefer you not presume my comfort, Emily. Sometimes nature and civilization must work together in harmony, after all.~
 == BX3Emi ~Er, well I wasn't presuming. I was just looking and you seem okay.~
@@ -235,7 +236,7 @@ Global("X3EmiKELDORN","GLOBAL",0)~ THEN BX3Emi X3EmiKELDORN1
 ~Keldorn, I have a question of you. Is duty always above personal happiness?~ [X3Blank]
 DO ~SetGlobal("X3EmiKELDORN","GLOBAL",1)~
 == BKELDOR ~Duty is always more important than the considerations and enjoyments of oneself. Sacrifices for the greater good, young Emily.~
-== BX3Emi ~And what if that personal hapiness was for the greater good, and one's duties just...duties?~
+== BX3Emi ~And what if that personal happiness was for the greater good, and one's duties just...duties?~
 == BKELDOR ~You seek to do good beyond the callings of  your station, young Emily?~
 == BX3Emi ~Yes. I have for years, but only in the last several months have I truly been able to travel and help people all over. It makes me happy.~
 == BKELDOR ~And these duties you speak of, what are they that you speak of?~
@@ -255,7 +256,7 @@ DO ~SetGlobal("X3EmiKELDORN","GLOBAL",2)~
 == BX3Emi ~Oh, I don't know if I would want anyone to follow in my steps.~
 == BKELDOR ~You walk true with purpose and heart to do great good, young Emily. A proper path for any person.~
 == BX3Emi ~Maybe. But I'd not want anyone to pick up a weapon to do it.~
-== BKELDOR ~To kill? The lives we have taken are the dark stains. At times necessary, but not the lasting imprint of good. No, that is in your ability to maintain virtuos and uncorrupted by the ever strong pull of evil's taint.~
+== BKELDOR ~To kill? The lives we have taken are the dark stains. At times necessary, but not the lasting imprint of good. No, that is in your ability to maintain virtuous and uncorrupted by the ever strong pull of evil's taint.~
 == BX3Emi ~Maybe I misunderstood you, then. I guess I understand what you are saying. But are you sure I am really leaving that impression?~
 == BKELDOR ~Absolutely. Have faith in yourself, Emily. The praise I give is not undeserved.~
 == BX3Emi ~Thank you, Keldorn. That means a lot.~
@@ -271,7 +272,7 @@ Global("X3EmiKELDORN","GLOBAL",2)~ THEN BKELDOR X3EmiKELDORN3
 ~I understand congratulations are in order, Emily. Heir to your family's estate. Deserved.~ [X3Blank]
 DO ~SetGlobal("X3EmiKELDORN","GLOBAL",3)~
 == BX3Emi ~Thanks, Keldorn. I don't think the proving is over. I'm still...a half-elf, an aasimar, and such. They won't trust me.~
-== BKELDOR ~Born with the blood of celestials and a heart proven to be virtuos? You have proven yourself to many, young Emily. Keep striving forward, and continue to prove yourself again.~
+== BKELDOR ~Born with the blood of celestials and a heart proven to be virtuous? You have proven yourself to many, young Emily. Keep striving forward, and continue to prove yourself again.~
 == BX3Emi ~I don't know if that will matter to everyone. It could become a problem when I finally return home.~
 == BKELDOR ~The gods judge character, not your form. Elf, dwarf, human, they weigh what you do above all. Remember this well.~
 == BX3Emi ~I hope others see it that way, Keldorn. But I'm glad that at least you do.~
@@ -314,7 +315,7 @@ Global("X3EmiMazzy","GLOBAL",1)~ THEN BX3Emi X3EmiMazzy2
 ~I know I was being a little foolish before with how I spoke about you, Mazzy, but I've been thinking, and are you sure you aren't an aasimar?~ [X3Blank]
 DO ~SetGlobal("X3EmiMazzy","GLOBAL",2)~
 == BMAZZY ~An aasimar? What brings up this turn?~
-== BX3Emi ~It is just...you act as my bloodline is expected. Noble. Brave. Good. Pious. Uncorruptable. And honestly...I do not think I am any of those things.~
+== BX3Emi ~It is just...you act as my bloodline is expected. Noble. Brave. Good. Pious. Uncorruptible. And honestly...I do not think I am any of those things.~
 == BMAZZY ~I thought you were silly at first, but you have shown to me that you are many of those things you name of myself. Certainly noble and brave, but also true and pure of heart, even a little light-hearted, something our group needs.~
 == BX3Emi ~You are really making your aasimar case even more compelling. Hrm. Maybe we could even be sisters.~
 == BMAZZY ~Emily?~
@@ -379,7 +380,7 @@ DO ~SetGlobal("X3EmiNalia","GLOBAL",2)~
 == BNALIA ~It all sounds rather petty. There are so many other concerns and families just argue over who gets to rule.~
 == BX3Emi ~It is important in a way. I am sure there are people you would not want ruling over your lands.~
 == BNALIA ~You have a point. If Isaea Roenall ever took the De'Arnise lands I would be extremely displeased.~
-== BX3Emi ~Exactly. Our parent's generation may be set in their ways, but not everything they do is so horrible. They've fought so we could have a good life. And now we cna choose to step further, as will our own descendants.~
+== BX3Emi ~Exactly. Our parent's generation may be set in their ways, but not everything they do is so horrible. They've fought so we could have a good life. And now we can choose to step further, as will our own descendants.~
 == BNALIA ~Each line improving the world one generation at a time.~
 == BX3Emi ~Hopefully, at least. You know how the previous generation is always also saying we're messing things up. They may end up being right if we aren't careful.~
 EXIT 
@@ -461,7 +462,7 @@ Global("X3EmiRasaad","GLOBAL",1)~ THEN BX3Emi X3EmiRasaad2
 DO ~SetGlobal("X3EmiRasaad","GLOBAL",2)~
 == BRASAAD ~There are no monk orders where you come from?~
 == BX3Emi ~Oh I am sure there are. It's just...well, they tend to be reclusive.~
-== BRASAAD ~Many are away from societies, yes. Monasteris in high mountains or in forest clearings. Peaceful sanctuaries where silent contemplation can be free.~
+== BRASAAD ~Many are away from societies, yes. Monasteries in high mountains or in forest clearings. Peaceful sanctuaries where silent contemplation can be free.~
 == BX3Emi ~Were there many women monks?~
 == BRASAAD ~There are women who are monks, yes. Perhaps not as many as the men.~
 == BX3Emi ~It's just...well, in solitary, with other handsome men...I'd find that quite tempting.~
@@ -666,7 +667,7 @@ DO ~SetGlobal("X3EmiX3Reb3","LOCALS",1)~
 == BX3Reb ~Well if you trained a dog really well, wild or already domesticated, I could see that working out.~
 == BX3Emi ~Maybe we can find one in the local markets. Hrm, their isn't a chance they'd run away, is there?~
 == BX3Reb ~Well, Gustav runs away, but he's trained enough to scurry back. I'm sure a dog could learn the same after several months.~
-== BX3Emi ~Several months, hmm? I guess that's too long to make this a reasonable thing to think about. Nevermind then.~
+== BX3Emi ~Several months, hmm? I guess that's too long to make this a reasonable thing to think about. Never mind then.~
 EXIT 
 
 CHAIN 
@@ -676,7 +677,7 @@ See("X3Reb")
 Global("X3EmiX3Reb3","LOCALS",1)~ THEN BX3Emi X3EmiX3Reb3B
 ~Why don't you sing more, Recorder? You are always playing your flute. But your voice is amazing.~
 DO ~SetGlobal("X3EmiX3Reb3","LOCALS",2)~
-== BX3Reb ~I think the flute is a little less instrusive if someone didn't want to listen.~
+== BX3Reb ~I think the flute is a little less intrusive if someone didn't want to listen.~
 == BX3Emi ~Listen? Recorder, you are a bard. Your entire career is about throwing out your songs despite any lack of agreement to your receptiveness.~
 == BX3Reb ~Um, Emily? That usually gets rotten fruit thrown at you.~
 == BX3Emi ~Okay, so maybe only part of your career.~
@@ -701,7 +702,7 @@ DO ~SetGlobal("X3EmiX3Reb4","LOCALS",1)~
 == BX3Reb ~Oh uh...*blush* Sorry. I guess it doesn't mean anything now but, I was a little smitten with you before you got with <CHARNAME>.~
 == BX3Emi ~I...don't know how to process that. I mean there's nothing wrong with it. And I'm flattered a little? But I also just don't know how to process that.~
 == BX3Reb ~I'm sorry. I shouldn't have said that.~
-== BX3Emi ~It's...a little awkard. But hey, we're best friends. We shouldn't keep secrets like that from eachother.~
+== BX3Emi ~It's...a little awkward. But hey, we're best friends. We shouldn't keep secrets like that from each other.~
 == BX3Reb ~Sometimes it's better to not say anything at all, Emily. Even to friends.~
 == BX3Emi ~Hrm. I guess if you want that privacy, I understand. I'll respect it.~
 EXIT 
@@ -773,7 +774,7 @@ DO ~SetGlobal("X3EmiX3Kal1","LOCALS",1)~
 == BX3Emi ~Right. Because flies have things of interest to rob.~
 == BX3Kal ~Though I have robbed a few maidens from their gentlemen, so to speak. Speaking of, this Catherine, she spoken for?~
 == BX3Emi ~What does that have to do with anything?~
-== BX3Kal ~Nevermind. Doesn't matter, doesn't matter at all.~
+== BX3Kal ~Never mind. Doesn't matter, doesn't matter at all.~
 == BX3Emi ~Right. Warn Catherine about crazy halfling man on next meeting.~
 EXIT 
 
@@ -800,7 +801,7 @@ Global("X3EmiX3Kal2","LOCALS",1)~ THEN BX3Emi X3EmiX3Kal3
 DO ~SetGlobal("X3EmiX3Kal2","LOCALS",2)~
 == BX3Kal ~Heh. Sure did. Most luxurious piece of garment this side of the Sword Coast, and you can tell every merchant and trader that you see.~
 == BX3Emi ~Well, could you make me one?~
-== BX3Kal ~Nah...all that sewing makes me feel less masculine, so I stopped that when I joind up with Helga's crew a while back.~
+== BX3Kal ~Nah...all that sewing makes me feel less masculine, so I stopped that when I joined up with Helga's crew a while back.~
 == BX3Emi ~There's nothing not masculine about tailoring.~
 == BX3Kal ~You say that to a lady in an inn you are trying to impress. Let me tell you, Kale did not get his loins going that night.~
 == BX3Emi ~Right. Honestly, I think she dodged an arrow there.~
@@ -834,7 +835,7 @@ Global("X3EmiX3Vie1","LOCALS",1)~ THEN BX3Emi X3EmiX3Vie2
 DO ~SetGlobal("X3EmiX3Vie1","LOCALS",2)~
 == BX3Vie ~This is from Evermeet. The only article of clothing I came to this land with. The last reminder of what quality attire even is. Why would I lower myself to get anything else?~
 == BX3Emi ~I am sure there are elven tailors, if we look around. Perhaps even from your island.~
-== BX3Vie ~I highly doubt that. Althkata is a disgrace. My people would be appaled at the lack of nature.~
+== BX3Vie ~I highly doubt that. Althkata is a disgrace. My people would be appalled at the lack of nature.~
 == BX3Emi ~You aren't very optimistic, are you?~
 == BX3Vie ~Idealism gets you nowhere. Besides, I have already done my touring of clothiers and shopkeepers. I need not your advice.~
 == BX3Emi ~Well...all right. Though are you *sure* you wouldn't want something else? I think you would love some Calimshan Silks.~
@@ -868,11 +869,11 @@ IsValidForPartyDialogue("X3Emi")
 See("X3Emi")
 Global("X3EmiRomanceActive","GLOBAL",2)
 Global("X3EmiX3Vie2","LOCALS",1)~ THEN BX3Vie X3EmiX3Vie4
-~Well done. You have achieved <CHARNAME>'s affections. But how dissapointed he will become.~
+~Well done. You have achieved <CHARNAME>'s affections. But how disappointed he will become.~
 DO ~SetGlobal("X3EmiX3Vie2","LOCALS",2)~
 == BX3Emi ~What is your problem, Vienxay? Can't you be happy for anyone else?~
 == BX3Vie ~Please. You offer him nothing. No experience, nothing but simplicity he'll soon grow bored with. You are a coin a dozen.~
-== BX3Emi ~You are the most hateful, spiteful witch I have ever had the displeasure of meeting, Vienxay. No wonder why you are loathed ,and no wonder why your own people banished you! You are entirely self-centered and self-absorbed. You think you are perfect.~
+== BX3Emi ~You are the most hateful, spiteful witch I have ever had the displeasure of meeting, Vienxay. No wonder why you are loathed, and no wonder why your own people banished you! You are entirely self-centered and self-absorbed. You think you are perfect.~
 == BX3Vie ~And there it is. The little mutt's bark. So you do have your limits.~
 == BX3Emi ~This discussion is over.~
 == BX3Vie ~We'll see. I am sure in time you will be weeping in a broken heart.~

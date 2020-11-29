@@ -25,9 +25,9 @@ DO ~SetGlobal("X3RebANOMENToB","GLOBAL",1)~
 == BANOME25 ~Your pet is here, Recorder. He was devouring my rations. Keep it from happening again, I will not have myself starve on this adventure because of him.~
 == BX3Reb25 ~I'm sorry. I thought I would have a bit more control over him by now. I guess he's still a bit of a free spirit. Here, I can give you some of mine.~
 == BANOME25 ~What is this? What are you even buying from the locals here for food?~
-== BX3Reb25 IF ~!InParty("X3Emi")~ THEN ~This is a classic Tethyrian dish. My friend Emily suggested I try it if I were ever around here.~
+== BX3Reb25 IF ~!InParty("X3Emi")~ THEN ~This is a classic Tethyrian's dish. My friend Emily suggested I try it if I were ever around here.~
 == BANOME25 IF ~!InParty("X3Emi")~ THEN  ~Your friend has pitifully poor taste. I'll make do, thank you.~
-== BX3Reb25 IF ~InParty("X3Emi")~ THEN ~This is a classic Tethyrian dish. Emily suggested I try it if I were ever around here.~
+== BX3Reb25 IF ~InParty("X3Emi")~ THEN ~This is a classic Tethyrian's dish. Emily suggested I try it if I were ever around here.~
 == BANOME25 IF ~InParty("X3Emi")~ THEN BANOME25 ~Emily has pitifully poor taste. I'll make do, thank you.~
 == BX3Emi25 IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~I was not even part of the conversation, and somehow, he still finds a way to insult me. Impressive.~
 EXIT 
@@ -63,13 +63,13 @@ IF ~IsValidForPartyDialogue("EDWIN")
 IsValidForPartyDialogue("X3Reb")
 See("Edwin")
 Global("X3RebEDWINToB","GLOBAL",0)~ THEN BX3Reb25 X3RebEDWIN1
-~I understand you aren't with your fellow Reds anymore, Edwin. Was it due to their practices? Do you understand why the rest of Faerun dislikes them so much?~ [X3Blank]
+~I understand you aren't with your fellow Reds anymore, Edwin. Was it due to their practices? Do you understand why the rest of Faerûn dislikes them so much?~ [X3Blank]
 DO ~SetGlobal("X3RebEDWINToB","GLOBAL",1)~
-== BEDWIN25 ~My business and reasons for the ceasing of contact with my associates is none of your business, lorekeeper. (Yes, we cannot allow it to be quilled into parchment.)~
+== BEDWIN25 ~My business and reasons for the ceasing of contact with my associates is none of your business, lorekeeper. (Yes, we cannot allow it to be written into parchment.)~
 == BX3Reb25 ~Why the secrets? They are certainly not going to stop you from revealing anything.~
 == BEDWIN25 ~If you insist, it is not because of any practices or ideologies. No, I think the reason would be far above your comprehension.~
 == BX3Reb25 ~So you don't see anything wrong with what they do? The slavery, the necromancy, everything else?~
-== BEDWIN25 ~The only wrong doing was causing myself dissapointment. Take your concerns of morals and ethics to a monkey that cares.~
+== BEDWIN25 ~The only wrong doing was causing myself disappointment. Take your concerns of morals and ethics to a monkey that cares.~
 EXIT 
 
 // HAERDALIS #1
@@ -243,7 +243,7 @@ IF ~IsValidForPartyDialogue("Rasaad")
 IsValidForPartyDialogue("X3Reb")
 See("RASAAD")
 Global("X3RebRasaadToB","GLOBAL",0)~ THEN BX3Reb25 X3RebRasaad1
-~Do you ever worry that this story wil lend poorly, Rasaad?~ [X3Blank]
+~Do you ever worry that this story will end poorly, Rasaad?~ [X3Blank]
 DO ~SetGlobal("X3RebRasaadToB","GLOBAL",1)~
 == BRASAA25 ~Not all tales end well, Recorder. But if I fret about how this journey will end, it will do nothing good for our spirits.~
 == BX3Reb25 ~We have been incredibly fortunate at some turns. And we are stronger than ever. But sometimes...sometimes I wonder if we'll reach our limit.~
@@ -263,7 +263,7 @@ IF ~IsValidForPartyDialogue("SAREVOK")
 IsValidForPartyDialogue("X3Reb")
 See("X3Reb")
 Global("X3RebSAREVOKToB","GLOBAL",0)~ THEN BSAREV25 X3RebSAREVOK1
-~Who exactly are you, gnome? Some scrawling historian? You spend more time quilling than being actually useful.~ [X3Blank]
+~Who exactly are you, gnome? Some scrawling historian? You spend more time scrawling in that journal of yours than being actually useful.~ [X3Blank]
 DO ~SetGlobal("X3RebSAREVOKToB","GLOBAL",1)~
 == BX3Reb25 ~I have proven my worth, Sarevok, many times. I do not need to do the same for you.~
 == BSAREV25 ~You do not even know what worth is, girl.~
@@ -295,7 +295,7 @@ Global("X3RebViconiaToB","GLOBAL",0)~ THEN BX3Reb25 X3RebViconia1
 ~Viconia, I know this is a strange question, but would you ever be able to teach me Xanalress?~ 
 DO ~SetGlobal("X3RebViconiaTo","GLOBAL",1)~
 == BVICON25 ~You speak of old names long forgotten. And I have no interest in teaching you words that do not belong in your lips.~
-== BX3Reb25 ~But we could teach eachother. Perhaps you have wanted to know my own people's language? It is shared by the Svirfneblin.~
+== BX3Reb25 ~But we could teach each other. Perhaps you have wanted to know my own people's language? It is shared by the Svirfneblin.~
 == BVICON25 ~Why would I learn a lesser language?~
 == BX3Reb25 ~Do you still think us lesser, after all of this time?~
 == BVICON25 ~I have gained respect of some people. But none are greater. Least of all yourself.~

@@ -36,7 +36,7 @@ IF ~IsValidForPartyDialogue("ANOMEN")
 IsValidForPartyDialogue("X3Hel")
 See("X3Hel")
 Global("X3HelANOMEN","GLOBAL",0)~ THEN BANOMEN X3HelANOMEN1
-~You are an interesting sight in battle, Helga. Your primtive god must be pleased by whatever blood sacrifices you have given up.~ [X3Blank]
+~You are an interesting sight in battle, Helga. Your primitive god must be pleased by whatever blood sacrifices you have given up.~ [X3Blank]
 DO ~SetGlobal("X3HelANOMEN","GLOBAL",1)~
 == BX3Hel ~What, you don't give your god the head of your foes at the foot of her altar? I didn't know yer human gods were behind with the times.~
 == BANOMEN ~Helm is above the sacrifice of beast and foe for blessing. You are jealous. I would be to, in your position.~
@@ -111,7 +111,7 @@ Global("X3HelEDWIN","GLOBAL",0)~ THEN BEDWIN X3HelEDWIN1
 DO ~SetGlobal("X3HelEDWIN","GLOBAL",1)~
 == BX3Hel ~If ye speak of battle, finger-waggler, it exists to be conquered or cowered from. And a proper dwarf nay cowers.~
 == BEDWIN ~True, true. We think much the same. Much different than other monkeys I have come across.~
-== BX3Hel ~I've decades of experience, wizard. Ye survive long by fighting hard and dying harder. Preferably with a hammer. Ye spellcasters though...ye lot do some crazy things. I nay know if ye'll come at the top of what ye seek in the end.~
+== BX3Hel ~I've decades of experience, wizard. Ye survive long by fighting hard and dying harder. Preferably with a hammer. Ye spell casters though...ye lot do some crazy things. I nay know if ye'll come at the top of what ye seek in the end.~
 EXIT 
 
 // HAERDALIS #1
@@ -185,7 +185,7 @@ See("Jan")
 Global("X3HelJan","GLOBAL",0)~ THEN BX3Hel X3HelJan1
 ~Ye ever eat your meats, Jan? All I ever hear is ye speak of turnips.~ [X3Blank]
 DO ~SetGlobal("X3HelJan","GLOBAL",1)~
-== BJAN ~Why they are the most prized food and vegetable in all the realms. There is even an entire pirate trade over smuggling some of the finest speciments of the vegetable to well paying ports and merchants. Turnip transporters had to hire protection just to ensure the product is safe.~
+== BJAN ~Why they are the most prized food and vegetable in all the realms. There is even an entire pirate trade over smuggling some of the finest specimens of the vegetable to well paying ports and merchants. Turnip transporters had to hire protection just to ensure the product is safe.~
 == BX3Hel ~...Bah. Doesn't mean ye need to neglect yer damn meats. Ye haven't even tried my stew.~
 == BJAN ~Well, your stew reminds me of what they served on the turnip trade vessels. We couldn't eat any of the cargo, though it was very tempting. So the cooks had to garble up whatever they could muster, put it all in a pot, and somehow make it edible. Quite the experience, I would say. Never seek fine dining in the ocean.~
 == BX3Hel ~Ye better not be insulting my cooking, gnome.~
@@ -216,7 +216,7 @@ See("JAHEIRA")
 Global("X3HelJAHEIRA","GLOBAL",0)~ THEN BX3Hel X3HelJAHEIRA1
 ~My damn weapon grows restless. Where be the next fight? Haela demands blood.~ [X3Blank]
 DO ~SetGlobal("X3HelJAHEIRA","GLOBAL",1)~
-== BJAHEIR ~Sometimes, your bloodlust disturbs me, dwarf priest. It is almost abhorrent how you take glee in your killing.~
+== BJAHEIR ~Sometimes, your blood lust disturbs me, dwarf priest. It is almost abhorrent how you take glee in your killing.~
 == BX3Hel ~Abhorrent? There be nothing wrong with the enjoyment of battle.~
 == BJAHEIR ~Life has a purpose. The taking of it should be weighed not for pleasure but out of necessity.~
 == BX3Hel ~I kill threats. If ye want to make weight of it, go ask someone else. Nay me or my goddess makes it complicated.~
@@ -291,7 +291,7 @@ Global("X3HelKELDORN","GLOBAL",3)~ THEN BKELDOR X3HelKELDORN3
 ~I must ask, Helga, despite my former word to not speak on it further, do you still believe one cannot fight well with virtue and honor?~ [X3Blank]
 DO ~SetGlobal("X3HelKELDORN","GLOBAL",4)~
 == BX3Hel ~Bah. It has its merits if that is what you want to say. I have watched you fight and fight, and it seems to work for you. But would you nay consider a kick to the groin or a bash into the eye?~
-== BKELDOR ~I am an old man, Helga. I will not change my ways, certainly not to be any less virtuos.~
+== BKELDOR ~I am an old man, Helga. I will not change my ways, certainly not to be any less virtuous.~
 == BX3Hel ~Then if yer god be pleased with that, fight on like that. We can agree at least, that duty to our gods is the most important of all.~
 == BKELDOR ~That we can, comrade. That we can.~
 EXIT
@@ -318,7 +318,7 @@ Global("X3HelKorgan","GLOBAL",1)~ THEN BX3Hel X3HelKorgan2
 DO ~SetGlobal("X3HelKorgan","GLOBAL",2)~
 == BKORGAN ~Mother dead. Father dead. Three brothers dead.~
 == BX3Hel ~Ye have my condolences, Korgan. Being without blood and clan is hard for any dwarf.~
-== BKORGAN ~Hah. I killed my brothers myselves. The inheritance was too meager to split around.~
+== BKORGAN ~Hah. I killed my brothers myself. The inheritance was too meager to split around.~
 == BX3Hel ~Ye what? What about the love of clan?~
 == BKORGAN ~It was clan versus clan where I was from. Brother against brother. It was about surviving or dying. Nay any place to care lest ye end up on the wrong side of an axe, and I would not be the one to bleed out my innards.~
 == BX3Hel ~Moradin would ask ye repent, Korgan.~
@@ -375,7 +375,7 @@ DO ~SetGlobal("X3HelMazzy","GLOBAL",2)~
 == BX3Hel ~Nay. After a fight with a damn giant, 'fraid it hasn't been the same even with healing. If it be a test from my goddess, I be intending to pass.~
 == BMAZZY ~I do not know much of your goddess. You have mentioned it was Haela Brightaxe.~
 == BX3Hel ~Aye. Luckmaiden, Bloodmaiden. Where there be battle, we fight. To protect all dwarven kind be our goal.~
-== BMAZZY ~Arvoreen is similiar. The Defender asks that I protect my people. I fight for his cause, and I hope one day to receive the honor of being his paladin.~
+== BMAZZY ~Arvoreen is similar. The Defender asks that I protect my people. I fight for his cause, and I hope one day to receive the honor of being his paladin.~
 == BX3HEL ~It seems we both have difficult tests ahead of us, lass. I pray that we both pass them.~
 EXIT 
 //Mazzy#3
@@ -400,7 +400,7 @@ IF ~IsValidForPartyDialogue("MINSC")
 IsValidForPartyDialogue("X3Hel")
 See("MINSC")
 Global("X3HelMINSC","GLOBAL",0)~ THEN BX3Hel X3HelMINSC1
-~Yer berseker strength and rage are as tough as twin dwarves, Minsc. Ye sure ye don't have dwarve's blood in you.~ [X3Blank]
+~Yer berserker strength and rage are as tough as twin dwarves, Minsc. Ye sure ye don't have dwarf's blood in you.~ [X3Blank]
 DO ~SetGlobal("X3HelMINSC","GLOBAL",1)~
 == BMINSC ~Minsc is Minsc, and Boo is Boo. No dwarf, friend Helga, for I am a big man.~
 == BX3Hel ~Hah. Perhaps nay in body, but certainly spirit. May evil ever fear ye.~
@@ -443,7 +443,7 @@ IF ~IsValidForPartyDialogue("Neera")
 IsValidForPartyDialogue("X3Hel")
 See("Neera")
 Global("X3HelNeera","GLOBAL",0)~ THEN BX3Hel X3HelNeera2
-~Neera lass, 'fraid I need to ask a favor of you. I need you to stay away from the cookpot when I'm firing something up in the evening.~ [X3Blank]
+~Neera lass, 'fraid I need to ask a favor of you. I need you to stay away from the cook pot when I'm firing something up in the evening.~ [X3Blank]
 DO ~SetGlobal("X3HelNeera","GLOBAL",1)~
 == BNEERA ~What? How am I going to eat? You want me to just eat dry rations all the time unless we're in an inn? What did I even do?~
 == BX3Hel ~I believe one of your wild surges ruined the last meal I cooked. Charred up all the good meat.~
@@ -540,7 +540,7 @@ Global("X3HelViconia","GLOBAL",0)~ THEN BX3Hel X3HelViconia1
 DO ~SetGlobal("X3HelViconia","GLOBAL",1)~
 == BVICONI ~I have no reason to betray, <CHARNAME>. Your mistrust is misplaced, dwarf.~
 == BX3Hel ~Bah, trusting a drow is as foolish as claiming to be Moradin himself. I'd sooner believe the former.~
-== BVICONI ~Keep your disbeliefs, then. But you are a mad woman if you start to believe any claims of your god being in yourself.~
+== BVICONI ~Keep your beliefs, then. But you are a mad woman if you start to believe any claims of your god being in yourself.~
 == BX3HEL ~Drunk, more likely.~
 EXIT 
 
@@ -556,7 +556,7 @@ DO ~SetGlobal("X3HelYoshimo","GLOBAL",1)~
 == BYOSHIM ~Ah, and my dwarven friend is ale deprived, then?~
 == BX3Hel ~Deprived? I drank it anyway. Still tasted good.~
 == BYOSHIM ~You are a brave one, my friend. Or is it that a dwarf can really not go a day without a stout, cold drink?~
-== BX3Hel ~If a dwarf doesn't drink, then they are either an imposter or from an opressive, far too strict kingdom. Never go to such places, Yoshimo. There be no greater crime than the barring of good, or bad, ale.~
+== BX3Hel ~If a dwarf doesn't drink, then they are either an impostor or from an oppressive, far too strict kingdom. Never go to such places, Yoshimo. There be no greater crime than the barring of good, or bad, ale.~
 == BYOSHIM ~I will gladly take your advice, my friend!~
 EXIT 
 
@@ -586,7 +586,7 @@ Global("X3HelX3Kal1","LOCALS",1)~ THEN BX3Hel X3HelX3Kal2
 DO ~SetGlobal("X3HelX3Kal1","LOCALS",2)~
 == BX3Kal ~What's wrong with it? I say it suits me perfectly. Nice and heroic.~
 == BX3Hel ~Aye, ye have more discipline. But ye've dropped yer anger, letting that raw rage keep ye on yer feet.~
-== BX3Kal ~Took a lot of hits fighting that way. Worked when I was backin Gullykin, but that can get you killed with what we face now.~
+== BX3Kal ~Took a lot of hits fighting that way. Worked when I was back in Gullykin, but that can get you killed with what we face now.~
 == BX3Hel ~Living is by raw will. You die when you give in. I've seen dwarven berserkers slay an entire army before they let their wounds take them down.~
 == BX3Kal ~Well I want to live to take down many armies, not just one. Got to fight a little smarter for that, you know.~
 == BX3Hel ~Hrngh.~
@@ -607,7 +607,7 @@ DO ~SetGlobal("X3HelX3Kal2","LOCALS",1)~
 == BX3Hel ~What are ye even saying, Kale? Speak plainly.~
 == BX3Kal ~Heh, well in present company, I don't know if I'd want to offend any more sensitive ears.~
 == BX3Hel ~Then maybe ye should keep yer trap shut?~
-== BX3Kal ~Uh, I think your response sure answers my question. I think I'm all in my curiousity.~
+== BX3Kal ~Uh, I think your response sure answers my question. I think I'm all in my curiosity.~
 == BX3Hel ~Hrngh. Halflings.~
 EXIT 
 
@@ -641,7 +641,7 @@ Global("X3HelX3Kal1","LOCALS",2)~ THEN BX3Hel X3HelX3Kal5
 DO ~SetGlobal("X3HelX3Kal1","LOCALS",3)~
 == BX3Kal ~You know he can hear you, right?~
 == BX3Hel ~Nay, he ain't paying attention. Every gal in this party's got a hand on him.~
-== BX3Kal ~I 'unno. You sure you ain't seeing things?~
+== BX3Kal ~I dunno. You sure you ain't seeing things?~
 == BX3Hel ~Now that I think of it, ye ain't much different.~
 == BX3Kal ~Heh, now you are definitely seeing things.~
 == BX3Hel ~Bah. I don't like it. We should be fighting, not flirting.~
@@ -679,7 +679,7 @@ DO ~SetGlobal("X3HelX3Reb1","LOCALS",2)~
 DO ~ForceSpell("X3Reb",CLERIC_CURE_SERIOUS_WOUNDS)~
 == BX3Reb ~Oh...that feels better. Thank you.~
 == BX3Hel ~Aye. But what was that rubbish you were saying earlier?~
-== BX3Reb ~N-nothing. The pain was probably makign me a little delirious.~
+== BX3Reb ~N-nothing. The pain was probably making me a little delirious.~
 == BX3Hel ~Hrngh. Something weighing on you?~
 == BX3Reb ~No. Nothing. Thank you...I feel better.~
 == BX3Hel ~Don't sound like it lass. But keep to the back at least. Nay want to see you injured like that anytime soon.~

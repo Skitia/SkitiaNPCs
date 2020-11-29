@@ -23,7 +23,7 @@ Global("X3EmiANOMENToB","GLOBAL",0)~ THEN BX3Emi25 X3EmiANOMEN1
 DO ~SetGlobal("X3EmiANOMENToB","GLOBAL",1)~
 == BANOME25 ~No. I am merely examining your features, my lady. For someone who claims to be an aasimar, I see the beauty but not the demeanor.~
 == BX3Emi25 ~I'm not even sure how to process that. "Claims"?~
-== BANOME25 ~There was a member of an order with blood like yours. Tales rang richly of their zealousness and commitment. Their judgement of all things evil was cold and swift. No mercy. No hesitation.~
+== BANOME25 ~There was a member of an order with blood like yours. Tales rang richly of their zealousness and commitment. Their judgment of all things evil was cold and swift. No mercy. No hesitation.~
 == BX3Emi25 ~We aren't all the same. Honestly, I have met so few of people like me I could not even tell what you are like. Some of us are like that, and...others I've met aren't. Honestly? I think I am probably a poor example.~
 == BANOME25 ~You stand here and fight evil with us, Emily. But if you seek guidance and counsel, I would be glad to part you my wisdom.~
 == BX3Emi25 ~Right. You know? I think I'm fine being an imperfect example. But thanks.~
@@ -110,7 +110,7 @@ CHAIN BX3Emi25 X3EmiImoenExile
 == BIMOEN25 ~Oooh, a shot at little old me. Someone is getting a little testy.~
 == BX3Emi25 ~No no no! That was not meant for you.-~
 == BIMOEN25 ~Haha, I'm just teasing you, Emi.~
-== BX3Emi25 ~Emi...I have a feeling Im' going to have to get used to this nickname now.~
+== BX3Emi25 ~Emi...I have a feeling I'm' going to have to get used to this nickname now.~
 EXIT 
 
 // Jan 
@@ -142,7 +142,7 @@ Global("X3EmiJAHEIRAToB","GLOBAL",0)~ THEN BJAHEI25 X3EmiJAHEIRA1
 ~You seem uneasy, Emily. A copper for your thoughts?~ [X3Blank]
 DO ~SetGlobal("X3EmiJAHEIRAToB","GLOBAL",1)~
 == BX3Emi25 ~Is it that obvious? Well, I just feel we have seen more and more people die. Throughout all of my ventures, I have seen so many people die. I can't help but think, was it justified? Was there another way?~
-== BJAHEI25 ~Such thoughts serve you well, child. Some would have you believe the choice is black and white. But there is much grey in the world. If you seek a bloodless path, you will have to be thoughtful with your words, and more with your actions.~
+== BJAHEI25 ~Such thoughts serve you well, child. Some would have you believe the choice is black and white. But there is much gray in the world. If you seek a bloodless path, you will have to be thoughtful with your words, and more with your actions.~
 == BX3Emi25 ~That seems impossible with <CHARNAME>. Despite my affections for them, I can't deny theirs has been a bloody path.~
 == BJAHEI25 ~Do you judge them worse for it?~
 == BX3Emi25 ~No, I don't think I could. I acknowledge their strength. I just hope this ends well for them and us all.~
@@ -159,7 +159,7 @@ DO ~SetGlobal("X3EmiKELDORNToB","GLOBAL",1)~
 == BX3Emi25 ~You think he is listening? It is hard to think the gods are...allowing so much death.~
 == BKELDO25 ~The war of the Bhaalspawn is a bloody affair. <CHARNAME>'s course often troubles me. But I am here to keep the ship righted. The road is black, but the light is not as far ahead as you fear, lady Emily.~
 == BX3Emi25 ~I was more afraid that the light was not there at all.~
-== BKELDO25 ~The light is in you, and all of those who push and hope for a virtuos end. Do not let your fears dull your spirit. You have proven yourself again and again. Keep strong.~
+== BKELDO25 ~The light is in you, and all of those who push and hope for a virtuous end. Do not let your fears dull your spirit. You have proven yourself again and again. Keep strong.~
 == BX3Emi25 ~I'll try. I'm glad we've had this discussion.~
 == BKELDO25 ~As am I, Emily. You are not the only one who needed to hear these words.~
 EXIT 
@@ -290,7 +290,7 @@ DO ~SetGlobal("X3EmiValygarToB","GLOBAL",1)~
 == BVALYG25 ~There are many people who live life without being touched or using a spell, Emily. Do not take our experiences as the default for all people.~
 == BX3Emi25 ~I guess you have a point yet again, Valygar. But there is still good magic, no? Some of these people live easy knowing that if something terrible happened, there would be a priest for them.~
 == BVALYG25 ~Sometimes. But we would all perhaps be better if we did not act recklessly or foolishly because we thought magic our netting for our mistakes.~
-== BX3Emi25 ~You are really wise, Valgar. I can find nothing to say to refute what you point out. I guess silence does bestow wisdom, as father said. I probably should talk less and see if it works!~
+== BX3Emi25 ~You are really wise, Valygar. I can find nothing to say to refute what you point out. I guess silence does bestow wisdom, as father said. I probably should talk less and see if it works!~
 == BVALYG25 ~That would be nice, miss Emily. That would be nice.~
 EXIT 
 
@@ -320,10 +320,10 @@ Global("X3EmiX3RebToB","LOCALS",0)~ THEN BX3Reb25 X3EmiX3Reb1
 DO ~SetGlobal("X3EmiX3RebToB","LOCALS",1)~
 == BX3Emi25 ~Well. To be honest, Recorder? I've been a little worried you would interview me about home when it's just not a good time to say how wonderful Tethyr is.~
 == BX3Reb25 ~Tethyr is still beautiful, Emily. Despite all of the tragedy happening. It would happen wherever we went, from what I am beginning to truly comprehend about <CHARNAME> and the bhaalspawn.~
-== BX3Emi25 ~I know, I know, but...I would have wanted to show you Tethyr in its proper beauty. Peaceful and...without Bhaalspawn attacking eachother and everyone in-between.~
+== BX3Emi25 ~I know, I know, but...I would have wanted to show you Tethyr in its proper beauty. Peaceful and...without Bhaalspawn attacking each other and everyone in-between.~
 == BX3Reb25 ~Such a time could still come. Your home is further to the north, isn't it? I would like to see it someday.~
 == BX3Emi25 IF ~Global("X3EmiHeir","GLOBAL",1)~ THEN ~Oh you are *definitely* going to see it someday. No getting out of that.~
-== BX3Emi25 IF ~!Global("X3EmiHeir","GLOBAL",1)~ THEN ~I can't even show you that anymore, Recorder. I hope you aren't dissapointed that I'm not...not as great as you thought.~
+== BX3Emi25 IF ~!Global("X3EmiHeir","GLOBAL",1)~ THEN ~I can't even show you that anymore, Recorder. I hope you aren't disappointed that I'm not...not as great as you thought.~
 == BX3Reb25 IF ~!Global("X3EmiHeir","GLOBAL",1)~ THEN ~It doesn't change my mind, my friend. We can still go and just see everything else about it. I think I would like that.~
 == BX3Emi25 IF ~!Global("X3EmiHeir","GLOBAL",1)~ THEN ~It's a promise, then. I'd be glad to show you the sights.~
 EXIT 
@@ -335,9 +335,9 @@ See("X3Reb")
 Global("X3EmiX3RebToB","LOCALS",1)~ THEN BX3Reb25 X3EmiX3Reb2
 ~Everyday I get a little nervous that something happened to the ship we sent Raban on. I wish I could see him.~
 DO ~SetGlobal("X3EmiX3Reb2","LOCALS",2)~
-== BX3Emi25 ~Oh, he's fine. He's probably fishing in Urgoth's beard. Can he fish at his age? Hrm. Or...well hopefully not listening to the town stories. I heard there was some rampant disease caused by a little too much intimiacy going around-~
+== BX3Emi25 ~Oh, he's fine. He's probably fishing in Urgoth's beard. Can he fish at his age? Hrm. Or...well hopefully not listening to the town stories. I heard there was some rampant disease caused by a little too much intimacy going around-~
 == BX3Reb25 ~Emily!~
-== BX3Emi25 ~Sorry. I probably should start reigning my thoughts in. I've forgotten a lot of my gentlewoman lessons. It will be fine, Recorder. Just imagine the moment where you reuinte again.~
+== BX3Emi25 ~Sorry. I probably should start reigning my thoughts in. I've forgotten a lot of my gentlewoman lessons. It will be fine, Recorder. Just imagine the moment where you reunite again.~
 == BX3Reb25 ~I worry that he won't even love me.~
 == BX3Emi25 ~I...well I honestly don't know what to say to reassure you. But you are a good person, Recorder. He'll see that and...I think given time, you'll make up for lost ground.~
 == BX3Reb25 ~I pray it is so, Emily. The thought that he might not worries me so much.~
@@ -409,7 +409,7 @@ DO ~SetGlobal("X3EmiX3KalToB2","LOCALS",1)~
 == BX3Emi25 ~Are you really talking about us? Do you have no sense of personal space?~
 == BX3Kal25 ~Not when it involves juicy things.~
 == BX3Emi25 ~Well, I'm going to put up a wall. You can talk to the cold shoulder.~
-== BX3Kal25 ~Sheesh. It was just a question. Tallfolk are so sensitive, heh.~
+== BX3Kal25 ~Sheesh. It was just a question. Tall-folk are so sensitive, heh.~
 EXIT 
 
 //Vienxay
