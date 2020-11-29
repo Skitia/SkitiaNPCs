@@ -1,6 +1,6 @@
 BACKUP ~SkitiaNPCs\Backup~
 AUTHOR ~Skitia https://skitias-stories.com/contact.php~
-VERSION ~0.92~
+VERSION ~0.95~
 
 AUTO_TRA ~%MOD_FOLDER%/Tra/%s~
 
@@ -158,6 +158,25 @@ ACTION_IF GAME_IS ~eet~ BEGIN
 END ELSE BEGIN
   COMPILE ~%MOD_FOLDER%/Dialogue/FATESP.d~
 END	  
+
+ACTION_IF FILE_EXISTS_IN_GAME ~L3PetsyB.dlg~
+THEN BEGIN
+  PRINT ~Adding Petsy Crossmod~
+COMPILE ~%MOD_FOLDER%/Dialogue/Crossmod/Petsy.d~
+END 
+/*
+ACTION_IF FILE_EXISTS_IN_GAME ~YxYveB.dlg~
+THEN BEGIN
+  PRINT ~Adding Yvette Crossmod~
+COMPILE ~%MOD_FOLDER%/Dialogue/Crossmod/Yvette.d~
+END 
+
+ACTION_IF FILE_EXISTS_IN_GAME ~bc0sire2.dlg~
+THEN BEGIN
+  PRINT ~Adding Sirene Crossmod~
+COMPILE ~%MOD_FOLDER%/Dialogue/Crossmod/Sirene.d~
+END 
+*/
 //All Optional Additions 
 
 BEGIN ~Arcane Archer (Fighter Kit)~
