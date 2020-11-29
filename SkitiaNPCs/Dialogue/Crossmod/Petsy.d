@@ -271,7 +271,7 @@ DO ~SetGlobal("X3KalPetsy","LOCALS",1)~
 == BX3Kal ~Damn. Talk about being overshadowed, I really got to ask <CHARNAME> to give me more of the credit.~
 == L3PetsyB ~Heh, I'd love to hear it sometime, Kale. I love stories! We could swap tales, I could share a few of my family with you. You'd love my great-grandfather!~
 == BX3Kal ~Sure, sure. But I've got to warn you, my stories are never beat with their excitement.~
-== BX3Vien IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Ugh, are all halflings so talkative about nothing of substance?~
+== BX3Vie IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Ugh, are all halflings so talkative about nothing of substance?~
 == L3PetsyB IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Is she always this grumpy?~
 == BX3Kal IF ~IsValidForPartyDialogue("X3Vie")!Global("X3ViePartyBG1","GLOBAL",1)~ THEN ~Eh, she's probably just jealous. Not enough halfling in her life. We'll have to make up for that absence she's suffered.~
 == BX3Kal IF ~IsValidForPartyDialogue("X3Vie")Global("X3ViePartyBG1","GLOBAL",1)~ THEN ~Pfft, this is her on a good day. I'll tell you, her bad days are even more charming.~
@@ -466,7 +466,7 @@ DO ~SetGlobal("X3ViePetsy","GLOBAL",3)~
 == L3PetsyB ~Oh for Sheela's sake! I am your companion. You really are asking for a kick to your shin.~
 == BX3Vie ~Please, you hardly have t- ow! You prat!~
 == L3PetsyB ~I warned you!~
-== BKORGAN ~IsValidForPartyDialogue("Korgan")~ THEN ~Aye, good kick on the elf, lassie. I taught ye well.~
+== BKORGAN IF ~IsValidForPartyDialogue("Korgan")~ THEN ~Aye, good kick on the elf, lassie. I taught ye well.~
 == BX3Vie ~Hrmph. I suppose I underestimated your spine, halfling. Consider this settled. You are less worthless than I thought you were.~
 == L3PetsyB ~Um, thank- hey! You tripped me again!~
 == BX3Vie ~I couldn't leave your attack without a response. *Now* we are settled.~
