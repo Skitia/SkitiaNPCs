@@ -545,7 +545,7 @@ DO ~SetGlobal("X3RebRasaad","GLOBAL",1)~
 == BRASAAD ~Do you share everything in it?~
 == BX3Reb ~Everything I can. Not every action to the letter. I know what is not so interesting...and what might be a bit intrusive. I've not put anything personal about you in the records so far, out of respect.~
 == BRASAAD ~No, please do. You are creating a historical record. I would want it to be an honest recollection. If we are unable to face who we are, then we cannot see our own darkness.~
-== BX3Reb ~Very well then, Rasaad. I'll make a note to write what I understand tonight. Perhaps you can be avalaible for some questions when we next make camp?~
+== BX3Reb ~Very well then, Rasaad. I'll make a note to write what I understand tonight. Perhaps you can be available for some questions when we next make camp?~
 == BRASAAD ~I would be honored.~
 EXIT 
 
