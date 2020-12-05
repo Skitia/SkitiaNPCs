@@ -68,7 +68,7 @@ CHAIN X3Reb25J Yackman
 EXTERN GORMAD1 11
 
 I_C_T GORPOL1 1 X3RebGORPOL1-1
-== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ THEN ~Unable? It must be truly grevious then, if you call for aid for a duty you cannot fulfill.~
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ THEN ~Unable? It must be truly grievous then, if you call for aid for a duty you cannot fulfill.~
 END 
 
 I_C_T GORODR1 19 X3RebGORODR1-19
@@ -139,7 +139,7 @@ DO ~SetGlobal("X3VieApp","GLOBAL",4)DisplayStringNoNameDlg(Player1,@516)~
 END 
 
 I_C_T SARTEM01 16 X3EmiSARTEM01-16
-== X3RebJ IF ~!IsValidForPartyDialogue("X3Emi")IsValidForPartyDialogue("X3Reb")~ THEN ~We don't have to hurt her. Maybe there's another way in, isntead.~
+== X3RebJ IF ~!IsValidForPartyDialogue("X3Emi")IsValidForPartyDialogue("X3Reb")~ THEN ~We don't have to hurt her. Maybe there's another way in, instead.~
 DO ~SetGlobal("X3RebApp","GLOBAL",-4)DisplayStringNoNameDlg(Player1,@406)~
 == SARTEM01 ~Begone from this place. I will give you no aid.~
 END
@@ -176,7 +176,7 @@ EXTEND_TOP SARVOLO 9 #2
 END
 
 CHAIN SARVOLO X3RebVoloBio1
-~The very bard who inspired me to start my own chronicles of <CHARNAME>, Recorder has transformed herself from a mother who lost her son into a great gnome bard, an inspiration to all parents about the perserverance of heart. Few beings know someone so knowledgeable in lore and magic while equally talented in the musical arts.~
+~The very bard who inspired me to start my own chronicles of <CHARNAME>, Recorder has transformed herself from a mother who lost her son into a great gnome bard, an inspiration to all parents about the perseverance of heart. Few beings know someone so knowledgeable in lore and magic while equally talented in the musical arts.~
 EXTERN X3Reb25J X3RebVoloBio
 
 
@@ -487,7 +487,7 @@ CHAIN X3Reb25J eaf.2
 EXTERN X3Reb25J eaf.3
 
 CHAIN X3Reb25J eaf.4 
-~I do not think I can know. Its properties are dependent on who the wearer and their acceptance. They are extremely prized, I am suprised you even came across one.~
+~I do not think I can know. Its properties are dependent on who the wearer and their acceptance. They are extremely prized, I am surprised you even came across one.~
 EXTERN X3Reb25J eaf.3
 
 
@@ -527,7 +527,7 @@ IF ~Global("X3RebRomanceActive","GLOBAL",2)~ + mage.love
 IF ~!Global("X3RebRomanceActive","GLOBAL",2)~ + mage.friend 
 
 CHAIN X3Reb25J ssmd.4
-~You do not need to be so...nevermind. If that is what you want, I won't say anything about it.~
+~You do not need to be so...never mind. If that is what you want, I won't say anything about it.~
 EXIT 
 
 CHAIN X3Reb25J sonsavedmagealive 
@@ -679,7 +679,7 @@ EXTERN X3Reb25J FT.4
 // Friendship Talk 2
 
 CHAIN IF ~Global("X3RebToBTalk","LOCALS",4)~ THEN X3Reb25J FriendshipTalkSecond
-~The world seems more and more a dark place. Everytime I get hopeful, I just see more sorrow and suffering, and I wonder if history ever really gets better.~
+~The world seems more and more a dark place. Every time I get hopeful, I just see more sorrow and suffering, and I wonder if history ever really gets better.~
 DO ~IncrementGlobal("X3RebToBTalk","LOCALS",1)SetGlobal("X3RebAppChange","GLOBAL",6)~
 = ~I must sound so grim. I don't know what is coming over me.~
 END 
@@ -787,7 +787,7 @@ EXTERN X3Reb25J FF.12
 
 CHAIN X3Reb25J FF.12 
 ~First though, I would fulfill my duty and submit my records of my travels with the church. And on my journeys, people will need a bit of levity, and I'll provide it with songs and stories.~
-== X3Reb25J ~Your story will certailny find its way to a bookshelf someday. I just hope that story has a happy ending.~
+== X3Reb25J ~Your story will certainly find its way to a bookshelf someday. I just hope that story has a happy ending.~
 END 
 ++ ~Aye. Let's see this through, shall we?~ + FF.13
 ++ ~It certainly will, and no less.~ + FF.14
@@ -806,7 +806,7 @@ END
 ++ ~It sounds like you plan to settle into a more domestic life.~ + FF.16
 
 CHAIN X3Reb25J FF.9
-~I can't. I have to find Raban, even if the chance of ever reuinting with him is none, I must try.~
+~I can't. I have to find Raban, even if the chance of ever reuniting with him is none, I must try.~
 EXTERN X3Reb25J FF.12 
 
 CHAIN X3Reb25J FF.10
@@ -852,7 +852,7 @@ CHAIN X3Reb25J 1.X
 EXIT  
 
 CHAIN X3Reb25J 1.1
-~I was able to restock in Suldanesellar, but if I hadn't, I would be running out. I couldn't stop writing after we stopped Irenicus.~
+~I was able to restock in Suldanessellar, but if I hadn't, I would be running out. I couldn't stop writing after we stopped Irenicus.~
 EXTERN X3Reb25J 1.4
 
 CHAIN X3Reb25J 1.2 
@@ -988,7 +988,7 @@ CHAIN X3Reb25J W.6
 EXIT 
 
 CHAIN X3Reb25J W.7
-~There isn't anything to say. I know you are trying to help, but it can't be helped. I have never more hated being so...nothing. Nevermind.~
+~There isn't anything to say. I know you are trying to help, but it can't be helped. I have never more hated being so...nothing. Never mind.~
 EXIT 
 
 // This one happens post rest.
@@ -1062,7 +1062,7 @@ END
 ++ ~We should keep moving. We can't muse over Saradush.~ + 4.X 
 
 CHAIN X3Reb25J 4.X 
-~You are right. Nevermind me.~
+~You are right. Never mind me.~
 EXIT  
 
 CHAIN X3Reb25J 4.1
@@ -1078,7 +1078,7 @@ CHAIN X3Reb25J 4.3
 EXTERN X3Reb25J 4.4 
 
 CHAIN X3Reb25J 4.4 
-~It is a cycle, almost. Such fights for power have always occured in history. It was noble for Saradush to protect who they could, even if they were to fall.~
+~It is a cycle, almost. Such fights for power have always occurred in history. It was noble for Saradush to protect who they could, even if they were to fall.~
 == X3Reb25J ~Others will continue to exert their dominion over others. All for power. All for their own might. I just wish I saw a way to end that.~
 END 
 ++ ~Awareness perhaps. But I too believe, that such individuals will always exist.~ + 4.5 
@@ -1230,7 +1230,7 @@ CHAIN X3Reb25J 5.11
 EXIT 
 
 CHAIN X3Reb25J 5.10
-~I...well perhaps we can talk about it more sometime. It isn't a dealbreaker, <CHARNAME>. Perhaps just the one is best. But redemption, I would like that if I could someday.~
+~I...well perhaps we can talk about it more sometime. It isn't a deal breaker, <CHARNAME>. Perhaps just the one is best. But redemption, I would like that if I could someday.~
 EXIT 
 
 CHAIN X3Reb25J 5.12 
@@ -1303,7 +1303,7 @@ END
 ++ ~I suppose it is, isn't it? Did you have something to say?~ + 7.3
 
 CHAIN X3Reb25J 7.1 
-~We come to the end. Everything is decided when we face Melissan. You face the precipece, perhaps the greatest battle yet.~
+~We come to the end. Everything is decided when we face Melissan. You face the precipice, perhaps the greatest battle yet.~
 == X3Reb25J ~I want you to know that I will stand with you. You were the light in my darkness, the warmth that broke my binds, the love that shielded me from harm. I will walk with you to Melissan, hand in hand.~
 END 
 ++ ~I'll take that hand. Thank you, my love.~ DO ~IncrementGlobal("X3RebApp","GLOBAL",2)~ + 7.2 
@@ -1317,7 +1317,7 @@ EXIT
 
 CHAIN X3Reb25J 7.2 
 ~(She squeezes your hand tightly, moving to stand beside you.)~
-== X3Vie25J ~IsValidForPartyDialogue("X3Vie")~ ~I will admit I do find this sickengly sweet.~
+== X3Vie25J ~IsValidForPartyDialogue("X3Vie")~ ~I will admit I do find this sickeningly sweet.~
 == X3Hel25J ~IsValidForPartyDialogue("X3Hel")~ ~All right, all right, enough, enough. Yer worse than me in my youth.~
 == X3Emi25J ~IsValidForPartyDialogue("X3Emi")~ ~Your love is cute and inspiring. Good for morale!~
 == X3Kal25J ~IsValidForPartyDialogue("X3Kal")~ ~Damn, I'm finding myself a bit jealous.~
@@ -1325,7 +1325,7 @@ EXTERN X3Reb25J 7.5
 
 CHAIN X3Reb25J 7.3 
 ~(Her lips taste warm, with a slight saltiness from a drop of tears.)~
-== X3Vie25J ~IsValidForPartyDialogue("X3Vie")~ ~I will admit I do find this sickengly sweet.~
+== X3Vie25J ~IsValidForPartyDialogue("X3Vie")~ ~I will admit I do find this sickeningly sweet.~
 == X3Hel25J ~IsValidForPartyDialogue("X3Hel")~ ~All right, all right, enough, enough. Yer worse than me in my youth.~
 == X3Emi25J ~IsValidForPartyDialogue("X3Emi")~ ~Your love is cute and inspiring. Good for morale!~
 == X3Kal25J ~IsValidForPartyDialogue("X3Kal")~ ~Damn, I'm finding myself a bit jealous.~
@@ -1337,7 +1337,7 @@ CHAIN X3Reb25J Group.Kiss
 == X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~Awwww!~
 == X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~Pah. Stop your stuttering and get it done so we can get back to fighting something.~
 == X3Kal25J IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~Heh. Just do it.~
-== X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Great. Now I have to watch you slobber over eachother.~
+== X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Great. Now I have to watch you slobber over each other.~
 == X3Reb25J ~Well, all right...~
 == X3Reb25J ~Mmm. I love you, <CHARNAME>. I wish we had more time for this.~
 EXIT 
@@ -1450,7 +1450,7 @@ EXIT
 END 
 
 IF ~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelQuestCutScene","GLOBAL",1)~ ScryFinish 
-SAY ~Oh dear. I don't know...how to say this. It worked, and that was amazing. But...~ [] // Use the It is done soundset 
+SAY ~Oh dear. I don't know...how to say this. It worked, and that was amazing. But...~ 
 ++ ~Just tell me, Recorder.~ + ScryDead 
 ++ ~Oh no. Is he dead?~ + ScryDead 
 ++ ~Go on.~ + ScryDead 
@@ -1492,7 +1492,7 @@ SAY ~I have never done that before, but I know how it is done, and I think I can
 END 
 
 IF ~~ Scry.1
-SAY ~Let me know when you have the crystal, <CHARNAME>. I will read up more about divination and scrying on my freetime so I am ready.~
+SAY ~Let me know when you have the crystal, <CHARNAME>. I will read up more about divination and scrying on my free time so I am ready.~
 IF ~~ EXIT 
 END 
 
@@ -1600,7 +1600,7 @@ SAY ~Oh definitely, though often they centered around the very work we valued. F
 END 
 
 IF ~~ PLantan.3 
-SAY ~Some of these are just at their beginning stages. I think for others, it is a matter of trust. We have an invention called the gonne for example, which shoots a sort of object with gunpowder that shatters on content. If mass produced, it could be devestating in the wrong hands. A few have already landed in less than savory arms.~
+SAY ~Some of these are just at their beginning stages. I think for others, it is a matter of trust. We have an invention called the gonne for example, which shoots a sort of object with gunpowder that shatters on content. If mass produced, it could be devastating in the wrong hands. A few have already landed in less than savory arms.~
 = ~Still, I hope one day the world is in a better place where we can trust them to take the things we trade them and use them for good purposes.~
 ++ ~Let me ask you about something else.~ + MoreQuestion.PID
 ++ ~Let's keep moving.~ EXIT 

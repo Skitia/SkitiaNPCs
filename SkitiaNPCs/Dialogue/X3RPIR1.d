@@ -10,7 +10,7 @@ CHAIN IF ~!IsValidForPartyDialogue("X3Reb")~ THEN X3RPIR1 Talk
 EXIT 
 
 CHAIN IF ~IsValidForPartyDialogue("X3Reb")~ THEN X3RPIR1 Talk_Recorder
-~Well boys, look at what we have here. Miss Rebbecca. Did you come to beg your way back into your master's good graces?~
+~Well boys, look at what we have here. Miss Rebecca. Did you come to beg your way back into your master's good graces?~
 == X3RebJ ~No. We do not need to be in conflict. We're here for our own business, and won't bother him.~
 == X3RPIR1 ~Your own "business"? To swipe back your boy, perhaps, or to finish the murder you tried years ago?~
 == X3RebJ ~What are you talking about? My son is alive?~

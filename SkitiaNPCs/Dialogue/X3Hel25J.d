@@ -40,7 +40,7 @@ CHAIN X3Hel25J Yackman
 EXTERN GORMAD1 10
 
 I_C_T GORODR1 11 X3HelGORODR1-11
-== X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ THEN ~I be suprised ye haven't taken the call of battle for yerselves. This be sounding like a glorious task!~
+== X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ THEN ~I be surprised ye haven't taken the call of battle for yerselves. This be sounding like a glorious task!~
 END 
 
 I_C_T GORODR1 50 X3VieGORODR1-50
@@ -111,7 +111,7 @@ I_C_T BALTH 6 X3HelBalth6
 END
 
 I_C_T AMMAYOR 5 X3HelAMMAYOR-5
-== X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~Bah, I don't buy the lasses's tale. Just a blasted thief trying to make herself appear noble.~
+== X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~Bah, I don't buy the lass's tale. Just a blasted thief trying to make herself appear noble.~
 END
 
 I_C_T AMMONK02 3 X3HelAMMONK02-3
@@ -180,7 +180,7 @@ END
 //Talks
 // 1, general comment about things after they left Suldanessellar. 
 CHAIN IF ~Global("X3HelToBTalk","LOCALS",2)~ THEN X3Hel25J Talk1
-~Suldanessar. I won't miss our brief stint there. Being on the road feels right.~
+~Suldanessellar. I won't miss our brief stint there. Being on the road feels right.~
 DO ~IncrementGlobal("X3HelToBTalk","LOCALS",1)SetGlobal("X3HelAppChange","GLOBAL",6)~
 END 
 ++ ~Your leg seems to be much better. You seem to be moving with more ease.~ + 1.1 
@@ -199,7 +199,7 @@ CHAIN X3Hel25J 1.2
 EXTERN X3Hel25J 1.4 
 
 CHAIN X3Hel25J 1.3 
-~Aye, that is what my heart feels as well. A dwarf belongs in a mountain, with her brethren, or searcing for a battle. Not in some elf home.~
+~Aye, that is what my heart feels as well. A dwarf belongs in a mountain, with her brethren, or searching for a battle. Not in some elf home.~
 EXTERN X3Hel25J 1.4 
 
 CHAIN X3Hel25J 1.X 
@@ -312,7 +312,7 @@ DO ~AddJournalEntry(@13,QUEST)~ // It helps if Vienxay and Recorder are in the p
 EXIT 
 
 CHAIN IF ~Global("X3HelToBTalk","LOCALS",4)~ THEN X3Hel25J Talk3
-~Everyone in a while, I go and reflect on a good kill. And that Yagashura...was probably one of the best. A dwarf fighting against a seemingly unkillable giant and coming out on top with her party...that is a story.~
+~Everyone in a while, I go and reflect on a good kill. And that Yaga-Shura...was probably one of the best. A dwarf fighting against a seemingly unkillable giant and coming out on top with her party...that is a story.~
 DO ~IncrementGlobal("X3HelToBTalk","LOCALS",1)SetGlobal("X3HelAppChange","GLOBAL",6)~
 END 
 ++ ~Your tone doesn't seem as excited as you tell it.~  + 3.1 
@@ -341,7 +341,7 @@ CHAIN X3Hel25J 3.4
 == X3Hel25J ~I live for battle. I love for the good fight to the death. But yer bloodline seems to inspire death be necessary on a massive scale.~
 END 
 ++ ~It is not all caused by me, Helga.~ + 3.5 
-++ ~And this makes you uncomfortable? I'm suprised.~ + 3.6 
+++ ~And this makes you uncomfortable? I'm surprised.~ + 3.6 
 ++ ~Come now, this isn't like you. I find it all thrilling.~ + 3.7
 
 CHAIN X3Hel25J 3.5
@@ -441,7 +441,7 @@ EXTERN X3Hel25J 4.5
 
 CHAIN X3Hel25J 4.8 
 ~Then perhaps we have something to work with, though I suppose the name would nay work with ye. Hrngh.~
-= ~If ye come up with something bettter, let's chat. Pointless as it may seem to mule on it...give's me a reason to smile.~
+= ~If ye come up with something better, let's chat. Pointless as it may seem to mule on it...gives me a reason to smile.~
 EXIT 
 
 CHAIN X3Hel25J 4.9
@@ -651,7 +651,7 @@ END
 
 IF ~~ PHome.1 
 SAY ~Aye. Many old traps and puzzles would keep you out, and the dead did not always rest easy.~
-= ~It only spurned me on to be a priestess of Haela. The ruins were often trial grounds to be a Luck Maiden, and I remember returning to my parents after my first succesful trial.~
+= ~It only spurned me on to be a priestess of Haela. The ruins were often trial grounds to be a Luck Maiden, and I remember returning to my parents after my first successful trial.~
 = ~Damn proud they were. I was their little watermelon into a true warrior.~
 ++ ~Watermelon?~ + PHome.4
 ++ ~What of your parents?~ + PHome.2
@@ -682,7 +682,7 @@ END
 IF ~~ PID.Faith 
 SAY ~Aye, gladly.~
 = ~Haela Brightaxe is a goddess for those who love battle and find joy in it, as I do. She is different from the other Morndinsamman, less orderly and bound to all the ways, but she is still widely respected in the realms.~
-= ~We were an all female order until the last few years, where we have had a few males join our ranks. My own rank in the church is Flamebolt, though that holds meaning only in the fotress-keep~
+= ~We were an all female order until the last few years, where we have had a few males join our ranks. My own rank in the church is Flamebolt, though that holds meaning only in the fortress-keep~
 = ~We are trained to use any weapon, but you'll still find me favoring the traditional cleric arms, unless I summon the blessing for the blade.~
 ++ ~Why did you worship her yourself?~ + PFaith.1
 ++ ~How does one become a member of the faith?~ + PFaith.2
@@ -711,7 +711,7 @@ SAY ~Older than you. Does it bloody matter?~
 ++ ~No need to be grumpy about it. I am just curious.~ + PID.Age1
 ++ ~Not, really no.~  + PID.Age1
 ++ ~Just tell me, will you?~  + PID.Age1
-++ ~Okay, nevermind. Let me ask you something else.~ + MoreQuestion.PID 
+++ ~Okay, never mind. Let me ask you something else.~ + MoreQuestion.PID 
 END 
 
 IF ~~ PID.Age1

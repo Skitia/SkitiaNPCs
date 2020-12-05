@@ -27,7 +27,7 @@ END
 ++ ~I'll take my leave. ~ + m1.4 
 
 CHAIN X3EGVJ m1.2 
-~Emily? Emily Castille? I am surprised, she never seemed to wish to speak to me much about anything. Well, let her know I am here. Shoo now.~
+~Emily? Emily Castilla? I am surprised, she never seemed to wish to speak to me much about anything. Well, let her know I am here. Shoo now.~
 DO ~SetGlobal("EmilyNotPresent","LOCALS",1)~
 EXIT 
 
@@ -45,7 +45,7 @@ EXIT
 
 // Emily in party. 
 CHAIN IF ~GlobalLT("Chapter","GLOBAL",%bg2_chapter_6%)Global("X3EGVJQuest","GLOBAL",0)See("X3Emi")IsValidForPartyDialogue("X3Emi")~ THEN X3EGVJ Meet 
-~Lady Castille. Why are you in the company of the common folk? It does not look good upon you to trek in the mud they walk.~
+~Lady Castilla. Why are you in the company of the common folk? It does not look good upon you to trek in the mud they walk.~
 END 
 IF ~IsValidForPartyDialogue("Nalia")~ EXTERN NALIAJ Von.1 
 IF ~IsValidForPartyDialogue("Anomen")~ EXTERN ANOMENJ Von.4
@@ -110,8 +110,8 @@ EXTERN X3EGVJ Von.8
 CHAIN IF ~Global("X3EGVJQuest","GLOBAL",1)GlobalLT("Chapter","GLOBAL",%bg2_chapter_6%)~ THEN X3EGVJ quest_started
 ~Have you done what you were asked?~
 END 
-+~IsValidForPartyDialogue("X3Emi")GlobalGT("X3EGVJTalkResult","GLOBAL",0)~+ ~Yes, we've spoken to Myorn and Derrick about their dispute.~ + done_Emily_here 
-+~!IsValidForPartyDialogue("X3Emi")GlobalGT("X3EGVJTalkResult","GLOBAL",0)~+ ~Yes, we've spoken to Myorn and Derrick about their dispute.~ + done_no_Emily
++~IsValidForPartyDialogue("X3Emi")GlobalGT("X3EGVJTalkResult","GLOBAL",0)~+ ~Yes, we've spoken to Myron and Derrick about their dispute.~ + done_Emily_here 
++~!IsValidForPartyDialogue("X3Emi")GlobalGT("X3EGVJTalkResult","GLOBAL",0)~+ ~Yes, we've spoken to Myron and Derrick about their dispute.~ + done_no_Emily
 ++ ~Not yet.~ + quest_not_done 
 
 CHAIN X3EGVJ quest_not_done 

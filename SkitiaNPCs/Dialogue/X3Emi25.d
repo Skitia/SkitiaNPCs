@@ -142,11 +142,11 @@ Wait(2)
 MoveBetweenAreas("AR4500",[1570.1388],0)~ EXIT
 
 CHAIN IF ~InPartyAllowDead("Hexxat")~ THEN X3Emi25P pHexxat 
-~I know you might want my aid. But I can't just discard my morales. If you cease traveling with Hexxat, then I will stand by your side.~
+~I know you might want my aid. But I can't just discard my morals. If you cease traveling with Hexxat, then I will stand by your side.~
 EXIT 
 
 CHAIN IF ~InPartyAllowDead("Dorn")~ THEN X3Emi25P pDorn
-~I know you might want my aid. But I can't just discard my morales. If you cease traveling with Dorn, then I will stand by your side.~
+~I know you might want my aid. But I can't just discard my morals. If you cease traveling with Dorn, then I will stand by your side.~
 EXIT 
 
 // Rep doesn't matter here in ToB. Emily will rejoin even at -90 approval. She'll stomach a -1 rep and endure the rest of the way.

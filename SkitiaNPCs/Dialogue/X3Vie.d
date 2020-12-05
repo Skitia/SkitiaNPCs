@@ -1,4 +1,4 @@
-/* Note: START.d iniiates the Five's NPC dialogues, but no one elses. */
+/* Note: START.d initiates the Five's NPC dialogues, but no one else's. */
 
 
 
@@ -152,7 +152,7 @@ CHAIN X3Vie v_reason
 EXIT 
 
 CHAIN X3Vie reject 
-~Hrmph, suit yourself. I will be in the Copper Coronet then. The slums have less city guards, even if their is no class at all. Humilating, but it will do.~
+~Hrmph, suit yourself. I will be in the Copper Coronet then. The slums have less city guards, even if their is no class at all. Humiliating, but it will do.~
  DO ~EscapeAreaMove("AR0406",446,1515,NE)~ EXIT 
  
 CHAIN IF ~Global("X3VieMet","GLOBAL",1)~ THEN X3Vie meet3 

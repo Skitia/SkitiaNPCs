@@ -7,18 +7,18 @@ DO ~AddJournalEntry(@5,QUEST_DONE)EscapeArea()~
 EXIT 
 
 CHAIN IF ~IsValidForPartyDialogue("X3Kal")Global("X3KalQuest","GLOBAL",3)~ THEN X3KJIL quest_start
-~Kayle. Not a place I expected to see you. You're not in trouble, are you?~
+~Kale. Not a place I expected to see you. You're not in trouble, are you?~
 DO ~SetGlobal("X3KalQuest","GLOBAL",4)~
 == X3KalJ ~Heh, not yet at least. Just traveling with my friend <CHARNAME> here. Look...I'll cut to the chase and all. Anyone here look into how my fathere died? In his journal, he mentions he knew you, and some other people down in the docks.~
 == X3KJIL ~You always spoke so negatively of your father, Percy, so I didn't mention him, but I knew him. He could cause trouble himself, but yes, he was found dead in these docks from what I learned.~
 == X3KJIL ~Still, there's little I can say or investigate. Sergeant Bryce closed the case and ruled it a suicide. That doesn't sound right to me, but he's equal to me in rank and I can't reopen it without cause.~
 END 
-++ ~Bryce? He was mentioned in Kayle's father's journal. Supposedly he has a grudge against halflings.~ + grudge 
+++ ~Bryce? He was mentioned in Kale's father's journal. Supposedly he has a grudge against halflings.~ + grudge 
 ++ ~What if we looked into it, then?~ + can_say
 ++ ~Well if there's nothing to be learned, then...~ + to_learn 
 
 CHAIN IF ~!IsValidForPartyDialogue("X3Kal")Global("X3KalQuest","GLOBAL",3)~ THEN X3KJIL quest_not_start
-~Are you lost? Citizens don't usually wander into the garrision.~
+~Are you lost? Citizens don't usually wander into the garrison.~
 END 
 ++ ~Are you Jillian? I am <CHARNAME>. You are mentioned in Kale's father's journal.~ + father_journal
 ++ ~Sorry, I think I am in the wrong place.~ EXIT 
@@ -49,7 +49,7 @@ END
 ++ ~I was just leaving. Excuse me.~ EXIT 
 
 CHAIN X3KJIL grudge 
-~I cannot speak disrespectfully of a fellowguardsman...but, I can't deny it is true. It's possible he...didn't do his utmost in the investigation because of it.~
+~I cannot speak disrespectfully of a fellow guardsman...but, I can't deny it is true. It's possible he...didn't do his utmost in the investigation because of it.~
 END 
 ++ ~Then we can't trust his verdict. Is there any way we can look into it ourselves?~ + can_say
 ++ ~There's nothing to be done, then. Thank you for your time.~ + to_learn
@@ -64,7 +64,7 @@ CHAIN X3KJIL can_say
 ~If you want to help, I'll take it. Let me share what I can with you.~
 DO ~SetGlobal("X3KalQuest","GLOBAL",5)~
 == X3KJIL ~Percy was in trouble with a few individuals. I'll admit things weren't all sunny with Dallie, and there were rumors he was having an affair with the local alchemist, Flora. Days before he got put in a cell awhile as well for getting in a fight with a beggar named Martin, who curiously was the first to find his body.~
-== X3KJIL ~Not the picture of a man who is good at making friends, I fear, but Percy could stil be kind and caring, despite his occasional bouts.~
+== X3KJIL ~Not the picture of a man who is good at making friends, I fear, but Percy could still be kind and caring, despite his occasional bouts.~
 == X3KJIL ~I don't  know much about Chester, but he's the only cheese vendor in the docks, and Percy was found dead holding a bag of cheese. I managed to get a few samples of it, it smells awfully divine I'll say, but I know better than to eat evidence. Take it. Some of the suspects I named, or Siria, the local loremaster, could maybe get you information on this.~
 DO ~CreateItem("X3KCHEES",0,0,0)GiveItem("X3KCHEES",Player1)~
 END 
@@ -86,7 +86,7 @@ END
 ++ ~Thanks. We'll take it from here.~ + con1_exit
 
 CHAIN X3RebJ temple_talk
-~Siria is my mother. She's in the temple of Oghma if you forgot. She's done this sort of service for the guards before, and she always charges a reasonable faire for her help. I'm not familiar with cheeses, but even if she isn't either, she's great at figuring it out quickly.~
+~Siria is my mother. She's in the temple of Oghma if you forgot. She's done this sort of service for the guards before, and she always charges a reasonable fare for her help. I'm not familiar with cheeses, but even if she isn't either, she's great at figuring it out quickly.~
 EXTERN X3KJIL mother_talk
 
 CHAIN X3KJIL mother_talk
@@ -156,7 +156,7 @@ END
 ++ ~Not yet.~ EXIT 
 
 CHAIN X3KJIL suspects_locations
-~Chester and Flora are merchants, and they're likely at the open market, to the southwest of the docks. Martin the beggar often hovers there, near the well. And Dallie works the lightouse, to the southeast of the docks. Good luck.~
+~Chester and Flora are merchants, and they're likely at the open market, to the southwest of the docks. Martin the beggar often hovers there, near the well. And Dallie works the lighthouse, to the southeast of the docks. Good luck.~
 EXIT 
 
 CHAIN X3KJIL cheese_poison 
@@ -319,7 +319,7 @@ CHAIN IF ~GlobalLT("X3KalQuest","GLOBAL",6)Global("X3KalQuestAccuse","GLOBAL",1)
 == X3KF ~What? I would never. I *loved* Percy. Jillian, you have to believe me.~
 == X3KJIL ~I have to be impartial. With the evidence presented to me, and the killing product being one of your poisons, it points to you, Flora.~
 == X3KF ~I can't believe this. You are taking away an innocent. But I know it is futile to fight and scream and argue. Maybe that Bryce has gotten to you, I don't know.~
-== X3KJIL ~Ma'am, it's time to go. <CHARNAME>, come see me in a day back at the garrision. I'll have an update from our investigation once she's taken in.~
+== X3KJIL ~Ma'am, it's time to go. <CHARNAME>, come see me in a day back at the garrison. I'll have an update from our investigation once she's taken in.~
 DO ~ActionOverride("X3KF",EscapeArea())SetGlobal("X3KalQuest","GLOBAL",6)SetGlobalTimer("X3KaleQuestAccuseTimer","GLOBAL",ONE_DAY)EscapeAreaMove("AR0332",273,369,SW)AddJournalEntry(@10,QUEST)~
 EXIT 
 
@@ -365,7 +365,7 @@ CHAIN IF ~GlobalLT("X3KalQuest","GLOBAL",6)Global("X3KalQuestAccuse","GLOBAL",3)
 == X3KD ~Percy? Jillian, you've got it all wrong. You know me. You know I'd never hurt him.~
 == X3KJIL ~I have to be impartial. With the evidence presented to me, and with him getting sick from cheese you had access to, it stands that you are the only possible culprit, one who has a motive.~
 == X3KD ~I can't believe this. Yes, I suspected his affair, but I wouldn't murder him for it. I would have sooner left him, or forced him to choose me or her, but not with blood.~
-== X3KJIL ~Ma'am, it's time to go. <CHARNAME>, come see me in a day back at the garrision. I'll have an update from our investigation once she's taken in.~
+== X3KJIL ~Ma'am, it's time to go. <CHARNAME>, come see me in a day back at the garrison. I'll have an update from our investigation once she's taken in.~
 DO ~ActionOverride("X3KD",EscapeArea())SetGlobal("X3KalQuest","GLOBAL",6)SetGlobalTimer("X3KaleQuestAccuseTimer","GLOBAL",ONE_DAY)EscapeAreaMove("AR0332",273,369,SW)AddJournalEntry(@8,QUEST)~
 EXIT 
 
@@ -373,9 +373,9 @@ EXIT
 CHAIN IF ~GlobalLT("X3KalQuest","GLOBAL",6)Global("X3KalQuestAccuse","GLOBAL",4)~ THEN X3KJIL accused_flora 
 ~Mr. Martin? I am sorry for this, but we are taking you in for the murder of Percy.~
 == X3KM ~What? Percy was a git, but I would never! This is just an excuse to get rid of me, it is! Beggar-hating haters!~
-== X3KJIL ~You were the first at the scene, and you took his coin. You are already guitly of crime.~
+== X3KJIL ~You were the first at the scene, and you took his coin. You are already guilty of crime.~
 == X3KM ~Yeah? Well take me then. But know you're taking away only a man who stole because he was hungry, not because he killed a git.~
-== X3KJIL ~Sir, it's time to go. <CHARNAME>, come see me in a day back at the garrision. I'll have an update from our investigation once he's taken in.~
+== X3KJIL ~Sir, it's time to go. <CHARNAME>, come see me in a day back at the garrison. I'll have an update from our investigation once he's taken in.~
 DO ~ActionOverride("X3KM",EscapeArea())SetGlobal("X3KalQuest","GLOBAL",6)SetGlobalTimer("X3KaleQuestAccuseTimer","GLOBAL",ONE_DAY)EscapeAreaMove("AR0332",273,369,SW)AddJournalEntry(@9,QUEST)~
 EXIT 
 
@@ -423,7 +423,7 @@ CHAIN X3KJIL wa_1
 EXTERN X3KJIL wa_3 
 
 CHAIN X3KJIL wa_2 
-~No. They're closing the case entirely, for good, and I'm forbidden from doing any digging with outside help or otherwise. Given how embarrasing this was, I'm lucky I still have my job.~
+~No. They're closing the case entirely, for good, and I'm forbidden from doing any digging with outside help or otherwise. Given how embarrassing this was, I'm lucky I still have my job.~
 EXTERN X3KJIL wa_3 
 
 CHAIN X3KJIL wa_3 
@@ -526,6 +526,6 @@ DO ~ActionOverride("X3KC",EscapeArea())EscapeArea()AddJournalEntry(@18,QUEST_DON
 EXIT 
 
 CHAIN X3KJIL qd_kale_banter 
-~We'l see it taken care of from here, Kale.~
-== X3KalJ ~Yeah. I trust you, Jillian. Make sure that man doesn't get let out anytime soon. It will be nice to see justice for some of the suffering our peopel go through for a change.~
+~We'll see it taken care of from here, Kale.~
+== X3KalJ ~Yeah. I trust you, Jillian. Make sure that man doesn't get let out anytime soon. It will be nice to see justice for some of the suffering our people go through for a change.~
 EXTERN X3KJIL qd_5 

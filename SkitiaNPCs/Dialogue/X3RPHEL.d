@@ -130,7 +130,7 @@ END
 ++ ~Enough of this. Your blood will spill now.~ + fight  
 
 CHAIN X3RPHEL coin 
-~Coin? No amount of coin will suffice! That slave embarrased me in front of my men and defied her own husband. She will never have him back, he would not exist without me.~
+~Coin? No amount of coin will suffice! That slave embarrassed me in front of my men and defied her own husband. She will never have him back, he would not exist without me.~
 END 
 ++ ~Do you listen to this, Raban? He does not care for you.~ + ignore
 ++ ~So you will not even compromise? You admit in front of your own child all of your actions are out of spite.~ + ignore
@@ -186,7 +186,7 @@ EXTEND_TOP CALAHA 0
 END 
 
 CHAIN CALAHA Raban2 
-~The poor lad was n'ver seen as anymore than labor by the father, I tell ye. I can be doing that, but ye'll need to give me a hundred coins. I'd do it for free, but I can't when I have no money of me own.~
+~The poor lad was never seen as anymore than labor by the father, I tell ye. I can be doing that, but ye'll need to give me a hundred coins. I'd do it for free, but I can't when I have no money of me own.~
 END 
 +~PartyGoldGT(99)~+ ~Here you go.~ + Raban3
 ++ ~I cannot pay that amount.~ EXTERN CALAHA 4
@@ -213,7 +213,7 @@ IF ~!IsValidForPartyDialogue("X3Reb")~ DO ~EscapeArea()~ EXIT
 CHAIN X3RebJ Goodbye 
 ~I'm sorry we didn't get a chance to bond or re-connect, Raban. I wish we had more time.~
 == X3RKID ~You aren't coming with me, mother?~
-== X3RebJ ~Not yet. But when I'm done helping <CHARNAME>, I am going to join you, and we'll never be seperated again.~
+== X3RebJ ~Not yet. But when I'm done helping <CHARNAME>, I am going to join you, and we'll never be separated again.~
 == X3RKID ~But...you promised.~
 == X3RebJ ~And I meant it. But <CHARNAME> has lost something precious too...they need my help.~
 == X3RKID ~I...I understand.~

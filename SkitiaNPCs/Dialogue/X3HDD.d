@@ -33,7 +33,7 @@ DisplayStringNoNameDlg(Player1,@216)~
 EXTERN X3HDD intimidate
 
 CHAIN X3HelJ regret 
-~Don't let this dwarf get to ye. Pride and arrogance makes him think he can win. He will be for a suprise.~
+~Don't let this dwarf get to ye. Pride and arrogance makes him think he can win. He will be for a surprise.~
 DO ~IncrementGlobal("X3HelApp","GLOBAL",-6)
 DisplayStringNoNameDlg(Player1,@206)~
 EXTERN X3HDD give_up

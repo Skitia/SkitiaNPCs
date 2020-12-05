@@ -13,7 +13,7 @@ IF ~!Global("X3RebQuest","GLOBAL",15)~ EXTERN X3Reb25J SonNotSaved
 
 CHAIN X3Reb25J SonSaved 
 ~You...you are the slaver that served Phelgrim. You escaped from us.~
-== X3RM25 ~*Hic*. Yeah. I did. I *hic* didn't want to die. But now it don't matter. Can't magick my way out of this place. Going to die one way or another.~
+== X3RM25 ~*Hic*. Yeah. I did. I *hic* didn't want to die. But now it don't matter. Can't magic my way out of this place. Going to die one way or another.~
 == X3Reb25J ~It is justice, even if less than you deserve. Maybe now you can understand how a slave feels to be stuck and trapped in a place that isn't home.~
 END 
 ++ ~That isn't enough. He should die for what he did.~ EXTERN X3RM25 SS.1

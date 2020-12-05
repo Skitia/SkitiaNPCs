@@ -1,6 +1,6 @@
 BEGIN X3VSAMIR 
 BEGIN X3VDROW 
-// Contains all underdark quest stuff for Vienxay
+// Contains all Underdark quest stuff for Vienxay
 CHAIN IF ~!Global("PlayerLooksLikeDrow","GLOBAL",1)PartyHasItem("X3VTOME1")~ THEN X3VSAMIR beg 
 ~You...You have the book. I beg you, take it to the surface. Let it see the light, and then return it to the good elven people, my friends. Sules'terim, if you can find him, he will know what to do.~
 EXIT 
@@ -81,14 +81,14 @@ END
 +~CheckStatLT(Player1,17,STR)~+ ~By the threat of death by my hand.~ + strength_fail // Intimidate attempt with insufficient strength. 
 +~!Class(Player1,MAGE_ALL)~+ ~By the authority of coin.~ + not_mage 
 +~Class(Player1,MAGE_ALL)~+ ~By the authority of coin.~ + price
-++ ~Nevermind.~ + nevermind 
+++ ~Never mind.~ + nevermind 
 
 CHAIN X3VDROW nevermind 
 ~You are strange and wasting my time. Be off before my craving of battle turns to you.~ 
 EXIT 
 
 CHAIN X3VDROW house 
-~Hrm, very well, but do not blame me if House Despana is dissapointed in its contents. Take it and leave me be, I am bored and will be finding something to kill.~
+~Hrm, very well, but do not blame me if House Despana is disappointed in its contents. Take it and leave me be, I am bored and will be finding something to kill.~
 DO ~GiveItem("X3VTOME1",Player1)ActionOverride("X3VDROW2",EscapeArea())ActionOverride("X3VDROW3",EscapeArea())EscapeArea()~ 
 EXIT 
 
@@ -98,7 +98,7 @@ DO ~ActionOverride("X3VDROW2",Enemy())ActionOverride("X3VDROW3",Enemy())Enemy()~
 EXIT 
 
 CHAIN X3VDROW strength 
-~Bah, if you want it so much ,it is yours. It has yielded naught but dissapointment and you will find your threat only gives you filthy surface tongue dirt.~
+~Bah, if you want it so much ,it is yours. It has yielded naught but disappointment and you will find your threat only gives you filthy surface tongue dirt.~
 DO ~ActionOverride("X3VDROW2",EscapeArea())ActionOverride("X3VDROW3",EscapeArea())GiveItem("X3VTOME1",Player1)EscapeArea()~ EXIT 
 
 CHAIN X3VDROW strength_fail 
@@ -110,13 +110,13 @@ CHAIN X3VDROW not_mage
 ~And what use would you have for it? You are no mage.~
 END 
 +~OR(8)InParty("Imoen")InParty("Nalia")InParty("Jan")InParty("X3Vie")InParty("Edwin")InParty("NEERA")InParty("X3Reb")InParty("Aerie")~+ ~I am not, but one of my companions is.~ + price
-+~CheckStatGT(Player1,13,CHR)!RandomNum(3,1)~+ ~Curiousity. I've always wanted a trinket from the surface.~ + price // Requires 13+ charisma and succesful roll
-+~CheckStatGT(Player1,13,CHR)RandomNum(3,1)~+ ~Curiousity. I've always wanted a trinket from the surface.~ + house_fail 
-+~CheckStatLT(Player1,14,CHR)~+ ~Curiousity. I've always wanted a trinket from the surface.~ + house_fail
++~CheckStatGT(Player1,13,CHR)!RandomNum(3,1)~+ ~Curiosity. I've always wanted a trinket from the surface.~ + price // Requires 13+ charisma and succesful roll
++~CheckStatGT(Player1,13,CHR)RandomNum(3,1)~+ ~Curiosity. I've always wanted a trinket from the surface.~ + house_fail 
++~CheckStatLT(Player1,14,CHR)~+ ~Curiosity. I've always wanted a trinket from the surface.~ + house_fail
 +~CheckStatGT(Player1,13,STR)!RandomNum(3,1)~+ ~None of your business, and you'll find it best not to pry. I'm offering gold, and that should be good enough.~ + price // Will provoke a fight, unless with 16+ strength, 66% chance.
 +~CheckStatGT(Player1,13,STR)RandomNum(3,1)~+ ~None of your business, and you'll find it best not to pry. I'm offering gold, and that should be good enough.~ + strength_fail 
 +~CheckStatLT(Player1,14,STR)~+ ~None of your business, and you'll find it best not to pry. I'm offering gold, and that should be good enough.~ + strength_fail // Auto fail 
-++ ~Nevermind.~ + nevermind 
+++ ~Never mind.~ + nevermind 
 
 CHAIN X3VDROW price 
 ~And what price do you offer?~

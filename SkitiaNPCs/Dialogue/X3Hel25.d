@@ -28,7 +28,7 @@ CHAIN X3Hel25 b3a
 EXTERN X3Hel25 b4
 
 CHAIN X3Hel25 b3b 
-~Should I be bothered? After we seperated, my heart was thinking there wouldn't be anything that I could wrest myself into that would have the danger, thrill, and high risk that yer adventures and troubles always provided.~
+~Should I be bothered? After we separated, my heart was thinking there wouldn't be anything that I could wrest myself into that would have the danger, thrill, and high risk that yer adventures and troubles always provided.~
 == X3Hel25 ~If this be what is needed of me, well it also be what I want. And if they align, then I see no reason to be disturbed or bothered for a call into battle.~ 
 EXTERN X3Hel25 b4
 

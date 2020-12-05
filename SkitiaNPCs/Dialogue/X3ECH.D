@@ -1,7 +1,7 @@
 
 BEGIN X3ECH 
 BEGIN X3EGOD 
-// The Hornkeepers should leave after the heir is selection, so they need no comment afterwards.
+// The Hornkeeper family should leave after the heir is selection, so they need no comment afterwards.
 // They will also not be present for the duel, believing it "uncouth".
 
 CHAIN IF ~GlobalGT("Chapter","GLOBAL",%bg2_chapter_5%)~ THEN X3ECH heir_selection 
@@ -75,13 +75,13 @@ EXTERN X3ECH support_requires
 
 CHAIN X3EmiJ my_argument
 ~But...you haven't even heard my argument, lady Ho-~
-== X3ECH ~And I will not. You will not have my spport. At least, not yet.~
+== X3ECH ~And I will not. You will not have my support. At least, not yet.~
 EXTERN X3ECH support_requires
 
 CHAIN X3ECH support_requires 
 ~House Hornkeeper values prestige above all the three noble tenants: Might, Grace, and Prestige. Your brother shows some promise, for he has gained the respect of some of the nobles while you have been away playing adventurer, Emily.~
-== X3EmiJ ~But the Queen herself was an adventurer, doing good in tumoltous times, just like I am now.~
-== X3ECH ~And that is why you also have potential. But if you wish me to support you over your brother, show me that you have the prestige. Garner yourself a reputation amongst the people here with your friends. Show them what we are like in Tethyr, and the standard we hold ourself to.~
+== X3EmiJ ~But the Queen herself was an adventurer, doing good in tumultuous times, just like I am now.~
+== X3ECH ~And that is why you also have potential. But if you wish me to support you over your brother, show me that you have the prestige. Garner yourself a reputation among the people here with your friends. Show them what we are like in Tethyr, and the standard we hold ourselves to.~
 == X3ECH ~Then, and only then, when you return to me, will I consider supporting you over Thomas.~
 END 
 ++ ~How will we do what you ask?~ + ask 
@@ -98,7 +98,7 @@ END
 CHAIN X3ECH not_count 
 ~They do not. You are her companions. Your view would be biased.~
 END 
-++ ~We will return then, when we have gained more prestige amongst the populace.~ + return_later
+++ ~We will return then, when we have gained more prestige among the populace.~ + return_later
 ++ ~This doesn't sound so terrible, Emily.~ EXTERN X3EmiJ so_terrible 
 ++ ~And if Emily doesn't do this? Will you be supporting Thomas instead?~ + thomas_instead 
 
@@ -129,7 +129,7 @@ CHAIN X3ECH my_support
 == X3EmiJ ~Wait...really? This isn't some sort of joke? I didn't even give my r-~
 == X3ECH ~I do not need words. I have heard of your deeds around the city, what you have been trying with your companions. It reminds me of the Queen-Monarch before she held the throne. That is the character we need more if in Tethyr.~
 == X3EmiJ ~I...well, I'm at a loss of words of what to say, besides...thank you. Thank you so much, Lady Hornkeeper.~
-== X3ECH ~It is nothing less than you deserve. We will see if it is enough to grant you the seat of Heirdom. It will be a difficult responsibility, and you will be expected to birth an heir of your own. Have you given thoughts to suitors?~
+== X3ECH ~It is nothing less than you deserve. We will see if it is enough to grant you the seat of heirdom. It will be a difficult responsibility, and you will be expected to birth an heir of your own. Have you given thoughts to suitors?~
 END 
 IF ~OR(2)Global("X3EmiRomanceActive","GLOBAL",1)Global("X3EmiRomanceActive","GLOBAL",2)~ EXTERN X3EmiJ romance_active // Romance at 1 or 2
 IF ~!Global("X3EmiRomanceActive","GLOBAL",1)!Global("X3EmiRomanceActive","GLOBAL",2)~ EXTERN X3EmiJ romance_not_active // Romance not at 1 or 2
@@ -184,7 +184,7 @@ IF ~OR(2)Global("X3EmiRomanceActive","GLOBAL",1)Global("X3EmiRomanceActive","GLO
 IF ~!Global("X3EmiRomanceActive","GLOBAL",1)!Global("X3EmiRomanceActive","GLOBAL",2)~ EXTERN X3EmiJ romance_not_active_Godfrey // Romance not at 1 or 2
 
 CHAIN X3EmiJ romance_active_Godfrey 
-~It's just...there might be...someone else. Anyway, I'm not even heir yet. I think anything your mother is discussing should wait, shoudn't it?~
+~It's just...there might be...someone else. Anyway, I'm not even heir yet. I think anything your mother is discussing should wait, shouldn't it?~
 EXTERN X3EGOD Godfrey_Emily_end_banter
 
 CHAIN X3EGOD Godfrey_Emily_end_banter

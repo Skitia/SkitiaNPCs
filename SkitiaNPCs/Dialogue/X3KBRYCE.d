@@ -1,24 +1,24 @@
 BEGIN X3KBRYCE
 
 CHAIN IF ~!AreaCheck("AR0527")Global("X3PreTalk","LOCALS",1)!Race(Player1,HALFLING)!IsValidForPartyDialogue("X3Kal")!IsValidForPartyDialogue("Mazzy")~ THEN X3KBRYCE default 
-~What are you doing here? Citizens can't just wander around a garrision.~
+~What are you doing here? Citizens can't just wander around a garrison.~
 END 
 ++ ~We're here to speak with Jillian.~ + jillian_talk
 ++ ~What do you do here?~ + do_here
 ++ ~Nothing, never mind me.~ EXIT 
 
 CHAIN IF ~!AreaCheck("AR0527")Global("X3PreTalk","LOCALS",1)OR(3)Race(LastTalkedToBy(),HALFLING)IsValidForPartyDialogue("X3Kal")IsValidForPartyDialogue("Mazzy")~ THEN X3KBRYCE halfling
-~Don't even think about it, halfling. Trying to pickpocket a guard in a garrision? Your people are getting more foolish by the day.~
+~Don't even think about it, halfling. Trying to pickpocket a guard in a garrison? Your people are getting more foolish by the day.~
 END 
 IF ~IsValidForPartyDialogue("Mazzy")~ EXTERN MAZZYJ Mazzy_pick
 IF ~IsValidForPartyDialogue("X3Kal")!IsValidForPartyDialogue("Mazzy")~ EXTERN X3KalJ Kale_pick
 ++ ~We're just here to speak with Jillian.~ + jillian_talk
-++ ~Why would I pickpocket a guard in his own garrision?~ + fool_me 
+++ ~Why would I pickpocket a guard in his own garrison?~ + fool_me 
 +~!Class(Player1,THIEF_ALL)!Class(Player1,BARD_ALL)~+ ~I'm no thief. Throw your accusations elsewhere.~ + fool_me 
 +~OR(2)Class(Player1,THIEF_ALL)Class(Player1,BARD_ALL)~+ ~If I did pickpocket you, you wouldn't know about it.~ + fool_me 
 
 CHAIN X3KalJ Kale_pick 
-~Why the bloody hell would I pockpocket you in your own garrison?~
+~Why the bloody hell would I pickpocket you in your own garrison?~
 EXTERN X3KBRYCE fool_me  
 
 CHAIN MAZZYJ Mazzy_pick 
@@ -47,7 +47,7 @@ CHAIN X3KBRYCE nevermind_me
 EXIT 
 
 CHAIN IF ~AreaCheck("AR0527")~ THEN X3KBRYCE final_meeting 
-~I know why you are here, citizen. You should have never interfered with my investigation. You are trespassing, and therefore are in vioation of the law. Your sentence is death.~
+~I know why you are here, citizen. You should have never interfered with my investigation. You are trespassing, and therefore are in violation of the law. Your sentence is death.~
 END 
 ++ ~Bryce?! Are you in league with Chester?~ + fm_1 
 ++ ~This man evaded the law. He is the real criminal, Bryce.~ + fm_2 
@@ -73,7 +73,7 @@ DO ~Enemy()AddJournalEntry(@15,QUEST)~
 EXIT 
 
 CHAIN MAZZYJ fm_reaction_mazzy 
-~Your hatred of my people has clouded your judgement. How can you serve the city if you do not serve all of the people within?~
+~Your hatred of my people has clouded your judgment. How can you serve the city if you do not serve all of the people within?~
 == X3KBRYCE ~I do serve all of the people within. Your kind are *not* people. You are a blight, a blight that is trying to stop us from working on cleansing you out of this place.~
 EXTERN X3KBRYCE fm_3 
 

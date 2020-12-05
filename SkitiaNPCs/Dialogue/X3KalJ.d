@@ -15,7 +15,7 @@ I_C_T C6SAFA 0 X3KalC6SAFA-0
 END 
 
 I_C_T C6CORAN 1 X3KalC6CORAN-1
-== X3KalJ IF ~IsValidForPartyDialogue("X3Kal")Global("X3KalPartyBG1","GLOBAL",1)~ THEN ~This fellow again? Suprised he's still alive. No offense, mate!~
+== X3KalJ IF ~IsValidForPartyDialogue("X3Kal")Global("X3KalPartyBG1","GLOBAL",1)~ THEN ~This fellow again? Surprised he's still alive. No offense, mate!~
 END 
 
 I_C_T C6CORAN 20 X3KalC6CORAN-20
@@ -318,7 +318,7 @@ END
 
 
 I_C_T SAHKNG01 1 X3KalSAHKNG01-1
-== X3KalJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~Bloody hells, I gotta pinch my nose. They smell worse than rotten skunk, eugh.~
+== X3KalJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~Bloody hells, I gotta pinch my nose. They smell worse than rotten skunk, ugh.~
 END
 
 I_C_T SAHPR1 55 X3KalSAHPR1-55
@@ -340,7 +340,7 @@ I_C_T PPSAEM2 8 X3KalPPSAEM2-8
 END 
 
 I_C_T PPSAEM2 19 X3KalPPSAEM2-19
-== X3KalJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~I don't know about following this guy. Besides, how many people have braved the underdark and lived to tell about it? I say it's a story for us in the making! Can't be that bad, eh?~
+== X3KalJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~I don't know about following this guy. Besides, how many people have braved the Underdark and lived to tell about it? I say it's a story for us in the making! Can't be that bad, eh?~
 END
 
 I_C_T JANJ 92 X3KalJANJ92
@@ -625,7 +625,7 @@ I_C_T DELCIA 16 X3KalDELCIA16
 END  
 
 I_C_T KPGRD01 11 X3KalKPGRD01 
-== X3KalJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~Well decided. Good think they let you in charge here, heh, you dont't want to know what I was thinking of having done.~
+== X3KalJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~Well decided. Good think they let you in charge here, heh, you don't want to know what I was thinking of having done.~
 DO ~IncrementGlobal("X3KalApp","GLOBAL",3)
 DisplayStringNoNameDlg(Player1,@313)~ 
 END
@@ -706,7 +706,7 @@ DisplayStringNoNameDlg(Player1,@103)~
 END
 
 I_C_T TIRDIR 12 X3KalTIRDIR12L
-== X3KalJ IF ~IsValidForPartyDialogue("X3Kal")Alignment("X3Kal",LAWFUL_NEUTRAL)~ THEN ~The garrision is his best bet. Guards aren't that useless.~
+== X3KalJ IF ~IsValidForPartyDialogue("X3Kal")Alignment("X3Kal",LAWFUL_NEUTRAL)~ THEN ~The garrison is his best bet. Guards aren't that useless.~
 DO ~IncrementGlobal("X3KalApp","GLOBAL",2)
 DisplayStringNoNameDlg(Player1,@313)~ 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~You and I have not met the same guards, then, halfling.~
@@ -974,7 +974,7 @@ DO ~SetGlobal("Prophet4X3Kal","LOCALS",1)SetGlobal("TalkedToCult","GLOBAL",1)~
 EXIT 
 
 I_C_T JANJ 128 X3KalJANJ128 
-== X3KalJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~No suprise it never got past infatuation, mate. Can't roll a well fed halfling. A high crime, that is, heh.~
+== X3KalJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~No surprise it never got past infatuation, mate. Can't roll a well fed halfling. A high crime, that is, heh.~
 END 
 
 I_C_T PWAUK2 3 X3KalJPWAUK2 
@@ -1222,7 +1222,7 @@ DO ~SetGlobal("X3KalMad2","LOCALS",1)~
 END 
 IF ~Global("PhaereInnuendo","GLOBAL",2)~ EXTERN X3KalJ X3KalPhaere1
 IF ~!Global("PhaereInnuendo","GLOBAL",2)~ EXTERN X3KalJ X3KalPhaere2
-//This doesn't break Kale's romance, and he only slightly dissaproves.
+//This doesn't break Kale's romance, and he only slightly disapproves.
 CHAIN X3KalJ X3KalPhaere1
 ~I'd say I'm mad, but I think I'm more jealous than mad. Can't deny she was pretty.~
 = ~Just don't talk to me about it, and we'll be just all right.~
@@ -1231,7 +1231,7 @@ EXIT
 
 CHAIN X3KalJ X3KalPhaere2
 ~Huh, either you have no stamina mate, or...nothing happened.~
-= ~Can't say I would have had the same resists to her charms, but kind of glad nothing came out of it anyway. Onwards, eh?~
+= ~Can't say I would have had the same resists to her charms, but kind of glad nothing came out of it anyway. Onward, eh?~
 DO ~IncrementGlobal("X3KalApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@316)~ 
 EXIT
 
@@ -1243,7 +1243,7 @@ END
 CHAIN BODHIAMB X3KalKidnap
 ~You follow in the hopes of retrieving something dear to you. I say that the longer you keep this up, the more you will lose.~
 = ~Consider little Kale here. I understand you have gotten close. I can't imagine what it will feel like when something befalls one of you.~
-== X3KalJ ~Heh. <CHARNAME> ain't failling. Not from the likes of you at least.~
+== X3KalJ ~Heh. <CHARNAME> ain't falling. Not from the likes of you at least.~
 == BODHIAMB ~It is not the loss of <PRO_HIMHER> you should be afraid of. <CHARNAME>, follow me further and you will lose more than you can imagine. Beginning now!~
 END
 IF ~~ DO ~ClearAllActions()
@@ -1263,7 +1263,7 @@ IF ~Global("X3KalVampire","GLOBAL",2)~ + 23
 END
 
 EXTEND_BOTTOM C6BODHI 23
-+ ~Global("X3KalVampire","GLOBAL",2)~ + ~You have taken too smuch already! Return Imoen's soul, and Kale!~ EXTERN C6BODHI X3KalAb
++ ~Global("X3KalVampire","GLOBAL",2)~ + ~You have taken too much already! Return Imoen's soul, and Kale!~ EXTERN C6BODHI X3KalAb
 + ~Global("X3KalVampire","GLOBAL",2)~ + ~And you have delivered on that promise. Return Kale and perhaps I will be merciful.~ EXTERN C6BODHI X3KalAb
 + ~Global("X3KalVampire","GLOBAL",2)~ + ~I would have hunted you for your theft of Kale alone. I will not lose him!~ EXTERN C6BODHI X3KalAb
 + ~Global("X3KalVampire","GLOBAL",2)~ + ~You place too much confidence in sentiment. The theft of Kale will not save you.~ EXTERN C6BODHI X3KalAbConf
@@ -1388,7 +1388,7 @@ END
 //Chapter 3 Docks Talk 
 
 CHAIN IF ~Global("X3KalDockTalk","LOCALS",2)~ THEN X3KalJ DockTalk 
-~Damn, this place still smells so fishy everytime we visit. And not the good kind either. Makes me miss good ol' Gullykin cooking.~
+~Damn, this place still smells so fishy every time we visit. And not the good kind either. Makes me miss good ol' Gullykin cooking.~
 DO ~IncrementGlobal("X3KalDockTalk","LOCALS",1)SetGlobal("X3KalAppChange","GLOBAL",6)~
 END 
 ++ ~Fish isn't so bad, Kale.~ + ST.1 
@@ -1419,7 +1419,7 @@ CHAIN X3KalJ ST.5
 EXIT
 
 CHAIN X3KalJ ST.6
-~Grand. Heh, I know it isn't likely to ever happen though. Not a bad thing persay, we'd both gain some weight quick.~
+~Grand. Heh, I know it isn't likely to ever happen though. Not a bad thing per say, we'd both gain some weight quick.~
 EXIT 
 
 CHAIN X3KalJ ST.7
@@ -1617,7 +1617,7 @@ END
 
 
 CHAIN X3KalJ T2.5 
-~Anyone ever tell you could be a bit mean, <CHARNAME>? That was a heartsinker! Now I'll be wondering who is ahead of me all day.~
+~Anyone ever tell you could be a bit mean, <CHARNAME>? That was a heart sinker! Now I'll be wondering who is ahead of me all day.~
 EXIT 
 
 CHAIN X3KalJ T2.3 
@@ -1648,7 +1648,7 @@ CHAIN X3KalJ T2.X
 EXIT 
 
 CHAIN X3KalJ T2.9 
-~Wait, what? Blimmey, is it warm in here, or is it just me? You know, I'm going to find some water to pour over my head or something, pardon me.~
+~Wait, what? Blimey, is it warm in here, or is it just me? You know, I'm going to find some water to pour over my head or something, pardon me.~
 EXIT
 
 CHAIN X3KalJ T2.10 
@@ -1727,7 +1727,7 @@ CHAIN X3KalJ T3.5
 EXTERN X3KalJ T3.6
 
 CHAIN X3KalJ T3.6 
-~So many see us as thieves or homebodies. And eh, the latter can be true in Gullykin. We love our homes. But in our world, everything is open and free and shared. I don't know why everyone is so obessed over ownership.~
+~So many see us as thieves or homebodies. And eh, the latter can be true in Gullykin. We love our homes. But in our world, everything is open and free and shared. I don't know why everyone is so obsessed over ownership.~
 == X3KalJ ~Not that I take things, I know better. But in the big cities, like Althkata, I've seen some unfair treatment over it. It gets under my feathers, so to speak.~
 END 
 +~Race(Player1,HALFLING)~+ ~It bothers me, too.~ DO ~IncrementGlobal("X3KalAppChange","GLOBAL",1)~ + T3.7
@@ -1773,7 +1773,7 @@ END
 CHAIN X3KalJ T4.2 
 ~Me? Getting drunk off our bottoms. A good inn, splendid rooms, lads or lasses to flirt with, whatever someone fancied, and plenty of ale and wine.~
 END 
-++ ~We could do that now. I'm sure I have a drink somewhre, and you look fanciable enough.~ + T4.3 
+++ ~We could do that now. I'm sure I have a drink somewhere, and you look fanciable enough.~ + T4.3 
 ++ ~Maybe we can make time at an inn sometime.~ + T4.4 
 ++ ~We don't have time for that nonsense.~ + T4.5
 
@@ -1843,11 +1843,11 @@ END
 ++ ~Enough drinking, we should get back to things.~ + T5.2
 
 CHAIN X3KalJ T5.13 
-~Yeah, I introduced Gast to this stuff. Was one of our last nights together. That guy could outdrink anyone, I tell you, and he was still bloody clear in his speech afterwards. Never seen a gnome like him.~
+~Yeah, I introduced Gast to this stuff. Was one of our last nights together. That guy could out drink anyone, I tell you, and he was still bloody clear in his speech afterwards. Never seen a gnome like him.~
 EXTERN X3KalJ T5.8
 
 CHAIN X3KalJ T5.7 
-~Aye, it is, and where the best brew comes from. I introduced Gast to this stuff last. Was one of our last nights together. That guy could outdrink anyone, I tell you, and he was still bloody clear in his speech afterwards. Never seen a gnome like him.~
+~Aye, it is, and where the best brew comes from. I introduced Gast to this stuff last. Was one of our last nights together. That guy could out drink anyone, I tell you, and he was still bloody clear in his speech afterwards. Never seen a gnome like him.~
 EXTERN X3KalJ T5.8
 
 CHAIN X3KalJ T5.8
@@ -1863,7 +1863,7 @@ CHAIN X3KAlJ T5.9
 EXTERN X3KAlJ T5.12 
 
 CHAIN X3KAlJ T5.10 
-~Lovers? We had a few close moments, but it wasn't someting exclusive if that's what you were getting at. There were some fun nights, though. Good times.~
+~Lovers? We had a few close moments, but it wasn't something exclusive if that's what you were getting at. There were some fun nights, though. Good times.~
 EXTERN X3KalJ T5.12 
 
 CHAIN X3KalJ T5.11 
@@ -1877,10 +1877,10 @@ EXIT
 //Friendship Talk #6
 
 CHAIN IF ~Global("X3KalTalk","LOCALS",12)~ THEN X3KalJ FriendshipTalk6
-~Halflings have it hard in the city, you know. Not as easy as it was for me in Gullykin. Especially the caravaners.~
+~Halflings have it hard in the city, you know. Not as easy as it was for me in Gullykin. Especially the caravans.~
 DO ~IncrementGlobal("X3KalTalk","LOCALS",1)SetGlobal("X3KalAppChange","GLOBAL",6)~
 END 
-++ ~I've not seen any caraveners in the city.~ + T6.1 
+++ ~I've not seen any caravans in the city.~ + T6.1 
 ++ ~It doesn't seem any worse than it is for anyone else.~ DO ~IncrementGlobal("X3KalAppChange","GLOBAL",-1)~ + T6.2 
 ++ ~What do you mean?~ + T6.3
 
@@ -1909,7 +1909,7 @@ CHAIN X3KalJ T6.5
 EXTERN X3KalJ T6.7 
 
 CHAIN X3KalJ T6.6
-~I wasn't applying otherwise. But I'm not really paying attention to just anyfolk either.~
+~I wasn't applying otherwise. But I'm not really paying attention to just any folk either.~
 EXTERN X3KalJ T6.7
 
 CHAIN X3KalJ T6.7
@@ -1985,7 +1985,7 @@ CHAIN X3KalJ T7B.2
 EXTERN X3KalJ T7B.3
 
 CHAIN X3KalJ T7B.3 
-~Maybe more of our people can be encouraged to invest their time in the society as guards and soldiers like Jililan has, and things might get better.~
+~Maybe more of our people can be encouraged to invest their time in the society as guards and soldiers like Jillian has, and things might get better.~
 = ~Could have a few mayors, too, eh? Might be a bit far-fetched to have someone right-sized lord over all of these tall folks, but we'd make better decisions.~
 END 
 ++ ~It's a good hope to have, Kale.~ DO ~IncrementGlobal("X3KalAppChange","GLOBAL",1)~ + T7B.4 
@@ -2202,7 +2202,7 @@ CHAIN X3KalJ 2.9
 EXIT 
 
 CHAIN X3KalJ 2.7
-~Sure was. a true marvel. Sadly, he fell not long after that in a nasty ambush against some ettins who had the high ground and alot of arrows. He was at the rear so he could take them all for us, stubborn bastard.~
+~Sure was. a true marvel. Sadly, he fell not long after that in a nasty ambush against some ettins who had the high ground and a lot of arrows. He was at the rear so he could take them all for us, stubborn bastard.~
 EXTERN X3KalJ 2.9
 
 CHAIN X3KalJ 2.8
@@ -2221,7 +2221,7 @@ END
 ++ ~This isn't a good time to talk.~ + 3.X 
 
 CHAIN X3KalJ 3.X 
-~Hm. All right, then.~
+~Hrm. All right, then.~
 EXIT 
 
 CHAIN X3KalJ 3.1
@@ -2260,7 +2260,7 @@ CHAIN X3KalJ 3.7
 EXTERN X3KalJ 3.8
 
 CHAIN X3KalJ 3.8
-~Stormaxe had raised his axe to the sky, and literal lightning clangged into it and smacked all the ogres around him.~
+~Stormaxe had raised his axe to the sky, and literal lightning clanged into it and smacked all the ogres around him.~
 = ~He was whirling and twirling, swinging and slashing like a true maddened dwarf. By the time we caught up to him and cleared the few creatures in our way everything around him was dead, including himself.~
 = ~His body was incinerated by his own electricity. Helga couldn't even raise him.~
 END 
@@ -2314,21 +2314,21 @@ END
 ++ ~No difference. They are one and the same goal.~ + 4.4
 
 CHAIN X3KalJ 4.4 
-~That seems a way to opt out of answering precisely, but I'll take it. You commited to this Imoen? I mean, to helping her and all?~
+~That seems a way to opt out of answering precisely, but I'll take it. You committed to this Imoen? I mean, to helping her and all?~
 END 
 ++ ~She's my childhood friend. I'd never abandon her.~ + 4.5
 ++ ~She's useful, and I owe her for what she's done for me.~ + 4.5 
 ++ ~Not really, no. Just nothing better to do.~ + 4.6
 
 CHAIN X3KalJ 4.3
-~So you're not very commited to Imoen then, eh?~
+~So you're not very committed to Imoen then, eh?~
 END 
 ++ ~I believe she's strong enough to make it through this on her own.~ + 4.8
 ++ ~I'm interested in what Irenicus might be offering. That's the only reason I'm searching for her.~ + 4.9
 ++ ~Not really, no. Just nothing better to do.~ + 4.6
 
 CHAIN X3KalJ 4.2 
-~So you're quite commited to Imoen, then, eh?~
+~So you're quite committed to Imoen, then, eh?~
 END 
 ++ ~She's my childhood friend. I'd never abandon her.~ + 4.5
 ++ ~She's useful, and I owe her for what she's done for me.~ + 4.5 
@@ -2382,7 +2382,7 @@ END
 ++ ~I'd rather not talk about this.~ + 5.X 
 
 CHAIN X3KalJ 5.2 
-~I'm not famililar with them. Did they fall in battle?~
+~I'm not familiar with them. Did they fall in battle?~
 END 
 ++ ~They were tortured and killed by Irenicus.~ + 5.5
 ++ ~No, but they still died bravely.~ DO ~IncrementGlobal("X3KalAppChange","GLOBAL",1)~ + 5.6 
@@ -2552,7 +2552,7 @@ CHAIN X3KalJ 6.10
 EXTERN X3KalJ 6.14
 
 CHAIN X3KalJ 6.11
-~Me, complain? Not when I find our leader so likeable.~
+~Me, complain? Not when I find our leader so likable.~
 EXTERN X3KalJ 6.14
 
 CHAIN X3KalJ 6.12
@@ -2560,7 +2560,7 @@ CHAIN X3KalJ 6.12
 EXTERN X3KalJ 6.14
 
 CHAIN X3KalJ 6.13 
-~Trouble and trepidation? Curiousity gets a halfling into all sorts of things, doesn't it?~
+~Trouble and trepidation? Curiosity gets a halfling into all sorts of things, doesn't it?~
 EXTERN X3KalJ 6.14
 
 CHAIN X3KalJ 6.14 
@@ -2762,7 +2762,7 @@ CHAIN X3KalJ 8.10
 EXTERN X3KalJ 8.7
 
 CHAIN X3KalJ 8.7
-~I just wanted to bring up your spirits. Not that you are necessarily down but...things sometimes can get tough. And as leader...you share the lionshare of that difficulty.~
+~I just wanted to bring up your spirits. Not that you are necessarily down but...things sometimes can get tough. And as leader...you share the lion's share of that difficulty.~
 END 
 ++ ~That's sweet of you Kale, checking up on me.~ DO ~IncrementGlobal("X3KalAppChange","GLOBAL",1)~ + 8.11 
 ++ ~I'm doing just fine. Don't worry.~ + 8.11 
@@ -2782,7 +2782,7 @@ CHAIN X3KalJ 8.14
 EXIT 
 
 CHAIN X3KalJ 8.15
-~Me? Pfft. I'm a hallfing, we are lucky. I'm not going anytime soon, have no frets. Just don't send us to jump across a chasm full of giant spiders and scorpions or something stupid.~
+~Me? Pfft. I'm a halfling, we are lucky. I'm not going anytime soon, have no frets. Just don't send us to jump across a chasm full of giant spiders and scorpions or something stupid.~
 EXIT 
 
 CHAIN X3KalJ 8.16
@@ -2953,7 +2953,7 @@ IF ~!Global("X3EmiRomanceActive","GLOBAL",1)!Global("X3RebRomanceActive","GLOBAL
 
 CHAIN X3KalJ 10.Emily 
 ~Look, Emily is a nice gal and all, but she's the old fashioned type. If she hasn't noticed already, she's probably being nice and giving you time to choose.~
-= ~I don't dislike her, and while I'm not the type to be commital and mind others spending time with others, she does, and I don't want to be victim to her hurt glances.~
+= ~I don't dislike her, and while I'm not the type to be committal and mind others spending time with others, she does, and I don't want to be victim to her hurt glances.~
 END 
 ++ ~Why can't I have both of you?~ + 10.E1 
 ++ ~If you are asking me to choose between you two, then I chose Emily. I am sorry.~ + 10.X
@@ -3181,7 +3181,7 @@ END
 ++ ~I'll never forget you either.~ DO ~IncrementGlobal("X3KalAppChange","GLOBAL",2)~ + 11.7
 
 CHAIN X3KalJ 11.6
-~Woah, someone is eager...well, to the hells with it, then. Let's get settled right on to good ol' fun.~
+~Whoa, someone is eager...well, to the hells with it, then. Let's get settled right on to good ol' fun.~
 DO ~SetGlobal("X3Slept","LOCALS",1)RestParty()~
 EXIT 
 
@@ -3202,7 +3202,7 @@ END
 ++ ~We should get moving.~ + 12.3
 
 CHAIN X3KalJ 12.1 
-~Good, because the future will hold more of that. And I never dissapoint.~
+~Good, because the future will hold more of that. And I never disappoint.~
 EXTERN X3KalJ 12.3
 
 CHAIN X3KalJ 12.2 
@@ -3331,7 +3331,7 @@ CHAIN X3KalJ 15.1
 EXTERN X3KalJ 15.4
 
 CHAIN X3KalJ 15.2 
-~Well, given yoou are missing a part of yourself, I don't think I'm worrying enough actually. I probably should be fretting as much as ma did over me when I was back in Gullykin.~
+~Well, given you are missing a part of yourself, I don't think I'm worrying enough actually. I probably should be fretting as much as ma did over me when I was back in Gullykin.~
 EXTERN X3KalJ 15.4
 
 CHAIN X3KalJ 15.4
@@ -3352,7 +3352,7 @@ EXTERN X3KalJ 15.8
 
 CHAIN X3KalJ 15.7
 ~All right it's just...this isn't normal, you know? If it was I wouldn't look at every other moment. And not just to admire you, heh.~
-= ~Just...tell me if you feel the slightest thing. I am your protecter, even if it means my death.~
+= ~Just...tell me if you feel the slightest thing. I am your protector, even if it means my death.~
 EXTERN X3KalJ 15.8
 
 CHAIN X3KalJ 15.8
@@ -3420,7 +3420,7 @@ DO ~SetGlobal("X3DSRomance","GLOBAL",1)~
 END 
 ++ ~I agree. Let's just let the pieces fall as they will.~ + DSR.7
 ++ ~If that's what you want, Kale.~ + DSR.7
-++ ~Uncommital as ever. Forget it.~ + DSR.8 
+++ ~Noncommittal as ever. Forget it.~ + DSR.8 
 
 CHAIN X3KalJ DSR.7
 ~So now that awkwardness is out of the way, back to our adventures, eh? Just leave a bit of room for me to shine now and then, will ya?~
@@ -3448,7 +3448,7 @@ APPEND X3KalJ
 
 // Low Approval, Romanced 
 IF ~Global("X3BreakUp","LOCALS",2)~ LoveBreakUp 
-SAY ~Soo. Things have been kind of sour lately. I know this road is hard and all but...I know when a relationship has hit its end.~
+SAY ~Sooo. Things have been kind of sour lately. I know this road is hard and all but...I know when a relationship has hit its end.~
 = ~That's whats going on with us right now. You and me? I think it's time that stops. I don't know what it is but...you've been treating me far worse, mate.~
 = ~And that's...well I'm bloody worth something.~
 ++ ~Kale, please. Give me another chance.~ + LBreak.1
@@ -3603,7 +3603,7 @@ SAY ~My family, eh? Well, where to start...~
 = ~I've got Ma and Sam. Ma was part of a caravan before she came to Gullykin. Once she got round with me, she made roots and just never bothered getting up.~
 = ~Damn good with farm tools and growing things though, so the locals have no complaints.~
 ++ ~She never adventured?~ + PFamily.1 
-++ ~Compared to your life, your mother's is suprisingly simple.~ + PFamily.1 
+++ ~Compared to your life, your mother's is surprisingly simple.~ + PFamily.1 
 ++ ~Tell me about your brother, Sam.~ + PFamily.2
 ++ ~Let's talk about something else.~ + main.PID 
 END
@@ -3722,7 +3722,7 @@ SAY ~What? That is the most slanderous thing I have ever heard. You mate, need t
 END 
 
 IF ~~ PCloak.3 
-SAY ~Well mate, considering your own choice of attire, I'm not suprised. Didn't you grow up in a monastery? I didn't think you'd be the sharpest out there.~
+SAY ~Well mate, considering your own choice of attire, I'm not surprised. Didn't you grow up in a monastery? I didn't think you'd be the sharpest out there.~
 ++ ~I am allowed to have my own opinion.~ + PCloak.5
 ++ ~There's nothing wrong with what I am wearing.~ + PCloak.4
 ++ ~Let's talk about something else.~ + main.PID 
@@ -3837,7 +3837,7 @@ IF ~~ EXIT
 END 
 
 IF ~~ RI.7
-SAY ~Pfft. It's not about stupidity. Just drunkedness and the power of swaying hips.~
+SAY ~Pfft. It's not about stupidity. Just drunkenness and the power of swaying hips.~
 = ~I'm just thankful you're not the type to do that to me. Lost my best clothes that day. Never again, I say.~
 IF ~~ EXIT 
 END 
@@ -3856,12 +3856,12 @@ IF ~~ + BU.5
 END 
 
 IF ~~ BU.2 
-SAY ~Yeah...t'was fun. Honestly I...normally would even be okay with that reason. Not sure why I'm not.~
+SAY ~Yeah...'twas fun. Honestly I...normally would even be okay with that reason. Not sure why I'm not.~
 IF ~~ + BU.5 
 END 
 
 IF ~~ BU.3 
-SAY ~I don't know what that means...sounds like a reason I might give if I found something so stiffling. Maybe that's it.~
+SAY ~I don't know what that means...sounds like a reason I might give if I found something so stifling. Maybe that's it.~
 IF ~~ + BU.5 
 END 
 

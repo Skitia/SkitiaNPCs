@@ -79,7 +79,7 @@ END
 ++ ~Well, actually, I'm not going to tell you.~ + Attack 
 
 CHAIN X3RB1 Careless 
-~Well, look at my face, does it look like that name means anything to me? Now payup, and make it quick.~
+~Well, look at my face, does it look like that name means anything to me? Now pay up, and make it quick.~
 END 
 +~PartyGoldGT(499)~+ ~No need for trouble, here is your gold.~ + Gold
 ++ ~You'll have to get it from my body.~ + Attack 

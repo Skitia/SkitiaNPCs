@@ -67,7 +67,7 @@ END
 ++ ~I've no more questions.~ + q.9
 
 CHAIN X3KM q.3 
-~Not much. He had a few coins, which I took as debts owed for the injuries he gave me, and old cheese. Didn't see any blood seeping from him. That's how people usualyl die, ain't it?~
+~Not much. He had a few coins, which I took as debts owed for the injuries he gave me, and old cheese. Didn't see any blood seeping from him. That's how people usually die, ain't it?~
 END 
 ++ ~You wanted him dead. You don't need to make someone bleed to kill him.~ + q.10 
 ++ ~Let me ask you something else.~ + q.11
@@ -106,7 +106,7 @@ END
 ++ ~I've no more questions.~ + q.9
 
 CHAIN X3KM q.8
-~Trying to get some damn coins to earn some food. A beggar's got tomake his living.~
+~Trying to get some damn coins to earn some food. A beggar's got to make his living.~
 END 
 ++ ~I imagine your relationship was a poor one?~ + q.2
 ++ ~You were the first to find his body. What can you tell me of what you saw?~ + q.3

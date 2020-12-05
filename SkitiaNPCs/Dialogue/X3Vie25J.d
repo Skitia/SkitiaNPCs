@@ -353,7 +353,7 @@ CHAIN X3Vie25J engagement_yes
 EXTERN X3Vie25J engagement_yes2 
 
 CHAIN X3Vie25J engagement_doubts
-~Hrmph. I think I undestand. This is the human custom of expressing the desire of marriage, is it not?~
+~Hrmph. I think I understand. This is the human custom of expressing the desire of marriage, is it not?~
 EXTERN X3Vie25J engagement_yes
 
 CHAIN X3Vie25J engagement_yes2 
@@ -443,7 +443,7 @@ CHAIN IF ~Global("X3VieToBTalk","LOCALS",4)~ THEN X3Vie25J FriendshipTalk2
 DO ~IncrementGlobal("X3VieToBTalk","LOCALS",1)SetGlobal("X3VieAppChange","GLOBAL",6)~
 END 
 ++ ~We have grown a lot since our journey has begun.~ + F2.1
-++ ~I don't know. I still feel like the same <PRO_GIRLBOY> that left candlekeep.~ + F2.1 
+++ ~I don't know. I still feel like the same <PRO_GIRLBOY> that left Candlekeep.~ + F2.1 
 ++ ~Let's talk another time, Vienxay.~ + F2.X 
 
 CHAIN X3Vie25J F2.X 
@@ -461,7 +461,7 @@ END
 
 CHAIN X3Vie25J F2.2 
 ~Friends. I will remember you fondly, I think, no matter what you decide about your future.~
-= ~Just do try to make it to that future? I do want to see what this all leads to. It would be embarrasing if you fell to some hungry wolf on the road.~
+= ~Just do try to make it to that future? I do want to see what this all leads to. It would be embarrassing if you fell to some hungry wolf on the road.~
 EXIT 
 
 CHAIN X3Vie25J F2.3 
@@ -484,7 +484,7 @@ DO ~IncrementGlobal("X3VieToBTalk","LOCALS",1)SetGlobal("X3VieAppChange","GLOBAL
 END 
 ++ ~You sound a little too excited.~ + FT.1
 ++ ~You have grown more powerful. But be mindful of the responsibility that comes with it.~ + FT.2 
-++ ~I have enjoyed watching your spellcasting.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + FT.4
+++ ~I have enjoyed watching your spell casting.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + FT.4
 
 CHAIN X3Vie25J FT.1 
 ~Please, how can someone be too excited?~
@@ -511,7 +511,7 @@ END
 
 CHAIN X3Vie25J FT.8
 ~And yet...for you and those I have traveled with, I would not mind a small amount of personal sacrifice to ensure we win the day.~
-= ~Ugh, nevermind what I just said. You heard nothing. Let us be off!~
+= ~Ugh, never mind what I just said. You heard nothing. Let us be off!~
 EXIT 
 
 CHAIN X3Vie25J FT.9 
@@ -658,7 +658,7 @@ END
 CHAIN X3Vie25J 2.1 
 ~Thank goodness. It is tiring to fix the problems that humans cause.~
 END 
-++ ~I would say very little of what has occured to me the last few months are the fault of one race, let alone humans.~ + 2.2
+++ ~I would say very little of what has occurred to me the last few months are the fault of one race, let alone humans.~ + 2.2
 ++ ~Irenicus, I will remind you, was an elf.~ + 2.3
 ++ ~Exhausting, I reckon. Perhaps you would like a massage?~ + 2.4
 
@@ -799,11 +799,11 @@ END
 
 CHAIN X3Vie25J W.8
 ~(She stops to wrap her arms around you, shivering like she is in a freezing hail.)~
-= ~Nevermind me. I will be fine. I just hope that I can see my father again in a form that isn't some...horrible shade.~
+= ~Never mind me. I will be fine. I just hope that I can see my father again in a form that isn't some...horrible shade.~
 EXIT 
 
 CHAIN X3Vie25J W.9
-~Ugh, I was, I am! Sometimes you are so...nevermind!~
+~Ugh, I was, I am! Sometimes you are so...never mind!~
 EXIT 
 
 CHAIN X3Vie25J W.X 
@@ -832,7 +832,7 @@ CHAIN X3Vie25J 3.3
 END 
 ++ ~Greatly. I wish there was a better way.~ + 3.4 
 ++ ~I think I've grown numb to it.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + 3.5
-++ ~Whatever it takes to acheive my destiny. It does not matter the cost.~ + 3.6 
+++ ~Whatever it takes to achieve my destiny. It does not matter the cost.~ + 3.6 
 
 CHAIN X3Vie25J 3.6
 ~That sounds almost...disturbing. Many powerful figures we have faced before were that ruthless. Do not be so destructive you invite so much ire you cannot overcome.~
@@ -842,7 +842,7 @@ END
 ++ ~And why not? I've handled everything so far.~ + 3.9
 
 CHAIN X3Vie25J 3.7
-~Hrmph. If you do not want my advice, then I won't give it. But if you do not heed the warning of others...well you have seen for yourself what hapepns to fools.~
+~Hrmph. If you do not want my advice, then I won't give it. But if you do not heed the warning of others...well you have seen for yourself what happens to fools.~
 EXIT 
 
 CHAIN X3Vie25J 3.8
@@ -946,7 +946,7 @@ END
 ++ ~I've never seen you this joyous. I'm happy for you.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",2)~ + 4.NE3
 
 CHAIN X3Vie25J 4.NE1 
-~You can bet on that. But I suppose...there is your destiny, the decisions you have to make. We could very well be permamently seperated.~
+~You can bet on that. But I suppose...there is your destiny, the decisions you have to make. We could very well be permanently separated.~
 EXTERN X3Vie25J 4.N2 
 
 CHAIN X3Vie25J 4.NE3 
@@ -1143,7 +1143,7 @@ SAY ~Well, I'll be leaving then. No reason to stay around after a proclamation l
 END 
 
 IF ~~ LBreak.5 
-SAY ~Hrmph. Goodbye... and goodluck.~
+SAY ~Hrmph. Goodbye... and good luck.~
 IF ~~ DO ~LeaveParty()EscapeArea()~
 EXIT 
 END 
@@ -1184,7 +1184,7 @@ IF ~~ + Break.3
 END  
 
 IF ~~ Break.3 
-SAY ~It is time for us to seperate our paths.~
+SAY ~It is time for us to separate our paths.~
 ++ ~Then get out of my sight.~ + Break.4
 ++ ~Go ahead. But your equipment? That's mine.~ + Break.5
 ++ ~Vienxay, please. Just give me one more chance to make this up to you.~ + Break.6 
@@ -1218,7 +1218,7 @@ EXIT
 END 
 
 IF ~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelQuestCutScene","GLOBAL",1)~ ScryFinish 
-SAY ~It is done. You will not like what I have to say.~ [] // Use the It is done soundset 
+SAY ~It is done. You will not like what I have to say.~ 
 ++ ~Just tell me, Vienxay.~ + ScryDead 
 ++ ~Oh no. Is he dead?~ + ScryDead 
 ++ ~Go on.~ + ScryDead 
@@ -1346,10 +1346,10 @@ END
 
 IF ~~ PID.Evermeet 
 SAY ~I suppose I cannot blame you for being hungry to know about my great home. There is nothing like it in the realms.~ 
-= ~My homeland is an island far to the west, with nature untainted as it should be. We build around it, or with it for our homes, allowing the forests to remain splendrous with their trees and lakes. Buildings would rise into the sky, and the walk ways would wrap around trees and nests, leaving them undisturbed~
+= ~My homeland is an island far to the west, with nature untainted as it should be. We build around it, or with it for our homes, allowing the forests to remain splendorous with their trees and lakes. Buildings would rise into the sky, and the walk ways would wrap around trees and nests, leaving them undisturbed~
 = ~Only elves could call this place home. No other were allowed to set foot there, and we maintained this with both force and magic. This kept our people safe, who were never poor nor never starving. All were taken care of and loved.~
 ++ ~Did anyone ever force their way?~ + PEvermeet.1 
-++ ~No execeptions?~ + PEvermeet.2 
+++ ~No exceptions?~ + PEvermeet.2 
 ++ ~It sounds so different from the rest of the world.~ + PEvermeet.3
 ++ ~Let's talk about something else.~ + MoreQuestion.PID 
 END 
@@ -1369,7 +1369,7 @@ SAY ~None. So many of our empires to the east of Evermeet had fallen when trust 
 END 
 
 IF ~~ PEvermeet.3 
-SAY ~Perhaps in that some other cities have walls and are distrusting of outsiders? I have seen none do so to the success and extent of my people, while also respecting the world it lives in. But you are entitled to your misbeliefs.~
+SAY ~Perhaps in that some other cities have walls and are distrusting of outsiders? I have seen none do so to the success and extent of my people, while also respecting the world it lives in. But you are entitled to your beliefs.~
 ++ ~Let's talk about something else.~ + MoreQuestion.PID 
 ++ ~That's all I had to ask. Let's keep moving.~ EXIT 
 END 
@@ -1384,7 +1384,7 @@ SAY ~My father held the responsibility as the Treasurer of Evermeet, giving fina
 END 
 
 IF ~~ PFamily.1 
-SAY ~Why would I? I put them through public shame. I do not even know if my father is still entrusted with the job he had. Everytime I want to, that I begin to scrawl something...I tear it up.~
+SAY ~Why would I? I put them through public shame. I do not even know if my father is still entrusted with the job he had. Every time I want to, that I begin to scrawl something...I tear it up.~
 IF ~~ + PFamily.4 
 END 
 
@@ -1409,7 +1409,7 @@ SAY ~There is little to tell. I was involved with a Sharran, my mentor, and her 
 = ~I learned gradually that she was using our own people as experiments, and killing them. I planned to betray her with this knowledge, but while I was getting some..."stress relief" with an elf, my lover at the time barged in on us and I felt frightened.~
 = ~I used one of the spells she taught me with no idea it was of Shar's weave and killed him on accident. His death, and later all of the others my mentor had caused, were pinned on me.~
 = ~I have never used Shar's weave since.~
-++ ~I am suprised they didn't execute you.~ + PExile.1 
+++ ~I am surprised they didn't execute you.~ + PExile.1 
 ++ ~Is there no way to appeal your sentence?~ + PExile.2 
 ++ ~How can you unknowingly use Shar's weave?~ + PExile.3
 END 
@@ -1438,7 +1438,7 @@ SAY ~Using the Shadow Weave does not require devotion to Shar. But there is a co
 END 
 
 IF ~~ PID.Mentor 
-SAY ~I know little but that she was not born in Evermeet and believed that the trustingness of other elves would allow her to get away with the experiments she needed.~
+SAY ~I know little but that she was not born in Evermeet and believed that she could lie and deceive to the other elves to get away with the experiments she needed.~
 = ~She was also a skilled Shadowdancer. Even if my people had known most of the murders done were her fault and not mine...she could have easily escaped if she so chose.~
 = ~After seeking revenge for so long against her, I must admit it makes me feel...purposeless.~
 ++ ~Let's talk about something else.~ + MoreQuestion.PID 
@@ -1506,7 +1506,7 @@ IF ~~ EXIT
 END 
 
 IF ~~ BreakUp 
-SAY ~I asusme you mean...our relationship.~
+SAY ~I assume you mean...our relationship.~
 = ~Then it is done. Think nothing more of it, then! I won't...not at all.~
 IF ~~ DO ~SetGlobal("X3VieRomanceActive","GLOBAL",3)IncrementGlobal("X3VieApp","GLOBAL",-12)
 DisplayStringNoNameDlg(Player1,@509)~ EXIT 

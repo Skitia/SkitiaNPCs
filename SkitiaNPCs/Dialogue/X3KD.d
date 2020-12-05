@@ -4,7 +4,7 @@ CHAIN IF ~Global("X3KDallieTopic","LOCALS",0)~ THEN X3KD first_encounter
 ~Hello. Do you have a ship that is coming in that needs the fire lit?~
 END 
 +~Global("X3KalQuest","GLOBAL",5)~+~Are you Dallie? I have some questions for you about Percy's death that we are looking into.~ DO ~IncrementGlobal("X3KDallieTopic","LOCALS",1)IncrementGlobal("X3KSuspectTalk","GLOBAL",1)~ + fe.1
-++~Nevermind. Farewell.~ EXIT 
+++~Never mind. Farewell.~ EXIT 
 
 CHAIN X3KD fe.1 
 ~Percy...from what I understood, he died from an illness. I miss him. Ask what you will, if it will lead to answers.~
@@ -16,7 +16,7 @@ END
 ++ ~I don't have any other questions.~ + fe.6
 
 CHAIN X3KD fe.2
-~Percy was my lover. We were promised to be handfasted, but...well he died, though things were getting strain. He was often out, and unusually obessed with that cheese.~
+~Percy was my lover. We were promised to be handfasted, but...well he died, though things were getting strain. He was often out, and unusually obsessed with that cheese.~
 == X3KD ~I was considering call things off for a time.~
 END 
 ++ ~What were you doing on the day he died?~ + fe.3

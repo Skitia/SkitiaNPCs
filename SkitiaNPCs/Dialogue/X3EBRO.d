@@ -51,7 +51,7 @@ DO ~SetGlobal("X3EmiAppChange","GLOBAL",7)~
 EXTERN X3EBRO exit_area 
 
 CHAIN X3EBRO exit_area 
-~Let us depart, darling Darlene. Unlike Emily we do not have to play catchup. We'll have a second meeting with Lord Jurgenson later after he's had time to pity my sister.~
+~Let us depart, darling Darlene. Unlike Emily we do not have to play catch up. We'll have a second meeting with Lord Jurgenson later after he's had time to pity my sister.~
 DO ~ActionOverride("X3EDAR",EscapeArea())EscapeArea()~
 EXIT 
 

@@ -29,7 +29,7 @@ END
 
 
 I_C_T C6CORAN 1 X3EmiC6CORAN-1
-== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")Global("X3EmiPartyBG1","GLOBAL",1)~ THEN ~Oh, I remember Coran. Nice to see you again.~
+== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")Global("X3EmiPartyBG1","GLOBAL",1)~ THEN ~Oh, I remember you Coran. Nice to see you again.~
 END 
 
 I_C_T C6DRIZZ1 55 X3EmiC6DRIZZ1-55
@@ -185,12 +185,12 @@ Global("X3KalRomanceActive","GLOBAL",1)
 Global("X3KalRomanceActive","GLOBAL",2)
 Global("X3VieRomanceActive","GLOBAL",1)
 Global("X3VieRomanceActive","GLOBAL",2)~ THEN DADROW23 X3
-~Hmmmn...no. I look for a male to please me, but you hold no interest to my eyes. Move along.~
+~Hmm...no. I look for a male to please me, but you hold no interest to my eyes. Move along.~
 EXIT 
 
 
 I_C_T UDDROW26 4 X3RebUDDROW26
-== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~No! I- You know what? Nevermind.~
+== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~No! I- You know what? Never mind.~
 DO ~IncrementGlobal("X3EmiApp","GLOBAL",-9)
 DisplayStringNoNameDlg(Player1,@109)~
 END 
@@ -204,7 +204,7 @@ END
 INTERJECT DASLAVE1 4 X3EmiDASLAVE1-4  
 == X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~No. <CHARNAME> is just cruelly joking, as is the er, custom. Go to the gates, say you are doing an errand, and may the gods be with you.~
 DO ~SetGlobal("X3EmiSlaveForce","GLOBAL",1)IncrementGlobal("X3EmiApp","GLOBAL",-6)
-DisplayStringNoNameDlg(Player1,@106)~ //Emily dissaproves and prevents any approval shifts from other people.
+DisplayStringNoNameDlg(Player1,@106)~ //Emily disapproves and prevents any approval shifts from other people.
 END 
 IF ~Global("DrowSlavesFree","GLOBAL",2)~ EXTERN DASLAVE1 7
 IF ~Global("DrowSlavesFree","GLOBAL",2)~ EXTERN DASLAVE1 8
@@ -373,7 +373,7 @@ INTERJECT SAHBEH01 27 X3EmiSAHBEH01-27
 EXTERN SAHBEH01 33
 
 I_C_T SAHKNG01 68 X3EmiSAHKNG01-68
-== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~What is the point of this? To gleefully watch them butcher eachother? She didn't even do anything to us.~
+== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~What is the point of this? To gleefully watch them butcher each other? She didn't even do anything to us.~
 DO ~IncrementGlobal("X3EmiApp","GLOBAL",-4)
 DisplayStringNoNameDlg(Player1,@106)~
 END
@@ -387,7 +387,7 @@ I_C_T KELDORJ 198 X3EmiKELDORJ198
 END
 
 I_C_T SAHPR1 12 X3EmiSAHPR12 
-== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~Well, that's interesting. In a strange way, I'm almost not suprised, considering this is you we are talking about, <CHARNAME>.~
+== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~Well, that's interesting. In a strange way, I'm almost not surprised, considering this is you we are talking about, <CHARNAME>.~
 END
 
 I_C_T PPSAEM2 24 X3EmiPPSAEM2-24
@@ -403,7 +403,7 @@ I_C_T PPSAEM2 8 X3EmiPPSAEM2-8
 END 
 
 I_C_T PPSAEM2 19 X3EmiPPSAEM2-19
-== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~I have heard such stories...Gods, I want to say I will be strong, but I must say I would rather not be in the underdark.~
+== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~I have heard such stories...Gods, I want to say I will be strong, but I must say I would rather not be in the Underdark.~
 END
 
 I_C_T PPJOYE2 6 X3EmiPPJOYE2-6
@@ -484,7 +484,7 @@ END
 
 I_C_T BODHI2 25 X3EmiBODHI2-25
 == X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~As if we would let you just go.~
-== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~I don't think we have a choice. She portalled in here, Emily. She can portal out.~
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~I don't think we have a choice. She portaled in here, Emily. She can portal out.~
 END
 
 CHAIN IF WEIGHT #-1
@@ -505,7 +505,7 @@ I_C_T ARAN 77 X3EmiARAN77
 END 
 
 I_C_T ARAN 53 X3EmiARAN53 
-== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~What? We've already paid a hefty sum. This is becoming suspiciou, <CHARNAME>...~
+== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~What? We've already paid a hefty sum. This is becoming suspicious, <CHARNAME>...~
 END 
 
 I_C_T ARAN 3 X3EmiARAN3
@@ -600,7 +600,7 @@ IF ~!GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%) Name("X3Emi",LastTalkedToBy)~ 
 END
 
 CHAIN X3EmiJ Yackman  
-~Hey, don't worry, Yackman, or, whoever you are. I'm not a demon. The opposite, even. Except you know, generations of descents later from whatever celestial started it all.~
+~Hey, don't worry, Yackman, or, whoever you are. I'm not a demon. The opposite, even. Except you know, generations of descendants later from whatever celestial started it all.~
 EXTERN GORMAD1 11
 
 I_C_T GORCHR 0 X3EmiGORCHR0
@@ -640,12 +640,12 @@ END
 
 
 I_C_T TREVIL01 33 X3EmiTREVIL01-33
-== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")!IsValidForPartyDialogue("X3Vie")~ THEN ~We can't poision the grove. That would be terrible! We have to find another way.~
+== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")!IsValidForPartyDialogue("X3Vie")~ THEN ~We can't poison the grove. That would be terrible! We have to find another way.~
 == TREVIL01 ~Hurry up now, hurry up!~
 END 
 
 I_C_T TREVIL01 34 X3EmiTREVIL01-34
-== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")!IsValidForPartyDialogue("X3Vie")~ THEN ~We can't poision the grove. That would be terrible! We have to find another way.~
+== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")!IsValidForPartyDialogue("X3Vie")~ THEN ~We can't poison the grove. That would be terrible! We have to find another way.~
 == TREVIL01 ~Hurry up now, hurry up!~
 END 
 
@@ -691,7 +691,7 @@ I_C_T TRTAVP05 1 X3EmiTRTAVP05-1
 END 
 
 I_C_T GPHIL01 3 X3EmiGPHIL01
-== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~This is a cute debat, but I'm not going to just let him get hurt. Back off or I will defend him!~
+== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~This is a cute debate, but I'm not going to just let him get hurt. Back off or I will defend him!~
 DO ~Attack("gphil03")~
 END 
 
@@ -699,7 +699,7 @@ I_C_T TRGRD03 22 X3EmiTRGRD03-22
 == X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~What are you doing? Fighting over our own pride?!~
 DO ~IncrementGlobal("X3EmiApp","GLOBAL",-7)
 DisplayStringNoNameDlg(Player1,@109)~ 
-== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~<CHARNAME>, this feels so unecessary.~
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~<CHARNAME>, this feels so unnecessary.~
 DO ~IncrementGlobal("X3RebApp","GLOBAL",-6)
 DisplayStringNoNameDlg(Player1,@406)~ 
 == TRGRD03 ~To arms, militia!~
@@ -946,7 +946,7 @@ DisplayStringNoNameDlg(Player1,@106)~
 EXTERN DALESON 14
 
 I_C_T KPCAPT01 42 X3EmiKPCAPT04 
-== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~Her safety was partly our responsiblity. But like he says, heart of stone, it seems.~
+== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~Her safety was partly our responsibility. But like he says, heart of stone, it seems.~
 DO ~IncrementGlobal("X3EmiApp","GLOBAL",-6)
 DisplayStringNoNameDlg(Player1,@106)~ 
 END 
@@ -974,7 +974,7 @@ I_C_T LYROS 19 X3EmiLYROS19
 END
 
 I_C_T EMBARL 6 X3EmiEMBARL6
-== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~I'm quite glad we avoided violence. Your mercifulness is admirable, you know that?~
+== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~I'm quite glad we avoided violence. Your mercy is admirable, you know that?~
 DO ~IncrementGlobal("X3EmiApp","GLOBAL",4)
 DisplayStringNoNameDlg(Player1,@116)~ 
 == EMBARL ~Farewell, my savior.~
@@ -1141,7 +1141,7 @@ I_C_T GERHAR 17 X3EmiGERHAR17
 END 
 
 I_C_T BBEGG2 4 X3EmiBBEGG2-4
-== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~Well, okay. Anyone else see what the halfling did? Nevermind, if he needs it let him have it.~
+== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~Well, okay. Anyone else see what the halfling did? Never mind, if he needs it let him have it.~
 == X3KalJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~Heh, that's a classic trick in the halfling book, good work kin...wait a minute, that's our coin!~
 == BBEGG2 ~Heehee.~
 END 
@@ -1205,7 +1205,7 @@ DisplayStringNoNameDlg(Player1,@413)~
 END 
 
 I_C_T VICONI 2 X3VieVICONI2
- == X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~I'm glad we saved her. Despite what she is...I am fine with her with us. She'd probably get hunted again if we went our seperate ways.~
+ == X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~I'm glad we saved her. Despite what she is...I am fine with her with us. She'd probably get hunted again if we went our separate ways.~
 DO ~IncrementGlobal("X3EmiApp","GLOBAL",4)
 DisplayStringNoNameDlg(Player1,@116)~
 END 
@@ -1248,9 +1248,9 @@ I_C_T GAAL 20 X3EmiGaal
 END 
 
 I_C_T Garrick 2 GarrickX3Emi2 
-== X3EmiJ IF ~See("X3Emi")IsValidForPartyDialogue("X3Emi")Global("X3EmiPartyBG1","GLOBAL",1)~ THEN ~I'm suprised you don't remember me. I was staying in Feldepost's inn.~
+== X3EmiJ IF ~See("X3Emi")IsValidForPartyDialogue("X3Emi")Global("X3EmiPartyBG1","GLOBAL",1)~ THEN ~I'm surprised you don't remember me. I was staying in Feldepost's inn.~
 == Garrick ~Oh? Who are you?~
-== X3EmiJ ~Oh, I'm E- Nevermind that! You seem distracted. Good luck with your lady. You're definitely going to need a lot of it.~
+== X3EmiJ ~Oh, I'm E- Never mind that! You seem distracted. Good luck with your lady. You're definitely going to need a lot of it.~
 END
 
  
@@ -1266,7 +1266,7 @@ DO ~SetGlobal("Prophet4X3Emi","LOCALS",1)SetGlobal("TalkedToCult","GLOBAL",1)~
 EXIT 
 
 I_C_T MAEVAR 14 X3EmiMAEVAR14 //No penalty, since the player doesn't have much of a choice and she's already unhappy with assisting thieves.
-== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~Right, stealing from the temple of Lathandar. That will certainly make a good impression on the gods. I'm not quite comfortable with this but...if it's our only choice.~
+== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~Right, stealing from the temple of Lathander. That will certainly make a good impression on the gods. I'm not quite comfortable with this but...if it's our only choice.~
 END
 
 I_C_T MAEVAR 31 X3EmiMAEVAR31 
@@ -1542,7 +1542,7 @@ I_C_T TOWNC01 3 X3EmiTOWNC03
 END 
 
 I_C_T TOWNC01 18 X3EmiTOWNC018
-== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~I'm not suprised Amn and Tethyr are having issues like this. Quite a long history.~
+== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~I'm not surprised Amn and Tethyr are having issues like this. Quite a long history.~
 END 
 
 I_C_T SEVPAT01 5 X3EmiSevPat01 
@@ -1600,7 +1600,7 @@ Global("X3Emi","LOCALS",0)~ THEN CELVAN X3Emi
 Of eyes and hairlocks both golden hue.
 Her path demands she fights to be heir,
 Of which the outcome will declare
-Who the responsiblity of the house is due."~
+Who the responsibility of the house is due."~
 DO ~SetGlobal("X3Emi","LOCALS",1)~
 == X3EmiJ ~What? I am sure I don't know you. Pretty sure! I hope. How do you know these things?~
 EXTERN CELVAN 1
@@ -1756,7 +1756,7 @@ EXIT
 
 CHAIN X3EmiJ X3EmiPhaere2
 ~From the looks of you...nothing happened. Thank the gods.~
-= ~Let's finish up what we were doing here and get out of this city. And the underdark too. I've had all I can handle.~
+= ~Let's finish up what we were doing here and get out of this city. And the Underdark too. I've had all I can handle.~
 DO ~IncrementGlobal("X3EmiApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@116)~ 
 EXIT
 
@@ -1942,7 +1942,7 @@ END
 ++ ~Fine. Go, Emily.~ + Go_Emily
 
 CHAIN X3EmiJ Trust 
-~No. I can't. And I am suprised you think we need it.~
+~No. I can't. And I am surprised you think we need it.~
 EXTERN DORNJ Dismiss
 
 CHAIN DORNJ Dismiss
@@ -2028,7 +2028,7 @@ END
 +~!Alignment(Player1,MASK_EVIL)Global("X3DSRomance","GLOBAL",0)Gender(Player1,MALE)Global("X3EmiPartyBG1","GLOBAL",1)~+ ~Back in Dragonspear...is there still anything between us?~ + Q1.6 
 +~Global("X3EmiPartyBG1","GLOBAL",1)~+ ~What were you up to since we separated?~ + Q1.10 
 ++ ~Do you really want to be lead your house?~ + Q1.11
-++ ~Nevermind. Let's go.~ + Q1.Exit 
+++ ~Never mind. Let's go.~ + Q1.Exit 
 
 CHAIN X3EmiJ Q1.6 
 ~I was...dreading this question.~
@@ -2136,7 +2136,7 @@ EXTEND_BOTTOM SCBUTLER 0 #4
 END 
 
 CHAIN SCBUTLER Jurgenson_butler 
-~LORD Jurgenson is in the guest rooms. Do not be suprised if he has as little desire to speak with you as I do.~
+~LORD Jurgenson is in the guest rooms. Do not be surprised if he has as little desire to speak with you as I do.~
 EXIT 
 //Only fires post event, copper coronet not yet arrived to.
 CHAIN IF ~Global("X3EmiQuest","GLOBAL",6)Global("X3EmiQuestInterject","LOCALS",1)~ THEN X3EmiJ quest_6
@@ -2214,7 +2214,7 @@ IF ~!IsValidForPartyDialogue("X3Vie")!Global("X3EmiRomanceActive","GLOBAL",2)~ E
 CHAIN X3EmiJ bq.love 
 ~What do I do now, love? You are my light. I could use...I could use your words right now.~
 END 
-++ ~Keep going. When everything is over, we'll have eachother.~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",1)~ + bq.7
+++ ~Keep going. When everything is over, we'll have each other.~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",1)~ + bq.7
 ++ ~I know it will be hard, but you just have to keep moving.~ + bq.6 
 ++ ~I've nothing to say. You just need to figure it out yourself.~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",-1)~  + bq.6 
 ++ ~We have Irenicus to stop. That's all that matters.~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",-1)~  + bq.6
@@ -2295,7 +2295,7 @@ EXTERN X3EFATH do_now
 
 CHAIN X3EmiJ human_alive 
 ~Thank you father. I'm just glad that we didn't have to lose Thomas as well.~
-== X3EFATH ~What happened here was my failing. For years I could have tried to help him understand...or have never been afraid of the judgement of being with your mother. But we cannot undo the past.~
+== X3EFATH ~What happened here was my failing. For years I could have tried to help him understand...or have never been afraid of the judgment of being with your mother. But we cannot undo the past.~
 EXTERN X3EFATH do_now 
 
 CHAIN X3EFATH do_now 
@@ -2420,7 +2420,7 @@ CHAIN X3EmiJ T1.10
 EXTERN X3EmiJ T1.13
 
 CHAIN X3EmiJ T1.11 
-~Someone saw one of my portaits once and they left the room screaming. Screaming! Not quite the impression you want to make.~
+~Someone saw one of my portraits once and they left the room screaming. Screaming! Not quite the impression you want to make.~
 EXTERN X3EmiJ T1.13
 
 CHAIN X3EmiJ T1.12
@@ -2451,11 +2451,11 @@ END
 ++ ~I don't have time to discuss that right now, Emily.~ + T2.X 
 
 CHAIN X3EmiJ T2.X 
-~Oh, right, time. Nevermind me, then.~
+~Oh, right, time. Never mind me, then.~
 EXIT 
 
 CHAIN X3EmiJ T2.XX 
-~Right. Well then. Onwards, fearless leader.~
+~Right. Well then. Onward, fearless leader.~
 EXIT 
 
 
@@ -2465,7 +2465,7 @@ CHAIN X3EmiJ T2.2
 END 
 ++ ~Troubling? What do you mean?~ + T2.5 
 ++ ~I don't see what is bad about it at all.~ + T2.5 
-++ ~Why are you even complaining? You are priviliged.~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",-3)~ + T2.6
+++ ~Why are you even complaining? You are privileged.~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",-3)~ + T2.6
 
 CHAIN X3EmiJ T2.3 
 ~We are descended from celestials, and are supposed to be beings of good. I confess I often feel the urge to right wrongs and try to help others. Sometimes its a bit troubling, even.~
@@ -2476,7 +2476,7 @@ CHAIN X3EmiJ T2.4
 EXTERN X3EmiJ T2.5
 
 CHAIN X3EmiJ T2.5 
-~Well...I also have a home and responsibilty to our people in the family estate in Tethyr. I want to help people here in Amn, but I feel guilty for neglecting my life and duties at home. It's been some months now since I've last seen my father and stepmother.~
+~Well...I also have a home and responsibility to our people in the family estate in Tethyr. I want to help people here in Amn, but I feel guilty for neglecting my life and duties at home. It's been some months now since I've last seen my father and stepmother.~
 == X3EmiJ ~It was his idea for me to go and discover myself, and indulge in my urge to act, but I worry that I was selfish for doing that.~
 END 
 ++ ~It might have been a little selfish.~ + T2.7
@@ -2484,7 +2484,7 @@ END
 ++ ~If you feel so bad about it, why not just return home?~ + T2.9
 
 CHAIN X3EmiJ T2.6 
-~Oooh, the aasimar is priviliged. Hrm, I actually don't have a retort for that. You know what? I'll just drop this conversation, since you want to be so thoughtless.~
+~Oooh, the aasimar is privileged. Hrm, I actually don't have a retort for that. You know what? I'll just drop this conversation, since you want to be so thoughtless.~
 DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",-3)~ 
 EXIT 
 
@@ -2541,7 +2541,7 @@ CHAIN X3EmiJ T2.14
 EXIT 
 
 CHAIN X3EmiJ T2.15 
-~Really? We should compare. We totally should compare. Ooh, maybe we can even help eachother out? I've always wanted to do your hair in long braids. I think it'd look quite pretty.~
+~Really? We should compare. We totally should compare. Ooh, maybe we can even help each other out? I've always wanted to do your hair in long braids. I think it'd look quite pretty.~
 EXTERN X3EmiJ T2.17
 
 CHAIN X3EmiJ T2.16 
@@ -2575,7 +2575,7 @@ CHAIN IF ~Global("X3EmiTalk","LOCALS",6)~ THEN X3EmiJ Talk3
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiTalk","LOCALS",1)~
 END 
 ++ ~For the most part?~ + T3.1 
-++ ~Thank you, Emily. But it's not just me that has us succesful.~ + T3.2 
+++ ~Thank you, Emily. But it's not just me that has us successful.~ + T3.2 
 ++ ~I didn't ask for your comment, but it is certainly true.~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",-3)~ + T3.3
 
 CHAIN X3EmiJ T3.1 
@@ -2591,7 +2591,7 @@ CHAIN X3EmiJ T3.3
 EXTERN X3EmiJ T3.4 
 
 CHAIN X3EmiJ T3.4
-~Would you be able to give me advice? About leading people? I want to be a good leader for house Castille.~
+~Would you be able to give me advice? About leading people? I want to be a good leader for house Castilla.~
 END 
 ++ ~You'll do fine, Emily. You're charismatic enough. The rest you just have to learn as you go.~ + T3.5 
 ++ ~Listen attentively, and consider all options. Once you commit on a decision, there's no going back.~ + T3.6 
@@ -2612,7 +2612,7 @@ CHAIN X3EmiJ T3.5
 EXTERN X3EmiJ T3.9
 
 CHAIN X3EmiJ T3.6 
-~That sounds almost scary. One wrong move, and everything falls apart, you serve the wrong dish, your family name isdisgraced, and people are laughing at you because you put your brassierie on backwards.~
+~That sounds almost scary. One wrong move, and everything falls apart, you serve the wrong dish, your family name is disgraced, and people are laughing at you because you put your brassierie on backwards.~
 == X3EmiJ ~Maybe not that extreme, but it has happened once. Backwards clothing, that is.~
 EXTERN X3EmiJ T3.9
 
@@ -2637,7 +2637,7 @@ CHAIN X3EmiJ T3.10
 EXTERN X3EmiJ T3.11 
 
 CHAIN X3EmiJ T3.11 
-~Our relationship wasn't always so...rough. I remember he danced with me once at an outing. It was cute to the others, but I was embarrased when I stepped on his foot. But he was so kind and you know, assuring, young brotherly.~
+~Our relationship wasn't always so...rough. I remember he danced with me once at an outing. It was cute to the others, but I was embarrassed when I stepped on his foot. But he was so kind and you know, assuring, young brotherly.~
 == X3EMiJ ~But then hiding my heritage really created a divide in the family, especially in him. I'm not sure if he began to despite me because I kept it from him, or because I was not a full-blooded sister to him, with my mother being an elf.~
 END 
 ++ ~Why didn't you tell him?~ + T3.12 
@@ -2646,7 +2646,7 @@ END
 ++ ~We can talk more about this another time.~ + T3.XX
 
 CHAIN X3EmiJ T3.12 
-~Father was insistant even he was in the dark. Only he and step-mother knew, really. But my brother wasn't stupid, and it's not hard to see your sister is doing all she can to hide her ears, with hats or hair-styles.~
+~Father was insistent even he was in the dark. Only he and step-mother knew, really. But my brother wasn't stupid, and it's not hard to see your sister is doing all she can to hide her ears, with hats or hair-styles.~
 EXTERN X3EmiJ T3.15 
 
 CHAIN X3EmiJ T3.13 
@@ -2867,7 +2867,7 @@ CHAIN X3EmiJ T7.X
 EXIT 
 
 CHAIN X3EmiJ T7.1
-~She and my father helped eachother through some dangerous times in the Tethyrian civil war. She helped rescue him from a mob that would have probably killed him.~
+~She and my father helped each other through some dangerous times in the Tethyrian civil war. She helped rescue him from a mob that would have probably killed him.~
 = ~There was a time when my father was supposed to marry her, but instead he was introduced to her friend, who turned out to be my stepmother.~
 = ~They've talked about Godfrey and I, but you know...with all of this heir stuff, that isn't going to go anywhere.~
 END 
@@ -2893,7 +2893,7 @@ CHAIN X3EmiJ T7.6
 EXTERN X3EmiJ T7.5
 
 CHAIN X3EmiJ T7.5
-~Anyway! Onwards, as they say. Somewhere, at least.~
+~Anyway! Onward, as they say. Somewhere, at least.~
 EXIT 
 
 // Talk 8: Post Slayer Change Romance and Non Romance 
@@ -3077,7 +3077,7 @@ END
 ++ ~There isn't anything wrong with that, Emily.~ DO ~IncrementGlobal("X3EmiAppChange","LOCALS",1)~  + 2.5
 
 CHAIN X3EmiJ 2.4B 
-~Thomas and I weren't like that. I wish we were. But I guess it is too late, now. I wish things whad been different.~
+~Thomas and I weren't like that. I wish we were. But I guess it is too late, now. I wish things had been different.~
 END 
 ++ ~What's done is done. You can't change anything.~ + 2.6B
 ++ ~I can understand. Imoen and I don't have a perfect relationship either.~ + 2.6
@@ -3151,7 +3151,7 @@ CHAIN X3EmiJ 3.3
 EXTERN X3EmiJ 3.4
 
 CHAIN X3EmiJ 3.4
-~I guess regeants and councilors and other government leaders are more focused on looking across the border, or about themselves more than all of the people they govern.~
+~I guess regents and councilors and other government leaders are more focused on looking across the border, or about themselves more than all of the people they govern.~
 END 
 ++ ~Don't they have many other responsibilities too? They can't worry about every other issue that crops up.~ + 3.5
 ++ ~I didn't know you had such strong views on government.~ + 3.6
@@ -3248,13 +3248,13 @@ CHAIN X3EmiJ 4.12
 EXIT 
 
 CHAIN X3EmiJ 4.13 
-~See, I am glad we agree that Emily should never be a priestess. Together, we have avoided a great tragedy from occuring.~
+~See, I am glad we agree that Emily should never be a priestess. Together, we have avoided a great tragedy from occurring.~
 EXIT 
 
 CHAIN X3EmiJ 4.7
 ~That is what everyone in my family would say. It's just...I want to represent values greater than just classic, conservative nobility. And when I used the word "greater", I always offended someone.~
 END 
-++ ~Not suprising, if you were using it to other nobles.~ + 4.14
+++ ~Not surprising, if you were using it to other nobles.~ + 4.14
 ++ ~I am sure you'll think of someone that suits you.~ + 4.10
 ++ ~Those values are tried and true for a reason, don't you think?~ DO ~IncrementGlobal("X3EmiAppChange","LOCALS",-1)~  + 4.15
 
@@ -3279,7 +3279,7 @@ CHAIN X3EmiJ 4.15
 EXTERN X3EmiJ 4.10
 
 CHAIN X3EmiJ 4.4 
-~You're...faithless? That's...scary. But I guess it's better to be that than say you revere them but not follow their guidances and wishes.~
+~You're...faithless? That's...scary. But I guess it's better to be that than say you revere them but not follow their guidance and wishes.~
 EXTERN X3EmiJ 4.5 
 
 CHAIN X3EmiJ 4.X 
@@ -3361,7 +3361,7 @@ EXIT
 
 CHAIN X3EmiJ 6.1 
 ~I was dreaming...dueling Thomas over contention for leadership. I was at a disadvantage and despite yielding, his sword went through me.~
-= ~Thomas is a great swordsman. But gods, why were we fighting? I don't want to murder eachother.~
+= ~Thomas is a great swordsman. But gods, why were we fighting? I don't want to murder each other.~
 END 
 ++ ~It's not real. Isn't this all decided by a vote anyway?~ + 6.2 
 ++ ~Sometimes you have to make hard decisions to achieve great power.~ DO ~IncrementGlobal("X3EmiAppChange","LOCALS",-1)~ + 6.3
@@ -3424,7 +3424,7 @@ CHAIN X3EmiJ 6.11
 EXTERN X3EmiJ 6.9
 
 CHAIN X3EmiJ 6.9
-~I'm sorry! I wasn't realizing I was...nevermind, I'm just really tired. We should get some rest before we set out again. Thank you...<CHARNAME>.~
+~I'm sorry! I wasn't realizing I was...never mind, I'm just really tired. We should get some rest before we set out again. Thank you...<CHARNAME>.~
 DO ~RestParty()~
 EXIT 
 
@@ -3449,7 +3449,7 @@ END
 ++ ~I'm not interested in talking right now, Emily.~ + 7.X 
 
 CHAIN X3EmiJ 7.X 
-~Oh? Well, then I will stop chattering. Chittering. Chitter chattering? Oh, nevermind me.~
+~Oh? Well, then I will stop chattering. Chittering. Chitter chattering? Oh, never mind me.~
 EXIT 
 
 CHAIN X3EmiJ 7.1 
@@ -3530,7 +3530,7 @@ EXTERN X3EmiJ 8.4
 
 
 CHAIN X3EmiJ 8.3 
-~A life on the road forever? Honestly, that sounds exhilirating. But I know I couldn't shirk my responsibility to my home or my homeland forever.~
+~A life on the road forever? Honestly, that sounds exhilarating. But I know I couldn't shirk my responsibility to my home or my homeland forever.~
 EXTERN X3EmiJ 8.4
 
 CHAIN X3EmiJ 8.4 
@@ -3556,7 +3556,7 @@ CHAIN X3EmiJ 8.6
 EXIT 
 
 CHAIN X3EmiJ 8.10
-~Right...useful. I guess I was thinking something else and wrong. Nevermind me, then.~
+~Right...useful. I guess I was thinking something else and wrong. Never mind me, then.~
 DO ~SetGlobal("X3EmiRomanceActive","GLOBAL",3)~
 EXIT 
 
@@ -3575,7 +3575,7 @@ CHAIN IF ~Global("X3EmiLoveTalk","LOCALS",18)~ THEN X3EmiJ LoveTalk9
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiLoveTalk","LOCALS",1)~
 END 
 ++ ~What makes you say that?~ + 9.1 
-++ ~I defintely know that.~ + 9.1 
+++ ~I definitely know that.~ + 9.1 
 ++ ~And?~ + 9.1
 
 CHAIN X3EmiJ 9.1 
@@ -3588,10 +3588,10 @@ END
 ++ ~Well, thanks, but, shouldn't we be going?~ + 9.X
 
 CHAIN X3EmiJ 9.X 
-~Oh your...not interested I guess. Well, onwards!~
+~Oh your...not interested I guess. Well, onward!~
 END 
 ++ ~Wait, what do you mean by that?~ + 9.4
-++ ~Onwards.~ DO ~SetGlobal("X3EmiRomanceActive","GLOBAL",3)~ EXIT 
+++ ~Onward.~ DO ~SetGlobal("X3EmiRomanceActive","GLOBAL",3)~ EXIT 
 
 CHAIN X3EmiJ 9.3 
 ~I think it is more then that. But I guess I'm just...going around what I really want to say.~
@@ -3654,7 +3654,7 @@ EXIT
 
 CHAIN X3EmiJ 9.RejectB
 ~Well then. I will stop stressing. I don't even know why panicking about it mattered. I guess I am just quirky sometimes.~
-= ~Let's just keep moving and...forget about this embarrasing moment.~
+= ~Let's just keep moving and...forget about this embarrassing moment.~
 EXIT 
 
 //Love Talk 10
@@ -3709,7 +3709,7 @@ CHAIN X3EmiJ 10.6
 EXTERN X3EmiJ 10.7
 
 CHAIN X3EmiJ 10.7
-~They loved eachother. They had me. But my father gave it all up for family and what tradition demanded.~
+~They loved each other. They had me. But my father gave it all up for family and what tradition demanded.~
 END 
 ++ ~Maybe that still happens, but isn't all of that worth the pain?~ DO ~IncrementGlobal("X3EmiAppChange","LOCALS",1)~ + 10.9
 ++ ~We're not at Tethyr now. We can enjoy this for the moment. Maybe it doesn't last, maybe it does.~ + 10.9
@@ -3970,7 +3970,7 @@ DO ~SetGlobal("X3EmiRomanceActive","GLOBAL",3)
 SetGlobal("X3EmiRomanceConflict","GLOBAL",2)~ EXIT
 
 CHAIN X3EmiJ RC.Neera
-~I like Neera, and I hope things work out. I just...am a bit dissapointed. But I understand.~
+~I like Neera, and I hope things work out. I just...am a bit disappointed. But I understand.~
 DO ~SetGlobal("X3EmiRomanceActive","GLOBAL",3)
 SetGlobal("X3EmiRomanceConflict","GLOBAL",2)~ EXIT
 
@@ -3985,7 +3985,7 @@ DO ~SetGlobal("X3EmiRomanceActive","GLOBAL",3)
 SetGlobal("X3EmiRomanceConflict","GLOBAL",2)~ EXIT
 
 CHAIN X3EmiJ RC.Sirene
-~I don't know what to think about that. She's a good person, but...the opposite of me in some er, physical ways. I won't say I'm dissapointed but...I'm glad we had this talk.~
+~I don't know what to think about that. She's a good person, but...the opposite of me in some er, physical ways. I won't say I'm disappointed but...I'm glad we had this talk.~
 DO ~SetGlobal("X3EmiRomanceActive","GLOBAL",3)
 SetGlobal("X3EmiRomanceConflict","GLOBAL",2)~ EXIT
 
@@ -4087,12 +4087,12 @@ CHAIN X3EmiJ 13.1
 EXTERN X3EmiJ 13.2 
 
 CHAIN X3EmiJ 13.2 
-~I guess you've met one of them, Catherine. You would love our blacksmith too. He always entertained my curiousities about the trade. Ooh, and our stablemaster. We should ride horses together.~
+~I guess you've met one of them, Catherine. You would love our blacksmith too. He always entertained my curiosities about the trade. Ooh, and our stablemaster. We should ride horses together.~
 = ~I guess that's all silly though. I mean we don't know how this adventure will go but...is it wrong for me to think ahead?~
 END 
 ++ ~Are you sure they'll accept me?~ + 13.6
 ++ ~Not at all. I wouldn't mind taking a trip to your estate someday.~ + 13.7
-++ ~Definitely. We could die anyday now. Best we keep grounded.~ + 13.5
+++ ~Definitely. We could die any day now. Best we keep grounded.~ + 13.5
 
 CHAIN X3EmiJ 13.5
 ~Right. I guess I shouldn't be thinking that way.~
@@ -4144,7 +4144,7 @@ CHAIN X3EmiJ 13.7
 EXTERN X3EmiJ 13.8
 
 CHAIN IF ~Global("X3EmiLoveDrow","LOCALS",1)~ THEN X3EmiJ LoveTalk14 // Only happens if the dragon wasn't killed.
-~Wow. So we survive spellhold, brave through the underdark, enter a silver dragon's lair...and we are now drow. This is...crazy. Am I the only one?~ [X3ELS]
+~Wow. So we survive spellhold, brave through the Underdark, enter a silver dragon's lair...and we are now drow. This is...crazy. Am I the only one?~ [X3ELS]
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",6)IncrementGlobal("X3EmiLoveDrow","LOCALS",1)~
 END 
 ++ ~Easy love. You'll have to start acting more like a drow once we enter the city.~ + 14.1 
@@ -4317,7 +4317,7 @@ CHAIN X3EmiJ 16.16
 DO ~SetGlobal("X3Slept","LOCALS",1)RestParty()~ EXIT 
 
 CHAIN X3EmiJ 16.15
-~(You roll her over as she gasps in suprise. As you hover over her to begin, a bashful grin forms on her face, before she lets a few words escape her lips..)~
+~(You roll her over as she gasps in surprise. As you hover over her to begin, a bashful grin forms on her face, before she lets a few words escape her lips..)~
 EXTERN X3EmiJ 16.16
 
 CHAIN X3EmiJ 16.2 
@@ -4327,7 +4327,7 @@ EXTERN X3EmiJ 16.4
 CHAIN X3EmiJ 16.17
 ~What? Er, why not? Am I...unattractive?~
 END 
-++ ~Nevermind. I'm just nervous.~ + 16.21
+++ ~Never mind. I'm just nervous.~ + 16.21
 ++ ~Emily, you are beautiful. I just...want this to be perfect.~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",1)~ + 16.20
 ++ ~I want to wait. I don't want to rush it because of that mad man.~ + 16.19
 ++ ~Yes. Your body just isn't exciting me.~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",-4)~ + 16.XX
@@ -4409,7 +4409,7 @@ CHAIN X3EmiJ Group.Kiss
 == X3KalJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~Heh, don't mind me. I like to observe.~
 == X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~Hee. I think this is endearing.~
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Ugh. Mutt-snogging. I'm going to be sick.~
-== X3EmiJ ~Oh, nevermind that. Come here.~
+== X3EmiJ ~Oh, never mind that. Come here.~
 == X3EmiJ ~Mmm. Now that is enough public display of affection for now.~
 EXIT 
 
@@ -4426,12 +4426,12 @@ SAY ~I...oh gods, how do you even speak up about something like? I'm just going 
 END 
 
 IF ~~ LBreak.1 
-SAY ~Yes. That is sadly exactly what I am doing. In a very unskilled way, not that anyone wants to be skilled at this but...nevermind that.~
+SAY ~Yes. That is sadly exactly what I am doing. In a very unskilled way, not that anyone wants to be skilled at this but...never mind that.~
 IF ~~ DO ~SetGlobal("X3BreakUp","LOCALS",3)SetGlobal("X3EmiRomanceActive","GLOBAL",3)~ + LBreak.4
 END 
 
 IF ~~ LBreak.2 
-SAY ~Honestly, I'm kind of dissapointed you aren't. I guess that is why I do want to end it. You just don't seem to care.~
+SAY ~Honestly, I'm kind of disappointed you aren't. I guess that is why I do want to end it. You just don't seem to care.~
 IF ~~ DO ~SetGlobal("X3BreakUp","LOCALS",3)SetGlobal("X3EmiRomanceActive","GLOBAL",3)~ + LBreak.4 
 END 
 
@@ -4441,7 +4441,7 @@ IF ~~ DO ~SetGlobal("X3BreakUp","LOCALS",3)SetGlobal("X3EmiRomanceActive","GLOBA
 END 
 
 IF ~~ LBreak.4 
-SAY ~I'd like to stay still, but I know it will be awkard. I can leave if that's what you prefer..~
+SAY ~I'd like to stay still, but I know it will be awkward. I can leave if that's what you prefer..~
 ++ ~I wouldn't be comfortable with you around.~ + LBreak.5 
 ++ ~I don't want you here. Give me your equipment and go.~ + LBreak.6 
 ++ ~No, no. You can stay.~ + LBreak.7
@@ -4492,7 +4492,7 @@ SAY ~Unless there's going to be a change of how you do things, I am afraid I am 
 END 
 
 IF ~~ Break.4 
-SAY ~...Then I go. Goodbye, <CHARNAME>. We won't see eachother again.~
+SAY ~...Then I go. Goodbye, <CHARNAME>. We won't see each other again.~
 IF ~~ DO ~SetGlobal("X3Break","LOCALS",4)LeaveParty()EscapeArea()~
 EXIT 
 END 
@@ -4579,14 +4579,14 @@ SAY ~Ooh. I'd love to. Where to begin...~
 = ~My homeland is south of Amn, and ruled by Queen Zaranda. There's large forests where the elves come their home, and rivers where we settle in some of our towns and cities, like Saradush. We have some rocky badlands and mountains and border the sea. There's a bit of everything in Tethyr, I like to say.~
 = ~The estate I live in is southeast of Brost. We were a bit lucky, the civil war didn't hit the north as much as it hit the south.~
 ++ ~A civil war?~ + PTethyr.1
-++ ~It sounds similiar to Amn or the countryside around Baldur's Gate.~ + PTethyr.2 
+++ ~It sounds similar to Amn or the countryside around Baldur's Gate.~ + PTethyr.2 
 ++ ~Were you happy there?~ + PTethyr.3
 ++ ~Let's talk about something else.~ + main.PID 
 END 
 
 IF ~~ PTethyr.1
 SAY ~Oh yes. There was a big civil war after the demise of the last royalty. I was but a baby when it started.~
-= ~One of our family friends was lost. All killed and executed by mobs. We have a shrine to commerate their memory, but nothing else of them survived, save stepmother, who was a member.~
+= ~One of our family friends was lost. All killed and executed by mobs. We have a shrine to commemorate their memory, but nothing else of them survived, save stepmother, who was a member.~
 = ~It ended once Queen Zaranda, not quite queen yet, helped restore order to the land. She was a legendary adventurer at the time. She kind of inspires me on my own travels.~
 ++ ~Were you happy in Tethyr?~ + PTethyr.3 
 ++ ~Let's talk about something else.~ + main.PID 
@@ -4609,7 +4609,7 @@ SAY ~That's an interesting question. For the land, yes. For the stress of the di
 END 
 
 IF ~~ PID.Estate 
-SAY ~Oh the estate was lovely, if very priviliged.~
+SAY ~Oh the estate was lovely, if very privileged.~
 = ~It overlooked the outskirts of Brost and several farms that helped feed the region. We had tradesmen from the town serve my family, and my family in turned helped protect Brost.~
 = ~I wasn't allowed to do that though. Not without sneaking out.~
 ++ ~Which you did, I imagine.~ + PEstate.1
@@ -4620,7 +4620,7 @@ END
 
 
 IF ~~ PEstate.1
-SAY ~On occasion. I wasn't defenseless. Sometimes I just wanted to see what the world was like outside the walls of home. Othertimes, I heard about a bit of trouble and wanted to see if I could help.~
+SAY ~On occasion. I wasn't defenseless. Sometimes I just wanted to see what the world was like outside the walls of home. Other times, I heard about a bit of trouble and wanted to see if I could help.~
 = ~I failed miserably once and barely escaped from a highwayman I was looking out for on behalf of one of our robbed merchants. That's when father took more of an interest in actually allowing me to use a bow without having to lie about.~
 ++ ~I can't blame you. Life in your estate sounds boring.~ + PEstate.2 
 ++ ~You had a peaceful life. Why leave that for adventure?~ + PEstate.3 
@@ -4643,7 +4643,7 @@ END
 
 IF ~~ PID.Family 
 SAY ~Well, there's all the makings of a normal family. A protective father, an obnoxious brother, and a stern stepmother.~
-= ~My stepmother, Elissa, is the last surviving member of House Crestwing, wiped out during the civil war. She's widely respected and loved by everyone, though she alway sspoke so little. We were never really close. I sometimes think it was because I was not hers.~
+= ~My stepmother, Elissa, is the last surviving member of House Crestwing, wiped out during the civil war. She's widely respected and loved by everyone, though she always spoke so little. We were never really close. I sometimes think it was because I was not hers.~
 = ~Still, she...she took me as her own. Taught me about etiquette and how to behave properly. Her lessons were stern, but I remember them well, even if it wasn't the form of love I was hoping for.~
 ++ ~I wouldn't want to get too close to a stepchild either.~ + PFamily.1 
 ++ ~I can see how that might have been hard.~ + PFamily.2 
@@ -4721,7 +4721,7 @@ IF ~~ PID.Mother
 SAY ~Far...less than I would like.~
 = ~I know she came from the Forest of Tethir. My father had told stories of the elves there, and she was an elf. They traveled together for a time, and fell in love.~
 = ~My mother's parents were wary of him, and his parents were wary of my father adventuring at all. They had no idea he was with an elf, and wouldn't have approved.~
-++ ~Is that why they seperated?~ + PMother.1 
+++ ~Is that why they separated?~ + PMother.1 
 ++ ~Have you learned anything about her since?~ + PMother.2 
 ++ ~Do you know anything about her after you were born?~ + PMother.2
 END
@@ -4729,7 +4729,7 @@ END
 
 
 IF ~~ PMother.1  
-SAY ~Father was pushed to lead House Castella, as my grandfather was become unwell and sick, and the clerics could not cure it. And my family could not accept a non-human wife.~
+SAY ~Father was pushed to lead House Castilla, as my grandfather was become unwell and sick, and the clerics could not cure it. And my family could not accept a non-human wife.~
 = ~And so because she loved him, and wished him the best, she left without warning. She returned only to birth me in the castle, and leave me with him and his new wife, because she couldn't take me with her on the road.~
 = ~My father was always bitter about that. I think he just wished a way where she would have fought for him to try to still be with her. I think he would have said yes.~
 ++ ~Why isn't your family okay with an elf?~ + PMother.3 
@@ -4779,14 +4779,14 @@ SAY ~Because these are sacred elven secrets. And I would be adverse to betraying
 END 
 
 IF ~~ PID.Archery2 
-SAY ~Well, there was a little bit with the sword and rapier, but I was always awful. People just laughed at my form and I tried to avoid instruction on the blade when I could out of embarrasment.~
+SAY ~Well, there was a little bit with the sword and rapier, but I was always awful. People just laughed at my form and I tried to avoid instruction on the blade when I could out of embarrassment.~
 ++ ~Let's talk about something else.~ + main.PID 
 ++ ~Let's keep moving.~ EXIT 
 END 
 
 IF ~~ Heir.AftermathWon
 SAY ~It's starting to settle in. I'll have so much responsibility soon. I'm forming some ideas and plans I'd like to try to enact when I return, and people to talk to for advice and assistance. I want to lead right and well.~
-= ~But right now my devotion is to your goals and cause. House Castella will wait.~
+= ~But right now my devotion is to your goals and cause. House Castilla will wait.~
 ++ ~Let's talk about something else.~ + main.PID 
 ++ ~Let's keep moving.~ EXIT 
 END 
@@ -4799,7 +4799,7 @@ SAY ~I'm still depressed about it. But now in a way it allows me to do what I wa
 END 
 
 IF ~~ PID.Crafting
-SAY ~Well, Fletchers don't usually make bows and crossbows while on the move. Even if I could do that, I don't have the materials.~
+SAY ~Well, fletchers don't usually make bows and crossbows while on the move. Even if I could do that, I don't have the materials.~
 = ~But I do have just enough to improve on a single bow or crossbow. If you want me to do that, just show me a bow or crossbow you'd like me to modify with my materials. Just be sure that's the one you want me to work.~
 = ~I would strongly suggest it's not just some generic bow or crossbow. Else it wouldn't be a great use of material.~
 ++ ~I might have a weapon for you to look at, then.~ + Craft.PID 
@@ -4851,7 +4851,7 @@ END
 IF ~~ RomanceInt.Talk
 SAY ~Not until now. What has inspired you to such words?~
 ++ ~Your eyes. I've never seen such gorgeous golden flecks.~ + RI.eyes 
-++ ~Your hair is a beautful blonde hue.~ + RI.hair 
+++ ~Your hair is a beautiful blonde hue.~ + RI.hair 
 ++ ~Your face is serene.~ + RI.face 
 ++ ~Well, it's really your bosom.~ + RI.bosom 
 ++ ~Nothing. I just wanted to see your reaction.~ + RI.reaction
@@ -4859,7 +4859,7 @@ END
 
 IF ~~ RI.eyes 
 SAY ~My eyes, hmm? I...am actually flattered. I always worried that my eyes made me unnatural.~
-= ~They're not exactly a normal human feature, though neither are they an elven one or a trait of anyone but my birth mother. It definetely brought out some questions at the dinner table.~
+= ~They're not exactly a normal human feature, though neither are they an elven one or a trait of anyone but my birth mother. It definitely brought out some questions at the dinner table.~
 ++ ~I am sure that must have been fun.~ + RI.E1
 ++ ~They were probably just jealous, wanting those eyes for themselves.~ + RI.E2
 ++ ~They do look a little unnatural.~ + RI.E3
@@ -4947,7 +4947,7 @@ IF ~~ + RI.exit
 END 
 
 IF ~~ RI.b2 
-SAY ~And officailly creeped out. Let's not...talk about this anymore. Or ever again.~
+SAY ~And officially creeped out. Let's not...talk about this anymore. Or ever again.~
 IF ~~ DO ~SetGlobal("X3EmiRomanceActive","GLOBAL",3)IncrementGlobal("X3EmiAppChange","GLOBAL",-4)~ EXIT 
 END 
 
@@ -4986,7 +4986,7 @@ END
 
 IF ~~ BU.2 
 SAY ~When will it? Life *is* crazy. Life's arrows curve all over the place. The only thing that is certain is love.~
-= ~We can find stability and comfort in that love, in eachother.~
+= ~We can find stability and comfort in that love, in each other.~
 IF ~~ + BU.5
 END 
 
@@ -5025,7 +5025,7 @@ SAY ~I could certainly try and see if it's something I could work with. Show me 
 +~PartyHasItem("XBOW15")Global("UnqualifiedXBow2","LOCALS",0)~+ ~I'd like Firetooth to be modified.~ DO ~SetGlobal("UnqualifiedXBow2","LOCALS",1)~ + FiretoothXBow
 +~PartyHasItem("XBOW16")Global("UnqualifiedXBow2","LOCALS",0)~+ ~I'd like Firetooth to be modified.~ DO ~SetGlobal("UnqualifiedXBow2","LOCALS",1)~ + CespenarBow
 ++ ~Let's talk about something else.~ + main.PID 
-++ ~Nevermind actually. Let's keep moving.~ EXIT 
+++ ~Never mind actually. Let's keep moving.~ EXIT 
 END 
 
 IF ~~ Craft.PID2 
@@ -5051,7 +5051,7 @@ SAY ~Perhaps there is another bow or crossbow you want me to look at?~
 +~PartyHasItem("XBOW15")Global("UnqualifiedXBow2","LOCALS",0)~+ ~I'd like Firetooth to be modified.~ DO ~SetGlobal("UnqualifiedXBow2","LOCALS",1)~ + FiretoothXBow
 +~PartyHasItem("XBOW16")Global("UnqualifiedXBow2","LOCALS",0)~+ ~I'd like Firetooth to be modified.~ DO ~SetGlobal("UnqualifiedXBow2","LOCALS",1)~ + CespenarBow
 ++ ~Let's talk about something else.~ + main.PID 
-++ ~Nevermind actually. Let's keep moving.~ EXIT 
+++ ~Never mind actually. Let's keep moving.~ EXIT 
 END 
 
 IF ~~ Craft.Think  

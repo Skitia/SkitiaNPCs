@@ -31,7 +31,7 @@ EXTERN X3VSAGE story
 
 CHAIN X3VieJ quest_two 
 ~Whatever, you have it now. Surely you can tell me what I want to know?~
-== X3VSAGE ~I shall, but you may be dissapointed, Vienxay.~ 
+== X3VSAGE ~I shall, but you may be disappointed, Vienxay.~ 
 EXTERN X3VSAGE story 
 
 CHAIN X3VSAGE story 
@@ -72,13 +72,13 @@ CHAIN X3VieJ Vienxay_comment
 EXIT 
 
 CHAIN X3VSAGE recovered 
-~If by some miracle you recovered it? I would want it brought here. But that tome was lost not far from Suldanessar, and likely lies in some foul under city. Only death awaits any attempt, and like my father, I would beg you not try.~
+~If by some miracle you recovered it? I would want it brought here. But that tome was lost not far from Suldanessellar, and likely lies in some foul under city. Only death awaits any attempt, and like my father, I would beg you not try.~
 == X3VSAGE ~It is best this way. It serves as a fitting reminder of arrogance and humbles us to be cautious of all of our people's lives. The tome is lost, and it will always be lost.~
 EXIT 
 
 CHAIN X3VSAGE heart 
 ~I am glad. Perhaps by some miracle, the tome may be recovered some day from the pits of the dark. Perhaps...~
-== X3VSAGE ~No. It is best it remains lost. For any blood that dies to retrieve it is t ragic and not worth the moment. It is best it stays lost.~
+== X3VSAGE ~No. It is best it remains lost. For any blood that dies to retrieve it is tragic and not worth the moment. It is best it stays lost.~
 EXIT 
 
 CHAIN X3VSAGE not_worth 
@@ -190,13 +190,13 @@ END
 ++ ~Handle it yourself. We have important matters to get to.~ DO ~SetGlobal("X3VieAppChange","GLOBAL",4)~ + no_time 
 
 CHAIN X3VSAGE assist 
-~Ah, wonderful, I was worrying there was not many brave people out here anymore. As I said, I believe I ran across them somewhere to the northwest. Hopefully they have'nt torn them apart, I'd hate to have to start my note-taking all over again.~
+~Ah, wonderful, I was worrying there was not many brave people out here anymore. As I said, I believe I ran across them somewhere to the northwest. Hopefully they haven't torn them apart, I'd hate to have to start my note-taking all over again.~
 DO ~IncrementGlobal("X3VieQuest","GLOBAL",1)AddJournalEntry(@3,QUEST)~
 EXIT 
  
  CHAIN X3VSAGE book_info 
  ~Vienxay here wishes to learn about a tome of ancient magic, do you not?~
- == X3VieJ ~Yes, I would quite much like to learn waht you know.~
+ == X3VieJ ~Yes, I would quite much like to learn what you know.~
  == X3VSAGE ~Then I believe my notes for a bit of sharing from myself is more than fair. You would be doing quite a favor for me, and I do like to talk about history to willing students. So what will it be?~
  END 
 ++ ~Certainly, we would be glad to help.~ + assist 
@@ -225,7 +225,7 @@ END
 +~CheckStatLT(Player1,14,CHR)~+ ~Maybe if you sweeten the deal a little.~ + gold_fail 
   
 CHAIN X3VSAGE book_info3 
-~And I will be glad to share, if you can get my notes from wolves just northeast from here. A fair trade, I would think, though never again will I take a stroll so far away from town without some magic preperations!~
+~And I will be glad to share, if you can get my notes from wolves just northeast from here. A fair trade, I would think, though never again will I take a stroll so far away from town without some magic preparations!~
 END 
 ++ ~Certainly, we would be glad to help.~ + assist 
 ++ ~Handle it yourself. We have important matters to get to.~ DO ~SetGlobal("X3VieAppChange","GLOBAL",4)~ + no_time 

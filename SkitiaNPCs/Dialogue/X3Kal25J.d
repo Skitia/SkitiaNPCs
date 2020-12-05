@@ -135,7 +135,7 @@ EXTERN X3Kal25J X3KalVoloBio
 
 
 CHAIN SARVOLO X3KalVoloBio2
-~The halfling warrior who tells tales larger than life, Kale has found himself a place by <CHARNAME>'s side. Defending his beloved from all threats, he creates his own legend as a great protecter of many grand feats, though whether born of truth or exaggeration remains to be seen.~
+~The halfling warrior who tells tales larger than life, Kale has found himself a place by <CHARNAME>'s side. Defending his beloved from all threats, he creates his own legend as a great protector of many grand feats, though whether born of truth or exaggeration remains to be seen.~
 EXTERN X3Kal25J X3KalVoloBio
 
 CHAIN X3Kal25J X3KalVoloBio
@@ -185,7 +185,7 @@ IF ~IsValidForPartyDialogue("X3Kal")Global("X3KalRomanceActive","GLOBAL",2) Glob
 END
 
 CHAIN X3Kal25J X3KalSolarPers
-~Damn. I feel quesy all of a sudden, and I thought the fighting would be the scariest part today. But the thought of losing you? That's terrifying me more than anything thrown at us just a few moments ago.~
+~Damn. I feel queasy all of a sudden, and I thought the fighting would be the scariest part today. But the thought of losing you? That's terrifying me more than anything thrown at us just a few moments ago.~
 END
 ++ ~What do you think I should do?~ + FinalChoice.1
 ++ ~I can't imagine leaving you, Kale. I love you.~ + FinalChoice.2
@@ -242,7 +242,7 @@ IF ~IsValidForPartyDialogue("X3Kal") Global("X3KalRomanceActive","GLOBAL",2) Glo
 END
 
 CHAIN X3Kal25J X3KalSolarStay
-~<CHARNAME>! You have...aww damn, I won't break down now. I really thought you would be gone for good.~
+~<CHARNAME>! You have...Aww damn, I won't break down now. I really thought you would be gone for good.~
 END
 ++ ~Did you expect anything less of me?~ EXTERN X3Kal25J X3KalSolarStay1.1
 ++ ~I love you, Kale. I don't want to be anywhere else.~ EXTERN X3Kal25J X3KalSolarStay1.1
@@ -329,12 +329,12 @@ END
 ++ ~She better hope that isn't true, she wouldn't stand a chance.~ + T2.3
 
 CHAIN X3Kal25J T2.3 
-~That would be quite horrible if you had to. For both of your sakes let's pray it doens't come to that.~
+~That would be quite horrible if you had to. For both of your sakes let's pray it doesn't come to that.~
 EXTERN X3Kal25J T2.1
 
 CHAIN X3Kal25J T2.1
 ~You know, my father could have fathered some half-siblings out there. At least I'll never know, eh? Would be quite strange if we all of a sudden had to battle to the death.~
-= ~I'd come out of top of course, great as I am but... we kin hate killing eachother. Just isn't right.~
+= ~I'd come out of top of course, great as I am but... we kin hate killing each other. Just isn't right.~
 = ~Long shanks? Totally fine. Elf? Eh, they might deserve a stabbing when they get snippy and snooty...but another halfling? That's always just bloody tragic.~
 END 
 ++ ~What does this have to do with the other bhaalspawn?~ + T2.4
@@ -379,7 +379,7 @@ END
 ++ ~I have never really had any regrets.~ + T3.1
 ++ ~Is there something in particular you are thinking about?~ + T3.2
 ++ ~I don't have time to wonder. My destiny looms.~ + T3.3 
-++ ~Let's stay focused Kayle, we can't talk now.~ DO ~IncrementGlobal("X3KalAppChange","GLOBAL",-1)~ + T3.X 
+++ ~Let's stay focused Kale, we can't talk now.~ DO ~IncrementGlobal("X3KalAppChange","GLOBAL",-1)~ + T3.X 
 
 CHAIN X3Kal25J T3.X 
 ~All right, all right. Sheesh, sometimes you are too serious for your own good, mate.~
@@ -403,7 +403,7 @@ EXTERN X3Kal25J T3.2
 CHAIN X3Kal25J T3.Default 
 ~I'm going to go home after this, and amend things with my former love, if someone hasn't tied her down. Pretty and sparkly bright Alora.~
 = ~I was so afraid of being her husband and tied down, but I'm never going to have a bigger story than what I've done with you mate. I'm not even going to bother to try.~
-= ~I'm going to settle down, sire some little Kayle's, and have a lifetime of stories to share. Or if she wants to wander or travel, I always got plenty of energy for that too.~ 
+= ~I'm going to settle down, sire some little Kale's, and have a lifetime of stories to share. Or if she wants to wander or travel, I always got plenty of energy for that too.~ 
 END 
 ++ ~I remember Alora. I wish you luck if that's your goal.~ DO ~IncrementGlobal("X3KalAppChange","GLOBAL",1)~ + T3.D1
 ++ ~What if she doesn't want to be with you? What will you do then?~ + T3.D2
@@ -411,7 +411,7 @@ END
 
 CHAIN X3Kal25J T3.D1 
 ~Appreciated, mate. To be honest, it may not be an adventure but it is own "adventure". I might fail and that makes it all the more of a thrill.~
-= ~If that happens, ma's getting older and will need someone to watch out for her, and Gullykin could probably use a protecter.~
+= ~If that happens, ma's getting older and will need someone to watch out for her, and Gullykin could probably use a protector.~
 EXTERN X3Kal25J T3.D7 
 
 CHAIN X3Kal25J T3.3D 
@@ -445,7 +445,7 @@ EXIT
 CHAIN X3Kal25J T3.D4 
 ~Pfft, come on! You always hit me on that. I'll retell it true. Heck, I might have to tone down some things. People won't believe me if I tell it true. And that is bloody funny.~
 EXIT 
-// Only happens if Kayle is lawful (maybe) and Mazzy is in the party.
+// Only happens if Kale is lawful (maybe) and Mazzy is in the party.
 CHAIN X3Kal25J T3.Mazzy 
 ~I'm going to keep adventuring. But I don't want to really do it just for my own glory anymore, weird as it is to admit that.~
 = ~I want to travel with Mazzy if she lets me. That gal has a bright future ahead of her, and she'll need a shield to make sure it lasts. I think I'll be pretty good for that.~
@@ -488,7 +488,7 @@ CHAIN X3Kal25J T3.M7
 EXTERN X3Kal25J T3.M8
 
 CHAIN X3Kal25J T3.M8
-~I'm not going anywhere for now though, so don't start crying, your lovable Kayle is right here. I still got to get you to the end of this road.~
+~I'm not going anywhere for now though, so don't start crying, your lovable Kale is right here. I still got to get you to the end of this road.~
 EXIT 
 
 //Romance Talks 
@@ -830,7 +830,7 @@ DO ~StartCutSceneMode()
 EXIT 
 
 CHAIN X3Kal25J 4.12
-~(The suprise of your affection quickly dissipates and he eagerly returns your advances.)~
+~(The surprise of your affection quickly dissipates and he eagerly returns your advances.)~
 = ~Forget the others. Damn do I need you right now.~
 DO ~StartCutSceneMode()
 	FadeToColor([20.0],0)
@@ -964,7 +964,7 @@ END
 ++ ~I know you'll find someone willing to do this with you someday.~ DO ~IncrementGlobal("X3KalAppChange","GLOBAL",-1)~ + 7.5
 
 CHAIN X3Kal25J 7.5
-~...I don't know what to say. I'm...dissapointed, I guess.~
+~...I don't know what to say. I'm...disappointed, I guess.~
 = ~I'll still follow you to the end. I'll do that much for you. After that...I guess I'll figure out what to do with my life.~
 DO ~SetGlobal("X3KalRomanceActive","GLOBAL",3)~ 
 EXIT 
@@ -1003,7 +1003,7 @@ CHAIN X3Kal25J  7.9B
 EXTERN X3Kal25J 7.10
 
 CHAIN X3Kal25J 7.10
-~We tie our hands together, like this...then look eachother in the eye, and say something like this:~
+~We tie our hands together, like this...then look each other in the eye, and say something like this:~
 = ~I'll protect you, <CHARNAME>, and always have your back with my body or my shield. I'll keep you happy and pleased for as long as love lasts.~
 END 
 ++ ~I will protect you too, Kale, with all my heart. I'll keep you happy for as long as our love lasts.~ DO ~IncrementGlobal("X3KalAppChange","GLOBAL",2)~ + 7.1
@@ -1091,7 +1091,7 @@ APPEND X3Kal25J
 
 // Low Approval, Romanced 
 IF ~Global("X3BreakUp","LOCALS",2)~ LoveBreakUp 
-SAY ~Soo. Things have been kind of sour lately. I know this road is hard and all but...I know when a relationship has hit its end.~
+SAY ~Sooo. Things have been kind of sour lately. I know this road is hard and all but...I know when a relationship has hit its end.~
 = ~That's whats going on with us right now. You and me? I think it's time that stops. I don't know what it is but...you've been treating me far worse, mate.~
 = ~And that's...well I'm bloody worth something.~
 ++ ~Kale, please. Give me another chance.~ + LBreak.1
@@ -1248,7 +1248,7 @@ SAY ~My family, eh? Well, where to start...~
 = ~I've got Ma and Sam. Ma was part of a caravan before she came to Gullykin. Once she got round with me, she made roots and just never bothered getting up.~
 = ~Damn good with farm tools and growing things though, so the locals have no complaints.~
 ++ ~She never adventured?~ + PFamily.1 
-++ ~Compared to your life, your mother's is suprisingly simple.~ + PFamily.1 
+++ ~Compared to your life, your mother's is surprisingly simple.~ + PFamily.1 
 ++ ~Tell me about your brother, Sam.~ + PFamily.2
 ++ ~Let's talk about something else.~ + main.PID 
 END
@@ -1367,7 +1367,7 @@ SAY ~What? That is the most slanderous thing I have ever heard. You mate, need t
 END 
 
 IF ~~ PCloak.3 
-SAY ~Well mate, considering your own choice of attire, I'm not suprised. Didn't you grow up in a monastery? I didn't think you'd be the sharpest out there.~
+SAY ~Well mate, considering your own choice of attire, I'm not surprised. Didn't you grow up in a monastery? I didn't think you'd be the sharpest out there.~
 ++ ~I am allowed to have my own opinion.~ + PCloak.5
 ++ ~There's nothing wrong with what I am wearing.~ + PCloak.4
 ++ ~Let's talk about something else.~ + main.PID 
@@ -1439,12 +1439,12 @@ IF ~~ + BU.5
 END 
 
 IF ~~ BU.2 
-SAY ~Yeah...t'was fun. Honestly I...normally would even be okay with that reason. Not sure why I'm not.~
+SAY ~Yeah...'twas fun. Honestly I...normally would even be okay with that reason. Not sure why I'm not.~
 IF ~~ + BU.5 
 END 
 
 IF ~~ BU.3 
-SAY ~I don't know what that means...sounds like a reason I might give if I found something so stiffling. Maybe that's it.~
+SAY ~I don't know what that means...sounds like a reason I might give if I found something so stifling. Maybe that's it.~
 IF ~~ + BU.5 
 END 
 

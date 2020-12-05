@@ -1,4 +1,4 @@
-/* Note: START.d initiates the Five's NPC dialogues, but no one elses. */
+/* Note: START.d initiates the Five's NPC dialogues, but no one else's. */
 
 //This very specific version of Recorder's Post Party leaves for good, presumably seeking out Raban or rejoining him.
 CHAIN IF ~Global("X3RebKickedOut","LOCALS",0)AreaCheck("AR1512")InParty("IMOEN2")~ THEN X3RebP ImoenDepart
@@ -38,11 +38,11 @@ SetGlobal("X3RebKickedOut","LOCALS",0)~ SOLVED_JOURNAL @35
 EXIT 
 
 CHAIN X3RebP VS.4 
-~I do. I promise. Never, ever, will I let myself be seperated from you, my love. I thought I was protecting you, but now I see I was only hurting you.~
+~I do. I promise. Never, ever, will I let myself be separated from you, my love. I thought I was protecting you, but now I see I was only hurting you.~
 EXTERN X3RebP VS.3
 
 CHAIN X3RebP VS.2 
-~(You hold eachother tight, arms seeming to never let go. She wipes tears from her eyes and looks up to you.)~
+~(You hold each other tight, arms seeming to never let go. She wipes tears from her eyes and looks up to you.)~
 EXTERN X3RebP VS.1 
 
 
@@ -136,7 +136,7 @@ CHAIN X3EmiJ m5c
 EXTERN X3Reb m6 
 
 CHAIN X3Reb m6 
-~What brings you down to Athkalta?~ 
+~What brings you down to Athkatla?~ 
 END 
 ++ ~I am not here by choice. My childhood friend Imoen, was taken by the Cowled Wizards. I am trying to get her back.~ + m7a 
 ++ ~A wizard named Irenicus kidnapped and tortured me. I am going to track him down for what he did.~ + m7b 
@@ -174,14 +174,14 @@ IF ~IsValidForPartyDialogue("X3Kal")OR(2)!Global("X3RebPartyBG1","GLOBAL",1)!Glo
 IF ~!IsValidForPartyDialogue("X3Kal")~ EXIT 
 
 CHAIN X3KalJ m10a 
-~Soo. Welcome back to the group, Recorder. You wouldn't have happened to record my stories as well while you were working here?~
+~Sooo. Welcome back to the group, Recorder. You wouldn't have happened to record my stories as well while you were working here?~
 == X3RebJ ~Um...I think you have your story retelling in good hands with your own capable voice, Kale.~
 == X3KalJ ~Heh. Yeah, I so do.~
 EXIT 
 
 CHAIN X3KalJ m10b 
 ~Soooo. Pretty face, I get you recorded our leader <CHARNAME> here, but what about me? I'm pretty famous myself.~
-== X3RebJ ~Um...I'm sorry, I'm not familliar with you at all.~
+== X3RebJ ~Um...I'm sorry, I'm not familiar with you at all.~
 == X3KalJ ~Damn it! You really ought to make sure I get more credit on things, <CHARNAME>. People keep giving me doubting looks without the support.~
 EXIT 
 

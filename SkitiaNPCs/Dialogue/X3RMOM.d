@@ -100,23 +100,23 @@ EXIT
 //Alternate: Talked to Priest of Oghma First. 
 
 EXTEND_BOTTOM DOGHMA 0
-+ ~Global("X3RebVampire","GLOBAL",2)!Dead("X3RMOM")PartyHasItem("X3RBody")Global("X3RebVampTempleTalk","GLOBAL",0)~ + ~A friend took her own life to prevent herself from falling to vamprism, but we don't know how to bring her back. Given her time here, we thought you might know something.~ DO ~SetGlobal("X3RebVampTempleTalk","GLOBAL",1)~ EXTERN X3RMOM Rec_Vamp
-+ ~Global("X3RebVampire","GLOBAL",2)Dead("X3RMOM")PartyHasItem("X3RBody")Global("X3RebVampTempleTalk","GLOBAL",0)~ + ~A friend took her own life to prevent herself from falling to vamprism, but we don't know how to bring her back. Given her time here, we thought you might know something.~ DO ~SetGlobal("X3RebVampTempleTalk","GLOBAL",1)~ EXTERN DOGHMA Rec_Vamp
++ ~Global("X3RebVampire","GLOBAL",2)!Dead("X3RMOM")PartyHasItem("X3RBody")Global("X3RebVampTempleTalk","GLOBAL",0)~ + ~A friend took her own life to prevent herself from falling to vampirism, but we don't know how to bring her back. Given her time here, we thought you might know something.~ DO ~SetGlobal("X3RebVampTempleTalk","GLOBAL",1)~ EXTERN X3RMOM Rec_Vamp
++ ~Global("X3RebVampire","GLOBAL",2)Dead("X3RMOM")PartyHasItem("X3RBody")Global("X3RebVampTempleTalk","GLOBAL",0)~ + ~A friend took her own life to prevent herself from falling to vampirism, but we don't know how to bring her back. Given her time here, we thought you might know something.~ DO ~SetGlobal("X3RebVampTempleTalk","GLOBAL",1)~ EXTERN DOGHMA Rec_Vamp
 END
 
 EXTEND_BOTTOM DOGHMA 3
-+ ~Global("X3RebVampire","GLOBAL",2)!Dead("X3RMOM")PartyHasItem("X3RBody")Global("X3RebVampTempleTalk","GLOBAL",0)~ + ~A friend took her own life to prevent herself from falling to vamprism, but we don't know how to bring her back. Given her time here, we thought you might know something.~ DO ~SetGlobal("X3RebVampTempleTalk","GLOBAL",1)~ EXTERN X3RMOM Rec_Vamp
-+ ~Global("X3RebVampire","GLOBAL",2)Dead("X3RMOM")PartyHasItem("X3RBody")Global("X3RebVampTempleTalk","GLOBAL",0)~ + ~A friend took her own life to prevent herself from falling to vamprism, but we don't know how to bring her back. Given her time here, we thought you might know something.~ DO ~SetGlobal("X3RebVampTempleTalk","GLOBAL",1)~ EXTERN DOGHMA Rec_Vamp
++ ~Global("X3RebVampire","GLOBAL",2)!Dead("X3RMOM")PartyHasItem("X3RBody")Global("X3RebVampTempleTalk","GLOBAL",0)~ + ~A friend took her own life to prevent herself from falling to vampirism, but we don't know how to bring her back. Given her time here, we thought you might know something.~ DO ~SetGlobal("X3RebVampTempleTalk","GLOBAL",1)~ EXTERN X3RMOM Rec_Vamp
++ ~Global("X3RebVampire","GLOBAL",2)Dead("X3RMOM")PartyHasItem("X3RBody")Global("X3RebVampTempleTalk","GLOBAL",0)~ + ~A friend took her own life to prevent herself from falling to vampirism, but we don't know how to bring her back. Given her time here, we thought you might know something.~ DO ~SetGlobal("X3RebVampTempleTalk","GLOBAL",1)~ EXTERN DOGHMA Rec_Vamp
 END
 
 EXTEND_BOTTOM DOGHMA 7
-+ ~Global("X3RebVampire","GLOBAL",2)!Dead("X3RMOM")PartyHasItem("X3RBody")Global("X3RebVampTempleTalk","GLOBAL",0)~ + ~A friend took her own life to prevent herself from falling to vamprism, but we don't know how to bring her back. Given her time here, we thought you might know something.~ DO ~SetGlobal("X3RebVampTempleTalk","GLOBAL",1)~ EXTERN X3RMOM Rec_Vamp
-+ ~Global("X3RebVampire","GLOBAL",2)Dead("X3RMOM")PartyHasItem("X3RBody")Global("X3RebVampTempleTalk","GLOBAL",0)~ + ~A friend took her own life to prevent herself from falling to vamprism, but we don't know how to bring her back. Given her time here, we thought you might know something.~ DO ~SetGlobal("X3RebVampTempleTalk","GLOBAL",1)~ EXTERN DOGHMA Rec_Vamp
++ ~Global("X3RebVampire","GLOBAL",2)!Dead("X3RMOM")PartyHasItem("X3RBody")Global("X3RebVampTempleTalk","GLOBAL",0)~ + ~A friend took her own life to prevent herself from falling to vampirism, but we don't know how to bring her back. Given her time here, we thought you might know something.~ DO ~SetGlobal("X3RebVampTempleTalk","GLOBAL",1)~ EXTERN X3RMOM Rec_Vamp
++ ~Global("X3RebVampire","GLOBAL",2)Dead("X3RMOM")PartyHasItem("X3RBody")Global("X3RebVampTempleTalk","GLOBAL",0)~ + ~A friend took her own life to prevent herself from falling to vampirism, but we don't know how to bring her back. Given her time here, we thought you might know something.~ DO ~SetGlobal("X3RebVampTempleTalk","GLOBAL",1)~ EXTERN DOGHMA Rec_Vamp
 END
 
 EXTEND_BOTTOM DOGHMA 9
-+ ~Global("X3RebVampire","GLOBAL",2)!Dead("X3RMOM")PartyHasItem("X3RBody")Global("X3RebVampTempleTalk","GLOBAL",0)~ + ~A friend took her own life to prevent herself from falling to vamprism, but we don't know how to bring her back. Given her time here, we thought you might know something.~ DO ~SetGlobal("X3RebVampTempleTalk","GLOBAL",1)~ EXTERN X3RMOM Rec_Vamp
-+ ~Global("X3RebVampire","GLOBAL",2)Dead("X3RMOM")PartyHasItem("X3RBody")Global("X3RebVampTempleTalk","GLOBAL",0)~ + ~A friend took her own life to prevent herself from falling to vamprism, but we don't know how to bring her back. Given her time here, we thought you might know something.~ DO ~SetGlobal("X3RebVampTempleTalk","GLOBAL",1)~ EXTERN DOGHMA Rec_Vamp
++ ~Global("X3RebVampire","GLOBAL",2)!Dead("X3RMOM")PartyHasItem("X3RBody")Global("X3RebVampTempleTalk","GLOBAL",0)~ + ~A friend took her own life to prevent herself from falling to vampirism, but we don't know how to bring her back. Given her time here, we thought you might know something.~ DO ~SetGlobal("X3RebVampTempleTalk","GLOBAL",1)~ EXTERN X3RMOM Rec_Vamp
++ ~Global("X3RebVampire","GLOBAL",2)Dead("X3RMOM")PartyHasItem("X3RBody")Global("X3RebVampTempleTalk","GLOBAL",0)~ + ~A friend took her own life to prevent herself from falling to vampirism, but we don't know how to bring her back. Given her time here, we thought you might know something.~ DO ~SetGlobal("X3RebVampTempleTalk","GLOBAL",1)~ EXTERN DOGHMA Rec_Vamp
 END
 
 CHAIN DOGHMA Rec_Vamp
@@ -128,7 +128,7 @@ END
 ++ ~Why didn't you say anything, ferret?~ + Rec_Vamp3
 
 CHAIN DOGHMA Rec_Vamp2 
-~I recall a story where druids intimately connected to their bonded animal would temporarily merge with them to help defend the forest, and they would perform a ritual with a purple iolite and their hostless body to set them back.~
+~I recall a story where druids intimately connected to their bonded animal would temporarily merge with them to help defend the forest, and they would perform a ritual with a purple iolite and their body to set them back.~
 = ~I believe such an altar may be in the North Forest, and we were expecting a purple iolite just days ago, but the merchant responsible abandoned their goods to bandits in small teeth pass. If by some miracle you can find it, knowledge may yet set her free.~
 END 
 ++ ~I will depart immediately, thank you.~ EXTERN DOGHMA 17
@@ -199,7 +199,7 @@ CHAIN X3VieJ seeking
 EXTERN X3RMOM inform 
 
 CHAIN X3RMOM personal 
-~That makes your intentions cloudy...but in Oghma's illuminative blessings I sense no malice in your reasoning, only guardedness. So I will tell you a little, but no more than you need.~
+~That makes your intentions cloudy...but in Oghma's illuminating blessings I sense no malice in your reasoning. So I will tell you a little, but no more than you need.~
 EXTERN X3RMOM inform
  
 

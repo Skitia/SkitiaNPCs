@@ -165,7 +165,7 @@ END
 ++ ~As you wish, then. Stay with me.~ DO ~ActionOverride("X3Reb",JoinParty())~ EXIT
 + ~AreaCheck("AR4500")~ + ~I will be back. Just wait here for now.~ + rp1a
 + ~!AreaCheck("AR4500") !AreaCheck("AR4000") !AreaCheck("AR6200")~ + ~I will be back. Just wait here for now.~ + rp1b
-+ ~!AreaCheck("AR4500") !AreaCheck("AR4000") !AreaCheck("AR6200")~ + ~Return to the pocketplane. I'll be back to see you soon.~ + rp1c
++ ~!AreaCheck("AR4500") !AreaCheck("AR4000") !AreaCheck("AR6200")~ + ~Return to the pocket plane. I'll be back to see you soon.~ + rp1c
 
 
 CHAIN X3Reb25P rp1a 
@@ -223,7 +223,7 @@ SAY ~I have never done that before, but I know how it is done, and I think I can
 END 
 
 IF ~~ Scry.1
-SAY ~Let me know when you have the crystal, <CHARNAME>. I will read up more about divination and scrying on my freetime so I am ready.~
+SAY ~Let me know when you have the crystal, <CHARNAME>. I will read up more about divination and scrying on my free time so I am ready.~
 IF ~~ EXIT 
 END 
 

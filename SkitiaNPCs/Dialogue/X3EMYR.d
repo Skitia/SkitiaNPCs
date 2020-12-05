@@ -38,7 +38,7 @@ CHAIN X3EDER problem
 == X3EMYR ~I however, have been pushed to buy at worse prices from the commoners because Derrick has raised the prices of his goods substantially, more than they can comfortably afford.~
 == X3EDER ~Not all of the local cities have fully recovered from the recent Iron Crisis. And you can afford to suffer higher buying prices for a while.~
 END 
-++ ~So the dilemna is all about your price levels?~ + clearly
+++ ~So the dilemma is all about your price levels?~ + clearly
 ++ ~If Myron can afford to buy at higher levels for a while, couldn't you also afford to sell at slightly lower profit margins for a time?~ + reduce_prices_idea
 ++ ~That's it? I was expecting some more drastic problem requiring more deadly tools.~ EXTERN X3EMYR deadly_tools
 

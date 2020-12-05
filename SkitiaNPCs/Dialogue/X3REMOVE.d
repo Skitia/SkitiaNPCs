@@ -31,7 +31,7 @@ CHAIN X3REMOVE want
 EXTERN X3REMOVE who_Phelgrim 
 
 CHAIN X3REMOVE who_Phelgrim 
-~Phelgrim is the best "trader" in the seas. Between Lantan and here,  He may be a gnome, the gnome has earned fierce reputation that even Amn's vessels know to steer cleer of him. He is a poor enemy to make and unfortunately you've made him yours.~
+~Phelgrim is the best "trader" in the seas. Between Lantan and here,  He may be a gnome, the gnome has earned fierce reputation that even Amn's vessels know to steer clear of him. He is a poor enemy to make and unfortunately you've made him yours.~
 == X3RebJ ~"Trader". You mean *slaver*.~
 == X3REMOVE ~You have no moral high ground, murderer. You took his most valued property and when that didn't work, slit its throat. Sickening, really. All in some dumb act of defiance.~
 == X3RebJ ~Don't talk about that! Do not talk about that! Just leave us alone!~
@@ -58,7 +58,7 @@ END
 ++ ~Farewell.~ EXIT 
 
 CHAIN X3REMOVE sending 
-~And you live. May I make a suggestion? Seperate yourself from the quarry if you find it so inconvenient.~
+~And you live. May I make a suggestion? Separate yourself from the quarry if you find it so inconvenient.~
 END 
 ++ ~And what stops me from finishing this now, with you?~ + turn 
 ++ ~Back off. I'd have no quarrel with you.~ + meek 
@@ -95,7 +95,7 @@ CHAIN X3REMOVE cease
 DO ~AddJournalEntry(@6,QUEST_DONE)EscapeArea()ActionOverride("X3RTANYA",EscapeArea())~ EXIT 
 
 CHAIN IF ~IsValidForPartyDialogue("X3Reb")~ THEN X3RTanya meeting_1
-~Pretty, you're lucky your bounty isn't high enough. I'm the Remover's favorite and best cuthroat, and for the right price, your pretty neck would have a nice, beautiful gash in it if I so pleased.~
+~Pretty, you're lucky your bounty isn't high enough. I'm the Remover's favorite and best cutthroat, and for the right price, your pretty neck would have a nice, beautiful gash in it if I so pleased.~
 == X3RebJ ~Um...can we go now, please <CHARNAME>?~
 EXIT 
 

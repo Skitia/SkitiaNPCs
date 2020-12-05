@@ -20,7 +20,7 @@ CHAIN IF ~ReputationLT(Player1,2)~ THEN X3Hel nojoin2
 EXIT 
 
 
-// Before this happens is a small conversation between Hegla and two halflings.
+// Before this happens is a small conversation between Helga and two halflings.
 
 CHAIN IF ~Global("X3HelMet","GLOBAL",0)~ THEN X3Hel meet
 ~Bah! Me leg is fine! Damn bloody fine! I need another cold ale. Wait, ye aren't the server. Who be ye?~ [X3Blank]
@@ -51,7 +51,7 @@ IF ~IsValidForPartyDialogue("X3Kale")~ EXTERN X3KalJ m1.b
 
 CHAIN X3KalJ m1.b
 ~Hello to you too, grumpy woman.~
-== X3Hel ~Don't push it, Kale. Suprised ye even back here. Might have to add bloody indecisive to halfling annoyances as well.~
+== X3Hel ~Don't push it, Kale. Surprised ye even back here. Might have to add bloody indecisive to halfling annoyances as well.~
 END 
 ++ ~What happened to your leg?~ EXTERN X3Hel m2
 +~Race(Player1,HALFLING)~+ ~Hey now, I'm not indecisive, dwarf.~ EXTERN X3Hel m4 
@@ -137,7 +137,7 @@ CHAIN X3Hel reject
 EXIT 
 
 CHAIN IF ~ReputationLT(Player1,2)~ THEN X3HelP nojoin1
-~If ye are here to ask me along, <CHARNAME>...while I'd normally agree, with the kind of name ye brewed, I don't think we'll be a good fit. Best ye adminster that, before yer name is so sullied ye become one of those I must take down meself.~  [X3Blank]
+~If ye are here to ask me along, <CHARNAME>...while I'd normally agree, with the kind of name ye brewed, I don't think we'll be a good fit. Best ye administer that, before yer name is so sullied ye become one of those I must take down meself.~  [X3Blank]
 EXIT 
 
 CHAIN IF ~GlobalLT("X3HelApp","GLOBAL",-89)~ THEN X3HelP nojoin2 

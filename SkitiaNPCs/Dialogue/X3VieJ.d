@@ -29,7 +29,7 @@ I_C_T SUDEMIN 9 X3VieSUDEMIN-9
 END
 
 I_C_T C6CORAN 1 X3VieC6CORAN-1
-== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")Global("X3ViePartyBG1","GLOBAL",1)~ THEN ~Yes, it's this mutt. Don't we have busines to get to?~
+== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")Global("X3ViePartyBG1","GLOBAL",1)~ THEN ~Yes, it's this mutt. Don't we have business to get to?~
 END 
 
 I_C_T C6CORAN 13 X3VieC6CORAN-13
@@ -190,7 +190,7 @@ I_C_T UDDROW10 17 X3VieUDDROW10-17
 END
 
 I_C_T UDDOOR01 1 X3VieUDDOOR01-1
-== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Are you incapable of even remebering the word "subtlety?"~
+== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Are you incapable of even remembering the word "subtlety?"~
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-3)
 DisplayStringNoNameDlg(Player1,@503)~
 END 
@@ -250,7 +250,7 @@ I_C_T UDSILVER 25 X3EmiUDSILVER-25
 END 
 
 I_C_T UDSVIR05 2 X3VieUDSVIR05-2
-== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~A nusiance, but a temporary one. I am sure our rightful reward awaits for this petty task once this spell has run its course.~
+== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~A nuisance, but a temporary one. I am sure our rightful reward awaits for this petty task once this spell has run its course.~
 END
 
 I_C_T UDSVIR05 13 X3VieUDSVIR05-13
@@ -306,7 +306,7 @@ ADD_TRANS_ACTION UDVITH BEGIN 26 END BEGIN END ~SetGlobal("X3VieAppChange","GLOB
 
 
 I_C_T UDDUER02 12 X3VieUDDUER02-12
-== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~An artificat? You have my full attention. Surely it belongs in our hands, after all.~
+== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~An artifact? You have my full attention. Surely it belongs in our hands, after all.~
 END 
 
 I_C_T UDDUER01 20 X3VieUDDUER01-20
@@ -399,14 +399,14 @@ I_C_T PPSAEM2 23 X3ViePPSAEM2-23
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Some of Evermeet's people have come or gone to Suldanessellar. If that is where he is headed, my people are in grave danger.~
 END
 
-
 I_C_T PPSAEM2 8 X3ViePPSAEM2-8
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")!IsValidForPartyDialogue("X3Hel")~ THEN ~Our best chance is with numbers, and the mages would make good meat shields.~
 == X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")IsValidForPartyDialogue("X3Vie")~ THEN ~Vienxay is right, though it isn't about sacrificing these other mages. But alone, we don't have as good of a chance.~
- END 
+== PPSAEM2 ~I've given my advice. Good luck.~
+END 
  
 I_C_T PPSAEM2 19 X3ViePPSAEM2-19
-== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~An elf does not belong in the underdark. Let us take the ship, it is the wisest course of action.~
+== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~An elf does not belong in the Underdark. Let us take the ship, it is the wisest course of action.~
 END
 
 EXTEND_BOTTOM PPIMOEN 0
@@ -432,21 +432,21 @@ I_C_T PPDRADEE 0 X3ViePPDRADEE-0
 END
 
 I_C_T PPAPHRIL 4 X3ViePPAPRHIL4
-== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Her endless terror is of no suprise to me. To be pitied, I suppose.~
+== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Her endless terror is of no surprise to me. To be pitied, I suppose.~
 == X3KalJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~Did I hear right? Vienxay showing a bit of pity?~
 == X3VieJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~Unless you are deaf. Why is it that it must be such a remarkable thing?~
 == X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")IsValidForPartyDialogue("X3Kal")~ THEN ~He means it's nice. The poor girl. I wish there was something we could do.~
 END
 
 I_C_T PPAPHRIL 5 X3ViePPAPRHIL5
-== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Her endless terror is of no suprise to me. To be pitied, I suppose.~
+== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Her endless terror is of no surprise to me. To be pitied, I suppose.~
 == X3KalJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~Did I hear right? Vienxay showing a bit of pity?~
 == X3VieJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~Unless you are deaf. Why is it that it must be such a remarkable thing?~
 == X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")IsValidForPartyDialogue("X3Kal")~ THEN ~He means it's nice. The poor girl. I wish there was something we could do.~
 END
 
 I_C_T PPAPHRIL 6 X3ViePPAPRHIL6
-== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Her endless terror is of no suprise to me. To be pitied, I suppose.~
+== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Her endless terror is of no surprise to me. To be pitied, I suppose.~
 == X3KalJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~Did I hear right? Vienxay showing a bit of pity?~
 == X3VieJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~Unless you are deaf. Why is it that it must be such a remarkable thing?~
 == X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")IsValidForPartyDialogue("X3Kal")~ THEN ~He means it's nice. The poor girl. I wish there was something we could do.~
@@ -454,7 +454,7 @@ END
 
 
 I_C_T PPAPHRIL 0 X3ViePPAPRHIL0
-== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Even from what I have seen on the Shadow Plane, there are creatures to fear. From all planes at once? Her endless terror is no suprise.~
+== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Even from what I have seen on the Shadow Plane, there are creatures to fear. From all planes at once? Her endless terror is no surprise.~
 END
 
 I_C_T PPIRENI1 14 X3ViePPIRENI1-14
@@ -479,7 +479,7 @@ I_C_T PPCOWLED 1 X3ViePPCOWLED
 END
 
 I_C_T PPSAEM 58 X3HelPPSAEM58
-== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~I have no tolerance for traitors. I dare you to try to escape my shadowbolt.~
+== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~I have no tolerance for traitors. I dare you to try to escape my Shadowbolt.~
 END
 
 I_C_T PPSAEM 14 X3RebPPSAEM14
@@ -528,7 +528,7 @@ END
 
 I_C_T AERIEJ 183 X3VieAerieJ183
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~For the best. They are humans, after all. One risks a shorter life with over-association.~
-== AERIEJ ~That isn't what I meant Vienxay, I- nevermind.~
+== AERIEJ ~That isn't what I meant Vienxay, I- never mind.~
 END 
 
 
@@ -645,13 +645,13 @@ END
 
 I_C_T TREVIL01 33 X3VieTREVIL01-33
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~My people have a respect for nature that I will not abandon just because of my exile, <CHARNAME>.  So my advice is simple: Don't be a fool. Don't use the poison.~
-== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~Vienxay isn't the only one who sees this as wrong. We can't poision the grove. We have to find another way.~
+== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~Vienxay isn't the only one who sees this as wrong. We can't poison the grove. We have to find another way.~
 == TREVIL01 ~Hurry up now, hurry up!~
 END 
 
 I_C_T TREVIL01 34 X3VieTREVIL01-34
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~My people have a respect for nature that I will not abandon just because of my exile, <CHARNAME>.  So my advice is simple: Don't be a fool. Don't use the poison.~
-== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~Vienxay isn't the only one who sees this as wrong. We can't poision the grove. We have to find another way.~
+== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~Vienxay isn't the only one who sees this as wrong. We can't poison the grove. We have to find another way.~
 == TREVIL01 ~Hurry up now, hurry up!~
 END 
 
@@ -702,7 +702,7 @@ I_C_T NEEBER 7 X3VieNEEBER7
 END 
 
 I_C_T TRHMER01 23 X3VieTRHMER01-23 
-== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~I am sure we could easily dispatch theese genies. But I am far more interested in pursuing this Rakshasa. Such a rare and interesting encounter it would be.~
+== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~I am sure we could easily dispatch these genies. But I am far more interested in pursuing this Rakshasa. Such a rare and interesting encounter it would be.~
 END 
 
 I_C_T TRHMER01 38 X3VieTRHMER01-38
@@ -722,7 +722,7 @@ I_C_T RNGWLF01 5 X3VieRNGWLF01-5
 END 
 
 I_C_T PLMETR01 25 X3ViePLMETR01-25
-== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Predictable, that a greedy human uses his wealth to fuel his claim and obession of ownership.~
+== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Predictable, that a greedy human uses his wealth to fuel his claim and obsession of ownership.~
 DO ~IncrementGlobal("X3VieApp","GLOBAL",3)
 DisplayStringNoNameDlg(Player1,@503)~ 
 END 
@@ -738,7 +738,7 @@ END
 
 I_C_T VALYGAR 8 X3VieVALYGAR8 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~And now the truth revealed. If you ask my opinion, I have no love of the cowled wizards and would be in glee if denied them this man.~
-== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~One day, one day, Vienxay you might just say: "Because it's the right thing to do" and not "I get to enjoy someon else's pain."~
+== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~One day, one day, Vienxay you might just say: "Because it's the right thing to do" and not "I get to enjoy someone else's pain."~
 END 
 
 I_C_T UHKID03 8 X3VieUHKID03-8
@@ -871,7 +871,7 @@ END
 
 I_C_T LYROS 11 X3VieLYROS11
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")Global("X3ViePartyBG1","GLOBAL",1)~ THEN ~Ugh. It's the man who reeks of dead once again, and yet he dares calls us unwashed.~
-== LYROS ~You haven't died yet, elf? Dissapointing.~
+== LYROS ~You haven't died yet, elf? Disappointing.~
 END
 
 I_C_T EDWIN 26 X3VieEDWIN26
@@ -884,7 +884,7 @@ I_C_T BODHI 77 X3VieBODHI77
 END 
 
 I_C_T BODHI 45 X3VieBODHI45 
-== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~I have no scruples about doing what is necessary. If we aim to impres, we should take it.~
+== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~I have no scruples about doing what is necessary. If we aim to impress, we should take it.~
 END 
 
 I_C_T BODHI 20 X3VieBODHI20 
@@ -923,7 +923,7 @@ I_C_T SPPAIN 23 X3VieSPPAIN23
 END 
 
 I_C_T SETHLE 10 X3VieSETHLE10
-== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Do as you wish with this fool. He deserves no sway to his judgement.~
+== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Do as you wish with this fool. He deserves no sway to his judgment.~
 END 
 
 I_C_T GBEGG01 5 X3VieGBEGG01-5 
@@ -992,7 +992,7 @@ RandomNum(2,2)
 Global("X3Vie","LOCALS",0)~ THEN BAMNG01 X3Vie
 ~You there. Watch yourself, or you might wind up behind bars again.~
 DO ~SetGlobal("X3Vie","LOCALS",1)~
-== X3VieJ ~Worry about somebody else. I am determined to see that unrepeated.~
+== X3VieJ ~Worry about somebody else. I am determined to see that experience never repeat itself.~
 EXIT 
 
 CHAIN IF WEIGHT #-1
@@ -1068,7 +1068,7 @@ CHAIN IF WEIGHT #-1
 IsValidForPartyDialogue("X3Vie")  // X3Vie
 RandomNum(2,1)
 Global("Prophet4X3Vie","LOCALS",0)~ THEN PROPHET4 Vienxay 
-~Put out your eyes! Feel the holyness of true sight!~
+~Put out your eyes! Feel the holiness of true sight!~
 DO ~SetGlobal("Prophet4X3Vie","LOCALS",1)SetGlobal("TalkedToCult","GLOBAL",1)~
 == X3VieJ ~Ugh! Get away from me.~
 EXIT 
@@ -1109,7 +1109,7 @@ I_C_T RIFTG03 26 X3VieRIFTG03
 END 
 
 I_C_T GAAL 13 X3VieGAAL13 
-== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~I am curious what gives the beholder the need to ask for help. It is certainly a curiousity worth our time, if we proceed cautiously.~
+== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~I am curious what gives the beholder the need to ask for help. It is certainly a curiosity worth our time, if we proceed cautiously.~
 END 
 
 I_C_T MEKRAT 12 X3VieMEKRAT12 
@@ -1284,7 +1284,7 @@ I_C_T HAWKER01 0 X3VieHAWKER0
 END 
 
 I_C_T CIRCG1 8 X3VieCIRCG1 
-== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~There is certainly a power in the air here. I say we should see to this ourselves, if at least to sate my curiousity on what magic is involved here.~
+== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~There is certainly a power in the air here. I say we should see to this ourselves, if at least to sate my curiosity on what magic is involved here.~
 END 
 
 I_C_T NOBLEW3 6 X3VieNOBLEW3 
@@ -1565,7 +1565,7 @@ CHAIN X3VieJ BE.1
 EXTERN X3VieJ BE.2
 
 CHAIN X3VieJ BE.3 
-~I went into the Shadowplane, before she could take over my mind with her power. It worked splendidly, though the shadowplane often is very similiar to the place you left. Suffice to say, I am not keen to do that again.~
+~I went into the Shadowplane, before she could take over my mind with her power. It worked splendidly, though the Shadowplane often is very similar to the place you left. Suffice to say, I am not keen to do that again.~
 EXTERN X3VieJ BE.2
 
 CHAIN X3VieJ BE.2 
@@ -1661,7 +1661,7 @@ CHAIN IF ~Global("X3VTempleTalk","LOCALS",2)~ THEN X3VieJ TempleTalk
 ~Why does this human city not even have a temple dedicated to Mystra? I miss Evermeet's temples to the Seldarine, but I had hoped at the very least Mystra would have representation.~
 DO ~IncrementGlobal("X3VTempleTalk","LOCALS",1)SetGlobal("X3VieAppChange","GLOBAL",6)~
 END 
-++ ~Considering their distaste for magic, I would be suprised if they did.~ + TT.2
+++ ~Considering their distaste for magic, I would be surprised if they did.~ + TT.2
 ++ ~We can look for one, if you like.~  DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + TT.1
 ++ ~I did not think you were religious, Vienxay.~ + TT.3
 ++ ~Come, stop whining.~ + TT.X
@@ -1807,7 +1807,7 @@ END
 ++ ~I don't want to hear you whine about this.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",-1)~ + T1.X
 
 CHAIN X3VieJ T1.4 
-~You remind me of my sisters when you say that. They would always reassure meand try to keep me from making mistakes. I...miss them. I wish I could see them one more time.~
+~You remind me of my sisters when you say that. They would always reassure me and try to keep me from making mistakes. I...miss them. I wish I could see them one more time.~
 EXTERN X3VieJ T1.7
 
 CHAIN X3VieJ T1.5 
@@ -1872,7 +1872,7 @@ CHAIN X3VieJ t2.ask_around
 EXTERN X3VieJ t2.book 
 
 CHAIN X3VieJ t2.temple 
-~The human god of knowledge? I suppose that would be a place to start, though humans tend to be dissapointing with their knowledge.~
+~The human god of knowledge? I suppose that would be a place to start, though humans tend to be disappointing with their knowledge.~
 EXTERN X3VieJ t2.book 
 
 CHAIN X3VieJ t2.book 
@@ -1909,9 +1909,9 @@ CHAIN IF ~Global("X3VieTalk","LOCALS",6)~ THEN X3VieJ Talk3
 ~Do remind me what you are doing in this part of the world. All Amn has shown so far is...how uncultured it is.~
 DO ~IncrementGlobal("X3VieTalk","LOCALS",1)SetGlobal("X3VieAppChange","GLOBAL",6)~
 END 
-++ ~I didn't come here by choice. When I escaped Irenicus, in Alhkata is where I found myself.~ + T3.1 
+++ ~I didn't come here by choice. When I escaped Irenicus, in Althkata is where I found myself.~ + T3.1 
 ++ ~I am trying to get back Imoen, with whatever it takes.~ + T3.3
-++ ~More grumbling about the land, Vienxay? Color me suprised.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",-1)~ + T3.X 
+++ ~More grumbling about the land, Vienxay? Color me surprised.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",-1)~ + T3.X 
 
 CHAIN X3VieJ T3.X 
 ~I have every right to. I hate this land. It's not Evermeet...and it never will be. But if you don't want to hear about it, fine.~
@@ -1988,7 +1988,7 @@ END
 ++ ~So you just murdered him? That's terrible.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",-1)~ + T4.6
 
 CHAIN X3VieJ T4.3 
-~Hrmph, when not givne the choice of going to the elven homeland, I would much rather be on the road than any civilization away from Evermeet as well.~
+~Hrmph, when not given the choice of going to the elven homeland, I would much rather be on the road than any civilization away from Evermeet as well.~
 EXTERN X3VieJ T4.2 
 
 CHAIN X3VieJ T4.4
@@ -2017,7 +2017,7 @@ END
 ++ ~It's not wrong to use power as you need it.~ + T4.11
 
 CHAIN X3VieJ T4.12
-~It has a similiar feeling. Sometimes I am worried it might be, and that I have really fallen below the expectations my parents once had of me.~
+~It has a similar feeling. Sometimes I am worried it might be, and that I have really fallen below the expectations my parents once had of me.~
 = ~But no, it is different. It is very different. It is hard to explain, so you will just have to believe me.~
 END 
 ++ ~If you say so.~ + T4.14
@@ -2025,7 +2025,7 @@ END
 ++ ~I trust you Vienxay. I am glad you can at least see what is right and wrong now.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + T4.8
 
 CHAIN X3VieJ T4.8 
-~Now hardly means much, does it? I suppose however, I should stop moaning about the past and make sure you don't make any regretful decisions on our journey. Just listen to me and w'ell be all right.~
+~Now hardly means much, does it? I suppose however, I should stop moaning about the past and make sure you don't make any regretful decisions on our journey. Just listen to me and we'll be all right.~
 EXIT 
 
 CHAIN X3VieJ T4.9 
@@ -2038,7 +2038,7 @@ CHAIN X3VieJ T4.10
 EXIT 
 
 CHAIN X3VieJ T4.11 
-~My people disagree. And everytime I exercise power that way, I get punished. It makes me wonder why society celebrates its powerful wizards but punishes those who exercise it. It is truly infuriating.~
+~My people disagree. And every time I exercise power that way, I get punished. It makes me wonder why society celebrates its powerful wizards but punishes those who exercise it. It is truly infuriating.~
 EXIT 
 
 CHAIN X3VieJ T4.14 
@@ -2068,7 +2068,7 @@ CHAIN X3VieJ T5.1
 EXTERN X3VieJ T5.2 
 
 CHAIN X3VieJ T5.2 
-~There is an appreciation and ability for one to truly work. Laws are not so restrictive to hold back and bring woe upon the succesful. Merchants can advance themselves without constant regard for others.~
+~There is an appreciation and ability for one to truly work. Laws are not so restrictive to hold back and bring woe upon the successful. Merchants can advance themselves without constant regard for others.~
 = ~In Evermeet it was different. Laws were even less restrictive. But there was always an unspoken regard for charity towards your own people. I did not always enjoy it, though those habits have hardly left me.~
 END 
 ++ ~It sounds like you are more at home here, then.~ + T5.4 
@@ -2136,7 +2136,7 @@ CHAIN X3VieJ QuestBook.3
 EXIT 
 
 CHAIN X3VieJ QuestBook.4 
-~That is naivity at its finest. You cannot do those things. People in this world will always be in peril, will always be in trouble.~
+~That is naivety at its finest. You cannot do those things. People in this world will always be in peril, will always be in trouble.~
 == X3VieJ ~I'm sure in your thoughts of idealism it works...but it doesn't, <CHARNAME>. The world is awful, and we just have to deal with it and survive.~
 END 
 ++ ~That is bleak, Vienxay. Surely you don't believe that.~ + QuestBook.7
@@ -2155,7 +2155,7 @@ CHAIN X3VieJ QuestBook.6
 EXTERN X3VieJ QuestBook.8
 
 CHAIN X3VieJ QuestBook.7 
-~Being forced from your home helps you see many things in a different light. Keep your  naivity <CHARNAME>, it suits you. But I won't be blinded.~
+~Being forced from your home helps you see many things in a different light. Keep your  naivety <CHARNAME>, it suits you. But I won't be blinded.~
 EXIT 
 
 CHAIN X3VieJ QuestBook.8
@@ -2192,21 +2192,21 @@ CHAIN X3VieJ T6.1
 == X3VieJ ~And yet Irenicus far surpasses any mage I have ever seen. You could consider taking that you live as a gift and call off this chase.~
 END 
 ++ ~I can't, Vienxay. I feel hollow and...unwell. It's not a risk I can take.~ + T6.4
-++ ~You, Vienxay, are suggesting I do not chase vengeneance? Isn't that a little hypocritical from an elf who has pursued revenge before?~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",-1)~ + T6.5
+++ ~You, Vienxay, are suggesting I do not chase vengeance? Isn't that a little hypocritical from an elf who has pursued revenge before?~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",-1)~ + T6.5
 ++ ~No. Irenicus will pay. He and Bodhi both.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + T6.6
 
 CHAIN X3VieJ T6.2 
 ~Irenicus far surpasses any mage I have ever seen. You are still alive now. You could...keep living in the state you are in. Surely it is possible?~
 END 
 ++ ~I can't, Vienxay. I feel hollow and...unwell. It's not a risk I can take.~ + T6.4
-++ ~You, Vienxay, are suggesting I do not chase vengeneance? Isn't that a little hypocritical from an elf who has pursued revenge before?~ DO ~IncrementGlobal("X3VieApp","GLOBAL",-1)~ + T6.5
+++ ~You, Vienxay, are suggesting I do not chase vengeance? Isn't that a little hypocritical from an elf who has pursued revenge before?~ DO ~IncrementGlobal("X3VieApp","GLOBAL",-1)~ + T6.5
 ++ ~No. Irenicus will pay. He and Bodhi both.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + T6.6
 
 CHAIN X3VieJ T6.3
 ~Because I can relate and...I know your pain. But Irenicus far surpasses any mage I have ever known. Not even I can say it is the best interest in continual life to go after him. You should consider calling this pursuit off.~
 END 
 ++ ~I can't, Vienxay. I feel hollow and...unwell. It's not a risk I can take.~ + T6.4
-++ ~You, Vienxay, are suggesting I do not chase vengeneance? Isn't that a little hypocritical from an elf who has pursued revenge before?~ DO ~IncrementGlobal("X3VieApp","GLOBAL",-1)~ + T6.5
+++ ~You, Vienxay, are suggesting I do not chase vengeance? Isn't that a little hypocritical from an elf who has pursued revenge before?~ DO ~IncrementGlobal("X3VieApp","GLOBAL",-1)~ + T6.5
 ++ ~No. Irenicus will pay. He and Bodhi both.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + T6.6
 
 CHAIN X3VieJ T6.4 
@@ -2217,7 +2217,7 @@ END
 ++ ~I am insistent. Don't question me on it again.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",-2)~ + T6.7
 
 CHAIN X3VieJ T6.5 
-~If my mentor was like Irenicus, I w- no. I think I would have, even if it was to my death. I suppose I was letting friendship cloud my judgement. If you want the bastard dead and your soul back, let's chase him.~
+~If my mentor was like Irenicus, I w- no. I think I would have, even if it was to my death. I suppose I was letting friendship cloud my judgment. If you want the bastard dead and your soul back, let's chase him.~
 END 
 ++ ~We won't make headway talking about it. Let's go.~ EXIT 
 ++ ~Thank you, Vienxay. Your friendship helps support me.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",2)~ + T6.8
@@ -2277,7 +2277,7 @@ CHAIN X3VieJ U.5
 EXIT
 
 CHAIN X3VieJ U.6 
-~You remembered? I am suprised, even I have not given it much thought after the sage's words. Yes, there is a chance, but the underdark is a large place, we would have better luck finding a rabbit in a cornfield.~
+~You remembered? I am surprised, even I have not given it much thought after the sage's words. Yes, there is a chance, but the Underdark is a large place, we would have better luck finding a rabbit in a cornfield.~
 = ~Regardless, let us travel carefully. And...thank you for remembering that.~
 EXIT 
 
@@ -2285,7 +2285,7 @@ EXIT
 
 // After entering Ust Natha Non Romance 
 CHAIN IF ~Global("X3VieTalk","LOCALS",14)~ THEN X3VieJ Talk7 
-~So not only have you whisked us into the underdark, but now are are in one of their cities. Why is this a good idea?~
+~So not only have you whisked us into the Underdark, but now are are in one of their cities. Why is this a good idea?~
 DO ~IncrementGlobal("X3VieTalk","LOCALS",1)SetGlobal("X3VieAppChange","GLOBAL",6)~
 END 
 ++ ~If there was a better option, we wouldn't be here.~ + T7.1 
@@ -2294,7 +2294,7 @@ END
 ++ ~Be quiet. You'll call attention to us.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",-1)~ + T7.X
 
 CHAIN X3VieJ T7.X
-~Grrr. This is so irritating. If we were anywhere else I would...hrmph!~
+~Grr. This is so irritating. If we were anywhere else I would...hrmph!~
 EXIT 
 
 CHAIN X3VieJ T7.1
@@ -2320,7 +2320,7 @@ CHAIN X3VieJ T7.7
 EXIT 
 
 CHAIN X3VieJ T7.8
-~...I will admit I cannot think of anything better. Yet. Hrmph, let us finish our business here quickly. Do not think evn an illusion will keep us safe forever.~
+~...I will admit I cannot think of anything better. Yet. Hrmph, let us finish our business here quickly. Do not think even an illusion will keep us safe forever.~
 EXIT 
 
 
@@ -2334,7 +2334,7 @@ CHAIN X3VieJ T7.3
 EXTERN X3VieJ T7.4
 
 CHAIN X3VieJ T7.4
-~Just promise me that we won't get killed down here. To die in the underdark as an exile of Evermeet...there could be no lower fate.~
+~Just promise me that we won't get killed down here. To die in the Underdark as an exile of Evermeet...there could be no lower fate.~
 END 
 ++ ~You are stronger than you think, Vienxay. I don't think you'd let that happen to yourself easily.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",2)~ + T7.9 
 ++ ~Of course not. I promise you'll be safe.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + T7.10 
@@ -2373,7 +2373,7 @@ CHAIN X3VieJ T8.1
 EXTERN X3VieJ T8.3 
 
 CHAIN X3VieJ T8.2 
-~How could he even be one of us? I...have done things I have regret. But to this scale? It is truely unforgivable.~
+~How could he even be one of us? I...have done things I have regret. But to this scale? It is truly unforgivable.~
 EXTERN X3VieJ T8.3 
 
 CHAIN X3VieJ T8.3
@@ -2423,7 +2423,7 @@ EXTERN X3VieJ 1.3
 
 CHAIN X3VieJ 1.3 
 ~My people call it Talfirian magic, for it sources from the Talfir, old humans who supposedly combined our own magic with their own technique to it and natural connections to the shadow plane.~
-= ~Most practicioners I suppose might descend from the elven texts that still tell about it, or humans who are lucky enough to grasp it.~
+= ~Most practitioners I suppose might descend from the elven texts that still tell about it, or humans who are lucky enough to grasp it.~
 END 
 ++ ~So your magic is human tricks, then?~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",-1)~ + 1.5 
 ++ ~What happened to the Talfir?~ + 1.6 
@@ -2434,7 +2434,7 @@ CHAIN X3VieJ 1.5
 EXTERN X3VieJ 1.7
 
 CHAIN X3VieJ 1.6
-~Dissapeared, died off. No one knows, and I certainly don't care. What matters is they left behind a useful contribution in their magic style.~
+~Disappeared, died off. No one knows, and I certainly don't care. What matters is they left behind a useful contribution in their magic style.~
 EXTERN X3VieJ 1.7
 
 CHAIN X3VIeJ 1.7
@@ -2450,7 +2450,7 @@ CHAIN X3VieJ 1.8
 EXTERN X3VieJ 1.11
 
 CHAIN X3VieJ 1.9
-~It has many, many boons. And they already have their grim Cowled Wizards to enforce those who would abuse it. But not everyone can be as keen in their structure as elven civlization.~
+~It has many, many boons. And they already have their grim Cowled Wizards to enforce those who would abuse it. But not everyone can be as keen in their structure as elven civilization.~
 EXTERN X3VieJ 1.11 
 
 CHAIN X3VieJ 1.10
@@ -2639,7 +2639,7 @@ END
 ++ ~Forget it, Vienxay. Bother someone else with your forced apology.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",-2)~ + 3.21
 
 CHAIN X3VieJ 3.16
-~I suppose that is a fair point. I do not mean to make you feel you have to make my accomodations perfect. This is a punishment I serve.~
+~I suppose that is a fair point. I do not mean to make you feel you have to make my accommodations perfect. This is a punishment I serve.~
 EXTERN X3VieJ 3.15 
 
 CHAIN X3VieJ 3.17
@@ -2754,7 +2754,7 @@ END
 ++ ~I think I see what you mean. True power is to be sought and respected.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + 4.9
 
 CHAIN X3VIeJ 4.7
-~By helping the weak you leave them unelightened. How can they become stronger or smarter if you hand hold them through every hardship? Such trials of life filter out the meaningless to the legacies that will carry on.~
+~By helping the weak you leave them unenlightened. How can they become stronger or smarter if you hand hold them through every hardship? Such trials of life filter out the meaningless to the legacies that will carry on.~
 EXTERN X3VieJ 4.10
 
 CHAIN X3VieJ 4.8 
@@ -2843,14 +2843,14 @@ CHAIN X3VieJ 5.1L5
 EXIT 
 
 CHAIN X3VieJ 5.1M
-~You seem to steer a course that focuses on your own wants. If something is mutually benefitial, you partake, if it is not. You move on. Is that correct?~
+~You seem to steer a course that focuses on your own wants. If something is mutually beneficial, you partake, if it is not. You move on. Is that correct?~
 END 
 ++ ~I try to help others more then myself, to be honest.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",-1)~ + 5.1M1 
 ++ ~Yes. I need to focus on myself if I am going to survive.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + 5.1M2
 ++ ~I could care less about others.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + 5.1M3 
 
 CHAIN X3VieJ 5.1M1 
-~That is dissapointing, if it is true. I had thought you a soul of reason.~
+~That is disappointing, if it is true. I had thought you a soul of reason.~
 EXTERN X3VieJ 5.1M4
 
 CHAIN X3VieJ 5.1M2 
@@ -2860,7 +2860,7 @@ EXTERN X3VieJ 5.1M4
 CHAIN X3VieJ 5.1M3 
 ~That is often true with myself. If you are not apathetic enough, you grow concerned over every little thing.~
 == X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ ~Wow. You are definitely ever the shrew, Vienxay.~
-== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ ~Aasimar, you of all people are not welcome to throw your opinion into this conversation. What does your celestial bloodline care? They are obessed only with fighting demons and devils and serving their god. They could not be more simple.~
+== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ ~Aasimar, you of all people are not welcome to throw your opinion into this conversation. What does your celestial bloodline care? They are obsessed only with fighting demons and devils and serving their god. They could not be more simple.~
 EXTERN X3VieJ 5.1M4
 
 CHAIN X3VieJ 5.1M4 
@@ -2875,15 +2875,15 @@ CHAIN X3VieJ 5.1M5
 EXIT 
 
 CHAIN X3VieJ 5.1M6 
-~Good. I have nothing to add. You seem to be wise and reasonable, and I am content with my curiousity.~
+~Good. I have nothing to add. You seem to be wise and reasonable, and I am content with my curiosity.~
 EXIT 
 
 CHAIN X3VieJ 5.1M7
-~You are a fool for it. I've nothing more to add, this conversation has been dissapointing, but sated my curiousity.~
+~You are a fool for it. I've nothing more to add, this conversation has been disappointing, but sated my curiosity.~
 EXIT 
 
 CHAIN X3VieJ 5.1L4 
-~Then fine. I will say nothing of it. Do as you wish, I only ask you be more subtle so you do not attract a contigent of guards.~
+~Then fine. I will say nothing of it. Do as you wish, I only ask you be more subtle so you do not attract a contingent of guards.~
 EXIT 
 
 CHAIN X3VieJ 5.1H 
@@ -2978,7 +2978,7 @@ END
 
 CHAIN X3VieJ 6.Emily3 
 ~Jealous? Of a mutt? You must be joking.~
-= ~I do however, do not want to deal with her glares if our...bond with eachother escalates. So, what is she to you?~
+= ~I do however, do not want to deal with her glares if our...bond with each other escalates. So, what is she to you?~
 END 
 ++ ~I am sorry Vienxay, but I like Emily a lot.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",-3)~ + 6.Emily1 
 ++ ~She is just a friend, Vienxay. Fear not.~ + 6.Emily2
@@ -3026,8 +3026,8 @@ IF ~Global("X3RebRomanceActive","GLOBAL",1)~ EXTERN X3VieJ 6.Recorder
 IF ~!Global("X3RebRomanceActive","GLOBAL",1)~ EXTERN X3VieJ 6.6
 
 CHAIN X3VieJ 6.Recorder 
-~What of the bard, Recorder? She seems obessed, concerningly so. Writing and writing about you. She looks up to you like you are on a pedestal.~
-= X3VieJ ~You should stop giving her ideas. Easier to dissapoint her now.~
+~What of the bard, Recorder? She seems obsessed with you, concerning so. Writing and writing about you. She looks up to you like you are on a pedestal.~
+= X3VieJ ~You should stop giving her ideas. Easier to disappoint her now.~
 END 
 ++ ~I'm very fond of Recorder, Vienxay. I want to see how things go between us.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",-3)~ + 6.Recorder1
 ++ ~She's just my recorder to me, nothing more.~ + 6.Recorder2
@@ -3041,7 +3041,7 @@ END
 ++ ~She's just my recorder to me, nothing more.~ + 6.Recorder2
 
 CHAIN X3VieJ 6.Recorder1 
-~An incredibly dissapointing response. But do as you wish.~
+~An incredibly disappointing response. But do as you wish.~
 EXTERN X3VieJ 6.RBreak
 
 CHAIN X3VieJ 6.Recorder2 
@@ -3093,7 +3093,7 @@ END
 ++ ~Stay focused Vienxay. This isn't the time to muse.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",-1)~ + 7.X
 
 CHAIN X3VieJ 7.1
-~The Secrets of the Heart was a festival to revel when the moon was heightest. To engage in one's lust with a lover, show off their art, or pledge themselves to their passions.~
+~The Secrets of the Heart was a festival to revel when the moon was highest. To engage in one's lust with a lover, show off their art, or pledge themselves to their passions.~
 = ~It was one of Hanali's festivals, our goddess of love and beauty.~
 END 
 ++ ~I thought that was Sune?~ + 7.3
@@ -3121,7 +3121,7 @@ EXTERN X3VieJ 7.6
 
 CHAIN X3VieJ 7.6
 ~There was Erian'na, the first I brought, a friend who I was close with. She had asked me and I did not see she had romantic intentions.~
-= ~I indulged her pursuit for the day, perhaps out of curiousity to see if I would feel the same, but ultimately I found I did not feel the same way, and ended things with her. She wanted permamency, but I did not.~
+= ~I indulged her pursuit for the day, perhaps out of curiosity to see if I would feel the same, but ultimately I found I did not feel the same way, and ended things with her. She wanted permanency, but I did not.~
 END 
 ++ ~I didn't know you had an interest in another female.~ + 7.8 
 ++ ~Who was the other?~ + 7.9
@@ -3172,7 +3172,7 @@ CHAIN X3VIeJ 7.15
 EXIT 
 
 CHAIN X3VieJ 7.16
-~But nevermind this. We ought to be getting back to our business.~
+~But never mind this. We ought to be getting back to our business.~
 EXIT 
 
 CHAIN X3VieJ 7.2
@@ -3236,7 +3236,7 @@ END
 ++ ~I'm not interested in doing that with you, Vienxay.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",-1)~ + 8.10
 
 CHAIN X3VIeJ 8.7
-~A little, perhaps, but it is just a bit of fun. Nothing serious. We make eachother at ease and then go on with things. What is the harm?~
+~A little, perhaps, but it is just a bit of fun. Nothing serious. We make each other at ease and then go on with things. What is the harm?~
 END 
 ++ ~Well, if that is the case, let's have some fun.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~  + 8.8
 ++ ~I would rather it mean something, Vienxay. To be between two lovers.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + 8.9
@@ -3314,7 +3314,7 @@ CHAIN X3VieJ 9.5RE
 ~You are an elf, and so I would not be averse to it. But I am an *exile*. Beyond a bit of fun, to be involved with me...it would bring you down.~
 END 
 ++ ~What? But you tout yourself as the greatest person ever, more or less.~ + 9.6RE 
-++ ~Vienxay, you couldn't do that. I am a child of bhaal, you know.~ + 9.7RE
+++ ~Vienxay, you couldn't do that. I am a child of Bhaal, you know.~ + 9.7RE
 ++ ~If you don't want that, then we shouldn't continue whatever this is.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",-2)~ + 9.X 
 
 CHAIN X3VieJ 9.6RE 
@@ -3334,11 +3334,11 @@ CHAIN X3VieJ 9.10R
 EXIT 
 
 CHAIN X3VieJ 9.5RN 
-~You are not an elf, <CHARNAME>. You would not live as long as I, nor is it proper. I have no interest in producing half-breeds, I have taught how abhorren such a thing is.~
+~You are not an elf, <CHARNAME>. You would not live as long as I, nor is it proper. I have no interest in producing half-breeds, I have taught how abhorrent such a thing is.~
 = ~Even...if part of me is not averse to it, it would only hurt you. It would only hurt us.~
 END 
 ++ ~That is what I want, Vienxay. Damn the consequences.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + 9.6RN
-++ ~This is bigger than just race, Vienxay. If two people care about eachother, that is the only thing that should matter.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + 9.7RN 
+++ ~This is bigger than just race, Vienxay. If two people care about each other, that is the only thing that should matter.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + 9.7RN 
 ++ ~If that is what you want, then we shouldn't continue whatever this is.~ + 9.X 
 
 CHAIN X3VieJ 9.6RN 
@@ -3396,7 +3396,7 @@ CHAIN X3VieJ 9.S3
 ~That is what people in a relationship do. This was just...a dalliance.~
 END 
 ++ ~And what if I didn't want that?~ + 9.SR 
-++ ~Oh. I see. Nevermind, then.~ + 9.S4 
+++ ~Oh. I see. Never mind, then.~ + 9.S4 
 ++ ~I don't want to be someone who just pleases your silly urges. If that's all your after, you can find someone else.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",-3)~ + 9.SXX 
 
 CHAIN X3VieJ 9.SR
@@ -3539,10 +3539,10 @@ END
 ++ ~(Push her away). This isn't right. You were right, we shouldn't be doing this.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",-2)~ + 11.6
 
 CHAIN X3VieJ 11.5
-~I am a fool too. I shouldn't have done that...I am embarrased and...feeling even more confused.~
+~I am a fool too. I shouldn't have done that...I am embarrassed and...feeling even more confused.~
 END 
 ++ ~We can figure it out together.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + 11.7
-++ ~Do not feel embarrased. This is normal. This is *good*.~ + 11.7
+++ ~Do not feel embarrassed. This is normal. This is *good*.~ + 11.7
 ++ ~I can't handle someone who can't figure things out. We shouldn't do this.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",-2)~ + 11.8
 
 CHAIN X3VieJ 11.6
@@ -3592,7 +3592,7 @@ DO ~SetGlobal("X3VieRomanceActive","GLOBAL",3)
 SetGlobal("X3VieRomanceConflict","GLOBAL",2)~ EXIT
 
 CHAIN X3VieJ RC.3
-~You are chosing a half-blood over me? How irksome. You clearly are not someone I know, then. Hrmph.~
+~You are choosing a half-blood over me? How irksome. You clearly are not someone I know, then. Hrmph.~
 DO ~SetGlobal("X3VieRomanceActive","GLOBAL",3)
 SetGlobal("X3VieRomanceConflict","GLOBAL",2)~ EXIT
 
@@ -3661,7 +3661,7 @@ END
 ++ ~No, you were right before. I should be focused.~ + 12.5 
 
 CHAIN X3VieJ 12.5
-~It is not an easy choice, but I think it is the best choice. There is much you are going to face in the path ahead, I am certain of that. It is better to do that distractionless.~
+~It is not an easy choice, but I think it is the best choice. There is much you are going to face in the path ahead, I am certain of that. It is better to do that without distractions.~
 DO ~SetGlobal("X3VieRomanceActive","GLOBAL",3)~
 EXIT 
 
@@ -3674,7 +3674,7 @@ CHAIN X3VieJ 12.7
 = ~Perhaps we should continue this somewhere more alone?~
 END 
 ++ ~Let's, shall we?~  + 12.8
-++ ~Maybe we can just start with holding eachother? Let's take this slow.~  + 12.9 
+++ ~Maybe we can just start with holding each other? Let's take this slow.~  + 12.9 
 ++ ~I am a bit tired. Maybe another time.~  + 12.10
 
 CHAIN X3VieJ 12.8
@@ -3758,7 +3758,7 @@ CHAIN X3VieJ 13.5
 ~Ugh, this is way too sweet! I ruined it! How infuriating.~
 END 
 ++ ~I've never been treated by you like this. I'm just happy with your attempt.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",2)~ + 13.6 
-++ ~Don't be dissapointed, I thought it tasted fine.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + 13.81
+++ ~Don't be disappointed, I thought it tasted fine.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + 13.81
 ++ ~Maybe you shouldn't cook anymore.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",-1)~ + 13.19
 
 CHAIN X3VieJ 13.81
@@ -3846,7 +3846,7 @@ EXTERN X3VieJ 14.4
 
 CHAIN IF ~Global("X3VieLoveTalk","LOCALS",30)~ THEN X3VieJ LoveTalk15
 ~<CHARNAME>. Let me start by saying I care about you very, very much.~
-= ~But why. Are. We. In the underdark?!~
+= ~But why. Are. We. In the Underdark?!~
 DO ~IncrementGlobal("X3VieLoveTalk","LOCALS",1)SetGlobal("X3VieAppChange","GLOBAL",6)~
 END 
 ++ ~Vienxay, not so loud.~ + 15.12
@@ -3869,7 +3869,7 @@ CHAIN X3VieJ 15.2
 EXTERN X3VieJ 15.4 
 
 CHAIN X3VieJ 15.3 
-~The only way I could go is through the Shadowplane. And I do not know if the shadow realm's version of the underdark is safer. It may be quite worse.~
+~The only way I could go is through the Shadowplane. And I do not know if the shadow realm's version of the Underdark is safer. It may be quite worse.~
 EXTERN X3VieJ 15.4 
 
 CHAIN X3VieJ 15.4 
@@ -3882,7 +3882,7 @@ END
 
 CHAIN X3VieJ 15.5
 ~(She doesn't squeeze back at first, before her fingers clinch yours with a stressed tightness.)~
-= ~I suppose that...helps a bit. Let us just get out of here as quickly as we can. Correlon's gaze does not reach into places like this.~
+= ~I suppose that...helps a bit. Let us just get out of here as quickly as we can. Corellon's gaze does not reach into places like this.~
 EXIT 
 
 CHAIN X3VieJ 15.6
@@ -3913,7 +3913,7 @@ END
 ++ ~This is *definitely* not the time, Vienxay.~ + 16.3
 
 CHAIN X3VieJ 16.1 
-~We are in a city. Full of drow. Not just the underdark now. Have we lost it? Has the father abandoned me?~
+~We are in a city. Full of drow. Not just the Underdark now. Have we lost it? Has the father abandoned me?~
 END 
 ++ ~Please, please, pull it together Vienxay. We cannot afford needless attention.~ + 16.2 
 ++ ~And I am here with you. And I will always be if you let me be your comfort.~ DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + 16.3
@@ -4064,7 +4064,7 @@ SAY ~Well, I'll be leaving then. No reason to stay around after a proclamation l
 END 
 
 IF ~~ LBreak.5 
-SAY ~Hrmph. Goodbye... and goodluck.~
+SAY ~Hrmph. Goodbye... and good luck.~
 IF ~~ DO ~LeaveParty()EscapeArea()~
 EXIT 
 END 
@@ -4106,7 +4106,7 @@ IF ~~ + Break.3
 END  
 
 IF ~~ Break.3 
-SAY ~It is time for us to seperate our paths.~
+SAY ~It is time for us to separate our paths.~
 ++ ~Then get out of my sight.~ + Break.4
 ++ ~Go ahead. But your equipment? That's mine.~ + Break.5
 ++ ~Vienxay, please. Just give me one more chance to make this up to you.~ + Break.6 
@@ -4188,7 +4188,7 @@ END
 
 IF ~~ PID.Evermeet 
 SAY ~I suppose I cannot blame you for being hungry to know about my great home. There is nothing like it in the realms.~ 
-= ~My homeland is an island far to the west, with nature untainted as it should be. We build around it, or with it for our homes, allowing the forests to remain splendrous with their trees and lakes. Buildings would rise into the sky, and the walk ways would wrap around trees and nests, leaving them undisturbed~
+= ~My homeland is an island far to the west, with nature untainted as it should be. We build around it, or with it for our homes, allowing the forests to remain splendorous with their trees and lakes. Buildings would rise into the sky, and the walk ways would wrap around trees and nests, leaving them undisturbed~
 = ~Only elves could call this place home. No other were allowed to set foot there, and we maintained this with both force and magic. This kept our people safe, who were never poor nor never starving. All were taken care of and loved.~
 ++ ~Did anyone ever force their way?~ + PEvermeet.1 
 ++ ~No exceptions?~ + PEvermeet.2 
@@ -4211,7 +4211,7 @@ SAY ~None. So many of our empires to the east of Evermeet had fallen when trust 
 END 
 
 IF ~~ PEvermeet.3 
-SAY ~Perhaps in that some other cities have walls and are distrusting of outsiders? I have seen none do so to the success and extent of my people, while also respecting the world it lives in. But you are entitled to your misbeliefs.~
+SAY ~Perhaps in that some other cities have walls and are distrusting of outsiders? I have seen none do so to the success and extent of my people, while also respecting the world it lives in. But you are entitled to your beliefs.~
 ++ ~Let's talk about something else.~ + MoreQuestion.PID 
 ++ ~That's all I had to ask. Let's keep moving.~ EXIT 
 END 
@@ -4226,7 +4226,7 @@ SAY ~My father held the responsibility as the Treasurer of Evermeet, giving fina
 END 
 
 IF ~~ PFamily.1 
-SAY ~Why would I? I put them through public shame. I do not even know if my father is still entrusted with the job he had. Everytime I want to, that I begin to scrawl something...I tear it up.~
+SAY ~Why would I? I put them through public shame. I do not even know if my father is still entrusted with the job he had. Every time I want to, that I begin to scrawl something...I tear it up.~
 IF ~~ + PFamily.4 
 END 
 
@@ -4251,7 +4251,7 @@ SAY ~There is little to tell. I was involved with a Sharran, my mentor, and her 
 = ~I learned gradually that she was using our own people as experiments, and killing them. I planned to betray her with this knowledge, but while I was getting some..."stress relief" with an elf, my lover at the time barged in on us and I felt frightened.~
 = ~I used one of the spells she taught me with no idea it was of Shar's weave and killed him on accident. His death, and later all of the others my mentor had caused, were pinned on me.~
 = ~I have never used Shar's weave since.~
-++ ~I am suprised they didn't execute you.~ + PExile.1 
+++ ~I am surprised they didn't execute you.~ + PExile.1 
 ++ ~Is there no way to appeal your sentence?~ + PExile.2 
 ++ ~How can you unknowingly use Shar's weave?~ + PExile.3
 END 
@@ -4280,7 +4280,7 @@ SAY ~Using the Shadow Weave does not require devotion to Shar. But there is a co
 END 
 
 IF ~~ PID.Mentor 
-SAY ~I know little but that she was not born in Evermeet and believed that the trustingness of other elves would allow her to get away with the experiments she needed.~
+SAY ~I know little but that she was not born in Evermeet and believed that she could lie and deceive to the other elves to get away with the experiments she needed.~
 = ~She was also a skilled Shadowdancer. Even if my people had known most of the murders done were her fault and not mine...she could have easily escaped if she so chose.~
 = ~After seeking revenge for so long against her, I must admit it makes me feel...purposeless.~
 ++ ~Let's talk about something else.~ + MoreQuestion.PID 
@@ -4376,13 +4376,13 @@ IF ~~ EXIT
 END 
 
 IF ~~ RI.3 
-SAY ~You just gave me the compliment. If you are irriated with my reaction then you shouldn't say it.~
+SAY ~You just gave me the compliment. If you are irritated with my reaction then you shouldn't say it.~
 = ~If you said it only to test me, congratulations, you've learned that I value myself. Now let's not speak of this again.~
 IF ~~ DO ~SetGlobal("X3VieRomanceActive","GLOBAL",3)~ EXIT 
 END 
 
 IF ~~ BreakUp 
-SAY ~I asusme you mean...our relationship.~
+SAY ~I assume you mean...our relationship.~
 = ~Then it is done. Think nothing more of it, then! I won't...not at all.~
 IF ~~ DO ~SetGlobal("X3VieRomanceActive","GLOBAL",3)IncrementGlobal("X3VieApp","GLOBAL",-12)
 DisplayStringNoNameDlg(Player1,@509)~ EXIT 

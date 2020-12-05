@@ -5,7 +5,7 @@
 Helga's Quest has a few outcomes.
 
 Lose any of the rounds -> Fail, with a disapproval loss from Helga if in the party.
-Give the Potion of Bodily Health to the Old Man for his frail son. -> Helga Dissaproval, with potential refund in a talk after. Gains Potion of Understanding in its place.
+Give the Potion of Bodily Health to the Old Man for his frail son. -> Helga Disapproval, with potential refund in a talk after. Gains Potion of Understanding in its place.
 Make sure the Old Man is marked Innocent, if someone is going to murder or pickpocket him to get the Con potion (Or the wisdom one) there should be risk.
 The Old Man appears when the time expires for the first time. He asks Rulendo if he could donate or trade for another such potion to help his ailing son.
 Rulendo is dismissive of him, and the beggar goes off to a corner for a while.
@@ -121,7 +121,7 @@ EXTERN X3HRL rules
 
 CHAIN X3HRL rules
 ~You'll enter the pit and fight another group. My hired mage, Ester, will take you out when he sees someone unable to continue.~
-== X3HRL ~You'll earn money every round, plus the great Potion of Bodily Health if you are declared champion. All of this, with a complete mininum risk of serious harm for wonderful winnings.~
+== X3HRL ~You'll earn money every round, plus the great Potion of Bodily Health if you are declared champion. All of this, with a complete minimum risk of serious harm for wonderful winnings.~
 == X3HRL ~There is a matter of a small entry fee of five hundred gold, but the rewards will quickly pay out for you.~
 == X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~I don't approve of just fighting for a prize. But I do understand you need the gold.~
 END 
@@ -196,7 +196,7 @@ CHAIN X3HRL join
 ~Now, who of your group shall join you in the fight?~
 == X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~I don't think I'm very comfortable participating in this. Can you um, ask one of the others to join you, maybe?~
 END 
-IF ~IsValidForPartyDialogue("X3Hel")~ EXTERN X3HelJ join_one_remarkH // Helga and Kale will be the most excited to join you. Emily strongly dissaproves, Recorder moderately dissaproves, Vienxay is neutral.)
+IF ~IsValidForPartyDialogue("X3Hel")~ EXTERN X3HelJ join_one_remarkH // Helga and Kale will be the most excited to join you. Emily strongly disapproves, Recorder moderately disapproves, Vienxay is neutral.)
 IF ~IsValidForPartyDialogue("X3Kal")!IsValidForPartyDialogue("X3Hel")~ EXTERN X3KalJ join_one_remarkK
 +~InParty(Player2)~+ ~<PLAYER2>.~ DO ~SetGlobal("X3P2Arena","AR0406",1)~ + join_second
 +~InParty(Player3)~+ ~<PLAYER3>.~ DO ~SetGlobal("X3P3Arena","AR0406",1)~ + join_second
@@ -454,7 +454,7 @@ CHAIN X3HPOOR start
 EXIT 
 
 CHAIN X3HPOOR gift 
-~I scarcely believe it. Such a concotion most would take for themselves. But if your words are truth...no, I'll not give myself that hope.~
+~I scarcely believe it. Such a concoction most would take for themselves. But if your words are truth...no, I'll not give myself that hope.~
 EXIT 
 
 CHAIN X3HPOOR help_son 

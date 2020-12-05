@@ -42,7 +42,7 @@ IF ~Global("X3EGVJVote","GLOBAL",1)~ EXTERN X3EGVJ vote_betrayed // Betrayed Vot
 IF ~!Global("X3EGVJVote","GLOBAL",1)~ EXTERN X3EGVJ no_vote // no vote 
 
 CHAIN X3ECH vote_Thomas 
-~I have not seen a great distinction between Emily and Thomas's prestige, or perhaps as noted Emily has not put in the same effort. Despite my misgivings, I will suport Thomas.~
+~I have not seen a great distinction between Emily and Thomas's prestige, or perhaps as noted Emily has not put in the same effort. Despite my misgivings, I will support Thomas.~
 == X3EBRO ~You choose wisely, Lady Charmaine. I will not forget this.~
 == X3EmiJ ~That is disappointing to hear, Lady Hornkeeper. But I guess I understand your decision.~
 == X3ECH ~I like you Lady Castilla. But unfortunately I must use reason, and your time away has not shown me your leadership capability where Thomas has.~
@@ -69,7 +69,7 @@ EXTERN X3EmiJ tie_tie
 //Cutting
 /*
 CHAIN X3EGVJ yes_vote 
-~I support your daughter, Thomas. I will not forget how she assisted with a dispute between two merchants in service to me. Such diplomacy and grace will be key to a succesful leadership of House Castilla.~
+~I support your daughter, Thomas. I will not forget how she assisted with a dispute between two merchants in service to me. Such diplomacy and grace will be key to a successful leadership of House Castilla.~
 == X3EBRO ~I thought I could count on you, Jurgenson. It seems you fell for her gentle demeanor.~
 == X3EGVJ ~If you were less arrogant, Thomas, perhaps I would have voted differently. Learn well.~
 END 
@@ -78,7 +78,7 @@ END
 ++ ~What happens now?~ EXTERN X3EmiJ tie_tie
 */
 CHAIN X3EGVJ no_vote 
-~I support Thomas as your heir, Charles, with one hundred percent certainity he is the right person. He is firm, and he is not always empathetic, but those are not bad traits in a leader.~
+~I support Thomas as your heir, Charles, with one hundred percent certainty he is the right person. He is firm, and he is not always empathetic, but those are not bad traits in a leader.~
 END 
 +~!Global("X3ECHVote","GLOBAL",1)~ + ~This makes Thomas the winner, then.~ EXTERN X3EFATH thomas_wins
 +~Global("X3ECHVote","GLOBAL",1)~ + ~This makes it a tie. What happens now, Emily?~ EXTERN X3EmiJ tie_tie
@@ -111,7 +111,7 @@ CHAIN X3EFATH thomas_wins
 == X3EFATH ~Thomas, what is the meaning o-?~
 == X3EBRO ~You said this was effective *immediately*, father, and I am acting out a responsibility you should have years ago, and many other things that I will address as soon as I return home. You may not like them at first, but you will see they are necessary for our family's enduring legacy.~
 == X3EFATH ~Thomas, please, see reason. This is your s-~
-== X3EmiJ ~It is okay, father. I...do not think I want to be a Castilla if that means being subservient to him, as is. I will always love you father, though I do not know if we will meet eachother again.~
+== X3EmiJ ~It is okay, father. I...do not think I want to be a Castilla if that means being subservient to him, as is. I will always love you father, though I do not know if we will meet each other again.~
 == X3ECATH ~You are always welcome to visit my family, Emily, if you require a place.~
 == X3EmiJ ~I think my place right now is the road. And I think that is where I will stay. But thank you, Catherine.~
 == X3EBRO ~Good. In the meantime father, we have much to talk about. Let us get out of this inn and return to Tethyr to begin this lengthy transition.~
@@ -164,7 +164,7 @@ CHAIN X3EBRO duel_call
 ~The Houses have made their vote, and I know what yours will be, father. Therefore I call upon my right of decision by combat.~
 == X3EFATH ~You cannot be serious, Thomas. She is your s-~
 == X3EBRO ~*Half* sister, father. And while grace and prestige are two tenants all nobles should strive for in Tethyr, the third and most important, is might.~
-== X3EGVJ ~By rights older than today's traditions, a contest of might for the heirship is allowed, even if it is unusual. But does Lady Castilla accept?~
+== X3EGVJ ~By rights older than today's traditions, a contest of might for the heirdom is allowed, even if it is unusual. But does Lady Castilla accept?~
 END 
 ++ ~Don't do this, Emily. We don't need to fight him.~ EXTERN X3EmiJ we_do
 ++ ~Of course we'll do it.~ + duel_ring

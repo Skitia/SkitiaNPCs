@@ -1,4 +1,4 @@
-/* Note: START.d iniiates the Five's NPC dialogues, but no one elses. */
+/* Note: START.d initiates the Five's NPC dialogues, but no one else. */
 
 // Kale in the temple of Amaunator
 //Going to leave it here for ease of use.
@@ -37,7 +37,7 @@ END
 
 IF ~~ v1.2
 SAY ~Eh? So soon? Well...all right.~
-= ~This isn't goodbye though. We'll be seeing eachother again.~
+= ~This isn't goodbye though. We'll be seeing each other again.~
 IF ~~ DO ~SetGlobal("X3KalKickedOut","LOCALS",1) MoveGlobal("AR0406","X3Kal",[615.1399])~ EXIT
 END
 
@@ -61,7 +61,7 @@ CHAIN X3HelJ m2a
 EXTERN X3Kal m2b 
 
 CHAIN X3Kal m2b 
-~Heh, nevermind that. I'm betting you're a foreigner like myself, eh, <PRO_SIRMAAM>? An adventurer even, if I had to guess. Am I right?~
+~Heh, never mind that. I'm betting you're a foreigner like myself, eh, <PRO_SIRMAAM>? An adventurer even, if I had to guess. Am I right?~
 END 
 ++ ~You really don't recognize me, Kale?~ DO ~SetGlobal("X3KalPartyBG1","GLOBAL",1)~ + m3
 ++ ~Something of the like. I am <CHARNAME> You seem like a warrior yourself.~ + m4 
@@ -111,7 +111,7 @@ END
 
 
 CHAIN X3Kal m6 
-~Dangerous smangerous. Listen here, mate, wizards are all the same. These ones? Just greyer than the rest. A bit of a swing and they're done for, eh? That's why I was called mageslayer in Gullykin.~
+~Dangerous smangerous. Listen here, mate, wizards are all the same. These ones? Just grayer than the rest. A bit of a swing and they're done for, eh? That's why I was called mageslayer in Gullykin.~
 END 
 IF ~IsValidForPartyDialogue("X3Reb")Global("X3KalPartyBG1","GLOBAL",1)Global("X3RebPartyBG1","GLOBAL",1)~ EXTERN X3RebJ m7a 
 IF ~IsValidForPartyDialogue("X3Reb")OR(2)!Global("X3KalPartyBG1","GLOBAL",1)!Global("X3RebPartyBG1","GLOBAL",1)~ EXTERN X3RebJ m7b  
@@ -125,7 +125,7 @@ IF ~IsValidForPartyDialogue("X3Reb")OR(2)!Global("X3KalPartyBG1","GLOBAL",1)!Glo
 IF ~!IsValidForPartyDialogue("X3Reb")~ + m8
 
 CHAIN X3RebJ m7a 
-~Wizard slayer? The last time you talked about your adventures in Gullykin, I distinctily recorded "kobold slayer", of which none used magic.~
+~Wizard slayer? The last time you talked about your adventures in Gullykin, I distinctly recorded "kobold slayer", of which none used magic.~
 == X3Kal ~Anyone else get annoyed by folk who have to be all historical accurate? I just didn't mention it is all, Recorder, sheesh.~
 == X3RebJ ~I see.~
 EXTERN X3Kal m8 
@@ -189,7 +189,7 @@ CHAIN IF
 ~Global("X3KalKickedOut","LOCALS",0)
 !Global("X3KalRomanceActive","GLOBAL",2)
 Global("Chapter","GLOBAL",%bg2_chapter_5%)~ THEN X3KalP u1
-~Look mate, it's your call who stays and goes...but this is the bloody underdark! You want me to just...wander back to the surface alone?~ [X3Blank]
+~Look mate, it's your call who stays and goes...but this is the bloody Underdark! You want me to just...wander back to the surface alone?~ [X3Blank]
 DO ~SetGlobal("X3KalApp","GLOBAL",6)~
 END 
 ++ ~No need to worry. I'll be back for you, just wait here.~ + u2 
@@ -216,7 +216,7 @@ END
 ++ ~If that is what you wish, Recorder. Farewell.~ + u7a 
 +~GlobalGT("X3RebApp","GLOBAL",44)~+ ~I can't afford to lose both of you. Stay, Recorder.~ + u8a
 +~GlobalLT("X3RebApp","GLOBAL",45)~+ ~I can't afford to lose both of you. Stay, Recorder.~ + u9a
-++ ~Nevermind. Both of you, stay.~ EXTERN X3KalP p3
+++ ~Never mind. Both of you, stay.~ EXTERN X3KalP p3
 
 CHAIN X3EmiJ u5b
 ~I'd be terrified too. I can go with him. With two of us going he should be fine.~
@@ -224,7 +224,7 @@ END
 ++ ~If you are certain Emily, then you may travel with him.~ + u7b 
 +~GlobalGT("X3EmiApp","GLOBAL",44)~+ ~That's not a good idea. I need you here, Emily.~ + u8b
 +~GlobalLT("X3EmiApp","GLOBAL",45)~+ ~That's not a good idea. I need you here, Emily.~ + u9b
-++ ~Nevermind. Both of you, stay.~ EXTERN X3KalP p3
+++ ~Never mind. Both of you, stay.~ EXTERN X3KalP p3
 
 CHAIN X3RebJ u7a
 ~Farewell, <CHARNAME>. May Oghma give us both the knowledge to survive this place.~
@@ -300,10 +300,10 @@ CHAIN IF
 ~Global("X3KalKickedOut","LOCALS",0)
 Global("X3KalRomanceActive","GLOBAL",2)
 Global("Chapter","GLOBAL",%bg2_chapter_5%)~ THEN X3KalP ru1
-~I know I say somethings I shouldn't sometimes. But come on, darling. Dear. Lover. Please don't leave me behind, in the bloody underdark.~ [X3Blank]
+~I know I say somethings I shouldn't sometimes. But come on, darling. Dear. Lover. Please don't leave me behind, in the bloody Underdark.~ [X3Blank]
 DO ~SetGlobal("X3KalAppChange","GLOBAL",6)~
 END 
-++ ~No need to overeact, it's just for a moment. I'll be back for you.~ + ru2 
+++ ~No need to overreact, it's just for a moment. I'll be back for you.~ + ru2 
 ++ ~I'm sorry Kale. Can you get out of here safely?~ DO ~IncrementGlobal("X3KalAppChange","GLOBAL",-1)~ + ru3 
 ++ ~You're too attached Kale. Our time together and our relationship is at an end.~ DO ~SetGlobal("X3KalRomanceActive","GLOBAL",3)IncrementGlobal("X3KalAppChange","GLOBAL",-5)~ + ru4
 ++ ~You're right. I can't risk you getting hurt.~ + rp3a 
@@ -314,7 +314,7 @@ DO ~SetGlobal("X3KalKickedOut","LOCALS",0)~
 EXIT 
 
 CHAIN X3KalP ru3 
-~Well, this is the underdark, mate, and I am the great Kale, hero of Gullykin. But this is also the underdark...eh, what the hell, another chapter of great tales, here we come!~
+~Well, this is the Underdark, mate, and I am the great Kale, hero of Gullykin. But this is also the Underdark...eh, what the hell, another chapter of great tales, here we come!~
 END 
 IF ~IsValidForPartyDialogue("X3Reb")~ EXTERN X3RebJ ru5a
 IF ~IsValidForPartyDialogue("X3Emi")~ EXTERN X3EmiJ ru5b
@@ -334,8 +334,8 @@ END
 +~GlobalGT("X3RebApp","GLOBAL",44)Global("X3KalRomanceActive","GLOBAL",2)~+ ~I can't afford to lose both of you. Stay, Recorder.~ + ru8a
 +~GlobalGT("X3RebApp","GLOBAL",44)!Global("X3KalRomanceActive","GLOBAL",2)~+ ~I can't afford to lose both of you. Stay, Recorder.~ + u8a
 +~GlobalLT("X3RebApp","GLOBAL",45)~+ ~I can't afford to lose both of you. Stay, Recorder.~ + ru9
-+~Global("X3KalRomanceActive","GLOBAL",2)~+ ~Nevermind. Both of you, stay.~ EXTERN X3KalP rp3a
-+~!Global("X3KalRomanceActive","GLOBAL",2)~+ ~Nevermind. Both of you, stay.~ EXTERN X3KalP rp3b
++~Global("X3KalRomanceActive","GLOBAL",2)~+ ~Never mind. Both of you, stay.~ EXTERN X3KalP rp3a
++~!Global("X3KalRomanceActive","GLOBAL",2)~+ ~Never mind. Both of you, stay.~ EXTERN X3KalP rp3b
 
 CHAIN X3EmiJ ru5b
 ~I can go with him. With two of us going he should be fine.~
@@ -344,8 +344,8 @@ END
 +~GlobalGT("X3RebApp","GLOBAL",44)Global("X3KalRomanceActive","GLOBAL",2)~+ ~I can't afford to lose both of you. Stay, Recorder.~ + ru8b
 +~GlobalGT("X3RebApp","GLOBAL",44)!Global("X3KalRomanceActive","GLOBAL",2)~+ ~I can't afford to lose both of you. Stay, Recorder.~ + u8b
 +~GlobalLT("X3RebApp","GLOBAL",45)~+ ~I can't afford to lose both of you. Stay, Recorder.~ + ru9
-+~Global("X3KalRomanceActive","GLOBAL",2)~+ ~Nevermind. Both of you, stay.~ EXTERN X3KalP rp3a
-+~!Global("X3KalRomanceActive","GLOBAL",2)~+ ~Nevermind. Both of you, stay.~ EXTERN X3KalP rp3b
++~Global("X3KalRomanceActive","GLOBAL",2)~+ ~Never mind. Both of you, stay.~ EXTERN X3KalP rp3a
++~!Global("X3KalRomanceActive","GLOBAL",2)~+ ~Never mind. Both of you, stay.~ EXTERN X3KalP rp3b
 
 CHAIN X3RebJ ru8a 
 ~I um...as you wish, <CHARNAME>. I am sorry Kale, but please, please, take care of yourself.~
@@ -362,15 +362,15 @@ CHAIN X3RebJ ru9
 ~I am sorry, <CHARNAME>. I know what you are doing is important, but he could die alone. I don't think it's right for Kale to not have at least someone to be with him.~
 END 
 ++ ~As you wish, Recorder. Farewell~ + u7a
-+~Global("X3KalRomanceActive","GLOBAL",2)~+ ~Nevermind. Both of you, stay.~ EXTERN X3KalP rp3a
-+~!Global("X3KalRomanceActive","GLOBAL",2)~+ ~Nevermind. Both of you, stay.~ EXTERN X3KalP rp3b
++~Global("X3KalRomanceActive","GLOBAL",2)~+ ~Never mind. Both of you, stay.~ EXTERN X3KalP rp3a
++~!Global("X3KalRomanceActive","GLOBAL",2)~+ ~Never mind. Both of you, stay.~ EXTERN X3KalP rp3b
 
 CHAIN X3EmiJ ru9 
 ~I can't, <CHARNAME>. If he were to get killed because no one was there...I can't bear the thought.~
 END 
 ++ ~As you wish, Emily. Farewell~ + u7b
-+~Global("X3KalRomanceActive","GLOBAL",2)~+ ~Nevermind. Both of you, stay.~ EXTERN X3KalP rp3a
-+~!Global("X3KalRomanceActive","GLOBAL",2)~+ ~Nevermind. Both of you, stay.~ EXTERN X3KalP rp3b
++~Global("X3KalRomanceActive","GLOBAL",2)~+ ~Never mind. Both of you, stay.~ EXTERN X3KalP rp3a
++~!Global("X3KalRomanceActive","GLOBAL",2)~+ ~Never mind. Both of you, stay.~ EXTERN X3KalP rp3b
 
 CHAIN X3KalP rp3a 
 ~Glad ye came around, lover<PRO_GIRLBOY>. And here I was worried I said something stupid again.~ 

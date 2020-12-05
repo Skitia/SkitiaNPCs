@@ -24,9 +24,9 @@ END
 ++ ~Sorry for bothering you.~ EXIT 
 
 CHAIN X3HSCRY mean 
-~Scrying is a risky bit of magic. Sometimes you get lost in the place you are seeing. Sometimes you find yourself so deeply attunted to your surroundings you physically move there.~
+~Scrying is a risky bit of magic. Sometimes you get lost in the place you are seeing. Sometimes you find yourself so deeply attuned to your surroundings you physically move there.~
 = ~I was scrying a smuggler here on behalf of a robbed client, when I found myself right in the smugglers den. I had to cloak myself in an illusion and hastily make my way out before they gutted me.~
-= ~I was earning coin to make my way back home until one of these local fools had me scrying Balthzar in the monastery. The monks found out and I was nearly murdered until I pointed at the person who asked of it. Then they murdered him instead in their name of justice.~
+= ~I was earning coin to make my way back home until one of these local fools had me scrying Balthazar in the monastery. The monks found out and I was nearly murdered until I pointed at the person who asked of it. Then they murdered him instead in their name of justice.~
 END 
 +~Global("X3HelToBQuest","GLOBAL",3)~+ ~We actually want your help locating someone.~ + locating 
 ++ ~Sorry for bothering you.~ EXIT 
@@ -35,7 +35,7 @@ CHAIN X3HSCRY locating
 ~And who is this person? I need a name, and some details.~
 END 
 ++ ~It is a dwarf named Berk. He was a soldier defending Saradush against invaders.~ + Berk
-++ ~Nevermind. Forget we asked.~ + forget 
+++ ~Never mind. Forget we asked.~ + forget 
 
 CHAIN X3HSCRY forget 
 ~Easily done.~

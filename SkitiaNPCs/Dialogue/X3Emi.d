@@ -1,4 +1,4 @@
-/* Note: START.d iniiates the Five's NPC dialogues, but no one elses. */
+/* Note: START.d initiates the Five's NPC dialogues, but no one else's. */
 
 
 BEGIN X3ECath 
@@ -106,7 +106,7 @@ IF ~IsValidForPartyDialogue("X3Reb")!Global("X3RebPartyBG1","GLOBAL",1)~ EXTERN 
 IF ~!IsValidForPartyDialogue("X3Reb")~ EXTERN X3Emi m3 
 
 CHAIN X3RebJ m1.3a 
-~We've barely had time away from eachother, Emily. I think we're mostly caught up.~
+~We've barely had time away from each other, Emily. I think we're mostly caught up.~
 EXTERN X3Emi m1.3c 
 
 CHAIN X3RebJ m1.3b 
@@ -127,8 +127,8 @@ IF ~!IsValidForPartyDialogue("X3Reb")~ EXTERN X3Emi m3
 CHAIN X3Emi m3
 ~So, what was going on at the promenade earlier? It had everyone in a frenzy.~
 END 
-+~Global("X3EmiPartyBG1","GLOBAL",1)~+ ~Imoen and a dangerous mage named Inrenicus were taken by the Cowled Wizards. I need to rescue her.~ + m4a 
-+~!Global("X3EmiPartyBG1","GLOBAL",1)~+ ~My companion, Imoen and a dangerous mage named Inrenicus were taken by the Cowled Wizards. I need to rescue her.~ + m4b 
++~Global("X3EmiPartyBG1","GLOBAL",1)~+ ~Imoen and a dangerous mage named Irenicus were taken by the Cowled Wizards. I need to rescue her.~ + m4a 
++~!Global("X3EmiPartyBG1","GLOBAL",1)~+ ~My companion, Imoen and a dangerous mage named Irenicus were taken by the Cowled Wizards. I need to rescue her.~ + m4b 
 ++ ~I escaped the capture of a wizard named Irenicus. That same wizard caused your chaos in the Promenade.~ + m5 
 ++ ~It was done by Irenicus, who took much from me and the city. But I will have my revenge.~ +m6
 
@@ -144,7 +144,7 @@ IF ~ReputationGT(Player1,7)~ EXTERN X3ECath m7a
 IF ~ReputationLT(Player1,8)~ EXTERN X3ECath m7b 
 
 CHAIN X3Emi m4b 
-~A friend I assume? By the gods, I am so sorry this happened to you. but from the little I have heard I would have just become dust if Itried to help.~
+~A friend I assume? By the gods, I am so sorry this happened to you. but from the little I have heard I would have just become dust if I tried to help.~
 END
 IF ~ReputationGT(Player1,7)~ EXTERN X3ECath m7a
 IF ~ReputationLT(Player1,8)~ EXTERN X3ECath m7b
@@ -238,12 +238,12 @@ END
 ++ ~<CHARNAME>. Let's get going.~ + m17 
 
 CHAIN X3Emi m15 
-~<CHARNAME>. A pleasure! Well, I'm sure you want to be off, and so do I, so onwards then, hmm?~
+~<CHARNAME>. A pleasure! Well, I'm sure you want to be off, and so do I, so onward then, hmm?~
 DO ~JoinParty()~
 EXIT 
 
 CHAIN X3Emi m16 
-~Oh you don't have to do the my lady stuff. It won't mean much where you take us, I reckon. Or if I don't make it and other likely outcomes. Oh nevermind. Let's hope this goes well, hmm?~
+~Oh you don't have to do the my lady stuff. It won't mean much where you take us, I reckon. Or if I don't make it and other likely outcomes. Oh never mind. Let's hope this goes well, hmm?~
 DO ~JoinParty()~
 EXIT 
 
@@ -278,7 +278,7 @@ EXIT
 
 // Quest - Good End 
 CHAIN IF ~Global("X3EmiKickedOut","LOCALS",1)Global("X3EmiHeir","GLOBAL",1)!Global("X3EmiQuest","GLOBAL",10)~ THEN X3EmiP quest_good_end // And Quest Global to X Parameter. 
-~<CHARNAME>! You won't believe it...I...I am really my family's heir now. I've got so many responsiblities now. It's a bit exciting, but overwhelming.~
+~<CHARNAME>! You won't believe it...I...I am really my family's heir now. I've got so many responsibilities now. It's a bit exciting, but overwhelming.~
 DO ~SetGlobal("X3EmiQuest","GLOBAL",10)SetGlobal("X3EmiAppChange","GLOBAL",10)~
 END 
 ++ ~Congratulations! I knew you could do it.~ DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",1)~ + good_do_it
@@ -310,7 +310,7 @@ END
 
 
 CHAIN X3EmiP bad_depressed
-~I actually don't want to be alone. I don't even know if I really wanted to be heir but worse...I'm not even a Castilla anymore, <CHARNAME>. The first thing my brother did upon being bestowed all the family responsiblities was disown me from my family due to being impure.~
+~I actually don't want to be alone. I don't even know if I really wanted to be heir but worse...I'm not even a Castilla anymore, <CHARNAME>. The first thing my brother did upon being bestowed all the family responsibilities was disown me from my family due to being impure.~
 EXTERN X3EmiP bad_deserve 
 
 CHAIN X3EmiP bad_deserve 
@@ -427,7 +427,7 @@ END
 ++ ~If that is what you wish, Recorder. Farewell.~ + u7 
 +~GlobalGT("X3RebApp","GLOBALS",44)~+ ~I can't afford to lose both of you. Stay, Recorder.~ + u8
 +~GlobalLT("X3RebApp","GLOBALS",45)~+ ~I can't afford to lose both of you. Stay, Recorder.~ + u9
-++ ~Nevermind. Both of you, stay.~ EXTERN X3EmiP p3
+++ ~Never mind. Both of you, stay.~ EXTERN X3EmiP p3
 
 CHAIN X3RebJ u7
 ~Farewell, <CHARNAME>. May Oghma give us both the knowledge to survive this place.~
@@ -442,7 +442,7 @@ CHAIN X3RebJ u9
 ~I am sorry, <CHARNAME>. I know what you are doing is important, but she could die alone. I don't think it's right for her to not have at least someone to be with her.~
 END 
 ++ ~If that is how it must be. Goodbye, Recorder.~ + u7 
-++ ~Nevermind. Both of you, stay.~ EXTERN X3EmiP p3
+++ ~Never mind. Both of you, stay.~ EXTERN X3EmiP p3
 
 CHAIN X3EmiP u6
 ~If this is how it must be...Gods I...I'll figure something out. Goodbye!~
@@ -487,7 +487,7 @@ CHAIN X3EmiP rp5
 DO ~SetGlobal("X3EmiKickedOut","LOCALS",1)~ EXIT 
 
 CHAIN X3EmiP rp3 
-~I am glad. We're meant to walk next to eachother. I just feel it.~
+~I am glad. We're meant to walk next to each other. I just feel it.~
 DO ~JoinParty()~ EXIT 
 
 // Underdark Romance
@@ -495,7 +495,7 @@ CHAIN IF
 ~Global("X3EmiKickedOut","LOCALS",0)
 Global("X3EmiRomanceActive","GLOBAL",2)
 Global("Chapter","GLOBAL",%bg2_chapter_5%)~ THEN X3EmiP ru1
-~I didn't say anything bad, did I, to get kicked out of our group here, in the underdark? I thought we were...~ [X3Blank]
+~I didn't say anything bad, did I, to get kicked out of our group here, in the Underdark? I thought we were...~ [X3Blank]
 END 
 ++ ~Don't worry. I just need you to wait in this spot for a moment. I'll be back for you.~ + ru2 
 ++ ~We still are. I'll come find you soon. I promise.~ + ru3 
@@ -528,8 +528,8 @@ END
 +~GlobalGT("X3RebApp","GLOBALS",44)Global("X3EmiRomanceActive","GLOBAL",2)~+ ~I can't afford to lose both of you. Stay, Recorder.~ + ru8.1
 +~GlobalGT("X3RebApp","GLOBALS",44)!Global("X3EmiRomanceActive","GLOBAL",2)~+ ~I can't afford to lose both of you. Stay, Recorder.~ + u8 
 +~GlobalLT("X3RebApp","GLOBALS",45)~+ ~I can't afford to lose both of you. Stay, Recorder.~ + ru9
-+~Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Nevermind. Both of you, stay.~ EXTERN X3EmiP rp3a
-+~!Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Nevermind. Both of you, stay.~ EXTERN X3EmiP rp3b
++~Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Never mind. Both of you, stay.~ EXTERN X3EmiP rp3a
++~!Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Never mind. Both of you, stay.~ EXTERN X3EmiP rp3b
 
 CHAIN X3RebJ ru7
 ~Farewell, <CHARNAME>. May Oghma give us both the knowledge to survive this place.~
@@ -544,8 +544,8 @@ CHAIN X3RebJ ru9
 ~I am sorry, <CHARNAME>. I know what you are doing is important, but she could die alone. I don't think it's right for her to not have at least someone to be with her.~
 END 
 ++ ~If that is how it must be. Goodbye, Recorder.~ + ru7 
-+~Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Nevermind. Both of you, stay.~ EXTERN X3EmiP rp3a
-+~!Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Nevermind. Both of you, stay.~ EXTERN X3EmiP rp3b
++~Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Never mind. Both of you, stay.~ EXTERN X3EmiP rp3a
++~!Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Never-mind. Both of you, stay.~ EXTERN X3EmiP rp3b
 
 CHAIN x3EmiP rp3a 
 ~Thank you. We're meant to be by each other's side. I just know it.~ 

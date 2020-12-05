@@ -20,12 +20,12 @@ EXTERN X3Kal25 b2
 CHAIN X3Kal25 b2  
 ~Good thing you didn't summon me a moment later, or I might have less clothes on. Sooo. What do you need? And what is this place, anyway?~
 END 
-++ ~This is my pocket plane. I need your swordarm once more, Kale.~  + b3a
+++ ~This is my pocket plane. I need your sword arm once more, Kale.~  + b3a
 ++ ~That is too much information for me.~+ b3b
 
 
 CHAIN X3Kal25 b3a 
-~You know, after everything that happened, I thought you would take a long vacation. That's what I was trying to enjoy. You neve rest, do you?~ 
+~You know, after everything that happened, I thought you would take a long vacation. That's what I was trying to enjoy. You never rest, do you?~ 
 EXTERN X3Kal25 b4
 
 CHAIN X3Kal25 b3b 
@@ -65,10 +65,10 @@ END
 
 CHAIN X3Kal25 r2.1 
 ~Pocket plane? Damn. Couldn't make it a bit more pleasant? I suppose not, though I don't know much about magic.~
-== X3Kal25 ~I'm real happy to be here with you. To be honest...the seperation's been killing me. Any longer and I might have had to track you down myself.~
+== X3Kal25 ~I'm real happy to be here with you. To be honest...the separation's been killing me. Any longer and I might have had to track you down myself.~
 END 
 ++ ~Good then that you don't have to wait any longer. Come with me.~ + r3
-++ ~I hate to dissapoint you, but I need you to wait here for a little while.~ + r4
+++ ~I hate to disappoint you, but I need you to wait here for a little while.~ + r4
 
 CHAIN X3Kal25 r3 
 ~Heh. Good. Kale and <CHARNAME>, together again. We'll get equal credit for everything as a couple, I hope? Eh, probably not.~
@@ -102,7 +102,7 @@ EXIT
 CHAIN IF ~Global("X3KalToBKickedOut","GLOBAL",0) !Global("X3KalRomanceActive","GLOBAL",2)~ THEN X3Kal25P p1
 ~Sooo. I'm leaving you, then?~ [X3KSO]
 END
-++ ~Nevermind. Stay with me.~ DO ~ActionOverride("X3Kal",JoinParty())~ EXIT
+++ ~Never mind. Stay with me.~ DO ~ActionOverride("X3Kal",JoinParty())~ EXIT
 + ~AreaCheck("AR4500")~ + ~Wait here.~ + p1a
 + ~!AreaCheck("AR4500") !AreaCheck("AR4000") !AreaCheck("AR6200")~ + ~Wait here.~ + p1b
 + ~!AreaCheck("AR4500") !AreaCheck("AR4000") !AreaCheck("AR6200") GlobalLT("X3KalApp","GLOBAL",44)~ + ~Return to the pocket plane for now.~ + p1c
@@ -126,7 +126,7 @@ Wait(2)
 MoveBetweenAreas("AR4500",[2327.1301],0)~ EXIT
 
 CHAIN X3Kal25P p1d 
-~Take care of yourself, mate. And catch me up on everything I've missed when we see eachother again.~
+~Take care of yourself, mate. And catch me up on everything I've missed when we see each other again.~
  DO ~SetGlobal("X3KalToBKickedOut","GLOBAL",1)CreateVisualEffectObject("spdimndr",Myself)
 Wait(2)
 MoveBetweenAreas("AR4500",[2327.1301],0)~ EXIT

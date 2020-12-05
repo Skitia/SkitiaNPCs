@@ -38,14 +38,14 @@ END
 ++ ~What were you doing at the time Percy died?~ + q2
 ++ ~What do you know about the cheese Percy was obsessed with?~ + q3 
 ++ ~What was your relationship with Percy like?~ + q4
-+~Global("X3KnowledgeCheese","GLOBAL",1)~+ ~The cheese Percy was obessed with was Spring Luiren Cheese, and was poisoned by your potions. What do you have to say to this?~ + q5
++~Global("X3KnowledgeCheese","GLOBAL",1)~+ ~The cheese Percy was obsessed with was Spring Luiren Cheese, and was poisoned by your potions. What do you have to say to this?~ + q5
 ++ ~What can you tell me of Chester?~ + q6
 ++ ~What can you tell me about Dallie?~ + q7 
 ++ ~What can you tell me about Martin?~ + q8 
 ++ ~I've no more questions.~ + q9
 
 CHAIN X3KF q2 
-~I was tending to my store. I saw him by Chester's shop, but he didn't make his way to me at all. I had pushed him about breaking things off with Dallie and commiting with me the day before and thought he was still mad, so didn't think anything of it. I regret not checking up on him now.~
+~I was tending to my store. I saw him by Chester's shop, but he didn't make his way to me at all. I had pushed him about breaking things off with Dallie and committing with me the day before and thought he was still mad, so didn't think anything of it. I regret not checking up on him now.~
 END 
 ++ ~Perhaps he had not chosen you, and you saw fit to get back at him.~ + q10 
 ++ ~Let me ask you something else.~ + question_again
@@ -67,13 +67,13 @@ END
 ++ ~I've no more questions.~ + q9
 
 CHAIN X3KF q5 
-~I...didn't know this. My products, truly? I can and have made poisons for custom orders, but they're just for rats that might get at food in storages or for people's homes, not to murder someone. Maybe they could, but I would'nt know. I'd never wanted to know.~
+~I...didn't know this. My products, truly? I can and have made poisons for custom orders, but they're just for rats that might get at food in storage or for people's homes, not to murder someone. Maybe they could, but I wouldn't know. I'd never wanted to know.~
 END 
 ++ ~Let me ask you something else.~ + question_again
 ++ ~I've no more questions.~ + q9
 
 CHAIN X3KF q6 
-~I don't speak to him much, though he made a custom order of rat poison for a pest problem he's had. People sure like his products, I'm not suprised the animals do as well.~
+~I don't speak to him much, though he made a custom order of rat poison for a pest problem he's had. People sure like his products, I'm not surprised the animals do as well.~
 END 
 ++ ~What were you doing at the time Percy died?~ + q2
 ++ ~What do you know about the cheese Percy was obsessed with?~ + q3 
@@ -84,7 +84,7 @@ END
 ++ ~I've no more questions.~ + q9
 
 CHAIN X3KF q7 
-~I pity Dallie. She's a nice enough woman, though she doesn't have a very pleasing job. Everytime she comes here buying a potion I feel so guilty that I'm with Percy. I guess now that he's gone it doesn't matter.~
+~I pity Dallie. She's a nice enough woman, though she doesn't have a very pleasing job. Every time she comes here buying a potion I feel so guilty that I'm with Percy. I guess now that he's gone it doesn't matter.~
 END 
 ++ ~Would she have reason to kill Percy if she did find out?~ + q11
 ++ ~Let me ask you something else.~ + question_again

@@ -4,7 +4,7 @@ APPEND X3Vie25P
 
 
 IF ~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelQuestCutScene","GLOBAL",1)~ ScryFinish 
-SAY ~It is done. You will not like what I have to say.~ [] // Use the It is done soundset 
+SAY ~It is done. You will not like what I have to say.~ 
 ++ ~Just tell me, Vienxay.~ + ScryDead 
 ++ ~Oh no. Is he dead?~ + ScryDead 
 ++ ~Go on.~ + ScryDead 
@@ -93,7 +93,7 @@ END
 ++ ~If all you are going to do is complain, perhaps I shouldn't have brought you here at all.~ DO ~IncrementGlobal("X3VieApp","GLOBAL",-2)DisplayStringNoNameDlg(Player1,@503)~ + r3 
 
 CHAIN X3Vie25 r2.1 
-~Of course it's nice to see me. I am irrestible.~
+~Of course it's nice to see me. I am irresistible.~
 EXTERN X3Vie25 r4 
 
 CHAIN X3Vie25 r2.2 
@@ -134,7 +134,7 @@ END
 
 
 CHAIN IF ~Global("X3VieSummoned","GLOBAL",2) Global("X3VieRomanceActive","GLOBAL",2)~ THEN X3Vie25 j1b
-~I hate being seperated from you. And I can barely stand admitting that. Do end my torment.~  [X3Blank] 
+~I hate being separated from you. And I can barely stand admitting that. Do end my torment.~  [X3Blank] 
 END 
 ++ ~The wait is over, Vienxay. Join me once more, my love.~ + r5
 ++ ~Not yet, just be a little more patient..~ + r6
@@ -184,7 +184,7 @@ END
 ++ ~As you wish, then. Stay with me.~ DO ~ActionOverride("X3Vie",JoinParty())~ EXIT
 + ~AreaCheck("AR4500")~ + ~I'll be back, it's just for a while.~ + rp1a
 + ~!AreaCheck("AR4500") !AreaCheck("AR4000") !AreaCheck("AR6200")~ + ~I'll be back, it's just for a while.~ + rp1b
-+ ~!AreaCheck("AR4500") !AreaCheck("AR4000") !AreaCheck("AR6200")~ + ~I'm set on this Vienxay. Return to the pocketplane for now.~ + rp1c
++ ~!AreaCheck("AR4500") !AreaCheck("AR4000") !AreaCheck("AR6200")~ + ~I'm set on this Vienxay. Return to the pocket plane for now.~ + rp1c
 
 
 CHAIN X3Vie25P rp1a 
@@ -219,7 +219,7 @@ EXIT
 
 
 CHAIN X3Vie25P p2.1
-~Finally. My power shall make your needs trivial to accomplsih.~
+~Finally. My power shall make your needs trivial to accomplish.~
 DO ~SetGlobal("X3VieToBKickedOut","GLOBAL",0) JoinParty()~ EXIT
 
 

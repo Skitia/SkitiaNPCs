@@ -171,7 +171,7 @@ I_C_T UDSOLA01 9 X3RebUDSOLA01-9
 END 
 
 I_C_T DADROW18 1 X3RebDADROW18
-== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~I would admire his ship, if I was not so afraid for Lantan. I wonder if the schemantics to build this were stolen from my home.~
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~I would admire his ship, if I was not so afraid for Lantan. I wonder if the schematics to build this were stolen from my home.~
 END 
 
 I_C_T UDDROW26 4 X3RebUDDROW26
@@ -212,7 +212,7 @@ DisplayStringNoNameDlg(Player1,@413)~
 END 
 
 I_C_T UDSIMYAZ 53 X3RebUDSIMYAZ-53
-== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~Most people I think would have kept such a thing. I am suprised you were willing to give this up, too.~
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~Most people I think would have kept such a thing. I am surprised you were willing to give this up, too.~
 DO ~IncrementGlobal("X3RebApp","GLOBAL",4)
 DisplayStringNoNameDlg(Player1,@416)~
 END 
@@ -305,7 +305,7 @@ I_C_T JAHEIRAJ 478 X3RebJAHEIRAJ-478
 END
 
 I_C_T HAERDAJ 120 X3RebHAERDAJ120
-== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~I know you are trying to keep up appearances but...oh, nevermind.~
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~I know you are trying to keep up appearances but...oh, never mind.~
 END
 
 I_C_T UDDUER03 5 X3RebUDDUER03-5
@@ -338,7 +338,7 @@ DO ~Enemy()~
 EXIT 
 
 I_C_T PPSAEM3 1 X3RebPPSAEM3-1
-== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~Oh no. Are we stuck going through the underdark after all?~
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~Oh no. Are we stuck going through the Underdark after all?~
 END
 
 I_C_T PPSAEM2 23 X3RebPPSAEM2-23
@@ -368,7 +368,7 @@ CHAIN X3RebJ X3RebPPIMOEN0
 EXTERN PPIMOEN 1
 
 I_C_T PPNALJ 0 X3RebPPNALJ-0
-== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~This poor ministrel. The weave is to dangerous if you are too ambitious, but to lose all of your wits, I could not imagine it.~
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~This poor minstrel. The weave is to dangerous if you are too ambitious, but to lose all of your wits, I could not imagine it.~
 END 
 
 I_C_T PPTIAX 1 X3RebPPTIAX-1
@@ -599,13 +599,13 @@ END
 I_C_T BODHI 104 X3RebBODHI104
 == X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~Spellhold? But that is on...no, not there.~
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Excuse me gnome, but we are trying to listen to the woman here.~
-== X3RebJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Sorry, nevermind me.~
+== X3RebJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Sorry, never mind me.~
 END 
 
 I_C_T ARAN 39 X3RebARAN39 
 == X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~Spellhold? But that is on...no, not there.~
 == X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~Hey, are you okay, Recorder?~
-== X3RebJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~Sorry, nevermind me.~
+== X3RebJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~Sorry, never mind me.~
 END 
 
 I_C_T ARAN 0 X3RebARAN0
@@ -689,7 +689,7 @@ CHAIN X3RebJ Yackman
 EXTERN GORMAD1 11
 
 I_C_T GORPOL1 1 X3RebGORPOL1-1
-== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")!GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ THEN ~Unable? It must be truly grevious then, if you call for aid for a duty you cannot fulfill.~
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")!GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ THEN ~Unable? It must be truly grievous then, if you call for aid for a duty you cannot fulfill.~
 END 
 
 I_C_T GORODR1 19 X3RebGORODR1-19
@@ -706,7 +706,7 @@ DisplayStringNoNameDlg(Player1,@409)~
 END 
 
 I_C_T UDSVIR03 7 X3RebUDSVIR03-7 
-== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~I would be happy to help my underdark kin. I am sure we can be of assistance.~
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~I would be happy to help my Underdark kin. I am sure we can be of assistance.~
 END 
 
 //Planar Sphere 
@@ -751,7 +751,7 @@ DisplayStringNoNameDlg(Player1,@106)~
 END 
 
 I_C_T TRCUT07 4 X3RebTRCUT07-4
-== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~I feel a bit embarrased with all of this recognition. This was really all thanks to <CHARNAME>...~
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~I feel a bit embarrassed with all of this recognition. This was really all thanks to <CHARNAME>...~
 DO ~IncrementGlobal("X3RebApp","GLOBAL",4)
 DisplayStringNoNameDlg(Player1,@416)~ 
 END 
@@ -773,7 +773,7 @@ I_C_T NEEBER 12 X3RebNEEBER12
 END 
 
 I_C_T TRGRD03 22 X3RebTRGRD03-22
-== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")!IsValidForPartyDialogue("X3Emi")~ THEN ~<CHARNAME>, this feels so unecessary.~
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")!IsValidForPartyDialogue("X3Emi")~ THEN ~<CHARNAME>, this feels so unnecessary.~
 DO ~IncrementGlobal("X3RebApp","GLOBAL",-6)
 DisplayStringNoNameDlg(Player1,@406)~ 
 == TRGRD03 ~To arms, militia!~
@@ -802,7 +802,7 @@ DisplayStringNoNameDlg(Player1,@406)~
 END 
 
 I_C_T RNGWLF01 11 X3RebRNGWLF01-11 
-== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~A corrupted temple of Amanuator? How troubling. The god's faithful has truly waned.~
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~A corrupted temple of Amaunator? How troubling. The god's faithful has truly waned.~
 END  
 
 I_C_T VALYGAR 12 X3RebVALYGAR12 
@@ -924,7 +924,7 @@ DisplayStringNoNameDlg(Player1,@506)~
 END 
 
 I_C_T DALESON 15 X3RebDaleson15
-== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~Why are we treating these poor people like this? I hope this was just a severe mistake in judgement, <CHARNAME>.~
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~Why are we treating these poor people like this? I hope this was just a severe mistake in judgment, <CHARNAME>.~
 DO ~IncrementGlobal("X3RebApp","GLOBAL",-8)
 DisplayStringNoNameDlg(Player1,@406)~ 
 == DALESON ~You will pay for this, I swear.~
@@ -970,11 +970,11 @@ I_C_T EDWIN 1 X3VieEDWIN1
 END
 
 I_C_T SCYARRYL 31 X3RebSCYARRYL31
-== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~Heehee, I guess it all worked out. Beauty truly is in the eye of the perciever.~
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~Heehee, I guess it all worked out. Beauty truly is in the eye of the perceiver.~
 END
 
 I_C_T SCSAIN 30 X3RebSCSAIN30 
-== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~Heehee, I guess it all worked out. Beauty truly is in the eye of the perciever.~
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~Heehee, I guess it all worked out. Beauty truly is in the eye of the perceiver.~
 END
 
 I_C_T ELGEA 6 X3RebElga6
@@ -1006,7 +1006,7 @@ DisplayStringNoNameDlg(Player1,@409)~
 END 
 
 I_C_T DORNJ 357 X3RebDORNJ
-== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~But h- *sigh*. Nevermind me.~
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~But h- *sigh*. Never mind me.~
 DO ~IncrementGlobal("X3RebApp","GLOBAL",-9)
 DisplayStringNoNameDlg(Player1,@409)~ 
 END
@@ -1040,7 +1040,7 @@ I_C_T JANGIT01 1 X3RebJANGIT01
 END  
 
 I_C_T HIDDEN 13 X3RebHidden13
-== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")Global("SawIllithid","LOCALS",1)~ THEN ~A mindflayer? What are its plans? I suppose we will never know.~
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")Global("SawIllithid","LOCALS",1)~ THEN ~A mind flayer? What are its plans? I suppose we will never know.~
 == X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~That...was definitely not an expected sight. This can't be anything good.~
 == X3KalJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~What the hell did I just see?~
 == HIDDEN ~Remember, say a word, and I will kill you.~
@@ -1135,7 +1135,7 @@ DisplayStringNoNameDlg(Player1,@406)~
 END 
 
 I_C_T KAMIR 23 X3RebKAMIR 
-== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~I am so glad we could do this for the paladin and the girl. They will be good for eachother.~
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~I am so glad we could do this for the paladin and the girl. They will be good for each other.~
 DO ~IncrementGlobal("X3RebApp","GLOBAL",7)
 DisplayStringNoNameDlg(Player1,@419)~ 
 END 
@@ -1252,8 +1252,8 @@ I_C_T TOLGER 18 X3RebTOLGER18
 END 
 
 I_C_T BYLANNA 20 X3RebBYLANNA20
-== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~Their rehabiliation work, as I have understood from others and reports could take years. There have been very few who have ever left their confines and are known even to the Oghma faithful.~
-== X3KalJ IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~This nay be someone needing rehabilitation, bard. Guiltless. Am nay suprised the government will do naught.~
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~Their rehabilitation work, as I have understood from others and reports could take years. There have been very few who have ever left their confines and are known even to the Oghma faithful.~
+== X3HelJ IF ~IsValidForPartyDialogue("X3Hel")~ THEN ~This nay be someone needing rehabilitation, bard. Guiltless. Am nay surprised the government will do naught.~
 END 
 
 I_C_T TRAX 13 X3RebTrax13 
@@ -1277,7 +1277,7 @@ I_C_T DELON 5 X3RebDELON5
 == X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~<CHARNAME>, there is no reason to be so cruel to the child.~
 DO ~IncrementGlobal("X3RebApp","GLOBAL",-6)
 DisplayStringNoNameDlg(Player1,@406)~
-== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Please, children's tears are just manipulative. I'm suprised you don't know that, being child-size.~
+== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~Please, children's tears are just manipulative. I'm shocked you don't know that, being child-size.~
 == X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~I'll not speak up, then...and let <CHARNAME> emulate your example then, Vienxay.~
 END  
 
@@ -1305,7 +1305,7 @@ I_C_T JANJ 132 X3RebJANJ132
 END 
 
 I_C_T JANJ 133 X3RebJANJ133 
-== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~I suppose Garl might find your antics funny enough that Oghma shall not pass any angry judgement, but...*sigh*. Just be careful with what you say, Jan.~
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~I suppose Garl might find your antics funny enough that Oghma shall not pass any angry judgment, but...*sigh*. Just be careful with what you say, Jan.~
 END
 
 I_C_T RIFTG03 7 X3RebRIFTG03 
@@ -1335,7 +1335,7 @@ I_C_T CERNDJ 56 X3RebCERNDJ-56
 == X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~I am so happy for you, Cernd. But shouldn't you...raise him yourself?~
 DO ~IncrementGlobal("X3RebApp","GLOBAL",4)
 DisplayStringNoNameDlg(Player1,@416)~
-== CERNDJ ~My calls and responsiblities ask too much of me, Recorder. If you desire my company again, visit me once I have things settled at the grove with my child.~
+== CERNDJ ~My calls and responsibilities ask too much of me, Recorder. If you desire my company again, visit me once I have things settled at the grove with my child.~
 END 
 
 CHAIN IF WEIGHT #-1 
@@ -1361,7 +1361,7 @@ I_C_T TCYRANDO 0 TCYRANDOX3Reb0
 END
 
 I_C_T SCTELWYN 30 X3RebSCTELWYN30 
-== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~Heehee, I guess it all worked out. Beauty truly is in the eye of the perciever.~
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~Heehee, I guess it all worked out. Beauty truly is in the eye of the perceiver.~
 END
 
 I_C_T MAEVAR 15 X3EmiMAEVAR15 
@@ -1486,7 +1486,7 @@ I_C_T HENDAK 19 X3RebHendak19
 END 
 
 I_C_T HENDAK 30 X3EmiHendak30 
-== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~I am so happy with what we did. Altkata will be a better place.~
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN ~I am so happy with what we did. Althkata will be a better place.~
 DO ~IncrementGlobal("X3Rebpp","GLOBAL",10)
 DisplayStringNoNameDlg(Player1,@419)~
 == X3KalJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~Pfft, the detail that matters is this gets more fame and glory for us, woohoo!~
@@ -1626,7 +1626,7 @@ Name("X3Reb",LastTalkedToBy)~ THEN SALVANAS X3RebSalvanas
 == SALVANAS ~No, it is I who should be thankful. My heart beats for you, true beauty.~
 == X3RebJ ~Are you an aspiring bard? I've never been the recipient of something like this. I'm not sure what to say.~
 == SALVANAS ~Speak not, but sing. Your voice is like the angels, and your music like harmony engulfing me like buffets of wind from a strong wing.~
-== X3RebJ ~Are you asking for a perfomance?~
+== X3RebJ ~Are you asking for a performance?~
 == SALVANAS ~I would be blessed, no delighted, no enchanted to a- ow!~
 == X3RebJ ~Gustav! Why did you bite him?! I'm so sorry...I'm just going to leave you alone now.~
 == SALVANAS ~Alas! Blocked by a ferret. The pains of passion.~
@@ -1880,7 +1880,7 @@ CHAIN X3RebJ T1.X
 EXIT 
 
 CHAIN X3RebJ T1.6 
-~I was born in Lantan, but after my parents seperated, Amn became my new, second home. The city is always bustling and crowded, but I've grown to love all that it has to offer, especially the theater.~
+~I was born in Lantan, but after my parents separated, Amn became my new, second home. The city is always bustling and crowded, but I've grown to love all that it has to offer, especially the theater.~
 = ~The shows there are always so wonderful. I know our priority is our adventures but if there is time, I would say we should even go see one. I think everyone would like it.~
 EXIT 
 
@@ -2115,7 +2115,7 @@ CHAIN X3RebJ T4.7
 EXTERN X3RebJ T4.9.5
 
 CHAIN X3RebJ T4.8 
-~How can you say that? Nevermind. Just...let me finish.~
+~How can you say that? Never mind. Just...let me finish.~
 EXTERN X3RebJ T4.6
 
 CHAIN X3RebJ T4.9 
@@ -2168,9 +2168,9 @@ EXTERN X3RebJ T5.4
 
 CHAIN X3RebJ T5.4 
 ~Not a few more years after he was born, Phelgrim's mood about him existing came to an explosion. He believed the child ruined his reputation, and that there was profit in selling him off to another slaver who was interested in him.~
-== X3RebJ ~There was some mining operation were his small size would allow im to get into small spaces to retrieve shiny ores and gems. And children were easy for them to get obedience out of and intimidate. It is not a good place.~
+== X3RebJ ~There was some mining operation were his small size would allow him to get into small spaces to retrieve shiny ores and gems. And children were easy for them to get obedience out of and intimidate. It is not a good place.~
 == X3RebJ ~He was...kind in his own way tough, and let me have one last night with Raban before he gave him away. I was distraught, and knew no matter how impossible, I had to try to get him away from this life. To not be free...to have no one around him to be loved by, I couldn't let it happen.~
-== X3RebJ ~I snuck out that night. I had never tried to run before, but the talk had made me feel so defiant...that it was okay to die if he could be free. We were going to board this small skiff just a short aways from the house, and row anywher else.~
+== X3RebJ ~I snuck out that night. I had never tried to run before, but the talk had made me feel so defiant...that it was okay to die if he could be free. We were going to board this small skiff just a short away from the house, and row anywhere else.~
 END 
 ++ ~I take it that didn't go according to plan.~ + T5.5
 ++ ~That was brave of you.~ DO ~IncrementGlobal("X3RebAppChange","GLOBAL",1)~ + T5.6
@@ -2194,7 +2194,7 @@ CHAIN X3RebJ T5.8
 == X3RebJ ~I...I freed Raban. But before I could free myself, I was grabbed and bound and forced back into Phelgrim's captivity.~
 END 
 ++ ~That must have been a horrible choice you were forced to make.~ DO ~IncrementGlobal("X3RebAppChange","GLOBAL",1)~ + T5.9
-++ ~Why would you do that to your own son? Are you insane? Kiling him isn't freeing him.~ DO ~IncrementGlobal("X3RebAppChange","GLOBAL",-1)~ + T5.9 
+++ ~Why would you do that to your own son? Are you insane? Killing him isn't freeing him.~ DO ~IncrementGlobal("X3RebAppChange","GLOBAL",-1)~ + T5.9 
 ++ ~How did you finally get away from him?~ + T5.11 
 ++ ~I think I've enough of an understanding now. I don't want to hear the rest of this.~ + T5.10
 
@@ -2287,7 +2287,7 @@ CHAIN X3RebJ T6.8
 EXIT 
 
 CHAIN X3RebJ T6.9
-~You are kind. I am glad we are friends, and I am glad I opened up to you. It is odd, but sometimes I believe that I needed your companionship more than you need mine. But nevermind that. We should continue on.~
+~You are kind. I am glad we are friends, and I am glad I opened up to you. It is odd, but sometimes I believe that I needed your companionship more than you need mine. But never mind that. We should continue on.~
 EXIT 
 
 
@@ -2429,11 +2429,11 @@ END
 +~!Global("X3RebRomanceActive","GLOBAL",1)!Global("X3RebRomanceActive","GLOBAL",2)~+ ~Then let us get through this place and find him.~ + QP.4R++ ~Enough talking, then. Let us track him down.~ EXIT 
 
 CHAIN X3RebJ QP.3
-~It is the same support you gave me. As long as we hold eachother up, we can do this.~
+~It is the same support you gave me. As long as we hold each other up, we can do this.~
 EXIT 
 
 CHAIN X3RebJ QP.3R
-~(She squeezes your hand.) It is the same support you gave me. Because we hold eachother up, we can make it through this. I know we will.~
+~(She squeezes your hand.) It is the same support you gave me. Because we hold each other up, we can make it through this. I know we will.~
 EXIT 
 
 CHAIN X3RebJ QP.4
@@ -2484,7 +2484,7 @@ CHAIN X3RebJ FT.5
 EXIT 
 
 CHAIN X3RebJ FT.6
-~Then I will make sure that I am standing next to you. I've made it through the underdark, the underdark! I know I can be there to the end.~
+~Then I will make sure that I am standing next to you. I've made it through the Underdark, the Underdark! I know I can be there to the end.~
 EXIT 
 
 CHAIN X3RebJ FT.7
@@ -2538,7 +2538,7 @@ END
 ++ ~I know you hate me. But I hope someday you can forgive me.~ DO ~IncrementGlobal("X3RebAppChange","GLOBAL",1)~ + FT.QBW3 
 
 CHAIN X3RebJ FT.QBW1
-~I hope I do not. I will never understand why you thought Raban was a negotiatible piece, or forgive you for it. But I will follow you until this is over or you dismiss me.~
+~I hope I do not. I will never understand why you thought Raban was a negotiable piece, or forgive you for it. But I will follow you until this is over or you dismiss me.~
 EXIT 
 
 CHAIN X3RebJ FT.QBW2
@@ -2550,7 +2550,7 @@ CHAIN X3RebJ FT.QBW3
 EXIT 
 
 CHAIN X3RebJ FT.QuestGoodLowApp
-~When Raban dissapeared in front of me forever, I hated you for it for a time, even if that wasn't fair to you. I too, failed him. And it is up to me to be strong enough to be of aid to see us through, to see Irenicus stopped, and not make another costly failure. We can't put all of that weight on you.~
+~When Raban disappeared in front of me forever, I hated you for it for a time, even if that wasn't fair to you. I too, failed him. And it is up to me to be strong enough to be of aid to see us through, to see Irenicus stopped, and not make another costly failure. We can't put all of that weight on you.~
 END 
 ++ ~Perhaps, though the weight of burden is still the greatest on myself. He has my soul, the consequences are greatest to me.~ + FT.QGLA1
 ++ ~Well, that's rather ungrateful of you. I tried my best to help Raban.~ DO ~IncrementGlobal("X3RebAppChange","GLOBAL",-1)~ + FT.QGLA2
@@ -2565,7 +2565,7 @@ END
 
 
 CHAIN X3RebJ FT.QGLA1
-~This is true. But even if we aren't very close, or haven't known eachother very long...I want to do my best. I am tired of seeing people suffer because of what he has done, you included.~
+~This is true. But even if we aren't very close, or haven't known each other very long...I want to do my best. I am tired of seeing people suffer because of what he has done, you included.~
 EXTERN X3RebJ FT.QGLA4
 
 CHAIN X3RebJ FT.QGLA2
@@ -2573,7 +2573,7 @@ CHAIN X3RebJ FT.QGLA2
 EXTERN X3RebJ FT.QGLA4
 
 CHAIN X3RebJ FT.QGLA3
-~We'll support eachother. As we always have, even through failure.~
+~We'll support each other. As we always have, even through failure.~
 EXTERN X3RebJ FT.QGLA4
 
 CHAIN X3RebJ FT.QGLA4 
@@ -2620,7 +2620,7 @@ EXIT
 CHAIN X3RebJ 1.1 
 ~I couldn't stop having nightmares. Maybe it was just a curse of the creative mind, perhaps. I gave up after I woke up the second time and just joined the watch.~
 == X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN ~That would explain why you joined me on watch. I thought you were just being nice.~
-== X3KalJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~You know, I could help you sleep if you're tired next time. Damn, don't look at me like that! T'was just a joke.~
+== X3KalJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN ~You know, I could help you sleep if you're tired next time. Damn, don't look at me like that! 'Twas just a joke.~
 END 
 ++ ~What was it about? Maybe talking about it will help.~ + 1.4 
 ++ ~We can delay a little longer if you like. Adventuring tired won't help the others.~ + 1.2 
@@ -2739,7 +2739,7 @@ CHAIN X3VieJ 2.Vienxay4
 EXTERN X3RebJ 2.4
 
 CHAIN X3RebJ 2.3 
-~Uh, maybe. Just thinking aloud, I guess. Now I feel a bit embarrased. Forget I said anything.~
+~Uh, maybe. Just thinking aloud, I guess. Now I feel a bit embarrassed. Forget I said anything.~
 EXIT 
 
 CHAIN X3RebJ 2.4 
@@ -2750,7 +2750,7 @@ END
 ++ ~Not really, no. I can't imagine myself doing anything else.~ + 2.5
 
 CHAIN X3RebJ 2.5 
-~I think I would have been a performer. If I didn't feel the need to please my mother's wishes, I would want to be going to tavern to tavern, playing for crowds and seeing all sorts of cities, from the sprawling schools of Waterdeep to Althkata's splenderous markets.~
+~I think I would have been a performer. If I didn't feel the need to please my mother's wishes, I would want to be going to tavern to tavern, playing for crowds and seeing all sorts of cities, from the sprawling schools of Waterdeep to Althkata's splendorous markets.~
 END 
 ++ ~You would make a fine performer, Recorder. Your music is wonderful.~ DO ~IncrementGlobal("X3RebAppChange","GLOBAL",1)~ + 2.6 
 ++ ~What about the call of adventure? That life sounds dull.~ DO ~IncrementGlobal("X3RebAppChange","GLOBAL",-1)~ + 2.7
@@ -2792,7 +2792,7 @@ CHAIN X3RebJ 3.2
 EXTERN X3RebJ 3.4
 
 CHAIN X3RebJ 3.3 
-~I think there is truth in that. I remember a strategist from a war college in Amn mentioning to some scholars in the church how others can sense fear and weakness and sieze on it, pronting them to push an aggressive front.~
+~I think there is truth in that. I remember a strategist from a war college in Amn mentioning to some scholars in the church how others can sense fear and weakness and seize on it, prompting them to push an aggressive front.~
 EXTERN X3RebJ 3.4 
 
 
@@ -2809,7 +2809,7 @@ CHAIN X3RebJ 3.5
 EXTERN X3RebJ 3.8 
 
 CHAIN X3RebJ 3.8
-~Forget I said anything. Now I just feel embarrased about myself.~
+~Forget I said anything. Now I just feel embarrassed about myself.~
 EXIT 
 
 CHAIN X3RebJ 3.6
@@ -2863,7 +2863,7 @@ CHAIN X3RebJ 4.6
 EXIT 
 
 CHAIN X3RebJ 4.7
-~I am. History often repeats itself, not just for nations, but for people. I've heard of many tales of free slaves becoming repossesed, or worse, under the capture of another person.~
+~I am. History often repeats itself, not just for nations, but for people. I've heard of many tales of free slaves becoming repossessed, or worse, under the capture of another person.~
 EXTERN X3RebJ 4.10
 
 CHAIN X3RebJ 4.8
@@ -2871,7 +2871,7 @@ CHAIN X3RebJ 4.8
 EXTERN X3RebJ 4.10
 
 CHAIN X3RebJ 4.9
-~I sometimes wonder if you realize just how protective you come off others, <CHARNAME>. It's...attractive- I mean- erm... oh nevermind.~
+~I sometimes wonder if you realize just how protective you come off others, <CHARNAME>. It's...attractive- I mean- erm... oh never mind.~
 EXIT 
 
 CHAIN X3RebJ 4.10
@@ -2882,7 +2882,7 @@ EXIT
 //Note: No Approval Changes here
 
 CHAIN IF ~Global("X3RebLoveTalk","LOCALS",10)~ THEN X3RebJ LoveTalk5
-~(You catch Recorder eying you for a long while she has her flute in her fingers, piping a few soft, low-pitched notes.)~ [X3RLS]
+~(You catch Recorder eyeing you for a long while she has her flute in her fingers, piping a few soft, low-pitched notes.)~ [X3RLS]
 DO ~IncrementGlobal("X3RebLoveTalk","LOCALS",1)~
 END 
 ++ ~Uh, what is it Recorder? You're staring.~ + 5.4
@@ -2913,14 +2913,14 @@ END
 ++ ~Perhaps you'll get to see him someday.~ + 5.5
 
 CHAIN X3RebJ 5.5 
-~I don't know. Father was always...deep into his work. While I'll never know for certain, I think that was one reason my parents eventually believed their marraige was just one of Garl's pranks, he loved his duties more than my mother.~
+~I don't know. Father was always...deep into his work. While I'll never know for certain, I think that was one reason my parents eventually believed their marriage was just one of Garl's pranks, he loved his duties more than my mother.~
 END 
 ++ ~What do you mean by one of Garl's pranks?~ + 5.7
 ++ ~I can admire someone who has a passion for their work, though not at the expense of family.~ + 5.8 
 ++ ~Do you have any other family?~ + 5.11
 
 CHAIN X3RebJ 5.6 
-~No, I never did. I was working on biographing everything going on in Baldur's Gate. I'm like him in a way, always prioritizing my work. I think that was one of the reasons my parents believed their marriage was just one of Garl's pranks, he loved his duties more than my mother.~
+~No, I never did. I was working on chronicling everything going on in Baldur's Gate. I'm like him in a way, always prioritizing my work. I think that was one of the reasons my parents believed their marriage was just one of Garl's pranks, he loved his duties more than my mother.~
 END 
 ++ ~What do you mean by one of Garl's pranks?~ + 5.7
 ++ ~I can admire someone who has a passion for their work, though not at the expense of family.~ + 5.8 
@@ -2944,7 +2944,7 @@ END
 ++ ~It sounds as if you aren't as important to him as you think.~ + 5.9
 
 CHAIN X3RebJ 5.9
-~I guess. At least your father isn't alive to dissapoint you.~
+~I guess. At least your father isn't alive to disappoint you.~
 EXTERN X3RebJ 5.10
 
 CHAIN X3RebJ 5.10 
@@ -3019,7 +3019,7 @@ DO ~SetGlobal("X3VieRomanceActive","GLOBAL",3)~
 EXIT 
 
 CHAIN X3RebJ 6.2
-~We were in the library, going over some abjurative wards. He was quite fond of shields against magical energies and was intent on learning a way to project it onto another.~
+~We were in the library, going over some abjuration wards. He was quite fond of shields against magical energies and was intent on learning a way to project it onto another.~
 == X3RebJ ~He spoke so gushingly of you, and Imoen too. I could feel in him the love, but also of some protective instinct. You were his everything. The way he talked reminded me so much of how I felt when I had Raban just so...so...~
 END 
 ++ ~Are you all right?~ DO ~IncrementGlobal("X3RebAppChange","GLOBAL",1)~ + 6.3 
@@ -3103,7 +3103,7 @@ IF ~Global("X3KalRomanceActive","GLOBAL",1)~ EXTERN X3KalJ 8.Kale
 
 
 CHAIN X3RebJ 8.1 
-~That was...well nevermind that. I think I was asking your thoughts on my skills with weapons.~
+~That was...well never mind that. I think I was asking your thoughts on my skills with weapons.~
 END 
 ++ ~You're a sharp eye at ranged. It's proven its value more than once.~ + 8.2 
 ++ ~To be honest your skills with weapons is rather lacking, even for a bard.~ + 8.2 
@@ -3163,7 +3163,7 @@ END
 
 CHAIN X3RebJ 8.Kale3
 ~R-right. We're just friends. I understand~
-== X3KalJ ~Ha, I was right! Hear that tone of dissapointment. You sure know how to let them down.~
+== X3KalJ ~Ha, I was right! Hear that tone of disappointment. You sure know how to let them down.~
 == X3RebJ ~Just leave me alone, Kale. You've had your fun.~
 DO ~SetGlobal("X3RebAppChange","GLOBAL",5)SetGlobal("X3RebRomanceActive","GLOBAL",3)~
 EXIT
@@ -3291,14 +3291,14 @@ END
 ++ ~(Ignore him.)~ + 10.X 
 
 CHAIN X3RebJ 10.X 
-~(After a few dissapointed noises, the ferret eventually darts about and back into his owner bag, Recorder oblivious all the while.)~
+~(After a small whining noise, the ferret eventually darts about and back into his owner bag, Recorder oblivious all the while.)~
 EXIT 
 
 CHAIN X3RebJ 10.1 
 ~(The creature purrs as you feed it, making several content noises.~
 == X3RebJ ~Gustav? How did you get over to <CHARNAME>? Heehee, convincing others to give you food, I see.~
 END 
-++ ~He's quite the loveable ferret.~ DO ~IncrementGlobal("X3RebAppChange","GLOBAL",1)~ + 10.4 
+++ ~He's quite the lovable ferret.~ DO ~IncrementGlobal("X3RebAppChange","GLOBAL",1)~ + 10.4 
 ++ ~I don't know how you can stand his behavior all the time. He'd drive me crazy.~  + 10.5 
 ++ ~Just try not to lose him. It's not necessarily safe.~ + 10.9
 
@@ -3306,7 +3306,7 @@ CHAIN X3RebJ 10.2
 ~(The creature purrs at the attention, rubbing its head against you.~
 == X3RebJ ~Gustav? Heehee, it seems he really likes you.~
 END 
-++ ~He's quite the loveable ferret.~ DO ~IncrementGlobal("X3RebAppChange","GLOBAL",1)~ + 10.4 
+++ ~He's quite the lovable ferret.~ DO ~IncrementGlobal("X3RebAppChange","GLOBAL",1)~ + 10.4 
 ++ ~I don't know how you can stand his behavior all the time. He'd drive me crazy.~ + 10.5 
 ++ ~Just try not to lose him. It's not necessarily safe.~ + 10.9
 
@@ -3328,7 +3328,7 @@ EXTERN X3RebJ 10.4
 
 CHAIN X3RebJ 10.4 
 ~I like to believe that he reminds me about the little joys in life. In our journeys we've seen so much sadness and death and sometimes I think that grimness gets to us.~
-== X3RebJ ~But if we can remember the little joys...the little furballs and why we are doing what we are doing, I think it gives us such important levity.~
+== X3RebJ ~But if we can remember the little joys...the little fur balls and why we are doing what we are doing, I think it gives us such important levity.~
 END 
 ++ ~That is quite true, Recorder. I wouldn't mind having Gustav come to me more if that's his secret magic.~ DO ~IncrementGlobal("X3RebAppChange","GLOBAL",1)~ + 10.6 
 ++ ~It is hard to remember that out here. What we do is a heavy task.~ + 10.7
@@ -3343,7 +3343,7 @@ CHAIN X3RebJ 10.7
 EXIT 
 
 CHAIN X3RebJ 10.8
-~I don't. Even the poorest person can find a moment of joy in just watching a dog dart by and greet in its excited way, or a little child playing from out their window. Any joy and motiviation is better than pure grimness and more self-weight. This I learned recently...and I think it would do us all well to remember it.~
+~I don't. Even the poorest person can find a moment of joy in just watching a dog dart by and greet in its excited way, or a little child playing from out their window. Any joy and motivation is better than pure grimness and more self-weight. This I learned recently...and I think it would do us all well to remember it.~
 EXIT 
 
 //Love Talk #11 
@@ -3368,7 +3368,7 @@ DO ~IncrementGlobal("X3RebLoveTalk","LOCALS",-2)RestParty()~
 EXIT 
 
 CHAIN X3RebJ 11.1 
-~(You recognize the tune's motif from her playing several days back. She keeps your gaze as she plays, swaying a bit in a little dance. When she's done, she gives a timid bow.)~
+~(You recognize the tune's motif from her playing several days back. She keeps your gaze as she plays, swaying a bit in a little dance. When she's done, she gives a timid bow.)~ [X3RLSA]
 DO ~SetGlobal("X3RebAppChange","GLOBAL",6)~
 END 
 ++ ~That was beautiful.~ DO ~IncrementGlobal("X3RebAppChange","LOCALS",1)~ + 11.2 
@@ -3403,7 +3403,7 @@ CHAIN X3RebJ 11.5
 EXTERN X3RebJ 11.9
 
 CHAIN X3RebJ 11.6
-~I am quite suprised. You are attractive, <CHARNAME>. Certainly the type of person a bard would be compelled to play a piece for.~
+~I am quite surprised. You are attractive, <CHARNAME>. Certainly the type of person a bard would be compelled to play a piece for.~
 EXTERN X3RebJ 11.9
 
 CHAIN X3RebJ 11.7
@@ -3416,7 +3416,7 @@ CHAIN X3RebJ 11.8
 END 
 ++ ~I'm beginning to become very fond of you. I want to know if you return my feelings...if this is something we can proceed with.~ + 11.10 
 ++ ~Back in Dragonspear, you said there couldn't be a future between us. Is that still true?~ + 11.10 
-++ ~Nevermind. I've lost my courage. This is a bad idea.~ + 11.10 
+++ ~Never mind. I've lost my courage. This is a bad idea.~ + 11.10 
 
 CHAIN X3RebJ 11.9
 ~I need to say this while I have my courage...but I really like you, <CHARNAME>. I've grown enamored, and with all the time we've spent together, I don't know if I want to keep stepping so lightly around this.~
@@ -3447,7 +3447,7 @@ END
 ++ ~You call that a kiss? That was as bad as smooching a gibberling.~ DO ~IncrementGlobal("X3RebAppChange","LOCALS",-1)~ + 11.15 
 
 CHAIN X3RebJ 11.15 
-~What? How could y- I feel so embarrased. I'm just going to get some sleep. Forget this happened, it won't happen again.~
+~What? How could y- I feel so embarrassed. I'm just going to get some sleep. Forget this happened, it won't happen again.~
 DO ~SetGlobal("X3RebRomanceActive","GLOBAL",3)RestParty()~
 EXIT  
 
@@ -3687,7 +3687,7 @@ CHAIN X3RebJ 13.4S
 EXTERN X3RebJ 13.7
 
 CHAIN X3RebJ 13.7
-~I'm truly glad you said that, <CHARNAME>. Maybe we can find some more time later for eachother.~
+~I'm truly glad you said that, <CHARNAME>. Maybe we can find some more time later for each other.~
 DO ~SetGlobal("X3RebRomanceActive","GLOBAL",2)~
 EXIT 
 
@@ -3733,7 +3733,7 @@ IF ~!Global("X3RebPartyBG1","GLOBAL",1)~ EXTERN X3RebJ 14.5
 IF ~Global("X3RebPartyBG1","GLOBAL",1)~ EXTERN X3RebJ 14.6
 
 CHAIN X3RebJ 14.5
-~I know we have not known eachother for very long...but that is how I feel. I...well...what do you think?~
+~I know we have not known each other for very long...but that is how I feel. I...well...what do you think?~
 END 
 ++ ~I love you too, Recorder. I would like to share this night with you.~ +14.9
 ++ ~This is a bit sudden. I am not sure what to think.~ + 14.8
@@ -3991,7 +3991,7 @@ CHAIN C6BODHI X3RebAb
 END
 IF ~~ EXTERN C6BODHI 22
 
-// Recorder's Body Bohdi's Crypt
+// Recorder's Body Bodhi's Crypt
 CHAIN IF WEIGHT #-1
 ~Global("X3RebVampire","GLOBAL",1)
 Global("X3RebBody","AR0809",2)~ THEN PLAYER1 body
@@ -4021,7 +4021,7 @@ CHAIN IMOEN2J body.1
 EXTERN X3RFER body.10
 
 CHAIN AERIEJ body.2
-~M-my spells...they won't work when she's like this. But...m-maybe the priests of Ohgma can help us.~
+~M-my spells...they won't work when she's like this. But...m-maybe the priests of Oghma can help us.~
 EXTERN X3RFER body.10
 
 CHAIN JAHEIRAJ body.3
@@ -4045,7 +4045,7 @@ CHAIN VICONIJ body.7
 EXTERN X3RFER body.10
 
 CHAIN X3KalJ body.8
-~Death is a necessary part of the natural cycle, but perhaps in this case, there can be an exception. Regardless, I fear Sirene's ritual has prevented her from returning by normal means. Perhaps the local Ilmatari priests can assist us.~
+~Bloody hell... She's really dead. I...don't even know what to say. I guess...we should tell that temple of hers, Oghma, what transpired.~
 EXTERN X3RFER body.10
 
 CHAIN HAERDAJ body.9 
@@ -4277,7 +4277,7 @@ SAY ~Oh definitely, though often they centered around the very work we valued. F
 END 
 
 IF ~~ PLantan.3 
-SAY ~Some of these are just at their beginning stages. I think for others, it is a matter of trust. We have an invention called the gonne for example, which shoots a sort of object with gunpowder that shatters on content. If mass produced, it could be devestating in the wrong hands. A few have already landed in less than savory arms.~
+SAY ~Some of these are just at their beginning stages. I think for others, it is a matter of trust. We have an invention called the gonne for example, which shoots a sort of object with gunpowder that shatters on content. If mass produced, it could be devastating in the wrong hands. A few have already landed in less than savory arms.~
 = ~Still, I hope one day the world is in a better place where we can trust them to take the things we trade them and use them for good purposes.~
 ++ ~Let me ask you about something else.~ + MoreQuestion.PID
 ++ ~Let's keep moving.~ EXIT 
@@ -4296,7 +4296,7 @@ SAY ~Yes. I could tell you about any of the districts. Is there one in particula
 END 
 
 IF ~~ PC.Slums 
-SAY ~They are where most of the poor squeeze into. Buildings on top of buildings, some people can't even afford the housing alloted there.~
+SAY ~They are where most of the poor squeeze into. Buildings on top of buildings, some people can't even afford the housing allotted there.~
 = ~It is also a place frequented by the criminal oriented. I would watch our backs if you have us go through there.~
 +~Global("X3PIDCity2","LOCALS",0)~+ ~Tell me about the Bridge District.~ DO ~SetGlobal("X3PIDCity2","LOCALS",1)~ + PC.Bridge 
 +~Global("X3PIDCity3","LOCALS",0)~+ ~Tell me about the Temple District.~ DO ~SetGlobal("X3PIDCity3","LOCALS",1)~ + PC.Temple 
@@ -4309,7 +4309,7 @@ END
 
 IF ~~ PC.Bridge 
 SAY ~The Bridge district is the middle of Althkata. You can almost see the transition from wealth to poor in how some of the housing is split.~
-= ~My favorite place in the Bridge District is the playhouse. I know your purpose here isn't one for relaxation, but...it is certainl worth a visit. The performers always put on a great show.~
+= ~My favorite place in the Bridge District is the playhouse. I know your purpose here isn't one for relaxation, but...it is certainly worth a visit. The performers always put on a great show.~
 +~Global("X3PIDCity1","LOCALS",0)~+ ~Tell me about the slums.~ DO ~SetGlobal("X3PIDCity1","LOCALS",1)~ + PC.Slums 
 +~Global("X3PIDCity3","LOCALS",0)~+ ~Tell me about the Temple District.~ DO ~SetGlobal("X3PIDCity3","LOCALS",1)~ + PC.Temple 
 +~Global("X3PIDCity4","LOCALS",0)~+ ~Tell me about the Government District.~ DO ~SetGlobal("X3PIDCity4","LOCALS",1)~ + PC.Gov 

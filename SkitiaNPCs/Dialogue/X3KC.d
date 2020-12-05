@@ -12,7 +12,7 @@ CHAIN X3KC q1
 ~Well I don't got anything else to do.~
 END 
 ++ ~What were you doing at the time Percy died?~ + q2
-++ ~What was this cheese that you were selling that Percy was obessed with?~ + q3 
+++ ~What was this cheese that you were selling that Percy was obsessed with?~ + q3 
 ++ ~What was your relationship with Percy like?~ + q4
 +~Global("X3KnowledgeCheese","GLOBAL",1)~+ ~The cheese you were selling is Spring Luiren Cheese, a drug to halflings. It was also poisoned.~ + q5
 ++ ~What can you tell me of Flora?~ + q6
@@ -23,7 +23,7 @@ END
 CHAIN X3KC q2 
 ~Taking a day off. Closed my store for the day. Selling cheeses all day everyday is exhausting.~
 END 
-++ ~What was this cheese that you were selling that Percy was obessed with?~ + q3 
+++ ~What was this cheese that you were selling that Percy was obsessed with?~ + q3 
 ++ ~What was your relationship with Percy like?~ + q4
 +~Global("X3KnowledgeCheese","GLOBAL",1)~+ ~The cheese you were selling is Spring Luiren Cheese, a drug to halflings. It was also poisoned.~ + q5
 ++ ~What can you tell me of Flora?~ + q6
@@ -42,7 +42,7 @@ CHAIN X3KC q4
 ~Well, he was my best customer. He loved cheese, I loved making coin. A good match.~
 END 
 ++ ~What were you doing at the time Percy died?~ + q2
-++ ~What was this cheese that you were selling that Percy was obessed with?~ + q3 
+++ ~What was this cheese that you were selling that Percy was obsessed with?~ + q3 
 +~Global("X3KnowledgeCheese","GLOBAL",1)~+ ~The cheese you were selling is Spring Luiren Cheese, a drug to halflings. It was also poisoned.~ + q5
 ++ ~What can you tell me of Flora?~ + q6
 ++ ~What can you tell me about Dallie?~ + q7 
@@ -61,7 +61,7 @@ CHAIN X3KC q6
 ~She has good rat poison, which helps with my cheeses. Otherwise? I don't talk to her at all.~
 END 
 ++ ~What were you doing at the time Percy died?~ + q2
-++ ~What was this cheese that you were selling that Percy was obessed with?~ + q3 
+++ ~What was this cheese that you were selling that Percy was obsessed with?~ + q3 
 ++ ~What was your relationship with Percy like?~ + q4
 +~Global("X3KnowledgeCheese","GLOBAL",1)~+ ~The cheese you were selling is Spring Luiren Cheese, a drug to halflings. It was also poisoned.~ + q5
 ++ ~What can you tell me about Dallie?~ + q7 
@@ -72,7 +72,7 @@ CHAIN X3KC q7
 ~She's always giving me glares. I know she wants my cheeses though. She'll break down and buy it in a matter of time.~
 END 
 ++ ~What were you doing at the time Percy died?~ + q2
-++ ~What was this cheese that you were selling that Percy was obessed with?~ + q3 
+++ ~What was this cheese that you were selling that Percy was obsessed with?~ + q3 
 ++ ~What was your relationship with Percy like?~ + q4
 +~Global("X3KnowledgeCheese","GLOBAL",1)~+ ~The cheese you were selling is Spring Luiren Cheese, a drug to halflings. It was also poisoned.~ + q5
 ++ ~What can you tell me of Flora?~ + q6
@@ -83,7 +83,7 @@ CHAIN X3KC q8
 ~He needs to be taken off the streets. I can tolerate a pitiful beggar, but a cursing, yelling, ass? No thanks.~ 
 END 
 ++ ~What were you doing at the time Percy died?~ + q2
-++ ~What was this cheese that you were selling that Percy was obessed with?~ + q3 
+++ ~What was this cheese that you were selling that Percy was obsessed with?~ + q3 
 ++ ~What was your relationship with Percy like?~ + q4
 +~Global("X3KnowledgeCheese","GLOBAL",1)~+ ~The cheese you were selling is Spring Luiren Cheese, a drug to halflings. It was also poisoned.~ + q5
 ++ ~What can you tell me of Flora?~ + q6
@@ -140,7 +140,7 @@ END
 
 
 CHAIN X3KC hc_3 
-~So a case of personal distaste. Dissapointing that it came down to that on why this comes to an end.~
+~So a case of personal distaste. Disappointing that it came down to that on why this comes to an end.~
 END 
 ++ ~It is time for you to answer for what you've done.~ + hc_5
 ++ ~Why are you doing this to the halfling people?~ + hc_6 
@@ -178,7 +178,7 @@ CHAIN X3KC player_decision
 END 
 ++ ~Death. The only suiting fate for a fiend like you.~ + death_route 
 ++ ~You've done too much to be imprisoned. Your life is forfeit.~ + death_route 
-+~!Dead("X3KJIL")~+ ~Against my better judgement, you'll be spared death. Prison is your fate.~ + imprison_route 
++~!Dead("X3KJIL")~+ ~Against my better judgment, you'll be spared death. Prison is your fate.~ + imprison_route 
 +~!Dead("X3KJIL")~+ ~I'm taking you back to Jillian. You'll answer for your crimes in the way that is right.~ + imprison_route 
 +~Dead("X3KJIL")~+ ~I would have spared you, but Jillian is dead and there is no guard to take you away. Your fate is sealed.~ + death_route
 

@@ -30,7 +30,7 @@ CHAIN X3VSAG25 message
 EXTERN X3Vie25J family_message
 
 CHAIN X3VSAG25 no_message 
-~I will not do that. Not when you have taken no lessons from your exile, and have done nothing to improve your reputation or family name in light of your sins. Your present company may have saved Suldanessar, but they are also the cause for why it came under danger.~
+~I will not do that. Not when you have taken no lessons from your exile, and have done nothing to improve your reputation or family name in light of your sins. Your present company may have saved Suldanessellar, but they are also the cause for why it came under danger.~
 EXTERN X3Vie25J retort 
 
 CHAIN X3VSAG25 low_rep 
@@ -59,7 +59,7 @@ EXIT
 
 // This version runs if Vienxay gave the sage the book.
 CHAIN IF ~IsValidForPartyDialogue("X3Vie")Global("X3VieQuest","GLOBAL",12)~ THEN X3VSAG25 Vienxay_book
-~Vienxay! Faerun is so small it seems. Turmoil is rampant here, though amidst it all I do have good news to deliver you.~
+~Vienxay! Faerûn is so small it seems. Turmoil is rampant here, though amidst it all I do have good news to deliver you.~
 DO ~SetGlobal("X3VEvermeetEnd","GLOBAL",1)~
 == X3Vie25J ~The tome we gave you is delivered to Evermeet, I assume?~
 == X3VSAG25 ~Quite! The High Counsel was so pleased with its delivery they have offered you a pardon, Vienxay.~
@@ -119,7 +119,7 @@ CHAIN X3Vie25J not_staying
 EXTERN X3Vie25J leaving
 
 CHAIN X3Vie25J home_away 
-~Love? We would never see eachother again, and that would not make me happy.~
+~Love? We would never see each other again, and that would not make me happy.~
 END 
 ++ ~But it would make me happy. I would know you are safe, with family, in the home you belong. Please, for your sake, go.~ + goodbye_love 
 ++ ~Then if that is what you want, Vienxay, stay with me.~ EXTERN X3VSAG25 mature 
@@ -151,7 +151,7 @@ EXIT
 
 CHAIN X3VSAG25 mature 
 ~It is mature of you to decide to help your friend. You have changed since I helped judge your fate myself back on the Green Isle.~
-== X3VSAG25 ~Evermeet will be waiting for you, then. I wish you both well on your journey. May Father Correllon protect you.~
+== X3VSAG25 ~Evermeet will be waiting for you, then. I wish you both well on your journey. May Father Corellon protect you.~
 DO ~SetGlobal("X3VieEvermeet","GLOBAL",1)EscapeArea()~
 EXIT 
 
