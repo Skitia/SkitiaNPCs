@@ -183,7 +183,7 @@ END
 ++ ~I think I'd rather sleep alone.~ + Snuggle.3 // Ouch. Probably a minor loss here, but no break.
 
 CHAIN X3EmiJ Snuggle.1 
-~(She pulls you to the bedding, then cuddles closely to you, the comfort of eachother's presence lulling you to sleep.)~
+~(She pulls you to the bedding, then cuddles closely to you, the comfort of each other's presence lulling you to sleep.)~
 DO ~SetGlobal("X3RestActivated","GLOBAL",0)RestParty()~ 
 EXIT 
 
@@ -332,7 +332,7 @@ END
 ++ ~Sorry, I need to rest.~ + RestExit 
 
 CHAIN X3EmiJ BathKiss 
-~(Your lips tingle as they graze hers, and she sneaks a small nibble with her teeth against your lower lip before giving you a mischevious grin.~
+~(Your lips tingle as they graze hers, and she sneaks a small nibble with her teeth against your lower lip before giving you a mischievous grin.~
 END 
 IF ~!Global("X3Slept","LOCALS",2)~ EXTERN X3EmiJ BathKiss.1 
 IF ~Global("X3Slept","LOCALS",2)~ EXTERN X3EmiJ BathKiss.2
@@ -352,7 +352,7 @@ EXTERN X3EmiJ BathJoin
 
 CHAIN X3EmiJ BathJoin
 ~(She joins your hand with hers as she takes you to the inn's baths, bringing you with her into a prepared tub.)~
-= ~(When she climbs into the water, you are suprised to find she neither moves to act on intimacy or to wash, but instead relaxes her body and leans her head against you.)~
+= ~(When she climbs into the water, you are surprised to find she neither moves to act on intimacy or to wash, but instead relaxes her body and leans her head against you.)~
 END 
 ++ ~Tired, are we?~ + BathJoin.1 
 ++ ~Shouldn't be washing?~ + BathJoin.2 
@@ -417,7 +417,7 @@ CHAIN X3EmiJ Drink1.4
 EXTERN X3EmiJ Drink1.3 
 
 CHAIN X3EmiJ Drink1.5
-~Ah, that's dissapointing. I'll have to think of something else for you to try next time.~
+~Ah, that's disappointing. I'll have to think of something else for you to try next time.~
 EXTERN X3EmiJ Drink1.3 
 
 CHAIN X3EmiJ Drink1.6
@@ -481,7 +481,7 @@ CHAIN X3EmiJ Drink2.5
 EXTERN X3EmiJ RestLate 
 
 CHAIN X3EmiJ Drink2.6
-~Uh, I meant you! Not me. Oh nevermind. I'm glad for your response all the same.~
+~Uh, I meant you! Not me. Oh never mind. I'm glad for your response all the same.~
 EXTERN X3EmiJ RestLate 
 
 CHAIN X3EmiJ Drink2.7
@@ -489,7 +489,7 @@ CHAIN X3EmiJ Drink2.7
 EXTERN X3EmiJ RestLate 
 
 CHAIN X3EmiJ KissWine
-~(Her lips taste of the sweetness of wine. She withdraws after she allows you a shortwhile, too short for your liking.)~
+~(Her lips taste of the sweetness of wine. She withdraws after she allows you a short while, too short for your liking.)~
 = ~Mmm. If we weren't in public I'd have let you have a few more of those.~
 END 
 ++ ~Do you have time to talk?~ + Talks 
@@ -519,8 +519,8 @@ END
 +~Global("X3Advice3","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_3%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice3","LOCALS",1)~ + advice3 // Chapter 3 
 +~Global("X3Advice4","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_4%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice4","LOCALS",1)~ + advice4 // Chapter 4
 +~Global("X3Advice6","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_6%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice6","LOCALS",1)~ + advice6 // Chapter 6 
-+~Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Nevermind actually. Let's get some rest.~ + RestLove2
-+~!Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Nevermind actually. I'm going to go get some rest.~ + RestExit
++~Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Never mind actually. Let's get some rest.~ + RestLove2
++~!Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Never mind actually. I'm going to go get some rest.~ + RestExit
 
 CHAIN X3EmiJ StayTalk
 ~Stay and talk for a while?~
@@ -540,7 +540,7 @@ END
 +~Global("X3Advice3","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_3%)~+ ~Do you have any advice about our journey?~ DO ~SetGlobal("X3Advice3","LOCALS",1)~ + advice3 // Chapter 3 
 +~Global("X3Advice4","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_4%)~+ ~Do you have any advice about our journey?~ DO ~SetGlobal("X3Advice4","LOCALS",1)~ + advice4 // Chapter 4
 +~Global("X3Advice6","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_6%)~+ ~Do you have any advice about our journey?~ DO ~SetGlobal("X3Advice6","LOCALS",1)~ + advice6 // Chapter 6 
-+~Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Nevermind actually. Let's get some rest.~ + RestLove2
++~Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Never mind actually. Let's get some rest.~ + RestLove2
 +~!Global("X3EmiRomanceActive","GLOBAL",2)~+ ~I'm sorry. I should get some rest.~ + RestExit 
 
 
@@ -562,8 +562,8 @@ END
 +~Global("X3Advice3","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_3%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice3","LOCALS",1)~ + advice3 // Chapter 3 
 +~Global("X3Advice4","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_4%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice4","LOCALS",1)~ + advice4 // Chapter 4
 +~Global("X3Advice6","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_6%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice6","LOCALS",1)~ + advice6 // Chapter 6 
-+~Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Nevermind actually. Let's get some rest.~ + RestLove2
-+~!Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Nevermind actually. I'm going to go get some rest.~ + RestExit 
++~Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Never mind actually. Let's get some rest.~ + RestLove2
++~!Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Never mind actually. I'm going to go get some rest.~ + RestExit 
 
 CHAIN X3EmiJ HealthHigh1 
 ~Just fine. I appreciate you checking on me.~
@@ -771,7 +771,7 @@ CHAIN X3EmiJ Story1.5
 EXTERN X3EmiJ Story1.4
 
 CHAIN X3EmiJ Story2
-~Well, I can tell you one of my childhood stories of how I embarrased myself and nearly revealed my heritage to everyone.~
+~Well, I can tell you one of my childhood stories of how I embarrassed myself and nearly revealed my heritage to everyone.~
 = ~So, as a member of a noble house, we were always required to attend social occasions we didn't always desire to. Father was entertaining a rival noble house to try to ease some tensions.~
 = ~There was a bard playing music and fine cooked wine and food, but their entire family was so old. One of them was trying to be friendly and asked me to dance.~
 = ~I kept stepping on his shoes over and over again, I did it so many times he started to get angry and thought I was doing it on purpose.~
@@ -781,7 +781,7 @@ END
 ++ ~If you need dance lessons, I could help.~ + Story2.6
 
 CHAIN X3EmiJ Story2.1 
-~Clumy? No. Nervous? Very!~
+~Clumsy? No. Nervous? Very!~
 EXTERN X3EmiJ Story2.4
 
 CHAIN X3EmiJ Story2.2 
@@ -1051,10 +1051,10 @@ END
 CHAIN X3EmiJ MissMiddle 
 ~Ah, that was a bad miss. Give it a second try. Remember to focus and know how the arrow arches and curves, and keep in mind any wind.~
 END 
-+~CheckStatLT(Player1,15,DEX)~+ ~(Let another arrow fly to the midddle target.)~ + MissTwice 
-+~RandomNum(2,1)CheckStat(Player1,15,DEX)~+ ~(Let another arrow fly to the midddle target.)~ + MissTwice 
-+~RandomNum(2,2)CheckStat(Player1,15,DEX)~+ ~(Let another arrow fly to the midddle target.)~ + HitMiddle 
-+~CheckStatGT(Player1,15,DEX)~+ ~(Let another arrow fly to the midddle target.)~ + HitMiddle
++~CheckStatLT(Player1,15,DEX)~+ ~(Let another arrow fly to the middle target.)~ + MissTwice 
++~RandomNum(2,1)CheckStat(Player1,15,DEX)~+ ~(Let another arrow fly to the middle target.)~ + MissTwice 
++~RandomNum(2,2)CheckStat(Player1,15,DEX)~+ ~(Let another arrow fly to the middle target.)~ + HitMiddle 
++~CheckStatGT(Player1,15,DEX)~+ ~(Let another arrow fly to the middle target.)~ + HitMiddle
 ++ ~I think I'm too tired for this. I'll let you shoot on your own.~ + RestExit 
 
 CHAIN X3EmiJ HitMiddle 
@@ -1070,8 +1070,8 @@ END
 CHAIN X3EmiJ MissFar
 ~It's a challenge, isn't it? Focus and take your time. Think of where your shot landed and adjust your position accordingly. You can do this.~
 END 
-+~CheckStatLT(Player1,15,DEX)~+ ~(Let another arrow fly to the midddle target.)~ + MissTwice 
-+~RandomNum(2,1)CheckStat(Player1,15,DEX)~+ ~(Let another arrow fly to the midddle target.)~ + MissTwice 
++~CheckStatLT(Player1,15,DEX)~+ ~(Let another arrow fly to the middle target.)~ + MissTwice 
++~RandomNum(2,1)CheckStat(Player1,15,DEX)~+ ~(Let another arrow fly to the middle target.)~ + MissTwice 
 +~RandomNum(2,2)CheckStat(Player1,15,DEX)~+ ~(Let another arrow fly to the furthest target.)~ + HitFar
 +~CheckStatGT(Player1,15,DEX)~+ ~(Let another arrow fly to the furthest target.)~ + HitFar
 ++ ~I think I'm too tired for this. I'll let you shoot on your own.~ + RestExit 
@@ -1208,7 +1208,7 @@ END
 ++ ~I think I'd rather sleep alone.~ + Snuggle.3 // Ouch. Probably a minor loss here, but no break.
 
 CHAIN X3Emi25J Snuggle.1 
-~(She pulls you to the bedding, then cuddles closely to you, the comfort of eachother's presence lulling you to sleep.)~
+~(She pulls you to the bedding, then cuddles closely to you, the comfort of each other's presence lulling you to sleep.)~
 DO ~SetGlobal("X3RestActivated","GLOBAL",0)RestParty()~ 
 EXIT 
 
@@ -1321,7 +1321,7 @@ EXTERN X3Emi25J BathJoin
 
 CHAIN X3Emi25J BathJoin
 ~(She joins your hand with hers as she takes you to the inn's baths, bringing you with her into a prepared tub.)~
-= ~(When she climbs into the water, you are suprised to find she neither moves to act on intimacy or to wash, but instead relaxes her body and leans her head against you.)~
+= ~(When she climbs into the water, you are surprised to find she neither moves to act on intimacy or to wash, but instead relaxes her body and leans her head against you.)~
 END 
 ++ ~Tired, are we?~ + BathJoin.1 
 ++ ~Shouldn't be washing?~ + BathJoin.2 
@@ -1375,8 +1375,8 @@ END
 +~Global("X3Story","LOCALS",2)~+ ~I was wondering if you had any stories to share.~ DO ~SetGlobal("X3Story","LOCALS",3)~ + Story3 
 +~Global("X3Advice8","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_8%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice8","LOCALS",1)~ + advice8 //Chapter 8 
 +~Global("X3Advice9","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_9%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice9","LOCALS",1)~ + advice9 //Chapter 9
-+~Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Nevermind actually. Let's get some rest.~ + RestLove2
-+~!Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Nevermind actually. I'm going to go get some rest.~ + RestExit
++~Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Never mind actually. Let's get some rest.~ + RestLove2
++~!Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Never mind actually. I'm going to go get some rest.~ + RestExit
 
 CHAIN X3Emi25J StayTalk
 ~Stay and talk for a while?~
@@ -1394,7 +1394,7 @@ END
 +~Global("X3Story","LOCALS",2)~+ ~Tell me a story about yourself.~ DO ~SetGlobal("X3Story","LOCALS",3)~ + Story3 
 +~Global("X3Advice8","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_8%)~+ ~Do you have any advice about our journey?~ DO ~SetGlobal("X3Advice8","LOCALS",1)~ + advice8 //Chapter 8 
 +~Global("X3Advice9","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_9%)~+ ~Do you have any advice about our journey?~ DO ~SetGlobal("X3Advice9","LOCALS",1)~ + advice9 //Chapter 9
-+~Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Nevermind actually. Let's get some rest.~ + RestLove2
++~Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Never mind actually. Let's get some rest.~ + RestLove2
 +~!Global("X3EmiRomanceActive","GLOBAL",2)~+ ~I'm sorry. I should get some rest.~ + RestExit 
 
 
@@ -1414,8 +1414,8 @@ END
 +~Global("X3Story","LOCALS",2)~+ ~I was wondering if you had any stories to share.~ DO ~SetGlobal("X3Story","LOCALS",3)~ + Story3 
 +~Global("X3Advice8","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_8%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice8","LOCALS",1)~ + advice8 //Chapter 8 
 +~Global("X3Advice9","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_9%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice9","LOCALS",1)~ + advice9 //Chapter 9
-+~Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Nevermind actually. Let's get some rest.~ + RestLove2
-+~!Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Nevermind actually. I'm going to go get some rest.~ + RestExit 
++~Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Never mind actually. Let's get some rest.~ + RestLove2
++~!Global("X3EmiRomanceActive","GLOBAL",2)~+ ~Never mind actually. I'm going to go get some rest.~ + RestExit 
 
 CHAIN X3Emi25J HealthHigh1 
 ~Just fine. I appreciate you checking on me.~
@@ -1607,7 +1607,7 @@ CHAIN X3Emi25J Story1.5
 EXTERN X3Emi25J Story1.4
 
 CHAIN X3Emi25J Story2
-~Well, I can tell you one of my childhood stories of how I embarrased myself and nearly revealed my heritage to everyone.~
+~Well, I can tell you one of my childhood stories of how I embarrassed myself and nearly revealed my heritage to everyone.~
 = ~So, as a member of a noble house, we were always required to attend social occasions we didn't always desire to. Father was entertaining a rival noble house to try to ease some tensions.~
 = ~There was a bard playing music and fine cooked wine and food, but their entire family was so old. One of them was trying to be friendly and asked me to dance.~
 = ~I kept stepping on his shoes over and over again, I did it so many times he started to get angry and thought I was doing it on purpose.~
@@ -1617,7 +1617,7 @@ END
 ++ ~If you need dance lessons, I could help.~ + Story2.6
 
 CHAIN X3Emi25J Story2.1 
-~Clumy? No. Nervous? Very!~
+~Clumsy? No. Nervous? Very!~
 EXTERN X3Emi25J Story2.4
 
 CHAIN X3Emi25J Story2.2 
@@ -1845,10 +1845,10 @@ END
 CHAIN X3Emi25J MissMiddle 
 ~Ah, that was a bad miss. Give it a second try. Remember to focus and know how the arrow arches and curves, and keep in mind any wind.~
 END 
-+~CheckStatLT(Player1,15,DEX)~+ ~(Let another arrow fly to the midddle target.)~ + MissTwice 
-+~RandomNum(2,1)CheckStat(Player1,15,DEX)~+ ~(Let another arrow fly to the midddle target.)~ + MissTwice 
-+~RandomNum(2,2)CheckStat(Player1,15,DEX)~+ ~(Let another arrow fly to the midddle target.)~ + HitMiddle 
-+~CheckStatGT(Player1,15,DEX)~+ ~(Let another arrow fly to the midddle target.)~ + HitMiddle
++~CheckStatLT(Player1,15,DEX)~+ ~(Let another arrow fly to the middle target.)~ + MissTwice 
++~RandomNum(2,1)CheckStat(Player1,15,DEX)~+ ~(Let another arrow fly to the middle target.)~ + MissTwice 
++~RandomNum(2,2)CheckStat(Player1,15,DEX)~+ ~(Let another arrow fly to the middle target.)~ + HitMiddle 
++~CheckStatGT(Player1,15,DEX)~+ ~(Let another arrow fly to the middle target.)~ + HitMiddle
 ++ ~I think I'm too tired for this. I'll let you shoot on your own.~ + RestExit 
 
 CHAIN X3Emi25J HitMiddle 
@@ -1864,8 +1864,8 @@ END
 CHAIN X3Emi25J MissFar
 ~It's a challenge, isn't it? Focus and take your time. Think of where your shot landed and adjust your position accordingly. You can do this.~
 END 
-+~CheckStatLT(Player1,15,DEX)~+ ~(Let another arrow fly to the midddle target.)~ + MissTwice 
-+~RandomNum(2,1)CheckStat(Player1,15,DEX)~+ ~(Let another arrow fly to the midddle target.)~ + MissTwice 
++~CheckStatLT(Player1,15,DEX)~+ ~(Let another arrow fly to the middle target.)~ + MissTwice 
++~RandomNum(2,1)CheckStat(Player1,15,DEX)~+ ~(Let another arrow fly to the middle target.)~ + MissTwice 
 +~RandomNum(2,2)CheckStat(Player1,15,DEX)~+ ~(Let another arrow fly to the furthest target.)~ + HitFar
 +~CheckStatGT(Player1,15,DEX)~+ ~(Let another arrow fly to the furthest target.)~ + HitFar
 ++ ~I think I'm too tired for this. I'll let you shoot on your own.~ + RestExit 
@@ -2085,13 +2085,13 @@ END
 ++ ~They sent you to fight that alone?~ + Story1.3
 
 CHAIN X3HelJ Story1.3
-~Aye. But those who serve in Turstoltok were trained hard and well. We studied and learned of all the creatures of the Forlorn Hills. Trolls were nay uncommon, and I had studied them well from the stories of the others there.~
+~Aye. But those who serve in Torstultok were trained hard and well. We studied and learned of all the creatures of the Forlorn Hills. Trolls were nay uncommon, and I had studied them well from the stories of the others there.~
 EXTERN X3HelJ Story1.4
 
 CHAIN X3HelJ Story1.4
 ~These trolls were independent and liked to be dominant unless courting one another. Fire was your friend, but the torch also made you an easy mark. Right when I thought my cave was empty save the echo of bats, ready to turn back and inform the keep there was nothing in sight, my torch went flying and my skin was cut with claws right here.~
 = ~I turned around and the beast was already going for a killing strike. I put up my shield arm and went for my hammer, ignoring the blood. Five hundred pounds of pure force that thing was. Dented me shield with his second hit. Keeping up a defense was impossible, and asking a blessing, more impossible still.~
-= ~I turned around a small corner with a few rock upcroppings to create distance. Ye think its weight made it slow? Damn thing was fast. Couldn't even get a cure spell to ease my pain for a moment finished without having to cease my incantation and block again.~
+= ~I turned around a small corner with a few rock outcroppings to create distance. Ye think its weight made it slow? Damn thing was fast. Couldn't even get a cure spell to ease my pain for a moment finished without having to cease my incantation and block again.~
 = ~It beat my shield down to about nothing. Was thinking that it would be over soon. Thing was bent and battered like a bent fork.~
 END 
 ++ ~How did you prevail?~ + Story1.7
@@ -2104,7 +2104,7 @@ CHAIN X3HelJ Story1.8
 EXTERN X3HelJ Story1.7
 
 CHAIN X3HelJ Story1.7
-~I decided to be aggresive after that. Slammed my hammer in its face and any open flesh that seemed a good mark. Suprised it at first, especially with a good slam on its knee, but one counter attack with its arm sent me flying back. Damn that wall I hit hurt.~
+~I decided to be aggressive after that. Slammed my hammer in its face and any open flesh that seemed a good mark. Surprised it at first, especially with a good slam on its knee, but one counter attack with its arm sent me flying back. Damn that wall I hit hurt.~
 = ~The creature was slowed though that I could make a quick blessing. Healing maybe, but I thought of Flamebolt instead. Called a burning sword into my hand, forced myself to my feet and met the creature in its charge.~
 = ~His arm was long, but my blade long itself and just a little faster. Cut its arm off with one good strike. Screamed like a shrill harpy it did, then mercifully took its head.~
 = ~I brought it back to Torstultok, and they helped heal the wounds I couldn't. Still proud of that day. Became an adult, in a way.~
@@ -2146,10 +2146,10 @@ CHAIN X3HelJ Story2.2
 EXTERN X3HelJ Story2.1 
 
 CHAIN X3HelJ Story2.1
-~As I told ye before, after my first kill I became a full fledged priest, which we call First Blood from my former novice rank, unblooded.~
+~As I told ye before, after my first kill I became a full fledged priest, which we call First Blood from my former novice rank, Unblooded.~
 DO ~SetGlobal("X3Story","LOCALS",1)~
 = ~A wandering priest of Dumathoin had strong knowledge of a lost crown in one of the ruins desired by a surviving heir of the former empire, and had tasked the Hall of Torstultok to get it.~
-= ~Trolls had pushed back previous attempts, but we were troll killers, blood maidens and luck maidens collectivley at that. Our seniors accepted without pause, and our juniors gladly filled the ranks.~
+= ~Trolls had pushed back previous attempts, but we were troll killers, blood maidens and luck maidens collectively at that. Our seniors accepted without pause, and our juniors gladly filled the ranks.~
 = ~I was put in a crew of four meself, tasked with searching a particular vault once we were well inside. When we opened the door, scores and scores of lost gold filled the ground. Shining jewels and necklaces and rings. A thief's dream.~
 END 
 ++ ~A lucky find.~ + Story2.3
@@ -2210,7 +2210,7 @@ CHAIN X3HelJ Story3.3
 EXTERN X3HelJ Story3.4
 
 CHAIN X3HelJ Story3.4
-~He came around later that evening rather bitter. Offered to cook as some sort of reconcilatory gesture. I let him thinking it would be another opportunity to humble him again.~
+~He came around later that evening rather bitter. Offered to cook as some sort of reconciliation gesture. I let him thinking it would be another opportunity to humble him again.~
 = ~But he was the finest cook I've ever tasted from. Knew his meats and seasonings and did some beautiful cuts. Father was a chef who cooked for kings and the finest dwarven knights of the realm. Taught him everything.~
 = ~Now, I may have not liked his fighting, but I'm not dumb. Didn't let him out of my sight until he was properly my husband.~
 END 
@@ -2327,7 +2327,7 @@ CHAIN X3HelJ advice2.3
 EXTERN X3HelJ advice2.2
 
 CHAIN X3HelJ advice3 
-~Hrng. Ye ask a good question.~
+~Hrngh. Ye ask a good question.~
 END 
 IF ~!Global("WorkingForBodhi","GLOBAL",1)~ EXTERN X3HelJ advice3a 
 IF ~Global("WorkingForBodhi","GLOBAL",1)~ EXTERN X3HelJ advice3b
@@ -2449,7 +2449,7 @@ END
 ++ ~You can cook, but can you also brew?~ + Drink1.9
 
 CHAIN X3HelJ Drink1.7
-~Aye. Anyting that brings back memories of good times. I can remember all the comrades who have come and gone that I've shared a good table and ale with. I'll remember this moment well and good, too.~
+~Aye. Anything that brings back memories of good times. I can remember all the comrades who have come and gone that I've shared a good table and ale with. I'll remember this moment well and good, too.~
 EXTERN X3HelJ RestLate 
 
 CHAIN X3HelJ Drink1.8
@@ -2502,7 +2502,7 @@ EXTERN X3HelJ RestLate
 
 CHAIN X3HelJ Activity 
 ~Ye? Cook? We'll see if ye got what it takes.~
-= ~Got three differenet things ye can help with. The slicing of these vegetables, the seasoning, and the cooking of the meat.~
+= ~Got three different things ye can help with. The slicing of these vegetables, the seasoning, and the cooking of the meat.~
 = ~Now this particular type of meat is easy to undercook or burn. Pot will get hot fast. Just a warning if ye want to take the hardest challenge.~
 END 
  // Misses if you have less than 13, 50% at 13, hits at 14 or above.
@@ -2671,13 +2671,13 @@ END
 ++ ~They sent you to fight that alone?~ + Story1.3
 
 CHAIN X3Hel25J Story1.3
-~Aye. But those who serve in Turstoltok were trained hard and well. We studied and learned of all the creatures of the Forlorn Hills. Trolls were nay uncommon, and I had studied them well from the stories of the others there.~
+~Aye. But those who serve in Torstultok were trained hard and well. We studied and learned of all the creatures of the Forlorn Hills. Trolls were nay uncommon, and I had studied them well from the stories of the others there.~
 EXTERN X3Hel25J Story1.3 
 
 CHAIN X3Hel25J Story1.4
 ~These trolls were independent and liked to be dominant unless courting one another. Fire was your friend, but the torch also made you an easy mark. Right when I thought my cave was empty save the echo of bats, ready to turn back and inform the keep there was nothing in sight, my torch went flying and my skin was cut with claws right here.~
 = ~I turned around and the beast was already going for a killing strike. I put up my shield arm and went for my hammer, ignoring the blood. Five hundred pounds of pure force that thing was. Dented me shield with his second hit. Keeping up a defense was impossible, and asking a blessing, more impossible still.~
-= ~I turned around a small corner with a few rock upcroppings to create distance. Ye think its weight made it slow? Damn thing was fast. Couldn't even get a cure spell to ease my pain for a moment finished without having to cease my incantation and block again.~
+= ~I turned around a small corner with a few rock outcroppings to create distance. Ye think its weight made it slow? Damn thing was fast. Couldn't even get a cure spell to ease my pain for a moment finished without having to cease my incantation and block again.~
 = ~It beat my shield down to about nothing. Was thinking that it would be over soon. Thing was bent and battered like a bent fork.~
 END 
 ++ ~How did you prevail?~ + Story1.7
@@ -2690,7 +2690,7 @@ CHAIN X3Hel25J Story1.8
 EXTERN X3Hel25J Story1.7
 
 CHAIN X3Hel25J Story1.7 
-~I decided to be aggresive after that. Slammed my hammer in its face and any open flesh that seemed a good mark. Suprised it at first, especially with a good slam on its knee, but one counter attack with its arm sent me flying back. Damn that wall I hit hurt.~
+~I decided to be aggressive after that. Slammed my hammer in its face and any open flesh that seemed a good mark. Surprised it at first, especially with a good slam on its knee, but one counter attack with its arm sent me flying back. Damn that wall I hit hurt.~
 = ~The creature was slowed though that I could make a quick blessing. Healing maybe, but I thought of Flamebolt instead. Called a burning sword into my hand, forced myself to my feet and met the creature in its charge.~
 = ~His arm was long, but my blade long itself and just a little faster. Cut its arm off with one good strike. Screamed like a shrill harpy it did, then mercifully took its head.~
 = ~I brought it back to Torstultok, and they helped heal the wounds I couldn't. Still proud of that day. Became an adult, in a way.~
@@ -2731,10 +2731,10 @@ CHAIN X3Hel25J Story2.2
 EXTERN X3Hel25J Story2.1 
 
 CHAIN X3Hel25J Story2.1
-~As I told ye before, after my first kill I became a full fledged priest, which we call First Blood from my former novice rank, unblooded.~
+~As I told ye before, after my first kill I became a full fledged priest, which we call First Blood from my former novice rank, Unblooded.~
 DO ~SetGlobal("X3Story","LOCALS",1)~
 = ~A wandering priest of Dumathoin had strong knowledge of a lost crown in one of the ruins desired by a surviving heir of the former empire, and had tasked the Hall of Torstultok to get it.~
-= ~Trolls had pushed back previous attempts, but we were troll killers, blood maidens and luck maidens collectivley at that. Our seniors accepted without pause, and our juniors gladly filled the ranks.~
+= ~Trolls had pushed back previous attempts, but we were troll killers, blood maidens and luck maidens collectively at that. Our seniors accepted without pause, and our juniors gladly filled the ranks.~
 = ~I was put in a crew of four meself, tasked with searching a particular vault once we were well inside. When we opened the door, scores and scores of lost gold filled the ground. Shining jewels and necklaces and rings. A thief's dream.~
 END 
 ++ ~A lucky find.~ + Story2.3
@@ -2796,7 +2796,7 @@ CHAIN X3Hel25J Story3.3
 EXTERN X3Hel25J Story3.4
 
 CHAIN X3Hel25J Story3.4
-~He came around later that evening rather bitter. Offered to cook as some sort of reconcilatory gesture. I let him thinking it would be another opportunity to humble him again.~
+~He came around later that evening rather bitter. Offered to cook as some sort of reconciliation gesture. I let him thinking it would be another opportunity to humble him again.~
 = ~But he was the finest cook I've ever tasted from. Knew his meats and seasonings and did some beautiful cuts. Father was a chef who cooked for kings and the finest dwarven knights of the realm. Taught him everything.~
 = ~Now, I may have not liked his fighting, but I'm not dumb. Didn't let him out of my sight until he was properly my husband.~
 END 
@@ -2924,7 +2924,7 @@ EXTERN X3Hel25J RestLate
 
 CHAIN X3Hel25J Activity 
 ~Ye? Cook? We'll see if ye got what it takes.~
-= ~Got three differenet things ye can help with. The slicing of these vegetables, the seasoning, and the cooking of the meat.~
+= ~Got three different things ye can help with. The slicing of these vegetables, the seasoning, and the cooking of the meat.~
 = ~Now this particular type of meat is easy to undercook or burn. Pot will get hot fast. Just a warning if ye want to take the hardest challenge.~
 END 
  // Misses if you have less than 13, 50% at 13, hits at 14 or above.
@@ -3125,8 +3125,8 @@ END
 +~Global("X3Advice3","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_3%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice3","LOCALS",1)~ + advice3 // Chapter 3 
 +~Global("X3Advice4","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_4%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice4","LOCALS",1)~ + advice4 // Chapter 4
 +~Global("X3Advice6","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_6%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice6","LOCALS",1)~ + advice6 // Chapter 6 
-+~Global("X3KalRomanceActive","GLOBAL",2)~+ ~Nevermind actually. Let's get some rest.~ + RestLove2
-+~!Global("X3KalRomanceActive","GLOBAL",2)~+ ~Nevermind actually. I'm going to go get some rest.~ + RestExit 
++~Global("X3KalRomanceActive","GLOBAL",2)~+ ~Never mind actually. Let's get some rest.~ + RestLove2
++~!Global("X3KalRomanceActive","GLOBAL",2)~+ ~Never mind actually. I'm going to go get some rest.~ + RestExit 
 
 CHAIN X3KalJ compliment 
 ~Handsome, eh? I get that a lot. But it means a bit more coming from you.~
@@ -3149,8 +3149,8 @@ END
 +~Global("X3Advice3","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_3%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice3","LOCALS",1)~ + advice3 // Chapter 3 
 +~Global("X3Advice4","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_4%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice4","LOCALS",1)~ + advice4 // Chapter 4
 +~Global("X3Advice6","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_6%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice6","LOCALS",1)~ + advice6 // Chapter 6 
-+~Global("X3KalRomanceActive","GLOBAL",2)~+ ~Nevermind actually. Let's get some rest.~ + RestLove2
-+~!Global("X3KalRomanceActive","GLOBAL",2)~+ ~Nevermind actually. I'm going to go get some rest.~ + RestExit 
++~Global("X3KalRomanceActive","GLOBAL",2)~+ ~Never mind actually. Let's get some rest.~ + RestLove2
++~!Global("X3KalRomanceActive","GLOBAL",2)~+ ~Never mind actually. I'm going to go get some rest.~ + RestExit 
 
 CHAIN X3KalJ StayTalk 
 ~Want to talk about anything?~
@@ -3170,8 +3170,8 @@ END
 +~Global("X3Advice3","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_3%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice3","LOCALS",1)~ + advice3 // Chapter 3 
 +~Global("X3Advice4","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_4%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice4","LOCALS",1)~ + advice4 // Chapter 4
 +~Global("X3Advice6","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_6%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice6","LOCALS",1)~ + advice6 // Chapter 6 
-+~Global("X3KalRomanceActive","GLOBAL",2)~+ ~Nevermind actually. Let's get some rest.~ + RestLove2
-+~!Global("X3KalRomanceActive","GLOBAL",2)~+ ~Nevermind actually. I'm going to go get some rest.~ + RestExit 
++~Global("X3KalRomanceActive","GLOBAL",2)~+ ~Never mind actually. Let's get some rest.~ + RestLove2
++~!Global("X3KalRomanceActive","GLOBAL",2)~+ ~Never mind actually. I'm going to go get some rest.~ + RestExit 
 
 CHAIN X3KalJ HealthHigh1 
 ~Me mate? Couldn't be better.~
@@ -3386,7 +3386,7 @@ END
 CHAIN X3KalJ Story2.1
 ~What?~
 END 
-++ ~Nevermind, just go on.~ + Story2.2
+++ ~Never mind, just go on.~ + Story2.2
 ++ ~You can't kill a wyvern by slapping it in the face. And are wyverns even around your village? Can you at least try a semi-believable tale?~ DO ~IncrementGlobal("X3KalAppChange","GLOBAL",-1)~ + Story2.3
 ++ ~I think I'll take a break from hearing your tales today.~ DO ~IncrementGlobal("X3KalAppChange","GLOBAL",-2)~ + Story2.4
 
@@ -3465,7 +3465,7 @@ CHAIN X3KalJ advice2.1
 EXTERN X3KalJ advice2.4 
 
 CHAIN X3KalJ advice2.4
-~Now, if we get a little extra gold, I wouldn't mind spending it on a few luxuries. Nothing we can't afford! Just a few garments to look extra impressive. I'm just kidding! Eh nevermind, I'm not.~
+~Now, if we get a little extra gold, I wouldn't mind spending it on a few luxuries. Nothing we can't afford! Just a few garments to look extra impressive. I'm just kidding! Eh Never mind, I'm not.~
 EXTERN X3KalJ RestLate 
 
 CHAIN X3KalJ advice2.2
@@ -3537,7 +3537,7 @@ CHAIN X3KalJ advice4.3
 EXTERN X3KalJ RestLate 
 
 CHAIN X3KalJ advice6
-~Oh, I 'unno.~
+~Oh, I dunno.~
 = ~You're soul-less, and need it back. Seems like you're more or less forced to go after Irenicus now.~
 END 
 ++ ~He will pay a thousand times for this.~ + advice6.1
@@ -3549,7 +3549,7 @@ CHAIN X3KalJ advice6.1
 EXTERN X3KalJ RestLate 
 
 CHAIN X3KalJ advice6.2
-~Shame, really. After all that time in the underdark, would be nice to take it easy!~
+~Shame, really. After all that time in the Underdark, would be nice to take it easy!~
 EXTERN X3KalJ RestLate 
 
 CHAIN X3KalJ advice6.3
@@ -3637,7 +3637,7 @@ CHAIN X3KalJ BathJoin.5
 EXTERN X3KalJ BathJoin.4
 
 CHAIN X3KalJ BathJoin.4 
-~(Your hands wander over eachother, cleaning, or sometimes being playful, grinning, laughing, until eventually temptation proves the stronger force.)~
+~(Your hands wander over each other, cleaning, or sometimes being playful, grinning, laughing, until eventually temptation proves the stronger force.)~
 = ~(When you are done, you leave warm, happy, and satisfied, as you move to your room for rest.)~
 DO ~SetGlobal("X3RestActivated","GLOBAL",0)RestParty()~ EXIT 
 
@@ -3796,7 +3796,7 @@ END
 ++ ~I'm a bit tired, I'll let you enjoy your drink.~ + RestExit 
 
 CHAIN X3KalJ KissWine
-~(His lips taste bitter, the ale he was drinkign quite strong.)~
+~(His lips taste bitter, the ale he was drinking quite strong.)~
 = ~Damn I'm lucky. Now all of these folk will know your are mine.~
 END 
 ++ ~Do you have time to talk?~ + Talks 
@@ -3815,19 +3815,19 @@ END
 +~RandomNum(2,2)CheckStat(Player1,13,CON)~+ ~To us.~ + DrinkPass1
 +~CheckStatGT(Player1,13,CON)~+ ~(Drink)~ + DrinkPass1 
 +~CheckStatGT(Player1,13,CON)~+ ~To us.~ + DrinkPass1
-++ ~Nevermind, I forfeit. I want to stay cognitive.~ + DrinkExit 
+++ ~Never mind, I forfeit. I want to stay cognitive.~ + DrinkExit 
 
 CHAIN X3KalJ DrinkFail1
 ~Sheesh, you're already down after just one drink. We'll have to work on that, heh.~
 END 
-++ ~That's embarrasing.~ + DrinkFail2 
+++ ~That's embarrassing.~ + DrinkFail2 
 ++ ~I'll win next time.~ + DrinkFail3 
 ++ ~How do you even drink something so strong?~ + DrinkFail4 
 
 CHAIN X3KalJ DrinkFail5 
-~And sooo close. You look dazed now, heh. Not a bad try, though.~
+~And so close. You look dazed now, heh. Not a bad try, though.~
 END 
-++ ~That's embarrasing.~ + DrinkFail2 
+++ ~That's embarrassing.~ + DrinkFail2 
 ++ ~I'll win next time.~ + DrinkFail3 
 ++ ~How do you even drink something so strong?~ + DrinkFail4 
 
@@ -3855,7 +3855,7 @@ END
 +~RandomNum(2,2)CheckStat(Player1,15,CON)~+ ~Bring it.~ + DrinkPass2
 +~CheckStatGT(Player1,15,CON)~+ ~(Drink)~ + DrinkPass2
 +~CheckStatGT(Player1,15,CON)~+ ~Bring it.~ + DrinkPass2
-++ ~Nevermind, I forfeit. I want to stay cognitive.~ + DrinkExit 
+++ ~Never mind, I forfeit. I want to stay cognitive.~ + DrinkExit 
 
 CHAIN X3KalJ DrinkPass2
 ~All right...Damn ,you're good. Well, time to bring out the knocker...~
@@ -3869,7 +3869,7 @@ END
 +~RandomNum(2,2)CheckStat(Player1,17,CON)~+ ~Enough talk. Let's drink.~ + DrinkPass3
 +~CheckStatGT(Player1,17,CON)~+ ~(Drink)~ + DrinkPass3
 +~CheckStatGT(Player1,17,CON)~+ ~Enough talk. Let's drink.~ + DrinkPass3
-++ ~Nevermind, I forfeit. I want to stay cognitive.~ + DrinkExit 
+++ ~Never mind, I forfeit. I want to stay cognitive.~ + DrinkExit 
 
 CHAIN X3KalJ DrinkPass3 
 ~Bloody hell, you're drinking like it's nothing! I'll have to forfeit. One more and I'll barely be able to stand.~
@@ -4021,8 +4021,8 @@ END
 +~Global("X3Story","LOCALS",2)~+ ~I was wondering if you had any stories to share.~ DO ~SetGlobal("X3Story","LOCALS",3)~ + Story3 
 +~Global("X3Advice8","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_8%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice8","LOCALS",1)~ + advice8 //Chapter 2 
 +~Global("X3Advice9","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_9%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice9","LOCALS",1)~ + advice9 // Chapter 3 
-+~Global("X3KalRomanceActive","GLOBAL",2)~+ ~Nevermind actually. Let's get some rest.~ + RestLove2
-+~!Global("X3KalRomanceActive","GLOBAL",2)~+ ~Nevermind actually. I'm going to go get some rest.~ + RestExit 
++~Global("X3KalRomanceActive","GLOBAL",2)~+ ~Never mind actually. Let's get some rest.~ + RestLove2
++~!Global("X3KalRomanceActive","GLOBAL",2)~+ ~Never mind actually. I'm going to go get some rest.~ + RestExit 
 
 CHAIN X3Kal25J compliment 
 ~Handsome, eh? I get that a lot. But it means a bit more coming from you.~
@@ -4043,8 +4043,8 @@ END
 +~Global("X3Story","LOCALS",2)~+ ~I was wondering if you had any stories to share.~ DO ~SetGlobal("X3Story","LOCALS",3)~ + Story3 
 +~Global("X3Advice8","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_8%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice8","LOCALS",1)~ + advice8 //Chapter 2 
 +~Global("X3Advice9","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_9%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice9","LOCALS",1)~ + advice9 // Chapter 3 
-+~Global("X3KalRomanceActive","GLOBAL",2)~+ ~Nevermind actually. Let's get some rest.~ + RestLove2
-+~!Global("X3KalRomanceActive","GLOBAL",2)~+ ~Nevermind actually. I'm going to go get some rest.~ + RestExit 
++~Global("X3KalRomanceActive","GLOBAL",2)~+ ~Never mind actually. Let's get some rest.~ + RestLove2
++~!Global("X3KalRomanceActive","GLOBAL",2)~+ ~Never mind actually. I'm going to go get some rest.~ + RestExit 
 
 CHAIN X3Kal25J StayTalk 
 ~Want to talk about anything?~
@@ -4062,8 +4062,8 @@ END
 +~Global("X3Story","LOCALS",2)~+ ~I was wondering if you had any stories to share.~ DO ~SetGlobal("X3Story","LOCALS",3)~ + Story3 
 +~Global("X3Advice8","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_8%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice8","LOCALS",1)~ + advice8 //Chapter 2 
 +~Global("X3Advice9","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_9%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice9","LOCALS",1)~ + advice9 // Chapter 3 
-+~Global("X3KalRomanceActive","GLOBAL",2)~+ ~Nevermind actually. Let's get some rest.~ + RestLove2
-+~!Global("X3KalRomanceActive","GLOBAL",2)~+ ~Nevermind actually. I'm going to go get some rest.~ + RestExit 
++~Global("X3KalRomanceActive","GLOBAL",2)~+ ~Never mind actually. Let's get some rest.~ + RestLove2
++~!Global("X3KalRomanceActive","GLOBAL",2)~+ ~Never mind actually. I'm going to go get some rest.~ + RestExit 
 
 CHAIN X3Kal25J HealthHigh1 
 ~Me mate? Couldn't be better.~
@@ -4262,7 +4262,7 @@ END
 CHAIN X3Kal25J Story2.1
 ~What?~
 END 
-++ ~Nevermind, just go on.~ + Story2.2
+++ ~Never mind, just go on.~ + Story2.2
 ++ ~You can't kill a wyvern by slapping it in the face. And are wyverns even around your village? Can you at least try a semi-believable tale?~ DO ~IncrementGlobal("X3KalAppChange","GLOBAL",-1)~ + Story2.3
 ++ ~I think I'll take a break from hearing your tales today.~ DO ~IncrementGlobal("X3KalAppChange","GLOBAL",-2)~ + Story2.4
 
@@ -4361,7 +4361,7 @@ CHAIN X3Kal25J advice9.1
 EXTERN X3Kal25J RestLate 
 
 CHAIN X3Kal25J advice9.2
-~Pfft. Nah. That's not it. Just a bloody path. Gets to your conscience a little. But nevermind me, mate.~
+~Pfft. Nah. That's not it. Just a bloody path. Gets to your conscience a little. But Never mind me, mate.~
 EXTERN X3Kal25J RestLate 
 
 CHAIN X3Kal25J advice9.3
@@ -4442,7 +4442,7 @@ CHAIN X3Kal25J BathJoin.5
 EXTERN X3Kal25J BathJoin.4
 
 CHAIN X3Kal25J BathJoin.4 
-~(Your hands wander over eachother, cleaning, or sometimes being playful, grinning, laughing, until eventually temptation proves the stronger force.)~
+~(Your hands wander over each other, cleaning, or sometimes being playful, grinning, laughing, until eventually temptation proves the stronger force.)~
 = ~(When you are done, you leave warm, happy, and satisfied, as you move to your room for rest.)~
 DO ~SetGlobal("X3RestActivated","GLOBAL",0)RestParty()~ EXIT 
 
@@ -4733,14 +4733,14 @@ END
 +~Global("X3Advice3","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_3%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice3","LOCALS",1)~ + advice3 // Chapter 3 
 +~Global("X3Advice4","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_4%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice4","LOCALS",1)~ + advice4 // Chapter 4
 +~Global("X3Advice6","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_6%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice6","LOCALS",1)~ + advice6 // Chapter 6 
-+~Global("X3RebRomanceActive","GLOBAL",2)~+ ~Nevermind actually. Let's get some rest.~ + RestLove2
-+~!Global("X3RebRomanceActive","GLOBAL",2)~+ ~Nevermind actually. I'm going to go get some rest.~ + RestExit 
++~Global("X3RebRomanceActive","GLOBAL",2)~+ ~Never mind actually. Let's get some rest.~ + RestLove2
++~!Global("X3RebRomanceActive","GLOBAL",2)~+ ~Never mind actually. I'm going to go get some rest.~ + RestExit 
 
 CHAIN X3RebJ Story1 
 ~I would not mind doing that for you. Please, make yourself comfortable.~
 = ~There was an inspiring performer, a young girl who loved the sounds of the plucked strings of the harp. But it never made the sounds that she heard in inns and taverns.~
-= ~Her family too poor to afford lessons, she wandered distraught into the forest, wondering if her destiny was set to be common and unadventerous. While she wept, a little forest pixie heard her weeping and came to flutter beside her.~
-= ~"Wipe your eyes, little girl", she said. "I have heard your cries and bring you a gift. Take this key into the tree's hollow. You will find a hole where it fits. Inside shall be a golden harp. Play it everday, and its magic will make you more skilled. But its magic is broken if you stop the daily routine."~
+= ~Her family too poor to afford lessons, she wandered distraught into the forest, wondering if her destiny was set to be common and unadventurous. While she wept, a little forest pixie heard her weeping and came to flutter beside her.~
+= ~"Wipe your eyes, little girl", she said. "I have heard your cries and bring you a gift. Take this key into the tree's hollow. You will find a hole where it fits. Inside shall be a golden harp. Play it everyday, and its magic will make you more skilled. But its magic is broken if you stop the daily routine."~
 = ~Overjoyed, the girl thanked the creature profusely, and promised that she would keep true to her directions.~
 END 
 ++ ~This sounds almost like a children's tale.~ + Story1.1
@@ -4760,7 +4760,7 @@ CHAIN X3RebJ Story1.2
 = ~Her friends made fun of her for being cooped up in her tree for so long, and one day, frustrated by her music's to match the serene perfection of the great performers she heard, she dropped the harp on the ground and curled into the corner, distraught.~
 = ~The pixie visited her that night, and told her "I will take back the gift, if it so displeases you.". But the young girl, with time having passed to ease her pain, pleaded for her to keep it, for another chance. The pixie granted this, and another gift, a small ring, which shimmered a silver light, and was engraved with the word 'belief'.~
 = ~"This is from my sister". Wear it, and the magic will be all the stronger.~
-= ~She always wore the ring after that, even to the day she dissapeared from the village altogether, no longer needing the old gifted harp. Her music had become angelic, and people from all around invited her to play. Fame and riches came to her, as well as suitors, but she had never thanked the creature.~
+= ~She always wore the ring after that, even to the day she disappeared from the village altogether, no longer needing the old gifted harp. Her music had become angelic, and people from all around invited her to play. Fame and riches came to her, as well as suitors, but she had never thanked the creature.~
 = ~One day in her dreams, she saw the pixie again. She exclaimed her thanks, but distressed she had no gift worthy to give her. So she asked her name, so she could immortalize it in song.~
 = ~'My name', the creature said, 'is persistence'.~
 END 
@@ -4784,7 +4784,7 @@ EXTERN X3RebJ RestLate
 CHAIN X3RebJ Story2 
 ~I would love to. Perhaps I can tell you of another early adventure. Before I met you. Before I even crossed the border from Amn to Baldur's Gate.~
 = ~I had left Althkata to make my way to a local town where a caravan would make a route north. There were caravans like that in Althkata, but they were expensive, and some were a bit suspicious.~
-= ~I had rested near a cave, thinking it free of anyting, when this enormous swarm of dire rats came bustling out. Alone they aren't too worrisome, a crossbow bolt usually scares them off, but in a swarm they could take down a grown gnome like myself.~
+= ~I had rested near a cave, thinking it free of anything, when this enormous swarm of dire rats came bustling out. Alone they aren't too worrisome, a crossbow bolt usually scares them off, but in a swarm they could take down a grown gnome like myself.~
 END 
 ++ ~Did you run?~ + Story2.1 
 ++ ~What happened next?~ + Story2.2 
@@ -4797,10 +4797,10 @@ EXTERN X3RebJ Story2.2
 CHAIN X3RebJ Story2.2
 ~They were getting closer and closer, and one of them had managed to nip through my dress. Then Gustav jumped out of my pack and hissed at all of them, standing his ground.~
 = ~I couldn't believe it. They had the numbers. They could either swarm or back off...and somehow Gustav's cry was intimidating enough they all went back into the cave.~
-= ~I always knew from that day on we would protect eachother. Although I still hate it when he does something so foolish like that.~
+= ~I always knew from that day on we would protect each other. Although I still hate it when he does something so foolish like that.~
 END 
 ++ ~You have a good pet, Recorder.~ + Story2.3 
-++ ~I'm suprised you just let him do that.~ + Story2.4 
+++ ~I'm surprised you just let him do that.~ + Story2.4 
 ++ ~Thank you for the tale.~ + Story2.5
 
 CHAIN X3RebJ Story2.3 
@@ -4847,7 +4847,7 @@ END
 ++ ~Just make your next one more exciting.~ + Story3.4
 
 CHAIN X3RebJ Story3.3 
-~I am glad then. I found it embarrasing to think about. But being in the hands of others...I think there is a true fear in that. When all you can do is plead with your eyes, and try to speak with only your body.~
+~I am glad then. I found it embarrassing to think about. But being in the hands of others...I think there is a true fear in that. When all you can do is plead with your eyes, and try to speak with only your body.~
 DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",3)~
 EXTERN X3RebJ RestLate 
 
@@ -5144,8 +5144,8 @@ END
 +~Global("X3Advice3","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_3%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice3","LOCALS",1)~ + advice3 // Chapter 3 
 +~Global("X3Advice4","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_4%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice4","LOCALS",1)~ + advice4 // Chapter 4
 +~Global("X3Advice6","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_6%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice6","LOCALS",1)~ + advice6 // Chapter 6 
-+~Global("X3RebRomanceActive","GLOBAL",2)~+ ~Nevermind actually. Let's get some rest.~ + RestLove2
-+~!Global("X3RebRomanceActive","GLOBAL",2)~+ ~Nevermind actually. I'm going to go get some rest.~ + RestExit 
++~Global("X3RebRomanceActive","GLOBAL",2)~+ ~Never mind actually. Let's get some rest.~ + RestLove2
++~!Global("X3RebRomanceActive","GLOBAL",2)~+ ~Never mind actually. I'm going to go get some rest.~ + RestExit 
 
 CHAIN X3RebJ Hug1
 ~(You reach out to embrace Recorder, and she leans into your touch welcomingly.)~
@@ -5210,8 +5210,8 @@ END
 +~Global("X3Advice3","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_3%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice3","LOCALS",1)~ + advice3 // Chapter 3 
 +~Global("X3Advice4","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_4%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice4","LOCALS",1)~ + advice4 // Chapter 4
 +~Global("X3Advice6","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_6%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice6","LOCALS",1)~ + advice6 // Chapter 6 
-+~Global("X3RebRomanceActive","GLOBAL",2)~+ ~Nevermind actually. Let's get some rest.~ + RestLove2
-+~!Global("X3RebRomanceActive","GLOBAL",2)~+ ~Nevermind actually. I'm going to go get some rest.~ + RestExit 
++~Global("X3RebRomanceActive","GLOBAL",2)~+ ~Never mind actually. Let's get some rest.~ + RestLove2
++~!Global("X3RebRomanceActive","GLOBAL",2)~+ ~Never mind actually. I'm going to go get some rest.~ + RestExit 
  
 
 CHAIN X3RebJ BathYes 
@@ -5330,7 +5330,7 @@ END
 ++ ~I don't think I can see this everyday, I'm sorry.~ + Sleep6
 
 CHAIN X3RebJ Sleep6 
-~I...I am glad you told me that now. (She turns away from you, clearly embarrased, as she puts her clothes on.) Please leave...I'm sorry for...I don't even know. Just leave me alone.)~
+~I...I am glad you told me that now. (She turns away from you, clearly embarrassed, as she puts her clothes on.) Please leave...I'm sorry for...I don't even know. Just leave me alone.)~
 DO ~SetGlobal("X3RebRomanceActive","GLOBAL",3)SetGlobal("X3RestActivated","GLOBAL",0)RestParty()~
 EXIT 
 
@@ -5438,7 +5438,7 @@ CHAIN X3RebJ Record9
 EXTERN X3RebJ RestLate 
 
 CHAIN X3RebJ Record10 
-~I hope not. Not that I mind others contributing! I just...nevermind, I am just being silly again.~
+~I hope not. Not that I mind others contributing! I just...Never mind, I am just being silly again.~
 EXTERN X3RebJ RestLate 
 
 CHAIN X3RebJ Record11 
@@ -5683,19 +5683,19 @@ END
 +~Global("X3Story","LOCALS",2)GlobalGT("X3RebTalk","LOCALS",10)~+ ~I was wondering if could tell another story.~ DO ~SetGlobal("X3Story","LOCALS",3)~ + Story3 
 +~Global("X3Advice8","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_8%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice8","LOCALS",1)~ + advice8 // Chapter 4
 +~Global("X3Advice9","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_9%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice9","LOCALS",1)~ + advice9 // Chapter 6 
-+~Global("X3RebRomanceActive","GLOBAL",2)~+ ~Nevermind actually. Let's get some rest.~ + RestLove2
-+~!Global("X3RebRomanceActive","GLOBAL",2)~+ ~Nevermind actually. I'm going to go get some rest.~ + RestExit 
++~Global("X3RebRomanceActive","GLOBAL",2)~+ ~Never mind actually. Let's get some rest.~ + RestLove2
++~!Global("X3RebRomanceActive","GLOBAL",2)~+ ~Never mind actually. I'm going to go get some rest.~ + RestExit 
 
 CHAIN X3Reb25J Story1 
 ~I would not mind doing that for you. Please, make yourself comfortable.~
 = ~There was an inspiring performer, a young girl who loved the sounds of the plucked strings of the harp. But it never made the sounds that she heard in inns and taverns.~
-= ~Her family too poor to afford lessons, she wandered distraught into the forest, wondering if her destiny was set to be common and unadventerous. While she wept, a little forest pixie heard her weeping and came to flutter beside her.~
-= ~"Wipe your eyes, little girl", she said. "I have heard your cries and bring you a gift. Take this key into the tree's hollow. You will find a hole where it fits. Inside shall be a golden harp. Play it everday, and its magic will make you more skilled. But its magic is broken if you stop the daily routine."~
+= ~Her family too poor to afford lessons, she wandered distraught into the forest, wondering if her destiny was set to be common and unadventurous. While she wept, a little forest pixie heard her weeping and came to flutter beside her.~
+= ~"Wipe your eyes, little girl", she said. "I have heard your cries and bring you a gift. Take this key into the tree's hollow. You will find a hole where it fits. Inside shall be a golden harp. Play it everyday, and its magic will make you more skilled. But its magic is broken if you stop the daily routine."~
 = ~Overjoyed, the girl thanked the creature profusely, and promised that she would keep true to her directions.~
 END 
 ++ ~This sounds almost like a children's tale.~ + Story1.1
 ++ ~What happened next?~ + Story1.2
-++ ~I was hoping for something more adventerous.~ + Story1.6
+++ ~I was hoping for something more adventurous.~ + Story1.6
 
 CHAIN X3Reb25J Story1.1 
 ~It is, in a way. One of my favorites.~
@@ -5710,7 +5710,7 @@ CHAIN X3Reb25J Story1.2
 = ~Her friends made fun of her for being cooped up in her tree for so long, and one day, frustrated by her music's to match the serene perfection of the great performers she heard, she dropped the harp on the ground and curled into the corner, distraught.~
 = ~The pixie visited her that night, and told her "I will take back the gift, if it so displeases you.". But the young girl, with time having passed to ease her pain, pleaded for her to keep it, for another chance. The pixie granted this, and another gift, a small ring, which shimmered a silver light, and was engraved with the word 'belief'.~
 = ~"This is from my sister". Wear it, and the magic will be all the stronger.~
-= ~She always wore the ring after that, even to the day she dissapeared from the village altogether, no longer needing the old gifted harp. Her music had become angelic, and people from all around invited her to play. Fame and riches came to her, as well as suitors, but she had never thanked the creature.~
+= ~She always wore the ring after that, even to the day she disappeared from the village altogether, no longer needing the old gifted harp. Her music had become angelic, and people from all around invited her to play. Fame and riches came to her, as well as suitors, but she had never thanked the creature.~
 = ~One day in her dreams, she saw the pixie again. She exclaimed her thanks, but distressed she had no gift worthy to give her. So she asked her name, so she could immortalize it in song.~
 = ~'My name', the creature said, 'is persistence'.~
 END 
@@ -5734,7 +5734,7 @@ EXTERN X3Reb25J RestLate
 CHAIN X3Reb25J Story2 
 ~I would love to. Perhaps I can tell you of another early adventure. Before I met you. Before I even crossed the border from Amn to Baldur's Gate.~
 = ~I had left Althkata to make my way to a local town where a caravan would make a route north. There were caravans like that in Althkata, but they were expensive, and some were a bit suspicious.~
-= ~I had rested near a cave, thinking it free of anyting, when this enormous swarm of dire rats came bustling out. Alone they aren't too worrisome, a crossbow bolt usually scares them off, but in a swarm they could take down a grown gnome like myself.~
+= ~I had rested near a cave, thinking it free of anything, when this enormous swarm of dire rats came bustling out. Alone they aren't too worrisome, a crossbow bolt usually scares them off, but in a swarm they could take down a grown gnome like myself.~
 END 
 ++ ~Did you run?~ + Story2.1 
 ++ ~What happened next?~ + Story2.2 
@@ -5746,10 +5746,10 @@ EXTERN X3Reb25J Story2.2
 CHAIN X3Reb25J Story2.2
 ~They were getting closer and closer, and one of them had managed to nip through my dress. Then Gustav jumped out of my pack and hissed at all of them, standing his ground.~
 = ~I couldn't believe it. They had the numbers. They could either swarm or back off...and somehow Gustav's cry was intimidating enough they all went back into the cave.~
-= ~I always knew from that day on we would protect eachother. Although I still hate it when he does something so foolish like that.~
+= ~I always knew from that day on we would protect each other. Although I still hate it when he does something so foolish like that.~
 END 
 ++ ~You have a good pet, Recorder.~ + Story2.3 
-++ ~I'm suprised you just let him do that.~ + Story2.4
+++ ~I'm surprised you just let him do that.~ + Story2.4
 ++ ~Thank you for the tale.~ + Story2.5
 
 CHAIN X3Reb25J Story2.3 
@@ -5796,7 +5796,7 @@ END
 ++ ~Just make your next one more exciting.~ + Story3.4
 
 CHAIN X3Reb25J Story3.3 
-~I am glad then. I found it embarrasing to think about. But being in the hands of others...I think there is a true fear in that. When all you can do is plead with your eyes, and try to speak with only your body.~
+~I am glad then. I found it embarrassing to think about. But being in the hands of others...I think there is a true fear in that. When all you can do is plead with your eyes, and try to speak with only your body.~
 DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",3)~
 EXTERN X3Reb25J RestLate 
 
@@ -6009,8 +6009,8 @@ END
 +~Global("X3Story","LOCALS",2)GlobalGT("X3RebTalk","LOCALS",10)~+ ~I was wondering if could tell another story.~ DO ~SetGlobal("X3Story","LOCALS",3)~ + Story3 
 +~Global("X3Advice8","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_8%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice8","LOCALS",1)~ + advice8 // Chapter 4
 +~Global("X3Advice9","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_9%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice9","LOCALS",1)~ + advice9 // Chapter 6 
-+~Global("X3RebRomanceActive","GLOBAL",2)~+ ~Nevermind actually. Let's get some rest.~ + RestLove2
-+~!Global("X3RebRomanceActive","GLOBAL",2)~+ ~Nevermind actually. I'm going to go get some rest.~ + RestExit 
++~Global("X3RebRomanceActive","GLOBAL",2)~+ ~Never mind actually. Let's get some rest.~ + RestLove2
++~!Global("X3RebRomanceActive","GLOBAL",2)~+ ~Never mind actually. I'm going to go get some rest.~ + RestExit 
 
 CHAIN X3Reb25J Hug1
 ~(You reach out to embrace Recorder, and she leans into your touch welcomingly.)~
@@ -6073,8 +6073,8 @@ END
 +~Global("X3Story","LOCALS",2)GlobalGT("X3RebTalk","LOCALS",10)~+ ~I was wondering if could tell another story.~ DO ~SetGlobal("X3Story","LOCALS",3)~ + Story3 
 +~Global("X3Advice8","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_8%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice8","LOCALS",1)~ + advice8 // Chapter 4
 +~Global("X3Advice9","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_9%)~+ ~I wanted advice about our journey.~ DO ~SetGlobal("X3Advice9","LOCALS",1)~ + advice9 // Chapter 6 
-+~Global("X3RebRomanceActive","GLOBAL",2)~+ ~Nevermind actually. Let's get some rest.~ + RestLove2
-+~!Global("X3RebRomanceActive","GLOBAL",2)~+ ~Nevermind actually. I'm going to go get some rest.~ + RestExit 
++~Global("X3RebRomanceActive","GLOBAL",2)~+ ~Never mind actually. Let's get some rest.~ + RestLove2
++~!Global("X3RebRomanceActive","GLOBAL",2)~+ ~Never mind actually. I'm going to go get some rest.~ + RestExit 
  
 
 CHAIN X3Reb25J BathYes 
@@ -6415,7 +6415,7 @@ AreaCheck("AR1602")~+ ~(Go see Vienxay.)~ EXTERN X3VieJ Inn2
 
 //SoA 
 CHAIN X3VieJ Inn1 
-~(You find Vienxay in her room, boredly making a weapon dissapear and then appear in her hand.)~
+~(You find Vienxay in her room, boredly making a weapon disappear and then appear in her hand.)~
 = ~I assume you want my company.~
 END 
 ++ ~Do you have time to talk?~ + Talks 
@@ -6499,7 +6499,7 @@ CHAIN X3VieJ Story1.8
 EXTERN X3VieJ Story1.9
 
 CHAIN X3VieJ Story1.7
-~I have thought this on somedays. But at worst, I may have only taken more lives in cost of that freedom, and brought only more shame. If they were humans, perhaps. But they were kin, family.~
+~I have thought this on some days. But at worst, I may have only taken more lives in cost of that freedom, and brought only more shame. If they were humans, perhaps. But they were kin, family.~
 EXTERN X3VieJ Story1.9
 
 CHAIN X3VieJ Story1.5 
@@ -6512,8 +6512,8 @@ EXTERN X3VieJ Story1.4
 
 CHAIN X3VieJ Story2 
 ~I suppose I could tell you a little more of what I spoke of before, the plane of Shadow.~
-= ~I could have tried to escape, you see, and stayed on Evermeet. When I first landed, the prison ship leaving me on this foreign soil with only my clothes and enough to perhaps afford a tenday's worth of rent in a tavern, I fell to that temptation, to try to return via shadowplane.~
-= ~I had wondered why our enemies never used such a path to get there when I began, as it seemed so simple and briliant, and then I understood.~
+= ~I could have tried to escape, you see, and stayed on Evermeet. When I first landed, the prison ship leaving me on this foreign soil with only my clothes and enough to perhaps afford a tenday's worth of rent in a tavern, I fell to that temptation, to try to return via Shadowplane.~
+= ~I had wondered why our enemies never used such a path to get there when I began, as it seemed so simple and brilliant, and then I understood.~
 END 
 ++ ~You were going to risk breaking your own exile?~ + Story2.1 
 ++ ~What did you come to find out?~ + Story2.2 
@@ -6531,7 +6531,7 @@ CHAIN X3VieJ Story2.2
 ~When I stepped into the plane of shadow, I saw the coast as a twisted version of the coast I had just seen. Often it is a reflection of what the land you were just in was, sometimes older. Time moves slower in the Shadowplane. You could be lost for years and return only to find a few months have passed.~
 = ~It is why I am able to move so quickly to an enemy in battle: the differences in time give me an enormous advantage of placement. It is all just about remembering where to go, since they are not in the shadow plane themselves.~
 = ~There were hideous monsters, canines that looked like worgs, flaming horses that you might call nightmares, and skull helmed warriors marching across into some distant forest.~
-= ~A few of these dog-like creatures had picked up on my presence. Perhaps they had sensed my fear or unease, but they were slowly trecking my direction. And if you cannot make out shades and shadows in the shadowplane, you are easy prey.~
+= ~A few of these dog-like creatures had picked up on my presence. Perhaps they had sensed my fear or unease, but they were slowly trekking my direction. And if you cannot make out shades and shadows in the Shadowplane, you are easy prey.~
 END 
 ++ ~What did you do?~ + Story2.5
 ++ ~You were afraid?~ + Story2.4 
@@ -6543,7 +6543,7 @@ EXTERN X3VieJ Story2.5
 
 CHAIN X3VIeJ Story2.5
 ~Yes. As soon as I saw one of the canines leap, I left. I could still see a bit of blood from a defensive thrust of my dagger drip from the blade. I was still new to my shadow magic powers then...it was a reminder that I had so much more to learn.~
-= ~I never tried to return to evermeet again. My only choice was to continue on this land.~
+= ~I never tried to return to Evermeet again. My only choice was to continue on this land.~
 END 
 ++ ~That's what it is for all of us here.~ + Story2.6
 ++ ~What was your first bit of travels like on the mainland?~ + Story2.7
@@ -6567,7 +6567,7 @@ CHAIN X3VieJ Story3
 = ~I told you I had about a tenday's worth of income to live on. That quickly ran out once I got to the nearest town. I wasn't stupid, but even if I budgeted it, I would need to find work quickly.~
 = ~Unfortunately I had no luck finding work. The innkeeper found me unsuitable for some reason, and any other human I asked told me to go away. I could barely bear asking them at all.~
 END 
-++ ~Somehow I'm not suprised.~ + Story3.1 
+++ ~Somehow I'm not surprised.~ + Story3.1 
 ++ ~I am guessing you were rude to them.~ + Story3.1 
 ++ ~What did you do for money, then?~ + Story3.2 
 
@@ -6578,9 +6578,9 @@ EXTERN X3VieJ Story3.2
 CHAIN X3VieJ Story3.2 
 ~With employment not an option, I resorted to stealing. And the prime option was a church of Red Knight, where sodliers or common people throw their wealth praying that their plans go well.~
 END 
-++ ~You stole from a church? Suprising.~ + Story3.3 
+++ ~You stole from a church? Surprising.~ + Story3.3 
 ++ ~That is a good place for a theft.~ + Story3.4
-++ ~Were you succesful?~ + Story3.5
+++ ~Were you successful?~ + Story3.5
 
 CHAIN X3VieJ Story3.3 
 ~I was desperate, and I did not want to starve. Do not judge me.~
@@ -6812,7 +6812,7 @@ CHAIN X3VieJ advice2.1
 EXTERN X3VieJ advice2.3 
 
 CHAIN X3VieJ advice2.2 
-~I would hope you would. My advice I imagine, is golden. I have robbed quite fine and not been caught. It is only other people arguing with me that ever gets me in jail, hrmph.~
+~I would hope you would. My advice I imagine, is golden. I have robbed quite fine and not been caught. It is only other people arguing with me that ever gets me in jail.~
 EXTERN X3VieJ advice2.3 
 
 CHAIN X3VieJ advice2.3
@@ -6886,7 +6886,7 @@ CHAIN X3VieJ advice4.3
 EXTERN X3VieJ RestLate 
 
 CHAIN X3VieJ advice6
-~We help my people. Even if they seem untrusting of us, it is for good reason.~
+~We help my people. Even if they seem distrusting of us, it is for good reason.~
 END 
 ++ ~They aren't really your people though.~ + advice6.1
 ++ ~My target is Irenicus. They are wasting my time.~ + advice6.2
@@ -7003,9 +7003,9 @@ CHAIN X3VieJ BathJoin
 ~(You and Vienxay depart together to the inn's baths. The water is steamy and warm when you step in.)~
 = ~This is no Evermeet spring, but it will suffice. Now, let me get you cleaned.~
 END 
-++ ~Oh, I was hoping we would do someting...else.~ + BathJoin.1 
+++ ~Oh, I was hoping we would do something...else.~ + BathJoin.1 
 ++ ~As you wish.~ + BathJoin.2 
-++ ~Vienxay, offering to clean me? Suprising.~ + BathJoin.3
+++ ~Vienxay, offering to clean me? Surprising.~ + BathJoin.3
 
 CHAIN X3VieJ BathJoin.1 
 ~Not with that adventuring funk on you.~
@@ -7018,7 +7018,7 @@ IF ~Gender(Player1,MALE)~ EXTERN X3VieJ BathJoin.4M
 IF ~!Gender(Player1,MALE)~ EXTERN X3VieJ BathJoin.4F 
 
 CHAIN X3VieJ BathJoin.3
-~I am full of delights and suprises. How lucky you are.~
+~I am full of delights and surprises. How lucky you are.~
 EXTERN X3VieJ BathJoin.2
 
 CHAIN X3VieJ BathJoin.4M
@@ -7082,7 +7082,7 @@ EXIT
 
 CHAIN X3VieJ Snuggle3 
 ~(You think you see her lips curve into a smile as she feels your body around hers.)~
-= ~Ugh, you are sickingly sweet. But I love you, <CHARNAME>. Dream well.~
+= ~Ugh, you are sickeningly sweet. But I love you, <CHARNAME>. Dream well.~
 DO ~SetGlobal("X3RestActivated","GLOBAL",0)RestParty()~
 EXIT 
 
@@ -7131,7 +7131,7 @@ END
 ++ ~I'm a bit tired, I'll leave you to your fun.~ + RestExit 
 
 CHAIN X3VieJ KissLance 
-~Desiring my attention, I see? You can have a peck...mmm. Now, unless you have something else, I need to beat the only mind as good as mine: My own.~
+~Desiring my attention, I see? You can have a peck...Mmm. Now, unless you have something else, I need to beat the only mind as good as mine: My own.~
 END 
 ++ ~Do you have time to talk?~ + Talks 
 +~Global("X3Activity","LOCALS",0)~+ ~I could play against you, if you like.~ + Activity
@@ -7146,7 +7146,7 @@ END
 ++ ~(Play defensively.)~ + Activity.2
 
 CHAIN X3VieJ Activity.1 
-~(You set your pieces in an aggreve motion, trying to set up threats to Vienxay's as soon as you can.)~
+~(You set your pieces in an aggressive motion, trying to set up threats to Vienxay's as soon as you can.)~
 END 
 IF ~CheckStatLT(Player1,13,INT)~ EXTERN X3VieJ LoseDefensive
 IF ~RandomNum(2,1)CheckStat(Player1,13,INT)~ EXTERN X3VieJ LoseDefensive
@@ -7214,11 +7214,11 @@ CHAIN X3VieJ LoseG2L
 EXTERN X3VieJ Lose5 
 
 CHAIN X3VieJ LoseAT 
-~(Riskily ignoring the threat on the otherside, Vienxay has you checkmated suddenly, and wins.)~
+~(Riskily ignoring the threat on the other side, Vienxay has you checkmated suddenly, and wins.)~
 EXTERN X3VieJ Lose4
 
 CHAIN X3VieJ Win 
-~(Your gambit is succesful, and Vienxay's King is shortly after checkmated.)~
+~(Your gambit is successful, and Vienxay's King is shortly after checkmated.)~
 = ~Ugh! Impossible. I...miscalculated somewhere. This game infuriates me!~
 END 
 ++ ~What do you have to say now, hmm?~ + Win2
@@ -7308,7 +7308,7 @@ END
 ++ ~I'm a bit tired, I'll leave you to your fun.~ + RestExit 
 
 CHAIN X3VieJ Lose6
-~Of course. Such games are great exercises for a mage. I got into them as I traveled away from Evermeet. It was a way to make money, I found. But nevermind that.~
+~Of course. Such games are great exercises for a mage. I got into them as I traveled away from Evermeet. It was a way to make money, I found. But Never mind that.~
 END 
 ++ ~Do you still have time to talk?~ + Talks 
 +~Global("X3Compliment","LOCALS",0)OR(2)Global("X3VieRomanceActive","GLOBAL",2)Global("X3VieRomanceActive","GLOBAL",1)~+  ~Have I told you how attractive you are?~ DO ~SetGlobal("X3Compliment","LOCALS",1)~ + compliment
@@ -7416,7 +7416,7 @@ END
 
 //ToB 
 CHAIN X3Vie25J Inn
-~(You find Vienxay in a bedroom, tearing her eyes away from her spellbook at your approach.)~
+~(You find Vienxay in a bedroom, tearing her eyes away from her spell book at your approach.)~
 == X3Vie25J IF ~AreaCheck("AR5003")~ THEN ~This is the worst inn ever. Poor choice of place for rest.~
 == X3Vie25J IF ~!AreaCheck("AR5003")~ THEN ~So many spells. And so many more out there still to grasp.~
 END 
@@ -7499,7 +7499,7 @@ CHAIN X3Vie25J Story1.8
 EXTERN X3Vie25J Story1.5
 
 CHAIN X3Vie25J Story1.7
-~I have thought this on somedays. But at worst, I may have only taken more lives in cost of that freedom, and brought only more shame. If they were humans, perhaps. But they were kin, family.~
+~I have thought this on some days. But at worst, I may have only taken more lives in cost of that freedom, and brought only more shame. If they were humans, perhaps. But they were kin, family.~
 EXTERN X3Vie25J Story1.5
 
 CHAIN X3Vie25J Story1.5 
@@ -7512,8 +7512,8 @@ EXTERN X3Vie25J Story1.4
 
 CHAIN X3Vie25J Story2 
 ~I suppose I could tell you a little more of what I spoke of before, the plane of Shadow.~
-= ~I could have tried to escape, you see, and stayed on Evermeet. When I first landed, the prison ship leaving me on this foreign soil with only my clothes and enough to perhaps afford a tenday's worth of rent in a tavern, I fell to that temptation, to try to return via shadowplane.~
-= ~I had wondered why our enemies never used such a path to get there when I began, as it seemed so simple and briliant, and then I understood.~
+= ~I could have tried to escape, you see, and stayed on Evermeet. When I first landed, the prison ship leaving me on this foreign soil with only my clothes and enough to perhaps afford a tenday's worth of rent in a tavern, I fell to that temptation, to try to return via Shadowplane.~
+= ~I had wondered why our enemies never used such a path to get there when I began, as it seemed so simple and brilliant, and then I understood.~
 END 
 ++ ~You were going to risk breaking your own exile?~ + Story2.1 
 ++ ~What did you come to find out?~ + Story2.2 
@@ -7531,19 +7531,19 @@ CHAIN X3Vie25J Story2.2
 ~When I stepped into the plane of shadow, I saw the coast as a twisted version of the coast I had just seen. Often it is a reflection of what the land you were just in was, sometimes older. Time moves slower in the Shadowplane. You could be lost for years and return only to find a few months have passed.~
 = ~It is why I am able to move so quickly to an enemy in battle: the differences in time give me an enormous advantage of placement. It is all just about remembering where to go, since they are not in the shadow plane themselves.~
 = ~There were hideous monsters, canines that looked like worgs, flaming horses that you might call nightmares, and skull helmed warriors marching across into some distant forest.~
-= ~A few of these dog-like creatures had picked up on my presence. Perhaps they had sensed my fear or unease, but they were slowly trecking my direction. And if you cannot make out shades and shadows in the shadowplane, you are easy prey.~
+= ~A few of these dog-like creatures had picked up on my presence. Perhaps they had sensed my fear or unease, but they were slowly trekking my direction. And if you cannot make out shades and shadows in the Shadowplane, you are easy prey.~
 END 
 ++ ~What did you do?~ + Story2.5
 ++ ~You were afraid?~ + Story2.4 
 ++ ~I'm guessing you abandoned your plan?~ + Story2.5
 
 CHAIN X3Vie25J Story2.4 
-~Yes. Understandbly, who wouldn't? I had no idea the land looked like this here. I left...and kept my visits extremely brief since.~
+~Yes. Understandably, who wouldn't? I had no idea the land looked like this here. I left...and kept my visits extremely brief since.~
 EXTERN X3Vie25J Story2.5 
 
 CHAIN X3Vie25J Story2.5
 ~Yes. As soon as I saw one of the canines leap, I left. I could still see a bit of blood from a defensive thrust of my dagger drip from the blade. I was still new to my shadow magic powers then...it was a reminder that I had so much more to learn.~
-= ~I never tried to return to evermeet again. My only choice was to continue on this land.~
+= ~I never tried to return to Evermeet again. My only choice was to continue on this land.~
 END 
 ++ ~That's what it is for all of us here.~ + Story2.6
 ++ ~What was your first bit of travels like on the mainland?~ + Story2.7
@@ -7567,7 +7567,7 @@ CHAIN X3Vie25J Story3
 = ~I told you I had about a tenday's worth of income to live on. That quickly ran out once I got to the nearest town. I wasn't stupid, but even if I budgeted it, I would need to find work quickly.~
 = ~Unfortunately I had no luck finding work. The innkeeper found me unsuitable for some reason, and any other human I asked told me to go away. I could barely bear asking them at all.~
 END 
-++ ~Somehow I'm not suprised.~ + Story3.1 
+++ ~Somehow I'm not surprised.~ + Story3.1 
 ++ ~I am guessing you were rude to them.~ + Story3.1 
 ++ ~What did you do for money, then?~ + Story3.2 
 
@@ -7576,11 +7576,11 @@ CHAIN X3Vie25J Story3.1
 EXTERN X3Vie25J Story3.2 
 
 CHAIN X3Vie25J Story3.2 
-~With employment not an option, I resorted to stealing. And the prime option was a church of Red Knight, where sodliers or common people throw their wealth praying that their plans go well.~
+~With employment not an option, I resorted to stealing. And the prime option was a church of Red Knight, where soldiers or common people throw their wealth praying that their plans go well.~
 END 
 ++ ~You stole from a church? How could you?~ + Story3.3 
 ++ ~That is a good place for a theft.~ + Story3.4
-++ ~Were you succesful?~ + Story3.5
+++ ~Were you successful?~ + Story3.5
 
 CHAIN X3Vie25J Story3.3 
 ~I was desperate, and I did not want to starve. Do not judge me.~
@@ -7894,9 +7894,9 @@ CHAIN X3Vie25J BathJoin
 ~(You and Vienxay depart together to the inn's baths. The water is steamy and warm when you step in.)~
 = ~This is no Evermeet spring, but it will suffice. Now, let me get you cleaned.~
 END 
-++ ~Oh, I was hoping we would do someting...else.~ + BathJoin.1 
+++ ~Oh, I was hoping we would do something...else.~ + BathJoin.1 
 ++ ~As you wish.~ + BathJoin.2 
-++ ~Vienxay, offering to clean me? Suprising.~ + BathJoin.3
+++ ~Vienxay, offering to clean me? Surprising.~ + BathJoin.3
 
 CHAIN X3Vie25J BathJoin.1 
 ~Not with that adventuring funk on you.~
@@ -7909,7 +7909,7 @@ IF ~Gender(Player1,MALE)~ EXTERN X3Vie25J BathJoin.4M
 IF ~!Gender(Player1,MALE)~ EXTERN X3Vie25J BathJoin.4F 
 
 CHAIN X3Vie25J BathJoin.3
-~I am full of delights and suprises. How lucky you are.~
+~I am full of delights and surprises. How lucky you are.~
 EXTERN X3Vie25J BathJoin.2
 
 CHAIN X3Vie25J BathJoin.4M
@@ -7973,7 +7973,7 @@ EXIT
 
 CHAIN X3Vie25J Snuggle3 
 ~(You think you see her lips curve into a smile as she feels your body around hers.)~
-= ~Ugh, you are sickingly sweet. But I love you, <CHARNAME>. Dream well.~
+= ~Ugh, you are sickeningly sweet. But I love you, <CHARNAME>. Dream well.~
 DO ~SetGlobal("X3RestActivated","GLOBAL",0)RestParty()~
 EXIT 
 
