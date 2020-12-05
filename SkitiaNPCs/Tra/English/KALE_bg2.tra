@@ -7,9 +7,9 @@ She also suggested checking the store that sold them in the Bridge District.~
 @5 = ~With a suspect having been killed, Jillian will no longer be able to investigate what happened to Percy's father. There is nothing more we can accomplish digging into Percy's death.~
 @6 = ~Jillian is dead, and any work on the investigation into Percy's death dies with her.~ 
 @7 = ~I've spoken to all the suspects. If I've learned anything new from one, I could speak to another again, or I could give my conclusions on who I believe is guilty to Jillian.~
-@8 = ~We've accused Dallie of murdering Percy and she's been taken in by Jillian. We can meet Jillian again in a day at the Garrision to see if our accusation was accurate.~
-@9 = ~We've accused Martin of murdering Percy and he's been taken in by Jillian. We can meet Jillian again in a day at the Garrision to see if our accusation was accurate.~
-@10 = ~We've accused Flora of murdering Percy and she's been taken in by Jillian. We can meet Jillian again in a day at the Garrision to see if our accusation was accurate.~
+@8 = ~We've accused Dallie of murdering Percy and she's been taken in by Jillian. We can meet Jillian again in a day at the garrison to see if our accusation was accurate.~
+@9 = ~We've accused Martin of murdering Percy and he's been taken in by Jillian. We can meet Jillian again in a day at the garrison to see if our accusation was accurate.~
+@10 = ~We've accused Flora of murdering Percy and she's been taken in by Jillian. We can meet Jillian again in a day at the garrison to see if our accusation was accurate.~
 @11 = ~Dallie was determined to be innocent. We did not do our due diligence, and we are unable to investigate further. Whoever killed Kale's father remains at large.~ 
 @12 = ~Martin was determined to be innocent. We did not do our due diligence, and we are unable to investigate further. Whoever killed Kale's father remains at large.~ 
 @13 = ~Flora was determined to be innocent. We did not do our due diligence, and we are unable to investigate further. Whoever killed Kale's father remains at large.~ 
@@ -18,7 +18,7 @@ We need to track Chester down, and either turn him in to Jillian, or execute his
 @15 = ~It appears Bryce was in league with Chester after all. Once Bryce is out of the way, we should confront Chester and decide his fate.~
 @16 = ~We decided to take Chester's life for his drugging and killing of Percy and other halflings. All that remains is returning to Jillian and letting her know his fate.~
 @17 = ~Jillian wasn't overly happy with Chester being killed, and it appears that she would have preferred he had been turned in alive. Still, the city is safer for the halfling people for it, and she was thankful for that.~
-@18 = ~Jillian was pleased when we came back to the garrision with Chester in tow. Perhaps in a city full of thieves and other evils, justice can have its moments.~
+@18 = ~Jillian was pleased when we came back to the garrison with Chester in tow. Perhaps in a city full of thieves and other evils, justice can have its moments.~
 
 @31 = ~The Final Battle with Bodhi.
 
@@ -34,7 +34,7 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
   and begin his favorite legend of husband, father, and exaggerative story-teller. He passed at an old age, his grave marked with his name graced with a title from his greatest tale: Kale the Dragonslapper, immortalizing his mythical tall tale for all time.~
 
 @52 = ~Kale was not quite ready to put down his adventuring days even from his deep taste under <CHARNAME>'s shadow. When Mazzy formed the Fentan Knights, he was the first of its members, battling monsters across the realms while persistently chasing his leader's heart. Perhaps his greatest feat was leaping atop a rogue dragon its lair, and bringing his tall-tale of life and slapping it in the eye.
- He nearly lost his life, but mad luck and his party's strong stand won the day. It was this courage that would finally see him become Kale Fentan, although his wife fervently disagrees it was formed from only a single moment. Even out of truth it seems, Kale continues to spin his own myths into his legend. He lived in a happy, adventerous marriage for the rest of his life, his tales forever immortalized in the songs and tales told from bards. With slight exaggerations, of course, for all agreed
+ He nearly lost his life, but mad luck and his party's strong stand won the day. It was this courage that would finally see him become Kale Fentan, although his wife fervently disagrees it was formed from only a single moment. Even out of truth it seems, Kale continues to spin his own myths into his legend. He lived in a happy, adventurous marriage for the rest of his life, his tales forever immortalized in the songs and tales told from bards. With slight exaggerations, of course, for all agreed
  the story of Kale could be told no other way.~
  
 @53 = ~Kale and <CHARNAME> continued adventuring until their recognized and well told of everywhere where they went. So renown were they that their targets would flee and surrender before they even arrived to deal with them, or so Kale would say when asked. Eventually however, the yearning of home took Kale, and he and <CHARNAME> made the journey to Gullykin, where everyone from his community stepped out to greet the heroes of legend.
@@ -48,33 +48,33 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 
 @99 = ~^0xFFFF00FFYou have established a deep bond with Kale. Your synergy has improved his capabilities.^-~
 
-@103 = ~^REmily slightly dissaproves.^-~
-@106 = ~^REmily dissaproves.^-~
-@109 = ~^REmily greatly dissaproves.^-~
+@103 = ~^REmily slightly disapproves.^-~
+@106 = ~^REmily disapproves.^-~
+@109 = ~^REmily greatly disapproves.^-~
 @113 = ~^GEmily slightly approves^-~
 @116 = ~^GEmily approves^-~
 @119 = ~^GEmily greatly approves^-~
-@203 = ~^RHelga slightly dissaproves.^-~
-@206 = ~^RHelga dissaproves.^-~
-@209 = ~^RHelga greatly dissaproves.^-~
+@203 = ~^RHelga slightly disapproves.^-~
+@206 = ~^RHelga disapproves.^-~
+@209 = ~^RHelga greatly disapproves.^-~
 @213 = ~^GHelga slightly approves^-~
 @216 = ~^GHelga approves^-~
 @219 = ~^GHelga greatly approves^-~
-@303 = ~^RKale slightly dissaproves.^-~
-@306 = ~^RKale dissaproves.^-~
-@309 = ~^RKale greatly dissaproves.^-~
+@303 = ~^RKale slightly disapproves.^-~
+@306 = ~^RKale disapproves.^-~
+@309 = ~^RKale greatly disapproves.^-~
 @313 = ~^GKale slightly approves^-~
 @316 = ~^GKale approves^-~
 @319 = ~^GKale greatly approves^-~
-@403 = ~^RRecorder slightly dissaproves.^-~
-@406 = ~^RRecorder dissaproves.^-~
-@409 = ~^RRecorder greatly dissaproves.^-~
+@403 = ~^RRecorder slightly disapproves.^-~
+@406 = ~^RRecorder disapproves.^-~
+@409 = ~^RRecorder greatly disapproves.^-~
 @413 = ~^GRecorder slightly approves^-~
 @416 = ~^GRecorder approves^-~
 @419 = ~^GRecorder greatly approves^-~
-@503 = ~^RVienxay slightly dissaproves.^-~
-@506 = ~^RVienxay dissaproves.^-~
-@509 = ~^RVienxay greatly dissaproves.^-~
+@503 = ~^RVienxay slightly disapproves.^-~
+@506 = ~^RVienxay disapproves.^-~
+@509 = ~^RVienxay greatly disapproves.^-~
 @513 = ~^GVienxay slightly approves^-~
 @516 = ~^GVienxay approves^-~
 @519 = ~^GVienxay greatly approves^-~
