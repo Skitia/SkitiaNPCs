@@ -62,14 +62,14 @@ ADD_KIT ~X3VSM~
   SAY ~shadowmage~
   SAY ~Shadowmage~
   SAY ~SHADOWMAGE: Shadowmages are mage-thieves that can draw both on shadow magic and the weave, with the cunning and stealth of the shadowdancer and the mage's arsenal of spells.
-  While shadow magic is not the same as the shadow weave, many are drawn to it and can learn to use it. It's dark magic gives it poor public opinion, and most of its practicioners are non-good.
+  While shadow magic is not the same as the shadow weave, many are drawn to it and can learn to use it. It's dark magic gives it poor public opinion, and most of its practitioners are non-good.
   
 Advantages: 
 - + 15% Bonus to Hide in Shadows and Move Silently
 - Slippery Mind: +1 bonus to saving throws
 - May cast Shadow Jump once per day. Gains one use at thief level 5 and an additional use every 5 levels thereafter.
 
-SHADOW JUMP: Manipulating shadow, the shadowmage teleports to the selected living creature, be it ally or enemy, unseen as per the invisiblity spell. For the next twelve seconds, they gain +2 to their backstab modifier and remain unseen until they make an attack.
+SHADOW JUMP: Manipulating shadow, the shadowmage teleports to the selected living creature, be it ally or enemy, unseen as per the invisibility spell. For the next twelve seconds, they gain +2 to their backstab modifier and remain unseen until they make an attack.
 
 Disadvantages: 
 - Alignment restricted to any non-lawful and non-good

@@ -24,7 +24,7 @@ COPY ~%MOD_FOLDER%/Cre/X3Emi.cre~ ~override/X3Emi.cre~
   WRITE_ASCII 0x2cc ~X3Emi~ #8   //pre-joining dialogue file
   WRITE_ASCII 0X34 ~X3EmiM~ #8   //small portrait
   WRITE_ASCII 0x3c ~X3EmiL~ #8   //medium portrait
-  SAY BIO ~"I'm game for sharing." Emily would quip when you ask about her past, before eagerly launching into details of her childhood. She grew up on her father's estate southeast of Borst in the lands of Tethyr, where she stayedoften in seclusion, hiding her visibly elven features with tricks of the hair or hat wear at her parent's insistence, though this did nothing to hide the golden eyes of her lesser understood aasimar heritage. Still, her father was determined to let few suspect she was not the product of his wife, which resulted in loneliness and very few friends. Finding the isolation frustrating, she talks of late night sneak outs, watching the estate guards in their archery practice or escaping the lands entirely, often into trouble and earning herself a stern lecture from the guard captain or her father. She was born to do good, and she won't ignore the weight of her heritage, even at the cost of noble opinion, house politics or a concerned father.~
+  SAY BIO ~"I'm game for sharing." Emily would quip when you ask about her past, before eagerly launching into details of her childhood. She grew up on her father's estate southeast of Brost in the lands of Tethyr, where she stayed often in seclusion, hiding her visibly elven features with tricks of the hair or hat wear at her parent's insistence, though this did nothing to hide the golden eyes of her lesser understood aasimar heritage. Still, her father was determined to let few suspect she was not the product of his wife, which resulted in loneliness and very few friends. Finding the isolation frustrating, she talks of late night sneak outs, watching the estate guards in their archery practice or escaping the lands entirely, often into trouble and earning herself a stern lecture from the guard captain or her father. She was born to do good, and she won't ignore the weight of her heritage, even at the cost of noble opinion, house politics or a concerned father.~
   SAY MORALE ~We've got to get out of here.~ [Emilfear]
   SAY HAPPY ~It appears the tales told of your heroism are quite justified.~ [Emilhap]
   SAY UNHAPPY_ANNOYED ~I don't approve of our direction.~ []
@@ -38,7 +38,7 @@ COPY ~%MOD_FOLDER%/Cre/X3Emi.cre~ ~override/X3Emi.cre~
   SAY BATTLE_CRY3 ~Down you go!~ [Emilb2]
   SAY BATTLE_CRY4 ~You're in for it now!~ [Emilb3]
   SAY BATTLE_CRY5 ~You'll not be the first to regret crossing me.~ [Emilb4]
-  SAY DAMAGE ~Agh~ [Emildama]
+  SAY DAMAGE ~~ [Emildama]
   SAY DYING ~Not like this...~ [Emildie]
   SAY HURT ~Damn, I need some healing!~ [Emilhurt]
   SAY AREA_FOREST ~Hmm, I should have picked up some new boots.~ [Emilfor]
@@ -81,7 +81,7 @@ COPY ~%MOD_FOLDER%/Cre/X3Emi.cre~ ~override/X3Emi.cre~
   WRITE_ASCII 0x2cc ~X3Emi25~ #8   //pre-joining dialogue file
   WRITE_ASCII 0X34 ~X3EmiM~ #8   //small portrait
   WRITE_ASCII 0x3c ~X3EmiL~ #8   //medium portrait
-  SAY BIO ~"I'm game for sharing." Emily would quip when you ask about her past, before eagerly launching into details of her childhood. She grew up on her father's estate southeast of Borst in the lands of Tethyr, where she stayedoften in seclusion, hiding her visibly elven features with tricks of the hair or hat wear at her parent's insistence, though this did nothing to hide the golden eyes of her lesser understood aasimar heritage. Still, her father was determined to let few suspect she was not the product of his wife, which resulted in loneliness and very few friends. Finding the isolation frustrating, she talks of late night sneak outs, watching the estate guards in their archery practice or escaping the lands entirely, often into trouble and earning herself a stern lecture from the guard captain or her father. She was born to do good, and she won't ignore the weight of her heritage, even at the cost of noble opinion, house politics or a concerned father.~
+  SAY BIO ~"I'm game for sharing." Emily would quip when you ask about her past, before eagerly launching into details of her childhood. She grew up on her father's estate southeast of Brost in the lands of Tethyr, where she stayed often in seclusion, hiding her visibly elven features with tricks of the hair or hat wear at her parent's insistence, though this did nothing to hide the golden eyes of her lesser understood aasimar heritage. Still, her father was determined to let few suspect she was not the product of his wife, which resulted in loneliness and very few friends. Finding the isolation frustrating, she talks of late night sneak outs, watching the estate guards in their archery practice or escaping the lands entirely, often into trouble and earning herself a stern lecture from the guard captain or her father. She was born to do good, and she won't ignore the weight of her heritage, even at the cost of noble opinion, house politics or a concerned father.~
   SAY MORALE ~We've got to get out of here.~ [Emilfear]
   SAY HAPPY ~It appears the tales told of your heroism are quite justified.~ [Emilhap]
   SAY UNHAPPY_ANNOYED ~I don't approve of our direction.~ []
@@ -95,7 +95,7 @@ COPY ~%MOD_FOLDER%/Cre/X3Emi.cre~ ~override/X3Emi.cre~
   SAY BATTLE_CRY3 ~Down you go!~ [Emilb2]
   SAY BATTLE_CRY4 ~You're in for it now!~ [Emilb3]
   SAY BATTLE_CRY5 ~You'll not be the first to regret crossing me.~ [Emilb4]
-  SAY DAMAGE ~Agh~ [Emildama]
+  SAY DAMAGE ~~ [Emildama]
   SAY DYING ~Not like this...~ [Emildie]
   SAY HURT ~Damn, I need some healing!~ [Emilhurt]
   SAY AREA_FOREST ~Hmm, I should have picked up some new boots.~ [Emilfor]
@@ -280,7 +280,7 @@ Weight: 0~
  COPY_EXISTING ~%MOD_FOLDER%/Items/x3EBolt3.itm~ ~override/x3EBolt3.itm~
 SAY NAME1 ~Enchanted Bolt III~
 SAY NAME2 ~Enchanted Bolt III~
-SAY DESC ~This Bolt fletched by Emily is a heavily enchanted bolt, fast, light, and precise. It strikes with the enchantment of four different elements, and its Bolthead splinters upon contact, possibly slowing its target. 
+SAY DESC ~This Bolt fletched by Emily is a heavily enchanted bolt, fast, light, and precise. It strikes with the enchantment of four different elements, and its head splinters upon contact, possibly slowing its target. 
 
 STATISTICS:
 

@@ -36,7 +36,7 @@ ADD_KIT ~X3cleric~
 	~* * * * * * * * * * * * * * * * * * *  *~
 	SAY ~Priest of Haela~
 	SAY ~Priest of Haela~
-	SAY ~PRIEST OF HAELA: Renown amongst the dwarves for their risk-taking, berserker tendencies, clerics of Haela Brightaxe are loved and feared for their fury when they enter the fray, able to shrug off and deliver dangerous strikes. Most are female, called Kaxanar, or blood maidens, and their name is very much earned in their pleasure in seeking out battle wherever it may be. 
+	SAY ~PRIEST OF HAELA: Renown among the dwarves for their risk-taking, berserker tendencies, clerics of Haela Brightaxe are loved and feared for their fury when they enter the fray, able to shrug off and deliver dangerous strikes. Most are female, called Kaxanar, or blood maidens, and their name is very much earned in their pleasure in seeking out battle wherever it may be. 
 
 Advantages: 
 
@@ -105,7 +105,7 @@ COPY ~%MOD_FOLDER%/Cre/X3Hel.cre~ ~override/X3Hel.cre~
   SAY HAPPY ~I knew this would go well!~ [X3HeHap] //
   SAY UNHAPPY_ANNOYED ~This better be a minor setback.~
   SAY UNHAPPY_SERIOUS ~My patience is running thin with yer constant evil. Do you want to be enemies?~
-  SAY UNHAPPY_BREAKING_POINT ~Our parternship has ended. I'll not give Haela's gifts to ye a second longer.~
+  SAY UNHAPPY_BREAKING_POINT ~Our partnership has ended. I'll not give Haela's gifts to ye a second longer.~
   SAY LEADER ~Follow me closely, now.~ [X3HeLead]  //
   SAY TIRED ~I believe we should rest soon.~ [X3HeRest]  //
   SAY BORED ~I don't see what we're accomplishing, sitting around like this.~ [X3HeBore] //
@@ -162,7 +162,7 @@ COPY ~%MOD_FOLDER%/Cre/X3Hel.cre~ ~override/X3Hel.cre~
   SAY HAPPY ~I knew this would go well!~ [X3HeHap] //
   SAY UNHAPPY_ANNOYED ~This better be a minor setback.~
   SAY UNHAPPY_SERIOUS ~My patience is running thin with yer constant evil. Do you want to be enemies?~
-  SAY UNHAPPY_BREAKING_POINT ~Our parternship has ended. I'll not give Haela's gifts to ye a second longer.~
+  SAY UNHAPPY_BREAKING_POINT ~Our partnership has ended. I'll not give Haela's gifts to ye a second longer.~
   SAY LEADER ~Follow me closely, now.~ [X3HeLead]  //
   SAY TIRED ~I believe we should rest soon.~ [X3HeRest]  //
   SAY BORED ~I don't see what we're accomplishing, sitting around like this.~ [X3HeBore] //
@@ -302,9 +302,9 @@ SAY NAME1 ~Potion of Bodily Health~
 SAY NAME2 ~Potion of Bodily Health~
 SAY DESC ~Sought out by many a warrior, very few apothecaries are capable of making potions that improve the health and body of a person, and those who do keep it very secretive and sell it to only select clients.
 
-It is quite often that a less than sincere adventure will attempt to steal or even murder the maker to get their hands on these. The potion is rumoured to take years to craft from all sorts of rare ingredients and herbs, though the recipe remains unknown.
+It is quite often that a less than sincere adventure will attempt to steal or even murder the maker to get their hands on these. The potion is rumored to take years to craft from all sorts of rare ingredients and herbs, though the recipe remains unknown.
 
-When ingested, the potion permamently raises the constitution of the drinker by one.
+When ingested, the potion permanently raises the constitution of the drinker by one.
 
 STATISTICS:
 
@@ -314,9 +314,9 @@ Weight: 1~
 COPY_EXISTING ~%MOD_FOLDER%/Items/X3HPW.itm~ ~override/X3HPW.itm~
 SAY NAME1 ~Potion of Understanding~
 SAY NAME2 ~Potion of Understanding~
-SAY DESC ~The Temple of Ilmater one year was said to receive a raving mad man found in a burnt home into their care that could only repeat the same sentence of doom. Sensing their mind was addled, they requested and comission a potion brewer for a solution.
+SAY DESC ~The Temple of Ilmater one year was said to receive a raving mad man found in a burnt home into their care that could only repeat the same sentence of doom. Sensing their mind was addled, they requested and commissioned a potion brewer for a solution.
 
-This potion was said to be the creation, permamently raising the wisdom of the drinker by one. Unfortunately, when the mad man drank the potion, he was such in grief with his new understanding that he took his own life. Presumably, he had accidentally burned alive his own family.
+This potion was said to be the creation, permanently raising the wisdom of the drinker by one. Unfortunately, when the mad man drank the potion, he was such in grief with his new understanding that he took his own life. Presumably, he had accidentally burned alive his own family.
 
 STATISTICS:
 
