@@ -89,7 +89,7 @@ IsValidForPartyDialogue("X3Hel")
 See("YxYve")
 Global("X3EmiYxYveToB","GLOBAL",0)~ THEN BX3Emi25 X3EmiYvetteTob
 ~Gods, I can't help but want to just keep my memories of Tethyr pure. The little cries from the market or bustling of shoppers passing by store to store. It was happy. And lively. And...as it should be.~ [X3Blank]
-DO ~Global("X3EmiYxYveToB","GLOBAL",1)~
+DO ~SetGlobal("X3EmiYxYveToB","GLOBAL",1)~
 == YxYv25B ~Cherish that, Emily. And believe that it will come again. I do not think the beauty of your land will die just because of this crisis.~
 == BX3Emi25 ~Oh, Tethyr isn't the most gorgeous place ever. You also had the drunkard streaking out of a tavern and a couple getting a little too intimate in an alley. Father would always push me along when something weird like that happened.~
 == BX3Emi25 ~Honestly, I almost never got to see the cities. I only have a few memories. I just want to hope that is how things will be, and not changed forever because of these other Bhaalspawn.~
@@ -106,7 +106,7 @@ Global("X3EmiHeir","GLOBAL",1)
 Global("YvetteRomanceActive","GLOBAL",1)
 Global("X3EmiYxYveToB","GLOBAL",1)~ THEN BX3Emi25 X3EmiYvetteTob
 ~I've been thinking Yvette. You don't have a home, do you?~ [X3Blank]
-DO ~Global("X3EmiYxYveToB","GLOBAL",2)~
+DO ~SetGlobal("X3EmiYxYveToB","GLOBAL",2)~
 == YxYv25B ~I do not need one, Lady Emily. My home is where <CHARNAME> is.~
 == BX3Emi25 ~Aww, that is romantic. But still, lovers need a roof. And I could give you one, there's plenty of space in the estate back in Tethyr until you know what you want to do.~
 == YxYv25B ~That's very kind of you Lady Emily, but-~
@@ -125,7 +125,7 @@ IsValidForPartyDialogue("X3Hel")
 See("X3Hel")
 Global("X3HelYxYve","GLOBAL",0)~ THEN YxYveB X3HelYvette1 
 ~Are you upset, Helga? You seem to be in a foul mood.~ [X3Blank]
-DO ~Global("X3HelYxYve","GLOBAL",1)~
+DO ~SetGlobal("X3HelYxYve","GLOBAL",1)~
 == BX3Hel ~Aye, 'tis these long marches and this blasted leg. There be only one foe a dwarf can nay beat, and that is time.~
 == YxYveB ~I can take a look at it if you like, and heal it for you.~
 == BX3Hel ~Nay. Not everything in the realms can be fixed with blessings or magic, girl. Enjoy the beauty of yer youth while it lasts.~
@@ -139,7 +139,7 @@ IsValidForPartyDialogue("X3Hel")
 See("YxYve")
 Global("X3HelYxYve","GLOBAL",1)~ THEN BX3Hel X3HelYvette2 
 ~I be surprised you fight at all, girl. They nay seem the work of a priestess of your particular faith.~ [X3Blank]
-DO ~Global("X3HelYxYve","GLOBAL",2)~
+DO ~SetGlobal("X3HelYxYve","GLOBAL",2)~
 == YxYveB ~I do not fight, Helga. I protect. I guard all things beautiful.~
 == BX3Hel ~Bah, spare the gibberish for someone who is deceived. These be the same things. Me faith just see it as it is: Battle!~
 == YxYveB ~There is a difference between taking a life and guarding a life.~
@@ -156,7 +156,7 @@ IsValidForPartyDialogue("X3Hel")
 See("YxYve")
 Global("X3HelYxYve","GLOBAL",2)~ THEN BX3Hel X3HelYvette3 
 ~For all of ye posturings as a priestess of love, nay have I heard of ye speak of past loves.~ [X3Blank]
-DO ~Global("X3HelYxYve","GLOBAL",3)~
+DO ~SetGlobal("X3HelYxYve","GLOBAL",3)~
 == YxYveB ~I do not fall in love, easily, Helga.~
 == BX3Hel ~From all the talk of yer folk I heard, that be bloody surprising. I've had children and married before ye did, heh.~
 == YxYveB ~You have a husband? Can you tell me about him?~
@@ -175,7 +175,7 @@ See("YxYve")
 Global("YvetteRomanceActive","GLOBAL",2)
 Global("X3HelYxYve","LOCALS",0)~ THEN BX3Hel X3HelYvetteSpecial 
 ~Ye be taking a risk. With this relationship of yours.~ [X3Blank]
-DO ~Global("X3HelYxYve","LOCALS",1)~
+DO ~SetGlobal("X3HelYxYve","LOCALS",1)~
 == YxYveB ~What are you speaking about, Helga?~
 == Bx3Hel ~<CHARNAME>. They're a Bhaalspawn. Yer a bigger mark than any of us now, and they themselves are in danger.~
 == YxYveB ~I think that is between us, isn't it? And <CHARNAME> can hear us.~
@@ -193,7 +193,7 @@ IsValidForPartyDialogue("X3Hel")
 See("YxYve")
 Global("X3HelYxYveToB","GLOBAL",0)~ THEN BX3Hel25 X3HelYvetteToB
 ~Ye be too thin for yer own bloody good, Yvette.~ [X3Blank]
-DO ~Global("X3HelYxYveToB","GLOBAL",1)~
+DO ~SetGlobal("X3HelYxYveToB","GLOBAL",1)~
 == YxYv25B ~I just do not often feel the urge to eat or the like.~
 == Bx3Hel ~Ye aren't even trying a bite of my cooking. Would make ye strong and the proper girth.~
 == YxYv25B ~I am not a dwarf, Helga. I fear what you view as girth may be too wide.~
@@ -208,7 +208,7 @@ See("X3Hel")
 Global("X3HelToBQuest","GLOBAL",6)
 Global("X3HelYxYveToB","GLOBAL",1)~ THEN YxYv25B X3HelYvetteToBSpecial
 ~Your son, Helga. I am sorry for what happened to him. Are you coping okay?~ [X3Blank]
-DO ~Global("X3HelYxYveToB","GLOBAL",2)~
+DO ~SetGlobal("X3HelYxYveToB","GLOBAL",2)~
 == BX3Hel25 ~Nay be like everyone else. Don't feel sorry for me. And he can nay be brought back. Nay from the wreckage of that damn city would there be a thing to find.~
 == YxYv25B ~If you wish, I could s-~
 == BX3Hel25 ~Nay lass. I know ye got lucky, and ye may think all can be blessed like yer own situation if ye try...but dying...it nay be so bad.~
@@ -294,7 +294,7 @@ IsValidForPartyDialogue("X3Kal")
 See("YxYve")
 Global("X3HelYxYveToB","GLOBAL",0)~ THEN BX3Kal25 X3KalYvetteToB
 ~Damn, this has been fun, eh? Just wait Yvette. Everyone back home for you is going to be jealous of what you have achieved.~ [X3Blank]
-DO ~Global("X3HelYxYveToB","GLOBAL",1)~
+DO ~SetGlobal("X3HelYxYveToB","GLOBAL",1)~
 == YxYv25B ~Memories of my home are... blurry, Mr. Kale.~
 == BX3Kal25 ~Pfft, just Kale. And really? Who are you going to brag about all of our feats too?~
 == YxYv25B ~Oh, I am just happy to try to be making a difference, Kale. And to be alive, and to be by <CHARNAME>'s side.~
@@ -309,7 +309,7 @@ See("X3Kal")
 Global("X3KalMazzyEnd","GLOBAL",1)
 Global("X3HelYxYveToB","GLOBAL",1)~ THEN YxYv25B X3KalYvetteToBSpecial
 ~You keep watching her, with great interest it seems. Is there something wrong?~ [X3Blank]
-DO ~Global("X3HelYxYveToB","GLOBAL",2)~
+DO ~SetGlobal("X3HelYxYveToB","GLOBAL",2)~
 == BX3Kal25 ~Heh, I've watched you the same way.~
 == YxYv25B ~Kale that's a little...~
 == BX3Kal25 ~Hey, it was a joke! Eh, sort of. Anyway...looking at her just reminds me of something I lost.~
