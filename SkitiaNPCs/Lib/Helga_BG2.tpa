@@ -123,7 +123,7 @@ COPY ~%MOD_FOLDER%/Cre/X3Hel.cre~ ~override/X3Hel.cre~
   SAY AREA_DAY ~Isn't it Grand?~[X3HeGran]
   SAY AREA_NIGHT ~The most dangerous battles come in the form of darkness.~ []
   SAY SELECT_COMMON1 ~What now?~ [X3HeCom1] //
-  SAY SELECT_COMMON2 ~Yes? What do ye need?.~ [X3HeCom2] //
+  SAY SELECT_COMMON2 ~Yes? What do ye need?~ [X3HeCom2] //
   SAY SELECT_COMMON3 ~Well met.~ [X3HeCom3]
   SAY SELECT_COMMON4 ~Hmm.~ [X3HeAct7]
   SAY SELECT_COMMON5 ~I have a suggestion.~ [X3HeSug]
@@ -180,7 +180,7 @@ COPY ~%MOD_FOLDER%/Cre/X3Hel.cre~ ~override/X3Hel.cre~
   SAY AREA_DAY ~Isn't it Grand?~[X3HeGran]
   SAY AREA_NIGHT ~The most dangerous battles come in the form of darkness.~ []
   SAY SELECT_COMMON1 ~What now?~ [X3HeCom1] //
-  SAY SELECT_COMMON2 ~Yes? What do ye need?.~ [X3HeCom2] //
+  SAY SELECT_COMMON2 ~Yes? What do ye need?~ [X3HeCom2] //
   SAY SELECT_COMMON3 ~Well met.~ [X3HeCom3]
   SAY SELECT_COMMON4 ~Hmm.~ [X3HeAct7]
   SAY SELECT_COMMON5 ~I have a suggestion.~ [X3HeSug]
