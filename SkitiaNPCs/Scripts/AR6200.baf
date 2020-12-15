@@ -364,7 +364,7 @@ SmallWait(1)
 Continue()
 END
 
-// Recorder Romanced, Vienxay Unexiled, Player is Not Elf 
+// Vienxay Romanced, Vienxay Unexiled, Player is Not Elf 
 
 IF
 Global("StartEndBios","AR6200",1)
@@ -382,7 +382,7 @@ SmallWait(1)
 Continue()
 END
 
-// Recorder Romanced, Vienxay Unexiled, Player is Elf 
+// Vienxay Romanced, Vienxay Unexiled, Player is Elf 
 
 IF
 Global("StartEndBios","AR6200",1)
