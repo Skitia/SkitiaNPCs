@@ -387,7 +387,7 @@ END
 IF
 Global("StartEndBios","AR6200",1)
 InParty("X3Vie")
-!Race(Player1,ELF)
+Race(Player1,ELF)
 Global("X3VieRomanceActive","GLOBAL",2)
 !Global("PlayerChoseEssence","GLOBAL",1)
 Global("X3VEvermeetEnd","GLOBAL",1)
