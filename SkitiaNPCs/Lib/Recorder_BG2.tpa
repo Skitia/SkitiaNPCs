@@ -147,7 +147,7 @@ END
 COPY "%MOD_FOLDER%/Items/X3Rfer.itm" override 
 SAY NAME1 ~Gustav~
 SAY NAME2 ~Gustav~
-SAY DESC ~This ferret appears quite well fed and occasionally pokes its head out of Recorder's pack. When asked how her mother purchased it from the grand markets of Amn, introducing it to her in the evening dinner. The pair have been inseparable ever since.
+SAY DESC ~This ferret appears quite well fed and occasionally pokes its head out of Recorder's pack. When asked how she came upon it, she tells how her mother purchased it for her in the grand markets of Amn, seeing the animal starved in a merchant's cage. The purchase gave Recorder a dear companion, and Gustav all the food he could want, and the pair have been inseparable ever since.
 
 Weight: 1~
 	OUTER_SET strref = RESOLVE_STR_REF (~The Ferret growls when you try to remove it from its comfortable spot in Recorder's pack.~ [X3RF3])
