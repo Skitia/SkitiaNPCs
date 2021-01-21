@@ -4010,12 +4010,14 @@ END
 
 CHAIN X3VieJ DSR.7
 ~Hrmph. As stubborn as I said you were. I will admit I am flattered, and intrigued and e- ugh. I will admit nothing more!~
-DO ~SetGlobal("X3VieInterest","LOCALS",1)IncrementGlobal("X3VieAppChange","GLOBAL",2)~ 
+DO ~SetGlobal("X3VieInterest","LOCALS",1)IncrementGlobal("X3VieApp","GLOBAL",6)
+DisplayStringNoNameDlg(Player1,@516)~ 
 EXIT 
 
 CHAIN X3VieJ DSR.8 
 ~Good. This is the best for us all, then.~
-DO ~SetGlobal("X3VieRomanceActive","GLOBAL",3)IncrementGlobal("X3VieAppChange","GLOBAL",-2)~
+DO ~SetGlobal("X3VieRomanceActive","GLOBAL",3)IncrementGlobal("X3VieApp","GLOBAL",-6)
+DisplayStringNoNameDlg(Player1,@506)~
 EXIT 
 
 // Group Kiss from PID 
