@@ -449,3 +449,24 @@ COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3Hel.d~
 ~%MOD_FOLDER%/Dialogue/X3HelJ.d~
 ~%MOD_FOLDER%/Dialogue/BX3Hel25.d~
 ~%MOD_FOLDER%/Dialogue/X3Hel25J.d~
+
+PRINT ~Choose a portrait for Helga (check mod folder for portraits):~
+
+PRINT ~Please choose one of the following:
+[1] Default by Acifer
+[2] Alt NWN Portrait~
+
+OUTER_SPRINT ~portrait~ ~placeholder_value~
+OUTER_WHILE (!(IS_AN_INT ~portrait~) OR (~portrait~ > 0x2) OR (~portrait~ < 0x1)) BEGIN
+  ACTION_READLN ~portrait~
+END
+      ACTION_IF ("portrait" = 1) THEN BEGIN
+		COPY ~%MOD_FOLDER%/Portraits/HelgaL.bmp~ ~override/X3HelL.bmp~
+		COPY ~%MOD_FOLDER%/Portraits/HelgaM.bmp~ ~override/X3HelM.bmp~
+      PRINT ~Portrait: Default by Acifer~
+	  END
+      ACTION_IF ("portrait" = 2) THEN BEGIN
+		COPY ~%MOD_FOLDER%/Portraits/X3HelL.bmp~ ~override/X3HelL.bmp~
+		COPY ~%MOD_FOLDER%/Portraits/X3HelM.bmp~ ~override/X3HelM.bmp~
+      PRINT ~Portrait: Alt NWN Portrait~
+	  END
