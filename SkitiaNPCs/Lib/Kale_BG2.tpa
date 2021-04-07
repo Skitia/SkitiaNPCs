@@ -1,4 +1,4 @@
-LOAD_TRA ~%MOD_FOLDER%/Tra/English/KALE_bg2.tra~
+LOAD_TRA ~%MOD_FOLDER%/Tra/%LANGUAGE%/KALE_bg2.tra~
 LAF HANDLE_AUDIO
   STR_VAR
     audio_path = ~SkitiaNPCs/Audio/Kale~
@@ -34,21 +34,9 @@ ADD_KIT ~X3KFK~
 	 ~0x00000001       2~
 	~FI0~
 	~* * * * * * * * * * * * * * * * * * *  *~
-	SAY ~warden~
-	SAY ~Warden~
-	SAY ~WARDEN: The warden is a warrior whose discipline and traditions center around fighting in pairs. The warden takes on the defensive role in the pair, while the ward receives elevated offensive prowess. Their remarkable protective talents come at the cost of the warden’s skill with weapons being inferior to other fighter traditions.
-	
-	Advantages:
-	-Hit Die: d12
-	-May use the Ward ability once per day. Gains one use at level 1, one use at level eight, and an additional use every eight levels thereafter.
-	
-	WARD: Designates target as the ward for one turn. It does not stack with itself, and if the ward is changed, the previous ward loses their bonuses. 
-	Level 1: The ward receives +1 damage bonus and -1 THAC0. The warden receives penalties for the same amount, but gains 10% resistance to physical damage and regenerates 1 hitpoint per 6 seconds.
-	Level 8: The ward receives +2 damage bonus and -2 THAC0. The warden receives penalties for the same amount, but gains 20% resistance to physical damage, and regenerates 1 hitpoint per 3 seconds.
-	Level 16: The ward receives +3 damage bonus and -3 THAC0. The warden receives penalties for the same amount, but gains 30% resistance to physical damage and regenerates 1 hitpoint per second.
-
-	Disadvantages:
-	May only become specialized in ranged weapons, and may not exceed mastery in any other weapon.~
+	SAY @711
+	SAY @712
+	SAY @713
 
 LAF fl#add_kit_ee
 
@@ -67,183 +55,147 @@ END
 // Spells 
 COPY "%MOD_FOLDER%/Spells/X3KW.bam" override 
 COPY "SkitiaNPCs/Spells/X3KFKS.SPL" override 
-SAY NAME1 ~Ward~
-SAY NAME2 ~Ward~
-SAY DESC ~WARD: Designates target as the ward for one turn. It does not stack with itself, and if the ward is changed, the previous ward loses their bonuses. 
-Level 1: The ward receives +1 damage bonus and -1 THAC0. The warden receives penalties for the same amount, but gains 10% resistance to physical damage and regenerates 1 hitpoint per 6 seconds.
-Level 8: The ward receives +2 damage bonus and -2 THAC0. The warden receives penalties for the same amount, but gains 20% resistance to physical damage, and regenerates 1 hitpoint per 3 seconds.
-Level 16: The ward receives +3 damage bonus and -3 THAC0. The warden receives penalties for the same amount, but gains 30% resistance to physical damage and regenerates 1 hitpoint per second.
-~
+SAY NAME1 @714
+SAY NAME2 @714
+SAY DESC @715
 // Store 
 COPY ~%MOD_FOLDER%/Items/X3KP.STO~ override
 
 //Items 
 COPY "%MOD_FOLDER%/Items/X3KBOOK1.itm" override 
-SAY NAME1 ~Kale's Father's Journal~
-SAY NAME2 ~Kale's Father's Journal~
-SAY DESC ~The journal mostly contains details of shopping checklists and dry details of Percy's life. The last few entries however contain some interesting details of note.
-
-"Got in trouble with the guard Bryce again when I got in a scuffle with that awful beggar Martin in the docks. He's always watching from the docks. Got something against halflings, I know he must. When I said I didn't have enough money for his stupid fine over fishing around the docks, I spent a few lousy nights in jail. And that Martin got nothing at all.
-Sometimes I think I ought to go wandering again, this city is suffocating my feet. Jillian was the only honest guard member of the docks garrison, but it's not work for a halfling, not with people like Bryce working for them, and she was right to go back wandering with an adventure. She said my son is among the adventuring group she is joining.
-I ought to introduce myself, but I just can't."
-
-"Chester started selling some new cheese in his cheese shop. Damn it tastes good. Like nothing I've ever had before. Definitely making it a daily addition for my shopping list when I go out and get food."
-
-"Cheese. Cheeeeese. Cheeeeeeeese. I bought up all of the cheese. I promised I'd pay it in full once I had a little bit more money, but Chester doesn't seem to mind at all. What a friendly fellow. Dallie's been getting a bit upset though, that I've been paying more attention to the food than her.
-At least she doesn't know about Flora too. I know it's wrong. I know we had a handfast planned and everything soon, but I love both woman. One for her heart and the other for her appearance blessed by Sheela herself. What's wrong with playing my luck for a little longer?"
-
-"Money's getting low and Dallie is really getting angry at the stockpile of cheese I got. She won't even taste it despite my protests, she knows it smells good. This stuff is gold. It's worth it all. It's cheeeese. It's heaven. It's amazing.
-Even Flora's gotten a bit concerned. She's asking when I'm going to leave her. I don't want to leave anyone. I love Dallie. I love Flora. And I love this cheese too. Just got to enjoy everything while it lasts."
-
-"I think someone's trying to kill me. I feel god awful inside these last few days. I should see a priest, but Chester's amazing cheese always makes me feel a bit happier inside. Just going to buy a bit more before I go off to the church of Ilmater, they're kindly folks there, and I trust them more than anyone.
-I'll give Martin a good insult on the way too. He deserves it for getting me in a cell for too many miserable nights."
-
-STATISTICS:
-
-Weight: 1~
+SAY NAME1 @716
+SAY NAME2 @716
+SAY DESC @717
 
 COPY "%MOD_FOLDER%/Items/X3KCHEES.itm" override 
-SAY NAME1 ~Bag of Strange Cheese~
-SAY NAME2 ~Bag of Strange Cheese~
-SAY DESC ~This cheese smells and looks odd to non-halflings, and has no direct impact to them if eaten. But to a halfling, it smells quite pleasing with an inviting aroma.
-
-STATISTICS: 
-
-Weight: 1~
+SAY NAME1 @718
+SAY NAME2 @718
+SAY DESC @719
 
 COPY "%MOD_FOLDER%/Items/X3KLET.itm" override 
-SAY NAME1 ~Letter~
-SAY NAME2 ~Letter~
-SAY DESC ~I have been alerted that there will be an attempted arrest on my person. Your pay is attached to this letter, and you will receive an additional sum upon completion of the task.
-When you have succesfully terminated the halfling and her puppets, return to my home on the northside of the bridge district.
-
-Chester~
+SAY NAME1 @720
+SAY NAME2 @720
+SAY DESC @721
 
 COPY ~%MOD_FOLDER%/items/X3KBody.itm~ ~override/X3KBody.itm~
-SAY NAME1 ~Kale's Body~
-SAY NAME2 ~Kale's Body~
-SAY DESC ~Kale was captured by Bodhi and infected with vampirism, forcing you to slay him. There may be some way to revive him, though you don't know what it would be.
-
-STATISTICS:
-
-Weight: 40~
+SAY NAME1 @722
+SAY NAME2 @722
+SAY DESC @723
 
 // Character SoA
 
 COPY ~%MOD_FOLDER%/Cre/X3Kal.cre~ ~override/X3Kal.cre~
-  SAY NAME1 ~Kale~
-  SAY NAME2 ~Kale~
+  SAY NAME1 @724
+  SAY NAME2 @724
   WRITE_ASCII 0x248 ~X3Kal~ #8  //override script
   WRITE_ASCII 0x280 ~X3Kal~ #32  //DV
   WRITE_ASCII 0x2cc ~X3Kal~ #8   //pre-joining dialogue file
   WRITE_ASCII 0X34 ~X3KalM~ #8   
   WRITE_ASCII 0x3c ~X3KalL~ #8   
-  SAY BIO ~Kale gives a wide grin when you ask about himself, clapping you on your back and launching straight into his tale. He claims he was born faster, stronger, and with more courage in his spirit than all the halflings of Gullykin combined. He flashes scars and launches into wild, eyebrow raising tales of how he earned each, from battling one hundred kobolds alone to slapping a dragon in the face.  But after a while he grows melancholy and admits that in all of his travels he has lost many companions that he would dearly miss. He says he has changed his style of fighting to be more protective of those he cares about. He'll take any blow for a companion if that means they'll keep standing, if he likes them anyway.
-"But the rest?" He adds with a grin once more. "They'll have give me a good offer."~
-  SAY MORALE ~This isn't working out like I thought.~ [KaleFlee]
-  SAY HAPPY ~I feel better than a fox with a belly full of chicken! Not bloody bad at all.~ [KaleHap]
-  SAY UNHAPPY_ANNOYED ~Things aren't all bad, but they aren't all great either.~
-  SAY UNHAPPY_SERIOUS ~I ain't pleased with what's going on. Get your head on straight, mate, or you'll lose your best talent.~ 
+  SAY BIO @725
+  SAY MORALE @726
+  SAY HAPPY @727
+  SAY UNHAPPY_ANNOYED @728
+  SAY UNHAPPY_SERIOUS @729 
   SAY UNHAPPY_BREAKING_POINT ~~ // Kale's Departure is determined by Approval now.
-  SAY LEADER ~Oy, listen up!~ [KaleLead]
-  SAY TIRED ~I am so bushed, you have no idea.~ [KaleRest]
-  SAY BORED ~*Yawn*~ [KaleBore]
-  SAY BATTLE_CRY1 ~Okay, now you're in for it.~ [X3KCry1]
-  SAY BATTLE_CRY2 ~Here comes halfling death!~ [KaleCry2]
-  SAY BATTLE_CRY3 ~Let's have a bit of fun, shall we?~ [X3KCry2]
-  SAY BATTLE_CRY4 ~Now you're gonna get it!~ [KaleCry4]
-  SAY BATTLE_CRY5 ~Uh oh. Uninvited guests.~ [KaleCry5]
+  SAY LEADER @731
+  SAY TIRED @732
+  SAY BORED @733
+  SAY BATTLE_CRY1 @734
+  SAY BATTLE_CRY2 @735
+  SAY BATTLE_CRY3 @736
+  SAY BATTLE_CRY4 @737
+  SAY BATTLE_CRY5 @738
   SAY DAMAGE ~~ [KaleDam]
-  SAY DYING ~Aww, not again...~ [KaleDead]
-  SAY HURT ~Hey, bleeding over here!~ [KaleHurt]
-  SAY AREA_FOREST ~Oh lovely. What'd I step in now?~ [KaleFor]
-  SAY AREA_CITY ~I thought it would be a bit smaller, myself.~ [X3KCity]
-  SAY AREA_DUNGEON ~Oi, what's that? Oh...just another rat.~ [KaleDun]
-  SAY AREA_DAY ~Sooo. I wonder how much a map of this place would go for?~ [KaleDay]
-  SAY AREA_NIGHT ~Criminy. Where the bloody hell are we?~ [KaleNigh]
-  SAY SELECT_COMMON1 ~Yeah? You want something, I bet.~  [KaleCom1]
-  SAY SELECT_COMMON2 ~Aye now. Something else you need?~ [KaleCom2]
-  SAY SELECT_COMMON3 ~Soooo.~ [KaleCom3]
-  SAY SELECT_COMMON4 ~Yep?~ [KaleCom4]
-  SAY SELECT_COMMON5 ~Come on, come on!~ [KaleCom5]
-  SAY SELECT_COMMON6 ~Righto. Off we go.~ [KaleAct1]
-  SAY SELECT_ACTION1 ~Okey-Dokey.~ [KaleAct2]
-  SAY SELECT_ACTION2 ~Wish I thought of that.~ [KaleAct3]
-  SAY SELECT_ACTION3 ~Just give me a sec.~ [KaleAct4]
-  SAY SELECT_ACTION4 ~You might want to re-think that.~ [KaleAct5]
-  SAY SELECT_ACTION5 ~Woohoo.~ [KaleAct6]
-  SAY SELECT_ACTION6 ~Aye.~ [X3KAye]
-  SAY SELECT_ACTION7 ~Sooo.~ [X3KSo]
-  SAY CRITICAL_HIT ~Yeah! That's the way!~ [KaleCrit]
-  SAY CRITICAL_MISS ~Damn it!~ [X3KCrtM]
-  SAY TARGET_IMMUNE ~I ain't doing much here.~ [KaleImm]
-  SAY INVENTORY_FULL ~What am I, a bloody mule?!~  [KaleInv]
-  SAY SPELL_DISRUPTED ~I hate it when my bloody spells won't work.~ [KaleSpel]
+  SAY DYING @740
+  SAY HURT @741
+  SAY AREA_FOREST @742
+  SAY AREA_CITY @743
+  SAY AREA_DUNGEON @744
+  SAY AREA_DAY @745
+  SAY AREA_NIGHT @746
+  SAY SELECT_COMMON1 @747
+  SAY SELECT_COMMON2 @748
+  SAY SELECT_COMMON3 @749
+  SAY SELECT_COMMON4 @750
+  SAY SELECT_COMMON5 @751
+  SAY SELECT_COMMON6 @752
+  SAY SELECT_ACTION1 @753
+  SAY SELECT_ACTION2 @754
+  SAY SELECT_ACTION3 @755
+  SAY SELECT_ACTION4 @756
+  SAY SELECT_ACTION5 @757
+  SAY SELECT_ACTION6 @758
+  SAY SELECT_ACTION7 @759
+  SAY CRITICAL_HIT @760
+  SAY CRITICAL_MISS @761
+  SAY TARGET_IMMUNE @762
+  SAY INVENTORY_FULL @763
+  SAY SPELL_DISRUPTED @764
   SAY SET_A_TRAP ~~ []
   SAY HIDDEN_IN_SHADOWS ~~ []
   SAY PICKED_POCKET ~~ []
-  SAY SELECT_RARE1 ~Oh um. Maybe we should organize ourselves a bit?~ [KaleRare]
-  SAY SELECT_RARE2 ~Come on, come on!~ [KaleCom5]
-  SAY REACT_TO_DIE_GENERAL ~Oh shoot. And we were doing so well...~ [KaleDieR] 
+  SAY SELECT_RARE1 @765
+  SAY SELECT_RARE2 @751
+  SAY REACT_TO_DIE_GENERAL @766 
   WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~X3KFK~)) 
 
 // Character ToB
 
 COPY ~%MOD_FOLDER%/Cre/X3Kal25.cre~ ~override/X3Kal25.cre~
-  SAY NAME1 ~Kale~
-  SAY NAME2 ~Kale~
+  SAY NAME1 @724
+  SAY NAME2 @724
   WRITE_ASCII 0x248 ~X3Kal25~ #8  //override script
   WRITE_ASCII 0x280 ~X3Kal~ #32  //DV
   WRITE_ASCII 0x2cc ~X3Kal25~ #8   //pre-joining dialogue file
   WRITE_ASCII 0X34 ~X3KalM~ #8   
   WRITE_ASCII 0x3c ~X3KalL~ #8   
-  SAY BIO ~Kale gives a wide grin when you ask about himself, clapping you on your back and launching straight into his tale. He claims he was born faster, stronger, and with more courage in his spirit than all the halflings of Gullykin combined. He flashes scars and launches into wild, eyebrow raising tales of how he earned each, from battling one hundred kobolds alone to slapping a dragon in the face.  But after a while he grows melancholy and admits that in all of his travels he has lost many companions that he would dearly miss. He says he has changed his style of fighting to be more protective of those he cares about. He'll take any blow for a companion if that means they'll keep standing, if he likes them anyway.
-"But the rest?" He adds with a grin once more. "They'll have give me a good offer."~
-  SAY MORALE ~This isn't working out like I thought.~ [KaleFlee]
-  SAY HAPPY ~I feel better than a fox with a belly full of chicken! Not bloody bad at all.~ [KaleHap]
-  SAY UNHAPPY_ANNOYED ~Things aren't all bad, but they aren't all great either.~
-  SAY UNHAPPY_SERIOUS ~I ain't pleased with what's going on. Get your head on straight, mate, or you'll lose your best talent.~ 
+  SAY BIO @725
+  SAY MORALE @726
+  SAY HAPPY @727
+  SAY UNHAPPY_ANNOYED @728
+  SAY UNHAPPY_SERIOUS @729 
   SAY UNHAPPY_BREAKING_POINT ~~ // Kale's Departure is determined by Approval now.
-  SAY LEADER ~Oy, listen up!~ [KaleLead]
-  SAY TIRED ~I am so bushed, you have no idea.~ [KaleRest]
-  SAY BORED ~*Yawn*~ [KaleBore]
-  SAY BATTLE_CRY1 ~Okay, now you're in for it.~ [X3KCry1]
-  SAY BATTLE_CRY2 ~Here comes halfling death!~ [KaleCry2]
-  SAY BATTLE_CRY3 ~Let's have a bit of fun, shall we?~ [X3KCry2]
-  SAY BATTLE_CRY4 ~Now you're gonna get it!~ [KaleCry4]
-  SAY BATTLE_CRY5 ~Uh oh. Uninvited guests.~ [KaleCry5]
+  SAY LEADER @731
+  SAY TIRED @732
+  SAY BORED @733
+  SAY BATTLE_CRY1 @734
+  SAY BATTLE_CRY2 @735
+  SAY BATTLE_CRY3 @736
+  SAY BATTLE_CRY4 @737
+  SAY BATTLE_CRY5 @738
   SAY DAMAGE ~~ [KaleDam]
-  SAY DYING ~Aww, not again...~ [KaleDead]
-  SAY HURT ~Hey, bleeding over here!~ [KaleHurt]
-  SAY AREA_FOREST ~Oh lovely. What'd I step in now?~ [KaleFor]
-  SAY AREA_CITY ~I thought it would be a bit smaller, myself.~ [X3KCity]
-  SAY AREA_DUNGEON ~Oi, what's that? Oh...just another rat.~ 
-  SAY AREA_DAY ~Sooo. I wonder how much a map of this place would go for?~ [KaleDay]
-  SAY AREA_NIGHT ~Criminy. Where the bloody hell are we?~ [KaleNigh]
-  SAY SELECT_COMMON1 ~Yeah? You want something, I bet.~  [KaleCom1]
-  SAY SELECT_COMMON2 ~Aye now. Something else you need?~ [KaleCom2]
-  SAY SELECT_COMMON3 ~Soooo.~ [KaleCom3]
-  SAY SELECT_COMMON4 ~Yep?~ [KaleCom4]
-  SAY SELECT_COMMON5 ~Come on, come on!~ [KaleCom5]
-  SAY SELECT_COMMON6 ~Righto. Off we go.~ [KaleAct1]
-  SAY SELECT_ACTION1 ~Okey-Dokey.~ [KaleAct2]
-  SAY SELECT_ACTION2 ~Wish I thought of that.~ [KaleAct3]
-  SAY SELECT_ACTION3 ~Just give me a sec.~ [KaleAct4]
-  SAY SELECT_ACTION4 ~You might want to re-think that.~ [KaleAct5]
-  SAY SELECT_ACTION5 ~Woohoo.~ [KaleAct6]
-  SAY SELECT_ACTION6 ~Aye.~ [X3KAye]
-  SAY SELECT_ACTION7 ~Sooo.~ [X3KSo]
-  SAY CRITICAL_HIT ~Yeah! That's the way!~ [KaleCrit]
-  SAY CRITICAL_MISS ~Damn it!~ [X3KCrtM]
-  SAY TARGET_IMMUNE ~I ain't doing much here.~ [KaleImm]
-  SAY INVENTORY_FULL ~What am I, a bloody mule?!~  [KaleInv]
-  SAY SPELL_DISRUPTED ~I hate it when my bloody spells won't work.~ [KaleSpel]
+  SAY DYING @740
+  SAY HURT @741
+  SAY AREA_FOREST @742
+  SAY AREA_CITY @743
+  SAY AREA_DUNGEON @767 
+  SAY AREA_DAY @745
+  SAY AREA_NIGHT @746
+  SAY SELECT_COMMON1 @747
+  SAY SELECT_COMMON2 @748
+  SAY SELECT_COMMON3 @749
+  SAY SELECT_COMMON4 @750
+  SAY SELECT_COMMON5 @751
+  SAY SELECT_COMMON6 @752
+  SAY SELECT_ACTION1 @753
+  SAY SELECT_ACTION2 @754
+  SAY SELECT_ACTION3 @755
+  SAY SELECT_ACTION4 @756
+  SAY SELECT_ACTION5 @757
+  SAY SELECT_ACTION6 @758
+  SAY SELECT_ACTION7 @759
+  SAY CRITICAL_HIT @760
+  SAY CRITICAL_MISS @761
+  SAY TARGET_IMMUNE @762
+  SAY INVENTORY_FULL @763
+  SAY SPELL_DISRUPTED @764
   SAY SET_A_TRAP ~~ []
   SAY HIDDEN_IN_SHADOWS ~~ []
   SAY PICKED_POCKET ~~ []
-  SAY SELECT_RARE1 ~Oh um. Maybe we should organize ourselves a bit?~ [KaleRare]
-  SAY SELECT_RARE2 ~Come on, come on!~ [KaleCom5]
-  SAY REACT_TO_DIE_GENERAL ~Oh shoot. And we were doing so well...~ [KaleDieR] 
+  SAY SELECT_RARE1 @765
+  SAY SELECT_RARE2 @751
+  SAY REACT_TO_DIE_GENERAL @766 
   WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~X3KFK~))  
  
   APPEND ~pdialog.2da~
@@ -293,68 +245,68 @@ COPY ~%MOD_FOLDER%/Cre/X3KJIL.cre~ ~override/X3KJIL.cre~
   WRITE_ASCII 0x248 ~X3KJIL~ #8  //override script
   WRITE_ASCII 0x280 ~X3KJIL~ #32  //DV
   WRITE_ASCII 0x2cc ~X3KJIL~ #8   // Dialogue 
-  SAY NAME1 ~Jillian~
-  SAY NAME2 ~Jillian~	
+  SAY NAME1 @768
+  SAY NAME2 @768	
 COPY ~%MOD_FOLDER%/Cre/X3KBRYCE.cre~ ~override/X3KBRYCE.cre~
   WRITE_ASCII 0x248 ~X3KBRYCE~ #8  //override script
   WRITE_ASCII 0x280 ~X3KBRYCE~ #32  //DV
   WRITE_ASCII 0x2cc ~X3KBRYCE~ #8   // Dialogue 
-  SAY NAME1 ~Sergeant Bryce~
-  SAY NAME2 ~Sergeant Bryce~	
+  SAY NAME1 @769
+  SAY NAME2 @769	
 COPY ~%MOD_FOLDER%/Cre/X3KC.cre~ ~override/X3KC.cre~
   WRITE_ASCII 0x248 ~X3KC~ #8  //override script
   WRITE_ASCII 0x280 ~X3KC~ #32  //DV
   WRITE_ASCII 0x2cc ~X3KC~ #8   // Dialogue 
-  SAY NAME1 ~Chester~
-  SAY NAME2 ~Chester~  
+  SAY NAME1 @770
+  SAY NAME2 @770  
 COPY ~%MOD_FOLDER%/Cre/X3KF.cre~ ~override/X3KF.cre~
   WRITE_ASCII 0x248 ~X3KF~ #8  //override script
   WRITE_ASCII 0x280 ~X3KF~ #32  //DV
   WRITE_ASCII 0x2cc ~X3KF~ #8   // Dialogue 
-  SAY NAME1 ~Flora~
-  SAY NAME2 ~Flora~   
+  SAY NAME1 @771
+  SAY NAME2 @771   
 COPY ~%MOD_FOLDER%/Cre/X3KD.cre~ ~override/X3KD.cre~
   WRITE_ASCII 0x248 ~X3KD~ #8  //override script
   WRITE_ASCII 0x280 ~X3KD~ #32  //DV
   WRITE_ASCII 0x2cc ~X3KD~ #8   // Dialogue 
-  SAY NAME1 ~Dallie~
-  SAY NAME2 ~Dallie~   
+  SAY NAME1 @772
+  SAY NAME2 @772   
 COPY ~%MOD_FOLDER%/Cre/X3KM.cre~ ~override/X3KM.cre~
   WRITE_ASCII 0x248 ~X3KM~ #8  //override script
   WRITE_ASCII 0x280 ~X3KM~ #32  //DV
   WRITE_ASCII 0x2cc ~X3KM~ #8   // Dialogue 
-  SAY NAME1 ~Martin~
-  SAY NAME2 ~Martin~  
+  SAY NAME1 @773
+  SAY NAME2 @773  
 COPY ~%MOD_FOLDER%/Cre/X3KMERC.cre~ ~override/X3KMERC.cre~
   WRITE_ASCII 0x248 ~X3KMERC~ #8  //override script
   WRITE_ASCII 0x280 ~X3KMERC~ #32  //DV
   WRITE_ASCII 0x2cc ~X3KMERC~ #8   // Dialogue 
-  SAY NAME1 ~Mercenary~
-  SAY NAME2 ~Mercenary~  
+  SAY NAME1 @774
+  SAY NAME2 @774  
 COPY ~%MOD_FOLDER%/Cre/X3KMERC2.cre~ ~override/X3KMERC2.cre~
   WRITE_ASCII 0x248 ~X3KMERC~ #8  //override script
   WRITE_ASCII 0x280 ~X3KMERC2~ #32  //DV
   WRITE_ASCII 0x2cc ~X3KMERC~ #8   // Dialogue 
-  SAY NAME1 ~Mercenary~
-  SAY NAME2 ~Mercenary~ 
+  SAY NAME1 @774
+  SAY NAME2 @774 
 COPY ~%MOD_FOLDER%/Cre/X3KMERC3.cre~ ~override/X3KMERC3.cre~
   WRITE_ASCII 0x248 ~X3KMERC~ #8  //override script
   WRITE_ASCII 0x280 ~X3KMERC3~ #32  //DV
   WRITE_ASCII 0x2cc ~X3KMERC~ #8   // Dialogue 
-  SAY NAME1 ~Mercenary~
-  SAY NAME2 ~Mercenary~   
+  SAY NAME1 @774
+  SAY NAME2 @774   
 COPY ~%MOD_FOLDER%/Cre/X3KLove.cre~ ~override/X3KLove.cre~
   WRITE_ASCII 0x248 ~X3KLove~ #8  //override script
   WRITE_ASCII 0x280 ~X3KLove~ #32  //DV
   WRITE_ASCII 0x2cc ~X3KLove~ #8   // Dialogue 
-  SAY NAME1 ~Alora~
-  SAY NAME2 ~Alora~    
+  SAY NAME1 @775
+  SAY NAME2 @775    
 COPY ~%MOD_FOLDER%/Cre/X3KalV.cre~ ~override/X3KalV.cre~
   WRITE_ASCII 0x248 ~X3KalV~ #8  //override script
   WRITE_ASCII 0x280 ~X3KalV~ #32  //DV
   WRITE_ASCII 0x2cc ~X3KalV~ #8   // Dialogue 
-  SAY NAME1 ~Kale~
-  SAY NAME2 ~Kale~    
+  SAY NAME1 @724
+  SAY NAME2 @724    
 		// Creature Scripts 
 COMPILE	EVALUATE_BUFFER 
 ~%MOD_FOLDER%/Scripts/X3Kal25.baf~ 
@@ -373,18 +325,18 @@ COMPILE	EVALUATE_BUFFER
   // There is no AR0332 file. To get around that, we have NPCs spawn in 300 and move to the 332 area.
  EXTEND_BOTTOM ~ar0300.bcs~ ~%MOD_FOLDER%/Scripts/ar0300.baf~
 //Dialogue 
-COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/X3Kal.d~
-~%MOD_FOLDER%/dialogue/X3Kal25.d~
-~%MOD_FOLDER%/dialogue/X3KJIL.d~
-~%MOD_FOLDER%/dialogue/X3KBRYCE.d~ // Bryce 
-~%MOD_FOLDER%/dialogue/X3KC.d~ // Chester  
-~%MOD_FOLDER%/dialogue/X3KM.d~ // Martin 
-~%MOD_FOLDER%/dialogue/X3KF.d~ // Flora 
-~%MOD_FOLDER%/dialogue/X3KD.d~ // Dallie 
-~%MOD_FOLDER%/dialogue/BX3Kal.d~
-~%MOD_FOLDER%/dialogue/BX3Kal25.d~
-~%MOD_FOLDER%/dialogue/X3KalJ.d~
-~%MOD_FOLDER%/dialogue/X3Kal25J.d~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/X3Kal.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3Kal.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/X3Kal25.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3Kal25.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/X3KF.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3KF.tra~ // Flora 
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/X3KBRYCE.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3KBRYCE.tra~ // Bryce 
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/X3KC.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3KC.tra~ // Chester  
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/X3KM.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3KM.tra~ // Martin 
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/X3KD.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3KD.tra~ // Dallie 
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/X3KJIL.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3KJIL.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/BX3Kal.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/BX3Kal.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/BX3Kal25.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/BX3Kal25.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/X3KalJ.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3KalJ.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/X3Kal25J.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3Kal25J.tra~
 
 
 

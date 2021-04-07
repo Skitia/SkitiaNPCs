@@ -82,3 +82,424 @@ It appears Bodhi was unable to convert Emily into vampirism thanks to her aasima
 @513 = ~^GVienxay slightly approves^-~
 @516 = ~^GVienxay approves^-~
 @519 = ~^GVienxay greatly approves^-~
+
+@520  = ~aasimar~
+@521  = ~Aasimar~
+
+@565  = ~Despite being bitten, Emily's aasimar blood seems to have shielded her from turning. She is losing blood and will likely die if she does not receive healing assistance soon.
+
+STATISTICS:
+
+Weight: 135~
+@566  = ~Enchanted Arrow I~
+@567  = ~This arrow fletched by Emily is a basic enchanted arrow, fast and light. It strikes with the enchantment of four different elements. 
+
+STATISTICS:
+
+Damage: 1d6 (missile) +1 Acid/Cold/Electrical/Fire Damage (Save vs. Spell for none)
+Launcher: Bow
+
+Weight: 0~
+@568  = ~Enchanted Arrow II~
+@569  = ~This arrow fletched by Emily is a simple enchanted arrow, fast, light, and precise. It strikes with the enchantment of four different elements. 
+
+STATISTICS:
+
+THACO: +1
+Damage: 1d6 (missile) +1 Acid/Cold/Electrical/Fire Damage (Save vs. Spell for none)
+Launcher: Bow
+
+Weight: 0~
+@570  = ~Enchanted Arrow III~
+@571  = ~This arrow fletched by Emily is a heavily enchanted arrow, fast, light, and precise. It strikes with the enchantment of four different elements, and its arrowhead splinters upon contact, possibly slowing its target. 
+
+STATISTICS:
+
+Combat Abilities
+-Target must make a save versus spell or have their movement speed halved for one round.
+
+THACO: +1
+Damage: 1d6 (missile) +1 Acid/Cold/Electrical/Fire Damage (Save vs. Spell for none)
+Launcher: Bow
+
+Weight: 0~
+@572  = ~Enchanted Arrow IV~
+@573  = ~This arrow represents Emily's finest fletching. The arrow is fast and precise, and sends its surging energy of four elements into its victim, possibly slowing their movement by half.
+
+STATISTICS:
+
+Combat Abilities
+-Target must make a save versus spell or have their movement speed halved for one round.
+
+THACO: +2
+Damage: 1d6 (missile) +1 Acid/Cold/Fire/Electrical Damage (Save vs. Spell for none)
+Launcher: Bow
+
+Weight: 0~
+@574  = ~Enchanted Bolt I~
+@575  = ~This Bolt fletched by Emily is a basic enchanted bolt, fast and light. It strikes with the enchantment of four different elements. 
+
+STATISTICS:
+
+Damage: 1d6 (missile) +1 Acid/Cold/Electrical/Fire Damage (Save vs. Spell for none)
+Launcher: Crossbow
+
+Weight: 0~
+@576  = ~Enchanted Bolt II~
+@577  = ~This Bolt fletched by Emily is a simple enchanted bolt, fast, light, and precise. It strikes with the enchantment of four different elements. 
+
+STATISTICS:
+
+THACO: +1
+Damage: 1d6 (missile) +1 Acid/Cold/Electrical/Fire Damage (Save vs. Spell for none)
+Launcher: Crossbow
+
+Weight: 0~
+@578  = ~Enchanted Bolt III~
+@579  = ~This Bolt fletched by Emily is a heavily enchanted bolt, fast, light, and precise. It strikes with the enchantment of four different elements, and its head splinters upon contact, possibly slowing its target. 
+
+STATISTICS:
+
+Combat Abilities
+-Target must make a save versus spell or have their movement speed halved for one round.
+
+THACO: +1
+Damage: 1d6 (missile) +1 Acid/Cold/Electrical/Fire Damage (Save vs. Spell for none)
+Launcher: Crossbow
+
+Weight: 0~
+@580  = ~Enchanted Bolt IV~
+@581  = ~This Bolt represents Emily's finest fletching. The bolt is fast and precise, and sends its surging energy of four elements into its victim, possibly slowing their movement by half. 
+
+STATISTICS:
+
+Combat Abilities
+-Target must make a save versus spell or have their movement speed halved for one round.
+
+THACO: +2
+Damage: 1d6 (missile) +1 Acid/Cold/Electrical/Fire Damage (Save vs. Spell for none)
+Launcher: Crossbow
+
+Weight: 0~
+@582  = ~Thomas's Spellblade~
+@583  = ~Thomas's Spellblade courses with magical energy. When it hits its target, some of that energy pours into its strike, possibly magically damaging them and making the target's resistance against said damage weaker, and thus easier to kill.
+
+STATISTICS:
+Special: -1 Penalty to Saves vs spell per hit for 30 seconds (Save vs spell at -2 penalty to avoid)
+THAC0: +3
+Damage: 2d4+3 (slashing), +2 magic (Save vs spell for None)
+Speed Factor: 5
+Proficiency Type: Bastard Sword
+Type: One-handed
+Requires:
+ 11 Strength
+
+Weight: 7~
+@584  = ~Emily's Engagement Ring~
+@585  = ~Weaved in gold and with a heart signet, you gave this ring to Emily as a promise of marriage. Whether you will be able to deliver is up to fate.
+The ring's enchantments have taken affect with its wearer's acceptance, and they will surely help to keep Emily safer for the battles to come.
+
+STATISTICS:
+
+Casting Ability:
+-May Cast Bolt of Glory x2 per day.
+
+Equipped abilities:
+-Regenerates one hitpoint every three seconds 
+-Armor Class: +2
+-Save vs. Death: +3
+
+Weight: 1~
+@586  = ~Emily's Wing Necklace~
+@587  = ~Emily's Wing Necklace: This silver wing threaded into a necklace contains warm, soothing magic.
+When a hand is put onto another being, the wearer of the necklace may let its magic thread from them into their target, curing them of any paralysis once, where it will then 
+need time to restore its magic within after a period of rest. This necklace is the only possession Emily has that she believes is from her birth mother, and she is unwilling to part with it for any reason.
+
+STATISTICS:
+
+Charge abilities (Once per day):
+-Cure Paralysis
+
+Weight: 1~
+@588  = ~Sorry, <CHARNAME>. I can't give that up. It means too much to me.~
+@589  = ~Emily's Silver Circlet~
+@590  = ~Emily's Silver Circlet: These silver circlets are required to be worn by the nobility of House Castilla, and gifted to them when they reach adulthood. Each is enchanted with magic unique to the wearer. 
+Emily's Silver Circlet enhances her concentration with the bow, allowing her hits to be sharper. However, unlike a helmet, circlets do not protect against critical hits.
+
+STATISTICS:
+
+Equipped abilities:
+-Ranged Critical Chance: +5%
+-Does not protect against critical hits
+
+Weight: 1~
+@591  = ~Sorry, <CHARNAME>. That has to stay on my head. It means too much to me.~
+@592  = ~Modified Ripper +2~
+@593  = ~This composite longbow was one of many made by a half-elven craftsman whose name has been lost to history. At one time there were several hundred in use, a favorite of scouts who patrolled the Anauroch desert, but many have been lost or destroyed. Only a few are still known to exist, and they see little use due to the tremendous strength they require. 
+
+STATISTICS:
+
+Equipped abilities:
+– Dexterity: +1
+
+THAC0: +3
+Damage: +2 (missile)
+Speed Factor: 5
+Proficiency Type: Longbow
+Type: Two-handed
+Requires:
+ 18 Strength
+
+Weight: 8~
+@594  = ~Modified Heartseeker +3~
+@595  = ~Legends say that craftsman Pinn O'Reffen fashioned this bow from the heart of a treant, though how he came to possess such material is unknown. He certainly did not anticipate the enchantment within, magic that makes the archer's aim almost infallible for a short period every day. Pinn claimed his skill was responsible, but it is more likely that some aspect of the soul of the treant is still within the wood. This bow requires a Strength of 18 to use.
+
+Emily has further modified this bow to make it easier to handle, improving the wielder's dexterity while it is equipped.
+
+STATISTICS:
+
+Charge abilities:
+– Aim: +7 to hit once per day
+  Duration: 9 seconds
+  
+Equipped abilities:
+– Dexterity: +1
+
+THAC0: +4
+Damage: +2 (missile)
+Speed Factor: 4
+Proficiency Type: Longbow
+Type: Two-handed
+Requires:
+ 18 Strength
+
+Weight: 7~
+@596  = ~Modified Strong Arm +2~
+@597  = ~This massive bow was the property of the ranger Bearpaw, who reportedly received it from a strangely benevolent ogre. The reason for the gift was never discussed, but he earned the respect of everyone he met, and likely befriended the creature while patrolling the Cloakwood Forest. Bearpaw could draw back the bow without the slightest effort, but when he died it was bequeathed to his wife and sons, and not a one could draw the string even halfway. They eventually sold it to a merchant heading south.
+
+Emily has further modified this bow to make it easier to handle, improving the wielder's dexterity while it is equipped.
+
+STATISTICS:
+
+Equipped abilities:
+– Dexterity: +1
+
+THAC0: +3
+Damage: +3 (missile)
+Speed Factor: 5
+Proficiency Type: Longbow
+Type: Two-handed
+Requires:
+ 19 Strength
+
+Weight: 8~
+@598  = ~Modified Elven Court Bow +3~
+@599  = ~This yew bow is more a work of art than a weapon of war: Fine engravings dance over the polished wood, and the bowstring gleams of gold, almost singing when drawn. This was a ceremonial bow in the Elven Court for a thousand years, though that is scarcely a single lifetime in elven terms. Every 50 years or so it was granted to someone who had performed a great service, the recipient eventually choosing who would hold it next. Two centuries ago, a human, Yin Pon, rescued an elven prince and was gifted the bow, which he carried with him to Baldur's Gate, where it was subsequently lost.
+
+Emily has further modified this bow to make it easier to handle, improving the wielder's dexterity while it is equipped.
+
+STATISTICS:
+
+Equipped abilities:
+– Dexterity: +1
+
+THAC0: +4
+Speed Factor: 4
+Proficiency Type: Longbow
+Type: Two-handed
+Requires:
+ 6 Strength
+
+Weight: 2~
+@600  = ~Improved Mana Bow +4~
+@601  = ~Kestsa was given this longbow many years ago by the Cowled Wizards as reward for his exemplary service in the Athkatla city guard. He was tireless in bringing to justice those who unlawfully used magic. The bow served him well in his cause, granting resistance to damage from arcane energy. 
+
+Emily has further modified this bow to make it easier to handle, improving the wielder's dexterity while it is equipped.
+
+STATISTICS:
+
+Equipped abilities:
+– Magic Damage Resistance: +20%
+– Dexterity: +1
+
+THAC0: +5
+Speed Factor: 3
+Proficiency Type: Longbow
+Type: Two-handed
+Requires:
+ 6 Strength
+
+Weight: 2~
+@602  = ~Modified Tuigan Bow +1~
+@603  = ~The Tuigans are a nomadic people widely dispersed across the steppe regions of Faerun but bound together by a common bloodline. The bows they make are specially tailored for their mobile warriors, and the process used is carefully guarded, but the result is well known: Any bow of Tuigan origin can be fired faster than is possible with a normal one.
+
+Emily has further modified this bow to make it easier to handle, improving the wielder's dexterity while it is equipped.
+
+STATISTICS:
+
+Combat abilities:
+– 3 shots per round
+
+Equipped abilities:
+– Dexterity: +1
+
+THAC0: +1
+Damage: +1 (missile)
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength
+
+Weight: 2~
+@604  = ~Modified Tansheron's Bow +3~
+@605  = ~The thin, frayed string of this bow appears unusable, but when it is drawn, a solid but invisible arrow becomes tangible. The lich Tansheron gave this bow to his Watcher, the guardian of his keep who stood atop a tower with neither entrance nor exit. When anyone approached, down would fall a never-ending rain of phantom arrows until they were dead or fled. How this bow was wrested from the Watcher's hand is not known, but would probably make a great tavern story.
+
+Emily has further modified this bow to make it easier to handle, improving the wielder's dexterity while it is equipped.
+
+Note: Avoid equipping normal arrows on your character, else the bow will fire these instead of the phantom arrows.
+
+STATISTICS:
+
+Combat abilities:
+– When no arrows are equipped, the bow fires missiles that are treated as +3 for the purposes of determining what enemies they can damage. The missiles receive +3 to hit, including the bonus listed below, and deal a total of 1d6 missile damage
+
+Equipped abilities:
+– Dexterity: +1
+
+THAC0: +3
+Speed Factor: 3
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength
+
+Weight: 2~
+@606  = ~Modified The Guide +2~
+@607  = ~Heavy Crossbow of Accuracy: The Guide
+A favored siege weapon of King Shastir Longeve, crossbows of this type were designed for the systematic removal of defensive forces thought safe behind the battlements of castles. Scant few of these weapons survive to this day, mainly due to the eventual annihilation of the king's forces by a coalition of subjugated lands.
+
+Emily has further modified this bow to make it easier to handle, improving the wielder's dexterity while it is equipped.
+
+STATISTICS:
+
+Equipped abilities:
+– Dexterity: +1
+
+THAC0: +5
+Damage: +2
+Speed Factor: 7
+Proficiency Type: Crossbow
+Type: Two-handed
+Requires:
+ 12 Strength
+ 
+ Weight: 10~
+@608  = ~Modified The Army Scythe +1~
+@609  = ~Light Crossbow of Speed: The Army Scythe
+A short-lived outpost of humans in the Frozen Forest unearthed this weapon, and many others, from the ruins of an ancient settlement deep within that cold land. Never knowing the names of their extinct benefactors, the colonists used these "tools" to carve a large territory for themselves, though in the end it was for naught. Crushed by a superior number of hobgoblins, these unfortunate souls have joined the ancients in their anonymity.
+
+Emily has further modified this crossbow to make it easier to handle, improving the wielder's dexterity while it is equipped.
+
+STATISTICS:
+
+Combat abilities:
+– 1 extra attack per round
+
+Equipped abilities:
+– Dexterity: +1
+
+THAC0: +1
+Damage: +1
+Speed Factor: 3
+Proficiency Type: Crossbow
+Type: Two-handed
+Requires:
+ 8 Strength
+
+Weight: 5~
+@610  = ~Modified Giant Hair Crossbow +3~
+@611  = ~Though hard to verify, it is claimed that the bowstring of this crossbow is made from the hair of a frost giant. Whatever the truth, the weapon is incredibly hard to draw, although its accuracy and subsequent damage are well worth the strain required (Strength of 15 or greater). 
+
+Emily has further modified this crossbow to make it easier to handle, improving the wielder's dexterity while it is equipped.
+
+STATISTICS:
+
+Equipped abilities:
+– Dexterity: +1
+
+THAC0: +3
+Damage: +5 (missile)
+Speed Factor: 7
+Proficiency Type: Crossbow
+Type: Two-handed
+Requires:
+ 15 Strength
+
+Weight: 11~
+@612  = ~Modified Necaradan's Crossbow +3~
+@613  = ~Bower Necaradan crafted this masterpiece almost thirty years ago, lacing strong enchantments within both the wood and the string. It is said he only fired it once, just to see if it performed as true as he had hoped. He was reportedly not disappointed, but a local nobleman sought the bow soon after, and it eventually fell into the hands of bandits.
+
+Emily has further modified this crossbow to make it easier to handle, improving the wielder's dexterity while it is equipped.
+
+STATISTICS:
+
+Equipped abilities:
+– Dexterity: +1
+
+THAC0: +3
+Damage: +3 (missile)
+Speed Factor: 2
+Proficiency Type: Crossbow
+Type: Two-handed
+Requires:
+ 8 Strength
+
+Weight: 5~
+@614  = ~Modified Crossbow of Affliction +4~
+@615  = ~A devastating weapon, this crossbow unfortunately draws its power directly from the wielder. Some bowmen have used it regardless, and many to great effect, but the drawbacks must be carefully considered. Its most famous owner, Guil de Lyons, made good use of it fighting bandits in remote areas of Faerun, but he ultimately fell when he lacked the strength to defend against a rare assailant that got within striking distance.
+ 
+Emily has further modified this crossbow to make it easier to handle, improving the wielder's dexterity while it is equipped.
+ 
+STATISTICS:
+
+Equipped abilities:
+– Strength: -2
+– Dexterity: +1
+
+THAC0: +4
+Damage: +4 (missile)
+Speed Factor: 6
+Proficiency Type: Crossbow
+Type: Two-handed
+
+Weight: 9~
+@616  = ~Fletch Arrow~
+@617  = ~Fletch Arrow: Emily fletches a dozen enchanted arrows. She may only fletch them while not in combat. 
+	As she gains levels, her skill with enchanting and fletching increases, changing the arrows properties:
+	
+	Level 1: +1 Acid/Cold/Electrical/Fire Damage (Save vs Spell for None). 
+	Level 6: +1 Acid/Cold/Electrical/Fire Damage (Save vs Spell for None), +1 Thaco
+	Level 12: +50% Movement Speed Penalty for one round and +1 Acid/Cold/Electrical/Fire Damage (Save vs Spell for No Damage, no penalty), +1 Thaco
+	Level 18: +50% Movement Speed Penalty for one round and +1 Acid/Cold/Electrical/Fire Damage (Save vs Spell for No Damage, no penalty), +2 Thaco~
+@618  = ~Fletch Bolt~
+@619  = ~Fletch Bolt: Emily fletches a dozen enchanted bolts. She may only fletch them while not in combat. 
+	As she gains levels, her skill with enchanting and fletching increases, changing the bolts properties:
+	
+	Level 1: +1 Acid/Cold/Electrical/Fire Damage (Save vs Spell for None). 
+	Level 6: +1 Acid/Cold/Electrical/Fire Damage (Save vs Spell for None), +1 Thaco
+	Level 12: +50% Movement Speed Penalty for one round and +1 Acid/Cold/Electrical/Fire Damage (Save vs Spell for No Damage, no penalty), +1 Thaco
+	Level 18: +50% Movement Speed Penalty for one round and +1 Acid/Cold/Electrical/Fire Damage (Save vs Spell for No Damage, no penalty), +2 Thaco~
+@620  = ~Catherine~
+@621  = ~Charmaine Hornkeeper~
+@622  = ~Godfrey Hornkeeper~
+@623  = ~Gregory Von Jergunson~
+@624  = ~Guard~
+@625  = ~Charles Castilla~
+@626  = ~Thomas Castilla~
+@627  = ~Darlene Yaris~
+@628  = ~Planar Hunter Leader~
+@629  = ~Myron~
+@630  = ~Derrick~
+@631  = ~Messenger~
+@632  = ~Alina~

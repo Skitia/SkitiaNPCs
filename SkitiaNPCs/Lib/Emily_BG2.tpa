@@ -1,4 +1,5 @@
-LOAD_TRA ~%MOD_FOLDER%/Tra/English/Emily_bg2.tra~
+LOAD_TRA ~%MOD_FOLDER%/Tra/%LANGUAGE%/Emily_bg2.tra~
+
 LAF HANDLE_AUDIO
   STR_VAR
     audio_path = ~SkitiaNPCs/Audio/Emily~
@@ -8,8 +9,8 @@ END
 
 //Allows Aasimar to be displayed on character screen.
 
-OUTER_SET aas_lcase = RESOLVE_STR_REF(~aasimar~ /* aasimar */)
-OUTER_SET aas_ucase = RESOLVE_STR_REF(~Aasimar~ /* Aasimar */)
+OUTER_SET aas_lcase = RESOLVE_STR_REF(@520)
+OUTER_SET aas_ucase = RESOLVE_STR_REF(@521)
 APPEND ~racetext.2da~ ~AASIMAR   185        %aas_lcase%       -1         %aas_ucase%          -1~ UNLESS ~AASIMAR~
 
 
@@ -17,116 +18,116 @@ APPEND ~racetext.2da~ ~AASIMAR   185        %aas_lcase%       -1         %aas_uc
 // Character SoA
 
 COPY ~%MOD_FOLDER%/Cre/X3Emi.cre~ ~override/X3Emi.cre~
-  SAY NAME1 ~Emily~
-  SAY NAME2 ~Emily~
+  SAY NAME1 @522
+  SAY NAME2 @522
   WRITE_ASCII 0x248 ~X3Emi~ #8  //override script
   WRITE_ASCII 0x280 ~X3Emi~ #32  //DV
   WRITE_ASCII 0x2cc ~X3Emi~ #8   //pre-joining dialogue file
   WRITE_ASCII 0X34 ~X3EmiM~ #8   //small portrait
   WRITE_ASCII 0x3c ~X3EmiL~ #8   //medium portrait
-  SAY BIO ~"I'm game for sharing." Emily would quip when you ask about her past, before eagerly launching into details of her childhood. She grew up on her father's estate southeast of Brost in the lands of Tethyr, where she stayed often in seclusion, hiding her visibly elven features with tricks of the hair or hat wear at her parent's insistence, though this did nothing to hide the golden eyes of her lesser understood aasimar heritage. Still, her father was determined to let few suspect she was not the product of his wife, which resulted in loneliness and very few friends. Finding the isolation frustrating, she talks of late night sneak outs, watching the estate guards in their archery practice or escaping the lands entirely, often into trouble and earning herself a stern lecture from the guard captain or her father. She was born to do good, and she won't ignore the weight of her heritage, even at the cost of noble opinion, house politics or a concerned father.~
-  SAY MORALE ~We've got to get out of here.~ [Emilfear]
-  SAY HAPPY ~It appears the tales told of your heroism are quite justified.~ [Emilhap]
-  SAY UNHAPPY_ANNOYED ~I don't approve of our direction.~ []
-  SAY UNHAPPY_SERIOUS ~We need to seriously consider our actions. We cannot continue as we have been!~ []
+  SAY BIO @523
+  SAY MORALE @524
+  SAY HAPPY @525
+  SAY UNHAPPY_ANNOYED @526
+  SAY UNHAPPY_SERIOUS @527
   SAY UNHAPPY_BREAKING_POINT ~~ // Emily only leaves if approval hits -99.
-  SAY LEADER ~Come with me.~ [Emilead]
-  SAY TIRED ~I need to sit down, just for a bit.~ [Emilrest]
-  SAY BORED ~Some excitement would be welcome.~ [Emilidle]
-  SAY BATTLE_CRY1 ~I hope you didn't invite them.~ [X3Ebc1]
-  SAY BATTLE_CRY2 ~Watch my back!~ [X3Ebc2]
-  SAY BATTLE_CRY3 ~Down you go!~ [Emilb2]
-  SAY BATTLE_CRY4 ~You're in for it now!~ [Emilb3]
-  SAY BATTLE_CRY5 ~You'll not be the first to regret crossing me.~ [Emilb4]
+  SAY LEADER @529
+  SAY TIRED @530
+  SAY BORED @531
+  SAY BATTLE_CRY1 @532
+  SAY BATTLE_CRY2 @533
+  SAY BATTLE_CRY3 @534
+  SAY BATTLE_CRY4 @535
+  SAY BATTLE_CRY5 @536
   SAY DAMAGE ~~ [Emildama]
-  SAY DYING ~Not like this...~ [Emildie]
-  SAY HURT ~Damn, I need some healing!~ [Emilhurt]
-  SAY AREA_FOREST ~Hmm, I should have picked up some new boots.~ [Emilfor]
-  SAY AREA_CITY ~Let's look around a bit.~ [X3ELA]
-  SAY AREA_DUNGEON ~Why do dungeons have to be so blasted cold? I'm freezing.~ [Emildun]
-  SAY AREA_DAY ~This shall make a grand tale!~ [X3EDay]
-  SAY AREA_NIGHT ~Silent as ever.~ [X3Ean]
-  SAY SELECT_COMMON1 ~Yes? Is there something you need?~ [Emila]
-  SAY SELECT_COMMON2 ~Is there something I can do for you?~[Emilc2]
-  SAY SELECT_COMMON3 ~Let's stay together now.~ [Emilcs3]
-  SAY SELECT_COMMON4 ~Something you need?~ [Emilcs4]
-  SAY SELECT_COMMON5 ~Well met.~ [Emilcs5]
-  SAY SELECT_COMMON6 ~You have my appreciation.~ [Emilra]
-  SAY SELECT_ACTION1 ~So be it.~ [Emilaa2]
-  SAY SELECT_ACTION2 ~Now this should be interesting.~ [Emilaa3]
-  SAY SELECT_ACTION3 ~I'll see what I can do.~ [Emilac3]
-  SAY SELECT_ACTION4 ~Fair enough.~ [Emilaa4]
-  SAY SELECT_ACTION5 ~Sounds fine to me.~ [Emilac6]
-  SAY SELECT_ACTION6 ~Hmm, I don't know.~ [Emilac7]
-  SAY SELECT_ACTION7 ~Yes.~ [X3Ea7]
-  SAY CRITICAL_HIT ~Ahaha!~ [Emilcrit]
-  SAY CRITICAL_MISS ~Oh bugger!~ [Emilcm]
-  SAY TARGET_IMMUNE ~My attack does nothing!~ [Emilnoth]
-  SAY INVENTORY_FULL ~I am not a pack mule, you know. Notice I lack long ears and hooves.~ [Emilin] 
-  SAY SPELL_DISRUPTED ~No good, my spell failed!~ [Emilspel]
+  SAY DYING @538
+  SAY HURT @539
+  SAY AREA_FOREST @540
+  SAY AREA_CITY @541
+  SAY AREA_DUNGEON @542
+  SAY AREA_DAY @543
+  SAY AREA_NIGHT @544
+  SAY SELECT_COMMON1 @545
+  SAY SELECT_COMMON2 @546
+  SAY SELECT_COMMON3 @547
+  SAY SELECT_COMMON4 @548
+  SAY SELECT_COMMON5 @549
+  SAY SELECT_COMMON6 @550
+  SAY SELECT_ACTION1 @551
+  SAY SELECT_ACTION2 @552
+  SAY SELECT_ACTION3 @553
+  SAY SELECT_ACTION4 @554
+  SAY SELECT_ACTION5 @555
+  SAY SELECT_ACTION6 @556
+  SAY SELECT_ACTION7 @557
+  SAY CRITICAL_HIT @558
+  SAY CRITICAL_MISS @559
+  SAY TARGET_IMMUNE @560
+  SAY INVENTORY_FULL @561 
+  SAY SPELL_DISRUPTED @562
   SAY SET_A_TRAP ~~ []
-  SAY HIDDEN_IN_SHADOWS ~Time to fade into the background, hmm?~ [Emilhide]
+  SAY HIDDEN_IN_SHADOWS @563
   SAY PICKED_POCKET ~~ []
-  SAY SELECT_RARE1 ~Come with me.~ [Emilead]
-  SAY SELECT_RARE2 ~Come with me.~ [Emilead]
-  SAY REACT_TO_DIE_GENERAL ~Blast, not now!~ [X3Ertdg]
+  SAY SELECT_RARE1 @529
+  SAY SELECT_RARE2 @529
+  SAY REACT_TO_DIE_GENERAL @564
  
 // Character ToB
  
   COPY ~%MOD_FOLDER%/Cre/X3Emi25.cre~ ~override/X3Emi25.cre~
-  SAY NAME1 ~Emily~
-  SAY NAME2 ~Emily~
+  SAY NAME1 @522
+  SAY NAME2 @522
   WRITE_ASCII 0x248 ~X3Emi25~ #8  //override script
   WRITE_ASCII 0x280 ~X3Emi~ #32  //DV
   WRITE_ASCII 0x2cc ~X3Emi25~ #8   //pre-joining dialogue file
   WRITE_ASCII 0X34 ~X3EmiM~ #8   //small portrait
   WRITE_ASCII 0x3c ~X3EmiL~ #8   //medium portrait
-  SAY BIO ~"I'm game for sharing." Emily would quip when you ask about her past, before eagerly launching into details of her childhood. She grew up on her father's estate southeast of Brost in the lands of Tethyr, where she stayed often in seclusion, hiding her visibly elven features with tricks of the hair or hat wear at her parent's insistence, though this did nothing to hide the golden eyes of her lesser understood aasimar heritage. Still, her father was determined to let few suspect she was not the product of his wife, which resulted in loneliness and very few friends. Finding the isolation frustrating, she talks of late night sneak outs, watching the estate guards in their archery practice or escaping the lands entirely, often into trouble and earning herself a stern lecture from the guard captain or her father. She was born to do good, and she won't ignore the weight of her heritage, even at the cost of noble opinion, house politics or a concerned father.~
-  SAY MORALE ~We've got to get out of here.~ [Emilfear]
-  SAY HAPPY ~It appears the tales told of your heroism are quite justified.~ [Emilhap]
-  SAY UNHAPPY_ANNOYED ~I don't approve of our direction.~ []
-  SAY UNHAPPY_SERIOUS ~We need to seriously consider our actions. We cannot continue as we have been!~ []
+  SAY BIO @523
+  SAY MORALE @524
+  SAY HAPPY @525
+  SAY UNHAPPY_ANNOYED @526
+  SAY UNHAPPY_SERIOUS @527
   SAY UNHAPPY_BREAKING_POINT ~~ // Emily only leaves if approval hits -99.
-  SAY LEADER ~Come with me.~ [Emilead]
-  SAY TIRED ~I need to sit down, just for a bit.~ [Emilrest]
-  SAY BORED ~Some excitement would be welcome.~ [Emilidle]
-  SAY BATTLE_CRY1 ~I hope you didn't invite them.~ [X3Ebc1]
-  SAY BATTLE_CRY2 ~Watch my back!~ [X3Ebc2]
-  SAY BATTLE_CRY3 ~Down you go!~ [Emilb2]
-  SAY BATTLE_CRY4 ~You're in for it now!~ [Emilb3]
-  SAY BATTLE_CRY5 ~You'll not be the first to regret crossing me.~ [Emilb4]
+  SAY LEADER @529
+  SAY TIRED @530
+  SAY BORED @531
+  SAY BATTLE_CRY1 @532
+  SAY BATTLE_CRY2 @533
+  SAY BATTLE_CRY3 @534
+  SAY BATTLE_CRY4 @535
+  SAY BATTLE_CRY5 @536
   SAY DAMAGE ~~ [Emildama]
-  SAY DYING ~Not like this...~ [Emildie]
-  SAY HURT ~Damn, I need some healing!~ [Emilhurt]
-  SAY AREA_FOREST ~Hmm, I should have picked up some new boots.~ [Emilfor]
-  SAY AREA_CITY ~Let's look around a bit.~ [X3ELA]
-  SAY AREA_DUNGEON ~Why do dungeons have to be so blasted cold? I'm freezing.~ [Emildun]
-  SAY AREA_DAY ~This shall make a grand tale!~ [X3EDay]
-  SAY AREA_NIGHT ~Silent as ever.~ [X3Ean]
-  SAY SELECT_COMMON1 ~Yes? Is there something you need?~ [Emila]
-  SAY SELECT_COMMON2 ~Is there something I can do for you?~[Emilc2]
-  SAY SELECT_COMMON3 ~Let's stay together now.~ [Emilcs3]
-  SAY SELECT_COMMON4 ~Something you need?~ [Emilcs4]
-  SAY SELECT_COMMON5 ~Well met.~ [Emilcs5]
-  SAY SELECT_COMMON6 ~You have my appreciation.~ [Emilra]
-  SAY SELECT_ACTION1 ~So be it.~ [Emilaa2]
-  SAY SELECT_ACTION2 ~Now this should be interesting.~ [Emilaa3]
-  SAY SELECT_ACTION3 ~I'll see what I can do.~ [Emilac3]
-  SAY SELECT_ACTION4 ~Fair enough.~ [Emilaa4]
-  SAY SELECT_ACTION5 ~Sounds fine to me.~ [Emilac6]
-  SAY SELECT_ACTION6 ~Hmm, I don't know.~ [Emilac7]
-  SAY SELECT_ACTION7 ~Yes.~ [X3Ea7]
-  SAY CRITICAL_HIT ~Ahaha!~ [Emilcrit]
-  SAY CRITICAL_MISS ~Oh bugger!~ [Emilcm]
-  SAY TARGET_IMMUNE ~My attack does nothing!~ [Emilnoth]
-  SAY INVENTORY_FULL ~I am not a pack mule, you know. Notice I lack long ears and hooves.~ [Emilin] 
-  SAY SPELL_DISRUPTED ~No good, my spell failed!~ [Emilspel]
+  SAY DYING @538
+  SAY HURT @539
+  SAY AREA_FOREST @540
+  SAY AREA_CITY @541
+  SAY AREA_DUNGEON @542
+  SAY AREA_DAY @543
+  SAY AREA_NIGHT @544
+  SAY SELECT_COMMON1 @545
+  SAY SELECT_COMMON2 @546
+  SAY SELECT_COMMON3 @547
+  SAY SELECT_COMMON4 @548
+  SAY SELECT_COMMON5 @549
+  SAY SELECT_COMMON6 @550
+  SAY SELECT_ACTION1 @551
+  SAY SELECT_ACTION2 @552
+  SAY SELECT_ACTION3 @553
+  SAY SELECT_ACTION4 @554
+  SAY SELECT_ACTION5 @555
+  SAY SELECT_ACTION6 @556
+  SAY SELECT_ACTION7 @557
+  SAY CRITICAL_HIT @558
+  SAY CRITICAL_MISS @559
+  SAY TARGET_IMMUNE @560
+  SAY INVENTORY_FULL @561 
+  SAY SPELL_DISRUPTED @562
   SAY SET_A_TRAP ~~ []
-  SAY HIDDEN_IN_SHADOWS ~Time to fade into the background, hmm?~ [Emilhide]
+  SAY HIDDEN_IN_SHADOWS @563
   SAY PICKED_POCKET ~~ []
-  SAY SELECT_RARE1 ~Come with me.~ [Emilead]
-  SAY SELECT_RARE2 ~Come with me.~ [Emilead]
-  SAY REACT_TO_DIE_GENERAL ~Blast, not now!~ [X3Ertdg]
+  SAY SELECT_RARE1 @529
+  SAY SELECT_RARE2 @529
+  SAY REACT_TO_DIE_GENERAL @564
   
 APPEND ~pdialog.2da~
 ~X3Emi       X3EmiP             X3EmiJ			X3EmiD~
@@ -180,169 +181,66 @@ ADD_JOURNAL TITLE (@1) @2 @3 @4 @5 @6 @7 @8 @9 @10 @11 @12 @13 @14 @15 @16 @17 @
   // Items 
  COPY ~%MOD_FOLDER%/items/X3EBody.bam~ ~override/X3EBody.bam~ 
   COPY ~%MOD_FOLDER%/items/X3EBody.itm~ ~override/X3EBody.itm~ 
-SAY NAME1 ~Emily~
-SAY NAME2 ~Emily~
-SAY DESC ~Despite being bitten, Emily's aasimar blood seems to have shielded her from turning. She is losing blood and will likely die if she does not receive healing assistance soon.
-
-STATISTICS:
-
-Weight: 135~
+SAY NAME1 @522
+SAY NAME2 @522
+SAY DESC @565
   
   // Note, none of the arrows and bolts will be used by Emily at the moment. Can delete if we never use them.
    COPY_EXISTING ~%MOD_FOLDER%/Items/x3EArrow.bam~ ~override/x3EArrow.bam~
     COPY_EXISTING ~%MOD_FOLDER%/Items/x3EBolt.bam~ ~override/x3EBolt.bam~
  COPY_EXISTING ~%MOD_FOLDER%/Items/x3EArro1.itm~ ~override/x3EArro1.itm~
-SAY NAME1 ~Enchanted Arrow I~
-SAY NAME2 ~Enchanted Arrow I~
-SAY DESC ~This arrow fletched by Emily is a basic enchanted arrow, fast and light. It strikes with the enchantment of four different elements. 
-
-STATISTICS:
-
-Damage: 1d6 (missile) +1 Acid/Cold/Electrical/Fire Damage (Save vs. Spell for none)
-Launcher: Bow
-
-Weight: 0~
+SAY NAME1 @566
+SAY NAME2 @566
+SAY DESC @567
 
 
  COPY_EXISTING ~%MOD_FOLDER%/Items/x3EArro2.itm~ ~override/x3EArro2.itm~
-SAY NAME1 ~Enchanted Arrow II~
-SAY NAME2 ~Enchanted Arrow II~
-SAY DESC ~This arrow fletched by Emily is a simple enchanted arrow, fast, light, and precise. It strikes with the enchantment of four different elements. 
-
-STATISTICS:
-
-THACO: +1
-Damage: 1d6 (missile) +1 Acid/Cold/Electrical/Fire Damage (Save vs. Spell for none)
-Launcher: Bow
-
-Weight: 0~
+SAY NAME1 @568
+SAY NAME2 @568
+SAY DESC @569
 
  COPY_EXISTING ~%MOD_FOLDER%/Items/x3EArro3.itm~ ~override/x3EArro3.itm~
-SAY NAME1 ~Enchanted Arrow III~
-SAY NAME2 ~Enchanted Arrow III~
-SAY DESC ~This arrow fletched by Emily is a heavily enchanted arrow, fast, light, and precise. It strikes with the enchantment of four different elements, and its arrowhead splinters upon contact, possibly slowing its target. 
-
-STATISTICS:
-
-Combat Abilities
--Target must make a save versus spell or have their movement speed halved for one round.
-
-THACO: +1
-Damage: 1d6 (missile) +1 Acid/Cold/Electrical/Fire Damage (Save vs. Spell for none)
-Launcher: Bow
-
-Weight: 0~
+SAY NAME1 @570
+SAY NAME2 @570
+SAY DESC @571
 
 
  COPY_EXISTING ~%MOD_FOLDER%/Items/x3EArro4.itm~ ~override/x3EArro4.itm~
-SAY NAME1 ~Enchanted Arrow IV~
-SAY NAME2 ~Enchanted Arrow IV~
-SAY DESC ~This arrow represents Emily's finest fletching. The arrow is fast and precise, and sends its surging energy of four elements into its victim, possibly slowing their movement by half.
-
-STATISTICS:
-
-Combat Abilities
--Target must make a save versus spell or have their movement speed halved for one round.
-
-THACO: +2
-Damage: 1d6 (missile) +1 Acid/Cold/Fire/Electrical Damage (Save vs. Spell for none)
-Launcher: Bow
-
-Weight: 0~
+SAY NAME1 @572
+SAY NAME2 @572
+SAY DESC @573
 
 COPY_EXISTING ~%MOD_FOLDER%/Items/x3EBolt1.itm~ ~override/x3EBolt1.itm~
-SAY NAME1 ~Enchanted Bolt I~
-SAY NAME2 ~Enchanted Bolt I~
-SAY DESC ~This Bolt fletched by Emily is a basic enchanted bolt, fast and light. It strikes with the enchantment of four different elements. 
-
-STATISTICS:
-
-Damage: 1d6 (missile) +1 Acid/Cold/Electrical/Fire Damage (Save vs. Spell for none)
-Launcher: Crossbow
-
-Weight: 0~
+SAY NAME1 @574
+SAY NAME2 @574
+SAY DESC @575
 
 
  COPY_EXISTING ~%MOD_FOLDER%/Items/x3EBolt2.itm~ ~override/x3EBolt2.itm~
-SAY NAME1 ~Enchanted Bolt II~
-SAY NAME2 ~Enchanted Bolt II~
-SAY DESC ~This Bolt fletched by Emily is a simple enchanted bolt, fast, light, and precise. It strikes with the enchantment of four different elements. 
-
-STATISTICS:
-
-THACO: +1
-Damage: 1d6 (missile) +1 Acid/Cold/Electrical/Fire Damage (Save vs. Spell for none)
-Launcher: Crossbow
-
-Weight: 0~
+SAY NAME1 @576
+SAY NAME2 @576
+SAY DESC @577
 
 
  COPY_EXISTING ~%MOD_FOLDER%/Items/x3EBolt3.itm~ ~override/x3EBolt3.itm~
-SAY NAME1 ~Enchanted Bolt III~
-SAY NAME2 ~Enchanted Bolt III~
-SAY DESC ~This Bolt fletched by Emily is a heavily enchanted bolt, fast, light, and precise. It strikes with the enchantment of four different elements, and its head splinters upon contact, possibly slowing its target. 
-
-STATISTICS:
-
-Combat Abilities
--Target must make a save versus spell or have their movement speed halved for one round.
-
-THACO: +1
-Damage: 1d6 (missile) +1 Acid/Cold/Electrical/Fire Damage (Save vs. Spell for none)
-Launcher: Crossbow
-
-Weight: 0~
+SAY NAME1 @578
+SAY NAME2 @578
+SAY DESC @579
 
 
  COPY_EXISTING ~%MOD_FOLDER%/Items/x3EBolt4.itm~ ~override/x3EBolt4.itm~
-SAY NAME1 ~Enchanted Bolt IV~
-SAY NAME2 ~Enchanted Bolt IV~
-SAY DESC ~This Bolt represents Emily's finest fletching. The bolt is fast and precise, and sends its surging energy of four elements into its victim, possibly slowing their movement by half. 
-
-STATISTICS:
-
-Combat Abilities
--Target must make a save versus spell or have their movement speed halved for one round.
-
-THACO: +2
-Damage: 1d6 (missile) +1 Acid/Cold/Electrical/Fire Damage (Save vs. Spell for none)
-Launcher: Crossbow
-
-Weight: 0~
+SAY NAME1 @580
+SAY NAME2 @580
+SAY DESC @581
 
 COPY_EXISTING ~%MOD_FOLDER%/Items/x3ESWORD.itm~ ~override/x3ESWORD.itm~
-SAY NAME1 ~Thomas's Spellblade~
-SAY NAME2 ~Thomas's Spellblade~
-SAY DESC ~Thomas's Spellblade courses with magical energy. When it hits its target, some of that energy pours into its strike, possibly magically damaging them and making the target's resistance against said damage weaker, and thus easier to kill.
-
-STATISTICS:
-Special: -1 Penalty to Saves vs spell per hit for 30 seconds (Save vs spell at -2 penalty to avoid)
-THAC0: +3
-Damage: 2d4+3 (slashing), +2 magic (Save vs spell for None)
-Speed Factor: 5
-Proficiency Type: Bastard Sword
-Type: One-handed
-Requires:
- 11 Strength
-
-Weight: 7~
+SAY NAME1 @582
+SAY NAME2 @582
+SAY DESC @583
 COPY_EXISTING ~%MOD_FOLDER%/Items/x3RingE.itm~ ~override/x3RingE.itm~
-SAY NAME1 ~Emily's Engagement Ring~
-SAY NAME2 ~Emily's Engagement Ring~
-SAY DESC ~Weaved in gold and with a heart signet, you gave this ring to Emily as a promise of marriage. Whether you will be able to deliver is up to fate.
-The ring's enchantments have taken affect with its wearer's acceptance, and they will surely help to keep Emily safer for the battles to come.
-
-STATISTICS:
-
-Casting Ability:
--May Cast Bolt of Glory x2 per day.
-
-Equipped abilities:
--Regenerates one hitpoint every three seconds 
--Armor Class: +2
--Save vs. Death: +3
-
-Weight: 1~ 
+SAY NAME1 @584
+SAY NAME2 @584
+SAY DESC @585 
     LPF ADD_ITEM_EQEFFECT
     INT_VAR
       opcode = 319
@@ -350,422 +248,176 @@ Weight: 1~
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Emily~)
+	  special = RESOLVE_STR_REF (@522)
 	STR_VAR
 	  resource = X3Emi
 END
 COPY ~%MOD_FOLDER%/Items/iX3EN.bam~ ~override/iX3EN.bam~ 
 COPY ~%MOD_FOLDER%/Items/cX3EN.bam~ ~override/cX3EN.bam~ 
 COPY ~%MOD_FOLDER%/Items/X3EN.itm~ ~override/X3EN.itm~ 
-SAY NAME1 ~Emily's Wing Necklace~
-SAY NAME2 ~Emily's Wing Necklace~
-SAY DESC ~Emily's Wing Necklace: This silver wing threaded into a necklace contains warm, soothing magic.
-When a hand is put onto another being, the wearer of the necklace may let its magic thread from them into their target, curing them of any paralysis once, where it will then 
-need time to restore its magic within after a period of rest. This necklace is the only possession Emily has that she believes is from her birth mother, and she is unwilling to part with it for any reason.
-
-STATISTICS:
-
-Charge abilities (Once per day):
--Cure Paralysis
-
-Weight: 1~
-OUTER_SET strref = RESOLVE_STR_REF (~Sorry, <CHARNAME>. I can't give that up. It means too much to me.~) 
+SAY NAME1 @586
+SAY NAME2 @586
+SAY DESC @587
+OUTER_SET strref = RESOLVE_STR_REF (@588) 
 APPEND item_use.2da ~X3EN Emily %strref% 3~
 	 
 COPY ~%MOD_FOLDER%/Items/X3EHEAD.itm~ ~override/X3EHEAD.itm~ 
-SAY NAME1 ~Emily's Silver Circlet~
-SAY NAME2 ~Emily's Silver Circlet~
-SAY DESC  ~Emily's Silver Circlet: These silver circlets are required to be worn by the nobility of House Castilla, and gifted to them when they reach adulthood. Each is enchanted with magic unique to the wearer. 
-Emily's Silver Circlet enhances her concentration with the bow, allowing her hits to be sharper. However, unlike a helmet, circlets do not protect against critical hits.
-
-STATISTICS:
-
-Equipped abilities:
--Ranged Critical Chance: +5%
--Does not protect against critical hits
-
-Weight: 1~ 
-OUTER_SET strref = RESOLVE_STR_REF (~Sorry, <CHARNAME>. That has to stay on my head. It means too much to me.~) 
+SAY NAME1 @589
+SAY NAME2 @589
+SAY DESC  @590 
+OUTER_SET strref = RESOLVE_STR_REF (@591) 
 APPEND item_use.2da ~X3EHEAD Emily %strref% 3~
 // Crafted Bows 
 COPY ~%MOD_FOLDER%/Items/X3BOW09.itm~ ~override/X3BOW09.itm~ 
-SAY NAME1 ~Modified Ripper +2~
-SAY NAME2 ~Modified Ripper +2~
-SAY DESC ~This composite longbow was one of many made by a half-elven craftsman whose name has been lost to history. At one time there were several hundred in use, a favorite of scouts who patrolled the Anauroch desert, but many have been lost or destroyed. Only a few are still known to exist, and they see little use due to the tremendous strength they require. 
-
-STATISTICS:
-
-Equipped abilities:
-– Dexterity: +1
-
-THAC0: +3
-Damage: +2 (missile)
-Speed Factor: 5
-Proficiency Type: Longbow
-Type: Two-handed
-Requires:
- 18 Strength
-
-Weight: 8~
+SAY NAME1 @592
+SAY NAME2 @592
+SAY DESC @593
 COPY ~%MOD_FOLDER%/Items/X3BOW10.itm~ ~override/X3BOW10.itm~ 
-SAY NAME1 ~Modified Heartseeker +3~
-SAY NAME2 ~Modified Heartseeker +3~
-SAY DESC ~Legends say that craftsman Pinn O'Reffen fashioned this bow from the heart of a treant, though how he came to possess such material is unknown. He certainly did not anticipate the enchantment within, magic that makes the archer's aim almost infallible for a short period every day. Pinn claimed his skill was responsible, but it is more likely that some aspect of the soul of the treant is still within the wood. This bow requires a Strength of 18 to use.
-
-Emily has further modified this bow to make it easier to handle, improving the wielder's dexterity while it is equipped.
-
-STATISTICS:
-
-Charge abilities:
-– Aim: +7 to hit once per day
-  Duration: 9 seconds
-  
-Equipped abilities:
-– Dexterity: +1
-
-THAC0: +4
-Damage: +2 (missile)
-Speed Factor: 4
-Proficiency Type: Longbow
-Type: Two-handed
-Requires:
- 18 Strength
-
-Weight: 7~
+SAY NAME1 @594
+SAY NAME2 @594
+SAY DESC @595
 
 COPY ~%MOD_FOLDER%/Items/X3BOW10.itm~ ~override/X3BOW10.itm~ 
-SAY NAME1 ~Modified Strong Arm +2~
-SAY NAME2 ~Modified Strong Arm +2~
-SAY DESC ~This massive bow was the property of the ranger Bearpaw, who reportedly received it from a strangely benevolent ogre. The reason for the gift was never discussed, but he earned the respect of everyone he met, and likely befriended the creature while patrolling the Cloakwood Forest. Bearpaw could draw back the bow without the slightest effort, but when he died it was bequeathed to his wife and sons, and not a one could draw the string even halfway. They eventually sold it to a merchant heading south.
-
-Emily has further modified this bow to make it easier to handle, improving the wielder's dexterity while it is equipped.
-
-STATISTICS:
-
-Equipped abilities:
-– Dexterity: +1
-
-THAC0: +3
-Damage: +3 (missile)
-Speed Factor: 5
-Proficiency Type: Longbow
-Type: Two-handed
-Requires:
- 19 Strength
-
-Weight: 8~
+SAY NAME1 @596
+SAY NAME2 @596
+SAY DESC @597
 
 COPY ~%MOD_FOLDER%/Items/X3BOW12.itm~ ~override/X3BOW12.itm~ 
-SAY NAME1 ~Modified Elven Court Bow +3~
-SAY NAME2 ~Modified Elven Court Bow +3~
-SAY DESC ~This yew bow is more a work of art than a weapon of war: Fine engravings dance over the polished wood, and the bowstring gleams of gold, almost singing when drawn. This was a ceremonial bow in the Elven Court for a thousand years, though that is scarcely a single lifetime in elven terms. Every 50 years or so it was granted to someone who had performed a great service, the recipient eventually choosing who would hold it next. Two centuries ago, a human, Yin Pon, rescued an elven prince and was gifted the bow, which he carried with him to Baldur's Gate, where it was subsequently lost.
-
-Emily has further modified this bow to make it easier to handle, improving the wielder's dexterity while it is equipped.
-
-STATISTICS:
-
-Equipped abilities:
-– Dexterity: +1
-
-THAC0: +4
-Speed Factor: 4
-Proficiency Type: Longbow
-Type: Two-handed
-Requires:
- 6 Strength
-
-Weight: 2~
+SAY NAME1 @598
+SAY NAME2 @598
+SAY DESC @599
 COPY ~%MOD_FOLDER%/Items/X3BOW13.itm~ ~override/X3BOW13.itm~ 
-SAY NAME1 ~Improved Mana Bow +4~
-SAY NAME2 ~Improved Mana Bow +4~
-SAY DESC ~Kestsa was given this longbow many years ago by the Cowled Wizards as reward for his exemplary service in the Athkatla city guard. He was tireless in bringing to justice those who unlawfully used magic. The bow served him well in his cause, granting resistance to damage from arcane energy. 
-
-Emily has further modified this bow to make it easier to handle, improving the wielder's dexterity while it is equipped.
-
-STATISTICS:
-
-Equipped abilities:
-– Magic Damage Resistance: +20%
-– Dexterity: +1
-
-THAC0: +5
-Speed Factor: 3
-Proficiency Type: Longbow
-Type: Two-handed
-Requires:
- 6 Strength
-
-Weight: 2~
+SAY NAME1 @600
+SAY NAME2 @600
+SAY DESC @601
 
 COPY ~%MOD_FOLDER%/Items/X3BOW14.itm~ ~override/X3BOW14.itm~ 
-SAY NAME1 ~Modified Tuigan Bow +1~
-SAY NAME2 ~Modified Tuigan Bow +1~
-SAY DESC ~The Tuigans are a nomadic people widely dispersed across the steppe regions of Faerûn but bound together by a common bloodline. The bows they make are specially tailored for their mobile warriors, and the process used is carefully guarded, but the result is well known: Any bow of Tuigan origin can be fired faster than is possible with a normal one.
-
-Emily has further modified this bow to make it easier to handle, improving the wielder's dexterity while it is equipped.
-
-STATISTICS:
-
-Combat abilities:
-– 3 shots per round
-
-Equipped abilities:
-– Dexterity: +1
-
-THAC0: +1
-Damage: +1 (missile)
-Speed Factor: 5
-Proficiency Type: Shortbow
-Type: Two-handed
-Requires:
- 6 Strength
-
-Weight: 2~
+SAY NAME1 @602
+SAY NAME2 @602
+SAY DESC @603
 COPY ~%MOD_FOLDER%/Items/X3BOW15.itm~ ~override/X3BOW15.itm~ 
-SAY NAME1 ~Modified Tansheron's Bow +3~
-SAY NAME2 ~Modified Tansheron's Bow +3~
-SAY DESC ~The thin, frayed string of this bow appears unusable, but when it is drawn, a solid but invisible arrow becomes tangible. The lich Tansheron gave this bow to his Watcher, the guardian of his keep who stood atop a tower with neither entrance nor exit. When anyone approached, down would fall a never-ending rain of phantom arrows until they were dead or fled. How this bow was wrested from the Watcher's hand is not known, but would probably make a great tavern story.
-
-Emily has further modified this bow to make it easier to handle, improving the wielder's dexterity while it is equipped.
-
-Note: Avoid equipping normal arrows on your character, else the bow will fire these instead of the phantom arrows.
-
-STATISTICS:
-
-Combat abilities:
-– When no arrows are equipped, the bow fires missiles that are treated as +3 for the purposes of determining what enemies they can damage. The missiles receive +3 to hit, including the bonus listed below, and deal a total of 1d6 missile damage
-
-Equipped abilities:
-– Dexterity: +1
-
-THAC0: +3
-Speed Factor: 3
-Proficiency Type: Shortbow
-Type: Two-handed
-Requires:
- 6 Strength
-
-Weight: 2~
+SAY NAME1 @604
+SAY NAME2 @604
+SAY DESC @605
 
 COPY ~%MOD_FOLDER%/Items/X3XBow03.itm~ ~override/X3XBow03.itm~ 
-SAY NAME1 ~Modified The Guide +2~
-SAY NAME2 ~Modified The Guide +2~
-SAY DESC ~Heavy Crossbow of Accuracy: The Guide
-A favored siege weapon of King Shastir Longeve, crossbows of this type were designed for the systematic removal of defensive forces thought safe behind the battlements of castles. Scant few of these weapons survive to this day, mainly due to the eventual annihilation of the king's forces by a coalition of subjugated lands.
-
-Emily has further modified this bow to make it easier to handle, improving the wielder's dexterity while it is equipped.
-
-STATISTICS:
-
-Equipped abilities:
-– Dexterity: +1
-
-THAC0: +5
-Damage: +2
-Speed Factor: 7
-Proficiency Type: Crossbow
-Type: Two-handed
-Requires:
- 12 Strength
- 
- Weight: 10~
+SAY NAME1 @606
+SAY NAME2 @606
+SAY DESC @607
 
 COPY ~%MOD_FOLDER%/Items/X3XBow06.itm~ ~override/X3XBow06.itm~ 
-SAY NAME1 ~Modified The Army Scythe +1~
-SAY NAME2 ~Modified The Army Scythe +1~
-SAY DESC ~Light Crossbow of Speed: The Army Scythe
-A short-lived outpost of humans in the Frozen Forest unearthed this weapon, and many others, from the ruins of an ancient settlement deep within that cold land. Never knowing the names of their extinct benefactors, the colonists used these "tools" to carve a large territory for themselves, though in the end it was for naught. Crushed by a superior number of hobgoblins, these unfortunate souls have joined the ancients in their anonymity.
-
-Emily has further modified this crossbow to make it easier to handle, improving the wielder's dexterity while it is equipped.
-
-STATISTICS:
-
-Combat abilities:
-– 1 extra attack per round
-
-Equipped abilities:
-– Dexterity: +1
-
-THAC0: +1
-Damage: +1
-Speed Factor: 3
-Proficiency Type: Crossbow
-Type: Two-handed
-Requires:
- 8 Strength
-
-Weight: 5~
+SAY NAME1 @608
+SAY NAME2 @608
+SAY DESC @609
 
 
 
 COPY ~%MOD_FOLDER%/Items/X3XBow08.itm~ ~override/X3XBow08.itm~ 
-SAY NAME1 ~Modified Giant Hair Crossbow +3~
-SAY NAME2 ~Modified Giant Hair Crossbow +3~
-SAY DESC ~Though hard to verify, it is claimed that the bowstring of this crossbow is made from the hair of a frost giant. Whatever the truth, the weapon is incredibly hard to draw, although its accuracy and subsequent damage are well worth the strain required (Strength of 15 or greater). 
-
-Emily has further modified this crossbow to make it easier to handle, improving the wielder's dexterity while it is equipped.
-
-STATISTICS:
-
-Equipped abilities:
-– Dexterity: +1
-
-THAC0: +3
-Damage: +5 (missile)
-Speed Factor: 7
-Proficiency Type: Crossbow
-Type: Two-handed
-Requires:
- 15 Strength
-
-Weight: 11~
+SAY NAME1 @610
+SAY NAME2 @610
+SAY DESC @611
 
 COPY ~%MOD_FOLDER%/Items/X3XBow10.itm~ ~override/X3XBow10.itm~ 
-SAY NAME1 ~Modified Necaradan's Crossbow +3~
-SAY NAME2 ~Modified Necaradan's Crossbow +3~
-SAY DESC ~Bower Necaradan crafted this masterpiece almost thirty years ago, lacing strong enchantments within both the wood and the string. It is said he only fired it once, just to see if it performed as true as he had hoped. He was reportedly not disappointed, but a local nobleman sought the bow soon after, and it eventually fell into the hands of bandits.
-
-Emily has further modified this crossbow to make it easier to handle, improving the wielder's dexterity while it is equipped.
-
-STATISTICS:
-
-Equipped abilities:
-– Dexterity: +1
-
-THAC0: +3
-Damage: +3 (missile)
-Speed Factor: 2
-Proficiency Type: Crossbow
-Type: Two-handed
-Requires:
- 8 Strength
-
-Weight: 5~
+SAY NAME1 @612
+SAY NAME2 @612
+SAY DESC @613
 
 COPY ~%MOD_FOLDER%/Items/X3XBow13.itm~ ~override/X3XBow13.itm~ 
-SAY NAME1 ~Modified Crossbow of Affliction +4~
-SAY NAME2 ~Modified Crossbow of Affliction +4~
-SAY DESC ~A devastating weapon, this crossbow unfortunately draws its power directly from the wielder. Some bowmen have used it regardless, and many to great effect, but the drawbacks must be carefully considered. Its most famous owner, Guil de Lyons, made good use of it fighting bandits in remote areas of Faerûn, but he ultimately fell when he lacked the strength to defend against a rare assailant that got within striking distance.
- 
-Emily has further modified this crossbow to make it easier to handle, improving the wielder's dexterity while it is equipped.
- 
-STATISTICS:
-
-Equipped abilities:
-– Strength: -2
-– Dexterity: +1
-
-THAC0: +4
-Damage: +4 (missile)
-Speed Factor: 6
-Proficiency Type: Crossbow
-Type: Two-handed
-
-Weight: 9~
+SAY NAME1 @614
+SAY NAME2 @614
+SAY DESC @615
 
 //Spell
 COPY	"%MOD_FOLDER%/Spells/X3EFA.spl" override
-	SAY NAME1 ~Fletch Arrow~
-	SAY NAME2 ~Fletch Arrow~
-	SAY 0x50 ~Fletch Arrow: Emily fletches a dozen enchanted arrows. She may only fletch them while not in combat. 
-	As she gains levels, her skill with enchanting and fletching increases, changing the arrows properties:
-	
-	Level 1: +1 Acid/Cold/Electrical/Fire Damage (Save vs Spell for None). 
-	Level 6: +1 Acid/Cold/Electrical/Fire Damage (Save vs Spell for None), +1 Thaco
-	Level 12: +50% Movement Speed Penalty for one round and +1 Acid/Cold/Electrical/Fire Damage (Save vs Spell for No Damage, no penalty), +1 Thaco
-	Level 18: +50% Movement Speed Penalty for one round and +1 Acid/Cold/Electrical/Fire Damage (Save vs Spell for No Damage, no penalty), +2 Thaco~
+	SAY NAME1 @616
+	SAY NAME2 @616
+	SAY 0x50 @617
 	
 	//Spell
 COPY	"%MOD_FOLDER%/Spells/X3EFB.spl" override
-	SAY NAME1 ~Fletch Bolt~
-	SAY NAME2 ~Fletch Bolt~
-	SAY 0x50 ~Fletch Bolt: Emily fletches a dozen enchanted bolts. She may only fletch them while not in combat. 
-	As she gains levels, her skill with enchanting and fletching increases, changing the bolts properties:
-	
-	Level 1: +1 Acid/Cold/Electrical/Fire Damage (Save vs Spell for None). 
-	Level 6: +1 Acid/Cold/Electrical/Fire Damage (Save vs Spell for None), +1 Thaco
-	Level 12: +50% Movement Speed Penalty for one round and +1 Acid/Cold/Electrical/Fire Damage (Save vs Spell for No Damage, no penalty), +1 Thaco
-	Level 18: +50% Movement Speed Penalty for one round and +1 Acid/Cold/Electrical/Fire Damage (Save vs Spell for No Damage, no penalty), +2 Thaco~ 
+	SAY NAME1 @618
+	SAY NAME2 @618
+	SAY 0x50 @619 
 
 // Creatures 
 COPY ~%MOD_FOLDER%/Cre/X3ECath.cre~ ~override/X3ECath.cre~
   WRITE_ASCII 0x248 ~X3ECATH~ #8  //override script
   WRITE_ASCII 0x280 ~X3ECATH~ #32  //DV
   WRITE_ASCII 0x2cc ~X3ECATH~ #8   // Dialogue 
-  SAY NAME1 ~Catherine~
-  SAY NAME2 ~Catherine~
+  SAY NAME1 @620
+  SAY NAME2 @620
 COPY ~%MOD_FOLDER%/Cre/X3ECH.cre~ override 
   WRITE_ASCII 0x248 ~X3ECH~ #8  //override script
   WRITE_ASCII 0x280 ~X3ECH~ #32  //DV
   WRITE_ASCII 0x2cc ~X3ECH~ #8   // Dialogue 
-  SAY NAME1 ~Charmaine Hornkeeper~
-  SAY NAME2 ~Charmaine Hornkeeper~
+  SAY NAME1 @621
+  SAY NAME2 @621
 COPY ~%MOD_FOLDER%/Cre/X3EGOD.cre~ override 
   WRITE_ASCII 0x248 ~X3EGOD~ #8  //override script
   WRITE_ASCII 0x280 ~X3EGOD~ #32  //DV
   WRITE_ASCII 0x2cc ~X3EGOD~ #8   // Dialogue 
-  SAY NAME1 ~Godfrey Hornkeeper~
-  SAY NAME2 ~Godfrey Hornkeeper~  
+  SAY NAME1 @622
+  SAY NAME2 @622  
 COPY ~%MOD_FOLDER%/Cre/X3EGVJ.cre~ override 
   WRITE_ASCII 0x248 ~X3EGVJ~ #8  //override script
   WRITE_ASCII 0x280 ~X3EGVJ~ #32  //DV
   WRITE_ASCII 0x2cc ~X3EGVJ~ #8   // Dialogue 
-  SAY NAME1 ~Gregory Von Jergunson~
-  SAY NAME2 ~Gregory Von Jergunson~  
+  SAY NAME1 @623
+  SAY NAME2 @623  
 COPY ~%MOD_FOLDER%/Cre/X3EGUARD.cre~ override 
   WRITE_ASCII 0x248 ~X3EGUARD~ #8  //override script
   WRITE_ASCII 0x280 ~X3EGUARD~ #32  //DV
   WRITE_ASCII 0x2cc ~X3EGUARD~ #8   // Dialogue 
-  SAY NAME1 ~Guard~
-  SAY NAME2 ~Guard~    
+  SAY NAME1 @624
+  SAY NAME2 @624    
 COPY ~%MOD_FOLDER%/Cre/X3EFATH.cre~ override 
   WRITE_ASCII 0x248 ~X3EFATH~ #8  //override script
   WRITE_ASCII 0x280 ~X3EFATH~ #32  //DV
   WRITE_ASCII 0x2cc ~X3EFATH~ #8   // Dialogue 
-  SAY NAME1 ~Charles Castilla~
-  SAY NAME2 ~Charles Castilla~ 
+  SAY NAME1 @625
+  SAY NAME2 @625 
 COPY ~%MOD_FOLDER%/Cre/X3EBRO.cre~ override 
   WRITE_ASCII 0x248 ~X3EBRO~ #8  //override script
   WRITE_ASCII 0x280 ~X3EBRO~ #32  //DV
   WRITE_ASCII 0x2cc ~X3EBRO~ #8   // Dialogue 
-  SAY NAME1 ~Thomas Castilla~
-  SAY NAME2 ~Thomas Castilla~  
+  SAY NAME1 @626
+  SAY NAME2 @626  
 COPY ~%MOD_FOLDER%/Cre/X3EDAR.cre~ override 
   WRITE_ASCII 0x248 ~X3EDAR~ #8  //override script
   WRITE_ASCII 0x280 ~X3EDAR~ #32  //DV
   WRITE_ASCII 0x2cc ~X3EDAR~ #8   // Dialogue 
-  SAY NAME1 ~Darlene Yaris~
-  SAY NAME2 ~Darlene Yaris~    
+  SAY NAME1 @627
+  SAY NAME2 @627    
 COPY ~%MOD_FOLDER%/Cre/X3EPHL.cre~ override 
   WRITE_ASCII 0x248 ~X3EPHL~ #8  //override script
   WRITE_ASCII 0x280 ~X3EPHL~ #32  //DV
   WRITE_ASCII 0x2cc ~X3EPHL~ #8   // Dialogue 
-  SAY NAME1 ~Planar Hunter Leader~
-  SAY NAME2 ~Planar Hunter Leader~    
+  SAY NAME1 @628
+  SAY NAME2 @628    
 COPY ~%MOD_FOLDER%/Cre/X3EMYR.cre~ override 
   WRITE_ASCII 0x248 ~X3EMYR~ #8  //override script
   WRITE_ASCII 0x280 ~X3EMYR~ #32  //DV
   WRITE_ASCII 0x2cc ~X3EMYR~ #8   // Dialogue 
-  SAY NAME1 ~Myron~
-  SAY NAME2 ~Myron~     
+  SAY NAME1 @629
+  SAY NAME2 @629     
 COPY ~%MOD_FOLDER%/Cre/X3EDER.cre~ override 
   WRITE_ASCII 0x248 ~X3EDER~ #8  //override script
   WRITE_ASCII 0x280 ~X3EDER~ #32  //DV
   WRITE_ASCII 0x2cc ~X3EDER~ #8   // Dialogue 
-  SAY NAME1 ~Derrick~
-  SAY NAME2 ~Derrick~  
+  SAY NAME1 @630
+  SAY NAME2 @630  
 COPY ~%MOD_FOLDER%/Cre/X3EMES.cre~ override 
   WRITE_ASCII 0x248 ~X3EMES~ #8  //override script
   WRITE_ASCII 0x280 ~X3EMES~ #32  //DV
   WRITE_ASCII 0x2cc ~X3EMES~ #8   // Dialogue 
-  SAY NAME1 ~Messenger~
-  SAY NAME2 ~Messenger~   
+  SAY NAME1 @631
+  SAY NAME2 @631   
 COPY ~%MOD_FOLDER%/Cre/X3ELOVE.cre~ ~override/X3Elove.cre~
   WRITE_ASCII 0x248 ~X3Elove~ #8  //override script
   WRITE_ASCII 0x280 ~X3Elove~ #32  //DV
   WRITE_ASCII 0x2cc ~X3Elove~ #8   // Dialogue 
-  SAY NAME1 ~Alina~
-  SAY NAME2 ~Alina~    
+  SAY NAME1 @632
+  SAY NAME2 @632    
 // Creature and Cutscene Scripts 
 COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Scripts/X3ECath.baf~ 
 ~%MOD_FOLDER%/Scripts/X3Emi.baf~ 
@@ -802,15 +454,17 @@ END ELSE BEGIN
 END  
 
 //Dialogue 
-COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3Emi.d~
-~%MOD_FOLDER%/Dialogue/X3Emi25.d~
-~%MOD_FOLDER%/Dialogue/X3ECH.d~ // Contains X3ECH and X3EIS creature file dialogues.
-~%MOD_FOLDER%/Dialogue/X3EGVJ.d~ // Contains X3EGVJ and X3EGUARD creature file dialogues.
-~%MOD_FOLDER%/Dialogue/X3EMYR.d~
-~%MOD_FOLDER%/Dialogue/X3EBRO.d~ 
-~%MOD_FOLDER%/Dialogue/X3EMES.d~ 
-~%MOD_FOLDER%/Dialogue/X3EFATH.d~ 
-~%MOD_FOLDER%/Dialogue/BX3Emi.d~
-~%MOD_FOLDER%/Dialogue/X3EmiJ.d~
-~%MOD_FOLDER%/Dialogue/BX3Emi25.d~
-~%MOD_FOLDER%/Dialogue/X3Emi25J.d~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3Emi.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3Emi.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3Emi25.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3Emi25.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3ECH.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3ECH.tra~ // Contains X3ECH and X3EIS creature file dialogues.
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3EGVJ.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3EGVJ.tra~ // Contains X3EGVJ and X3EGUARD creature file dialogues.
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3EMYR.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3EMYR.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3EBRO.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3EBRO.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3EMES.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3EMES.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3EFATH.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3EFATH.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/BX3Emi.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/BX3Emi.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3EmiJ.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3EmiJ.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/BX3Emi25.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/BX3Emi25.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3Emi25J.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3Emi25J.tra~
+
+LOAD_TRA ~%MOD_FOLDER%/Tra/%LANGUAGE%/setup.tra~

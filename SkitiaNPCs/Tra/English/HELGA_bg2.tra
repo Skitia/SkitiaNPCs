@@ -58,3 +58,149 @@
 @513 = ~^GVienxay slightly approves^-~
 @516 = ~^GVienxay approves^-~
 @519 = ~^GVienxay greatly approves^-~
+
+@633  = ~Priest of Haela~
+@634  = ~PRIEST OF HAELA: Renown among the dwarves for their risk-taking, berserker tendencies, clerics of Haela Brightaxe are loved and feared for their fury when they enter the fray, able to shrug off and deliver dangerous strikes. Most are female, called Kaxanar, or blood maidens, and their name is very much earned in their pleasure in seeking out battle wherever it may be. 
+
+Advantages: 
+
+-May Cast Hurl Stone Once Per Day. Gains one use at level one and an additional use every five levels thereafter. 
+
+HURL STONE: The priest creates a magical stone the size of their palm, which flies out of their hand and into the intended target. The stone does 1d6 direct magic damage per five levels with no save, although it does not bypass magic resistance. If the creature fails a save vs spell, they are also knocked down for two rounds.
+
+-May Cast Flamebolt Once Per Day. Gains one use at level one and an additional use every ten levels thereafter. 
+
+FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as a fighter with mastery in the weapon. The magic weapon does 1d10+1 fire damage per 5 levels, with a THACO bonus of 3. The blade acts at a speed factor of nine and lasts for one turn.
+
+Disadvantages:
+-Dwarf only. 
+-May only be CN, CG, and NG.~
+@635  = ~Flamebolt~
+@636  = ~FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as a fighter with mastery in the weapon. The magic weapon does 1d10+1 fire damage per 5 levels, with a THACO bonus of 3. The blade acts at a speed factor of nine and lasts for one turn.
+
+Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR.
+Damage: 1d10, +1 Fire Damage
+THAC0: +3
+Speed Factor: 9
+Proficiency Type: Greatsword
+Type: Two-handed~
+@637  = ~Hurl Stone~
+@638  = ~The priest creates a magical stone the size of their palm, which flies out of their hand and into the intended target. The stone does 1d6 direct magic damage per five levels with no save, although it does not bypass magic resistance. If the creature fails a save vs spell, they are also knocked down for two rounds..~
+@639  = ~Engagement Ring~
+@640  = ~Rings like this are often given to a lover to propose marriage. Weaved in gold and with a heart signet, it could be a suiting gift for someone to love if you are willing to commit.
+More expensive engagement rings often contain a few enchantments to ensure the recipient is safe and protected up to marriage and beyond. These enchantments are different for each recipient, and only reveal themselves once given to the token of your love.
+
+Weight: 1~
+@641  = ~Helga~
+@642  = ~Helga pauses at a question addresses at her past and not the battlefield, her lips forming almost into a grumpy frown. She talks of being a wild child in her youngest years, longing to make her place in the faithful of Haela after being enchanted by the tales of their ferocity and feats. She briefly trails away from the subject, launching into the details of a former battle with the interests of detailing every strike as if she was passionately describing art, not war. But then weariness touches her face, and with a groan she admits her body is not what it used to be. Not even her healing spells can undo all the wear and tear given by growing old. "But I'd rather go out in a blaze than gently." She adds. "I'll know death as nothing else but a foe of equal strength."~
+@643  = ~We must get out of here!~ [X3HeFear]
+@644  = ~I knew this would go well!~ [X3HeHap]
+@645  = ~This better be a minor setback.~
+@646  = ~My patience is running thin with yer constant evil. Do you want to be enemies?~
+@647  = ~Our partnership has ended. I'll not give Haela's gifts to ye a second longer.~
+@648  = ~Follow me closely, now.~ [X3HeLead]
+@649  = ~I believe we should rest soon.~ [X3HeRest]
+@650  = ~I don't see what we're accomplishing, sitting around like this.~ [X3HeBore]
+@651  = ~For honor and glory!~ [X3HeCry1]
+@653  = ~By the blood of the all father!~ [X3HeCry3]
+@654  = ~Fall before me!~ [X3HeCry4]
+@655  = ~Give me a hand, here!~ [X3HeCry5]
+@658  = ~If  yer going to do something, do it fast!~ [X3HeHeal]
+@659  = ~We should stick together here.~ [X3HeGrup]
+@660  = ~What bloody battles are we going to find in a city?~
+@661  = ~I must admit, I'm looking rather forward to exploring some of the ruins we'll find here.~ [X3HeRuin]
+@662  = ~Isn't it Grand?~ [X3HeGran]
+@663  = ~The most dangerous battles come in the form of darkness.~
+@664  = ~What now?~ [X3HeCom1]
+@665  = ~Yes? What do ye need?~ [X3HeCom2]
+@666  = ~Well met.~ [X3HeCom3]
+@667  = ~Hmm.~ [X3HeAct7]
+@668  = ~I have a suggestion.~ [X3HeSug]
+@669  = ~Indeed.~ [X3HeAct1]
+@670  = ~Mmm. That may work.~ [X3HeAct2]
+@671  = ~Allow me.~ [X3HeAct3]
+@672  = ~Let me see.~ [X3HeAct4]
+@673  = ~Yes, of course.~ [X3HeAct5]
+@674  = ~I appreciate that.~ [X3HeAct6]
+@675  = ~All done here.~ [X3HeDone]
+@677  = ~By Clangeddin's Beard.~ [X3HeCrtM]
+@678  = ~My weapon cannot hurt this one.~ [X3HeInff]
+@679  = ~I can't carry that. We'll have to leave something behind.~ [X3HeEnc]
+@680  = ~What? Now my magic is failing?~ [X3HeSpel]
+@682  = ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon.
+
+Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR. May not cast spells.
+Damage: 1d10, +1 Fire Damage
+THAC0: +1
+Speed Factor: 9
+Proficiency Type: Greatsword
+Type: Two-handed~
+@683  = ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon.
+
+Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR. May not cast spells.
+Damage: 1d10, +2 Fire Damage
+THAC0: +2
+Speed Factor: 9
+Proficiency Type: Greatsword
+Type: Two-handed~
+@684  = ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon.
+
+Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR. May not cast spells.
+Damage: 1d10, +3 Fire Damage
+THAC0: +3
+Speed Factor: 9
+Proficiency Type: Greatsword
+Type: Two-handed~
+@685  = ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon.
+
+Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR. May not cast spells.
+Damage: 1d10, +4 Fire Damage
+THAC0: +4
+Speed Factor: 9
+Proficiency Type: Greatsword
+Type: Two-handed~
+@686  = ~FLAMEBOLT: This holy two-handed blade of flame is named after Haela Brightaxe's favored weapon.
+
+Special: +3 Weapon Proficiency point set in Greatswords, as if a fighter. This includes +1 APR. May not cast spells.
+Damage: 1d10, +5 Fire Damage
+THAC0: +5
+Speed Factor: 9
+Proficiency Type: Greatsword
+Type: Two-handed~
+@687  = ~Potion of Bodily Health~
+@688  = ~Sought out by many a warrior, very few apothecaries are capable of making potions that improve the health and body of a person, and those who do keep it very secretive and sell it to only select clients.
+
+It is quite often that a less than sincere adventure will attempt to steal or even murder the maker to get their hands on these. The potion is rumored to take years to craft from all sorts of rare ingredients and herbs, though the recipe remains unknown.
+
+When ingested, the potion permanently raises the constitution of the drinker by one.
+
+STATISTICS:
+
+Constitution: Raised by 1 point permanently
+
+Weight: 1~
+@689  = ~Potion of Understanding~
+@690  = ~The Temple of Ilmater one year was said to receive a raving mad man found in a burnt home into their care that could only repeat the same sentence of doom. Sensing their mind was addled, they requested and commissioned a potion brewer for a solution.
+
+This potion was said to be the creation, permanently raising the wisdom of the drinker by one. Unfortunately, when the mad man drank the potion, he was such in grief with his new understanding that he took his own life. Presumably, he had accidentally burned alive his own family.
+
+STATISTICS:
+
+Wisdom: Raised by 1 point permanently
+
+Weight: 1~
+@691  = ~Scrying Crystal~
+@692  = ~This beautiful purple crystal glows with a faint light. Used by scriers as a component, it helps them to locate their desired target, no matter where in the realms they may be.~
+@693  = ~Arvora~
+@694  = ~Poor Man~
+@695  = ~Rulendo~
+@696  = ~Warrior~
+@697  = ~Rogue~
+@698  = ~Mage~
+@699  = ~Cleric~
+@700  = ~Boris the Unyielding~
+@701  = ~Duncan Righthammer~
+@702  = ~Harim Battlebringer~
+@703  = ~Berk~
+@704  = ~Gigi~
+@705  = ~Abermon~

@@ -78,3 +78,114 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @513 = ~^GVienxay slightly approves^-~
 @516 = ~^GVienxay approves^-~
 @519 = ~^GVienxay greatly approves^-~
+
+@711  = ~warden~
+@712  = ~Warden~
+@713  = ~WARDEN: The warden is a warrior whose discipline and traditions center around fighting in pairs. The warden takes on the defensive role in the pair, while the ward receives elevated offensive prowess. Their remarkable protective talents come at the cost of the warden’s skill with weapons being inferior to other fighter traditions.
+	
+	Advantages:
+	-Hit Die: d12
+	-May use the Ward ability once per day. Gains one use at level 1, one use at level eight, and an additional use every eight levels thereafter.
+	
+	WARD: Designates target as the ward for one turn. It does not stack with itself, and if the ward is changed, the previous ward loses their bonuses. 
+	Level 1: The ward receives +1 damage bonus and -1 THAC0. The warden receives penalties for the same amount, but gains 10% resistance to physical damage and regenerates 1 hitpoint per 6 seconds.
+	Level 8: The ward receives +2 damage bonus and -2 THAC0. The warden receives penalties for the same amount, but gains 20% resistance to physical damage, and regenerates 1 hitpoint per 3 seconds.
+	Level 16: The ward receives +3 damage bonus and -3 THAC0. The warden receives penalties for the same amount, but gains 30% resistance to physical damage and regenerates 1 hitpoint per second.
+
+	Disadvantages:
+	May only become specialized in ranged weapons, and may not exceed mastery in any other weapon.~
+@714  = ~Ward~
+@715  = ~WARD: Designates target as the ward for one turn. It does not stack with itself, and if the ward is changed, the previous ward loses their bonuses. 
+Level 1: The ward receives +1 damage bonus and -1 THAC0. The warden receives penalties for the same amount, but gains 10% resistance to physical damage and regenerates 1 hitpoint per 6 seconds.
+Level 8: The ward receives +2 damage bonus and -2 THAC0. The warden receives penalties for the same amount, but gains 20% resistance to physical damage, and regenerates 1 hitpoint per 3 seconds.
+Level 16: The ward receives +3 damage bonus and -3 THAC0. The warden receives penalties for the same amount, but gains 30% resistance to physical damage and regenerates 1 hitpoint per second.
+~
+@716  = ~Kale's Father's Journal~
+@717  = ~The journal mostly contains details of shopping checklists and dry details of Percy's life. The last few entries however contain some interesting details of note.
+
+"Got in trouble with the guard Bryce again when I got in a scuffle with that awful beggar Martin in the docks. He's always watching from the docks. Got something against halflings, I know he must. When I said I didn't have enough money for his stupid fine over fishing around the docks, I spent a few lousy nights in jail. And that Martin got nothing at all.
+Sometimes I think I ought to go wandering again, this city is suffocating my feet. Jillian was the only honest guard member of the docks garrison, but it's not work for a halfling, not with people like Bryce working for them, and she was right to go back wandering with an adventure. She said my son is among the adventuring group she is joining.
+I ought to introduce myself, but I just can't."
+
+"Chester started selling some new cheese in his cheese shop. Damn it tastes good. Like nothing I've ever had before. Definitely making it a daily addition for my shopping list when I go out and get food."
+
+"Cheese. Cheeeeese. Cheeeeeeeese. I bought up all of the cheese. I promised I'd pay it in full once I had a little bit more money, but Chester doesn't seem to mind at all. What a friendly fellow. Dallie's been getting a bit upset though, that I've been paying more attention to the food than her.
+At least she doesn't know about Flora too. I know it's wrong. I know we had a handfast planned and everything soon, but I love both woman. One for her heart and the other for her appearance blessed by Sheela herself. What's wrong with playing my luck for a little longer?"
+
+"Money's getting low and Dallie is really getting angry at the stockpile of cheese I got. She won't even taste it despite my protests, she knows it smells good. This stuff is gold. It's worth it all. It's cheeeese. It's heaven. It's amazing.
+Even Flora's gotten a bit concerned. She's asking when I'm going to leave her. I don't want to leave anyone. I love Dallie. I love Flora. And I love this cheese too. Just got to enjoy everything while it lasts."
+
+"I think someone's trying to kill me. I feel god awful inside these last few days. I should see a priest, but Chester's amazing cheese always makes me feel a bit happier inside. Just going to buy a bit more before I go off to the church of Ilmater, they're kindly folks there, and I trust them more than anyone.
+I'll give Martin a good insult on the way too. He deserves it for getting me in a cell for too many miserable nights."
+
+STATISTICS:
+
+Weight: 1~
+@718  = ~Bag of Strange Cheese~
+@719  = ~This cheese smells and looks odd to non-halflings, and has no direct impact to them if eaten. But to a halfling, it smells quite pleasing with an inviting aroma.
+
+STATISTICS: 
+
+Weight: 1~
+@720  = ~Letter~
+@721  = ~I have been alerted that there will be an attempted arrest on my person. Your pay is attached to this letter, and you will receive an additional sum upon completion of the task.
+When you have succesfully terminated the halfling and her puppets, return to my home on the northside of the bridge district.
+
+Chester~
+@722  = ~Kale's Body~
+@723  = ~Kale was captured by Bodhi and infected with vampirism, forcing you to slay him. There may be some way to revive him, though you don't know what it would be.
+
+STATISTICS:
+
+Weight: 40~
+@724  = ~Kale~
+@725  = ~Kale gives a wide grin when you ask about himself, clapping you on your back and launching straight into his tale. He claims he was born faster, stronger, and with more courage in his spirit than all the halflings of Gullykin combined. He flashes scars and launches into wild, eyebrow raising tales of how he earned each, from battling one hundred kobolds alone to slapping a dragon in the face.  But after a while he grows melancholy and admits that in all of his travels he has lost many companions that he would dearly miss. He says he has changed his style of fighting to be more protective of those he cares about. He'll take any blow for a companion if that means they'll keep standing, if he likes them anyway.
+"But the rest?" He adds with a grin once more. "They'll have give me a good offer."~
+@726  = ~This isn't working out like I thought.~ [KaleFlee]
+@727  = ~I feel better than a fox with a belly full of chicken! Not bloody bad at all.~ [KaleHap]
+@728  = ~Things aren't all bad, but they aren't all great either.~
+@729  = ~I ain't pleased with what's going on. Get your head on straight, mate, or you'll lose your best talent.~
+@731  = ~Oy, listen up!~ [KaleLead]
+@732  = ~I am so bushed, you have no idea.~ [KaleRest]
+@733  = ~*Yawn*~ [KaleBore]
+@734  = ~Okay, now you're in for it.~ [X3KCry1]
+@735  = ~Here comes halfling death!~ [KaleCry2]
+@736  = ~Let's have a bit of fun, shall we?~ [X3KCry2]
+@737  = ~Now you're gonna get it!~ [KaleCry4]
+@738  = ~Uh oh. Uninvited guests.~ [KaleCry5]
+@740  = ~Aww, not again...~ [KaleDead]
+@741  = ~Hey, bleeding over here!~ [KaleHurt]
+@742  = ~Oh lovely. What'd I step in now?~ [KaleFor]
+@743  = ~I thought it would be a bit smaller, myself.~ [X3KCity]
+@744  = ~Oi, what's that? Oh...just another rat.~ [KaleDun]
+@745  = ~Sooo. I wonder how much a map of this place would go for?~ [KaleDay]
+@746  = ~Criminy. Where the bloody hell are we?~ [KaleNigh]
+@747  = ~Yeah? You want something, I bet.~ [KaleCom1]
+@748  = ~Aye now. Something else you need?~ [KaleCom2]
+@749  = ~Soooo.~ [KaleCom3]
+@750  = ~Yep?~ [KaleCom4]
+@751  = ~Come on, come on!~ [KaleCom5]
+@752  = ~Righto. Off we go.~ [KaleAct1]
+@753  = ~Okey-Dokey.~ [KaleAct2]
+@754  = ~Wish I thought of that.~ [KaleAct3]
+@755  = ~Just give me a sec.~ [KaleAct4]
+@756  = ~You might want to re-think that.~ [KaleAct5]
+@757  = ~Woohoo.~ [KaleAct6]
+@758  = ~Aye.~ [X3KAye]
+@759  = ~Sooo.~ [X3KSo]
+@760  = ~Yeah! That's the way!~ [KaleCrit]
+@761  = ~Damn it!~ [X3KCrtM]
+@762  = ~I ain't doing much here.~ [KaleImm]
+@763  = ~What am I, a bloody mule?!~ [KaleInv]
+@764  = ~I hate it when my bloody spells won't work.~ [KaleSpel]
+@765  = ~Oh um. Maybe we should organize ourselves a bit?~ [KaleRare]
+@766  = ~Oh shoot. And we were doing so well...~ [KaleDieR]
+@767  = ~Oi, what's that? Oh...just another rat.~
+@768  = ~Jillian~
+@769  = ~Sergeant Bryce~
+@770  = ~Chester~
+@771  = ~Flora~
+@772  = ~Dallie~
+@773  = ~Martin~
+@774  = ~Mercenary~
+@775  = ~Alora~

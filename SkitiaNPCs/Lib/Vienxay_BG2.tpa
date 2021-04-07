@@ -1,4 +1,4 @@
-LOAD_TRA ~%MOD_FOLDER%/Tra/English/Vienxay_bg2.tra~
+LOAD_TRA ~%MOD_FOLDER%/Tra/%LANGUAGE%/Vienxay_bg2.tra~
 
 LAF HANDLE_AUDIO
   STR_VAR
@@ -59,25 +59,9 @@ ADD_KIT ~X3VSM~
  // list of starting equipment for PCs starting in ToB. Appended column-wise to 25STWEAP.2da
  ~* * * * * * * * * * * * * * * * * * *  *~
  // Lower, mixed, and help kit names and descriptions, added to KITLIST.2da
-  SAY ~shadowmage~
-  SAY ~Shadowmage~
-  SAY ~SHADOWMAGE: Shadowmages are mage-thieves that can draw both on shadow magic and the weave, with the cunning and stealth of the shadowdancer and the mage's arsenal of spells.
-  While shadow magic is not the same as the shadow weave, many are drawn to it and can learn to use it. It's dark magic gives it poor public opinion, and most of its practitioners are non-good.
-  
-Advantages: 
-- + 15% Bonus to Hide in Shadows and Move Silently
-- Slippery Mind: +1 bonus to saving throws
-- May cast Shadow Jump once per day. Gains one use at thief level 5 and an additional use every 5 levels thereafter.
-
-SHADOW JUMP: Manipulating shadow, the shadowmage teleports to the selected living creature, be it ally or enemy, unseen as per the invisibility spell. For the next twelve seconds, they gain +2 to their backstab modifier and remain unseen until they make an attack.
-
-Disadvantages: 
-- Alignment restricted to any non-lawful and non-good
-- Backstab multiplier is one less than an unkitted Thief, cannot backstab until level 5.
-- May only distribute 20 skill points per level (30 at level 1) among thieving skills 
-- Cannot Hide in Plain Sight.
-- May not put points in Set Snare.
-- Hit Die: d5~
+  SAY @862
+  SAY @863
+  SAY @864
 
 LAF fl#add_kit_ee
   STR_VAR
@@ -102,20 +86,9 @@ END
 //Spell
 COPY	"%MOD_FOLDER%/Spells/X3VSB.Bam" override
 COPY	"%MOD_FOLDER%/Spells/X3VSBLT.spl" override
-	SAY NAME1 ~Shadowbolt~
-	SAY NAME2 ~Shadowbolt~
-	SAY 0x50 ~Shadowbolt
-(Illusion)
-
-Level: 6
-Range: 40
-Duration: Instant
-Casting Time: 3
-Area of Effect: 1 Creature 
-Saving Throw: None
-
-This Shadow Magic spell is similar to magic missile. Shadowbolt creates three cold, airy missiles, which dart from the wizard to the intended target. 
-Each missile does 1d6+1 magic cold damage. Another missile is gained from level 8 and every level after up to 15, maxing at eleven missiles.~ 
+	SAY NAME1 @865
+	SAY NAME2 @865
+	SAY 0x50 @866 
 //HLA 
 COPY	"%MOD_FOLDER%/2da/LUX3V.2da" override
 // Kit Fixes	
@@ -124,123 +97,123 @@ COPY	"%MOD_FOLDER%/2da/LUX3V.2da" override
 	COPY	"%MOD_FOLDER%/Spells/X3VB3.spl" override
 	COPY	"%MOD_FOLDER%/Spells/X3VB4.spl" override
 	COPY	"%MOD_FOLDER%/Spells/X3VSA.spl" override	
-	SAY NAME1 ~Shadow Jump~
-	SAY NAME2 ~Shadow Jump~
-	SAY 0x50 ~SHADOW JUMP: Manipulating shadow, the shadowmage teleports to the selected living creature, be it ally or enemy, unseen as per the invisibility spell. For the next twelve seconds, they gain +2 to their backstab modifier and remain unseen until they make an attack.~
+	SAY NAME1 @867
+	SAY NAME2 @867
+	SAY 0x50 @868
 ///SoA 
 
 COPY ~%MOD_FOLDER%/Cre/X3Vie.cre~ ~override/X3Vie.cre~
-  SAY NAME1 ~Vienxay~
-  SAY NAME2 ~Vienxay~
+  SAY NAME1 @869
+  SAY NAME2 @869
   WRITE_ASCII 0x248 ~X3Vie~ #8  //override script
   WRITE_ASCII 0x280 ~X3Vie~ #32  //DV
   WRITE_ASCII 0x2cc ~X3Vie~ #8   //pre-joining dialogue file
   WRITE_ASCII 0X34 ~X3VieM~ #8  
   WRITE_ASCII 0x3c ~X3VieL~ #8  
-  SAY BIO ~Some elves are just awful, but Vienxay insists she is not one of them. She boasts of growing up in comfort and prominence, the eldest, most beautiful, and most intelligent of three sisters, gifted both with the weave and the shadow magic well known to the shadowdancer, which she used to great abandon. She then rants on about how a series of “misunderstandings” had her ousted from Evermeet and wandering the landscape by the scheming of her former mentor. She misses home terribly, both the comforts of her manor and the warmth of nearby family who were far more tolerable of her elf elitism than the human locals of the sword coast. But if the locals dare think they shall disrespect her, she says, they will quickly learn from their mistake.~
-  SAY MORALE ~I will not die here.~ [VienFear]
-  SAY HAPPY ~This party is doing better than I thought it would.~ [VienHap]
-  SAY UNHAPPY_ANNOYED ~If we were under my leadership, things would be looking much better around here.~ [VienAnn]
-  SAY UNHAPPY_SERIOUS ~Must we come to the aid of every commoner?~ [VienSer]
-  SAY UNHAPPY_BREAKING_POINT ~I'm done here. Be fools if you wish but you do so without me.~  [VieBreak]
-  SAY LEADER ~A wise choice. I will bring us victory.~ [VienLead]
-  SAY TIRED ~I need to refresh my spells. Let us rest~ [VienRest]
-  SAY BORED ~Ugh.~ [VienBore]
-  SAY BATTLE_CRY1 ~You will regret crossing an elf.~  [VienCry1]
-  SAY BATTLE_CRY2 ~Prepare to be destroyed!~ [VienCry2]
-  SAY BATTLE_CRY3 ~No one faces me and lives.~ [VienCry3]
-  SAY BATTLE_CRY4 ~My art and shadows will end you all.~ [VienCry4]
-  SAY BATTLE_CRY5 ~With Vengeance!~ [VienCry5]
-  SAY DAMAGE ~Ugh!~ [VieDam]
-  SAY DYING ~My power...was not...~ [VienDyng]
-  SAY HURT ~Someone, heal me now!~ [VienHurt]
-  SAY AREA_FOREST ~The forests...they bring me back to Evermeet.~ [X3VFor]
-  SAY AREA_CITY ~Humans and their hideous cities.~ [X3VCit]
-  SAY AREA_DUNGEON ~Trek carefully. Leave the traps to me.~ [X3VDun]
-  SAY AREA_DAY ~Evermeet...how I miss you.~ [X3VDay]
-  SAY AREA_NIGHT ~My talents are well suited to the night.~ [X3VNigh]
-  SAY SELECT_COMMON1 ~Yes?~ [VienCom1]
-  SAY SELECT_COMMON2 ~Speak.~ [VienCom2]
-  SAY SELECT_COMMON3 ~Your desire?~ [VienCom3]
-  SAY SELECT_COMMON4 ~My art is yours.~ [VienCom4]
-  SAY SELECT_COMMON5 ~This is Vienxay.~ [VienCom5]
-  SAY SELECT_COMMON6 ~You called the shadowmage?~ [VienCom6]
-  SAY SELECT_ACTION1 ~If that is your command.~ [VienAct1]
-  SAY SELECT_ACTION2 ~Hrmph.~ [VienAct2]
-  SAY SELECT_ACTION3 ~Done.~ [VienAct3]
-  SAY SELECT_ACTION4 ~Ugh, fine.~ [VienAct4]
-  SAY SELECT_ACTION5 ~That's it?~ [VienAct5]
-  SAY SELECT_ACTION6 ~Follow me.~ [VienAct6]
-  SAY SELECT_ACTION7 ~I walk.~ [VienAct7]
-  SAY CRITICAL_HIT ~Hahaha, yes!~ [VienCrtH]
-  SAY CRITICAL_MISS ~Ugh! I won't miss twice.~ [VienCrtM]
-  SAY TARGET_IMMUNE ~Hrmph. This is what happens when you don't use magic.~ [VienImm]
-  SAY INVENTORY_FULL ~Do I look like I have room?~ [VienInv]
-  SAY SPELL_DISRUPTED ~My spell failed? Impossible!~ [VienSpel]
-  SAY SET_A_TRAP ~It's done.~ [VienDone]
-  SAY HIDDEN_IN_SHADOWS ~None can see the shadowmage.~ [VienHide] 
-  SAY PICKED_POCKET ~That's mine now.~ [X3VPick]
-  SAY SELECT_RARE1 ~Do you even appreciate my contributions?~ [VienRar1]
-  SAY SELECT_RARE2 ~I've no patience for this.~ [VienRar2] 
-  SAY REACT_TO_DIE_GENERAL ~Another fallen? Fight harder, fools!~ [X3VDie]
+  SAY BIO @870
+  SAY MORALE @871
+  SAY HAPPY @872
+  SAY UNHAPPY_ANNOYED @873
+  SAY UNHAPPY_SERIOUS @874
+  SAY UNHAPPY_BREAKING_POINT @875
+  SAY LEADER @876
+  SAY TIRED @877
+  SAY BORED @878
+  SAY BATTLE_CRY1 @879
+  SAY BATTLE_CRY2 @880
+  SAY BATTLE_CRY3 @881
+  SAY BATTLE_CRY4 @882
+  SAY BATTLE_CRY5 @883
+  SAY DAMAGE @884
+  SAY DYING @885
+  SAY HURT @886
+  SAY AREA_FOREST @887
+  SAY AREA_CITY @888
+  SAY AREA_DUNGEON @889
+  SAY AREA_DAY @890
+  SAY AREA_NIGHT @891
+  SAY SELECT_COMMON1 @892
+  SAY SELECT_COMMON2 @893
+  SAY SELECT_COMMON3 @894
+  SAY SELECT_COMMON4 @895
+  SAY SELECT_COMMON5 @896
+  SAY SELECT_COMMON6 @897
+  SAY SELECT_ACTION1 @898
+  SAY SELECT_ACTION2 @899
+  SAY SELECT_ACTION3 @900
+  SAY SELECT_ACTION4 @901
+  SAY SELECT_ACTION5 @902
+  SAY SELECT_ACTION6 @903
+  SAY SELECT_ACTION7 @904
+  SAY CRITICAL_HIT @905
+  SAY CRITICAL_MISS @906
+  SAY TARGET_IMMUNE @907
+  SAY INVENTORY_FULL @908
+  SAY SPELL_DISRUPTED @909
+  SAY SET_A_TRAP @910
+  SAY HIDDEN_IN_SHADOWS @911 
+  SAY PICKED_POCKET @912
+  SAY SELECT_RARE1 @913
+  SAY SELECT_RARE2 @914 
+  SAY REACT_TO_DIE_GENERAL @915
   WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~X3VSM~)) 
 
 // ToB 
 
 COPY ~%MOD_FOLDER%/Cre/X3Vie25.cre~ ~override/X3Vie25.cre~
-  SAY NAME1 ~Vienxay~
-  SAY NAME2 ~Vienxay~
+  SAY NAME1 @869
+  SAY NAME2 @869
   WRITE_ASCII 0x248 ~X3Vie25~ #8  //override script
   WRITE_ASCII 0x280 ~X3Vie~ #32  //DV
   WRITE_ASCII 0x2cc ~X3Vie25~ #8   //pre-joining dialogue file
   WRITE_ASCII 0X34 ~X3VieM~ #8  
   WRITE_ASCII 0x3c ~X3VieL~ #8  
-  SAY BIO ~Some elves are just awful, but Vienxay insists she is not one of them. She boasts of growing up in comfort and prominence, the eldest, most beautiful, and most intelligent of three sisters, gifted both with the weave and the shadow magic well known to the shadowdancer, which she used to great abandon. She then rants on about how a series of “misunderstandings” had her ousted from Evermeet and wandering the landscape by the scheming of her former mentor. She misses home terribly, both the comforts of her manor and the warmth of nearby family who were far more tolerable of her elf elitism than the human locals of the sword coast. But if the locals dare think they shall disrespect her, she says, they will quickly learn from their mistake.~
-  SAY MORALE ~I will not die here.~ [VienFear]
-  SAY HAPPY ~This party is doing better than I thought it would.~ [VienHap]
-  SAY UNHAPPY_ANNOYED ~If we were under my leadership, things would be looking much better around here.~ [VienAnn]
-  SAY UNHAPPY_SERIOUS ~Must we come to the aid of every commoner?~ [VienSer]
-  SAY UNHAPPY_BREAKING_POINT ~I'm done here. Be fools if you wish but you do so without me.~  [VieBreak]
-  SAY LEADER ~A wise choice. I will bring us victory.~ [VienLead]
-  SAY TIRED ~I need to refresh my spells. Let us rest~ [VienRest]
-  SAY BORED ~Ugh.~ [VienBore]
-  SAY BATTLE_CRY1 ~You will regret crossing an elf.~  [VienCry1]
-  SAY BATTLE_CRY2 ~Prepare to be destroyed!~ [VienCry2]
-  SAY BATTLE_CRY3 ~No one faces me and lives.~ [VienCry3]
-  SAY BATTLE_CRY4 ~My art and shadows will end you all.~ [VienCry4]
-  SAY BATTLE_CRY5 ~With Vengeance!~ [VienCry5]
-  SAY DAMAGE ~Ugh!~ [VieDam]
-  SAY DYING ~My power...was not...~ [VienDyng]
-  SAY HURT ~Someone, heal me now!~ [VienHurt]
-  SAY AREA_FOREST ~The forests...they bring me back to Evermeet.~ [X3VFor]
-  SAY AREA_CITY ~Humans and their hideous cities.~ [X3VCit]
-  SAY AREA_DUNGEON ~Trek carefully. Leave the traps to me.~ [X3VDun]
-  SAY AREA_DAY ~Evermeet...how I miss you.~ [X3VDay]
-  SAY AREA_NIGHT ~My talents are well suited to the night.~ [X3VNigh]
-  SAY SELECT_COMMON1 ~Yes?~ [VienCom1]
-  SAY SELECT_COMMON2 ~Speak.~ [VienCom2]
-  SAY SELECT_COMMON3 ~Your desire?~ [VienCom3]
-  SAY SELECT_COMMON4 ~My art is yours.~ [VienCom4]
-  SAY SELECT_COMMON5 ~This is Vienxay.~ [VienCom5]
-  SAY SELECT_COMMON6 ~You called the shadowmage?~ [VienCom6]
-  SAY SELECT_ACTION1 ~If that is your command.~ [VienAct1]
-  SAY SELECT_ACTION2 ~Hrmph.~ [VienAct2]
-  SAY SELECT_ACTION3 ~Done.~ [VienAct3]
-  SAY SELECT_ACTION4 ~Ugh, fine.~ [VienAct4]
-  SAY SELECT_ACTION5 ~That's it?~ [VienAct5]
-  SAY SELECT_ACTION6 ~Follow me.~ [VienAct6]
-  SAY SELECT_ACTION7 ~I walk.~ [VienAct7]
-  SAY CRITICAL_HIT ~Hahaha, yes!~ [VienCrtH]
-  SAY CRITICAL_MISS ~Ugh! I won't miss twice.~ [VienCrtM]
-  SAY TARGET_IMMUNE ~Hrmph. This is what happens when you don't use magic.~ [VienImm]
-  SAY INVENTORY_FULL ~Do I look like I have room?~ [VienInv]
-  SAY SPELL_DISRUPTED ~My spell failed? Impossible!~ [VienSpel]
-  SAY SET_A_TRAP ~It's done.~ [VienDone]
-  SAY HIDDEN_IN_SHADOWS ~None can see the shadowmage.~ [VienHide] 
-  SAY PICKED_POCKET ~That's mine now.~ [X3VPick]
-  SAY SELECT_RARE1 ~Do you even appreciate my contributions?~ [VienRar1]
-  SAY SELECT_RARE2 ~I've no patience for this.~ [VienRar2] 
-  SAY REACT_TO_DIE_GENERAL ~Another fallen? Fight harder, fools!~ [X3VDie]
+  SAY BIO @870
+  SAY MORALE @871
+  SAY HAPPY @872
+  SAY UNHAPPY_ANNOYED @873
+  SAY UNHAPPY_SERIOUS @874
+  SAY UNHAPPY_BREAKING_POINT @875
+  SAY LEADER @876
+  SAY TIRED @877
+  SAY BORED @878
+  SAY BATTLE_CRY1 @879
+  SAY BATTLE_CRY2 @880
+  SAY BATTLE_CRY3 @881
+  SAY BATTLE_CRY4 @882
+  SAY BATTLE_CRY5 @883
+  SAY DAMAGE @884
+  SAY DYING @885
+  SAY HURT @886
+  SAY AREA_FOREST @887
+  SAY AREA_CITY @888
+  SAY AREA_DUNGEON @889
+  SAY AREA_DAY @890
+  SAY AREA_NIGHT @891
+  SAY SELECT_COMMON1 @892
+  SAY SELECT_COMMON2 @893
+  SAY SELECT_COMMON3 @894
+  SAY SELECT_COMMON4 @895
+  SAY SELECT_COMMON5 @896
+  SAY SELECT_COMMON6 @897
+  SAY SELECT_ACTION1 @898
+  SAY SELECT_ACTION2 @899
+  SAY SELECT_ACTION3 @900
+  SAY SELECT_ACTION4 @901
+  SAY SELECT_ACTION5 @902
+  SAY SELECT_ACTION6 @903
+  SAY SELECT_ACTION7 @904
+  SAY CRITICAL_HIT @905
+  SAY CRITICAL_MISS @906
+  SAY TARGET_IMMUNE @907
+  SAY INVENTORY_FULL @908
+  SAY SPELL_DISRUPTED @909
+  SAY SET_A_TRAP @910
+  SAY HIDDEN_IN_SHADOWS @911 
+  SAY PICKED_POCKET @912
+  SAY SELECT_RARE1 @913
+  SAY SELECT_RARE2 @914 
+  SAY REACT_TO_DIE_GENERAL @915
   WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~X3VSM~))   
   
       APPEND ~pdialog.2da~
@@ -289,112 +262,78 @@ ADD_JOURNAL TITLE (@10) @11 @12 @13 @14 USING ~%MOD_FOLDER%/Tra/english/Vienxay_
 	// Items 
 // ITEMS
 COPY_EXISTING ~%MOD_FOLDER%/Items/x3vglo.itm~ ~override/x3vglo.itm~
-SAY NAME1 ~Vienxay's Silk Gloves~
-SAY NAME2 ~Vienxay's Silk Gloves~
-SAY DESC ~Vienxay's Silk Gloves are warm, snug, and absolutely silent when rubbed against one another. They are the thief's dream, assisting with quiet work and not leaving behind any sign they were ever there. Vienxay will not part lightly with these.
-
-STATISTICS:
-
-+20% Move Silently
-+20% Hide
-+15% Pickpocket
-+10% Open Lock
-
-Usable By: 
-Vienxay
-
-Weight: 1~
-OUTER_SET strref = RESOLVE_STR_REF (~"Excuse me! Those stay with *me*."~)
+SAY NAME1 @916
+SAY NAME2 @916
+SAY DESC @917
+OUTER_SET strref = RESOLVE_STR_REF (@918)
 APPEND item_use.2da ~x3vglo Vienxay %strref% 3~
 COPY_EXISTING ~%MOD_FOLDER%/Items/X3VNOTES.itm~ ~override/X3VNOTES.itm~
-SAY NAME1 ~Sules'terim's Notes~
-SAY NAME2 ~Sules'terim's Notes~
-SAY DESC ~The writing on these notes is atrociously illegible, although the very few faint words you can make out appear to be in the elven language.
-
-Whoever was writing this was not doing so with readability in mind.~
+SAY NAME1 @919
+SAY NAME2 @919
+SAY DESC @920
 COPY_EXISTING ~%MOD_FOLDER%/Items/X3VTOME1.itm~ ~override/X3VTOME1.itm~
-SAY NAME1 ~Myth Drannor Tome~
-SAY NAME2 ~Myth Drannor Tome~
-SAY DESC ~This tome hails all the way from the elven ruins of Myth Drannor. Completely in the elven language, only an elf could use it. The magic around the tome suggests it could be destroyed in exchange for increasing one's intelligence
-and capacity for the arcane with the secrets of old elven magic, although the elven people of Evermeet would likely prefer it stored and kept with them instead. Because the language is entirely in elven, only elves and half-elves can understand it.
-
-STATISTICS:
-
-Intelligence: Raised by 1 point permanently
-Special: The book is consumed upon use
-Usage: Place into quick item slot
-
-
-Weight: 25~
+SAY NAME1 @921
+SAY NAME2 @921
+SAY DESC @922
 COPY_EXISTING ~%MOD_FOLDER%/Items/X3VTOME2.itm~ ~override/X3VTOME2.itm~
-SAY NAME1 ~Tome of Elven Grace~
-SAY NAME2 ~Tome of Elven Grace~
-SAY DESC ~Tomes such are these are often gifted to the finest elven archers and dancers in Evermeet, to even further their mastery of eye accuracy and fluid body movements by enhancing their dexterity, although the tome is destroyed in the process.
-Because the language is entirely in elven, only elves and half-elves can understand it.
-
-STATISTICS:
-
-Dexterity: Raised by 1 point permanently
-Special: The book is consumed upon use
-Usage: Place into quick item slot
-
-
-Weight: 25~
+SAY NAME1 @923
+SAY NAME2 @923
+SAY DESC @924
 
 // Creatures 
 COPY ~%MOD_FOLDER%/Cre/X3VG.cre~ ~override/X3VG.cre~
   WRITE_ASCII 0x248 ~X3VG~ #8  //override script
   WRITE_ASCII 0x280 ~X3VG~ #32  //DV
   WRITE_ASCII 0x2cc ~X3VG~ #8   // Dialogue 
-  SAY NAME1 ~Amnian Soldier~
-  SAY NAME2 ~Amnian Soldier~
+  SAY NAME1 @925
+  SAY NAME2 @925
 COPY ~%MOD_FOLDER%/Cre/X3VWolf.cre~ ~override/X3VWolf.cre~
   WRITE_ASCII 0x248 ~X3VWolf~ #8  //override script
   WRITE_ASCII 0x280 ~X3VWolf~ #32  //DV
-  SAY NAME1 ~Great White Wolf~
-  SAY NAME2 ~Great White Wolf~  
+  SAY NAME1 @926
+  SAY NAME2 @926  
 COPY ~%MOD_FOLDER%/Cre/X3VSage.cre~ ~override/X3VSage.cre~
   WRITE_ASCII 0x248 ~X3VSage~ #8  //override script
   WRITE_ASCII 0x280 ~X3VSage~ #32  //DV
   WRITE_ASCII 0x2cc ~X3VSage~ #8   // Dialogue 
-  SAY NAME1 ~Sules'terim~
-  SAY NAME2 ~Sules'terim~  
+  SAY NAME1 @927
+  SAY NAME2 @927  
 COPY ~%MOD_FOLDER%/Cre/X3VSAG25.cre~ ~override/X3VSAG25.cre~
   WRITE_ASCII 0x248 ~X3VSAG25~ #8  //override script
   WRITE_ASCII 0x280 ~X3VSAG25~ #32  //DV
   WRITE_ASCII 0x2cc ~X3VSAG25~ #8   // Dialogue 
-  SAY NAME1 ~Sules'terim~
-  SAY NAME2 ~Sules'terim~    
+  SAY NAME1 @927
+  SAY NAME2 @927    
 COPY ~%MOD_FOLDER%/Cre/X3VSamir.cre~ ~override/X3VSamir.cre~
   WRITE_ASCII 0x248 ~X3VSamir~ #8  //override script
   WRITE_ASCII 0x280 ~X3VSamir~ #32  //DV
   WRITE_ASCII 0x2cc ~X3VSamir~ #8   // Dialogue 
-  SAY NAME1 ~Samir~
-  SAY NAME2 ~Samir~  
+  SAY NAME1 @928
+  SAY NAME2 @928  
 COPY ~%MOD_FOLDER%/Cre/X3VDROW.cre~ ~override/X3VDROW.cre~
   WRITE_ASCII 0x248 ~X3VDROW~ #8  //override script
   WRITE_ASCII 0x280 ~X3VDROW~ #32  //DV
   WRITE_ASCII 0x2cc ~X3VDROW~ #8   // Dialogue 
-  SAY NAME1 ~Xel'nu~
-  SAY NAME2 ~Xel'nu~   
+  SAY NAME1 @929
+  SAY NAME2 @929   
 COPY ~%MOD_FOLDER%/Cre/X3VDROW2.cre~ ~override/X3VDROW2.cre~
   WRITE_ASCII 0x248 ~X3VDROW2~ #8  //override script
   WRITE_ASCII 0x280 ~X3VDROW2~ #32  //DV
   WRITE_ASCII 0x2cc ~UDDROW02~ #8   // Dialogue 
-  SAY NAME1 ~Drow Warrior~
-  SAY NAME2 ~Drow Warrior~ 
+  SAY NAME1 @930
+  SAY NAME2 @930 
 COPY ~%MOD_FOLDER%/Cre/X3VDROW3.cre~ ~override/X3VDROW3.cre~
   WRITE_ASCII 0x248 ~X3VDROW3~ #8  //override script
   WRITE_ASCII 0x280 ~X3VDROW3~ #32  //DV
   WRITE_ASCII 0x2cc ~UDDROW02~ #8   // Dialogue 
-  SAY NAME1 ~Drow Warrior~
-  SAY NAME2 ~Drow Warrior~   
+  SAY NAME1 @930
+  SAY NAME2 @930   
 COPY ~%MOD_FOLDER%/Cre/X3VLove.cre~ ~override/X3VLove.cre~
   WRITE_ASCII 0x248 ~X3VLove~ #8  //override script
   WRITE_ASCII 0x280 ~X3VLove~ #32  //DV
   WRITE_ASCII 0x2cc ~X3VLove~ #8   // Dialogue 
-  SAY NAME1 ~Leondolis~
-  SAY NAME2 ~Leondolis~    
+  SAY NAME1 @931
+  SAY NAME2 @931    
 // Creature Scripts 
 COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Scripts/X3VG.baf~ 
 ~%MOD_FOLDER%/Scripts/X3Vie25.baf~ 
@@ -416,15 +355,15 @@ COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Scripts/X3VG.baf~
 	EXTEND_BOTTOM ~ar5501.bcs~ ~%MOD_FOLDER%/Scripts/ar5501.baf~
   
   //Dialogue 
-COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3Vie.d~
-~%MOD_FOLDER%/Dialogue/X3Vie25.d~	
-~%MOD_FOLDER%/Dialogue/X3VSage.d~ 
-~%MOD_FOLDER%/Dialogue/X3VSAG25.d~ 
-~%MOD_FOLDER%/Dialogue/X3VSamir.d~
-~%MOD_FOLDER%/Dialogue/BX3Vie.d~	
-~%MOD_FOLDER%/Dialogue/X3VieJ.d~
-~%MOD_FOLDER%/Dialogue/BX3Vie25.d~	
-~%MOD_FOLDER%/Dialogue/X3Vie25J.d~	
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3Vie.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3Vie.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3Vie25.d~	 USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3Vie25.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3VSage.d~  USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3VSage.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3VSAG25.d~  USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3VSAG25.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3VSamir.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3VSamir.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/BX3Vie.d~	 USING ~%MOD_FOLDER%/tra/%LANGUAGE%/BX3Vie.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3VieJ.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3VieJ.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/BX3Vie25.d~	 USING ~%MOD_FOLDER%/tra/%LANGUAGE%/BX3Vie25.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3Vie25J.d~	 USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3Vie25J.tra~
  // Contains Samir and X3Drow's dialogue. 
  
    // Portraits 
@@ -458,4 +397,4 @@ END
       PRINT ~Portrait: Old Version (NWN)~
 	  END
 
-LOAD_TRA ~%MOD_FOLDER%/Tra/english/setup.tra~
+LOAD_TRA ~%MOD_FOLDER%/Tra/%LANGUAGE%/setup.tra~

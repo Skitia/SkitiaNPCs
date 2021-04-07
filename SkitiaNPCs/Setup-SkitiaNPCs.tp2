@@ -7,16 +7,17 @@ AUTO_TRA ~%MOD_FOLDER%/Tra/%s~
 ALWAYS
 INCLUDE ~%MOD_FOLDER%/Lib/qd_multiclass.tpa~
 INCLUDE ~%MOD_FOLDER%/Lib/fl#add_kit_ee.tpa~
-  ACTION_IF (GAME_IS ~eet~) BEGIN
-    OUTER_SET bg2_chapter = 12
-  END ELSE BEGIN
-    OUTER_SET bg2_chapter = 0
-  END
-  OUTER_FOR (i=1; i<=10; i=i+1) BEGIN
-    OUTER_SET bg2_chapter = bg2_chapter + 1
-    OUTER_SPRINT name_source ~bg2_chapter_%i%~
-    OUTER_SET EVAL ~%name_source%~ = bg2_chapter
-  END
+ACTION_IF (GAME_IS ~eet~) BEGIN
+  OUTER_SET bg2_chapter = 12
+END ELSE BEGIN
+  OUTER_SET bg2_chapter = 0
+END
+OUTER_FOR (i=1; i<=10; i=i+1) BEGIN
+  OUTER_SET bg2_chapter = bg2_chapter + 1
+  OUTER_SPRINT name_source ~bg2_chapter_%i%~
+  OUTER_SET EVAL ~%name_source%~ = bg2_chapter
+END
+
 END
 
 
@@ -24,11 +25,11 @@ LANGUAGE ~English~
          ~English~
          ~%MOD_FOLDER%/Tra/English/setup.tra~
 
-BEGIN ~Skitia NPCs for Baldur's Gate 2~ 
+BEGIN @995 
 
 
 // Initialize all party NPC dialogue. Required.
-COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/Start.d~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/Start.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/Start.tra~
  
 // Install individual data. Required.
 INCLUDE ~%MOD_FOLDER%/Lib/Emily_BG2.tpa~
@@ -54,7 +55,7 @@ EXTEND_TOP ~AR6200.bcs~ ~%MOD_FOLDER%/Scripts/ar6200.baf~
 //Raise Dead Spell with no VFX in case move global moves them dead. 
 COPY	"%MOD_FOLDER%/Spells/X3Raise.spl" override
 /* Rest Talks*/
-COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/RestTalk.d~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/RestTalk.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/RestTalk.tra~
 ACTION_IF GAME_IS ~eet~ BEGIN
  EXTEND_BOTTOM ~player1D.bcs~ ~%MOD_FOLDER%/Scripts/EET/RestTalk.baf~
  EXTEND_TOP ~baldur.bcs~ ~%MOD_FOLDER%/Scripts/EET/RestSoA.baf~
@@ -90,9 +91,8 @@ ACTION_IF GAME_IS ~eet~ BEGIN
       override_SoA = "X3Emi"
       override_ToB = "X3Emi25"
       dialog_ToB = "X3Emi25"
-      //traFile = "%MOD_FOLDER%/Tra/%LANGUAGE%/setup.tra"
-      //string = "@1"
-      string = "Bring me Emily, the aasimar archer."
+      traFile = EVAL "%MOD_FOLDER%/Tra/%LANGUAGE%/fatesp.tra"
+      string = "@0"
       stringPosDV = "Skie"
   END
    LAF ~EET_NPC_TRANSITION~
@@ -105,9 +105,8 @@ ACTION_IF GAME_IS ~eet~ BEGIN
       override_SoA = "X3Hel"
       override_ToB = "X3Hel25"
       dialog_ToB = "X3Hel25"
-      //traFile = "%MOD_FOLDER%/Tra/%LANGUAGE%/setup.tra"
-      //string = "@1"
-      string = "Bring me Helga, the priestess of Haela."
+      traFile = EVAL "%MOD_FOLDER%/Tra/%LANGUAGE%/fatesp.tra"
+      string = "@2"
       stringPosDV = "Skie"
   END
      LAF ~EET_NPC_TRANSITION~
@@ -120,9 +119,8 @@ ACTION_IF GAME_IS ~eet~ BEGIN
       override_SoA = "X3Kal"
       override_ToB = "X3Kal25"
       dialog_ToB = "X3Kal25"
-      //traFile = "%MOD_FOLDER%/Tra/%LANGUAGE%/setup.tra"
-      //string = "@1"
-      string = "Bring me Kale, the halfling warrior."
+      traFile = EVAL "%MOD_FOLDER%/Tra/%LANGUAGE%/fatesp.tra"
+      string = "@3"
       stringPosDV = "Skie"
   END
      LAF ~EET_NPC_TRANSITION~
@@ -135,9 +133,8 @@ ACTION_IF GAME_IS ~eet~ BEGIN
       override_SoA = "X3Reb"
       override_ToB = "X3Reb25"
       dialog_ToB = "X3Reb25"
-      //traFile = "%MOD_FOLDER%/Tra/%LANGUAGE%/setup.tra"
-      //string = "@1"
-      string = "Bring me Recorder, the gnome lorekeeper."
+      traFile = EVAL "%MOD_FOLDER%/Tra/%LANGUAGE%/fatesp.tra"
+      string = "@5"
       stringPosDV = "Skie"
   END  
     LAF ~EET_NPC_TRANSITION~
@@ -150,25 +147,24 @@ ACTION_IF GAME_IS ~eet~ BEGIN
       override_SoA = "X3Vie"
       override_ToB = "X3Vie25"
       dialog_ToB = "X3Vie25"
-      //traFile = "%MOD_FOLDER%/Tra/%LANGUAGE%/setup.tra"
-      //string = "@1"
-      string = "Bring me Vienxay, the elf shadowmage."
+      traFile = EVAL "%MOD_FOLDER%/Tra/%LANGUAGE%/fatesp.tra"
+      string = "@7"
       stringPosDV = "Skie"
   END  
 END ELSE BEGIN
-  COMPILE ~%MOD_FOLDER%/Dialogue/FATESP.d~
+  COMPILE ~%MOD_FOLDER%/Dialogue/FATESP.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/FATESP.tra~
 END	  
 
 ACTION_IF FILE_EXISTS_IN_GAME ~L3PetsyB.dlg~
 THEN BEGIN
-  PRINT ~Adding Petsy Crossmod~
-COMPILE ~%MOD_FOLDER%/Dialogue/Crossmod/Petsy.d~
+  PRINT @996
+COMPILE ~%MOD_FOLDER%/Dialogue/Crossmod/Petsy.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/Petsy.tra~
 END 
 
 ACTION_IF FILE_EXISTS_IN_GAME ~YxYveB.dlg~
 THEN BEGIN
-  PRINT ~Adding Yvette Crossmod~
-COMPILE ~%MOD_FOLDER%/Dialogue/Crossmod/Yvette.d~
+  PRINT @997
+COMPILE ~%MOD_FOLDER%/Dialogue/Crossmod/Yvette.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/Yvette.tra~
 END 
 /*
 ACTION_IF FILE_EXISTS_IN_GAME ~bc0sire2.dlg~
@@ -179,241 +175,241 @@ END
 */
 //All Optional Additions 
 
-BEGIN ~Arcane Archer (Fighter Kit)~
-SUBCOMPONENT ~Emily Alternate Class: Arcane Archer Kit~
-REQUIRE_COMPONENT ~ArtisansKitpack.tp2~ ~0~ ~This component requires Artisan's Kitpack to be installed~
+BEGIN @998
+SUBCOMPONENT @999
+REQUIRE_COMPONENT ~ArtisansKitpack.tp2~ ~0~ @1000
 
 COPY ~%MOD_FOLDER%/cre/X3EmiA.cre~ ~override/X3Emi.cre~
-  SAY NAME1 ~Emily~
-  SAY NAME2 ~Emily~
+  SAY NAME1 @522
+  SAY NAME2 @522
   WRITE_ASCII 0x248 ~X3Emi~ #8  //override script
   WRITE_ASCII 0x280 ~X3Emi~ #32  //DV
   WRITE_ASCII 0x2cc ~X3Emi~ #8   //pre-joining dialogue file
   WRITE_ASCII 0X34 ~X3EmiM~ #8   //small portrait
   WRITE_ASCII 0x3c ~X3EmiL~ #8   //medium portrait
-  SAY BIO ~"I'm game for sharing." Emily would quip when you ask about her past, before eagerly launching into details of her childhood. She grew up on her father's estate southeast of Brost in the lands of Tethyr, where she stayed often in seclusion, hiding her visibly elven features with tricks of the hair or hat wear at her parent's insistence, though this did nothing to hide the golden eyes of her lesser understood aasimar heritage. Still, her father was determined to let few suspect she was not the product of his wife, which resulted in loneliness and very few friends. Finding the isolation frustrating, she talks of late night sneak outs, watching the estate guards in their archery practice or escaping the lands entirely, often into trouble and earning herself a stern lecture from the guard captain or her father. She was born to do good, and she won't ignore the weight of her heritage, even at the cost of noble opinion, house politics or a concerned father.~
-  SAY MORALE ~We've got to get out of here.~ [Emilfear]
-  SAY HAPPY ~It appears the tales told of your heroism are quite justified.~ [Emilhap]
-  SAY UNHAPPY_ANNOYED ~I don't approve of our direction.~ []
-  SAY UNHAPPY_SERIOUS ~We need to seriously consider our actions. We cannot continue as we have been!~ []
+  SAY BIO @523
+  SAY MORALE @524
+  SAY HAPPY @525
+  SAY UNHAPPY_ANNOYED @526
+  SAY UNHAPPY_SERIOUS @527
   SAY UNHAPPY_BREAKING_POINT ~~ // Emily only leaves if approval hits -99.
-  SAY LEADER ~Come with me.~ [Emilead]
-  SAY TIRED ~I need to sit down, just for a bit.~ [Emilrest]
-  SAY BORED ~Some excitement would be welcome.~ [Emilidle]
-  SAY BATTLE_CRY1 ~I hope you didn't invite them.~ [X3Ebc1]
-  SAY BATTLE_CRY2 ~Watch my back!~ [X3Ebc2]
-  SAY BATTLE_CRY3 ~Down you go!~ [Emilb2]
-  SAY BATTLE_CRY4 ~You're in for it now!~ [Emilb3]
-  SAY BATTLE_CRY5 ~You'll not be the first to regret crossing me.~ [Emilb4]
+  SAY LEADER @529
+  SAY TIRED @530
+  SAY BORED @531
+  SAY BATTLE_CRY1 @532
+  SAY BATTLE_CRY2 @533
+  SAY BATTLE_CRY3 @534
+  SAY BATTLE_CRY4 @535
+  SAY BATTLE_CRY5 @536
   SAY DAMAGE ~~ [Emildama]
-  SAY DYING ~Not like this...~ [Emildie]
-  SAY HURT ~Damn, I need some healing!~ [Emilhurt]
-  SAY AREA_FOREST ~Hmm, I should have picked up some new boots.~ [Emilfor]
-  SAY AREA_CITY ~The estate was always a bit away from towns and cities. This is so...congested.~ []
-  SAY AREA_DUNGEON ~Why do dungeons have to be so blasted cold? I'm freezing.~ [Emildun]
-  SAY AREA_DAY ~This shall make a grand tale!~ [X3EDay]
-  SAY AREA_NIGHT ~Silent as ever.~ [X3Ean]
-  SAY SELECT_COMMON1 ~Yes? Is there something you need?~ [Emila]
-  SAY SELECT_COMMON2 ~Is there something I can do for you?~[Emilc2]
-  SAY SELECT_COMMON3 ~Let's stay together now.~ [Emilcs3]
-  SAY SELECT_COMMON4 ~Something you need?~ [Emilcs4]
-  SAY SELECT_COMMON5 ~Well met.~ [Emilcs5]
-  SAY SELECT_COMMON6 ~You have my appreciation.~ [Emilra]
-  SAY SELECT_ACTION1 ~So be it.~ [Emilaa2]
-  SAY SELECT_ACTION2 ~Now this should be interesting.~ [Emilaa3]
-  SAY SELECT_ACTION3 ~I'll see what I can do.~ [Emilac3]
-  SAY SELECT_ACTION4 ~Fair enough.~ [Emilaa4]
-  SAY SELECT_ACTION5 ~Sounds fine to me.~ [Emilac6]
-  SAY SELECT_ACTION6 ~Hmm, I don't know.~ [Emilac7]
-  SAY SELECT_ACTION7 ~Yes.~ [X3Ea7]
-  SAY CRITICAL_HIT ~Ahaha!~ [Emilcrit]
-  SAY CRITICAL_MISS ~Oh bugger!~ [Emilcm]
-  SAY TARGET_IMMUNE ~My attack does nothing!~ [Emilnoth]
-  SAY INVENTORY_FULL ~I am not a pack mule, you know. Notice I lack long ears and hooves.~ [Emilin] 
-  SAY SPELL_DISRUPTED ~No good, my spell failed!~ [Emilspel]
+  SAY DYING @538
+  SAY HURT @539
+  SAY AREA_FOREST @540
+  SAY AREA_CITY @1003
+  SAY AREA_DUNGEON @542
+  SAY AREA_DAY @543
+  SAY AREA_NIGHT @544
+  SAY SELECT_COMMON1 @545
+  SAY SELECT_COMMON2 @546
+  SAY SELECT_COMMON3 @547
+  SAY SELECT_COMMON4 @548
+  SAY SELECT_COMMON5 @549
+  SAY SELECT_COMMON6 @550
+  SAY SELECT_ACTION1 @551
+  SAY SELECT_ACTION2 @552
+  SAY SELECT_ACTION3 @553
+  SAY SELECT_ACTION4 @554
+  SAY SELECT_ACTION5 @555
+  SAY SELECT_ACTION6 @556
+  SAY SELECT_ACTION7 @557
+  SAY CRITICAL_HIT @558
+  SAY CRITICAL_MISS @559
+  SAY TARGET_IMMUNE @560
+  SAY INVENTORY_FULL @561 
+  SAY SPELL_DISRUPTED @562
   SAY SET_A_TRAP ~~ []
-  SAY HIDDEN_IN_SHADOWS ~Time to fade into the background, hmm?~ [Emilhide]
+  SAY HIDDEN_IN_SHADOWS @563
   SAY PICKED_POCKET ~~ []
-  SAY SELECT_RARE1 ~Come with me.~ [Emilead]
-  SAY SELECT_RARE2 ~Come with me.~ [Emilead]
-  SAY REACT_TO_DIE_GENERAL ~Blast, not now!~ [X3Ertdg]
+  SAY SELECT_RARE1 @529
+  SAY SELECT_RARE2 @529
+  SAY REACT_TO_DIE_GENERAL @564
   WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~c0aa~))  
 
 COPY ~%MOD_FOLDER%/cre/X3EmiA25.cre~ ~override/X3Emi25.cre~
-  SAY NAME1 ~Emily~
-  SAY NAME2 ~Emily~
+  SAY NAME1 @522
+  SAY NAME2 @522
   WRITE_ASCII 0x248 ~X3Emi25~ #8  //override script
   WRITE_ASCII 0x280 ~X3Emi~ #32  //DV
   WRITE_ASCII 0x2cc ~X3Emi25~ #8   //pre-joining dialogue file
   WRITE_ASCII 0X34 ~X3EmiM~ #8   //small portrait
   WRITE_ASCII 0x3c ~X3EmiL~ #8   //medium portrait
-  SAY BIO ~"I'm game for sharing." Emily would quip when you ask about her past, before eagerly launching into details of her childhood. She grew up on her father's estate southeast of Brost in the lands of Tethyr, where she stayed often in seclusion, hiding her visibly elven features with tricks of the hair or hat wear at her parent's insistence, though this did nothing to hide the golden eyes of her lesser understood aasimar heritage. Still, her father was determined to let few suspect she was not the product of his wife, which resulted in loneliness and very few friends. Finding the isolation frustrating, she talks of late night sneak outs, watching the estate guards in their archery practice or escaping the lands entirely, often into trouble and earning herself a stern lecture from the guard captain or her father. She was born to do good, and she won't ignore the weight of her heritage, even at the cost of noble opinion, house politics or a concerned father.~
-  SAY MORALE ~We've got to get out of here.~ [Emilfear]
-  SAY HAPPY ~It appears the tales told of your heroism are quite justified.~ [Emilhap]
-  SAY UNHAPPY_ANNOYED ~I don't approve of our direction.~ []
-  SAY UNHAPPY_SERIOUS ~We need to seriously consider our actions. We cannot continue as we have been!~ []
+  SAY BIO @523
+  SAY MORALE @524
+  SAY HAPPY @525
+  SAY UNHAPPY_ANNOYED @526
+  SAY UNHAPPY_SERIOUS @527
   SAY UNHAPPY_BREAKING_POINT ~~ // Emily only leaves if approval hits -99.
-  SAY LEADER ~Come with me.~ [Emilead]
-  SAY TIRED ~I need to sit down, just for a bit.~ [Emilrest]
-  SAY BORED ~Some excitement would be welcome.~ [Emilidle]
-  SAY BATTLE_CRY1 ~I hope you didn't invite them.~ [X3Ebc1]
-  SAY BATTLE_CRY2 ~Watch my back!~ [X3Ebc2]
-  SAY BATTLE_CRY3 ~Down you go!~ [Emilb2]
-  SAY BATTLE_CRY4 ~You're in for it now!~ [Emilb3]
-  SAY BATTLE_CRY5 ~You'll not be the first to regret crossing me.~ [Emilb4]
+  SAY LEADER @529
+  SAY TIRED @530
+  SAY BORED @531
+  SAY BATTLE_CRY1 @532
+  SAY BATTLE_CRY2 @533
+  SAY BATTLE_CRY3 @534
+  SAY BATTLE_CRY4 @535
+  SAY BATTLE_CRY5 @536
   SAY DAMAGE ~~ [Emildama]
-  SAY DYING ~Not like this...~ [Emildie]
-  SAY HURT ~Damn, I need some healing!~ [Emilhurt]
-  SAY AREA_FOREST ~Hmm, I should have picked up some new boots.~ [Emilfor]
-  SAY AREA_CITY ~Let's look around a bit.~ [X3ELA]
-  SAY AREA_DUNGEON ~Why do dungeons have to be so blasted cold? I'm freezing.~ [Emildun]
-  SAY AREA_DAY ~This shall make a grand tale!~ [X3EDay]
-  SAY AREA_NIGHT ~Silent as ever.~ [X3Ean]
-  SAY SELECT_COMMON1 ~Yes? Is there something you need?~ [Emila]
-  SAY SELECT_COMMON2 ~Is there something I can do for you?~[Emilc2]
-  SAY SELECT_COMMON3 ~Let's stay together now.~ [Emilcs3]
-  SAY SELECT_COMMON4 ~Something you need?~ [Emilcs4]
-  SAY SELECT_COMMON5 ~Well met.~ [Emilcs5]
-  SAY SELECT_COMMON6 ~You have my appreciation.~ [Emilra]
-  SAY SELECT_ACTION1 ~So be it.~ [Emilaa2]
-  SAY SELECT_ACTION2 ~Now this should be interesting.~ [Emilaa3]
-  SAY SELECT_ACTION3 ~I'll see what I can do.~ [Emilac3]
-  SAY SELECT_ACTION4 ~Fair enough.~ [Emilaa4]
-  SAY SELECT_ACTION5 ~Sounds fine to me.~ [Emilac6]
-  SAY SELECT_ACTION6 ~Hmm, I don't know.~ [Emilac7]
-  SAY SELECT_ACTION7 ~Yes.~ [X3Ea7]
-  SAY CRITICAL_HIT ~Ahaha!~ [Emilcrit]
-  SAY CRITICAL_MISS ~Oh bugger!~ [Emilcm]
-  SAY TARGET_IMMUNE ~My attack does nothing!~ [Emilnoth]
-  SAY INVENTORY_FULL ~I am not a pack mule, you know. Notice I lack long ears and hooves.~ [Emilin] 
-  SAY SPELL_DISRUPTED ~No good, my spell failed!~ [Emilspel]
+  SAY DYING @538
+  SAY HURT @539
+  SAY AREA_FOREST @540
+  SAY AREA_CITY @541
+  SAY AREA_DUNGEON @542
+  SAY AREA_DAY @543
+  SAY AREA_NIGHT @544
+  SAY SELECT_COMMON1 @545
+  SAY SELECT_COMMON2 @546
+  SAY SELECT_COMMON3 @547
+  SAY SELECT_COMMON4 @548
+  SAY SELECT_COMMON5 @549
+  SAY SELECT_COMMON6 @550
+  SAY SELECT_ACTION1 @551
+  SAY SELECT_ACTION2 @552
+  SAY SELECT_ACTION3 @553
+  SAY SELECT_ACTION4 @554
+  SAY SELECT_ACTION5 @555
+  SAY SELECT_ACTION6 @556
+  SAY SELECT_ACTION7 @557
+  SAY CRITICAL_HIT @558
+  SAY CRITICAL_MISS @559
+  SAY TARGET_IMMUNE @560
+  SAY INVENTORY_FULL @561 
+  SAY SPELL_DISRUPTED @562
   SAY SET_A_TRAP ~~ []
-  SAY HIDDEN_IN_SHADOWS ~Time to fade into the background, hmm?~ [Emilhide]
+  SAY HIDDEN_IN_SHADOWS @563
   SAY PICKED_POCKET ~~ []
-  SAY SELECT_RARE1 ~Come with me.~ [Emilead]
-  SAY SELECT_RARE2 ~Come with me.~ [Emilead]
-  SAY REACT_TO_DIE_GENERAL ~Blast, not now!~ [X3Ertdg]
+  SAY SELECT_RARE1 @529
+  SAY SELECT_RARE2 @529
+  SAY REACT_TO_DIE_GENERAL @564
   WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~c0aa~))  
 
 
-BEGIN ~Arcane Archer/Mage (Fighter/Mage Kit))~
-SUBCOMPONENT ~Emily Alternate Class: Arcane Archer Kit~
-REQUIRE_COMPONENT ~ArtisansKitpack.tp2~ ~0~ ~This component requires Artisan's Kitpack to be installed~
+BEGIN @1005
+SUBCOMPONENT @999
+REQUIRE_COMPONENT ~ArtisansKitpack.tp2~ ~0~ @1000
 
 COPY ~%MOD_FOLDER%/cre/X3EmiM.cre~ ~override/X3Emi.cre~
-  SAY NAME1 ~Emily~
-  SAY NAME2 ~Emily~
+  SAY NAME1 @522
+  SAY NAME2 @522
   WRITE_ASCII 0x248 ~X3Emi~ #8  //override script
   WRITE_ASCII 0x280 ~X3Emi~ #32  //DV
   WRITE_ASCII 0x2cc ~X3Emi~ #8   //pre-joining dialogue file
   WRITE_ASCII 0X34 ~X3EmiM~ #8   //small portrait
   WRITE_ASCII 0x3c ~X3EmiL~ #8   //medium portrait
-  SAY BIO ~"I'm game for sharing." Emily would quip when you ask about her past, before eagerly launching into details of her childhood. She grew up on her father's estate southeast of Brost in the lands of Tethyr, where she stayed often in seclusion, hiding her visibly elven features with tricks of the hair or hat wear at her parent's insistence, though this did nothing to hide the golden eyes of her lesser understood aasimar heritage. Still, her father was determined to let few suspect she was not the product of his wife, which resulted in loneliness and very few friends. Finding the isolation frustrating, she talks of late night sneak outs, watching the estate guards in their archery practice or escaping the lands entirely, often into trouble and earning herself a stern lecture from the guard captain or her father. She was born to do good, and she won't ignore the weight of her heritage, even at the cost of noble opinion, house politics or a concerned father.~
-  SAY MORALE ~We've got to get out of here.~ [Emilfear]
-  SAY HAPPY ~It appears the tales told of your heroism are quite justified.~ [Emilhap]
-  SAY UNHAPPY_ANNOYED ~I don't approve of our direction.~ []
-  SAY UNHAPPY_SERIOUS ~We need to seriously consider our actions. We cannot continue as we have been!~ []
+  SAY BIO @523
+  SAY MORALE @524
+  SAY HAPPY @525
+  SAY UNHAPPY_ANNOYED @526
+  SAY UNHAPPY_SERIOUS @527
   SAY UNHAPPY_BREAKING_POINT ~~ // Emily only leaves if approval hits -99.
-  SAY LEADER ~Come with me.~ [Emilead]
-  SAY TIRED ~I need to sit down, just for a bit.~ [Emilrest]
-  SAY BORED ~Some excitement would be welcome.~ [Emilidle]
-  SAY BATTLE_CRY1 ~I hope you didn't invite them.~ [X3Ebc1]
-  SAY BATTLE_CRY2 ~Watch my back!~ [X3Ebc2]
-  SAY BATTLE_CRY3 ~Down you go!~ [Emilb2]
-  SAY BATTLE_CRY4 ~You're in for it now!~ [Emilb3]
-  SAY BATTLE_CRY5 ~You'll not be the first to regret crossing me.~ [Emilb4]
+  SAY LEADER @529
+  SAY TIRED @530
+  SAY BORED @531
+  SAY BATTLE_CRY1 @532
+  SAY BATTLE_CRY2 @533
+  SAY BATTLE_CRY3 @534
+  SAY BATTLE_CRY4 @535
+  SAY BATTLE_CRY5 @536
   SAY DAMAGE ~~ [Emildama]
-  SAY DYING ~Not like this...~ [Emildie]
-  SAY HURT ~Damn, I need some healing!~ [Emilhurt]
-  SAY AREA_FOREST ~Hmm, I should have picked up some new boots.~ [Emilfor]
-  SAY AREA_CITY ~Let's look around a bit.~ [X3ELA]
-  SAY AREA_DUNGEON ~Why do dungeons have to be so blasted cold? I'm freezing.~ [Emildun]
-  SAY AREA_DAY ~It's a beautiful day, isn't it?~ []
-  SAY AREA_NIGHT ~Silent as ever.~ [X3Ean]
-  SAY SELECT_COMMON1 ~Yes? Is there something you need?~ [Emila]
-  SAY SELECT_COMMON2 ~Is there something I can do for you?~[Emilc2]
-  SAY SELECT_COMMON3 ~Let's stay together now.~ [Emilcs3]
-  SAY SELECT_COMMON4 ~Something you need?~ [Emilcs4]
-  SAY SELECT_COMMON5 ~Well met.~ [Emilcs5]
-  SAY SELECT_COMMON6 ~You have my appreciation.~ [Emilra]
-  SAY SELECT_ACTION1 ~So be it.~ [Emilaa2]
-  SAY SELECT_ACTION2 ~Now this should be interesting.~ [Emilaa3]
-  SAY SELECT_ACTION3 ~I'll see what I can do.~ [Emilac3]
-  SAY SELECT_ACTION4 ~Fair enough.~ [Emilaa4]
-  SAY SELECT_ACTION5 ~Sounds fine to me.~ [Emilac6]
-  SAY SELECT_ACTION6 ~Hmm, I don't know.~ [Emilac7]
-  SAY SELECT_ACTION7 ~Yes.~ [X3Ea7]
-  SAY CRITICAL_HIT ~Ahaha!~ [Emilcrit]
-  SAY CRITICAL_MISS ~Oh bugger!~ [Emilcm]
-  SAY TARGET_IMMUNE ~My attack does nothing!~ [Emilnoth]
-  SAY INVENTORY_FULL ~I am not a pack mule, you know. Notice I lack long ears and hooves.~ [Emilin] 
-  SAY SPELL_DISRUPTED ~No good, my spell failed!~ [Emilspel]
+  SAY DYING @538
+  SAY HURT @539
+  SAY AREA_FOREST @540
+  SAY AREA_CITY @541
+  SAY AREA_DUNGEON @542
+  SAY AREA_DAY @1006
+  SAY AREA_NIGHT @544
+  SAY SELECT_COMMON1 @545
+  SAY SELECT_COMMON2 @546
+  SAY SELECT_COMMON3 @547
+  SAY SELECT_COMMON4 @548
+  SAY SELECT_COMMON5 @549
+  SAY SELECT_COMMON6 @550
+  SAY SELECT_ACTION1 @551
+  SAY SELECT_ACTION2 @552
+  SAY SELECT_ACTION3 @553
+  SAY SELECT_ACTION4 @554
+  SAY SELECT_ACTION5 @555
+  SAY SELECT_ACTION6 @556
+  SAY SELECT_ACTION7 @557
+  SAY CRITICAL_HIT @558
+  SAY CRITICAL_MISS @559
+  SAY TARGET_IMMUNE @560
+  SAY INVENTORY_FULL @561 
+  SAY SPELL_DISRUPTED @562
   SAY SET_A_TRAP ~~ []
-  SAY HIDDEN_IN_SHADOWS ~Time to fade into the background, hmm?~ [Emilhide]
+  SAY HIDDEN_IN_SHADOWS @563
   SAY PICKED_POCKET ~~ []
-  SAY SELECT_RARE1 ~Come with me.~ [Emilead]
-  SAY SELECT_RARE2 ~Come with me.~ [Emilead]
-  SAY REACT_TO_DIE_GENERAL ~Blast, not now!~ [X3Ertdg]
+  SAY SELECT_RARE1 @529
+  SAY SELECT_RARE2 @529
+  SAY REACT_TO_DIE_GENERAL @564
   WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~c0aa~))  
 
 COPY ~%MOD_FOLDER%/cre/X3EmiM25.cre~ ~override/X3Emi25.cre~
-   SAY NAME1 ~Emily~
-  SAY NAME2 ~Emily~
+   SAY NAME1 @522
+  SAY NAME2 @522
   WRITE_ASCII 0x248 ~X3Emi25~ #8  //override script
   WRITE_ASCII 0x280 ~X3Emi~ #32  //DV
   WRITE_ASCII 0x2cc ~X3Emi25~ #8   //pre-joining dialogue file
   WRITE_ASCII 0X34 ~X3EmiM~ #8   //small portrait
   WRITE_ASCII 0x3c ~X3EmiL~ #8   //medium portrait
-  SAY BIO ~"I'm game for sharing." Emily would quip when you ask about her past, before eagerly launching into details of her childhood. She grew up on her father's estate southeast of Brost in the lands of Tethyr, where she stayed often in seclusion, hiding her visibly elven features with tricks of the hair or hat wear at her parent's insistence, though this did nothing to hide the golden eyes of her lesser understood aasimar heritage. Still, her father was determined to let few suspect she was not the product of his wife, which resulted in loneliness and very few friends. Finding the isolation frustrating, she talks of late night sneak outs, watching the estate guards in their archery practice or escaping the lands entirely, often into trouble and earning herself a stern lecture from the guard captain or her father. She was born to do good, and she won't ignore the weight of her heritage, even at the cost of noble opinion, house politics or a concerned father.~
-  SAY MORALE ~We've got to get out of here.~ [Emilfear]
-  SAY HAPPY ~It appears the tales told of your heroism are quite justified.~ [Emilhap]
-  SAY UNHAPPY_ANNOYED ~I don't approve of our direction.~ []
-  SAY UNHAPPY_SERIOUS ~We need to seriously consider our actions. We cannot continue as we have been!~ []
+  SAY BIO @523
+  SAY MORALE @524
+  SAY HAPPY @525
+  SAY UNHAPPY_ANNOYED @526
+  SAY UNHAPPY_SERIOUS @527
   SAY UNHAPPY_BREAKING_POINT ~~ // Emily only leaves if approval hits -99.
-  SAY LEADER ~Come with me.~ [Emilead]
-  SAY TIRED ~I need to sit down, just for a bit.~ [Emilrest]
-  SAY BORED ~Some excitement would be welcome.~ [Emilidle]
-  SAY BATTLE_CRY1 ~I hope you didn't invite them.~ [X3Ebc1]
-  SAY BATTLE_CRY2 ~Watch my back!~ [X3Ebc2]
-  SAY BATTLE_CRY3 ~Down you go!~ [Emilb2]
-  SAY BATTLE_CRY4 ~You're in for it now!~ [Emilb3]
-  SAY BATTLE_CRY5 ~You'll not be the first to regret crossing me.~ [Emilb4]
+  SAY LEADER @529
+  SAY TIRED @530
+  SAY BORED @531
+  SAY BATTLE_CRY1 @532
+  SAY BATTLE_CRY2 @533
+  SAY BATTLE_CRY3 @534
+  SAY BATTLE_CRY4 @535
+  SAY BATTLE_CRY5 @536
   SAY DAMAGE ~~ [Emildama]
-  SAY DYING ~Not like this...~ [Emildie]
-  SAY HURT ~Damn, I need some healing!~ [Emilhurt]
-  SAY AREA_FOREST ~Hmm, I should have picked up some new boots.~ [Emilfor]
-  SAY AREA_CITY ~The estate was always a bit away from towns and cities. This is so...congested.~ []
-  SAY AREA_DUNGEON ~Why do dungeons have to be so blasted cold? I'm freezing.~ [Emildun]
-  SAY AREA_DAY ~It's a beautiful day, isn't it?~ []
-  SAY AREA_NIGHT ~Silent as ever.~ [X3Ean]
-  SAY SELECT_COMMON1 ~Yes? Is there something you need?~ [Emila]
-  SAY SELECT_COMMON2 ~Is there something I can do for you?~[Emilc2]
-  SAY SELECT_COMMON3 ~Let's stay together now.~ [Emilcs3]
-  SAY SELECT_COMMON4 ~Something you need?~ [Emilcs4]
-  SAY SELECT_COMMON5 ~Well met.~ [Emilcs5]
-  SAY SELECT_COMMON6 ~You have my appreciation.~ [Emilra]
-  SAY SELECT_ACTION1 ~So be it.~ [Emilaa2]
-  SAY SELECT_ACTION2 ~Now this should be interesting.~ [Emilaa3]
-  SAY SELECT_ACTION3 ~I'll see what I can do.~ [Emilac3]
-  SAY SELECT_ACTION4 ~Fair enough.~ [Emilaa4]
-  SAY SELECT_ACTION5 ~Sounds fine to me.~ [Emilac6]
-  SAY SELECT_ACTION6 ~Hmm, I don't know.~ [Emilac7]
-  SAY SELECT_ACTION7 ~Yes.~ [X3Ea7]
-  SAY CRITICAL_HIT ~Ahaha!~ [Emilcrit]
-  SAY CRITICAL_MISS ~Oh bugger!~ [Emilcm]
-  SAY TARGET_IMMUNE ~My attack does nothing!~ [Emilnoth]
-  SAY INVENTORY_FULL ~I am not a pack mule, you know. Notice I lack long ears and hooves.~ [Emilin] 
-  SAY SPELL_DISRUPTED ~No good, my spell failed!~ [Emilspel]
+  SAY DYING @538
+  SAY HURT @539
+  SAY AREA_FOREST @540
+  SAY AREA_CITY @1003
+  SAY AREA_DUNGEON @542
+  SAY AREA_DAY @1006
+  SAY AREA_NIGHT @544
+  SAY SELECT_COMMON1 @545
+  SAY SELECT_COMMON2 @546
+  SAY SELECT_COMMON3 @547
+  SAY SELECT_COMMON4 @548
+  SAY SELECT_COMMON5 @549
+  SAY SELECT_COMMON6 @550
+  SAY SELECT_ACTION1 @551
+  SAY SELECT_ACTION2 @552
+  SAY SELECT_ACTION3 @553
+  SAY SELECT_ACTION4 @554
+  SAY SELECT_ACTION5 @555
+  SAY SELECT_ACTION6 @556
+  SAY SELECT_ACTION7 @557
+  SAY CRITICAL_HIT @558
+  SAY CRITICAL_MISS @559
+  SAY TARGET_IMMUNE @560
+  SAY INVENTORY_FULL @561 
+  SAY SPELL_DISRUPTED @562
   SAY SET_A_TRAP ~~ []
-  SAY HIDDEN_IN_SHADOWS ~Time to fade into the background, hmm?~ [Emilhide]
+  SAY HIDDEN_IN_SHADOWS @563
   SAY PICKED_POCKET ~~ []
-  SAY SELECT_RARE1 ~Come with me.~ [Emilead]
-  SAY SELECT_RARE2 ~Come with me.~ [Emilead]
-  SAY REACT_TO_DIE_GENERAL ~Blast, not now!~ [X3Ertdg]
+  SAY SELECT_RARE1 @529
+  SAY SELECT_RARE2 @529
+  SAY REACT_TO_DIE_GENERAL @564
   WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~c0aa~))  
 
-BEGIN ~Romance Theme Music~
-SUBCOMPONENT ~Skitia NPCs: Romance Theme Soundtrack~
+BEGIN @1007
+SUBCOMPONENT @1008
 
 
 	COPY_EXISTING ~sw1h01.itm~ ~override/bg1npcmusic.g3~
@@ -438,6 +434,6 @@ LAF HANDLE_AUDIO
     sox_path = ~SkitiaNPCs/Music~
 END  
 
-BEGIN ~No Romance Theme Music~
- SUBCOMPONENT ~Skitia NPCs: Romance Theme Soundtrack~
- PRINT ~Installing no music.~
+BEGIN @1009
+ SUBCOMPONENT @1008
+ PRINT @1010

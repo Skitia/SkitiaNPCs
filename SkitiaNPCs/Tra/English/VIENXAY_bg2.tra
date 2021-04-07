@@ -111,3 +111,135 @@ She would bid farewell to them all and travel the realms, mentoring mages across
 @513 = ~^GVienxay slightly approves^-~
 @516 = ~^GVienxay approves^-~
 @519 = ~^GVienxay greatly approves^-~
+
+@862  = ~shadowmage~
+@863  = ~Shadowmage~
+@864  = ~SHADOWMAGE: Shadowmages are mage-thieves that can draw both on shadow magic and the weave, with the cunning and stealth of the shadowdancer and the mage's arsenal of spells.
+  While shadow magic is not the same as the shadow weave, many are drawn to it and can learn to use it. It's dark magic gives it poor public opinion, and most of its practitioners are non-good.
+  
+Advantages: 
+- + 15% Bonus to Hide in Shadows and Move Silently
+- Slippery Mind: +1 bonus to saving throws
+- May cast Shadow Jump once per day. Gains one use at thief level 5 and an additional use every 5 levels thereafter.
+
+SHADOW JUMP: Manipulating shadow, the shadowmage teleports to the selected living creature, be it ally or enemy, unseen as per the invisibility spell. For the next twelve seconds, they gain +2 to their backstab modifier and remain unseen until they make an attack.
+
+Disadvantages: 
+- Alignment restricted to any non-lawful and non-good
+- Backstab multiplier is one less than an unkitted Thief, cannot backstab until level 5.
+- May only distribute 20 skill points per level (30 at level 1) among thieving skills 
+- Cannot Hide in Plain Sight.
+- May not put points in Set Snare.
+- Hit Die: d5~
+@865  = ~Shadowbolt~
+@866  = ~Shadowbolt
+(Illusion)
+
+Level: 6
+Range: 40
+Duration: Instant
+Casting Time: 3
+Area of Effect: 1 Creature 
+Saving Throw: None
+
+This Shadow Magic spell is similar to magic missile. Shadowbolt creates three cold, airy missiles, which dart from the wizard to the intended target. 
+Each missile does 1d6+1 magic cold damage. Another missile is gained from level 8 and every level after up to 15, maxing at eleven missiles.~
+@867  = ~Shadow Jump~
+@868  = ~SHADOW JUMP: Manipulating shadow, the shadowmage teleports to the selected living creature, be it ally or enemy, unseen as per the invisibility spell. For the next twelve seconds, they gain +2 to their backstab modifier and remain unseen until they make an attack.~
+@869  = ~Vienxay~
+@870  = ~Some elves are just awful, but Vienxay insists she is not one of them. She boasts of growing up in comfort and prominence, the eldest, most beautiful, and most intelligent of three sisters, gifted both with the weave and the shadow magic well known to the shadowdancer, which she used to great abandon. She then rants on about how a series of “misunderstandings” had her ousted from Evermeet and wandering the landscape by the scheming of her former mentor. She misses home terribly, both the comforts of her manor and the warmth of nearby family who were far more tolerable of her elf elitism than the human locals of the sword coast. But if the locals dare think they shall disrespect her, she says, they will quickly learn from their mistake.~
+@871  = ~I will not die here.~ [VienFear]
+@872  = ~This party is doing better than I thought it would.~ [VienHap]
+@873  = ~If we were under my leadership, things would be looking much better around here.~ [VienAnn]
+@874  = ~Must we come to the aid of every commoner?~ [VienSer]
+@875  = ~I'm done here. Be fools if you wish but you do so without me.~ [VieBreak]
+@876  = ~A wise choice. I will bring us victory.~ [VienLead]
+@877  = ~I need to refresh my spells. Let us rest~ [VienRest]
+@878  = ~Ugh.~ [VienBore]
+@879  = ~You will regret crossing an elf.~ [VienCry1]
+@880  = ~Prepare to be destroyed!~ [VienCry2]
+@881  = ~No one faces me and lives.~ [VienCry3]
+@882  = ~My art and shadows will end you all.~ [VienCry4]
+@883  = ~With Vengeance!~ [VienCry5]
+@884  = ~Ugh!~ [VieDam]
+@885  = ~My power...was not...~ [VienDyng]
+@886  = ~Someone, heal me now!~ [VienHurt]
+@887  = ~The forests...they bring me back to Evermeet.~ [X3VFor]
+@888  = ~Humans and their hideous cities.~ [X3VCit]
+@889  = ~Trek carefully. Leave the traps to me.~ [X3VDun]
+@890  = ~Evermeet...how I miss you.~ [X3VDay]
+@891  = ~My talents are well suited to the night.~ [X3VNigh]
+@892  = ~Yes?~ [VienCom1]
+@893  = ~Speak.~ [VienCom2]
+@894  = ~Your desire?~ [VienCom3]
+@895  = ~My art is yours.~ [VienCom4]
+@896  = ~This is Vienxay.~ [VienCom5]
+@897  = ~You called the shadowmage?~ [VienCom6]
+@898  = ~If that is your command.~ [VienAct1]
+@899  = ~Hrmph.~ [VienAct2]
+@900  = ~Done.~ [VienAct3]
+@901  = ~Ugh, fine.~ [VienAct4]
+@902  = ~That's it?~ [VienAct5]
+@903  = ~Follow me.~ [VienAct6]
+@904  = ~I walk.~ [VienAct7]
+@905  = ~Hahaha, yes!~ [VienCrtH]
+@906  = ~Ugh! I won't miss twice.~ [VienCrtM]
+@907  = ~Hrmph. This is what happens when you don't use magic.~ [VienImm]
+@908  = ~Do I look like I have room?~ [VienInv]
+@909  = ~My spell failed? Impossible!~ [VienSpel]
+@910  = ~It's done.~ [VienDone]
+@911  = ~None can see the shadowmage.~ [VienHide]
+@912  = ~That's mine now.~ [X3VPick]
+@913  = ~Do you even appreciate my contributions?~ [VienRar1]
+@914  = ~I've no patience for this.~ [VienRar2]
+@915  = ~Another fallen? Fight harder, fools!~ [X3VDie]
+@916  = ~Vienxay's Silk Gloves~
+@917  = ~Vienxay's Silk Gloves are warm, snug, and absolutely silent when rubbed against one another. They are the thief's dream, assisting with quiet work and not leaving behind any sign they were ever there. Vienxay will not part lightly with these.
+
+STATISTICS:
+
++20% Move Silently
++20% Hide
++15% Pickpocket
++10% Open Lock
+
+Usable By: 
+Vienxay
+
+Weight: 1~
+@918  = ~"Excuse me! Those stay with *me*."~
+@919  = ~Sules'terim's Notes~
+@920  = ~The writing on these notes is atrociously illegible, although the very few faint words you can make out appear to be in the elven language.
+
+Whoever was writing this was not doing so with readability in mind.~
+@921  = ~Myth Drannor Tome~
+@922  = ~This tome hails all the way from the elven ruins of Myth Drannor. Completely in the elven language, only an elf could use it. The magic around the tome suggests it could be destroyed in exchange for increasing one's intelligence
+and capacity for the arcane with the secrets of old elven magic, although the elven people of Evermeet would likely prefer it stored and kept with them instead. Because the language is entirely in elven, only elves and half-elves can understand it.
+
+STATISTICS:
+
+Intelligence: Raised by 1 point permanently
+Special: The book is consumed upon use
+Usage: Place into quick item slot
+
+
+Weight: 25~
+@923  = ~Tome of Elven Grace~
+@924  = ~Tomes such are these are often gifted to the finest elven archers and dancers in Evermeet, to even further their mastery of eye accuracy and fluid body movements by enhancing their dexterity, although the tome is destroyed in the process.
+Because the language is entirely in elven, only elves and half-elves can understand it.
+
+STATISTICS:
+
+Dexterity: Raised by 1 point permanently
+Special: The book is consumed upon use
+Usage: Place into quick item slot
+
+
+Weight: 25~
+@925  = ~Amnian Soldier~
+@926  = ~Great White Wolf~
+@927  = ~Sules'terim~
+@928  = ~Samir~
+@929  = ~Xel'nu~
+@930  = ~Drow Warrior~
+@931  = ~Leondolis~

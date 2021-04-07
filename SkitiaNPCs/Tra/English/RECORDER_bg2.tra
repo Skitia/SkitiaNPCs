@@ -121,3 +121,176 @@ But no inn nor promising plea of curious bard could keep her from her destinatio
 @513 = ~^GVienxay slightly approves^-~
 @516 = ~^GVienxay approves^-~
 @519 = ~^GVienxay greatly approves^-~
+
+@776  = ~lorekeeper~
+@777  = ~Lorekeeper~
+@778  = ~LOREKEEPER: Lorekeepers are bards that focus less on a generalist skill set and lean more towards spell casting, where their prodigious memory and knowledge makes them better casters than most other bards. They make excellent librarians, historians, and advisors with their large capacity for learning and recalling, and their innate skills ensure information is not lost.
+
+Advantages:
+- +20 bonus to lore.
+- +2 Spell Slots for every spell level. 
+- May use SONATA in place of the regular Bard Song.
+
+SONATA: This song provides varying levels of intelligence, save bonuses, and mind protection depending on the level of the bard:
+
+Level 1: +1 Int, +1 Saves vs Spells, Immunity to Charm and Sleep. 
+Level 15: +2 Int, +2 Saves vs Spells, Immunity to Charm, Sleep, and Rigid/Feeblemind.
+Level 20: +3 Int, +3 Saves vs Spells, Immunity to Charm, Sleep, Rigid/Feeblemind and Confusion
+
+Disadvantages:
+- No Pickpocketing Skill.
+- Can only be proficient in club, dagger, crossbow, and quarterstaff.~
+@779  = ~Symphony of Scholars~
+@780  = ~Symphony of Scholars: A powerful song unique to lorekeepers, the song gives the bard a 6 point bonus to their AC, and 10% magic resistance due to the magic of the song. As well, the bard’s party receives +4 Intelligence, +2 to all saves, +5% MR, +15% chance of a critical hit, and immunity to charm, domination, sleep, rigid/feeblemind, confusion, and fear. 
+This ability replaces the current bard song. It does not stack with Sonata, Enhanced Bard Song or other song sources. Additionally, the Lorekeeper cannot learn both Symphony of Scholars if Enhanced Bard Song is learned, and vice-versa.
+~
+@781  = ~Symphony of Scholars: A powerful song unique to lorekeepers, the song gives the bard a 6 point bonus to their AC, and 10% magic resistance due to the magic of the song. As well, the bard’s party receives +4 Intelligence, +2 to all saves, +5% MR, +15% chance of a critical hit, and immunity to charm, domination, sleep, rigid/feeblemind, confusion, and fear. 
+This ability replaces the current bard song. It does not stack with Sonata, Enhanced Bard Song or other song sources, and cannot be learned if Enhanced Bard Song is known.
+~
+@782  = ~Sonata~
+@783  = ~SONATA: This song provides varying levels of intelligence, save bonuses, and mind protection depending on the level of the bard:
+
+Level 1: +1 Int, +1 Saves vs Spells, Immunity to Charm and Sleep. 
+Level 15: +2 Int, +2 Saves vs Spells, Immunity to Charm, Sleep, and Rigid/Feeblemind.
+Level 20: +3 Int, +3 Saves vs Spells, Immunity to Charm, Sleep, Rigid/Feeblemind and Confusion~
+@784  = ~Send Gustav~
+@785  = ~Send Gustav
+
+Range: 30 ft.
+Duration: 2 Turns
+Casting Time: 0
+Area of Effect: Any point in range
+Saving Throw: None
+
+Sends out Gustav the ferret to scout, once a day. For two turns, Gustav will perform any action of the equivalent ferret familiar. If hit below 25% hitpoints, he will flee.~
+@786  = ~Teleport~
+@787  = ~NPC Spell: Causes NPC and Target to destroy self after a long casting. In this case, the PC must interrupt the spell else Recorder's child is forever out of reach.
+This is not a player spell and a player should not see this text in the game itself.~
+@788  = ~Recorder's Flute~
+@789  = ~This flute was crafted by gnomes in Lantan. Recorder says it was a gift from her father, and it seems quite small, though adjusts to fit her size when she takes it out of her pack. Tiny engravings of flowers, winding vines, and wispy clouds cover the length of the flute. When played, listeners find themselves moving in tempo with one another, harmonizing their movements and teamwork, making it more difficult for an enemy to find an opening.  
+ 
+Charge Abilities (Twice Per Day)
+When played, the spell Defensive Harmony is cast from the flute.
+Weight: 3~
+@790  = ~Recorder~
+@791  = ~Gustav~
+@792  = ~This ferret appears quite well fed and occasionally pokes its head out of Recorder's pack. When asked how she came upon it, she tells how her mother purchased it for her in the grand markets of Amn, seeing the animal starved in a merchant's cage. The purchase gave Recorder a dear companion, and Gustav all the food he could want, and the pair have been inseparable ever since.
+
+Weight: 1~
+@793  = ~The Ferret growls when you try to remove it from its comfortable spot in Recorder's pack.~ [X3RF3]
+@794  = ~Sonneter's Leather~
+@795  = ~This leather armor of Recorder's is enchanted to not encumber spell-casting. It can fit any gnome, dwarf, or halfling, though it's armor has no more additional protections than standard leather.
+
+
+STATISTICS:
+
+Armor Class: 8 (10 vs. piercing and missile)
+Special: Can cast arcane spells while worn.
+Requires:
+ 4 Strength
+ Dwarf, Halfling, or Gnome
+
+Weight: 10~
+@796  = ~Bounty Notice~
+@797  = ~BOUNTY BY ORDER OF THE REMOVER
+
+The client Phelgrim has put a large bounty on one gnome named Rebecca. She may be masquerading under the false name of Recorder, and has been sighted in Althkata.
+
+The one to bring proof of her demise, and any with her, should bring proof to the Remover in the Sea's Bounty Tavern.
+
+Good hunting.~
+@798  = ~Note from Phelgrim~
+@799  = ~It has come to my attention that my "darling" wife has returned to Brynnlaw. If you see her, bring her head to me. Likely she foolishly comes to try to take away my property.
+
+See to it that she never gets the chance.
+
+Phelgrim~
+@800  = ~Scimitar of Talona~
+@801  = ~A scimitar such as this would have likely originated amongst the faith of Talona. The weapon cruelly has a chance upon connecting with an enemy of injecting a deadly venom that is excruciatingly painful for several seconds. Its origins have it favor souls who are not benevolent, and would be more likely to use the blade 
+for its more malicious, intended purposes.
+
+STATISTICS:
+
+THAC0: +2
+Damage: 1d8+2 (slashing), + 3 poison damage over six seconds unless target makes save vs. death
+Speed Factor: 3
+Proficiency Type: Scimitar/Wakizashi/Ninjatō
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 2~
+@802  = ~Recorder's Body~
+@803  = ~Recorder was able to somehow protect herself from Bodhi's attempt to infect her with vampirism with the spell that took her own life but also preventing her from being raised by conventional means. There may be some way to revive her, though you don't know what it would be. Perhaps the temple of Oghma may be of assistance.
+
+STATISTICS:
+
+Weight: 40~
+@804  = ~Purple Iolite~
+@805  = ~This rare purple Iolite is prized by clerics and wizards both for its power in rituals and for being able to be fashioned as a sparkling component of jewelry.
+
+WEIGHT: 1~
+@806  = ~Recorder's Engagement Ring~
+@807  = ~Weaved in gold and with a heart signet, you gave this ring to Recorder as a promise of marriage. Whether you will be able to deliver is up to fate.
+The ring's enchantments have taken affect with its wearer's acceptance, and they will surely help to keep Recorder safer for the battles to come.
+
+STATISTICS:
+
+Equipped abilities:
+-Regenerates one hitpoint every six seconds 
+-Armor Class: +2
+-Save vs. Death: +3
+-An additional Level 5 and Level 6 Magic Slot.
+
+Weight: 1~
+@808  = ~Recorder looks reluctant when you press her about her past, advising that it "isn’t anything grand." A daughter of a priestess and bookbinder, Recorder grew up around with books and tomes in easy reach in a cozy cottage in Lantan. When one day she found sheets and excerpts of music, she fell in love and found her dual passion realized: music and historical recording. When her parents separated and her mother moved to Amn, she purchased a ferret, who she named Gustav, and they've been inseparable since. She does however, apologize in advance if any rations mysteriously go missing. Ferrets, she says, are notorious for not asking first. She keeps a large tome full of notes of both your prior journey and your current one, though is very protective of both any sneak peeks into its contents and damage via blood, magic, or ferret claw.~
+@809  = ~Wait.~ [X3RInn]
+@810  = ~It's...all over.~ [X3RFear]
+@811  = ~That was impressive.~ [X3RHap]
+@812  = ~Unbelievable.~ [X3RAnn]
+@813  = ~What were you thinking?~ [X3RSer]
+@815  = ~We walk together.~ [X3RLead]
+@816  = ~I must rest.~ [X3RRest]
+@817  = ~*Plays flute.*~ [X3RBored]
+@818  = ~Time for your final bow!~ [X3RCry1]
+@819  = ~Care for an encore?~ [X3RCry2]
+@820  = ~Don't be reckless!~ [X3RCry3]
+@821  = ~We won't lose!~ [X3RCry4]
+@822  = ~Rest in peace.~ [X3RCry5]
+@825  = ~So this...is how it ends...~ [X3RHurt]
+@826  = ~My heart is singing.~ [X3RFor]
+@827  = ~Don't go scurrying off, Gustav. I'll lose you in the crowds.~ [X3RF2]
+@828  = ~We can do this.~ [X3RDun]
+@829  = ~Daybreak always brings new hope.~ [X3RDay]
+@830  = ~Be careful.~ [X3RNight]
+@831  = ~Choose your path.~ [X3RCom1]
+@832  = ~I'm with you.~ [X3RCom2]
+@833  = ~Please, take your time.~ [X3RCom3]
+@834  = ~Go on.~ [X3RCom4]
+@835  = ~Hrm.~ [X3RCom5]
+@836  = ~How are you?~ [X3RGreet]
+@837  = ~Let's go.~ [X3RGo]
+@838  = ~We need each other.~ [X3RLove]
+@839  = ~No need to worry.~ [X3RNNTW]
+@840  = ~We can see this through.~ [X3RAct3]
+@841  = ~I have faith in you.~ [X3RAct4]
+@842  = ~The path is yours to climb.~ [X3RAct0]
+@843  = ~Like a ship upon the waves.~ [X3RAct8]
+@844  = ~It's over!~ [X3RCrit]
+@845  = ~Goodness gracious!~ [X3RMiss]
+@846  = ~Oh my.~ [X3RImm]
+@847  = ~I think not.~ [X3RInv]
+@848  = ~My apologies.~ [X3RSpell]
+@849  = ~No matter what may come.~ [X3RAct9]
+@850  = ~Anything I can do to help you, I will.~ [X3RRare]
+@851  = ~I vow to bear you up~ [X3RCom7]
+@852  = ~Siria~
+@853  = ~Bounty Hunter~
+@854  = ~Hired Killer~
+@855  = ~The Remover~
+@856  = ~Tanya~
+@857  = ~Raban~
+@858  = ~Pirate~
+@859  = ~Aerik~
+@860  = ~Phelgrim~
+@861  = ~Bandit~
