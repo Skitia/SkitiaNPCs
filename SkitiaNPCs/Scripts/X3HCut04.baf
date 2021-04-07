@@ -15,7 +15,7 @@ THEN RESPONSE #100
 	ActionOverride("X3HDD",Enemy())
 	FadeFromColor([30.0],0)
 	Wait(1)
-	DisplayStringHead("X3HDD",~The final battle boys. Show them why we're the best dwarven band in the lands.~)
+	DisplayStringHead("X3HDD",@982)
 	Wait(3)
 	EndCutSceneMode()
 END

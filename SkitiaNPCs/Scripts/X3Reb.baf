@@ -363,7 +363,7 @@ Global("X3RMSpell","GLOBAL",2)
 THEN RESPONSE #100 
 AddJournalEntry(@12,QUEST)
 SetGlobal("X3RFAIL","GLOBAL",2)
-DisplayStringHead(Myself,~No! Raban...Raban...No! Noo!~) 
+DisplayStringHead(Myself,@987) 
 END
 
 IF 
@@ -372,7 +372,7 @@ Global("X3RMSpell","GLOBAL",4)
 THEN RESPONSE #100 
 AddJournalEntry(@12,QUEST)
 SetGlobal("X3RFAIL","GLOBAL",2)
-DisplayStringHead(Myself,~Raban...why...~) 
+DisplayStringHead(Myself,@988) 
 END
 //Everything above works 
 //Phaere ->Warning #1 
@@ -813,7 +813,7 @@ THEN RESPONSE #100
 SetGlobal("X3RebHeartless","LOCALS",1)
 SetGlobal("X3RebRomanceActive","GLOBAL",3)
 DisplayStringNoNameDlg(Player1,@409)
-DisplayStringHead("X3Reb",~No, Gustav! You...you heartless monster! I will never forgive you!~)
+DisplayStringHead("X3Reb",@989)
 SetGlobalTimer("X3RebHugeAppLoss","GLOBAL",TWO_ROUNDS) // This makes sure that it doesn't fire before the spawns do.
 END 
 

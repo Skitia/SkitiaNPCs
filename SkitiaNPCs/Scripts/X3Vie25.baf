@@ -290,7 +290,7 @@ IsValidForPartyDialogue(Player1)
 CombatCounter(0)
 !See([ENEMY])
 THEN RESPONSE #100 
-DisplayString("X3Vie",~You could beg and I'd still not take that ring.~)
+DisplayString("X3Vie",@992)
 ActionOverride(Player1,TakePartyItem("X3ERing"))
 END 
 

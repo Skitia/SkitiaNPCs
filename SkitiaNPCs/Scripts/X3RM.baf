@@ -14,7 +14,7 @@
 IF 
 HPPercentLT(Myself,10)
 THEN RESPONSE #100 
-DisplayStringHead(Myself,~I'll not die for Phelgrim. Not here!~) 
+DisplayStringHead(Myself,@986) 
 CreateVisualEffectObject("spdimndr",Myself)
 Wait(1)
 DestroySelf()

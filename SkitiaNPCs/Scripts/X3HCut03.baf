@@ -14,7 +14,7 @@ THEN RESPONSE #100
 	SmallWait(1)
 	FadeFromColor([30.0],0)
 	Wait(1)
-	DisplayStringHead("X3HR2M1",~Behold, my magic!~)
+	DisplayStringHead("X3HR2M1",@981)
 	Wait(3)
 	EndCutSceneMode()
 END
