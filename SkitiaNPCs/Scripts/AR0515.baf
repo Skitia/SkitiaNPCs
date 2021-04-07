@@ -9,8 +9,8 @@ THEN
 		CreateCreature("X3EMERM",[736.221],4)
 		CreateCreature("X3EMERA",[809.274],4)
 		CreateCreature("X3EPHL",[595.259],15)		
-		ActionOverride("X3EPHL",SetName(~Mage Mercenary~)
-		ActionOverride("X3EBOSS",SetName(~Helmed Mercenary~)
+		ActionOverride("X3EPHL",SetName(@966)
+		ActionOverride("X3EBOSS",SetName(@967)
 		Continue()
 END
 

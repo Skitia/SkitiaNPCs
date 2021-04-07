@@ -380,7 +380,7 @@ IsValidForPartyDialogue(Player1)
 CombatCounter(0)
 !See([ENEMY])
 THEN RESPONSE #100 
-DisplayString("X3Emi",~You know, it's not that funny the second time.~)
+DisplayString("X3Emi",@979)
 ActionOverride(Player1,TakePartyItem("X3ERing"))
 END 
 

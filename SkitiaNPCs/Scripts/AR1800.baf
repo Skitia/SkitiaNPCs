@@ -6,7 +6,7 @@ Global("X3RebSave","AR1800",0) // Purple iolite gem
 THEN
 RESPONSE #100
 SetGlobal("X3RebSave","AR1800",1)
-DisplayStringHead(Player1,~Recorder's body remains still. Something is missing.~)
+DisplayStringHead(Player1,@970)
 END
 
 IF

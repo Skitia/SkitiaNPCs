@@ -4,7 +4,7 @@ Global("X3KGarrisionSpawns","AR0300",0)
 Global("X3KalQuest","GLOBAL",3)
 THEN
 RESPONSE #100
-AddMapNote([3482.1124],~Garrision~) 
+AddMapNote([3482.1124],@963) 
 SetGlobal("X3KGarrisionSpawns","AR0300",1)
 CreateCreature("X3KJIL",[3516.1153],SW)
 CreateCreature("X3KBRYCE",[3516.1153],SW)

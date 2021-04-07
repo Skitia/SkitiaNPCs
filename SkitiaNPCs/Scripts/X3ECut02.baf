@@ -8,6 +8,6 @@ THEN
 		MultiPlayerSync()
 		EndCutSceneMode()
 		SetInterrupt(TRUE)
-		DisplayStringHead("X3EBRO",~This ends here. This ends *now*.~)
+		DisplayStringHead("X3EBRO",@978)
 		ActionOverride("X3EBRO",Enemy())
 END

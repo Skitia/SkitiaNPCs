@@ -5,6 +5,6 @@ Global("X3KaleMapNote","AR0500",0)
 // Some fire once global 
 THEN RESPONSE #100
 SetGlobal("X3KaleMapNote","AR0500",1)
-AddMapNote([2982.702],~Chester's Home~)
+AddMapNote([2982.702],@964)
 Continue() 
 END

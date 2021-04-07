@@ -16,7 +16,7 @@ IF
 THEN
 	RESPONSE #100
 		ClearAllActions()
-		DisplayStringHead("X3Hel",~Bloody coward! Fight me! Fight meeeee!~)  
+		DisplayStringHead("X3Hel",@971)  
 		Wait(1)
 		ActionOverride("X3Hel",MakeUnselectable(5))
 		Wait(1)
@@ -43,7 +43,7 @@ IF
 THEN
 	RESPONSE #100
 		ClearAllActions()
-		DisplayStringHead("X3Kal",~Nooooooo!~ [X3KNO])   
+		DisplayStringHead("X3Kal",@972)   
 		Wait(1)
 		ActionOverride("X3Kal",MakeUnselectable(5))
 		Wait(1)
@@ -70,7 +70,7 @@ IF
 THEN
 	RESPONSE #100
 		ClearAllActions()
-		DisplayStringHead("X3Reb",~Oh mother! I should have listened to your warning. Forgive me...~)   
+		DisplayStringHead("X3Reb",@973)   
 		Wait(1)
 		ActionOverride("X3Reb",MakeUnselectable(5))
 		Wait(1)
@@ -97,7 +97,7 @@ IF
 THEN
 	RESPONSE #100
 		ClearAllActions()
-		DisplayStringHead("X3Vie",~No! I will have my revenge y- aaaaaah!~)   
+		DisplayStringHead("X3Vie",@974)   
 		Wait(1)
 		ActionOverride("X3Vie",MakeUnselectable(5))
 		Wait(1)
