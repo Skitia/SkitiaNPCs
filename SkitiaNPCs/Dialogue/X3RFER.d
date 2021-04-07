@@ -1,87 +1,87 @@
 BEGIN X3RFER
 
 CHAIN IF ~IsGabber(Player1)~ THEN X3RFER t1
-~Gustav looks up at you with suspicion.~
+@0
 END 
-++ ~Return him to Recorder's pack~ + tpack 
-++ ~Search for anything he has pick pocketed.~ + tpick 
-+~RandomNum(3,1)~+ ~*Pet him*~ + pet1
-+~RandomNum(3,2)~+ ~*Pet him*~ + pet2
-+~RandomNum(3,3)~+ ~*Pet him*~ + pet3
-+~RandomNum(3,1)~+ ~*Hold him*~ + hold1
-+~RandomNum(3,2)~+ ~*Hold him*~ + hold2
-+~RandomNum(3,3)~+ ~*Hold him*~ + hold3
-+~RandomNum(3,1)~+ ~*Feed him*~ + feed1
-+~RandomNum(3,2)~+ ~*Feed him*~ + feed2
-+~RandomNum(3,3)~+ ~*Feed him*~ + feed3
-++ ~Leave him be.~ EXIT 
+++ @1 + tpack 
+++ @2 + tpick 
++~RandomNum(3,1)~+ @3 + pet1
++~RandomNum(3,2)~+ @3 + pet2
++~RandomNum(3,3)~+ @3 + pet3
++~RandomNum(3,1)~+ @4 + hold1
++~RandomNum(3,2)~+ @4 + hold2
++~RandomNum(3,3)~+ @4 + hold3
++~RandomNum(3,1)~+ @5 + feed1
++~RandomNum(3,2)~+ @5 + feed2
++~RandomNum(3,3)~+ @5 + feed3
+++ @6 EXIT 
 
 CHAIN IF ~IsGabber("X3Reb")RandomNum(5,1)~ THEN X3RFER r1
-~(Recorder and her familiar Gustav appear to engage in a sort of game. Gustav seems to enjoy the treats he gets from her in exchange for his displays of wit and agility.)~
+@7
 EXIT 
 
 CHAIN IF ~IsGabber("X3Reb")RandomNum(5,2)~ THEN X3RFER r2
-~(Recorder and Gustav appear to be arguing. She seems to be wagging something previously hidden at his fur with a scolding tone, while the animal looks indifferent.)~ 
+@8 
 EXIT 
 
 CHAIN IF ~IsGabber("X3Reb")RandomNum(5,3)~ THEN X3RFER r3
-~(Recorder coos as she pets the ferret's fur. The ferret arches his back, showing great content in being showered with attention.)~
+@9
 EXIT 
 
 CHAIN IF ~IsGabber("X3Reb")RandomNum(5,4)~ THEN X3RFer r4
-~(Recorder tries to beckon Gustav closer, but he simply shows her his rear and moves elsewhere with his attention.)~
+@10
 DO ~RunAwayFromNoLeaveArea(LastTalkedToBy,10)~ EXIT 
 
 CHAIN IF ~IsGabber("X3Reb")RandomNum(5,5)~ THEN X3RFER r5
-~(Recorder whistles and Gustav climbs up on her shoulder. Recorder strokes the ferret's fur, before he hops off and scuttling about once more.)~
+@11
 EXIT 
 
 CHAIN X3RFER tpack 
-~(The animal does not look pleased when he is held, and you feel a slight nip at your hand with his teeth as you slip it into Recorder's backpack.)~
+@12
 DO ~GivePartyAllEquipment()DestroySelf()~ EXIT 
 
 CHAIN X3RFER tpick 
-~(Gustav squeals as you try to take his stuff. He hisses as his belongings are lost, and are now in your possession.)~
+@13
 DO ~GivePartyAllEquipment()~ EXIT 
 
 CHAIN X3RFER pet1 
-~(You try to reach out to the animal's fur, but it scurries away.)~
+@14
 DO ~RunAwayFromNoLeaveArea(LastTalkedToBy,10)~ EXIT 
 
 CHAIN X3RFER pet2 
-~(You hear the ferret purr and nudge itself against your giving hand, enjoying the luxury of attention.)~
+@15
 EXIT 
 
 CHAIN X3RFER pet3 
-~(The ferret looks pleased, arching its back and moving forward so all of its fur can receive equal attention.)~
+@16
 EXIT 
 
 
 CHAIN X3RFER hold1 
-~(The animal purrs for a while while in your grasp, until you gently let it back down.)~
+@17
 DO ~RunAwayFromNoLeaveArea(LastTalkedToBy,10)~ EXIT 
 
 CHAIN X3RFER hold2 
-~(The ferret hisses and nips your finger, before hopping off and showing you it's hindquarters in indignation.)~
+@18
 EXIT 
 
 CHAIN X3RFER hold3 
-~(The ferret squirms, but your grasp is firm. Eventually it relaxes to your touch and affections, before hopping free from your grasp a moment later)~
+@19
 EXIT 
 
 
 CHAIN X3RFER feed1 
-~(The ferret devours your treats, then looks up at you, begging for more.)~
+@20
 DO ~RunAwayFromNoLeaveArea(LastTalkedToBy,10)~ EXIT 
 
 CHAIN X3RFER feed2 
-~(The animal nips at the offering in your hand, cooing in content.)~
+@21
 EXIT 
 
 CHAIN X3RFER feed3 
-~(The ferret grabs your offered treat, before scuttling a short distance away to take it into its mouth.)~
+@22
 EXIT 
 
 CHAIN IF ~!IsGabber("X3Reb")!IsGabber(Player1)~ THEN X3RFER flee 
-~The familiar gives you a look of suspicion, before scurrying away from you towards its master.~
+@23
 DO ~MoveToObject("X3Reb")~ EXIT 

@@ -2,145 +2,145 @@ BEGIN X3KJIL
 
 // In case the player killed any of the Suspect NPCs before an arrest was made.
 CHAIN IF ~GlobalLT("X3KalQuest","GLOBAL",6)OR(4)Dead("X3KC")Dead("X3KM")Dead("X3KD")Dead("X3KF")~ THEN X3KJIL quest_failed 
-~<CHARNAME>, I'm afraid word has gotten around that someone has killed the suspects. I'm afraid looking into this is off the table now, but thanks for trying. We're going to handle this entirely in house. I was just staying to inform you of this, I need to run and report to my command.~
+@0
 DO ~AddJournalEntry(@5,QUEST_DONE)EscapeArea()~
 EXIT 
 
 CHAIN IF ~IsValidForPartyDialogue("X3Kal")Global("X3KalQuest","GLOBAL",3)~ THEN X3KJIL quest_start
-~Kale. Not a place I expected to see you. You're not in trouble, are you?~
+@1
 DO ~SetGlobal("X3KalQuest","GLOBAL",4)~
-== X3KalJ ~Heh, not yet at least. Just traveling with my friend <CHARNAME> here. Look...I'll cut to the chase and all. Anyone here look into how my fathere died? In his journal, he mentions he knew you, and some other people down in the docks.~
-== X3KJIL ~You always spoke so negatively of your father, Percy, so I didn't mention him, but I knew him. He could cause trouble himself, but yes, he was found dead in these docks from what I learned.~
-== X3KJIL ~Still, there's little I can say or investigate. Sergeant Bryce closed the case and ruled it a suicide. That doesn't sound right to me, but he's equal to me in rank and I can't reopen it without cause.~
+== X3KalJ @2
+== X3KJIL @3
+== X3KJIL @4
 END 
-++ ~Bryce? He was mentioned in Kale's father's journal. Supposedly he has a grudge against halflings.~ + grudge 
-++ ~What if we looked into it, then?~ + can_say
-++ ~Well if there's nothing to be learned, then...~ + to_learn 
+++ @5 + grudge 
+++ @6 + can_say
+++ @7 + to_learn 
 
 CHAIN IF ~!IsValidForPartyDialogue("X3Kal")Global("X3KalQuest","GLOBAL",3)~ THEN X3KJIL quest_not_start
-~Are you lost? Citizens don't usually wander into the garrison.~
+@8
 END 
-++ ~Are you Jillian? I am <CHARNAME>. You are mentioned in Kale's father's journal.~ + father_journal
-++ ~Sorry, I think I am in the wrong place.~ EXIT 
-++ ~I don't usually do what other people usually do.~ + usually_do 
+++ @9 + father_journal
+++ @10 EXIT 
+++ @11 + usually_do 
 
 CHAIN X3KJIL usually_do 
-~Just don't cause trouble. We have enough of it in the docks. I hate to see foreigners bring even more of it here.~
+@12
 EXIT 
 
 CHAIN X3KJIL father_journal 
-~You know about Kale's father, then? We spoke a few times but...I didn't return to the guard regiment here until after he died. Ruled a suicide by my fellow Bryce, but that just seems odd to me. He was happy, not miserable, the last time I talked to him. Even had a promise to handfast his lover, Dallie.~
-== X3KJIL ~Sadly I can't reopen it however without cause or evidence, which is hard to get when you can't look into it.~
+@13
+== X3KJIL @14
 DO ~SetGlobal("X3KalQuest","GLOBAL",4)~
 END 
-++ ~Bryce? Percy mentioned in the journal he supposedly he has a grudge against halflings.~ + grudge 
-++ ~What if we looked into it, then?~ + can_say
-++ ~Well if there's nothing to be learned, then...~ + to_learn 
+++ @15 + grudge 
+++ @6 + can_say
+++ @7 + to_learn 
 
 CHAIN X3KJIL to_learn 
-~I'm sorry about your loss. May Yondalla guard him well in the Green Fields.~
+@16
 EXIT 
 
 CHAIN IF ~Global("X3KalQuest","GLOBAL",4)~  THEN X3KJIL second_talk_quest_not_started
-~Hello again.~
+@17
 END 
-++ ~I'd like to help look more into what happened with Percy, Kale's father.~ + can_say 
-++~Hello. Just seeing how you are doing.~ + how_are_you 
-++ ~I was just leaving. Excuse me.~ EXIT 
+++ @18 + can_say 
+++@19 + how_are_you 
+++ @20 EXIT 
 
 CHAIN X3KJIL grudge 
-~I cannot speak disrespectfully of a fellow guardsman...but, I can't deny it is true. It's possible he...didn't do his utmost in the investigation because of it.~
+@21
 END 
-++ ~Then we can't trust his verdict. Is there any way we can look into it ourselves?~ + can_say
-++ ~There's nothing to be done, then. Thank you for your time.~ + to_learn
+++ @22 + can_say
+++ @23 + to_learn
 
 CHAIN X3KJIL how_are_you 
-~Overworked. There's always issue with the docks. We have to be very careful about the shadow thieves, and on top of that slavers and your typical issues make a lot of hard work. But if it's to make the city better, it's worth every ounce of effort.~
+@24
 EXIT 
 
 
 
 CHAIN X3KJIL can_say
-~If you want to help, I'll take it. Let me share what I can with you.~
+@25
 DO ~SetGlobal("X3KalQuest","GLOBAL",5)~
-== X3KJIL ~Percy was in trouble with a few individuals. I'll admit things weren't all sunny with Dallie, and there were rumors he was having an affair with the local alchemist, Flora. Days before he got put in a cell awhile as well for getting in a fight with a beggar named Martin, who curiously was the first to find his body.~
-== X3KJIL ~Not the picture of a man who is good at making friends, I fear, but Percy could still be kind and caring, despite his occasional bouts.~
-== X3KJIL ~I don't  know much about Chester, but he's the only cheese vendor in the docks, and Percy was found dead holding a bag of cheese. I managed to get a few samples of it, it smells awfully divine I'll say, but I know better than to eat evidence. Take it. Some of the suspects I named, or Siria, the local loremaster, could maybe get you information on this.~
+== X3KJIL @26
+== X3KJIL @27
+== X3KJIL @28
 DO ~CreateItem("X3KCHEES",0,0,0)GiveItem("X3KCHEES",Player1)~
 END 
-+~IsValidForPartyDialogue("X3Reb")Global("X3Topic1","LOCALS",0)~+ ~Where can I find the loremaster, Siria?~ DO ~SetGlobal("X3Topic1","LOCALS",1)~ EXTERN X3RebJ temple_talk
-+~!IsValidForPartyDialogue("X3Reb")Global("X3Topic1","LOCALS",0)~+ ~Where can I find the loremaster, Siria?~ DO ~SetGlobal("X3Topic1","LOCALS",1)~ + talk_temple
-+~Global("X3Topic2","LOCALS",0)~+ ~Where can I find Dallie?~ DO ~SetGlobal("X3Topic2","LOCALS",1)~ + dallie_location
-+~Global("X3Topic3","LOCALS",0)~+ ~Where can I find the beggar, Martin?~ DO ~SetGlobal("X3Topic3","LOCALS",1)~ + beggar_location
-+~Global("X3Topic4","LOCALS",0)~+ ~Where can I find Chester the cheese vendor?~ DO ~SetGlobal("X3Topic4","LOCALS",1)~ + chester_location
-+~Global("X3Topic5","LOCALS",0)~+ ~Where would the alchemist, Flora, be found?~ DO ~SetGlobal("X3Topic5","LOCALS",1)~ + flora_location
-++ ~Thanks. We'll take it from here.~ + con1_exit
++~IsValidForPartyDialogue("X3Reb")Global("X3Topic1","LOCALS",0)~+ @29 DO ~SetGlobal("X3Topic1","LOCALS",1)~ EXTERN X3RebJ temple_talk
++~!IsValidForPartyDialogue("X3Reb")Global("X3Topic1","LOCALS",0)~+ @29 DO ~SetGlobal("X3Topic1","LOCALS",1)~ + talk_temple
++~Global("X3Topic2","LOCALS",0)~+ @30 DO ~SetGlobal("X3Topic2","LOCALS",1)~ + dallie_location
++~Global("X3Topic3","LOCALS",0)~+ @31 DO ~SetGlobal("X3Topic3","LOCALS",1)~ + beggar_location
++~Global("X3Topic4","LOCALS",0)~+ @32 DO ~SetGlobal("X3Topic4","LOCALS",1)~ + chester_location
++~Global("X3Topic5","LOCALS",0)~+ @33 DO ~SetGlobal("X3Topic5","LOCALS",1)~ + flora_location
+++ @34 + con1_exit
 
 CHAIN X3KJIL talk_temple
-~Siria is usually in the temple of Oghma. She's helped the watch before with understanding details of evidence we bring to her. She doesn't charge too much for her services, either.~
+@35
 END 
-+~Global("X3Topic2","LOCALS",0)~+ ~Where can I find Dallie?~ DO ~SetGlobal("X3Topic2","LOCALS",1)~ + dallie_location
-+~Global("X3Topic3","LOCALS",0)~+ ~Where can I find the beggar, Martin?~ DO ~SetGlobal("X3Topic3","LOCALS",1)~ + beggar_location
-+~Global("X3Topic4","LOCALS",0)~+ ~Where can I find Chester the cheese vendor?~ DO ~SetGlobal("X3Topic4","LOCALS",1)~ + chester_location
-+~Global("X3Topic5","LOCALS",0)~+ ~Where would the alchemist, Flora, be found?~ DO ~SetGlobal("X3Topic5","LOCALS",1)~ + flora_location
-++ ~Thanks. We'll take it from here.~ + con1_exit
++~Global("X3Topic2","LOCALS",0)~+ @30 DO ~SetGlobal("X3Topic2","LOCALS",1)~ + dallie_location
++~Global("X3Topic3","LOCALS",0)~+ @31 DO ~SetGlobal("X3Topic3","LOCALS",1)~ + beggar_location
++~Global("X3Topic4","LOCALS",0)~+ @32 DO ~SetGlobal("X3Topic4","LOCALS",1)~ + chester_location
++~Global("X3Topic5","LOCALS",0)~+ @33 DO ~SetGlobal("X3Topic5","LOCALS",1)~ + flora_location
+++ @34 + con1_exit
 
 CHAIN X3RebJ temple_talk
-~Siria is my mother. She's in the temple of Oghma if you forgot. She's done this sort of service for the guards before, and she always charges a reasonable fare for her help. I'm not familiar with cheeses, but even if she isn't either, she's great at figuring it out quickly.~
+@36
 EXTERN X3KJIL mother_talk
 
 CHAIN X3KJIL mother_talk
-~Siria is your mother? She has been a boon for us in the past. Give her my thanks.~
+@37
 END 
-+~Global("X3Topic2","LOCALS",0)~+ ~Where can I find Dallie?~ DO ~SetGlobal("X3Topic2","LOCALS",1)~ + dallie_location
-+~Global("X3Topic3","LOCALS",0)~+ ~Where can I find the beggar, Martin?~ DO ~SetGlobal("X3Topic3","LOCALS",1)~ + beggar_location
-+~Global("X3Topic4","LOCALS",0)~+ ~Where can I find Chester the cheese vendor?~ DO ~SetGlobal("X3Topic4","LOCALS",1)~ + chester_location
-+~Global("X3Topic5","LOCALS",0)~+ ~Where would the alchemist, Flora, be found?~ DO ~SetGlobal("X3Topic5","LOCALS",1)~ + flora_location
-++ ~Thanks. We'll take it from here.~ + con1_exit
++~Global("X3Topic2","LOCALS",0)~+ @30 DO ~SetGlobal("X3Topic2","LOCALS",1)~ + dallie_location
++~Global("X3Topic3","LOCALS",0)~+ @31 DO ~SetGlobal("X3Topic3","LOCALS",1)~ + beggar_location
++~Global("X3Topic4","LOCALS",0)~+ @32 DO ~SetGlobal("X3Topic4","LOCALS",1)~ + chester_location
++~Global("X3Topic5","LOCALS",0)~+ @33 DO ~SetGlobal("X3Topic5","LOCALS",1)~ + flora_location
+++ @34 + con1_exit
 
 CHAIN X3KJIL chester_location
-~He's one of the vendors that uses the stalls near the docks, just south of the Sea Bounty's Tavern.~
+@38
 END 
-+~IsValidForPartyDialogue("X3Reb")Global("X3Topic1","LOCALS",0)~+ ~Where can I find the loremaster, Siria?~ DO ~SetGlobal("X3Topic1","LOCALS",1)~ EXTERN X3RebJ temple_talk
-+~!IsValidForPartyDialogue("X3Reb")Global("X3Topic1","LOCALS",0)~+ ~Where can I find the loremaster, Siria?~ DO ~SetGlobal("X3Topic1","LOCALS",1)~ + talk_temple
-+~Global("X3Topic2","LOCALS",0)~+ ~Where can I find Dallie?~ DO ~SetGlobal("X3Topic2","LOCALS",1)~ + dallie_location
-+~Global("X3Topic3","LOCALS",0)~+ ~Where can I find the beggar, Martin?~ DO ~SetGlobal("X3Topic3","LOCALS",1)~ + beggar_location
-+~Global("X3Topic5","LOCALS",0)~+ ~Where would the alchemist, Flora, be found?~ DO ~SetGlobal("X3Topic5","LOCALS",1)~ + flora_location
-++ ~Thanks. We'll take it from here.~ + con1_exit
++~IsValidForPartyDialogue("X3Reb")Global("X3Topic1","LOCALS",0)~+ @29 DO ~SetGlobal("X3Topic1","LOCALS",1)~ EXTERN X3RebJ temple_talk
++~!IsValidForPartyDialogue("X3Reb")Global("X3Topic1","LOCALS",0)~+ @29 DO ~SetGlobal("X3Topic1","LOCALS",1)~ + talk_temple
++~Global("X3Topic2","LOCALS",0)~+ @30 DO ~SetGlobal("X3Topic2","LOCALS",1)~ + dallie_location
++~Global("X3Topic3","LOCALS",0)~+ @31 DO ~SetGlobal("X3Topic3","LOCALS",1)~ + beggar_location
++~Global("X3Topic5","LOCALS",0)~+ @33 DO ~SetGlobal("X3Topic5","LOCALS",1)~ + flora_location
+++ @34 + con1_exit
 
 CHAIN X3KJIL dallie_location
-~Dallie works the lighthouse, towards the southeast side of the Docks. You'll find her around there.~
+@39
 END 
-+~IsValidForPartyDialogue("X3Reb")Global("X3Topic1","LOCALS",0)~+ ~Where can I find the loremaster, Siria?~ DO ~SetGlobal("X3Topic1","LOCALS",1)~ EXTERN X3RebJ temple_talk
-+~!IsValidForPartyDialogue("X3Reb")Global("X3Topic1","LOCALS",0)~+ ~Where can I find the loremaster, Siria?~ DO ~SetGlobal("X3Topic1","LOCALS",1)~ + talk_temple
-+~Global("X3Topic3","LOCALS",0)~+ ~Where can I find the beggar, Martin?~ DO ~SetGlobal("X3Topic3","LOCALS",1)~ + beggar_location
-+~Global("X3Topic4","LOCALS",0)~+ ~Where can I find Chester the cheese vendor?~ DO ~SetGlobal("X3Topic4","LOCALS",1)~ + chester_location
-+~Global("X3Topic5","LOCALS",0)~+ ~Where would the alchemist, Flora, be found?~ DO ~SetGlobal("X3Topic5","LOCALS",1)~ + flora_location
-++ ~Thanks. We'll take it from here.~ + con1_exit
++~IsValidForPartyDialogue("X3Reb")Global("X3Topic1","LOCALS",0)~+ @29 DO ~SetGlobal("X3Topic1","LOCALS",1)~ EXTERN X3RebJ temple_talk
++~!IsValidForPartyDialogue("X3Reb")Global("X3Topic1","LOCALS",0)~+ @29 DO ~SetGlobal("X3Topic1","LOCALS",1)~ + talk_temple
++~Global("X3Topic3","LOCALS",0)~+ @31 DO ~SetGlobal("X3Topic3","LOCALS",1)~ + beggar_location
++~Global("X3Topic4","LOCALS",0)~+ @32 DO ~SetGlobal("X3Topic4","LOCALS",1)~ + chester_location
++~Global("X3Topic5","LOCALS",0)~+ @33 DO ~SetGlobal("X3Topic5","LOCALS",1)~ + flora_location
+++ @34 + con1_exit
 
 CHAIN X3KJIL flora_location
-~Flora usually operates a stand just south of the stairs leaving from the Sea Bounty's Tavern.~
+@40
 END 
-+~IsValidForPartyDialogue("X3Reb")Global("X3Topic1","LOCALS",0)~+ ~Where can I find the loremaster, Siria?~ DO ~SetGlobal("X3Topic1","LOCALS",1)~ EXTERN X3RebJ temple_talk
-+~!IsValidForPartyDialogue("X3Reb")Global("X3Topic1","LOCALS",0)~+ ~Where can I find the loremaster, Siria?~ DO ~SetGlobal("X3Topic1","LOCALS",1)~ + talk_temple
-+~Global("X3Topic2","LOCALS",0)~+ ~Where can I find Dallie?~ DO ~SetGlobal("X3Topic2","LOCALS",1)~ + dallie_location
-+~Global("X3Topic3","LOCALS",0)~+ ~Where can I find the beggar, Martin?~ DO ~SetGlobal("X3Topic3","LOCALS",1)~ + beggar_location
-+~Global("X3Topic4","LOCALS",0)~+ ~Where can I find Chester the cheese vendor?~ DO ~SetGlobal("X3Topic4","LOCALS",1)~ + chester_location
-++ ~Thanks. We'll take it from here.~ + con1_exit
++~IsValidForPartyDialogue("X3Reb")Global("X3Topic1","LOCALS",0)~+ @29 DO ~SetGlobal("X3Topic1","LOCALS",1)~ EXTERN X3RebJ temple_talk
++~!IsValidForPartyDialogue("X3Reb")Global("X3Topic1","LOCALS",0)~+ @29 DO ~SetGlobal("X3Topic1","LOCALS",1)~ + talk_temple
++~Global("X3Topic2","LOCALS",0)~+ @30 DO ~SetGlobal("X3Topic2","LOCALS",1)~ + dallie_location
++~Global("X3Topic3","LOCALS",0)~+ @31 DO ~SetGlobal("X3Topic3","LOCALS",1)~ + beggar_location
++~Global("X3Topic4","LOCALS",0)~+ @32 DO ~SetGlobal("X3Topic4","LOCALS",1)~ + chester_location
+++ @34 + con1_exit
 
 
 CHAIN X3KJIL beggar_location
-~Martin is usually roaming around the market stands, towards the southwest side of the Docks. Just watch your pockets if you talk to him. He's been arrested for theft once before.~
+@41
 END 
-+~IsValidForPartyDialogue("X3Reb")Global("X3Topic1","LOCALS",0)~+ ~Where can I find the loremaster, Siria?~ DO ~SetGlobal("X3Topic1","LOCALS",1)~ EXTERN X3RebJ temple_talk
-+~!IsValidForPartyDialogue("X3Reb")Global("X3Topic1","LOCALS",0)~+ ~Where can I find the loremaster, Siria?~ DO ~SetGlobal("X3Topic1","LOCALS",1)~ + talk_temple
-+~Global("X3Topic2","LOCALS",0)~+ ~Where can I find Dallie?~ DO ~SetGlobal("X3Topic2","LOCALS",1)~ + dallie_location
-+~Global("X3Topic4","LOCALS",0)~+ ~Where can I find Chester the cheese vendor?~ DO ~SetGlobal("X3Topic4","LOCALS",1)~ + chester_location
-+~Global("X3Topic5","LOCALS",0)~+ ~Where would the alchemist, Flora, be found?~ DO ~SetGlobal("X3Topic5","LOCALS",1)~ + flora_location
-++ ~Thanks. We'll take it from here.~ + con1_exit
++~IsValidForPartyDialogue("X3Reb")Global("X3Topic1","LOCALS",0)~+ @29 DO ~SetGlobal("X3Topic1","LOCALS",1)~ EXTERN X3RebJ temple_talk
++~!IsValidForPartyDialogue("X3Reb")Global("X3Topic1","LOCALS",0)~+ @29 DO ~SetGlobal("X3Topic1","LOCALS",1)~ + talk_temple
++~Global("X3Topic2","LOCALS",0)~+ @30 DO ~SetGlobal("X3Topic2","LOCALS",1)~ + dallie_location
++~Global("X3Topic4","LOCALS",0)~+ @32 DO ~SetGlobal("X3Topic4","LOCALS",1)~ + chester_location
++~Global("X3Topic5","LOCALS",0)~+ @33 DO ~SetGlobal("X3Topic5","LOCALS",1)~ + flora_location
+++ @34 + con1_exit
 
 CHAIN X3KJIL con1_exit
-~Good luck finding answers. When you've talked to all the suspects, come here and let me know your findings.~
+@42
 DO ~AddJournalEntry(@4,QUEST)~
 EXIT
 
@@ -148,66 +148,66 @@ EXIT
 
 // Initial Return (First Conversation Had)
 CHAIN IF ~Global("X3KalQuest","GLOBAL",5)Global("X3KalQuestAccuse","GLOBAL",0)~ THEN X3KJIL con2 
-~You're back. Have you had a chance to speak to all of the suspects?~
+@43
 END 
-+~Global("X3KSuspectTalk","GLOBAL",4)~+ ~Yes, I've spoken to each of them.~ + suspect_talk_done
-+~Global("X3KnowledgeCheese","GLOBAL",1)~+ ~I've found out something about the cheese. It's apparently a dangerous drug, and it was laced with rat poison.~ + cheese_poison
-++ ~Actually, can you remind me where I can find the suspects?~ + suspects_locations
-++ ~Not yet.~ EXIT 
++~Global("X3KSuspectTalk","GLOBAL",4)~+ @44 + suspect_talk_done
++~Global("X3KnowledgeCheese","GLOBAL",1)~+ @45 + cheese_poison
+++ @46 + suspects_locations
+++ @47 EXIT 
 
 CHAIN X3KJIL suspects_locations
-~Chester and Flora are merchants, and they're likely at the open market, to the southwest of the docks. Martin the beggar often hovers there, near the well. And Dallie works the lighthouse, to the southeast of the docks. Good luck.~
+@48
 EXIT 
 
 CHAIN X3KJIL cheese_poison 
-~That is an interesting find. Many people use poison but fewer know how to make it. Flora is one of the locals who has the knowledge, but it is also Chester's cheese, and anyone could have gotten both materials for it.~
-== X3KJIL ~It certainly narrows things down. Do you know who did it, or do you still need more time to investigate?~
+@49
+== X3KJIL @50
 END 
-++ ~Yes, I am ready to accuse one of them.~ + con2_a
-++ ~I'm not sure. What am I looking for to be certain?~ + con2_b 
-++ ~No, I need more time.~ + con2_c 
+++ @51 + con2_a
+++ @52 + con2_b 
+++ @53 + con2_c 
 
 CHAIN X3KJIL suspect_talk_done 
-~Good. Do you have enough information or evidence for us to make an arrest on one of them?~
+@54
 END 
-++ ~Yes, I am ready to accuse one of them.~ + con2_a
-++ ~I'm not sure. What am I looking for to be certain?~ + con2_b 
-++ ~No, I need more time.~ + con2_c 
+++ @51 + con2_a
+++ @52 + con2_b 
+++ @53 + con2_c 
 
 CHAIN X3KJIL con2_a 
-~And which one of them are you going to accuse?~
+@55
 END 
-++ ~Flora. She wanted him to leave Dallie, and also created the poison, which she sold from her store. She found a way to poison the cheese and kill him.~ + flora_sure
-++ ~Chester. He sold the cheese to Percy, but not before poisoning it. The cheese is a drug, so he likely got addicted to it to a point he wouldn't be able to tell it was poisoned with how strong his need for it was.~ + chester_sure 
-++ ~Dallie. She suspected he was having an affair and was angry with him. She poisoned his cheese supply he was keeping and giving more attention to than herself.~ + dallie_sure 
-++ ~Martin, the beggar. They had a fight days before and he still had a lingering grudge. He also was the first to see him die and took his coin afterwards.~ + beggar_sure
+++ @56 + flora_sure
+++ @57 + chester_sure 
+++ @58 + dallie_sure 
+++ @59 + beggar_sure
 
 CHAIN X3KJIL flora_sure 
-~Are you certain it was Flora? We absolutely do not want to get this wrong.~
+@60
 END 
-++ ~Yes I am sure.~ + flora_accuse 
-++ ~I'm not sure. Let me think about this.~ + think_not_sure
+++ @61 + flora_accuse 
+++ @62 + think_not_sure
 
 CHAIN X3KJIL chester_sure 
-~Are you certain it was Chester? We absolutely do not want to get this wrong.~
+@63
 END 
-++ ~Yes I am sure.~ + chester_accuse
-++ ~I'm not sure. Let me think about this.~ + think_not_sure
+++ @61 + chester_accuse
+++ @62 + think_not_sure
 
 CHAIN X3KJIL dallie_sure 
-~Are you certain it was Dallie? We absolutely do not want to get this wrong.~
+@64
 END 
-++ ~Yes I am sure.~ + dallie_accuse
-++ ~I'm not sure. Let me think about this.~ + think_not_sure
+++ @61 + dallie_accuse
+++ @62 + think_not_sure
 
 CHAIN X3KJIL beggar_sure 
-~Are you certain it was the beggar? We absolutely do not want to get this wrong.~
+@65
 END 
-++ ~Yes I am sure.~ + beggar_accuse
-++ ~I'm not sure. Let me think about this.~ + think_not_sure
+++ @61 + beggar_accuse
+++ @62 + think_not_sure
 
 CHAIN X3KJIL flora_accuse 
-~That is a shame. She seemed like such a nice shopkeeper, too nice to be driven to murder. Let us head over to Flora, and I will make the arrest~
+@66
 DO ~SetGlobal("X3KalQuestAccuse","GLOBAL",1)SetInterrupt(FALSE)ClearAllActions()FadeToColor([15.0],0)
 StartCutSceneMode()
 MultiPlayerSync()
@@ -229,7 +229,7 @@ StartDialogueNoSet(Player1)~
 EXIT 
 
 CHAIN X3KJIL chester_accuse 
-~Very well. Let us head over to Chester, and I will make the arrest.~
+@67
 DO ~SetGlobal("X3KalQuestAccuse","GLOBAL",2)SetInterrupt(FALSE)ClearAllActions()FadeToColor([15.0],0)
 StartCutSceneMode()
 MultiPlayerSync()
@@ -256,7 +256,7 @@ StartDialogueNoSet(Player1)~
 EXIT 
 
 CHAIN X3KJIL dallie_accuse 
-~Very well. Let us head over to Dallie, and I will make the arrest.~
+@68
 DO ~SetGlobal("X3KalQuestAccuse","GLOBAL",3)SetInterrupt(FALSE)ClearAllActions()FadeToColor([15.0],0)
 StartCutSceneMode()
 MultiPlayerSync()
@@ -279,7 +279,7 @@ StartDialogueNoSet(Player1)~
 EXIT 
 
 CHAIN X3KJIL beggar_accuse 
-~Very well. Let us head over to Martin, and I will make the arrest.~
+@69
 DO ~SetGlobal("X3KalQuestAccuse","GLOBAL",4)SetInterrupt(FALSE)ClearAllActions()FadeToColor([15.0],0)
 StartCutSceneMode()
 MultiPlayerSync()
@@ -301,25 +301,25 @@ StartDialogueNoSet(Player1)~
 EXIT 
 
 CHAIN X3KJIL think_not_sure 
-~Take your time in deciding this. We can't afford to get it wrong.~
+@70
 EXIT 
 
 CHAIN X3KJIL con2_b
-~Remember their stories. See if there are clashing details, or evidence and information that gradually points everything towards one person.~
-== X3KJIL ~If you forgot anything, you could always ask them again, though beware of one of them switching their story from the first time.~
+@71
+== X3KJIL @72
 EXIT 
 
 CHAIN X3KJIL con2_c 
-~Take all the time you need. It is important we get this right the first time. If we get it wrong, command will likely suspend our little second investigation altogether.~
+@73
 EXIT 
 
 // Accused Flora 
 CHAIN IF ~GlobalLT("X3KalQuest","GLOBAL",6)Global("X3KalQuestAccuse","GLOBAL",1)~ THEN X3KJIL accused_flora 
-~Miss Flora? I am sorry for this, but we are taking you in for the murder of Percy.~
-== X3KF ~What? I would never. I *loved* Percy. Jillian, you have to believe me.~
-== X3KJIL ~I have to be impartial. With the evidence presented to me, and the killing product being one of your poisons, it points to you, Flora.~
-== X3KF ~I can't believe this. You are taking away an innocent. But I know it is futile to fight and scream and argue. Maybe that Bryce has gotten to you, I don't know.~
-== X3KJIL ~Ma'am, it's time to go. <CHARNAME>, come see me in a day back at the garrison. I'll have an update from our investigation once she's taken in.~
+@74
+== X3KF @75
+== X3KJIL @76
+== X3KF @77
+== X3KJIL @78
 DO ~ActionOverride("X3KF",EscapeArea())SetGlobal("X3KalQuest","GLOBAL",6)SetGlobalTimer("X3KaleQuestAccuseTimer","GLOBAL",ONE_DAY)EscapeAreaMove("AR0332",273,369,SW)AddJournalEntry(@10,QUEST)~
 EXIT 
 
@@ -327,67 +327,67 @@ BEGIN X3KMERC
 
 // Accused Chester 
 CHAIN IF ~GlobalLT("X3KalQuest","GLOBAL",6)Global("X3KalQuestAccuse","GLOBAL",2)~ THEN X3KJIL accused_chester
-~Strange. Where is he? Did he close his shop for the day?~
-== X3KMERC ~Miss Jillian. Chester sends his regards, and that he could not be here to take your request to speak.~
-== X3KJIL ~Who are you? And where is Chester? There is an important matter that the guard needs to address with him.~
-== X3KMERC ~We are well aware, Jillian. You unfortunately made the grave error of side-stepping out of your authority. We'll be taking care that problem permanently now.~
+@79
+== X3KMERC @80
+== X3KJIL @81
+== X3KMERC @82
 DO ~SetGlobal("X3KalQuest","GLOBAL",6)~
 EXIT 
 
 // Finished off the merc's  and Jillian lived.
 CHAIN IF ~Global("X3KalQuest","GLOBAL",6)Global("X3KalQuestAccuse","GLOBAL",2)~ THEN X3KJIL chester_ran
-~I can't believe it. Chester is gone and he sent mercenaries to deal with us? Someone tipped him off.~
+@83
 END 
-++ ~Perhaps it was another guard. Think about it. They'd have had to know who we were going, and there were other guards in the barracks.~ + cr_1
-++ ~It doesn't matter. We will find him one way or another.~  + cr_2
-++ ~So that's it, then. Chester gets away.~ + cr_3 
+++ @84 + cr_1
+++ @85  + cr_2
+++ @86 + cr_3 
 
 CHAIN X3KJIL cr_1
-~It could be, but that is another investigation for another time. Right now we need to find Chester.~
+@87
 EXTERN X3KJIL cr_3 
 
 CHAIN X3KJIL cr_2 
-~I like your spirit. I can't imagine him just running away with nothing. If you can find him, perhaps justice will still have its way.~
+@88
 EXTERN X3KJIL cr_4
 
 CHAIN X3KJIL cr_3 
-~Althkata is a big city. I can't imagine him just running away with nothing. He has to have a home somewhere. If you can find out where, maybe he can still be brought to justice.~
+@89
 EXTERN X3KJIL cr_4
 
 CHAIN X3KJIL cr_4 
-~I need to keep command in the loop. I'll be in the garrison. Return to me if you find him, preferably with Chester in tow and alive.~
+@90
 DO ~SetGlobal("X3KalQuest","GLOBAL",7)AddJournalEntry(@14,QUEST)EscapeAreaMove("AR0332",273,369,SW)~ 
 EXIT 
 
 // Accused Dallie 
 CHAIN IF ~GlobalLT("X3KalQuest","GLOBAL",6)Global("X3KalQuestAccuse","GLOBAL",3)~ THEN X3KJIL accused_flora 
-~Miss Dallie? I am sorry for this, but we are taking you in for the murder of Percy.~
-== X3KD ~Percy? Jillian, you've got it all wrong. You know me. You know I'd never hurt him.~
-== X3KJIL ~I have to be impartial. With the evidence presented to me, and with him getting sick from cheese you had access to, it stands that you are the only possible culprit, one who has a motive.~
-== X3KD ~I can't believe this. Yes, I suspected his affair, but I wouldn't murder him for it. I would have sooner left him, or forced him to choose me or her, but not with blood.~
-== X3KJIL ~Ma'am, it's time to go. <CHARNAME>, come see me in a day back at the garrison. I'll have an update from our investigation once she's taken in.~
+@91
+== X3KD @92
+== X3KJIL @93
+== X3KD @94
+== X3KJIL @78
 DO ~ActionOverride("X3KD",EscapeArea())SetGlobal("X3KalQuest","GLOBAL",6)SetGlobalTimer("X3KaleQuestAccuseTimer","GLOBAL",ONE_DAY)EscapeAreaMove("AR0332",273,369,SW)AddJournalEntry(@8,QUEST)~
 EXIT 
 
 // Accused Martin 
 CHAIN IF ~GlobalLT("X3KalQuest","GLOBAL",6)Global("X3KalQuestAccuse","GLOBAL",4)~ THEN X3KJIL accused_flora 
-~Mr. Martin? I am sorry for this, but we are taking you in for the murder of Percy.~
-== X3KM ~What? Percy was a git, but I would never! This is just an excuse to get rid of me, it is! Beggar-hating haters!~
-== X3KJIL ~You were the first at the scene, and you took his coin. You are already guilty of crime.~
-== X3KM ~Yeah? Well take me then. But know you're taking away only a man who stole because he was hungry, not because he killed a git.~
-== X3KJIL ~Sir, it's time to go. <CHARNAME>, come see me in a day back at the garrison. I'll have an update from our investigation once he's taken in.~
+@95
+== X3KM @96
+== X3KJIL @97
+== X3KM @98
+== X3KJIL @99
 DO ~ActionOverride("X3KM",EscapeArea())SetGlobal("X3KalQuest","GLOBAL",6)SetGlobalTimer("X3KaleQuestAccuseTimer","GLOBAL",ONE_DAY)EscapeAreaMove("AR0332",273,369,SW)AddJournalEntry(@9,QUEST)~
 EXIT 
 
 // Return from Flora/Maritn/Dallie accusation, quest not expired.
 CHAIN IF ~!GlobalTimerExpired("X3KaleQuestAccuseTimer","GLOBAL")!Global("X3KalQuestAccuse","GLOBAL",2)Global("X3KalQuest","GLOBAL",6)~ THEN X3KJIL wrong_accusation
-~I don't have any news yet. Come back later.~
+@100
 EXIT 
 
 
 // Return from Flora/Martin/Dallie accusation after a day.
 CHAIN IF ~GlobalTimerExpired("X3KaleQuestAccuseTimer","GLOBAL")!Global("X3KalQuestAccuse","GLOBAL",2)Global("X3KalQuest","GLOBAL",6)~ THEN X3KJIL wrong_accusation
-~You're back. I'm afraid I have bad news.~
+@101
 END 
 IF ~Global("X3KalQuestAccuse","GLOBAL",1)~ EXTERN X3KJIL Flora_innocent
 IF ~Global("X3KalQuestAccuse","GLOBAL",3)~ EXTERN X3KJIL Dallie_innocent
@@ -395,137 +395,137 @@ IF ~Global("X3KalQuestAccuse","GLOBAL",3)~ EXTERN X3KJIL Dallie_innocent
 IF ~!Global("X3KalQuestAccuse","GLOBAL",1)!Global("X3KalQuestAccuse","GLOBAL",3)~ EXTERN X3KJIL Martin_innocent
 
 CHAIN X3KJIL Flora_innocent
- ~We took a deeper look, and it appears Flora is innocent after all. There was a witness that put them away from the scene at the time of the murder, and away from any of the items that caused the death.~
+ @102
 DO ~AddJournalEntry(@13,QUEST_DONE)~
 END 
-++ ~I see. I'm sorry for my mistake, then.~ + wa_1 
-++ ~Well that is at least one less suspect.~ + wa_2 
-++ ~Did you figure out who actually did it?~ + wa_2
+++ @103 + wa_1 
+++ @104 + wa_2 
+++ @105 + wa_2
 
 CHAIN X3KJIL Dallie_innocent
- ~We took a deeper look, and it appears Dallie is innocent after all. There were multiple witnesses that saw her working at the lighthouse, well away from Percy or anything that could have caused his death.~
+ @106
 DO ~AddJournalEntry(@11,QUEST_DONE)~
 END 
-++ ~I see. I'm sorry for my mistake, then.~ + wa_1 
-++ ~Well that is at least one less suspect.~ + wa_2 
-++ ~Did you figure out who actually did it?~ + wa_2
+++ @103 + wa_1 
+++ @104 + wa_2 
+++ @105 + wa_2
 
 CHAIN X3KJIL Martin_innocent
- ~We took a deeper look, and it appears Martin is innocent after all. There was a few fellow beggars that confirmed he was well away from the scene until after Percy's death.~
+ @107
 DO ~AddJournalEntry(@10,QUEST_DONE)~
 END 
-++ ~I see. I'm sorry for my mistake, then.~ + wa_1 
-++ ~Well that is at least one less suspect.~ + wa_2 
-++ ~Did you figure out who actually did it?~ + wa_2
+++ @103 + wa_1 
+++ @104 + wa_2 
+++ @105 + wa_2
 
 CHAIN X3KJIL wa_1 
-~I am too. My superiors were very upset this was looked into despite Bryce closing it, and worse, wasting their time.~
+@108
 EXTERN X3KJIL wa_3 
 
 CHAIN X3KJIL wa_2 
-~No. They're closing the case entirely, for good, and I'm forbidden from doing any digging with outside help or otherwise. Given how embarrassing this was, I'm lucky I still have my job.~
+@109
 EXTERN X3KJIL wa_3 
 
 CHAIN X3KJIL wa_3 
-~Case is really closed, I'm afraid. I need to get out to my duty, but thanks for trying to help.~
+@110
 END 
 IF ~IsValidForPartyDialogue("X3Kal")~ EXTERN X3KALJ wa_4
 IF ~!IsValidForPartyDialogue("X3Kal")~ DO ~EscapeArea()AddexperienceParty(3750)~ EXIT
 
 CHAIN X3KALJ wa_4
-~Damn. All a waste of time. I'm sorry about this, Jillian. Not sure why I even cared this much.~
-== X3KJIL ~He was your father. It's family. It's what we do, look out for them. Even if they aren't here anymore, physically.~
-== X3KJIL ~Take care of yourself, Kale. And I'm sorry we couldn't find the answer to what happened to him.~
-== X3KALJ ~Yeah...me too, mate.~
+@111
+== X3KJIL @112
+== X3KJIL @113
+== X3KALJ @114
 DO ~ActionOverride("X3KJIL",EscapeArea()AddexperienceParty(3750)~
 EXIT 
 
 // Return from Chester, Chester not turned in or dead yet. 
 CHAIN IF ~GlobalGT("X3KalQuest","GLOBAL",6)GlobalLT("X3KalQuest","GLOBAL",9)Global("X3KalQuestAccuse","GLOBAL",2)~ THEN X3KJIL correct_accused 
-~Did you manage to find Chester?~
+@115
 END 
-+~Dead("X3KC")~+ ~Yes. He's dead.~ + chester_dead
-++ ~Not yet.~ + waiting 
++~Dead("X3KC")~+ @116 + chester_dead
+++ @47 + waiting 
 
 CHAIN X3KJIL chester_dead 
-~That was not what I was hoping to hear, but since he is not with you, I guess I should have expected as much.~
+@117
 END 
-++ ~Justice is done, Jillian. Isn't this what was wanted?~ + justice_wanted 
-++ ~He's done too much. He may not have even murdered just Kale's father.~ + done_too_much
-++ ~What happens now?~ + happens_now
+++ @118 + justice_wanted 
+++ @119 + done_too_much
+++ @120 + happens_now
 
 CHAIN X3KJIL justice_wanted 
-~No. I wanted him brought in, so he could answer to the city. Death...that is just the next great adventure, and in this situation, an easy way out.~
-== X3KJIL ~To keep living and face your mistakes, and be punished for them, to have to re-earn the trust you lost, that is justice.~
+@121
+== X3KJIL @122
 EXTERN X3KJIL happens_now
 
 CHAIN X3KJIL done_too_much 
-~And we could have let that known, and gathered more evidence from what he may have revealed from that. Now? We can't do that. But I guess at least the case is resolved.~
+@123
 EXTERN X3KJIL happens_now 
 
 CHAIN X3KJIL happens_now 
-~I'll be reporting the outcome to command, but at least this is resolved. Thank you for your help. I should at least reward you for this. Take these coins for your services and aid.~
+@124
 END 
 IF ~IsValidForPartyDialogue("X3Kal")~ EXTERN X3KJIL kale_final_interject
 IF ~!IsValidForPartyDialogue("X3Kal")~ DO ~AddexperienceParty(7500)GiveGoldForce(1250)AddJournalEntry(@17,QUEST_DONE)EscapeArea()~ EXIT
 
 CHAIN X3KJIL kale_final_interject 
-~Before I go, how do you feel Kale? This must have been hard.~
-== X3KalJ ~No. I wanted that man to die. People like him make it hard to be a halfling. Bad enough those of us who try to live the caravan life have to get mistreated, but now even the city-goers? Makes my blood boil in the way it used to, when I fought with my anger.~
-== X3KJIL ~We have different beliefs and views. I can't teach you justice, Kale. But I do hope that you don't forget my teachings, of looking past yourself to protect those you care about.~
-== X3KALJ ~Yeah. This was about that. Sometimes it just isn't done cleanly. Goodbye, Jillian.~
+@125
+== X3KalJ @126
+== X3KJIL @127
+== X3KALJ @128
 DO ~AddexperienceParty(7500)GiveGoldForce(1250)AddJournalEntry(@17,QUEST_DONE)ActionOverride("X3KJIL",EscapeArea())~
 EXIT 
 
 
 CHAIN X3KJIL waiting 
-~This is urgent. If you take too long to track him down, he could make his way out of the city. Then Percy will never have justice.~
+@129
 EXIT 
 
 // Chester turned in.
 CHAIN IF ~Global("X3KalQuest","GLOBAL",9)~ THEN X3KJIL chester_turn_in
-~Good work, <CHARNAME>. For many of us, we have answers now and justice, and at last, we see this resolved.~
-== X3KC ~They should have never let you into the guard, halfling. So much more cleaning could have been done.~
-== X3KJIL ~If they hadn't, men like you would still be running around killing innocent people. Precisely as you would have wanted.~
-== X3KJIL ~Thank you. We'd have never gotten to the bottom of this without you.~
+@130
+== X3KC @131
+== X3KJIL @132
+== X3KJIL @133
 END 
-++ ~It was an honor to see justice seen to.~ EXTERN X3KJIL qd_1
-++ ~Do I get paid?~ EXTERN X3KJIL qd_2
-++ ~What will happen now?~ EXTERN X3KJIL qd_3
-++ ~You should know that Bryce tried to stop me and was in league with Chester. He is dead.~ EXTERN X3KJIL qd_4
+++ @134 EXTERN X3KJIL qd_1
+++ @135 EXTERN X3KJIL qd_2
+++ @136 EXTERN X3KJIL qd_3
+++ @137 EXTERN X3KJIL qd_4
 
 CHAIN X3KJIL qd_1
-~I'm glad you get the same feeling I do out of making this city safer.~
+@138
 END 
 IF ~IsValidForPartyDialogue("X3Kal")~ EXTERN X3KJIL qd_kale_banter
 IF ~!IsValidForPartyDialogue("X3Kal")~ EXTERN X3KJIL qd_5
 
 CHAIN X3KJIL qd_2
-~I suppose it would be right. Here, take this. You've earned every bit of it.~
+@139
 DO ~GiveGoldForce(300)~
 END 
 IF ~IsValidForPartyDialogue("X3Kal")~ EXTERN X3KJIL qd_kale_banter
 IF ~!IsValidForPartyDialogue("X3Kal")~ EXTERN X3KJIL qd_5
 
 CHAIN X3KJIL qd_3 
-~Now? Chester will be taken into the prisons. He'll be there for a long time.~
+@140
 END 
 IF ~IsValidForPartyDialogue("X3Kal")~ EXTERN X3KJIL qd_kale_banter
 IF ~!IsValidForPartyDialogue("X3Kal")~ EXTERN X3KJIL qd_5
 
 CHAIN X3KJIL qd_4 
-~I always suspected the reason he closed the investigation so quick was he had some dirty hand in everything. Still, I wish he didn't die. There was good things he did for the guard, even if he was cruel.~
+@141
 END 
-++ ~It was an honor to see justice seen to.~ + qd_1
-++ ~Do I get paid?~ + qd_2
-++ ~What will happen now?~ + qd_3
+++ @134 + qd_1
+++ @135 + qd_2
+++ @136 + qd_3
 
 CHAIN X3KJIL qd_5
-~I'm going to lead Chester away now. Gods willing, maybe this will be one step closer to having a better city.~
+@142
 DO ~ActionOverride("X3KC",EscapeArea())EscapeArea()AddJournalEntry(@18,QUEST_DONE)AddexperienceParty(7500)GiveGoldForce(1250)~ 
 EXIT 
 
 CHAIN X3KJIL qd_kale_banter 
-~We'll see it taken care of from here, Kale.~
-== X3KalJ ~Yeah. I trust you, Jillian. Make sure that man doesn't get let out anytime soon. It will be nice to see justice for some of the suffering our people go through for a change.~
+@143
+== X3KalJ @144
 EXTERN X3KJIL qd_5 

@@ -2,157 +2,157 @@ BEGIN X3VSAMIR
 BEGIN X3VDROW 
 // Contains all Underdark quest stuff for Vienxay
 CHAIN IF ~!Global("PlayerLooksLikeDrow","GLOBAL",1)PartyHasItem("X3VTOME1")~ THEN X3VSAMIR beg 
-~You...You have the book. I beg you, take it to the surface. Let it see the light, and then return it to the good elven people, my friends. Sules'terim, if you can find him, he will know what to do.~
+@0
 EXIT 
 
 CHAIN IF ~Global("PlayerLooksLikeDrow","GLOBAL",1)PartyHasItem("X3VTOME1")~ THEN X3VSAMIR pass 
-~It seems the tome passes from one dark hand to another. It will never find its way to the surface...only more doom and gloom to the end of my days.~
+@1
 EXIT 
 
 
 CHAIN IF ~Global("X3VieQuest","GLOBAL",6)~ THEN X3VSAMIR greeting 
-~Pain. Doom. Gloom. It is all I have left.~
+@2
 END 
-++ ~What are you on about?~ DO ~IncrementGlobal("X3VieQuest","GLOBAL",1)AddJournalEntry(@5,QUEST)~ + about 
-++ ~I could take your life, slave, if you are so miserable.~ + miserable
-++ ~I've no time to speak to you.~ + duties
+++ @3 DO ~IncrementGlobal("X3VieQuest","GLOBAL",1)AddJournalEntry(@5,QUEST)~ + about 
+++ @4 + miserable
+++ @5 + duties
 
 CHAIN X3VSAMIR about 
-~My master has the tome I was charged to help guide back to the elven homeland. This gives me naught but despair. The chains of this life are not the worst punishment I could serve for the people of the city. It is a just fate.~
-== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN ~This must be the human that was with Sules'terim's father. Of all the chances. <CHARNAME>, ask him where his master is.~
+@6
+== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @7
 END 
-++ ~And who is your master?~ + guild 
-++ ~I could take your life, if you are so miserable.~ + miserable 
-++ ~You should return to your duties, slave.~ + duties 
+++ @8 + guild 
+++ @9 + miserable 
+++ @10 + duties 
 
 CHAIN X3VSAMIR guild 
-~Master Xel'nu is a great warrior, of the male fighters' society. I clean his armor and weapons and sometimes take the brunt as his stand in dummy when he is angry. Nothing I don't deserve. We both know it.~
+@11
 EXIT 
 
 CHAIN X3VSAMIR miserable 
-~You could. No one would care. But it would be more than I deserve. I deserve only chains for my failures. The doom and the gloom are my only friends.~
+@12
 EXIT 
 
 CHAIN X3VSAMIR duties 
-~I will return to my duties.~
+@13
 EXIT 
 
 CHAIN IF ~!PartyHasItem("X3VTOME1")~ THEN X3VSAMIR doom 
-~Doom and gloom this cycle. Doom and gloom for all the remaining cycles.~
+@14
 EXIT 
 
 CHAIN IF ~True()~ THEN X3VDROW Greeting
-~I eagerly await my next battle. I should have the slave sharpen my blades.~
+@15
 END 
-++ ~Are you the master of that gloomy slave?~ + gloomy 
-++ ~Would you happen to have a unique tome, perchance?~ + tome
-++ ~Farewell.~ EXIT 
+++ @16 + gloomy 
+++ @17 + tome
+++ @18 EXIT 
 
 CHAIN X3VDROW gloomy 
-~Has he offended you? I will punish him if he has been offensive.~
+@19
 END 
-++ ~Yes, his moaning of doom and gloom is unsettling.~ + unsettling 
-++ ~Not at all, I am actually curious if you have a tome of his he was mumbling about.~ + tome
-++ ~Nothing to be concerned with. Farewell.~ EXIT 
+++ @20 + unsettling 
+++ @21 + tome
+++ @22 EXIT 
 
 CHAIN X3VDROW unsettling 
-~Then I will see him punished when I am done here.~
+@23
 END 
-++ ~Thank you. I will just be on my way.~ EXIT 
-++ ~I am also curious if you have a tome of his he was mumbling about.~ + tome 
+++ @24 EXIT 
+++ @25 + tome 
 
 CHAIN X3VDROW tome 
-~Yes, written in the filthy tongue of the surface elves. At first I had some translators of another house take a crack about it, but it is about their lesser magic, not any tactical plans.~
-== X3VDROW ~I will probably offer it to one of the wizards, for a good price. They are into this sort of filth.~
+@26
+== X3VDROW @27
 END 
-++ ~Actually, you will be giving it to me.~ + giving 
-+~!Class(Player1,MAGE_ALL)~+ ~What if I buy it off of you?~ + not_mage 
-+~Class(Player1,MAGE_ALL)~+ ~What if I buy it off of you?~ + price 
-++ ~That they are. I will leave you to your business.~ EXIT 
+++ @28 + giving 
++~!Class(Player1,MAGE_ALL)~+ @29 + not_mage 
++~Class(Player1,MAGE_ALL)~+ @29 + price 
+++ @30 EXIT 
 
 CHAIN X3VDROW giving 
-~By what authority?~
+@31
 END 
-+~CheckStatGT(Player1,16,CHR)!RandomNum(3,1)~+ ~By the will of house Despana.~ + house // Persuasion attempt. 66%, requires 17 or more charisma.
-+~CheckStatGT(Player1,16,CHR)RandomNum(3,1)~+ ~By the will of house Despana.~ + house_fail // Persuasion attempt. 66%, requires 17 or more charisma.
-+~CheckStatLT(Player1,17,CHR)~+ ~By the will of house Despana.~ + house_fail // Persuasion attempt with insufficient charisma. 
-+~CheckStatGT(Player1,16,STR)!RandomNum(3,1)~+ ~By the threat of death by my hand.~ + strength // Will provoke a fight, unless with 17 or more strength, 66% chance.
-+~CheckStatGT(Player1,16,STR)RandomNum(3,1)~+ ~By the threat of death by my hand.~ + strength_fail // Will provoke a fight, unless with 17 or more strength, 66% chance.
-+~CheckStatLT(Player1,17,STR)~+ ~By the threat of death by my hand.~ + strength_fail // Intimidate attempt with insufficient strength. 
-+~!Class(Player1,MAGE_ALL)~+ ~By the authority of coin.~ + not_mage 
-+~Class(Player1,MAGE_ALL)~+ ~By the authority of coin.~ + price
-++ ~Never mind.~ + nevermind 
++~CheckStatGT(Player1,16,CHR)!RandomNum(3,1)~+ @32 + house // Persuasion attempt. 66%, requires 17 or more charisma.
++~CheckStatGT(Player1,16,CHR)RandomNum(3,1)~+ @32 + house_fail // Persuasion attempt. 66%, requires 17 or more charisma.
++~CheckStatLT(Player1,17,CHR)~+ @32 + house_fail // Persuasion attempt with insufficient charisma. 
++~CheckStatGT(Player1,16,STR)!RandomNum(3,1)~+ @33 + strength // Will provoke a fight, unless with 17 or more strength, 66% chance.
++~CheckStatGT(Player1,16,STR)RandomNum(3,1)~+ @33 + strength_fail // Will provoke a fight, unless with 17 or more strength, 66% chance.
++~CheckStatLT(Player1,17,STR)~+ @33 + strength_fail // Intimidate attempt with insufficient strength. 
++~!Class(Player1,MAGE_ALL)~+ @34 + not_mage 
++~Class(Player1,MAGE_ALL)~+ @34 + price
+++ @35 + nevermind 
 
 CHAIN X3VDROW nevermind 
-~You are strange and wasting my time. Be off before my craving of battle turns to you.~ 
+@36 
 EXIT 
 
 CHAIN X3VDROW house 
-~Hrm, very well, but do not blame me if House Despana is disappointed in its contents. Take it and leave me be, I am bored and will be finding something to kill.~
+@37
 DO ~GiveItem("X3VTOME1",Player1)ActionOverride("X3VDROW2",EscapeArea())ActionOverride("X3VDROW3",EscapeArea())EscapeArea()~ 
 EXIT 
 
 CHAIN X3VDROW house_fail 
-~You lie. I can smell it on your lips. You will not get what you are looking for from me except a cold blade to the heart!~
+@38
 DO ~ActionOverride("X3VDROW2",Enemy())ActionOverride("X3VDROW3",Enemy())Enemy()~ 
 EXIT 
 
 CHAIN X3VDROW strength 
-~Bah, if you want it so much ,it is yours. It has yielded naught but disappointment and you will find your threat only gives you filthy surface tongue dirt.~
+@39
 DO ~ActionOverride("X3VDROW2",EscapeArea())ActionOverride("X3VDROW3",EscapeArea())GiveItem("X3VTOME1",Player1)EscapeArea()~ EXIT 
 
 CHAIN X3VDROW strength_fail 
-~You do not threaten me, <PRO_MALEFEMALE>. You will eat your words when my blade tears through your heart!~
+@40
 DO ~ActionOverride("X3VDROW2",Enemy())ActionOverride("X3VDROW3",Enemy())Enemy()~ 
 EXIT 
 
 CHAIN X3VDROW not_mage 
-~And what use would you have for it? You are no mage.~
+@41
 END 
-+~OR(8)InParty("Imoen")InParty("Nalia")InParty("Jan")InParty("X3Vie")InParty("Edwin")InParty("NEERA")InParty("X3Reb")InParty("Aerie")~+ ~I am not, but one of my companions is.~ + price
-+~CheckStatGT(Player1,13,CHR)!RandomNum(3,1)~+ ~Curiosity. I've always wanted a trinket from the surface.~ + price // Requires 13+ charisma and succesful roll
-+~CheckStatGT(Player1,13,CHR)RandomNum(3,1)~+ ~Curiosity. I've always wanted a trinket from the surface.~ + house_fail 
-+~CheckStatLT(Player1,14,CHR)~+ ~Curiosity. I've always wanted a trinket from the surface.~ + house_fail
-+~CheckStatGT(Player1,13,STR)!RandomNum(3,1)~+ ~None of your business, and you'll find it best not to pry. I'm offering gold, and that should be good enough.~ + price // Will provoke a fight, unless with 16+ strength, 66% chance.
-+~CheckStatGT(Player1,13,STR)RandomNum(3,1)~+ ~None of your business, and you'll find it best not to pry. I'm offering gold, and that should be good enough.~ + strength_fail 
-+~CheckStatLT(Player1,14,STR)~+ ~None of your business, and you'll find it best not to pry. I'm offering gold, and that should be good enough.~ + strength_fail // Auto fail 
-++ ~Never mind.~ + nevermind 
++~OR(8)InParty("Imoen")InParty("Nalia")InParty("Jan")InParty("X3Vie")InParty("Edwin")InParty("NEERA")InParty("X3Reb")InParty("Aerie")~+ @42 + price
++~CheckStatGT(Player1,13,CHR)!RandomNum(3,1)~+ @43 + price // Requires 13+ charisma and succesful roll
++~CheckStatGT(Player1,13,CHR)RandomNum(3,1)~+ @43 + house_fail 
++~CheckStatLT(Player1,14,CHR)~+ @43 + house_fail
++~CheckStatGT(Player1,13,STR)!RandomNum(3,1)~+ @44 + price // Will provoke a fight, unless with 16+ strength, 66% chance.
++~CheckStatGT(Player1,13,STR)RandomNum(3,1)~+ @44 + strength_fail 
++~CheckStatLT(Player1,14,STR)~+ @44 + strength_fail // Auto fail 
+++ @35 + nevermind 
 
 CHAIN X3VDROW price 
-~And what price do you offer?~
+@45
 END 
-+~PartyGoldGT(4999)~+ ~Five thousand coin.~ + pay // Auto success 
-+~PartyGoldGT(2499)CheckStatGT(Player1,11,CHR)~+ ~Two thousand five hundred coins.~ + pay// Requires 12+ Charisma, but no randomness attached.
-+~PartyGoldGT(2499)CheckStatLT(Player1,12,CHR)~+ ~Two thousand five hundred coins.~ + pay_fail // Requires 12+ Charisma, but no randomness attached.
-+~PartyGoldGT(999)~+ ~One thousand coins.~ + auto_fail_1 // Auto fail. 
-+~PartyGoldGT(499)~+ ~Five hundred coins.~ + auto_fail_2 // Also auto fail
-++ ~Forget it. I don't want to pay.~ + nevermind 
++~PartyGoldGT(4999)~+ @46 + pay // Auto success 
++~PartyGoldGT(2499)CheckStatGT(Player1,11,CHR)~+ @47 + pay// Requires 12+ Charisma, but no randomness attached.
++~PartyGoldGT(2499)CheckStatLT(Player1,12,CHR)~+ @47 + pay_fail // Requires 12+ Charisma, but no randomness attached.
++~PartyGoldGT(999)~+ @48 + auto_fail_1 // Auto fail. 
++~PartyGoldGT(499)~+ @49 + auto_fail_2 // Also auto fail
+++ @50 + nevermind 
 
 
 CHAIN X3VDROW auto_fail_2 
-~Your offer insults me.~
+@51
 END 
-+~PartyGoldGT(4999)~+ ~Five thousand coin.~ + pay // Auto success 
-+~PartyGoldGT(2499)CheckStatGT(Player1,11,CHR)~+ ~Two thousand five hundred coins.~ + pay// Requires 12+ Charisma, but no randomness attached.
-+~PartyGoldGT(2499)CheckStatLT(Player1,12,CHR)~+ ~Two thousand five hundred coins.~ + pay_fail // Requires 12+ Charisma, but no randomness attached.
-+~PartyGoldGT(999)~+ ~One thousand coins.~ + auto_fail_1 // Auto fail. 
-++ ~I'm afraid I can't afford it.~ + nevermind 
++~PartyGoldGT(4999)~+ @46 + pay // Auto success 
++~PartyGoldGT(2499)CheckStatGT(Player1,11,CHR)~+ @47 + pay// Requires 12+ Charisma, but no randomness attached.
++~PartyGoldGT(2499)CheckStatLT(Player1,12,CHR)~+ @47 + pay_fail // Requires 12+ Charisma, but no randomness attached.
++~PartyGoldGT(999)~+ @48 + auto_fail_1 // Auto fail. 
+++ @52 + nevermind 
 
 CHAIN X3VDROW auto_fail_1 
-~For the effort of this acquisition, I think not.~
+@53
 END 
-+~PartyGoldGT(4999)~+ ~Five thousand coin.~ + pay // Auto success 
-+~PartyGoldGT(2499)CheckStatGT(Player1,11,CHR)~+ ~Two thousand five hundred coins.~ + pay// Requires 12+ Charisma, but no randomness attached.
-+~PartyGoldGT(2499)CheckStatLT(Player1,12,CHR)~+ ~Two thousand five hundred coins.~ + pay_fail // Requires 12+ Charisma, but no randomness attached.
-++ ~I'm afraid I can't afford it.~ + nevermind 
++~PartyGoldGT(4999)~+ @46 + pay // Auto success 
++~PartyGoldGT(2499)CheckStatGT(Player1,11,CHR)~+ @47 + pay// Requires 12+ Charisma, but no randomness attached.
++~PartyGoldGT(2499)CheckStatLT(Player1,12,CHR)~+ @47 + pay_fail // Requires 12+ Charisma, but no randomness attached.
+++ @52 + nevermind 
 
 CHAIN X3VDROW pay_fail 
-~A good offer, but not high enough.~
+@54
 END 
-+~PartyGoldGT(4999)~+ ~Five thousand coin.~ + pay // Auto success 
-++ ~I'm afraid I can't afford it.~ + nevermind 
++~PartyGoldGT(4999)~+ @46 + pay // Auto success 
+++ @52 + nevermind 
 
 CHAIN X3VDROW pay 
-~Bah, I will accept. This surface trinket has no use for me as is. But you may find a bargain or two within.~
+@55
 DO ~ActionOverride("X3VDROW2",EscapeArea())ActionOverride("X3VDROW3",EscapeArea())GiveItem("X3VTOME1",Player1)EscapeArea()~
 EXIT 
