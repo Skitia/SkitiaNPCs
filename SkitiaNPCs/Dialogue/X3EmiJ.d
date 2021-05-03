@@ -485,6 +485,7 @@ END
 I_C_T BODHI2 25 X3EmiBODHI2-25
 == X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN @90
 == X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN @91
+== BODHI2 @1600
 END
 
 CHAIN IF WEIGHT #-1
