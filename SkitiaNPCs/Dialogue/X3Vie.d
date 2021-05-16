@@ -79,7 +79,7 @@ ActionOverride("X3Vie",StartDialogueNoSet(Player1))~ EXIT
 CHAIN X3VG m5 
 @21
 == X3Vie @22
-DO ~SetGlobal("X3VieMet","GLOBAL",-2)ActionOverride("X3VG",MoveToPoint([692.3446]))ActionOverride("X3VG",DestroySelf())MoveToPoint([692.3446])MoveBetweenAreas("AR1005",[830.409],14)~ EXIT 
+DO ~SetGlobal("X3VieMet","GLOBAL",-2)ActionOverride("X3VG",EscapeArea())MoveToPoint([1934.1863])MoveBetweenAreas("AR1005",[830.409],14)~ EXIT 
 
 CHAIN IF ~Global("X3VieMet","GLOBAL",-2)~ THEN X3Vie debt 
 @23

@@ -1822,6 +1822,7 @@ SAY @610
 +~PartyHasItem("BOW21")Global("UnqualifiedBow2","LOCALS",0)~+ @600 DO ~SetGlobal("UnqualifiedBow2","LOCALS",1)~ + CespenarBow
 +~PartyHasItem("BOW22")Global("UnqualifiedBow3","LOCALS",0)~+ @601 DO ~SetGlobal("UnqualifiedBow3","LOCALS",1)~ + TaralashBow
 +~PartyHasItem("BOW23")Global("UnqualifiedBow3","LOCALS",0)~+ @601 DO ~SetGlobal("UnqualifiedBow3","LOCALS",1)~ + CespenarBow
++~PartyHasItem("BOW23")Global("UnqualifiedBow4","LOCALS",0)~+ @645 DO ~SetGlobal("UnqualifiedBow4","LOCALS",1)~ + ElvenTuiganBow
 +~PartyHasItem("XBOW03")~+ @602 + TheGuideXBow
 +~PartyHasItem("XBOW06")~+ @603 + ArmyScytheXBow
 +~PartyHasItem("XBOW08")~+ @604 + GiantHairXBow
@@ -1915,6 +1916,11 @@ END
 
 IF ~~ FiretoothXBow
 SAY @633
+IF ~~ + Craft.PID2 
+END 
+
+IF ~~ ElvenTuiganBow
+SAY @646
 IF ~~ + Craft.PID2 
 END 
 
