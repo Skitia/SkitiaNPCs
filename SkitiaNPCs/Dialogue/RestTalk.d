@@ -1614,7 +1614,7 @@ CHAIN X3Emi25J Story2
 END 
 ++ @190 + Story2.4
 ++ @191 + Story2.5
-++ @192 + Story2.6
+++ @192 + Story2.3
 
 CHAIN X3Emi25J Story2.1 
 @193
