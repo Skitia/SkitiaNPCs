@@ -17,7 +17,6 @@ THEN RESPONSE #100
 	ActionOverride(Player6,Face(10))	
 	Face(10)
     SmallWait(1)
-	IncrementGlobal("X3HelQuest","GLOBAL",1)
 	FadeFromColor([30.0],0)
 	Wait(1)
 	ActionOverride("X3HRL",StartDialogueNoSet(Player1)
