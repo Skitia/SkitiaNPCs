@@ -4143,6 +4143,7 @@ SAY  @1315
 ++ @1316 + Question.PID 
 +~NumInPartyGT(2)~+ @1317 + PersonalGroup.PID 
 +~!NumInPartyGT(2)~+ @1317 + PersonalAlone.PID 
+++ @1403 + FixString
 ++ @1318 EXIT 
 END 
 
@@ -4151,6 +4152,7 @@ SAY  @1319
 ++ @1320 + Question.PID 
 +~NumInPartyGT(2)~+ @1321 + PersonalGroup.PID 
 +~!NumInPartyGT(2)~+ @1321 + PersonalAlone.PID 
+++ @1403 + FixString
 ++ @1318 EXIT 
 END  
 
@@ -4159,6 +4161,7 @@ SAY  @1322
 ++ @1320 + Question.PID 
 +~NumInPartyGT(2)~+ @1321 + PersonalGroup.PID 
 +~!NumInPartyGT(2)~+ @1321 + PersonalAlone.PID 
+++ @1403 + FixString
 ++ @1318 EXIT 
 END  
 
@@ -4384,6 +4387,13 @@ SAY @1401
 = @1402
 IF ~~ DO ~SetGlobal("X3VieRomanceActive","GLOBAL",3)IncrementGlobal("X3VieApp","GLOBAL",-12)
 DisplayStringNoNameDlg(Player1,@509)~ EXIT 
+END 
+
+IF ~~ FixString
+SAY @1404
+IF ~~ DO ~ClearAllActions() 
+      StartCutSceneMode() 
+      StartCutScene("X3VReset")~ EXIT 
 END 
 
 END 
