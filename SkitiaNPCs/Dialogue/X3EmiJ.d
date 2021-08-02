@@ -4519,6 +4519,7 @@ SAY @1369
 +~!NumInPartyGT(2)~+ @1371 + PersonalAlone.PID 
 // Requires the PC to have talked to Emily before about crafting. 
 +~Global("X3miCraft","LOCALS",1)~+ @1372 + Craft.PID
+++ @1601 + FixString
 ++ @1373 EXIT 
 END 
 
@@ -4528,6 +4529,7 @@ SAY @1374
 +~NumInPartyGT(2)~+ @1371 + PersonalGroup.PID 
 +~!NumInPartyGT(2)~+ @1371 + PersonalAlone.PID 
 +~Global("X3miCraft","LOCALS",1)~+ @1372 + Craft.PID
+++ @1601 + FixString
 ++ @1373 EXIT 
 END  
 
@@ -4537,6 +4539,7 @@ SAY @1375
 +~NumInPartyGT(2)~+ @1371 + PersonalGroup.PID 
 +~!NumInPartyGT(2)~+ @1371 + PersonalAlone.PID 
 +~Global("X3miCraft","LOCALS",1)~+ @1372 + Craft.PID
+++ @1601 + FixString
 ++ @1373 EXIT 
 END  
 
@@ -5170,6 +5173,13 @@ END
 IF ~~ BowSelected 
 SAY @1599
 IF ~~ DO ~SetGlobal("X3miCraft","LOCALS",2)StartCutSceneMode()StartCutScene("X3ECut05")~ EXIT // Launch Cutscene 
+END 
+
+IF ~~ FixString
+SAY @1602
+IF ~~ DO ~ClearAllActions() 
+      StartCutSceneMode() 
+      StartCutScene("X3EReset")~ EXIT 
 END 
 
 END 
