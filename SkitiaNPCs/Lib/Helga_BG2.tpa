@@ -96,7 +96,7 @@ COPY ~%MOD_FOLDER%/Cre/X3Hel.cre~ ~override/X3Hel.cre~
   SAY AREA_FOREST @659 
   SAY AREA_CITY @660
   SAY AREA_DUNGEON @661
-  SAY AREA_DAY ~Isn't it Grand?~[X3HeGran]
+  SAY AREA_DAY @662
   SAY AREA_NIGHT @663
   SAY SELECT_COMMON1 @664 //
   SAY SELECT_COMMON2 @665 //
@@ -340,6 +340,7 @@ COPY ~%MOD_FOLDER%/Cre/X3HSCRY.cre~ ~override/X3HSCRY.cre~
 COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Scripts/X3Hel.baf~ 
 ~%MOD_FOLDER%/Scripts/X3HelD.baf~ 
 ~%MOD_FOLDER%/Scripts/X3Hel25.baf~ 
+~%MOD_FOLDER%/Scripts/X3HReset.baf~ 
 ~%MOD_FOLDER%/Scripts/X3HPOOR.baf~ 
 ~%MOD_FOLDER%/Scripts/X3HPit.baf~ 
 ~%MOD_FOLDER%/Scripts/X3HDD.baf~ 
