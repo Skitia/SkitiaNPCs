@@ -612,6 +612,7 @@ SAY  @190
 +~Global("X3HelToBQuest","GLOBAL",4)~+ @191 + Scry
 ++ @192 + Question.PID 
 ++ @193 DO ~SetGlobal("X3RestInvite","GLOBAL",2)~ + ForceRestTalk
+++ @248 + FixString
 ++ @194 EXIT 
 END 
 
@@ -620,6 +621,7 @@ SAY  @195
 +~Global("X3HelToBQuest","GLOBAL",4)~+ @191 + Scry
 ++ @192 + Question.PID 
 ++ @193 DO ~SetGlobal("X3RestInvite","GLOBAL",2)~ + ForceRestTalk
+++ @248 + FixString
 ++ @194 EXIT 
 END  
 
@@ -764,6 +766,13 @@ END
 IF ~~ ForceRestTalk
 SAY @247
 IF ~~ EXIT 
+END 
+
+IF ~~ FixString 
+SAY @249
+IF ~~ DO ~ClearAllActions() 
+      StartCutSceneMode() 
+      StartCutScene("X3HReset")~ EXIT 
 END 
 
 END 

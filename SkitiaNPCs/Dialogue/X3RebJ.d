@@ -4204,6 +4204,7 @@ SAY  @1282
 +~NumInPartyGT(2)~+ @1284 + PersonalGroup.PID 
 +~!NumInPartyGT(2)~+ @1284 + PersonalAlone.PID
 ++ @1285 + PID.Music 
+++ @1390 + FixString
 ++ @1286 EXIT 
 END 
 
@@ -4213,6 +4214,7 @@ SAY  @1287
 +~NumInPartyGT(2)~+ @1284 + PersonalGroup.PID 
 +~!NumInPartyGT(2)~+ @1284 + PersonalAlone.PID
 ++ @1285 + PID.Music 
+++ @1390 + FixString
 ++ @1286 EXIT 
 END  
 
@@ -4222,6 +4224,7 @@ SAY  @1289
 +~NumInPartyGT(2)~+ @1284 + PersonalGroup.PID 
 +~!NumInPartyGT(2)~+ @1284 + PersonalAlone.PID
 ++ @1285 + PID.Music 
+++ @1390 + FixString
 ++ @1286 EXIT 
 END  
 
@@ -4533,5 +4536,13 @@ IF ~RandomNum(5,3)~ DO ~PlaySound("X3RFL3")~ EXIT
 IF ~RandomNum(5,4)~ DO ~PlaySound("X3RFL4")~ EXIT 
 IF ~RandomNum(5,5)~ DO ~PlaySound("X3RFL5")~ EXIT 
 END 
+
+IF ~~ FixString 
+SAY @1391
+IF ~~ DO ~ClearAllActions() 
+      StartCutSceneMode() 
+      StartCutScene("X3RReset")~ EXIT 
+END 
+
 
 END 

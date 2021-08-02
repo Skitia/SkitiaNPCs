@@ -2092,6 +2092,7 @@ IF ~IsGabber(Player1) CombatCounter(0) !Detect([ENEMY]) !GlobalGT("X3EmiApp","GL
 SAY  @561
 ++ @562 + Question.PID 
 ++ @563 DO ~SetGlobal("X3RestInvite","GLOBAL",2)~ + ForceRestTalk
+++ @628 + FixString
 ++ @564 EXIT 
 END 
 
@@ -2099,6 +2100,7 @@ IF ~IsGabber(Player1) CombatCounter(0) !Detect([ENEMY]) GlobalGT("X3EmiApp","GLO
 SAY  @565
 ++ @562 + Question.PID 
 ++ @563 DO ~SetGlobal("X3RestInvite","GLOBAL",2)~ + ForceRestTalk
+++ @628 + FixString
 ++ @564 EXIT 
 END  
 
@@ -2271,6 +2273,13 @@ END
 IF ~~ ForceRestTalk
 SAY @627
 IF ~~ EXIT 
+END 
+
+IF ~~ FixString 
+SAY @629
+IF ~~ DO ~ClearAllActions() 
+      StartCutSceneMode() 
+      StartCutScene("X3HReset")~ EXIT 
 END 
 
 END 
