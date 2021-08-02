@@ -439,6 +439,7 @@ COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Scripts/X3ECath.baf~
 ~%MOD_FOLDER%/Scripts/X3ECut05.baf~ 
 ~%MOD_FOLDER%/Scripts/X3EBodhi.baf~ 
 ~%MOD_FOLDER%/Scripts/X3EW1.baf~ 
+~%MOD_FOLDER%/Scripts/X3EReset.baf~ 
 // Area Scripts 
 
   EXTEND_TOP ~ar0704.bcs~ ~%MOD_FOLDER%/Scripts/ar0704.baf~
