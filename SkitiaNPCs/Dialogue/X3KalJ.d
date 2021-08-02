@@ -3555,6 +3555,7 @@ SAY @1095
 ++ @1096 + Question.PID 
 +~NumInPartyGT(2)~+ @1097 + PersonalGroup.PID 
 +~!NumInPartyGT(2)~+ @1097 + PersonalAlone.PID 
+++ @1203 + FixString
 ++ @1098 EXIT 
 END 
 
@@ -3563,6 +3564,7 @@ SAY @1099
 ++ @1100 + Question.PID 
 +~NumInPartyGT(2)~+ @1097 + PersonalGroup.PID 
 +~!NumInPartyGT(2)~+ @1097 + PersonalAlone.PID 
+++ @1203 + FixString
 ++ @1098 EXIT 
 END  
 
@@ -3571,6 +3573,7 @@ SAY @1101
 ++ @1100 + Question.PID 
 +~NumInPartyGT(2)~+ @1102 + PersonalGroup.PID 
 +~!NumInPartyGT(2)~+ @1102 + PersonalAlone.PID 
+++ @1203 + FixString
 ++ @1098 EXIT 
 END  
 
@@ -3870,6 +3873,13 @@ IF ~~ BU.5
 SAY @1202
 IF ~~ DO ~SetGlobal("X3KalRomanceActive","GLOBAL",3)IncrementGlobal("X3KalApp","GLOBAL",-12)
 DisplayStringNoNameDlg(Player1,@309)~ EXIT 
+END 
+
+IF ~~ FixString
+SAY @1204
+IF ~~ DO ~ClearAllActions() 
+      StartCutSceneMode() 
+      StartCutScene("X3KReset")~ EXIT 
 END 
 
 END 
