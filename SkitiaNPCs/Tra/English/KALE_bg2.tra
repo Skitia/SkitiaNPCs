@@ -1,24 +1,31 @@
-@0 = ~Kale's Father~
-@1 = ~Kale asked for some help in finding out what happened to his father. To start, we should retrieve his belongings that the church of Ilmater is holding onto for him.~
-@2 = ~We've retrieved the belongings recovered from Kale's father home from the Ilmater temple, which included only a journal. Perhaps there is information we could look into inside of it.~
-@3 = ~Kale suggested as a starting point we speak to Jillian, who works with the guard in the Docks.~
-@4 = ~After speaking to Jillian, she mentioned she tried to look into what happened with Percy but that she was quickly unable to proceed. She mentioned if we wanted to take a look ourselves, that the Temple of Oghma could be of help with the bag of cheese we were given.
+@30000 = ~Kale's Father~
+@30001 = ~Kale asked for some help in finding out what happened to his father. To start, we should retrieve his belongings that the church of Ilmater is holding onto for him.~
+@30002 = ~We've retrieved the belongings recovered from Kale's father home from the Ilmater temple, which included only a journal. Perhaps there is information we could look into inside of it.~
+@30003 = ~Kale suggested as a starting point we speak to Jillian, who works with the guard in the Docks.~
+@30004 = ~After speaking to Jillian, she mentioned she tried to look into what happened with Percy but that she was quickly unable to proceed. She mentioned if we wanted to take a look ourselves, that the Temple of Oghma could be of help with the bag of cheese we were given.
 She also suggested checking the store that sold them in the Bridge District.~
-@5 = ~With a suspect having been killed, Jillian will no longer be able to investigate what happened to Percy's father. There is nothing more we can accomplish digging into Percy's death.~
-@6 = ~Jillian is dead, and any work on the investigation into Percy's death dies with her.~ 
-@7 = ~I've spoken to all the suspects. If I've learned anything new from one, I could speak to another again, or I could give my conclusions on who I believe is guilty to Jillian.~
-@8 = ~We've accused Dallie of murdering Percy and she's been taken in by Jillian. We can meet Jillian again in a day at the garrison to see if our accusation was accurate.~
-@9 = ~We've accused Martin of murdering Percy and he's been taken in by Jillian. We can meet Jillian again in a day at the garrison to see if our accusation was accurate.~
-@10 = ~We've accused Flora of murdering Percy and she's been taken in by Jillian. We can meet Jillian again in a day at the garrison to see if our accusation was accurate.~
-@11 = ~Dallie was determined to be innocent. We did not do our due diligence, and we are unable to investigate further. Whoever killed Kale's father remains at large.~ 
-@12 = ~Martin was determined to be innocent. We did not do our due diligence, and we are unable to investigate further. Whoever killed Kale's father remains at large.~ 
-@13 = ~Flora was determined to be innocent. We did not do our due diligence, and we are unable to investigate further. Whoever killed Kale's father remains at large.~ 
-@14 = ~We accused Chester of murdering Percy, but upon Jillian going to confront him he was suspiciously missing from his shop and we were ambushed by mercenaries. 
+@30005 = ~With a suspect having been killed, Jillian will no longer be able to investigate what happened to Percy's father. There is nothing more we can accomplish digging into Percy's death.~
+@30006 = ~Jillian is dead, and any work on the investigation into Percy's death dies with her.~ 
+@30007 = ~I've spoken to all the suspects. If I've learned anything new from one, I could speak to another again, or I could give my conclusions on who I believe is guilty to Jillian.~
+@30008 = ~We've accused Dallie of murdering Percy and she's been taken in by Jillian. We can meet Jillian again in a day at the garrison to see if our accusation was accurate.~
+@30009 = ~We've accused Martin of murdering Percy and he's been taken in by Jillian. We can meet Jillian again in a day at the garrison to see if our accusation was accurate.~
+@30010 = ~We've accused Flora of murdering Percy and she's been taken in by Jillian. We can meet Jillian again in a day at the garrison to see if our accusation was accurate.~
+@30011 = ~Dallie was determined to be innocent. We did not do our due diligence, and we are unable to investigate further. Whoever killed Kale's father remains at large.~ 
+@30012 = ~Martin was determined to be innocent. We did not do our due diligence, and we are unable to investigate further. Whoever killed Kale's father remains at large.~ 
+@30013 = ~Flora was determined to be innocent. We did not do our due diligence, and we are unable to investigate further. Whoever killed Kale's father remains at large.~ 
+@30014 = ~We accused Chester of murdering Percy, but upon Jillian going to confront him he was suspiciously missing from his shop and we were ambushed by mercenaries. 
 We need to track Chester down, and either turn him in to Jillian, or execute his punishment ourselves.~
-@15 = ~It appears Bryce was in league with Chester after all. Once Bryce is out of the way, we should confront Chester and decide his fate.~
-@16 = ~We decided to take Chester's life for his drugging and killing of Percy and other halflings. All that remains is returning to Jillian and letting her know his fate.~
-@17 = ~Jillian wasn't overly happy with Chester being killed, and it appears that she would have preferred he had been turned in alive. Still, the city is safer for the halfling people for it, and she was thankful for that.~
-@18 = ~Jillian was pleased when we came back to the garrison with Chester in tow. Perhaps in a city full of thieves and other evils, justice can have its moments.~
+@30015 = ~It appears Bryce was in league with Chester after all. Once Bryce is out of the way, we should confront Chester and decide his fate.~
+@30016 = ~We decided to take Chester's life for his drugging and killing of Percy and other halflings. All that remains is returning to Jillian and letting her know his fate.~
+@30017 = ~Jillian wasn't overly happy with Chester being killed, and it appears that she would have preferred he had been turned in alive. Still, the city is safer for the halfling people for it, and she was thankful for that.~
+@30018 = ~Jillian was pleased when we came back to the garrison with Chester in tow. Perhaps in a city full of thieves and other evils, justice can have its moments.~
+@30019 = ~Kale's Father
+
+The priestess Siria of Oghma has agreed to study the cheese we gave her. She needs only an hour to get more information for us.~
+@30020 = ~Kale's Father
+
+Siria has revealed to us that the cheese is Spring Luiren Cheese, a drug that weakens the mind and body of halflings. It was also laced with rat poison.
+I could take this information to question the suspects again if they are agreeable to talk if I haven't already, before returning to Jillian.~
 
 @31 = ~The Final Battle with Bodhi.
 
