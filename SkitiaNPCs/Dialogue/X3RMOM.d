@@ -28,7 +28,7 @@ END
 
 CHAIN X3RMOM cheese_t3 
 @11
-DO ~SetGlobal("X3KnowledgeCheese","GLOBAL",1)AddJournalEntry(@1,QUEST)~
+DO ~SetGlobal("X3KnowledgeCheese","GLOBAL",1)AddJournalEntry(@30020,QUEST)~
 == X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN @12
 EXIT 
 
@@ -240,6 +240,6 @@ EXIT
 CHAIN X3RMOM cheese 
 @86
 == X3RMOM @87
-DO ~SetGlobalTimer("X3KResearch","GLOBAL",ONE_HOUR)SetGlobal("X3KResearchTimer","LOCALS",1)AddJournalEntry(@0,QUEST)~
+DO ~SetGlobalTimer("X3KResearch","GLOBAL",ONE_HOUR)SetGlobal("X3KResearchTimer","LOCALS",1)AddJournalEntry(@30019,QUEST)~
 EXIT 
 

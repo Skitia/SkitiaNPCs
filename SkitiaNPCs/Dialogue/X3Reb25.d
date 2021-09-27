@@ -29,7 +29,7 @@ END
 
 IF ~~ ScryDead.3 
 SAY @12
-IF ~~ DO ~SetGlobal("X3HelToBQuest","GLOBAL",4)AddJournalEntry(@20,QUEST)~ EXIT 
+IF ~~ DO ~SetGlobal("X3HelToBQuest","GLOBAL",4)AddJournalEntry(@20020,QUEST)~ EXIT 
 END 
 
 END 
@@ -189,9 +189,9 @@ CHAIN IF ~Global("X3RebToBKickedOut","GLOBAL",1) !Global("X3RebRomanceActive","G
 @59
 END 
 ++ @60 + p2.1
-+~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",0)~+ @61 DO ~SetGlobal("X3HelScryHelp","LOCALS",1)AddJournalEntry(@19,QUEST)~ + Scry 
-+~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")!AreaCheck("AR4500")~+ @62 DO ~EraseJournalEntry(@19)~ + ScryStartNotPlane
-+~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")AreaCheck("AR4500")~+ @62 DO ~EraseJournalEntry(@19)~ + ScryStartPlane
++~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",0)~+ @61 DO ~SetGlobal("X3HelScryHelp","LOCALS",1)AddJournalEntry(@20019,QUEST)~ + Scry 
++~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")!AreaCheck("AR4500")~+ @62 DO ~EraseJournalEntry(@20019)~ + ScryStartNotPlane
++~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")AreaCheck("AR4500")~+ @62 DO ~EraseJournalEntry(@20019)~ + ScryStartPlane
 ++ @63 EXIT
 
 
@@ -204,9 +204,9 @@ CHAIN IF ~Global("X3RebToBKickedOut","GLOBAL",1) !Global("X3RebRomanceActive","G
 @65
 END
 ++ @66 + p2.1
-+~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",0)~+ @61 DO ~SetGlobal("X3HelScryHelp","LOCALS",1)AddJournalEntry(@19,QUEST)~ + Scry 
-+~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")!AreaCheck("AR4500")~+ @62 DO ~EraseJournalEntry(@19)~ + ScryStartNotPlane
-+~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")AreaCheck("AR4500")~+ @62 DO ~EraseJournalEntry(@19)~ + ScryStartPlane
++~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",0)~+ @61 DO ~SetGlobal("X3HelScryHelp","LOCALS",1)AddJournalEntry(@20019,QUEST)~ + Scry 
++~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")!AreaCheck("AR4500")~+ @62 DO ~EraseJournalEntry(@20019)~ + ScryStartNotPlane
++~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")AreaCheck("AR4500")~+ @62 DO ~EraseJournalEntry(@20019)~ + ScryStartPlane
 ++ @63 EXIT
 
 APPEND X3Reb25P 

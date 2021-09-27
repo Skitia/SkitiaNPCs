@@ -137,12 +137,12 @@ END
 
 IF ~~ Scry.3 
 SAY @45
-IF ~~ DO ~AddJournalEntry(@22,QUEST_DONE)SetGlobal("X3HelToBQuest","GLOBAL",5)AddExperienceParty(6000)~ EXIT 
+IF ~~ DO ~AddJournalEntry(@20022,QUEST_DONE)SetGlobal("X3HelToBQuest","GLOBAL",5)AddExperienceParty(6000)~ EXIT 
 END 
 
 IF ~~ Scry.4 
 SAY @46
-IF ~~ DO ~AddJournalEntry(@22,QUEST_DONE)SetGlobal("X3HelToBQuest","GLOBAL",5)AddExperienceParty(6000)~ EXIT 
+IF ~~ DO ~AddJournalEntry(@20022,QUEST_DONE)SetGlobal("X3HelToBQuest","GLOBAL",5)AddExperienceParty(6000)~ EXIT 
 END 
 
 IF ~~ Scry.5 
@@ -157,7 +157,7 @@ END
 
 IF ~~ Scry.7
 SAY @49
-IF ~~ DO ~AddJournalEntry(@21,QUEST_DONE)AddExperienceParty(6000)~ EXIT 
+IF ~~ DO ~AddJournalEntry(@20021,QUEST_DONE)AddExperienceParty(6000)~ EXIT 
 END 
 
 IF ~~ Scry.8
@@ -167,7 +167,7 @@ END
 
 IF ~~ Scry.9
 SAY @51
-IF ~~ DO ~AddJournalEntry(@21,QUEST_DONE)AddExperienceParty(6000)~ EXIT 
+IF ~~ DO ~AddJournalEntry(@20021,QUEST_DONE)AddExperienceParty(6000)~ EXIT 
 END  
 
 END 

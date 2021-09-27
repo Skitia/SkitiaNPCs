@@ -1244,7 +1244,7 @@ CHAIN BODHIAMB X3KalKidnap
 END
 IF ~~ DO ~ClearAllActions()
 StartCutSceneMode()
-StartCutScene("X3KBodhi")~ UNSOLVED_JOURNAL @31 
+StartCutScene("X3KBodhi")~ UNSOLVED_JOURNAL @30031 
 EXIT
 //Not Caught 
 I_C_T C6BODHI 0 X3KalC6Bodhi0 
@@ -1444,7 +1444,7 @@ EXTERN X3KalJ Q.4
 
 CHAIN X3KalJ Q.4
 @346
-DO ~AddJournalEntry(@3,QUEST)~
+DO ~AddJournalEntry(@30003,QUEST)~
 EXIT 
 
 CHAIN X3KalJ Q.2
@@ -1460,7 +1460,7 @@ CHAIN X3KalJ Items
 == SLILMAT @349
 == X3KalJ @350
 == SLILMAT @351
-DO ~AddJournalEntry(@2,QUEST)ActionOverride(Player1,CreateItem("X3KBOOK1",0,0,0))~ 
+DO ~AddJournalEntry(@30002,QUEST)ActionOverride(Player1,CreateItem("X3KBOOK1",0,0,0))~ 
 END 
 ++ @352 EXTERN X3KalJ gold
 ++ @353 EXTERN X3KalJ journal  

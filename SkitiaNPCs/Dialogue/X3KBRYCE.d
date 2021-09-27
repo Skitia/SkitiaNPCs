@@ -69,7 +69,7 @@ IF ~!IsValidForPartyDialogue("X3Kal")!ISValidForPartyDialogue("MAZZY")~ EXTERN X
 
 CHAIN X3KBRYCE fm_3 
 @21
-DO ~Enemy()AddJournalEntry(@15,QUEST)~ 
+DO ~Enemy()AddJournalEntry(@30015,QUEST)~ 
 EXIT 
 
 CHAIN MAZZYJ fm_reaction_mazzy 

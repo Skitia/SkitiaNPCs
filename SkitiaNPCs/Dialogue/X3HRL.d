@@ -51,17 +51,17 @@ IF ~IsValidForPartyDialogue("X3Hel")!GlobalGT("X3HelQuest","GLOBAL",0)~ EXTERN X
 
 CHAIN X3HPOOR win 
 @8
-DO ~AddJournalEntry(@2,QUEST)EscapeAreaMove("AR0406",1282,1887,NW)~
+DO ~AddJournalEntry(@20002,QUEST)EscapeAreaMove("AR0406",1282,1887,NW)~
 EXIT
 
 CHAIN X3HPOOR time 
 @9
-DO ~AddJournalEntry(@2,QUEST)EscapeAreaMove("AR0406",1282,1887,NW)~
+DO ~AddJournalEntry(@20002,QUEST)EscapeAreaMove("AR0406",1282,1887,NW)~
 EXIT  
 
 CHAIN X3HPOOR involved 
 @10
-DO ~AddJournalEntry(@2,QUEST)EscapeAreaMove("AR0406",1282,1887,NW)~
+DO ~AddJournalEntry(@20002,QUEST)EscapeAreaMove("AR0406",1282,1887,NW)~
 EXIT 
 
 CHAIN X3HPOOR registered 
@@ -93,13 +93,13 @@ END
 CHAIN X3HelJ no_time 
 @23
 == X3HPOOR @24
-DO ~AddJournalEntry(@2,QUEST)EscapeArea()~
+DO ~AddJournalEntry(@20002,QUEST)EscapeArea()~
 EXIT 
 
 CHAIN X3HelJ check_out 
 @25
 == X3HPOOR @26
-DO ~AddJournalEntry(@2,QUEST)EscapeArea()~
+DO ~AddJournalEntry(@20002,QUEST)EscapeArea()~
 EXIT 
 
 BEGIN X3HRL
@@ -176,13 +176,13 @@ END
 
 CHAIN X3HRL pay 
 @45
-DO ~AddJournalEntry(@3,QUEST)SetGlobal("X3HelQuest","GLOBAL",1)~
+DO ~AddJournalEntry(@20003,QUEST)SetGlobal("X3HelQuest","GLOBAL",1)~
 END 
 ++ @46 + join 
 ++ @47 + prepare  
 
 // Once agreed, conversation should start here.
-CHAIN IF ~Global("X3HelQuest","GLOBAL",1)~ THEN X3HRL round1start 
+CHAIN IF ~Global("X3HelQuest","GLOBAL",1)!Global("X3HBattle","GLOBAL",1)~ THEN X3HRL round1start 
 @48
 END 
 ++ @46 + join 
@@ -248,23 +248,23 @@ EXIT
 
 CHAIN IF ~Global("X3HelQuest","GLOBAL",2)~ THEN X3HRL roundOneVictory 
 @66
-DO ~AddJournalEntry(@4,QUEST)IncrementGlobal("X3HelQuest","GLOBAL",1)GiveGoldForce(250)SetGlobalTimer("X3HGauntletTimer","GLOBAL",ONE_DAY)~
+DO ~AddJournalEntry(@20004,QUEST)IncrementGlobal("X3HelQuest","GLOBAL",1)GiveGoldForce(250)SetGlobalTimer("X3HGauntletTimer","GLOBAL",ONE_DAY)~
 EXIT 
 
-CHAIN IF ~Global("X3PoorMet","LOCALS",2)~ THEN X3HPOOR request 
+CHAIN IF ~Global("X3PoorMet","GLOBAL",2)~ THEN X3HPOOR request 
 @67
 == X3HRL @68
 == X3HPOOR @69
 == X3HRL @70
 == X3HRL @71
-DO ~ActionOverride("X3HPoor",IncrementGlobal("X3PoorMet","LOCALS",1))~
+DO ~ActionOverride("X3HPoor",IncrementGlobal("X3PoorMet","GLOBAL",1))~
 EXIT 
 
 CHAIN IF ~!GlobalTimerExpired("X3HGauntletTimer","GLOBAL")~ THEN X3HRL not_ready 
 @72
 EXIT 
 
-CHAIN IF ~GlobalTimerExpired("X3HGauntletTimer","GLOBAL")Global("X3HelQuest","GLOBAL",3)~ THEN X3HRL second_round 
+CHAIN IF ~GlobalTimerExpired("X3HGauntletTimer","GLOBAL")Global("X3HelQuest","GLOBAL",3)!Global("X3HBattle","GLOBAL",1)~ THEN X3HRL second_round 
 @73
 END 
 ++ @74 + second_fight_join
@@ -303,19 +303,19 @@ EXIT
 
 CHAIN IF ~Global("X3HelQuest","GLOBAL",4)~ THEN X3HRL roundtwoVictory
 @81
-DO ~AddJournalEntry(@5,QUEST)GiveGoldForce(500)SetGlobalTimer("X3HGauntletTimer","GLOBAL",ONE_DAY)IncrementGlobal("X3HelQuest","GLOBAL",1)~
+DO ~AddJournalEntry(@20005,QUEST)GiveGoldForce(500)SetGlobalTimer("X3HGauntletTimer","GLOBAL",ONE_DAY)IncrementGlobal("X3HelQuest","GLOBAL",1)~
 EXIT 
 
 CHAIN IF ~Dead("X3HDD")!Global("X3HelQuest","GLOBAL",9)~ THEN X3HRL quest_fail
 @82
-DO ~AddJournalEntry(@9,QUEST_DONE)ActionOverride("X3HPOOR",EscapeArea())EscapeArea()~
+DO ~AddJournalEntry(@20009,QUEST_DONE)ActionOverride("X3HPOOR",EscapeArea())EscapeArea()~
 EXIT 
 
 CHAIN IF ~OR(2)Global("X3HelQuest","GLOBAL",6)Global("X3HelQuest","GLOBAL",7)~ THEN X3HRL not_ready 
 @83
 EXIT 
 
-CHAIN IF ~Global("X3HelQuest","GLOBAL",8)~ THEN X3HRL third_round
+CHAIN IF ~Global("X3HelQuest","GLOBAL",8)!Global("X3HBattle","GLOBAL",1)~ THEN X3HRL third_round
 @84
 END 
 ++ @85 + third_ready 
@@ -352,7 +352,7 @@ END
 CHAIN X3HRL third_forfeit 
 @96
 == X3HRL @97
-DO ~AddJournalEntry(@7,QUEST_DONE)~
+DO ~AddJournalEntry(@20007,QUEST_DONE)~
 END 
 IF ~IsValidForPartyDialogue("X3Hel")~ EXTERN X3HelJ third_dissaprove // Helga interject, loss of approval. 
 IF ~IsValidForPartyDialogue("X3Kal")!IsValidForPartyDialogue("X3Hel")~ EXTERN X3KalJ third_approve // Kale interject, gain of approval.
@@ -404,7 +404,7 @@ EXIT
 CHAIN IF ~Global("X3HelQuest","GLOBAL",9)~ THEN X3HRL third_victory 
 @105
 == X3HRL @106
-DO ~AddJournalEntry(@8,QUEST_DONE)GiveGoldForce(750)GiveItemCreate("X3HPC",Player1,1,0,0)~
+DO ~AddJournalEntry(@20008,QUEST_DONE)GiveGoldForce(750)GiveItemCreate("X3HPC",Player1,1,0,0)~
 END
 IF ~IsValidForPartyDialogue("X3Hel")~ EXTERN X3HELJ potion_obtained 
 IF ~!IsValidForPartyDialogue("X3Hel")~ EXTERN X3HRL departure 
@@ -414,7 +414,7 @@ CHAIN X3HELJ potion_obtained
 END 
 ++ @108 DO ~IncrementGlobal("X3HelApp","GLOBAL",9)
 DisplayStringNoNameDlg(Player1,@219)~ + Helga_receive
-++ @109 + poor_man 
++~Global("X3PoorMet","GLOBAL",3)~+ @109 + poor_man 
 ++ @110 DO ~IncrementGlobal("X3HelApp","GLOBAL",-9)
 DisplayStringNoNameDlg(Player1,@209)~ + Helga_not_receive
 
@@ -445,7 +445,7 @@ CHAIN IF ~GlobalGT("X3HelQuest","GLOBAL",1)~ THEN X3HPOOR talk
 @119
 END 
 +~PartyHasItem("X3HPC")~+ @120 + help_son 
-+~!Global("X3HelQuest","GLOBAL",9)Global("X3PoorMet","LOCALS",3)~+ @121 + gift 
++~!Global("X3HelQuest","GLOBAL",9)Global("X3PoorMet","GLOBAL",3)~+ @121 + gift 
 ++ @122 + start 
 ++ @123 EXIT  
 

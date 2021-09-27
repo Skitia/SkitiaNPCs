@@ -112,7 +112,7 @@ EXTERN X3HSCRY end
 
 CHAIN X3HSCRY end
 @42
-DO ~AddExperienceParty(6000)AddJournalEntry(@18,QUEST_DONE)SetGlobal("X3HelToBQuest","GLOBAL",5)EscapeArea()~
+DO ~AddExperienceParty(6000)AddJournalEntry(@20018,QUEST_DONE)SetGlobal("X3HelToBQuest","GLOBAL",5)EscapeArea()~
 EXIT 
 
 CHAIN X3Hel25J wonder2

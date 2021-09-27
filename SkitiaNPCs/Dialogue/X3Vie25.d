@@ -31,7 +31,7 @@ END
 
 IF ~~ ScryDead.3 
 SAY @12
-IF ~~ DO ~SetGlobal("X3HelToBQuest","GLOBAL",4)AddJournalEntry(@19,QUEST)~ EXIT 
+IF ~~ DO ~SetGlobal("X3HelToBQuest","GLOBAL",4)AddJournalEntry(@20019,QUEST)~ EXIT 
 END 
 
 
@@ -208,9 +208,9 @@ CHAIN IF ~Global("X3VieToBKickedOut","GLOBAL",1) !Global("X3VieRomanceActive","G
 @64 
 END 
 ++ @65 + p2.1
-+~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",0)~+ @66 DO ~SetGlobal("X3HelScryHelp","LOCALS",1)AddJournalEntry(@15,QUEST)~ + Scry 
++~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",0)~+ @66 DO ~SetGlobal("X3HelScryHelp","LOCALS",1)AddJournalEntry(@20015,QUEST)~ + Scry 
 +~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")!AreaCheck("AR4500")~+ @67  + ScryStartNotPlane
-+~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")AreaCheck("AR4500")~+ @67 DO ~EraseJournalEntry(@15)~ + ScryStartPlane
++~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")AreaCheck("AR4500")~+ @67 DO ~EraseJournalEntry(@20015)~ + ScryStartPlane
 ++ @68 + p3 
 
 CHAIN X3Vie25P p3 
@@ -227,9 +227,9 @@ CHAIN IF ~Global("X3VieToBKickedOut","GLOBAL",1)Global("X3VieRomanceActive","GLO
 @71  
 END
 ++ @72 + pr.1
-+~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",0)~+ @66 DO ~SetGlobal("X3HelScryHelp","LOCALS",1)AddJournalEntry(@14,QUEST)~ + Scry 
++~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",0)~+ @66 DO ~SetGlobal("X3HelScryHelp","LOCALS",1)AddJournalEntry(@20014,QUEST)~ + Scry 
 +~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")!AreaCheck("AR4500")~+ @67  + ScryStartNotPlane
-+~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")AreaCheck("AR4500")~+ @67 DO ~EraseJournalEntry(@14)~ + ScryStartPlane
++~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")AreaCheck("AR4500")~+ @67 DO ~EraseJournalEntry(@20014)~ + ScryStartPlane
 ++ @73 + p3 
 
 CHAIN X3Vie25P pr.1

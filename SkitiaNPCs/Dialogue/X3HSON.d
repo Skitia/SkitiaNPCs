@@ -35,7 +35,7 @@ EXTERN X3HSON gods_willing
 
 CHAIN X3HSON gods_willing 
 @21
-DO ~AddJournalEntry(@12,INFO)~
+DO ~AddJournalEntry(@20012,INFO)~
 EXIT 
 
 

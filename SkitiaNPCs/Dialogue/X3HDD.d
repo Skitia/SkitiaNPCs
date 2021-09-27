@@ -40,8 +40,8 @@ EXTERN X3HDD give_up
 
 CHAIN X3HDD intimidate 
 @13
-DO ~AddJournalEntry(@6,QUEST)SetGlobal("X3HelQuest","GLOBAL",8)EscapeArea()~ EXIT 
+DO ~AddJournalEntry(@20006,QUEST)SetGlobal("X3HelQuest","GLOBAL",8)EscapeArea()~ EXIT 
 
 CHAIN X3HDD give_up 
 @14
-DO ~AddJournalEntry(@6,QUEST)SetGlobal("X3HelQuest","GLOBAL",8)EscapeArea()~ EXIT 
+DO ~AddJournalEntry(@20006,QUEST)SetGlobal("X3HelQuest","GLOBAL",8)EscapeArea()~ EXIT 

@@ -138,7 +138,7 @@ EXTERN X3Kal m8
 
 CHAIN X3Kal m8 
 @40
-DO ~AddJournalEntry(@2,QUEST)JoinParty()~
+DO ~AddJournalEntry(@30001,QUEST)JoinParty()~
 EXIT
 
 CHAIN IF ~Global("X3KalMet","GLOBAL",1)~ THEN X3Kal remeet

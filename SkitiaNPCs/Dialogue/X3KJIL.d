@@ -3,7 +3,7 @@ BEGIN X3KJIL
 // In case the player killed any of the Suspect NPCs before an arrest was made.
 CHAIN IF ~GlobalLT("X3KalQuest","GLOBAL",6)OR(4)Dead("X3KC")Dead("X3KM")Dead("X3KD")Dead("X3KF")~ THEN X3KJIL quest_failed 
 @0
-DO ~AddJournalEntry(@5,QUEST_DONE)EscapeArea()~
+DO ~AddJournalEntry(@30005,QUEST_DONE)EscapeArea()~
 EXIT 
 
 CHAIN IF ~IsValidForPartyDialogue("X3Kal")Global("X3KalQuest","GLOBAL",3)~ THEN X3KJIL quest_start
@@ -141,7 +141,7 @@ END
 
 CHAIN X3KJIL con1_exit
 @42
-DO ~AddJournalEntry(@4,QUEST)~
+DO ~AddJournalEntry(@30004,QUEST)~
 EXIT
 
 
@@ -320,7 +320,7 @@ CHAIN IF ~GlobalLT("X3KalQuest","GLOBAL",6)Global("X3KalQuestAccuse","GLOBAL",1)
 == X3KJIL @76
 == X3KF @77
 == X3KJIL @78
-DO ~ActionOverride("X3KF",EscapeArea())SetGlobal("X3KalQuest","GLOBAL",6)SetGlobalTimer("X3KaleQuestAccuseTimer","GLOBAL",ONE_DAY)EscapeAreaMove("AR0332",273,369,SW)AddJournalEntry(@10,QUEST)~
+DO ~ActionOverride("X3KF",EscapeArea())SetGlobal("X3KalQuest","GLOBAL",6)SetGlobalTimer("X3KaleQuestAccuseTimer","GLOBAL",ONE_DAY)EscapeAreaMove("AR0332",273,369,SW)AddJournalEntry(@30010,QUEST)~
 EXIT 
 
 BEGIN X3KMERC 
@@ -356,7 +356,7 @@ EXTERN X3KJIL cr_4
 
 CHAIN X3KJIL cr_4 
 @90
-DO ~SetGlobal("X3KalQuest","GLOBAL",7)AddJournalEntry(@14,QUEST)EscapeAreaMove("AR0332",273,369,SW)~ 
+DO ~SetGlobal("X3KalQuest","GLOBAL",7)AddJournalEntry(@30014,QUEST)EscapeAreaMove("AR0332",273,369,SW)~ 
 EXIT 
 
 // Accused Dallie 
@@ -366,7 +366,7 @@ CHAIN IF ~GlobalLT("X3KalQuest","GLOBAL",6)Global("X3KalQuestAccuse","GLOBAL",3)
 == X3KJIL @93
 == X3KD @94
 == X3KJIL @78
-DO ~ActionOverride("X3KD",EscapeArea())SetGlobal("X3KalQuest","GLOBAL",6)SetGlobalTimer("X3KaleQuestAccuseTimer","GLOBAL",ONE_DAY)EscapeAreaMove("AR0332",273,369,SW)AddJournalEntry(@8,QUEST)~
+DO ~ActionOverride("X3KD",EscapeArea())SetGlobal("X3KalQuest","GLOBAL",6)SetGlobalTimer("X3KaleQuestAccuseTimer","GLOBAL",ONE_DAY)EscapeAreaMove("AR0332",273,369,SW)AddJournalEntry(@30008,QUEST)~
 EXIT 
 
 // Accused Martin 
@@ -376,7 +376,7 @@ CHAIN IF ~GlobalLT("X3KalQuest","GLOBAL",6)Global("X3KalQuestAccuse","GLOBAL",4)
 == X3KJIL @97
 == X3KM @98
 == X3KJIL @99
-DO ~ActionOverride("X3KM",EscapeArea())SetGlobal("X3KalQuest","GLOBAL",6)SetGlobalTimer("X3KaleQuestAccuseTimer","GLOBAL",ONE_DAY)EscapeAreaMove("AR0332",273,369,SW)AddJournalEntry(@9,QUEST)~
+DO ~ActionOverride("X3KM",EscapeArea())SetGlobal("X3KalQuest","GLOBAL",6)SetGlobalTimer("X3KaleQuestAccuseTimer","GLOBAL",ONE_DAY)EscapeAreaMove("AR0332",273,369,SW)AddJournalEntry(@30009,QUEST)~
 EXIT 
 
 // Return from Flora/Maritn/Dallie accusation, quest not expired.
@@ -396,7 +396,7 @@ IF ~!Global("X3KalQuestAccuse","GLOBAL",1)!Global("X3KalQuestAccuse","GLOBAL",3)
 
 CHAIN X3KJIL Flora_innocent
  @102
-DO ~AddJournalEntry(@13,QUEST_DONE)~
+DO ~AddJournalEntry(@30013,QUEST_DONE)~
 END 
 ++ @103 + wa_1 
 ++ @104 + wa_2 
@@ -404,7 +404,7 @@ END
 
 CHAIN X3KJIL Dallie_innocent
  @106
-DO ~AddJournalEntry(@11,QUEST_DONE)~
+DO ~AddJournalEntry(@30011,QUEST_DONE)~
 END 
 ++ @103 + wa_1 
 ++ @104 + wa_2 
@@ -412,7 +412,7 @@ END
 
 CHAIN X3KJIL Martin_innocent
  @107
-DO ~AddJournalEntry(@10,QUEST_DONE)~
+DO ~AddJournalEntry(@30010,QUEST_DONE)~
 END 
 ++ @103 + wa_1 
 ++ @104 + wa_2 
@@ -467,14 +467,14 @@ CHAIN X3KJIL happens_now
 @124
 END 
 IF ~IsValidForPartyDialogue("X3Kal")~ EXTERN X3KJIL kale_final_interject
-IF ~!IsValidForPartyDialogue("X3Kal")~ DO ~AddexperienceParty(7500)GiveGoldForce(1250)AddJournalEntry(@17,QUEST_DONE)EscapeArea()~ EXIT
+IF ~!IsValidForPartyDialogue("X3Kal")~ DO ~AddexperienceParty(7500)GiveGoldForce(1250)AddJournalEntry(@30017,QUEST_DONE)EscapeArea()~ EXIT
 
 CHAIN X3KJIL kale_final_interject 
 @125
 == X3KalJ @126
 == X3KJIL @127
 == X3KALJ @128
-DO ~AddexperienceParty(7500)GiveGoldForce(1250)AddJournalEntry(@17,QUEST_DONE)ActionOverride("X3KJIL",EscapeArea())~
+DO ~AddexperienceParty(7500)GiveGoldForce(1250)AddJournalEntry(@30017,QUEST_DONE)ActionOverride("X3KJIL",EscapeArea())~
 EXIT 
 
 
@@ -522,7 +522,7 @@ END
 
 CHAIN X3KJIL qd_5
 @142
-DO ~ActionOverride("X3KC",EscapeArea())EscapeArea()AddJournalEntry(@18,QUEST_DONE)AddexperienceParty(7500)GiveGoldForce(1250)~ 
+DO ~ActionOverride("X3KC",EscapeArea())EscapeArea()AddJournalEntry(@30018,QUEST_DONE)AddexperienceParty(7500)GiveGoldForce(1250)~ 
 EXIT 
 
 CHAIN X3KJIL qd_kale_banter 

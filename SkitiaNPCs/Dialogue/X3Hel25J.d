@@ -308,7 +308,7 @@ EXTERN X3Hel25J 2.4
 
 CHAIN X3Hel25J 2.8
 @88
-DO ~AddJournalEntry(@13,QUEST)~ // It helps if Vienxay and Recorder are in the party for this quest. Vienxay will mention what is needed, Recorder will mention the possible scrier with information on where it is.
+DO ~AddJournalEntry(@20013,QUEST)~ // It helps if Vienxay and Recorder are in the party for this quest. Vienxay will mention what is needed, Recorder will mention the possible scrier with information on where it is.
 EXIT 
 
 CHAIN IF ~Global("X3HelToBTalk","LOCALS",4)~ THEN X3Hel25J Talk3
@@ -571,12 +571,12 @@ END
 
 IF ~~ Scry.3 
 SAY @183
-IF ~~ DO ~AddJournalEntry(@22,QUEST_DONE)SetGlobal("X3HelToBQuest","GLOBAL",5)AddexperienceParty(6000)~ EXIT 
+IF ~~ DO ~AddJournalEntry(@20022,QUEST_DONE)SetGlobal("X3HelToBQuest","GLOBAL",5)AddexperienceParty(6000)~ EXIT 
 END 
 
 IF ~~ Scry.4 
 SAY @184
-IF ~~ DO ~AddJournalEntry(@22,QUEST_DONE)SetGlobal("X3HelToBQuest","GLOBAL",5)AddexperienceParty(6000)~ EXIT 
+IF ~~ DO ~AddJournalEntry(@20022,QUEST_DONE)SetGlobal("X3HelToBQuest","GLOBAL",5)AddexperienceParty(6000)~ EXIT 
 END 
 
 IF ~~ Scry.5 
@@ -591,7 +591,7 @@ END
 
 IF ~~ Scry.7
 SAY @187
-IF ~~ DO ~AddJournalEntry(@21,QUEST_DONE)SetGlobal("X3HelToBQuest","GLOBAL",6)AddexperienceParty(6000)~ EXIT 
+IF ~~ DO ~AddJournalEntry(@20021,QUEST_DONE)SetGlobal("X3HelToBQuest","GLOBAL",6)AddexperienceParty(6000)~ EXIT 
 END 
 
 IF ~~ Scry.8
@@ -601,7 +601,7 @@ END
 
 IF ~~ Scry.9
 SAY @189
-IF ~~ DO ~AddJournalEntry(@21,QUEST_DONE)SetGlobal("X3HelToBQuest","GLOBAL",6)AddexperienceParty(6000)~ EXIT 
+IF ~~ DO ~AddJournalEntry(@20021,QUEST_DONE)SetGlobal("X3HelToBQuest","GLOBAL",6)AddexperienceParty(6000)~ EXIT 
 END  
 
 

@@ -1477,7 +1477,7 @@ END
 
 IF ~~ ScryDead.3 
 SAY @467
-IF ~~ DO ~SetGlobal("X3HelToBQuest","GLOBAL",4)AddJournalEntry(@20,QUEST)~ EXIT 
+IF ~~ DO ~SetGlobal("X3HelToBQuest","GLOBAL",4)AddJournalEntry(@20020,QUEST)~ EXIT 
 END 
 
 IF ~~ Scry 
@@ -1524,9 +1524,9 @@ END
 // PID 
 IF ~IsGabber(Player1) CombatCounter(0) !Detect([ENEMY]) !GlobalGT("X3EmiApp","GLOBAL",44)~ THEN BEGIN Normal.PID 
 SAY  @481
-+~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",0)~+ @482 DO ~SetGlobal("X3HelScryHelp","LOCALS",1)AddJournalEntry(@19,QUEST)~ + Scry 
-+~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")!AreaCheck("AR4500")~+ @483 DO ~EraseJournalEntry(@19)~ + ScryStartNotPlane
-+~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")AreaCheck("AR4500")~+ @483 DO ~EraseJournalEntry(@19)~ + ScryStartPlane
++~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",0)~+ @482 DO ~SetGlobal("X3HelScryHelp","LOCALS",1)AddJournalEntry(@20019,QUEST)~ + Scry 
++~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")!AreaCheck("AR4500")~+ @483 DO ~EraseJournalEntry(@20019)~ + ScryStartNotPlane
++~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")AreaCheck("AR4500")~+ @483 DO ~EraseJournalEntry(@20019)~ + ScryStartPlane
 ++ @484 + Question.PID 
 +~NumInPartyGT(2)~+ @485 + PersonalGroup.PID 
 +~!NumInPartyGT(2)~+ @485 + PersonalAlone.PID
@@ -1537,9 +1537,9 @@ END
 
 IF ~IsGabber(Player1) CombatCounter(0) !Detect([ENEMY]) GlobalGT("X3EmiApp","GLOBAL",44)~ THEN BEGIN High.PID 
 SAY  @488
-+~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",0)~+ @482 DO ~SetGlobal("X3HelScryHelp","LOCALS",1)AddJournalEntry(@19,QUEST)~ + Scry 
-+~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")!AreaCheck("AR4500")~+ @483 DO ~EraseJournalEntry(@19)~ + ScryStartNotPlane
-+~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")AreaCheck("AR4500")~+ @483 DO ~EraseJournalEntry(@19)~ + ScryStartPlane
++~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",0)~+ @482 DO ~SetGlobal("X3HelScryHelp","LOCALS",1)AddJournalEntry(@20019,QUEST)~ + Scry 
++~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")!AreaCheck("AR4500")~+ @483 DO ~EraseJournalEntry(@20019)~ + ScryStartNotPlane
++~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")AreaCheck("AR4500")~+ @483 DO ~EraseJournalEntry(@20019)~ + ScryStartPlane
 ++ @489 + Question.PID 
 +~NumInPartyGT(2)~+ @485 + PersonalGroup.PID 
 +~!NumInPartyGT(2)~+ @485 + PersonalAlone.PID
