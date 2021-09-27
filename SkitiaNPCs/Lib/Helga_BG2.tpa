@@ -206,8 +206,8 @@ REPLACE ~99999~ @51
 COPY ~%MOD_FOLDER%/Epilogue/X3HelEp.2da~ ~override/X3Hel02.2da~
 REPLACE ~99999~ @52 
  // Journal Entries 
-ADD_JOURNAL TITLE (@1) @2 @3 @4 @5 @6 @7 @8 @9 @10 USING ~%MOD_FOLDER%/Tra/english/Helga_bg2.tra~ // Rulendo's Gauntlet 
-ADD_JOURNAL TITLE (@11) @12 @13 @14 @15 @16 @17 @18 @19 @20 @21 @22 USING ~%MOD_FOLDER%/Tra/english/Helga_bg2.tra~ // Helga's Son  
+ADD_JOURNAL TITLE (@20001) @20002 @20003 @20004 @20005 @20006 @20007 @20008 @20009 @20010 USING ~%MOD_FOLDER%/Tra/english/Helga_bg2.tra~ // Rulendo's Gauntlet 
+ADD_JOURNAL TITLE (@20011) @20012 @20013 @20014 @20015 @20016 @20017 @20018 @20019 @20020 @20021 @20022 USING ~%MOD_FOLDER%/Tra/english/Helga_bg2.tra~ // Helga's Son  
   
   // Portraits 
   		COPY ~%MOD_FOLDER%/Portraits/X3HelL.bmp~ ~override/X3HelL.bmp~
