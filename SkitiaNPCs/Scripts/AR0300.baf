@@ -31,5 +31,5 @@ Global("X3KSuspectTalk","GLOBAL",4)
 Global("X3KQuest","AR0300",0)
 THEN RESPONSE #100 
 SetGlobal("X3KQuest","AR0300",1)
-AddJournalEntry(@7,QUEST)
+AddJournalEntry(@30007,QUEST)
 END 

@@ -3,7 +3,7 @@ Dead("X3KJIL")
 Global("X3KaleQuestJillianDied","LOCALS",0)
 THEN RESPONSE #100
 SetGlobal("X3KaleQuestJillianDied","LOCALS",1)
-AddJournalEntry(@6,QUEST_DONE) // Quest is over because Jillian died.
+AddJournalEntry(@30006,QUEST_DONE) // Quest is over because Jillian died.
 //Though the player can still continue as far as they are able to if they are on the Chester route.
 END 
 

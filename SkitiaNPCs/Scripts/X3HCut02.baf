@@ -10,6 +10,8 @@ THEN RESPONSE #100
 	JumpToPoint([1227.1794])
 	MoveViewPoint([1227.1794],INSTANT)
     Wait(2)
+	IncrementGlobal("X3HelQuest","GLOBAL",1)
+	SetGlobal("X3HBattle","GLOBAL",0)
 	ActionOverride(Player2,Face(10))
 	ActionOverride(Player3,Face(10))
 	ActionOverride(Player4,Face(10))

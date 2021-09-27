@@ -1,20 +1,20 @@
 IF 
    See([PC])
    AreaCheck("AR0400")
-   Global("X3PoorMet","LOCALS",0)
+   Global("X3PoorMet","GLOBAL",0)
   THEN
     RESPONSE #100
-	SetGlobal("X3PoorMet","LOCALS",1)
+	SetGlobal("X3PoorMet","GLOBAL",1)
 	Dialogue([PC])
 END 
 
 IF 
    See([PC])
    AreaCheck("AR0406")
-   Global("X3PoorMet","LOCALS",1)
+   Global("X3PoorMet","GLOBAL",1)
    GlobalTimerExpired("X3HGauntletTimer","GLOBAL")
      THEN
     RESPONSE #100
-	SetGlobal("X3PoorMet","LOCALS",2)
+	SetGlobal("X3PoorMet","GLOBAL",2)
 	StartDialogueNoSet([PC])
 END 

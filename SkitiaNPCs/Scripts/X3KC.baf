@@ -11,6 +11,6 @@ END
 IF 
 Die()
 THEN RESPONSE #100
-AddJournalEntry(@16,QUEST)
+AddJournalEntry(@30016,QUEST)
 END 
 

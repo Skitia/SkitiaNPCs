@@ -101,7 +101,6 @@ Dead("X3HDB")
 Global("X3HRoundComplete","GLOBAL",2)
 THEN RESPONSE #100
 Wait(3)
-SetGlobal("X3HelQuest","GLOBAL",9)
 SetGlobal("X3HRoundComplete","GLOBAL",3)
 FadeToColor([30.0],0)
 Wait(1)

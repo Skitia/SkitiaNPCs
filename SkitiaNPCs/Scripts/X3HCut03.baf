@@ -15,6 +15,8 @@ THEN RESPONSE #100
 	FadeFromColor([30.0],0)
 	Wait(1)
 	DisplayStringHead("X3HR2M1",@981)
-	Wait(3)
+	Wait(1)
+	SetGlobal("X3HBattle","GLOBAL",1)
+	Wait(2)
 	EndCutSceneMode()
 END
