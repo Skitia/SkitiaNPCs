@@ -256,8 +256,8 @@ COPY ~%MOD_FOLDER%/Epilogue/X3VieEp.2da~ ~override/X3Vie05.2da~
 REPLACE ~99999~ @56
 
 // Journal Entries 
-ADD_JOURNAL TITLE (@0) @1 @2 @3 @4 @5 @6 @7 @8 @9 USING ~%MOD_FOLDER%/Tra/english/Vienxay_bg2.tra~ // SoA Tome Quest
-ADD_JOURNAL TITLE (@10) @11 @12 @13 @14 USING ~%MOD_FOLDER%/Tra/english/Vienxay_bg2.tra~ // ToB Sage Meeting (Affects Ending)
+ADD_JOURNAL TITLE (@50000) @50001 @50002 @50003 @50004 @50005 @50006 @50007 @50008 @50009 USING ~%MOD_FOLDER%/Tra/english/Vienxay_bg2.tra~ // SoA Tome Quest
+ADD_JOURNAL TITLE (@50010) @50011 @50012 @50013 @50014 @50016 @50017 USING ~%MOD_FOLDER%/Tra/english/Vienxay_bg2.tra~ // ToB Sage Meeting (Affects Ending)
 
 	// Items 
 // ITEMS

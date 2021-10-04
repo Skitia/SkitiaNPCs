@@ -170,7 +170,7 @@ REPLACE ~99999~ @56
 
 
  // Journal Entries 
-ADD_JOURNAL TITLE (@1) @2 @3 @4 @5 @6 @7 @8 @9 @10 @11 @12 @13 @14 @15 @16 @17 @18 @19 @20 @21 USING ~%MOD_FOLDER%/Tra/english/Emily_bg2.tra~ // To Be Heir
+ADD_JOURNAL TITLE (@10001) @10002 @10003 @10004 @10005 @10006 @10007 @10008 @10009 @10010 @10011 @10012 @10013 @10014 @10015 @10016 @10017 @10018 @10019 @10020 @10021 USING ~%MOD_FOLDER%/Tra/english/Emily_bg2.tra~ // To Be Heir
 // Emily's Encounter with the Tethyrians in ToB has no quest associated with it.
   
   

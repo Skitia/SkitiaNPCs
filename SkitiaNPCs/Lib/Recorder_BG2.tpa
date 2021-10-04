@@ -315,8 +315,8 @@ COPY ~%MOD_FOLDER%/Epilogue/X3RebEp.2da~ ~override/X3Reb05.2da~
 REPLACE ~99999~ @57
 
 // Journal Entries 
-ADD_JOURNAL TITLE (@3) @4 @5 @6 @7 USING ~%MOD_FOLDER%/Tra/english/Recorder_bg2.tra~ // The Remover Quest
-ADD_JOURNAL TITLE (@8) @9 @10 @11 @12 @13 @14 USING ~%MOD_FOLDER%/Tra/english/Recorder_bg2.tra~ // Phelgrim
+ADD_JOURNAL TITLE (@40003) @40004 @40005 @40006 @40007 USING ~%MOD_FOLDER%/Tra/english/Recorder_bg2.tra~ // The Remover Quest
+ADD_JOURNAL TITLE (@40008) @40009 @40010 @40011 @40012 @40013 @40014 USING ~%MOD_FOLDER%/Tra/english/Recorder_bg2.tra~ // Phelgrim
 
 
 
