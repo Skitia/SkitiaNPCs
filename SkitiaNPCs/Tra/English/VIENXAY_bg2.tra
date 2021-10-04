@@ -1,64 +1,76 @@
-@0 = ~The Tome of Myth Drannor~
-@1 = ~The Tome of Myth Drannor
+@50000 = ~The Tome of Myth Drannor~
+@50001 = ~The Tome of Myth Drannor
 
 Vienxay has shared her purpose for coming to Amn: She was searching for a lost tome from Myth Drannor, and was starting by looking for a sage named Sules'terim.
 She believes someone in the temple of Oghma in the Temple of District may know where he is.~
 //This is in RECORDER_bg2.tra, as it uses her mother's files.
-@2 = ~The Tome of Myth Drannor 
+@50002 = ~The Tome of Myth Drannor 
 
 Siria of the Temple of Oghma has told us that the sage Sules'terim is on an academic vacation in Imnesvale, in the Umar Hills. We may find him there.~
 
-@3 = ~The Tome of Myth Drannor 
+@50003 = ~The Tome of Myth Drannor 
 
 Sules'terim has lost his notes from a pack of wolves somewhere in the Umar Hills. He may tell us about the tome after we find them for him.~
 
-@4 = ~The Tome of Myth Drannor 
+@50004 = ~The Tome of Myth Drannor 
 
 Sules'terim told us the tale on how the tome of Myth Drannor was lost. He believes recovering it from the Underdark impossible, but if for some reason 
 we were ever able to retrieve it, he asks we return it to him.~
 
-@5 = ~The Tome of Myth Drannor 
+@50005 = ~The Tome of Myth Drannor 
 
 We found Samir, one of the members of the expedition that lost the tome of Myth Drannor. An old slave now, he claims his master has the tome, who may be in the Male Fighters' Society.~
 
-@6 = ~The Tome of Myth Drannor 
+@50006 = ~The Tome of Myth Drannor 
 
 We managed to retrieve the tome of Myth Drannor. After Vienxay quickly scoured through it, she determined that it could be used to help further one of our understanding of the weave.
 She also admitted that her people would love it returned and stored, not destroyed for its knowledge. I told her that it was best that her people have it once more, and that we will return it to Sules'terim in the Umar Hills. It is up to me now to follow through on my words.~
 
-@7 = ~The Tome of Myth Drannor 
+@50007 = ~The Tome of Myth Drannor 
 
 We managed to retrieve the tome of Myth Drannor. After Vienxay quickly scoured through it, she determined that it could be used to help further one of our understanding of the weave.
 She also admitted that her people would love it returned and stored, not destroyed for its knowledge. I told her that it was best used for ourselves. Any half-elven or elven party member can make use of it, although Vienxay strongly recommends herself.~
-@8 = ~The Tome of Myth Drannor 
+@50008 = ~The Tome of Myth Drannor 
 
 We managed to retrieve the tome of Myth Drannor. After Vienxay quickly scoured through it, she determined that it could be used to help further one of our understanding of the weave.
 She also admitted that her people would love it returned and stored, not destroyed for its knowledge. I will have to make a decision at some point to use it or give it to the Sage Sules'terim back in Umar Hills.~
 
-@9 = ~The Tome of Myth Drannor 
+@50009 = ~The Tome of Myth Drannor 
 
 We returned the Tome of Myth Drannor to Sules'terim, and he was ecstatic. He rewarded us with a Tome of Elven Grace anyone of half-elven or elven blood could absorb, and this may one day allow Vienxay an opportunity to return to her people.~
 // The below only occurs if the Tome of Myth Drannor was returned to Sules'terim, otherwise this cannot happen.
-@10 = ~Evermeet: Vienxay Redeemed~
+@50010 = ~Evermeet: Vienxay Redeemed~
 
-@11 = ~Evermeet: Vienxay Redeemed
+@50011 = ~Evermeet: Vienxay Redeemed
 
 Due to Vienxay's actions in Faerûn and for returning the tome of Myth Drannor to the Evermeet people, the sage Sules'terim informed Vienxay she was no longer exiled, and could return home immediately. I've promised to return with her when our adventures here are over.~
 
-@12 = ~Evermeet: Vienxay Redeemed
+@50012 = ~Evermeet: Vienxay Redeemed
 
 Due to Vienxay's actions in Faerûn and for returning the tome of Myth Drannor to the Evermeet people, the sage Sules'terim informed Vienxay she was no longer exiled, and could return home immediately. Vienxay declined to return because I could not join her there, and decided she would keep her path with mine.~
 
-@13 = ~Evermeet: Vienxay Redeemed
+@50013 = ~Evermeet: Vienxay Redeemed
 
-Due to Vienxay's actions in Faerûn and for returning the tome of Myth Drannor to the Evermeet people, the sage Sules'terim informed Vienxay she was no longer exiled, and could return home immediately. I let Vienxay leave the party to return home.~
+Due to Vienxay's actions in Faerûn and for returning the tome of Myth Drannor to the Evermeet people, the sage Sules'terim informed Vienxay she was no longer exiled, and could return home immediately. Vienxay took the opportunity to return to her homeland at long last. I wish her well.~
 
-@14 = ~Evermeet: Vienxay Redeemed
+@50014 = ~Evermeet: Vienxay Redeemed
 
 Due to Vienxay's actions in Faerûn and for returning the tome of Myth Drannor to the Evermeet people, the sage Sules'terim informed Vienxay she was no longer exiled, and could return home immediately. Vienxay declined to return immediately, instead choosing to wait until our adventure here was over, and then sail home when it has concluded.~
 
-@15 = ~Vienxay reluctantly admitted she could scry Berk, as long as she had a scrying crystal and was in the pocket plane. We should keep an eye out for any jewelers.~
-@19 = ~Vienxay scried Berk and mentioned he was dead. We could tell Helga the truth or lie to her.~
+@50016 = ~Evermeet: Vienxay Redeemed
+
+Due to Vienxay's actions in Faerûn and for returning the tome of Myth Drannor to the Evermeet people, the sage Sules'terim informed Vienxay she was no longer exiled, and could return home immediately. Vienxay declined to return immediately, instead choosing to wait until our adventure here was over to decide.~
+
+@50017 = ~Evermeet: Vienxay Redeemed
+
+Due to Vienxay's actions in Faerûn and for returning the tome of Myth Drannor to the Evermeet people, the sage Sules'terim informed Vienxay she was no longer exiled, but I pushed her to go anyway, not wanting her to choose love over never seeing her home and family again. I will miss her dearly.~
+
+
+
+@20015 = ~Helga's son
+Vienxay reluctantly admitted she could scry Berk, as long as she had a scrying crystal and was in the pocket plane. We should keep an eye out for any jewelers.~
+@20019 = ~Helga's son
+Vienxay scried Berk and mentioned he was dead. We could tell Helga the truth or lie to her.~
 
 //Epilogues 
 @51 = ~Parting with <CHARNAME> brought Vienxay a sense of loneliness, and she set out to find herself an apprentice to convince to join her on her travels. But instead, they sought her, prospective mages of all races fascinated by her prowess in magic art and illusion both. Her apprentices became of such a great number that she went on to form a mages guild of some power and influence in Amn that even the Cowled Wizards feared. 
@@ -79,38 +91,38 @@ spend her time mentoring young mages eager to learn from her mastery of illusion
 @56 = ~Vienxay immediately knew loneliness upon <CHARNAME>'s ascension, and with no other path to go, she set out to return to her homeland of Evermeet. For a time, she found joy, embracing the family she had thought she would never see again, and traveling amongst the trees and cities she had thought of every day in her banishment. But while Evermeet had not changed, it lacked the face that Vienxay had come to hold dearest.
 She would bid farewell to them all and travel the realms, mentoring mages across the realms and even of high courts and homes through the lessons she had learned by <CHARNAME>'s side. Eventually she would go on to found a school of magic in Baldur's Gate, at least until she caused such a scandal amongst the nobility they demanded her departure. Some elves they say, are just awful. Vienxay would always be one of them, but she would never forget the <PRO_MANWOMAN> that made her slightly less so.~
 
-@99 = ~^0xFFFF00FFYou have established a deep bond with Vienxay. Your synergy has improved her capabilities.^-~
+@50099 = ~^0xFFFF00FFYou have established a deep bond with Vienxay. Your synergy has improved her capabilities.^-~
 
-@103 = ~^REmily slightly disapproves.^-~
-@106 = ~^REmily disapproves.^-~
-@109 = ~^REmily greatly disapproves.^-~
-@113 = ~^GEmily slightly approves^-~
-@116 = ~^GEmily approves^-~
-@119 = ~^GEmily greatly approves^-~
-@203 = ~^RHelga slightly disapproves.^-~
-@206 = ~^RHelga disapproves.^-~
-@209 = ~^RHelga greatly disapproves.^-~
-@213 = ~^GHelga slightly approves^-~
-@216 = ~^GHelga approves^-~
-@219 = ~^GHelga greatly approves^-~
-@303 = ~^RKale slightly disapproves.^-~
-@306 = ~^RKale disapproves.^-~
-@309 = ~^RKale greatly disapproves.^-~
-@313 = ~^GKale slightly approves^-~
-@316 = ~^GKale approves^-~
-@319 = ~^GKale greatly approves^-~
-@403 = ~^RRecorder slightly disapproves.^-~
-@406 = ~^RRecorder disapproves.^-~
-@409 = ~^RRecorder greatly disapproves.^-~
-@413 = ~^GRecorder slightly approves^-~
-@416 = ~^GRecorder approves^-~
-@419 = ~^GRecorder greatly approves^-~
-@503 = ~^RVienxay slightly disapproves.^-~
-@506 = ~^RVienxay disapproves.^-~
-@509 = ~^RVienxay greatly disapproves.^-~
-@513 = ~^GVienxay slightly approves^-~
-@516 = ~^GVienxay approves^-~
-@519 = ~^GVienxay greatly approves^-~
+@100103  = ~^REmily slightly disapproves.^-~
+@100106  = ~^REmily disapproves.^-~
+@100109  = ~^REmily greatly disapproves.^-~
+@100113  = ~^GEmily slightly approves^-~
+@100116  = ~^GEmily approves^-~
+@100119  = ~^GEmily greatly approves^-~
+@200203  = ~^RHelga slightly disapproves.^-~
+@200206  = ~^RHelga disapproves.^-~
+@200209  = ~^RHelga greatly disapproves.^-~
+@200213  = ~^GHelga slightly approves^-~
+@200216  = ~^GHelga approves^-~
+@200219  = ~^GHelga greatly approves^-~
+@300303  = ~^RKale slightly disapproves.^-~
+@300306  = ~^RKale disapproves.^-~
+@300309  = ~^RKale greatly disapproves.^-~
+@300313  = ~^GKale slightly approves^-~
+@300316  = ~^GKale approves^-~
+@300319  = ~^GKale greatly approves^-~
+@400403  = ~^RRecorder slightly disapproves.^-~
+@400406  = ~^RRecorder disapproves.^-~
+@400409  = ~^RRecorder greatly disapproves.^-~
+@400413  = ~^GRecorder slightly approves^-~
+@400416  = ~^GRecorder approves^-~
+@400419  = ~^GRecorder greatly approves^-~
+@500503  = ~^RVienxay slightly disapproves.^-~
+@500506  = ~^RVienxay disapproves.^-~
+@500509  = ~^RVienxay greatly disapproves.^-~
+@500513  = ~^GVienxay slightly approves^-~
+@500516  = ~^GVienxay approves^-~
+@500519  = ~^GVienxay greatly approves^-~
 
 @862  = ~shadowmage~
 @863  = ~Shadowmage~

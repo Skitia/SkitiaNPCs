@@ -27,11 +27,11 @@ The priestess Siria of Oghma has agreed to study the cheese we gave her. She nee
 Siria has revealed to us that the cheese is Spring Luiren Cheese, a drug that weakens the mind and body of halflings. It was also laced with rat poison.
 I could take this information to question the suspects again if they are agreeable to talk if I haven't already, before returning to Jillian.~
 
-@31 = ~The Final Battle with Bodhi.
+@30031 = ~The Final Battle with Bodhi.
 
 Bodhi appeared in an ambush shortly before I reached her haven, warning me that she was aware of my pursuit and stealing from me the one person that is dearest to my heart: Kale.  Before she vanished and unleashed more of her undead creations upon me, Bodhi warned me that if I continue I will lose even more than I thought possible.  I cannot give up on the Rhynn Lanthorn... but now the life and immortal soul of the one I love is at stake, as well!~
 
-@32 = ~The Final Battle with Bodhi.
+@30032 = ~The Final Battle with Bodhi.
 
 While I had feared for some time that Bodhi's final revenge on me would be to take away Kale forever, it seems that the information in the lorebook was right... Amaunator's idol has restored Kale not only to life, but has removed the vampiric curse from him, as well.~
 
@@ -53,38 +53,38 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @55 = ~When <CHARNAME> ascended, Kale became disillusioned. Destiny, it seemed to him, was a fixed affair, but what was his purpose? He ventured to Gullykin, to retirement, ignoring the calls of neighbors eager to see the great hero and only departing to take care of his mother's needs. It was one such year however, that the village came under threat of a warlord eager to repeat the history of Meiritin. Standing alone against the marchers of malicious men, Kale battled them back on his own strength, rallying his people to crush the would be conquerors using all the lessons he had learned while in <CHARNAME>'s company to keep himself and his kin alive.
  The battle's conclusion reignited his faith in himself, and he became a guardian of Gullykin and eventually its mayor, his first act to building a statue to his beloved, who even as a god, would always be his eternal source of inspiration.~
 
-@99 = ~^0xFFFF00FFYou have established a deep bond with Kale. Your synergy has improved his capabilities.^-~
+@30099 = ~^0xFFFF00FFYou have established a deep bond with Kale. Your synergy has improved his capabilities.^-~
 
-@103 = ~^REmily slightly disapproves.^-~
-@106 = ~^REmily disapproves.^-~
-@109 = ~^REmily greatly disapproves.^-~
-@113 = ~^GEmily slightly approves^-~
-@116 = ~^GEmily approves^-~
-@119 = ~^GEmily greatly approves^-~
-@203 = ~^RHelga slightly disapproves.^-~
-@206 = ~^RHelga disapproves.^-~
-@209 = ~^RHelga greatly disapproves.^-~
-@213 = ~^GHelga slightly approves^-~
-@216 = ~^GHelga approves^-~
-@219 = ~^GHelga greatly approves^-~
-@303 = ~^RKale slightly disapproves.^-~
-@306 = ~^RKale disapproves.^-~
-@309 = ~^RKale greatly disapproves.^-~
-@313 = ~^GKale slightly approves^-~
-@316 = ~^GKale approves^-~
-@319 = ~^GKale greatly approves^-~
-@403 = ~^RRecorder slightly disapproves.^-~
-@406 = ~^RRecorder disapproves.^-~
-@409 = ~^RRecorder greatly disapproves.^-~
-@413 = ~^GRecorder slightly approves^-~
-@416 = ~^GRecorder approves^-~
-@419 = ~^GRecorder greatly approves^-~
-@503 = ~^RVienxay slightly disapproves.^-~
-@506 = ~^RVienxay disapproves.^-~
-@509 = ~^RVienxay greatly disapproves.^-~
-@513 = ~^GVienxay slightly approves^-~
-@516 = ~^GVienxay approves^-~
-@519 = ~^GVienxay greatly approves^-~
+@100103  = ~^REmily slightly disapproves.^-~
+@100106  = ~^REmily disapproves.^-~
+@100109  = ~^REmily greatly disapproves.^-~
+@100113  = ~^GEmily slightly approves^-~
+@100116  = ~^GEmily approves^-~
+@100119  = ~^GEmily greatly approves^-~
+@200203  = ~^RHelga slightly disapproves.^-~
+@200206  = ~^RHelga disapproves.^-~
+@200209  = ~^RHelga greatly disapproves.^-~
+@200213  = ~^GHelga slightly approves^-~
+@200216  = ~^GHelga approves^-~
+@200219  = ~^GHelga greatly approves^-~
+@300303  = ~^RKale slightly disapproves.^-~
+@300306  = ~^RKale disapproves.^-~
+@300309  = ~^RKale greatly disapproves.^-~
+@300313  = ~^GKale slightly approves^-~
+@300316  = ~^GKale approves^-~
+@300319  = ~^GKale greatly approves^-~
+@400403  = ~^RRecorder slightly disapproves.^-~
+@400406  = ~^RRecorder disapproves.^-~
+@400409  = ~^RRecorder greatly disapproves.^-~
+@400413  = ~^GRecorder slightly approves^-~
+@400416  = ~^GRecorder approves^-~
+@400419  = ~^GRecorder greatly approves^-~
+@500503  = ~^RVienxay slightly disapproves.^-~
+@500506  = ~^RVienxay disapproves.^-~
+@500509  = ~^RVienxay greatly disapproves.^-~
+@500513  = ~^GVienxay slightly approves^-~
+@500516  = ~^GVienxay approves^-~
+@500519  = ~^GVienxay greatly approves^-~
 
 @711  = ~warden~
 @712  = ~Warden~

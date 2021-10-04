@@ -7,61 +7,63 @@ The priestess Siria of Oghma has agreed to study the cheese we gave her. She nee
 Siria has revealed to us that the cheese is Spring Luiren Cheese, a drug that weakens the mind and body of halflings. It was also laced with rat poison.
 I could take this information to question the suspects again if they are agreeable to talk if I haven't already, before returning to Jillian.~
 
-@2 = ~The Tome of Myth Drannor 
+@50002 = ~The Tome of Myth Drannor 
 
 Siria of the Temple of Oghma has told us that the sage Sules'terim is on an academic vacation in Imnesvale, in the Umar Hills. We may find him there.~
 
-@3 = ~Hunted~
-@4 = ~Hunted
+@40003 = ~Hunted~
+@40004 = ~Hunted
 We were approached and attacked by some Bounty Hunters. What they want with me remains unclear.~
-@5 = ~Hunted 
+@40005 = ~Hunted 
 It's clear now after another attack from bounty hunters that they are after Recorder. A Remover appears to be responsible for sending them. 
 If we want to put a stop to this, we should confront the Remover.~
-@6 = ~Hunted 
+@40006 = ~Hunted 
 We confronted the Remover. He's confidently stated that while he has no further men to bring upon us, that Recorder's Husband, a gnome named Phelgrim who is the one who hired him to hunting her, always gets his way.
 We will have to learn more of this from Recorder, but at least the hunt on us has ended, for now.~
-@7 = ~Hunted 
+@40007 = ~Hunted 
 We've confronted the Remover. However, we've learned that he was hired by Recorder's husband. While the problem may be over for now, Recorder still owes us answers.~
-@8 = ~Phelgrim~
-@9 = ~Phelgrim 
+@40008 = ~Phelgrim~
+@40009 = ~Phelgrim 
 Recorder has warned us that she may attract trouble with pirates and slavers on Brynnlaw that could be working for Phelgrim.
 We should take care during our stay, or if an opportunity arises to learn where he is, confront him once and for all.~
-@10 = ~Phelgrim
+@40010 = ~Phelgrim
 We've learned that Phelgrim is a guest of Desharik, and that Recorder's son is still alive. If we can find a way in his manor, we could confront him.~
-@11 = ~Phelgrim 
+@40011 = ~Phelgrim 
 We've spoken with Phelgrim. With no interest in helping Recorder and complete focus on getting into spellhold, I took his offer to get me inside as a deviant.~
-@12 = ~Phelgrim 
+@40012 = ~Phelgrim 
 Phelgrim's henchman whisked away Recorder's son. Recorder was naturally grieved about the fact she may never see him again.~
-@13 = ~Phelgrim 
+@40013 = ~Phelgrim 
 We've managed to best Phelgrim and keep Recorder's boy from being taken. All that remains is finding him a way off. There may be someone in Brynnlaw that could help us.~
-@14 = ~Phelgrim 
+@40014 = ~Phelgrim 
 We've paid Calahan to help get Recorder's son, Raban off of Brynnlaw. All that remains is telling him the good news.~
-@15 = ~Phelgrim 
+@40015 = ~Phelgrim 
 We've informed Raban that Calahan will provide him harbor to Ulgoth's Beard. His parting with Recorder was sad to see, but one day they may be reunited again.~
 
-@16 = ~We've run into a slaver mage who had helped keep Recorder's son from her. Unfortunately there was no way to get her son from him. Perhaps one day she may be able to find him again, but for our adventures, he appears out of reach.~
+@40016 = ~We've run into a slaver mage who had helped keep Recorder's son from her. Unfortunately there was no way to get her son from him. Perhaps one day she may be able to find him again, but for our adventures, he appears out of reach.~
 
-@19 = ~Recorder mentioned she could indeed scry Berk, but she would need a scrying crystal and to be in the pocket plane. She suggested we look out for a jeweler who may possess such a thing.~
+@20019 = ~Helga's son
+Recorder mentioned she could indeed scry Berk, but she would need a scrying crystal and to be in the pocket plane. She suggested we look out for a jeweler who may possess such a thing.~
 
-@20 = ~Recorder scried Berk and mentioned he was dead. We could tell Helga the truth or lie to her.~
+@20020 = ~Helga's son
+Recorder scried Berk and mentioned he was dead. We could tell Helga the truth or lie to her.~
 //Epilogues: Non Romanced Default or Player ascended
-@31 = ~The Final Battle with Bodhi.
+@40031 = ~The Final Battle with Bodhi.
 
 Bodhi appeared in an ambush shortly before I reached her haven, warning me that she was aware of my pursuit and attempting to steal from me the one person that is dearest to my heart: Recorder. However, Recorder chose to take her own life rather than be a vampire under Bodhi's influence. Before she vanished and unleashed more of her undead creations upon me, Bodhi stole Recorder's body and warned me that if I continue I will lose even more than I thought possible.  I cannot give up on the Rhynn Lanthorn... but now the life and immortal soul of the one I love is at stake, as well!~
 
-@32 = ~The Final Battle with Bodhi.
+@40032 = ~The Final Battle with Bodhi.
 
 While I defeated Bodhi, it seems that she has succeeded in exacting one final revenge on me by taking away Recorder forever... whatever Recorder did to prevent herself from being turned has also rendered any means of restoring her to life ineffective. I have no power to do anything, but perhaps her colleagues in the temple of Oghma could help us.~
 
-@33 = ~The Final Battle with Bodhi.
+@40033 = ~The Final Battle with Bodhi.
 
 It appears Recorder transferred her own soul into Gustav, her ferret. The Temple of Oghma suggests that a purple iolite and an altar in the North Forest can separate her from her animal and back into her body. However, the only purple iolite the church was expecting was lost in the Small Teeth's pass.~
 
-@34 = ~The Final Battle with Bodhi. 
+@40034 = ~The Final Battle with Bodhi. 
 
 We've recovered a purple iolite. We can take this to an altar in the North Forest to try to recover Recorder.~
 
-@35 = ~Miraculously, the gem and altar worked and Recorder with myself once more! Recorder seems shaken by her experience with death, though quite grateful for her return.~
+@40035 = ~Miraculously, the gem and altar worked and Recorder with myself once more! Recorder seems shaken by her experience with death, though quite grateful for her return.~
 
 @51 = ~The recording of the tale of <CHARNAME> was not the end of Recorder's own story. For years, she would restlessly scour the realms, seeking the whereabouts of her lost son, Raban. She traveled from city to city, from pirate den to slaver hide out, hoping the next slave she freed held the face of her child.  
 She stumbled upon a small group of children taken captive in Sembia in one of her searches, and realized they had no family to return to. She took them back to her own home, and taught them to read and write, to play music, and the life lessons she had learned through the journey she had recorded so intimately in her travels with <CHARNAME>. Raising them gave her a gift, a joy of motherhood she had thought all but lost forever. 
@@ -89,38 +91,38 @@ But no inn nor promising plea of curious bard could keep her from her destinatio
 
 //Romance: 
 //Max Approval Bonus Message 
-@99 = ~^0xFFFF00FFYou have established a deep bond with Recorder. Your synergy has improved her capabilities.^-~
+@40099 = ~^0xFFFF00FFYou have established a deep bond with Recorder. Your synergy has improved her capabilities.^-~
 //Approval Messages 
-@103 = ~^REmily slightly disapproves.^-~
-@106 = ~^REmily disapproves.^-~
-@109 = ~^REmily greatly disapproves.^-~
-@113 = ~^GEmily slightly approves^-~
-@116 = ~^GEmily approves^-~
-@119 = ~^GEmily greatly approves^-~
-@203 = ~^RHelga slightly disapproves.^-~
-@206 = ~^RHelga disapproves.^-~
-@209 = ~^RHelga greatly disapproves.^-~
-@213 = ~^GHelga slightly approves^-~
-@216 = ~^GHelga approves^-~
-@219 = ~^GHelga greatly approves^-~
-@303 = ~^RKale slightly disapproves.^-~
-@306 = ~^RKale disapproves.^-~
-@309 = ~^RKale greatly disapproves.^-~
-@313 = ~^GKale slightly approves^-~
-@316 = ~^GKale approves^-~
-@319 = ~^GKale greatly approves^-~
-@403 = ~^RRecorder slightly disapproves.^-~
-@406 = ~^RRecorder disapproves.^-~
-@409 = ~^RRecorder greatly disapproves.^-~
-@413 = ~^GRecorder slightly approves^-~
-@416 = ~^GRecorder approves^-~
-@419 = ~^GRecorder greatly approves^-~
-@503 = ~^RVienxay slightly disapproves.^-~
-@506 = ~^RVienxay disapproves.^-~
-@509 = ~^RVienxay greatly disapproves.^-~
-@513 = ~^GVienxay slightly approves^-~
-@516 = ~^GVienxay approves^-~
-@519 = ~^GVienxay greatly approves^-~
+@100103  = ~^REmily slightly disapproves.^-~
+@100106  = ~^REmily disapproves.^-~
+@100109  = ~^REmily greatly disapproves.^-~
+@100113  = ~^GEmily slightly approves^-~
+@100116  = ~^GEmily approves^-~
+@100119  = ~^GEmily greatly approves^-~
+@200203  = ~^RHelga slightly disapproves.^-~
+@200206  = ~^RHelga disapproves.^-~
+@200209  = ~^RHelga greatly disapproves.^-~
+@200213  = ~^GHelga slightly approves^-~
+@200216  = ~^GHelga approves^-~
+@200219  = ~^GHelga greatly approves^-~
+@300303  = ~^RKale slightly disapproves.^-~
+@300306  = ~^RKale disapproves.^-~
+@300309  = ~^RKale greatly disapproves.^-~
+@300313  = ~^GKale slightly approves^-~
+@300316  = ~^GKale approves^-~
+@300319  = ~^GKale greatly approves^-~
+@400403  = ~^RRecorder slightly disapproves.^-~
+@400406  = ~^RRecorder disapproves.^-~
+@400409  = ~^RRecorder greatly disapproves.^-~
+@400413  = ~^GRecorder slightly approves^-~
+@400416  = ~^GRecorder approves^-~
+@400419  = ~^GRecorder greatly approves^-~
+@500503  = ~^RVienxay slightly disapproves.^-~
+@500506  = ~^RVienxay disapproves.^-~
+@500509  = ~^RVienxay greatly disapproves.^-~
+@500513  = ~^GVienxay slightly approves^-~
+@500516  = ~^GVienxay approves^-~
+@500519  = ~^GVienxay greatly approves^-~
 
 @776  = ~lorekeeper~
 @777  = ~Lorekeeper~

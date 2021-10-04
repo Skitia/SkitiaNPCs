@@ -1,32 +1,32 @@
-@1 = ~To Be Heir~
-@2 = ~Emily informed us that she needs to speak with two nobles, Charmaine Hornkeeper and Gregory Von Jurgenson, for their support to be the heir of her noble family and the successor of the estate and its responsibilities.
+@10001 = ~To Be Heir~
+@10002 = ~Emily informed us that she needs to speak with two nobles, Charmaine Hornkeeper and Gregory Von Jurgenson, for their support to be the heir of her noble family and the successor of the estate and its responsibilities.
 Lady Hornkeeper can be found in the Radiant's Halls in the Temple District, while Gregory Von Jurgenson can be found in the Government District in the Jysstev Family Residence.~
-@3 = ~Lady Hornkeeper informed us that she would not support us unless we had more prestige. If we can increase our reputation, and thus our standing with the populace, we may be able to gain her support for Emily's cause.~
-@4 = ~Lady Hornkeeper has given us her support for the coming selection of Heir.~
-@5 = ~Lord Jurgenson has asked us to resolve a dispute between two merchants. We can find them north of the state, near a large fountain in the government district.~
-@6 = ~We were unable to resolve the dilemma between Myron and Derrick, with Myron quitting business with the Jurgenson estate. We should inform Lord Jurgenson of the bad news.~
-@7 = ~We were unable to resolve the dilemma between Myron and Derrick, with Derrick quitting business with the Jurgenson estate. We should inform Lord Jurgenson of the bad news.~
-@8 = ~We were able to resolve the dilemma between Myron and Derrick. We should inform Lord Jurgenson of the good news.~
-@9 = ~Lord Jurgenson was pleased with the results of the test he gave us and has pledged Emily his support.~
-@10 = ~Lord Jurgenson, as expected, decided to put his support behind Emily's brother, Thomas, after we failed the test he gave us.~
-@11 = ~A messenger has informed Emily that her father's announcement for heir is taking place in the Mithrest inn very soon. We agreed that we would head there as soon as possible.~
-@12 = ~A messenger has informed Emily that her father's announcement for heir is taking place in the Mithrest inn very soon. We could not go with her, and wished her luck.~
-@13 = ~Emily left our party, after we took too long to head to the Mithrest inn for her father's announcement of heir. We could perhaps head there later if we still need her to see how the outcome played out.~
-@14 = ~Emily's brother ultimately had more support than Emily in the bid to be heir and became the leader of House Castilla. His first act was to remove Emily as a house member, separating her from her name forever.~
-@15 = ~There was a draw in the support to be heir, and before Emily's father could announce his choice, Thomas has called on Emily to duel him, claiming old rights to be able to challenge for succession by combat. We must head to the Copper Coronet for the duel, and the end of this conflict.~
-@16 = ~Emily died and lost the duel with Thomas, who is now the leader of House Castilla.~
-@17 = ~We defeated Thomas during the duel with him in the pit, and decided to take his life as per his own wishes. Emily is now indisputably heir and will lead her family when her time with us is over.~
-@18 = ~We defeated Thomas during the duel with him in the pit, and decided to spare his life against his own wishes. He wished us well and Emily a good leadership. She will lead her family when her time with us is over.~
-@19 = ~Emily defeated Thomas during the duel with him in the pit and spared his life. She is now indisputably heir and will lead her family when her time with us is over.~
-@20 = ~Emily had more support than Thomas and was named heir to her family. She will lead her family when her time with us is over.~
+@10003 = ~Lady Hornkeeper informed us that she would not support us unless we had more prestige. If we can increase our reputation, and thus our standing with the populace, we may be able to gain her support for Emily's cause.~
+@10004 = ~Lady Hornkeeper has given us her support for the coming selection of Heir.~
+@10005 = ~Lord Jurgenson has asked us to resolve a dispute between two merchants. We can find them north of the state, near a large fountain in the government district.~
+@10006 = ~We were unable to resolve the dilemma between Myron and Derrick, with Myron quitting business with the Jurgenson estate. We should inform Lord Jurgenson of the bad news.~
+@10007 = ~We were unable to resolve the dilemma between Myron and Derrick, with Derrick quitting business with the Jurgenson estate. We should inform Lord Jurgenson of the bad news.~
+@10008 = ~We were able to resolve the dilemma between Myron and Derrick. We should inform Lord Jurgenson of the good news.~
+@10009 = ~Lord Jurgenson was pleased with the results of the test he gave us and has pledged Emily his support.~
+@10010 = ~Lord Jurgenson, as expected, decided to put his support behind Emily's brother, Thomas, after we failed the test he gave us.~
+@10011 = ~A messenger has informed Emily that her father's announcement for heir is taking place in the Mithrest inn very soon. We agreed that we would head there as soon as possible.~
+@10012 = ~A messenger has informed Emily that her father's announcement for heir is taking place in the Mithrest inn very soon. We could not go with her, and wished her luck.~
+@10013 = ~Emily left our party, after we took too long to head to the Mithrest inn for her father's announcement of heir. We could perhaps head there later if we still need her to see how the outcome played out.~
+@10014 = ~Emily's brother ultimately had more support than Emily in the bid to be heir and became the leader of House Castilla. His first act was to remove Emily as a house member, separating her from her name forever.~
+@10015 = ~There was a draw in the support to be heir, and before Emily's father could announce his choice, Thomas has called on Emily to duel him, claiming old rights to be able to challenge for succession by combat. We must head to the Copper Coronet for the duel, and the end of this conflict.~
+@10016 = ~Emily died and lost the duel with Thomas, who is now the leader of House Castilla.~
+@10017 = ~We defeated Thomas during the duel with him in the pit, and decided to take his life as per his own wishes. Emily is now indisputably heir and will lead her family when her time with us is over.~
+@10018 = ~We defeated Thomas during the duel with him in the pit, and decided to spare his life against his own wishes. He wished us well and Emily a good leadership. She will lead her family when her time with us is over.~
+@10019 = ~Emily defeated Thomas during the duel with him in the pit and spared his life. She is now indisputably heir and will lead her family when her time with us is over.~
+@10020 = ~Emily had more support than Thomas and was named heir to her family. She will lead her family when her time with us is over.~
 // Extra for the player that wonders what happens if you attack Thomas before the duel is started. 
-@21 = ~Attacking Thomas at the announcement was foolish. Whatever chance Emily had to lead her house is now gone.~
+@10021 = ~Attacking Thomas at the announcement was foolish. Whatever chance Emily had to lead her house is now gone.~
 //Bodhi Encounter 
-@31 = ~The Final Battle with Bodhi.
+@10031 = ~The Final Battle with Bodhi.
 
 Bodhi appeared in an ambush shortly before I reached her haven, warning me that she was aware of my pursuit and stealing from me the one person that is dearest to my heart: Emily.  Before she vanished and unleashed more of her undead creations upon me, Bodhi warned me that if I continue I will lose even more than I thought possible.  I cannot give up on the Rhynn Lanthorn... but now the life and immortal soul of the one I love is at stake, as well!~
 
-@32 = ~The Final Battle with Bodhi.
+@10032 = ~The Final Battle with Bodhi.
 
 It appears Bodhi was unable to convert Emily into vampirism thanks to her aasimar lineage, though Emily was still nearly killed in the effort. Some healing and rest will see to her full recovery.~
 
@@ -50,38 +50,38 @@ It appears Bodhi was unable to convert Emily into vampirism thanks to her aasima
  to immortalize her love and treasured memory of them for all time.~
 
 
-@99 = ~^0xFFFF00FFYou have established a deep bond with Emily. Your synergy has improved her capabilities.^-~
+@10099 = ~^0xFFFF00FFYou have established a deep bond with Emily. Your synergy has improved her capabilities.^-~
 
-@103 = ~^REmily slightly disapproves.^-~
-@106 = ~^REmily disapproves.^-~
-@109 = ~^REmily greatly disapproves.^-~
-@113 = ~^GEmily slightly approves^-~
-@116 = ~^GEmily approves^-~
-@119 = ~^GEmily greatly approves^-~
-@203 = ~^RHelga slightly disapproves.^-~
-@206 = ~^RHelga disapproves.^-~
-@209 = ~^RHelga greatly disapproves.^-~
-@213 = ~^GHelga slightly approves^-~
-@216 = ~^GHelga approves^-~
-@219 = ~^GHelga greatly approves^-~
-@303 = ~^RKale slightly disapproves.^-~
-@306 = ~^RKale disapproves.^-~
-@309 = ~^RKale greatly disapproves.^-~
-@313 = ~^GKale slightly approves^-~
-@316 = ~^GKale approves^-~
-@319 = ~^GKale greatly approves^-~
-@403 = ~^RRecorder slightly disapproves.^-~
-@406 = ~^RRecorder disapproves.^-~
-@409 = ~^RRecorder greatly disapproves.^-~
-@413 = ~^GRecorder slightly approves^-~
-@416 = ~^GRecorder approves^-~
-@419 = ~^GRecorder greatly approves^-~
-@503 = ~^RVienxay slightly disapproves.^-~
-@506 = ~^RVienxay disapproves.^-~
-@509 = ~^RVienxay greatly disapproves.^-~
-@513 = ~^GVienxay slightly approves^-~
-@516 = ~^GVienxay approves^-~
-@519 = ~^GVienxay greatly approves^-~
+@100103  = ~^REmily slightly disapproves.^-~
+@100106  = ~^REmily disapproves.^-~
+@100109  = ~^REmily greatly disapproves.^-~
+@100113  = ~^GEmily slightly approves^-~
+@100116  = ~^GEmily approves^-~
+@100119  = ~^GEmily greatly approves^-~
+@200203  = ~^RHelga slightly disapproves.^-~
+@200206  = ~^RHelga disapproves.^-~
+@200209  = ~^RHelga greatly disapproves.^-~
+@200213  = ~^GHelga slightly approves^-~
+@200216  = ~^GHelga approves^-~
+@200219  = ~^GHelga greatly approves^-~
+@300303  = ~^RKale slightly disapproves.^-~
+@300306  = ~^RKale disapproves.^-~
+@300309  = ~^RKale greatly disapproves.^-~
+@300313  = ~^GKale slightly approves^-~
+@300316  = ~^GKale approves^-~
+@300319  = ~^GKale greatly approves^-~
+@400403  = ~^RRecorder slightly disapproves.^-~
+@400406  = ~^RRecorder disapproves.^-~
+@400409  = ~^RRecorder greatly disapproves.^-~
+@400413  = ~^GRecorder slightly approves^-~
+@400416  = ~^GRecorder approves^-~
+@400419  = ~^GRecorder greatly approves^-~
+@500503  = ~^RVienxay slightly disapproves.^-~
+@500506  = ~^RVienxay disapproves.^-~
+@500509  = ~^RVienxay greatly disapproves.^-~
+@500513  = ~^GVienxay slightly approves^-~
+@500516  = ~^GVienxay approves^-~
+@500519  = ~^GVienxay greatly approves^-~
 
 @520  = ~aasimar~
 @521  = ~Aasimar~
