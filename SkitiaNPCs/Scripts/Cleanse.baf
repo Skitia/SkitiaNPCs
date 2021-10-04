@@ -1,4 +1,4 @@
-// Branwen's abduction, Amanautor's altar. Contains("O#BranB") means that there's Branwen's body inside.
+
 IF
 Contains("X3KBody",Myself)
 Global("X3CleanseVampire","AR1401",0)

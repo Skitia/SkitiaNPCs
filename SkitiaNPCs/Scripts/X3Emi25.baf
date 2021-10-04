@@ -227,45 +227,45 @@ Switch("X3EmiAppChange","GLOBAL")
 THEN RESPONSE #1
 SetGlobal("X3EmiAppChange","GLOBAL",0)
 IncrementGlobal("X3EmiApp","GLOBAL",-10)
-DisplayStringNoNameDlg(Player1,@109)
+DisplayStringNoNameDlg(Player1,@100109)
 RESPONSE #2
 SetGlobal("X3EmiAppChange","GLOBAL",0)
 IncrementGlobal("X3EmiApp","GLOBAL",-8)
-DisplayStringNoNameDlg(Player1,@109)
+DisplayStringNoNameDlg(Player1,@100109)
 RESPONSE #3
 SetGlobal("X3EmiAppChange","GLOBAL",0)
 IncrementGlobal("X3EmiApp","GLOBAL",-6)
-DisplayStringNoNameDlg(Player1,@106)
+DisplayStringNoNameDlg(Player1,@100106)
 RESPONSE #4
 SetGlobal("X3EmiAppChange","GLOBAL",0)
 IncrementGlobal("X3EmiApp","GLOBAL",-4)
-DisplayStringNoNameDlg(Player1,@106)
+DisplayStringNoNameDlg(Player1,@100106)
 RESPONSE #5
 SetGlobal("X3EmiAppChange","GLOBAL",0)
 IncrementGlobal("X3EmiApp","GLOBAL",-2)
-DisplayStringNoNameDlg(Player1,@103)
+DisplayStringNoNameDlg(Player1,@100103)
 RESPONSE #6
 SetGlobal("X3EmiAppChange","GLOBAL",0)
 RESPONSE #7
 SetGlobal("X3EmiAppChange","GLOBAL",0)
 IncrementGlobal("X3EmiApp","GLOBAL",2)
-DisplayStringNoNameDlg(Player1,@113)
+DisplayStringNoNameDlg(Player1,@100113)
 RESPONSE #8
 SetGlobal("X3EmiAppChange","GLOBAL",0)
 IncrementGlobal("X3EmiApp","GLOBAL",4)
-DisplayStringNoNameDlg(Player1,@116)
+DisplayStringNoNameDlg(Player1,@100116)
 RESPONSE #9
 SetGlobal("X3EmiAppChange","GLOBAL",0)
 IncrementGlobal("X3EmiApp","GLOBAL",6)
-DisplayStringNoNameDlg(Player1,@116)
+DisplayStringNoNameDlg(Player1,@100116)
 RESPONSE #10
 SetGlobal("X3EmiAppChange","GLOBAL",0)
 IncrementGlobal("X3EmiApp","GLOBAL",8)
-DisplayStringNoNameDlg(Player1,@119)
+DisplayStringNoNameDlg(Player1,@100119)
 RESPONSE #11
 SetGlobal("X3EmiAppChange","GLOBAL",0)
 IncrementGlobal("X3EmiApp","GLOBAL",10)
-DisplayStringNoNameDlg(Player1,@119)
+DisplayStringNoNameDlg(Player1,@100119)
 END 
 
 // If not in party, it should be reset with no approval changes. 
@@ -286,7 +286,7 @@ SetGlobal("X3EmiApp","GLOBAL",120)
 SetGlobal("X3EmiAppMaxBonus","LOCALS",1)
 ChangeStat(Myself,DEX,1,ADD)
 ChangeStat(Myself,INT,1,ADD)
-DisplayStringNoNameDlg(Player1,@99)
+DisplayStringNoNameDlg(Player1,@10099)
 RESPONSE #1 
 SetGlobal("X3EmiApp","GLOBAL",120)
 END 
@@ -311,7 +311,7 @@ InParty(Myself)
 THEN RESPONSE #100
 SetGlobal("X3GoodRepAppGain","LOCALS",1)
 IncrementGlobal("X3EmiApp","GLOBAL",6)
-DisplayStringNoNameDlg(Player1,@116)
+DisplayStringNoNameDlg(Player1,@100116)
 END
 IF
 ReputationLT(Player1,7)
@@ -320,7 +320,7 @@ InParty(Myself)
 THEN RESPONSE #100
 SetGlobal("X3BadRepAppLoss","LOCALS",1)
 IncrementGlobal("X3EmiApp","GLOBAL",-6)
-DisplayStringNoNameDlg(Player1,@106)
+DisplayStringNoNameDlg(Player1,@100106)
 END
 IF
 ReputationLT(Player1,6)
@@ -329,7 +329,7 @@ InParty(Myself)
 THEN RESPONSE #100
 SetGlobal("X3BadRepAppLoss","LOCALS",2)
 IncrementGlobal("X3EmiApp","GLOBAL",-9)
-DisplayStringNoNameDlg(Player1,@109)
+DisplayStringNoNameDlg(Player1,@100109)
 END
 IF
 ReputationLT(Player1,5)
@@ -338,7 +338,7 @@ InParty(Myself)
 THEN RESPONSE #100
 SetGlobal("X3BadRepAppLoss","LOCALS",3)
 IncrementGlobal("X3EmiApp","GLOBAL",-45)
-DisplayStringNoNameDlg(Player1,@109)
+DisplayStringNoNameDlg(Player1,@100109)
 END
 IF
 ReputationLT(Player1,4)
@@ -347,7 +347,7 @@ InParty(Myself)
 THEN RESPONSE #100
 SetGlobal("X3BadRepAppLoss","LOCALS",4)
 IncrementGlobal("X3EmiApp","GLOBAL",-45)
-DisplayStringNoNameDlg(Player1,@109)
+DisplayStringNoNameDlg(Player1,@100109)
 END
 IF
 ReputationLT(Player1,3)
@@ -356,7 +356,7 @@ InParty(Myself)
 THEN RESPONSE #100
 SetGlobal("X3BadRepAppLoss","LOCALS",5)
 IncrementGlobal("X3EmiApp","GLOBAL",-90)
-DisplayStringNoNameDlg(Player1,@109)
+DisplayStringNoNameDlg(Player1,@100109)
 END
 
 //Engagement Ring 

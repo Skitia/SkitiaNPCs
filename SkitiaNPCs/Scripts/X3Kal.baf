@@ -484,45 +484,45 @@ Switch("X3KalAppChange","GLOBAL")
 THEN RESPONSE #1
 SetGlobal("X3KalAppChange","GLOBAL",0)
 IncrementGlobal("X3KalApp","GLOBAL",-10)
-DisplayStringNoNameDlg(Player1,@309)
+DisplayStringNoNameDlg(Player1,@300309)
 RESPONSE #2
 SetGlobal("X3KalAppChange","GLOBAL",0)
 IncrementGlobal("X3KalApp","GLOBAL",-8)
-DisplayStringNoNameDlg(Player1,@309)
+DisplayStringNoNameDlg(Player1,@300309)
 RESPONSE #3
 SetGlobal("X3KalAppChange","GLOBAL",0)
 IncrementGlobal("X3KalApp","GLOBAL",-6)
-DisplayStringNoNameDlg(Player1,@306)
+DisplayStringNoNameDlg(Player1,@300306)
 RESPONSE #4
 SetGlobal("X3KalAppChange","GLOBAL",0)
 IncrementGlobal("X3KalApp","GLOBAL",-4)
-DisplayStringNoNameDlg(Player1,@306)
+DisplayStringNoNameDlg(Player1,@300306)
 RESPONSE #5
 SetGlobal("X3KalAppChange","GLOBAL",0)
 IncrementGlobal("X3KalApp","GLOBAL",-2)
-DisplayStringNoNameDlg(Player1,@303)
+DisplayStringNoNameDlg(Player1,@300303)
 RESPONSE #6
 SetGlobal("X3KalAppChange","GLOBAL",0)
 RESPONSE #7
 SetGlobal("X3KalAppChange","GLOBAL",0)
 IncrementGlobal("X3KalApp","GLOBAL",2)
-DisplayStringNoNameDlg(Player1,@313)
+DisplayStringNoNameDlg(Player1,@300313)
 RESPONSE #8
 SetGlobal("X3KalAppChange","GLOBAL",0)
 IncrementGlobal("X3KalApp","GLOBAL",4)
-DisplayStringNoNameDlg(Player1,@316)
+DisplayStringNoNameDlg(Player1,@300316)
 RESPONSE #9
 SetGlobal("X3KalAppChange","GLOBAL",0)
 IncrementGlobal("X3KalApp","GLOBAL",6)
-DisplayStringNoNameDlg(Player1,@316)
+DisplayStringNoNameDlg(Player1,@300316)
 RESPONSE #10
 SetGlobal("X3KalAppChange","GLOBAL",0)
 IncrementGlobal("X3KalApp","GLOBAL",8)
-DisplayStringNoNameDlg(Player1,@319)
+DisplayStringNoNameDlg(Player1,@300319)
 RESPONSE #11
 SetGlobal("X3KalAppChange","GLOBAL",0)
 IncrementGlobal("X3KalApp","GLOBAL",10)
-DisplayStringNoNameDlg(Player1,@319)
+DisplayStringNoNameDlg(Player1,@300319)
 END 
 
 
@@ -544,7 +544,7 @@ SetGlobal("X3KalApp","GLOBAL",100)
 SetGlobal("X3KalAppMaxBonus","GLOBAL",1)
 ChangeStat(Myself,STR,1,ADD)
 ChangeStat(Myself,CON,1,ADD)
-DisplayStringNoNameDlg(Player1,@99)
+DisplayStringNoNameDlg(Player1,@30099)
 RESPONSE #1 
 SetGlobal("X3KalApp","GLOBAL",100)
 END 
@@ -570,7 +570,7 @@ InParty(Myself)
 THEN RESPONSE #100
 SetGlobal("X3BadRepAppLoss","LOCALS",1)
 IncrementGlobal("X3KalApp","GLOBAL",-3)
-DisplayStringNoNameDlg(Player1,@303)
+DisplayStringNoNameDlg(Player1,@300303)
 END
 IF
 ReputationLT(Player1,4)
@@ -579,7 +579,7 @@ InParty(Myself)
 THEN RESPONSE #100
 SetGlobal("X3BadRepAppLoss","LOCALS",2)
 IncrementGlobal("X3KalApp","GLOBAL",-6)
-DisplayStringNoNameDlg(Player1,@306)
+DisplayStringNoNameDlg(Player1,@300306)
 END
 IF
 ReputationLT(Player1,2)
@@ -588,7 +588,7 @@ InParty(Myself)
 THEN RESPONSE #100
 SetGlobal("X3BadRepAppLoss","LOCALS",3)
 IncrementGlobal("X3KalApp","GLOBAL",-9)
-DisplayStringNoNameDlg(Player1,@309)
+DisplayStringNoNameDlg(Player1,@300309)
 END
 
 //Approval Low/In Romance: Breakup Conversation

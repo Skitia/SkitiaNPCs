@@ -23,6 +23,6 @@
 	  ActionOverride("X3ECATH",EscapeArea())	  
 	  DisplayStringHead("X3EBRO",@977)
 	  EscapeArea()
-	  AddJournalEntry(@21,QUEST_DONE) 
+	  AddJournalEntry(@10021,QUEST_DONE) 
 	  SetGlobal("X3EmiQuest","GLOBAL",10)
  END 

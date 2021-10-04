@@ -134,45 +134,45 @@ Switch("X3HelAppChange","GLOBAL")
 THEN RESPONSE #1
 SetGlobal("X3HelAppChange","GLOBAL",0)
 IncrementGlobal("X3HelApp","GLOBAL",-10)
-DisplayStringNoNameDlg(Player1,@209)
+DisplayStringNoNameDlg(Player1,@200209)
 RESPONSE #2
 SetGlobal("X3HelAppChange","GLOBAL",0)
 IncrementGlobal("X3HelApp","GLOBAL",-8)
-DisplayStringNoNameDlg(Player1,@209)
+DisplayStringNoNameDlg(Player1,@200209)
 RESPONSE #3
 SetGlobal("X3HelAppChange","GLOBAL",0)
 IncrementGlobal("X3HelApp","GLOBAL",-6)
-DisplayStringNoNameDlg(Player1,@206)
+DisplayStringNoNameDlg(Player1,@200206)
 RESPONSE #4
 SetGlobal("X3HelAppChange","GLOBAL",0)
 IncrementGlobal("X3HelApp","GLOBAL",-4)
-DisplayStringNoNameDlg(Player1,@206)
+DisplayStringNoNameDlg(Player1,@200206)
 RESPONSE #5
 SetGlobal("X3HelAppChange","GLOBAL",0)
 IncrementGlobal("X3HelApp","GLOBAL",-2)
-DisplayStringNoNameDlg(Player1,@203)
+DisplayStringNoNameDlg(Player1,@200203)
 RESPONSE #6
 SetGlobal("X3HelAppChange","GLOBAL",0)
 RESPONSE #7
 SetGlobal("X3HelAppChange","GLOBAL",0)
 IncrementGlobal("X3HelApp","GLOBAL",2)
-DisplayStringNoNameDlg(Player1,@213)
+DisplayStringNoNameDlg(Player1,@200213)
 RESPONSE #8
 SetGlobal("X3HelAppChange","GLOBAL",0)
 IncrementGlobal("X3HelApp","GLOBAL",4)
-DisplayStringNoNameDlg(Player1,@216)
+DisplayStringNoNameDlg(Player1,@200216)
 RESPONSE #9
 SetGlobal("X3HelAppChange","GLOBAL",0)
 IncrementGlobal("X3HelApp","GLOBAL",6)
-DisplayStringNoNameDlg(Player1,@216)
+DisplayStringNoNameDlg(Player1,@200216)
 RESPONSE #10
 SetGlobal("X3HelAppChange","GLOBAL",0)
 IncrementGlobal("X3HelApp","GLOBAL",8)
-DisplayStringNoNameDlg(Player1,@219)
+DisplayStringNoNameDlg(Player1,@200219)
 RESPONSE #11
 SetGlobal("X3HelAppChange","GLOBAL",0)
 IncrementGlobal("X3HelApp","GLOBAL",10)
-DisplayStringNoNameDlg(Player1,@219)
+DisplayStringNoNameDlg(Player1,@200219)
 END 
 
 // If not in party, it should be reset with no approval changes. 
@@ -193,7 +193,7 @@ SetGlobal("X3HelApp","GLOBAL",90)
 SetGlobal("X3HelAppMaxBonus","GLOBAL",1)
 ChangeStat(Myself,WIS,1,ADD)
 ChangeStat(Myself,CON,1,ADD)
-DisplayStringNoNameDlg(Player1,@99)
+DisplayStringNoNameDlg(Player1,@20099)
 RESPONSE #1 
 SetGlobal("X3HelApp","GLOBAL",90)
 END 
@@ -219,7 +219,7 @@ InParty(Myself)
 THEN RESPONSE #100
 SetGlobal("X3BadRepAppLoss","LOCALS",1)
 IncrementGlobal("X3HelApp","GLOBAL",-3)
-DisplayStringNoNameDlg(Player1,@203)
+DisplayStringNoNameDlg(Player1,@200203)
 END
 IF
 ReputationLT(Player1,4)
@@ -228,7 +228,7 @@ InParty(Myself)
 THEN RESPONSE #100
 SetGlobal("X3BadRepAppLoss","LOCALS",2)
 IncrementGlobal("X3HelApp","GLOBAL",-6)
-DisplayStringNoNameDlg(Player1,@206)
+DisplayStringNoNameDlg(Player1,@200206)
 END
 IF
 ReputationLT(Player1,2)
@@ -237,5 +237,5 @@ InParty(Myself)
 THEN RESPONSE #100
 SetGlobal("X3BadRepAppLoss","LOCALS",3)
 IncrementGlobal("X3HelApp","GLOBAL",-9)
-DisplayStringNoNameDlg(Player1,@209)
+DisplayStringNoNameDlg(Player1,@200209)
 END

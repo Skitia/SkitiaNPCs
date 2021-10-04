@@ -424,45 +424,45 @@ Switch("X3VieAppChange","GLOBAL")
 THEN RESPONSE #1
 SetGlobal("X3VieAppChange","GLOBAL",0)
 IncrementGlobal("X3VieApp","GLOBAL",-10)
-DisplayStringNoNameDlg(Player1,@509)
+DisplayStringNoNameDlg(Player1,@500509)
 RESPONSE #2
 SetGlobal("X3VieAppChange","GLOBAL",0)
 IncrementGlobal("X3VieApp","GLOBAL",-8)
-DisplayStringNoNameDlg(Player1,@509)
+DisplayStringNoNameDlg(Player1,@500509)
 RESPONSE #3
 SetGlobal("X3VieAppChange","GLOBAL",0)
 IncrementGlobal("X3VieApp","GLOBAL",-6)
-DisplayStringNoNameDlg(Player1,@506)
+DisplayStringNoNameDlg(Player1,@500506)
 RESPONSE #4
 SetGlobal("X3VieAppChange","GLOBAL",0)
 IncrementGlobal("X3VieApp","GLOBAL",-4)
-DisplayStringNoNameDlg(Player1,@506)
+DisplayStringNoNameDlg(Player1,@500506)
 RESPONSE #5
 SetGlobal("X3VieAppChange","GLOBAL",0)
 IncrementGlobal("X3VieApp","GLOBAL",-2)
-DisplayStringNoNameDlg(Player1,@503)
+DisplayStringNoNameDlg(Player1,@500503)
 RESPONSE #6
 SetGlobal("X3VieAppChange","GLOBAL",0)
 RESPONSE #7
 SetGlobal("X3VieAppChange","GLOBAL",0)
 IncrementGlobal("X3VieApp","GLOBAL",2)
-DisplayStringNoNameDlg(Player1,@513)
+DisplayStringNoNameDlg(Player1,@500513)
 RESPONSE #8
 SetGlobal("X3VieAppChange","GLOBAL",0)
 IncrementGlobal("X3VieApp","GLOBAL",4)
-DisplayStringNoNameDlg(Player1,@516)
+DisplayStringNoNameDlg(Player1,@500516)
 RESPONSE #9
 SetGlobal("X3VieAppChange","GLOBAL",0)
 IncrementGlobal("X3VieApp","GLOBAL",6)
-DisplayStringNoNameDlg(Player1,@516)
+DisplayStringNoNameDlg(Player1,@500516)
 RESPONSE #10
 SetGlobal("X3VieAppChange","GLOBAL",0)
 IncrementGlobal("X3VieApp","GLOBAL",8)
-DisplayStringNoNameDlg(Player1,@519)
+DisplayStringNoNameDlg(Player1,@500519)
 RESPONSE #11
 SetGlobal("X3VieAppChange","GLOBAL",0)
 IncrementGlobal("X3VieApp","GLOBAL",10)
-DisplayStringNoNameDlg(Player1,@519)
+DisplayStringNoNameDlg(Player1,@500519)
 END 
 
 // If not in party, it should be reset with no approval changes. 
@@ -484,7 +484,7 @@ SetGlobal("X3VieApp","GLOBAL",100)
 SetGlobal("X3VieAppMaxBonus","GLOBAL",1)
 ChangeStat(Myself,DEX,1,ADD)
 ChangeStat(Myself,STR,1,ADD)
-DisplayStringNoNameDlg(Player1,@99)
+DisplayStringNoNameDlg(Player1,@50099)
 RESPONSE #1 
 SetGlobal("X3VieApp","GLOBAL",100)
 END 

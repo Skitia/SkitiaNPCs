@@ -3,7 +3,7 @@ IF
   True()
 THEN
   RESPONSE #100
-	CutsceneId(Player1)
+	CutSceneId(Player1)
 	SetGlobal("X3VieVampire","GLOBAL",1)
     Wait(1)
 	CreateVisualEffectObject("SPMINDAT","X3Reb")

@@ -1,9 +1,9 @@
-// Recorder's Death, adding to Bodhi's script
+// Vienxay's Bodhi Event
 IF
   True()
 THEN
   RESPONSE #100
-	CutsceneId(Player1)
+	CutSceneId(Player1)
 	SetGlobal("X3VieVampire","GLOBAL",1)
 	Wait(1)
 	DisplayStringHead("X3Vie",@991)  

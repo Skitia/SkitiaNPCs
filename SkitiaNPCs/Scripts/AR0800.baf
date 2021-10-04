@@ -7,7 +7,7 @@ THEN
 	RESPONSE #100
 		ClearAllActions()
 		StartCutSceneMode()
-		MoveGlobalObject("X3Vie",Player1)  // Neera
+		MoveGlobalObject("X3Vie",Player1)  // Vienxay
 		ActionOverride("X3Vie",MakeUnselectable(1))
 		PlaySound("ACT_07")
 		Wait(1)
