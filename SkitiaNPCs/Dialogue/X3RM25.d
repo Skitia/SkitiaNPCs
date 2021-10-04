@@ -48,7 +48,7 @@ CHAIN X3RM25 SNS.1
 @19
 == X3Reb25J @20
 == X3RM25 @21
-DO ~AddJournalEntry(@16,INFO)~
+DO ~AddJournalEntry(@40016,INFO)~
 END 
 ++ @22 + SNS.4 
 ++ @23 + SNS.5 

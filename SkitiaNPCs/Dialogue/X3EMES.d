@@ -29,7 +29,7 @@ CHAIN X3EmiJ go
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",9)~
 == X3EMES @16
 == X3EmiJ @17
-DO ~AddJournalEntry(@11,QUEST)ActionOverride("X3EMES",EscapeArea())SetGlobal("X3EmiQuest","GLOBAL",3)~ 
+DO ~AddJournalEntry(@10011,QUEST)ActionOverride("X3EMES",EscapeArea())SetGlobal("X3EmiQuest","GLOBAL",3)~ 
 EXIT 
 
 CHAIN X3EMES Mithrest 
@@ -49,7 +49,7 @@ CHAIN X3EmiJ luck
 @22
 DO ~SetGlobal("X3EmiAppChange","GLOBAL",3)~
 END // Doing the quest without your presence successfully requires the support of both. Presumably, Emily surrenders in her duel, while with both supports, she takes their faith and wins.
-IF ~Global("X3EGVJVote","GLOBAL",1)Global("X3ECHVote","GLOBAL",1)~ DO ~AddJournalEntry(@12,QUEST)ActionOverride("X3EMES",EscapeArea())SetGlobal("X3EmiKickedOut","LOCALS",1)EscapeAreaMove("AR0704",371,445,SW)SetGlobal("X3EmiHeir","GLOBAL",1)~ EXIT 
-IF ~OR(2)!Global("X3EGVJVote","GLOBAL",1)!Global("X3ECHVote","GLOBAL",1)~ DO ~AddJournalEntry(@12,QUEST)ActionOverride("X3EMES",EscapeArea())SetGlobal("X3EmiKickedOut","LOCALS",1)EscapeAreaMove("AR0704",371,445,SW)SetGlobal("X3EmiHeir","GLOBAL",-1)~  EXIT 
+IF ~Global("X3EGVJVote","GLOBAL",1)Global("X3ECHVote","GLOBAL",1)~ DO ~AddJournalEntry(@10012,QUEST)ActionOverride("X3EMES",EscapeArea())SetGlobal("X3EmiKickedOut","LOCALS",1)EscapeAreaMove("AR0704",371,445,SW)SetGlobal("X3EmiHeir","GLOBAL",1)~ EXIT 
+IF ~OR(2)!Global("X3EGVJVote","GLOBAL",1)!Global("X3ECHVote","GLOBAL",1)~ DO ~AddJournalEntry(@10012,QUEST)ActionOverride("X3EMES",EscapeArea())SetGlobal("X3EmiKickedOut","LOCALS",1)EscapeAreaMove("AR0704",371,445,SW)SetGlobal("X3EmiHeir","GLOBAL",-1)~  EXIT 
 
 //Emily will automatically leave the party at the chapter 7 transition area until the quest is finished.

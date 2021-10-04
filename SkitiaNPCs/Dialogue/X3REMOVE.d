@@ -39,7 +39,7 @@ CHAIN X3REMOVE who_Phelgrim
 END 
 ++ @20 + fight 
 ++ @21 EXTERN X3RebJ what_have_you_done
-++ @22 DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",3)~ + cease 
+++ @22 DO ~DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3RebApp","GLOBAL",3)~ + cease 
 
 CHAIN X3RebJ what_have_you_done
 @23
@@ -47,8 +47,8 @@ CHAIN X3RebJ what_have_you_done
 == X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN @25
 END 
 ++ @26 EXTERN X3REMOVE fight 
-++ @27 DO ~DisplayStringNoNameDlg(Player1,@403)IncrementGlobal("X3RebApp","GLOBAL",-3)~  EXTERN X3REMOVE cease // Ouch, Approval lost here. 
-++ @22 DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",3)~ EXTERN X3REMOVE cease 
+++ @27 DO ~DisplayStringNoNameDlg(Player1,@400403)IncrementGlobal("X3RebApp","GLOBAL",-3)~  EXTERN X3REMOVE cease // Ouch, Approval lost here. 
+++ @22 DO ~DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3RebApp","GLOBAL",3)~ EXTERN X3REMOVE cease 
 
 
 CHAIN X3REMOVE who_are 
@@ -75,8 +75,8 @@ END
 CHAIN X3REMOVE married 
 @40
 END 
-++ @41 DO ~DisplayStringNoNameDlg(Player1,@416)IncrementGlobal("X3RebApp","GLOBAL",6)~ + cease  
-++ @42 DO ~DisplayStringNoNameDlg(Player1,@409)IncrementGlobal("X3RebApp","GLOBAL",-9)~  + cease 
+++ @41 DO ~DisplayStringNoNameDlg(Player1,@400416)IncrementGlobal("X3RebApp","GLOBAL",6)~ + cease  
+++ @42 DO ~DisplayStringNoNameDlg(Player1,@400409)IncrementGlobal("X3RebApp","GLOBAL",-9)~  + cease 
 ++ @43 + fight 
 
 CHAIN X3REMOVE meek 
@@ -88,11 +88,11 @@ END
 
 CHAIN X3REMOVE fight
 @45
-DO ~AddJournalEntry(@7,QUEST_DONE)Enemy()ActionOverride("X3RTANYA",Enemy())~ EXIT 
+DO ~AddJournalEntry(@40007,QUEST_DONE)Enemy()ActionOverride("X3RTANYA",Enemy())~ EXIT 
 
 CHAIN X3REMOVE cease 
 @46
-DO ~AddJournalEntry(@6,QUEST_DONE)EscapeArea()ActionOverride("X3RTANYA",EscapeArea())~ EXIT 
+DO ~AddJournalEntry(@40006,QUEST_DONE)EscapeArea()ActionOverride("X3RTANYA",EscapeArea())~ EXIT 
 
 CHAIN IF ~IsValidForPartyDialogue("X3Reb")~ THEN X3RTanya meeting_1
 @47

@@ -19,7 +19,7 @@ EraseJournalEntry(11864)
 EraseJournalEntry(3374)
 EraseJournalEntry(3377)
 EraseJournalEntry(3927)
-SetGlobal("X3KalVampire","GLOBAL",5)~ SOLVED_JOURNAL @32 + v1.1 
+SetGlobal("X3KalVampire","GLOBAL",5)~ SOLVED_JOURNAL @30032 + v1.1 
 END
 
 IF ~~ v1.1

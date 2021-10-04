@@ -207,24 +207,24 @@ CHAIN X3KalJ kale_decision
 == X3KalJ @55
 END 
 IF ~IsValidForPartyDialogue("MAZZY")~ EXTERN MAZZYJ Finale_Kale.Mazzy
-+~GlobalGT("X3KalApp","GLOBAL",29)~+ @56 DO ~IncrementGlobal("X3KalApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@316)~ EXTERN X3KalJ trust
-+~!GlobalGT("X3KalApp","GLOBAL",29)CheckStatGT(Player1,15,CHR)RandomNum(3,1)~+ @56 DO ~IncrementGlobal("X3KalApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@316)~ EXTERN X3KalJ trust
-+~!GlobalGT("X3KalApp","GLOBAL",29)CheckStatGT(Player1,15,CHR)!RandomNum(3,1)~+ @56 DO ~IncrementGlobal("X3KalApp","GLOBAL",-6)DisplayStringNoNameDlg(Player1,@306)~ EXTERN X3KalJ no_trust
-+~!GlobalGT("X3KalApp","GLOBAL",29)!CheckStatGT(Player1,15,CHR)~+ @56 DO ~IncrementGlobal("X3KalApp","GLOBAL",-6)DisplayStringNoNameDlg(Player1,@306)~ EXTERN X3KalJ no_trust
-++ @57 DO ~IncrementGlobal("X3KalApp","GLOBAL",4)DisplayStringNoNameDlg(Player1,@316)~ EXTERN X3KalJ Finale_Kale_C_1
-++ @58 DO ~IncrementGlobal("X3KalApp","GLOBAL",4)DisplayStringNoNameDlg(Player1,@316)~ EXTERN X3KalJ Finale_Kale_C_1 
++~GlobalGT("X3KalApp","GLOBAL",29)~+ @56 DO ~IncrementGlobal("X3KalApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@300316)~ EXTERN X3KalJ trust
++~!GlobalGT("X3KalApp","GLOBAL",29)CheckStatGT(Player1,15,CHR)RandomNum(3,1)~+ @56 DO ~IncrementGlobal("X3KalApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@300316)~ EXTERN X3KalJ trust
++~!GlobalGT("X3KalApp","GLOBAL",29)CheckStatGT(Player1,15,CHR)!RandomNum(3,1)~+ @56 DO ~IncrementGlobal("X3KalApp","GLOBAL",-6)DisplayStringNoNameDlg(Player1,@300306)~ EXTERN X3KalJ no_trust
++~!GlobalGT("X3KalApp","GLOBAL",29)!CheckStatGT(Player1,15,CHR)~+ @56 DO ~IncrementGlobal("X3KalApp","GLOBAL",-6)DisplayStringNoNameDlg(Player1,@300306)~ EXTERN X3KalJ no_trust
+++ @57 DO ~IncrementGlobal("X3KalApp","GLOBAL",4)DisplayStringNoNameDlg(Player1,@300316)~ EXTERN X3KalJ Finale_Kale_C_1
+++ @58 DO ~IncrementGlobal("X3KalApp","GLOBAL",4)DisplayStringNoNameDlg(Player1,@300316)~ EXTERN X3KalJ Finale_Kale_C_1 
 
 
 CHAIN MAZZYJ Finale_Kale.Mazzy
 @59
 == X3KalJ @60
 END 
-+~GlobalGT("X3KalApp","GLOBAL",29)~+ @56 DO ~IncrementGlobal("X3KalApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@316)~ EXTERN X3KalJ trust
-+~!GlobalGT("X3KalApp","GLOBAL",29)CheckStatGT(Player1,15,CHR)RandomNum(3,1)~+ @56 DO ~IncrementGlobal("X3KalApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@316)~ EXTERN X3KalJ trust
-+~!GlobalGT("X3KalApp","GLOBAL",29)CheckStatGT(Player1,15,CHR)!RandomNum(3,1)~+ @56 DO ~IncrementGlobal("X3KalApp","GLOBAL",-6)DisplayStringNoNameDlg(Player1,@306)~ EXTERN X3KalJ no_trust
-+~!GlobalGT("X3KalApp","GLOBAL",29)!CheckStatGT(Player1,15,CHR)~+ @56 DO ~IncrementGlobal("X3KalApp","GLOBAL",-6)DisplayStringNoNameDlg(Player1,@306)~ EXTERN X3KalJ no_trust
-++ @57 DO ~IncrementGlobal("X3KalApp","GLOBAL",4)DisplayStringNoNameDlg(Player1,@316)~ EXTERN X3KalJ Finale_Kale_C_1
-++ @58 DO ~IncrementGlobal("X3KalApp","GLOBAL",4)DisplayStringNoNameDlg(Player1,@316)~ EXTERN X3KalJ Finale_Kale_C_1 
++~GlobalGT("X3KalApp","GLOBAL",29)~+ @56 DO ~IncrementGlobal("X3KalApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@300316)~ EXTERN X3KalJ trust
++~!GlobalGT("X3KalApp","GLOBAL",29)CheckStatGT(Player1,15,CHR)RandomNum(3,1)~+ @56 DO ~IncrementGlobal("X3KalApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@300316)~ EXTERN X3KalJ trust
++~!GlobalGT("X3KalApp","GLOBAL",29)CheckStatGT(Player1,15,CHR)!RandomNum(3,1)~+ @56 DO ~IncrementGlobal("X3KalApp","GLOBAL",-6)DisplayStringNoNameDlg(Player1,@300306)~ EXTERN X3KalJ no_trust
++~!GlobalGT("X3KalApp","GLOBAL",29)!CheckStatGT(Player1,15,CHR)~+ @56 DO ~IncrementGlobal("X3KalApp","GLOBAL",-6)DisplayStringNoNameDlg(Player1,@300306)~ EXTERN X3KalJ no_trust
+++ @57 DO ~IncrementGlobal("X3KalApp","GLOBAL",4)DisplayStringNoNameDlg(Player1,@300316)~ EXTERN X3KalJ Finale_Kale_C_1
+++ @58 DO ~IncrementGlobal("X3KalApp","GLOBAL",4)DisplayStringNoNameDlg(Player1,@300316)~ EXTERN X3KalJ Finale_Kale_C_1 
 
 CHAIN X3KalJ Finale_Kale_C_1 
 @61

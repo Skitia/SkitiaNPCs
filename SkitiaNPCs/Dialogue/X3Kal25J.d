@@ -4,7 +4,7 @@
 I_C_T GORAPP1 16 X3KalGORAPP1-16
 == X3Kal25J IF ~IsValidForPartyDialogue("X3Hel")GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ THEN @0
 DO ~IncrementGlobal("X3KalApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@313)~
+DisplayStringNoNameDlg(Player1,@300313)~
 END 
 
 I_C_T GORAPP1 6 X3KalGORAPP1-6
@@ -119,7 +119,7 @@ EXTERN SARPRO01 3
 
 CHAIN X3Kal25J SarPro_Break 
 @23
-DO ~SetGlobal("X3KalRomanceActive","GLOBAL",3)SetGlobal("X3KalApp","GLOBAL",-9)DisplayStringNoNameDlg(Player1,@409)~
+DO ~SetGlobal("X3KalRomanceActive","GLOBAL",3)SetGlobal("X3KalApp","GLOBAL",-9)DisplayStringNoNameDlg(Player1,@400409)~
 EXTERN SARPRO01 12 
 
 // Volo's obligatory interjection in Saradush.
@@ -1185,7 +1185,7 @@ END
 IF ~~ Break.6
 SAY @397
 //While it is a medium shown message, the increase is 15.
-IF ~~ DO ~SetGlobal("X3Break","LOCALS",2)SetGlobal("X3KalApp","GLOBAL",-25)DisplayStringNoNameDlg(Player1,@316)~
+IF ~~ DO ~SetGlobal("X3Break","LOCALS",2)SetGlobal("X3KalApp","GLOBAL",-25)DisplayStringNoNameDlg(Player1,@300316)~
 EXIT 
 END 
 
@@ -1459,7 +1459,7 @@ END
 IF ~~ BU.5 
 SAY @486
 IF ~~ DO ~SetGlobal("X3KalRomanceActive","GLOBAL",3)IncrementGlobal("X3KalApp","GLOBAL",-12)
-DisplayStringNoNameDlg(Player1,@309)~ EXIT 
+DisplayStringNoNameDlg(Player1,@300309)~ EXIT 
 END 
 
 IF ~~ FixString

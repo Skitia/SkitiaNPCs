@@ -116,32 +116,32 @@ END
 I_C_T UDPHAE01 161 X3VieUDPHAE01-161
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @21
 DO ~IncrementGlobal("X3VieApp","GLOBAL",4)
-DisplayStringNoNameDlg(Player1,@516)~
+DisplayStringNoNameDlg(Player1,@500516)~
 == UDPHAE01 @22
 END
 
 I_C_T UDARDUL 34 X3VieUDARDUL-34
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @23
 DO ~IncrementGlobal("X3VieApp","GLOBAL",4)
-DisplayStringNoNameDlg(Player1,@516)~
+DisplayStringNoNameDlg(Player1,@500516)~
 END
 
 I_C_T UDDEMON 8 X3VieUDDEMON-8
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @24
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-3)
-DisplayStringNoNameDlg(Player1,@503)~
+DisplayStringNoNameDlg(Player1,@500503)~
 END
 
 I_C_T UDDEMON 3 X3VieUDDEMON-3
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @25
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-4)
-DisplayStringNoNameDlg(Player1,@506)~
+DisplayStringNoNameDlg(Player1,@500506)~
 END
 
 I_C_T UDDEMON 18 X3VieUDDEMON-18
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @25
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-4)
-DisplayStringNoNameDlg(Player1,@506)~
+DisplayStringNoNameDlg(Player1,@500506)~
 END
 
 I_C_T UDPHAE01 61 X3VieUDPHAE01-61
@@ -156,7 +156,7 @@ END
 I_C_T UDDROW16 40 X3VieUDDROW16-40
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @29
 DO ~IncrementGlobal("X3VieApp","GLOBAL",6)
-DisplayStringNoNameDlg(Player1,@516)~
+DisplayStringNoNameDlg(Player1,@500516)~
 END
 
 I_C_T UDDROW16 44 X3VieUDDROW16-44
@@ -192,19 +192,19 @@ END
 I_C_T UDDOOR01 1 X3VieUDDOOR01-1
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @39
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-3)
-DisplayStringNoNameDlg(Player1,@503)~
+DisplayStringNoNameDlg(Player1,@500503)~
 END 
 
 I_C_T UDDOOR01 4 X3VieUDDOOR01-4
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @40
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-2)
-DisplayStringNoNameDlg(Player1,@503)~
+DisplayStringNoNameDlg(Player1,@500503)~
 END 
 
 I_C_T UDDOOR01 5 X3VieUDDOOR01-5
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @41
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-1)
-DisplayStringNoNameDlg(Player1,@503)~
+DisplayStringNoNameDlg(Player1,@500503)~
 END 
 
 
@@ -216,19 +216,19 @@ END
 I_C_T UDDOOR02 14 X3VieUDDOOR02
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @44
 DO ~IncrementGlobal("X3VieApp","GLOBAL",4)
-DisplayStringNoNameDlg(Player1,@516)~
+DisplayStringNoNameDlg(Player1,@500516)~
 END 
 
 I_C_T UDDOOR02 15 X3VieUDDOOR02
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @45
 DO ~IncrementGlobal("X3VieApp","GLOBAL",4)
-DisplayStringNoNameDlg(Player1,@516)~
+DisplayStringNoNameDlg(Player1,@500516)~
 END 
 
 I_C_T UDDOOR02 17 X3VieUDDOOR02
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @46
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-4)
-DisplayStringNoNameDlg(Player1,@506)~
+DisplayStringNoNameDlg(Player1,@500506)~
 END 
 
 I_C_T UDSILVER 18 X3VieUDSILVER-18
@@ -242,7 +242,7 @@ END
 I_C_T UDSILVER 49 X3VieUDSILVER-49
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @49
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-6)
-DisplayStringNoNameDlg(Player1,@506)~
+DisplayStringNoNameDlg(Player1,@500506)~
 END 
 
 I_C_T UDSILVER 25 X3EmiUDSILVER-25
@@ -256,20 +256,20 @@ END
 I_C_T UDSVIR05 13 X3VieUDSVIR05-13
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @52
 DO ~IncrementGlobal("X3VieApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@513)~
+DisplayStringNoNameDlg(Player1,@500513)~
 END
 
 I_C_T UDTRAP02 10 X3EmiUDTRAP02-10
 == X3VieJ IF ~!IsValidForPartyDialogue("X3Emi")IsValidForPartyDialogue("X3Vie")~ THEN @53
 DO ~IncrementGlobal("X3VieApp","GLOBAL",4)
-DisplayStringNoNameDlg(Player1,@516)~
+DisplayStringNoNameDlg(Player1,@500516)~
 == UDTRAP02 @54
 END
 
 I_C_T UDTRAP02 11 X3EmiUDTRAP02-11
 == X3VieJ IF ~!IsValidForPartyDialogue("X3Emi")IsValidForPartyDialogue("X3Vie")~ THEN @53
 DO ~IncrementGlobal("X3VieApp","GLOBAL",4)
-DisplayStringNoNameDlg(Player1,@516)~
+DisplayStringNoNameDlg(Player1,@500516)~
 END
 
 I_C_T UDTRAP02 2 X3RebUDTRAP02-2
@@ -279,14 +279,14 @@ END
 I_C_T UDVITH 47 X3VieUDVITH-47
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @56
 DO ~IncrementGlobal("X3VieApp","GLOBAL",2)
-DisplayStringNoNameDlg(Player1,@513)~
+DisplayStringNoNameDlg(Player1,@500513)~
 END
 
 
 I_C_T UDVITH 49 X3VieUDVITH-49
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")!IsValidForPartyDialogue("X3Emi")~ THEN @57
 DO ~IncrementGlobal("X3VieApp","GLOBAL",4)
-DisplayStringNoNameDlg(Player1,@516)~
+DisplayStringNoNameDlg(Player1,@500516)~
 == UDVITH @58
 END
 
@@ -312,7 +312,7 @@ END
 I_C_T UDDUER01 20 X3VieUDDUER01-20
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @63
 DO ~IncrementGlobal("X3VieApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@513)~
+DisplayStringNoNameDlg(Player1,@500513)~
 END
 
 I_C_T UDDUER03 9 X3VieUDUDER03-9
@@ -346,19 +346,19 @@ EXTERN SAHBEH01 39
 I_C_T SAHKNG01 76 X3VieSAHKNG0176 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @72
 DO ~IncrementGlobal("X3VieApp","GLOBAL",6)
-DisplayStringNoNameDlg(Player1,@516)~
+DisplayStringNoNameDlg(Player1,@500516)~
 END
 
 I_C_T SAHKNG01 76 X3VieSAHKNG0176 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @73
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-2)
-DisplayStringNoNameDlg(Player1,@503)~
+DisplayStringNoNameDlg(Player1,@500503)~
 END
 
 I_C_T SAHKNG01 50 X3VieSAHKNG0150 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @74
 DO ~IncrementGlobal("X3VieApp","GLOBAL",4)
-DisplayStringNoNameDlg(Player1,@516)~
+DisplayStringNoNameDlg(Player1,@500516)~
 END
 
 I_C_T SAHKNG01 36 X3VieSAHKNG0136 
@@ -368,19 +368,19 @@ END
 I_C_T SAHKNG01 47 X3VieSAHKNG0147 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @76
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-2)
-DisplayStringNoNameDlg(Player1,@503)~
+DisplayStringNoNameDlg(Player1,@500503)~
 END
 
 I_C_T SAHKNG01 23 X3VieSAHKNG0123 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @76
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-2)
-DisplayStringNoNameDlg(Player1,@503)~
+DisplayStringNoNameDlg(Player1,@500503)~
 END
 
 I_C_T SAHPR1 30 X3VieSAHPR30 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @76
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-2)
-DisplayStringNoNameDlg(Player1,@503)~
+DisplayStringNoNameDlg(Player1,@500503)~
 END
 
 I_C_T SAHPR1 5 X3VieSAHPR5 
@@ -549,25 +549,25 @@ END
 I_C_T GORAPP1 14 X3VieGORAPP1-14
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")!GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)!Alignment("X3Vie",NEUTRAL)~ THEN @121
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-3)
-DisplayStringNoNameDlg(Player1,@503)~
+DisplayStringNoNameDlg(Player1,@500503)~
 END 
 
 I_C_T GORAPP1 14 X3VieGORAPP1-14
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")!GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)Alignment("X3Vie",NEUTRAL)~ THEN @122
 DO ~IncrementGlobal("X3VieApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@513)~
+DisplayStringNoNameDlg(Player1,@500513)~
 END 
 
 I_C_T GORAPP1 16 X3VieGORAPP1-16
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")!GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)!Alignment("X3Vie",NEUTRAL)~ THEN @121
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-3)
-DisplayStringNoNameDlg(Player1,@503)~
+DisplayStringNoNameDlg(Player1,@500503)~
 END 
 
 I_C_T GORAPP1 16 X3VieGORAPP1-16
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")!GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)Alignment("X3Vie",NEUTRAL)~ THEN @122
 DO ~IncrementGlobal("X3VieApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@513)~
+DisplayStringNoNameDlg(Player1,@500513)~
 END 
 
 I_C_T GORAPP1 6 X3VieGORAPP1-6
@@ -577,7 +577,7 @@ END
 I_C_T GORDEMO 18 X3VieGORDEMO 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")!GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ THEN @124
 DO ~IncrementGlobal("X3VieApp","GLOBAL",4)
-DisplayStringNoNameDlg(Player1,@516)~
+DisplayStringNoNameDlg(Player1,@500516)~
 END 
 
 I_C_T GORDEMO 1 X3VieGORDEMO
@@ -595,7 +595,7 @@ END
 I_C_T GORSUC01 7 X3VieGORSUC01 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")Global("X3VieRomanceActive","GLOBAL",2)!GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ @128
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-4)
-DisplayStringNoNameDlg(Player1,@506)~
+DisplayStringNoNameDlg(Player1,@500506)~
 END 
 
 EXTEND_BOTTOM GORMAD1 8
@@ -631,7 +631,7 @@ END
 I_C_T OBSSOL01 19 X3VieOBSSOL01-19 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @135
 DO ~IncrementGlobal("X3VieApp","GLOBAL",4)
-DisplayStringNoNameDlg(Player1,@516)~ 
+DisplayStringNoNameDlg(Player1,@500516)~ 
 == X3HelJ IF ~IsValidForPartyDialogue("X3Hel")~ THEN @136
 END 
 
@@ -672,13 +672,13 @@ END
 I_C_T TRCUT07 4 X3VieTRCUT07-4
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @146
 DO ~IncrementGlobal("X3VieApp","GLOBAL",6)
-DisplayStringNoNameDlg(Player1,@516)~ 
+DisplayStringNoNameDlg(Player1,@500516)~ 
 END 
 
 I_C_T TRPLE01 16 X3VieTRPLE01-16
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @147
 DO ~IncrementGlobal("X3VieApp","GLOBAL",4)
-DisplayStringNoNameDlg(Player1,@516)~ 
+DisplayStringNoNameDlg(Player1,@500516)~ 
 == TRPLE01 @148
 END 
 
@@ -708,7 +708,7 @@ END
 I_C_T TRHMER01 38 X3VieTRHMER01-38
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @155
 DO ~IncrementGlobal("X3VieApp","GLOBAL",5)
-DisplayStringNoNameDlg(Player1,@516)~ 
+DisplayStringNoNameDlg(Player1,@500516)~ 
 END 
 
 //Umar Hills 
@@ -724,7 +724,7 @@ END
 I_C_T PLMETR01 25 X3ViePLMETR01-25
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @158
 DO ~IncrementGlobal("X3VieApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@503)~ 
+DisplayStringNoNameDlg(Player1,@500503)~ 
 END 
 
 I_C_T VALYGAR 43 X3VieVALYGAR43 
@@ -744,13 +744,13 @@ END
 I_C_T UHKID03 8 X3VieUHKID03-8
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @162
 DO ~IncrementGlobal("X3VieApp","GLOBAL",4)
-DisplayStringNoNameDlg(Player1,@516)~ 
+DisplayStringNoNameDlg(Player1,@500516)~ 
 END 
 
 I_C_T UHKID02 9 X3VieUHKID02-9
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @162
 DO ~IncrementGlobal("X3VieApp","GLOBAL",4)
-DisplayStringNoNameDlg(Player1,@516)~ 
+DisplayStringNoNameDlg(Player1,@500516)~ 
 END 
 
 I_C_T JUGJER01 12 X3VieJUGJER01-12
@@ -777,16 +777,16 @@ END
 I_C_T KPMAID01 14 X3VieKPMAID01-14 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @168
 DO ~IncrementGlobal("X3VieApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@513)~ 
+DisplayStringNoNameDlg(Player1,@500513)~ 
 == X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN @169
 DO ~IncrementGlobal("X3EmiApp","GLOBAL",-2)
-DisplayStringNoNameDlg(Player1,@103)~ 
+DisplayStringNoNameDlg(Player1,@100103)~ 
 END 
 
 I_C_T DELCIA 9 X3RebDELCIA 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")!IsValidForPartyDialogue("X3Reb")!IsValidForPartyDialogue("X3Emi")~ THEN @170
 DO ~IncrementGlobal("X3VieApp","GLOBAL",4)
-DisplayStringNoNameDlg(Player1,@506)~ 
+DisplayStringNoNameDlg(Player1,@500506)~ 
 == DELCIA @171
 END 
 
@@ -831,13 +831,13 @@ END
 I_C_T ANOMENJ 135 X3VieAnomenJ135
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @179
 DO ~IncrementGlobal("X3VieApp","GLOBAL",4)
-DisplayStringNoNameDlg(Player1,@516)~ 
+DisplayStringNoNameDlg(Player1,@500516)~ 
 END 
 
 I_C_T ANOMENJ 176 X3VieAnomenJ176
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @180
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-3)
-DisplayStringNoNameDlg(Player1,@513)~ 
+DisplayStringNoNameDlg(Player1,@500513)~ 
 END 
 
 I_C_T MARIA 5 X3VieMARIA-5
@@ -890,14 +890,14 @@ END
 I_C_T BODHI 20 X3VieBODHI20 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @195
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-1)
-DisplayStringNoNameDlg(Player1,@503)~ 
+DisplayStringNoNameDlg(Player1,@500503)~ 
 END 
 
 
 I_C_T BODHI 18 X3VieBodhi18
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @196
 DO ~IncrementGlobal("X3VieApp","GLOBAL",4)
-DisplayStringNoNameDlg(Player1,@516)~ 
+DisplayStringNoNameDlg(Player1,@500516)~ 
 END 
 
 I_C_T BODHI 6 X3VieBODHi6 
@@ -911,10 +911,10 @@ END
 I_C_T TIRDIR 11 X3VieTIRDIR11
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")!Alignment("X3Vie",NEUTRAL)~ THEN @199
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-1)
-DisplayStringNoNameDlg(Player1,@503)~ 
+DisplayStringNoNameDlg(Player1,@500503)~ 
 == X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN @200
 DO ~IncrementGlobal("X3VieApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@113)~
+DisplayStringNoNameDlg(Player1,@100113)~
 == TIRDIR @201
 END 
 
@@ -949,13 +949,13 @@ EXTERN RAELIS 4
 I_C_T RAELIS 79 X3VieRaelis79 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @210
 DO ~IncrementGlobal("X3VieApp","GLOBAL",6)
-DisplayStringNoNameDlg(Player1,@516)~ 
+DisplayStringNoNameDlg(Player1,@500516)~ 
 END 
 
 I_C_T RAELIS 76 X3VieRaelis76 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @210
 DO ~IncrementGlobal("X3VieApp","GLOBAL",6)
-DisplayStringNoNameDlg(Player1,@516)~ 
+DisplayStringNoNameDlg(Player1,@500516)~ 
 END 
 
 I_C_T DELNOB02 3 X3VieDELNOB02 
@@ -965,19 +965,19 @@ END
 I_C_T BBEGG2 1 X3VieBBEGG2-1
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")!IsValidForPartyDialogue("X3Emi")~ THEN @212
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-1)
-DisplayStringNoNameDlg(Player1,@503)~
+DisplayStringNoNameDlg(Player1,@500503)~
 END
 
 I_C_T LOUTCAPT 24 X3VieLOUTCAPT24 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @213
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-1)
-DisplayStringNoNameDlg(Player1,@503)~
+DisplayStringNoNameDlg(Player1,@500503)~
 == X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN @214
 DO ~IncrementGlobal("X3EmiApp","GLOBAL",2)
-DisplayStringNoNameDlg(Player1,@113)~
+DisplayStringNoNameDlg(Player1,@100113)~
 == X3KalJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN @215
 DO ~IncrementGlobal("X3KalApp","GLOBAL",-1)
-DisplayStringNoNameDlg(Player1,@303)~
+DisplayStringNoNameDlg(Player1,@300303)~
 END 
 
 I_C_T LOUTCAPT 18 X3VieLOUTCAPT18 
@@ -1041,7 +1041,7 @@ END
 I_C_T CORNEIL 11 CORNEILX3VieJ11 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @232
 DO ~IncrementGlobal("X3VieApp","GLOBAL",9)
-DisplayStringNoNameDlg(Player1,@519)~
+DisplayStringNoNameDlg(Player1,@500519)~
 END 
 
 I_C_T JANJ 136 JANX3VieJ136 
@@ -1051,14 +1051,14 @@ END
 I_C_T DELON 15 X3VieDELON15 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @234
 DO ~IncrementGlobal("X3VieApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@513)~
+DisplayStringNoNameDlg(Player1,@500513)~
 == X3HelJ IF ~IsValidForPartyDialogue("X3Hel")~ THEN @235
 END 
 
 I_C_T DELON 15 X3VieDELON16
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @234
 DO ~IncrementGlobal("X3VieApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@513)~
+DisplayStringNoNameDlg(Player1,@500513)~
 == X3HelJ IF ~IsValidForPartyDialogue("X3Hel")~ THEN @235
 END 
 
@@ -1076,7 +1076,7 @@ EXIT
 I_C_T VICONI 11 X3EmiVICONI11 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @238
 DO ~IncrementGlobal("X3VieApp","GLOBAL",6)
-DisplayStringNoNameDlg(Player1,@516)~
+DisplayStringNoNameDlg(Player1,@500516)~
 END 
 
 I_C_T VICONI 2 X3VieVICONI2
@@ -1125,13 +1125,13 @@ END
 I_C_T BHOISIG 19 X3VieBHOISIG19
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @253
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-1)
-DisplayStringNoNameDlg(Player1,@503)~
+DisplayStringNoNameDlg(Player1,@500503)~
 END 
 
 I_C_T BHOISIG 21 X3VieBHOISIG21
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @254
 DO ~IncrementGlobal("X3VieApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@513)~
+DisplayStringNoNameDlg(Player1,@500513)~
 END 
 
 I_C_T ACOLYTE2 1 X3VieACOLYTE2-1
@@ -1156,7 +1156,7 @@ END
 I_C_T BMTHIEF 3 X3VieBMTHIEF 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @258
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-1)
-DisplayStringNoNameDlg(Player1,@503)~
+DisplayStringNoNameDlg(Player1,@500503)~
 END 
 
 I_C_T DCLERIC 3 X3VieDCLERIC3 
@@ -1167,10 +1167,10 @@ END
 I_C_T RENAL 47 X3VieRenal26 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @261
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-2)
-DisplayStringNoNameDlg(Player1,@503)~
+DisplayStringNoNameDlg(Player1,@500503)~
 == X3HelJ IF ~IsValidForPartyDialogue("X3Hel")~ THEN @262
 DO ~IncrementGlobal("X3HelApp","GLOBAL",-2)
-DisplayStringNoNameDlg(Player1,@203)~
+DisplayStringNoNameDlg(Player1,@200203)~
 END 
 
 I_C_T JANJ 116 X3VieJanJ116
@@ -1180,14 +1180,14 @@ END
 I_C_T RENAL 26 X3VieRenal26 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @264
 DO ~IncrementGlobal("X3VieApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@513)~
+DisplayStringNoNameDlg(Player1,@500513)~
 == X3HelJ IF ~IsValidForPartyDialogue("X3Hel")~ THEN @265
 END 
 
 I_C_T RENAL 26 X3VieRenal26 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @266
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-1)
-DisplayStringNoNameDlg(Player1,@503)~
+DisplayStringNoNameDlg(Player1,@500503)~
 == X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN @267
 == X3VieJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN @268
 END 
@@ -1195,7 +1195,7 @@ END
 I_C_T RENAL 10 X3VieRenal10 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @266
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-1)
-DisplayStringNoNameDlg(Player1,@503)~
+DisplayStringNoNameDlg(Player1,@500503)~
 == X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN @267
 == X3VieJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN @268
 END 
@@ -1229,13 +1229,13 @@ END
 I_C_T BEGGAR1 6 X3VieBeggar1-6 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @275
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-1)
-DisplayStringNoNameDlg(Player1,@503)~
+DisplayStringNoNameDlg(Player1,@500503)~
 END  
 
 I_C_T RUFPAL2 5 X3RebRUFPAL2
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @276
 DO ~IncrementGlobal("X3VieApp","GLOBAL",1)
-DisplayStringNoNameDlg(Player1,@513)~
+DisplayStringNoNameDlg(Player1,@500513)~
 END  
 
 CHAIN IF WEIGHT #-1
@@ -1253,13 +1253,13 @@ EXIT
 I_C_T BEGGAR1 1 X3VieBeggar1-1 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @281
 DO ~IncrementGlobal("X3EmiApp","GLOBAL",-1)
-DisplayStringNoNameDlg(Player1,@503)~
+DisplayStringNoNameDlg(Player1,@500503)~
 END 
 
 I_C_T BEGGAR3 1 X3VieBeggar3-1 
 == X3VieJ IF ~!IsValidForPartyDialogue("X3Emi")IsValidForPartyDialogue("X3Vie")~ THEN @282
 DO ~IncrementGlobal("X3EmiApp","GLOBAL",-1)
-DisplayStringNoNameDlg(Player1,@503)~
+DisplayStringNoNameDlg(Player1,@500503)~
 END 
 
 I_C_T SLUMM1 2 X3VieSLUMM1
@@ -1299,10 +1299,10 @@ END
 I_C_T AERIE 1 X3VieAerie1 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @292
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-3)
-DisplayStringNoNameDlg(Player1,@503)~
+DisplayStringNoNameDlg(Player1,@500503)~
 == X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")Global("X3ViePartyBG1","GLOBAL",1)Global("X3EmiPartyBG1","GLOBAL",1)~ THEN @293
 DO ~IncrementGlobal("X3EmiApp","GLOBAL",-4)
-DisplayStringNoNameDlg(Player1,@106)~
+DisplayStringNoNameDlg(Player1,@100106)~
 END
 
 I_C_T WCUST03 0 X3VieWCUST03 
@@ -1488,7 +1488,7 @@ EXIT
 
 CHAIN X3VieJ PW.3 
 @350
-DO ~IncrementGlobal("X3VieApp","GLOBAL",-6)DisplayStringNoNameDlg(Player1,@506)~
+DO ~IncrementGlobal("X3VieApp","GLOBAL",-6)DisplayStringNoNameDlg(Player1,@500506)~
 EXIT 
 
 EXTEND_TOP UDPHAE01 106
@@ -1507,13 +1507,13 @@ IF ~!Global("PhaereInnuendo","GLOBAL",2)~ EXTERN X3VieJ X3ViePhaere2
 CHAIN X3VieJ X3ViePhaere1
 @353
 = @354
-DO ~IncrementGlobal("X3VieApp","GLOBAL",-12)DisplayStringNoNameDlg(Player1,@509)SetGlobal("X3VieRomanceActive","GLOBAL",3)~ 
+DO ~IncrementGlobal("X3VieApp","GLOBAL",-12)DisplayStringNoNameDlg(Player1,@500509)SetGlobal("X3VieRomanceActive","GLOBAL",3)~ 
 EXIT 
 
 CHAIN X3VieJ X3ViePhaere2
 @355
 = @356
-DO ~IncrementGlobal("X3VieApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@516)~ 
+DO ~IncrementGlobal("X3VieApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@500516)~ 
 EXIT
 
 
@@ -1708,7 +1708,7 @@ EXIT
 CHAIN IF ~Global("X3VieQuest","GLOBAL",9)~ THEN X3VieJ QuestFound
 @404
 DO ~IncrementGlobal("X3VieApp","GLOBAL",15)
-DisplayStringNoNameDlg(Player1,@519)~
+DisplayStringNoNameDlg(Player1,@500519)~
 END 
 ++ @405 + QuestFound2
 ++ @406 + QuestFound2
@@ -1736,7 +1736,7 @@ EXTERN X3VieJ QuestSageDecision
 
 CHAIN X3VieJ QuestSageDecision
 @416
-DO ~AddJournalEntry(@6,QUEST)~ EXIT 
+DO ~AddJournalEntry(@50006,QUEST)~ EXIT 
 
 CHAIN X3VieJ QuestKeep
 @417
@@ -1744,7 +1744,7 @@ EXTERN X3VieJ QuestKeepDecision
 
 CHAIN X3VieJ QuestKeepDecision
 @418
-DO ~AddJournalEntry(@7,QUEST_DONE)AddexperienceParty(30000)~ EXIT 
+DO ~AddJournalEntry(@50007,QUEST_DONE)AddexperienceParty(30000)~ EXIT 
 
 CHAIN X3VieJ QuestChoice1 
 @419
@@ -1766,7 +1766,7 @@ EXTERN X3VieJ QuestSageDecision
 
 CHAIN X3VieJ DecideLater 
 @427
-DO ~AddJournalEntry(@8,QUEST)~ EXIT
+DO ~AddJournalEntry(@50008,QUEST)~ EXIT
 
 //Friendship Talk 1
 
@@ -1855,11 +1855,11 @@ EXTERN X3VieJ t2.story
 CHAIN X3RebJ t2.Recorder_knows 
 @459
 == X3VieJ @460
-DO ~AddJournalEntry(@1,QUEST)~
+DO ~AddJournalEntry(@50001,QUEST)~
 END 
 ++ @461 DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ EXTERN X3VieJ t2.time  // 
 ++ @462 DO ~IncrementGlobal("X3RebApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3VieAppChange","GLOBAL",1)~ EXTERN X3VieJ t2.rude // 
+DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3VieAppChange","GLOBAL",1)~ EXTERN X3VieJ t2.rude // 
 ++ @463 DO ~IncrementGlobal("X3VieAppChange","GLOBAL",-1)~ EXTERN X3VieJ t2.you  // - Vienxay 
 ++ @464 DO ~IncrementGlobal("X3VieAppChange","GLOBAL",-1)~ EXTERN X3VieJ t2.no_time // - Vienxay 
 
@@ -1873,7 +1873,7 @@ EXTERN X3VieJ t2.book
 
 CHAIN X3VieJ t2.book 
 @467
-DO ~AddJournalEntry(@1,QUEST)~
+DO ~AddJournalEntry(@50001,QUEST)~
 END 
 ++ @461 DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + t2.time 
 ++ @463 DO ~IncrementGlobal("X3VieAppChange","GLOBAL",-1)~ +  t2.you  
@@ -4007,13 +4007,13 @@ END
 CHAIN X3VieJ DSR.7
 @1273
 DO ~SetGlobal("X3VieInterest","LOCALS",1)IncrementGlobal("X3VieApp","GLOBAL",6)
-DisplayStringNoNameDlg(Player1,@516)~ 
+DisplayStringNoNameDlg(Player1,@500516)~ 
 EXIT 
 
 CHAIN X3VieJ DSR.8 
 @1274
 DO ~SetGlobal("X3VieRomanceActive","GLOBAL",3)IncrementGlobal("X3VieApp","GLOBAL",-6)
-DisplayStringNoNameDlg(Player1,@506)~
+DisplayStringNoNameDlg(Player1,@500506)~
 EXIT 
 
 // Group Kiss from PID 
@@ -4125,7 +4125,7 @@ END
 IF ~~ Break.6
 SAY @1312
 //While it is a medium shown message, the increase is 15.
-IF ~~ DO ~SetGlobal("X3Break","LOCALS",2)SetGlobal("X3VieApp","GLOBAL",-25)DisplayStringNoNameDlg(Player1,@516)~
+IF ~~ DO ~SetGlobal("X3Break","LOCALS",2)SetGlobal("X3VieApp","GLOBAL",-25)DisplayStringNoNameDlg(Player1,@500516)~
 EXIT 
 END 
 
@@ -4359,11 +4359,11 @@ SAY @1391
 = @1392
 = @1393 
 ++ @1394 DO ~IncrementGlobal("X3VieApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@513)~ + RI.1
+DisplayStringNoNameDlg(Player1,@500513)~ + RI.1
 ++ @1395 DO ~IncrementGlobal("X3VieApp","GLOBAL",6)
-DisplayStringNoNameDlg(Player1,@516)~ + RI.2
+DisplayStringNoNameDlg(Player1,@500516)~ + RI.2
 ++ @1396 DO ~IncrementGlobal("X3VieApp","GLOBAL",-6)
-DisplayStringNoNameDlg(Player1,@506)~ + RI.3
+DisplayStringNoNameDlg(Player1,@500506)~ + RI.3
 END 
 
 IF ~~ RI.1 
@@ -4386,7 +4386,7 @@ IF ~~ BreakUp
 SAY @1401
 = @1402
 IF ~~ DO ~SetGlobal("X3VieRomanceActive","GLOBAL",3)IncrementGlobal("X3VieApp","GLOBAL",-12)
-DisplayStringNoNameDlg(Player1,@509)~ EXIT 
+DisplayStringNoNameDlg(Player1,@500509)~ EXIT 
 END 
 
 IF ~~ FixString

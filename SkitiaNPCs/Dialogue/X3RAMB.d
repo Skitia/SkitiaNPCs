@@ -24,13 +24,13 @@ IF ~!IsValidForPartyDialogue("X3Reb")~ EXTERN X3RAMB1 strike
 
 CHAIN X3RAMB1 strike 
 @6
-DO ~AddJournalEntry(@4,QUEST)~
+DO ~AddJournalEntry(@40004,QUEST)~
 EXIT 
 
 CHAIN X3RebJ recognize 
 @7
 == X3RAMB1 @8
-DO ~AddJournalEntry(@4,QUEST)~
+DO ~AddJournalEntry(@40004,QUEST)~
 EXIT 
 
 BEGIN X3RAMB2 

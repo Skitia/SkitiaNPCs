@@ -205,7 +205,7 @@ EXTERN X3RMOM inform
 
 CHAIN X3RMOM inform 
 @71
-DO ~RevealAreaOnMap("AR1100")IncrementGlobal("X3VieQuest","GLOBAL",1)AddJournalEntry(@2,QUEST)~
+DO ~RevealAreaOnMap("AR1100")IncrementGlobal("X3VieQuest","GLOBAL",1)AddJournalEntry(@50002,QUEST)~
 END 
 IF ~IsValidForPartyDialogue("X3Vie")~ EXTERN X3VieJ go_now
 ++ @72 EXTERN X3RMOM where 
@@ -218,7 +218,7 @@ CHAIN X3VieJ go_now
 == X3VieJ IF ~IsValidForPartyDialogue("X3Reb")IsValidForPartyDialogue("X3Vie")~ THEN @77
 END 
 ++ @72 EXTERN X3RMOM where 
-++ @78 DO ~DisplayStringNoNameDlg(Player1,@503)IncrementGlobal("X3VieApp","GLOBAL",-3)~ + priorities 
+++ @78 DO ~DisplayStringNoNameDlg(Player1,@500503)IncrementGlobal("X3VieApp","GLOBAL",-3)~ + priorities 
 ++ @74 EXTERN X3RMOM assistance 
 
 CHAIN X3RMOM assistance 

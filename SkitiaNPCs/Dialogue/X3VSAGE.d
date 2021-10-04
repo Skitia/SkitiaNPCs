@@ -53,7 +53,7 @@ EXTERN X3VSAGE lesson
 
 CHAIN X3VSAGE lesson 
 @22
-DO ~AddJournalEntry(@4,QUEST)~
+DO ~AddJournalEntry(@50004,QUEST)~
 END 
 IF ~IsValidForPartyDialogue("X3Vie")~ EXTERN X3VieJ Vienxay_comment // Vienxay's branch 
 ++ @23 + recovered 
@@ -103,7 +103,7 @@ CHAIN X3VSAGE regular_reward
 @45
 DO ~ GiveItemCreate("X3VTOME2",Player1,1,1,1)~
 == X3VSAGE @46
-DO ~SetGlobal("X3VieQuest","GLOBAL",12)AddJournalEntry(@9,QUEST_DONE)EscapeArea()ReputationInc(1)AddexperienceParty(30000)~
+DO ~SetGlobal("X3VieQuest","GLOBAL",12)AddJournalEntry(@50009,QUEST_DONE)EscapeArea()ReputationInc(1)AddexperienceParty(30000)~
 EXIT 
 
 CHAIN X3VSAGE coin 
@@ -121,7 +121,7 @@ IF ~!IsValidForPartyDialogue("X3Vie")~ EXTERN X3VSage regular_reward // Regular 
 CHAIN X3VSAGE Vienxay_reward 
 @49
 == X3VieJ @50
-DO ~IncrementGlobal("X3VieApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@516)ChangeAlignment("X3Vie",NEUTRAL)~
+DO ~IncrementGlobal("X3VieApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@500516)ChangeAlignment("X3Vie",NEUTRAL)~
 == X3VSAGE @51
 EXTERN X3VSAGE regular_reward 
 
@@ -191,7 +191,7 @@ END
 
 CHAIN X3VSAGE assist 
 @78
-DO ~IncrementGlobal("X3VieQuest","GLOBAL",1)AddJournalEntry(@3,QUEST)~
+DO ~IncrementGlobal("X3VieQuest","GLOBAL",1)AddJournalEntry(@50003,QUEST)~
 EXIT 
  
  CHAIN X3VSAGE book_info 
@@ -207,12 +207,12 @@ EXIT
  
 CHAIN X3VSAGE gold_fail
 @82
-DO ~IncrementGlobal("X3VieQuest","GLOBAL",1)AddJournalEntry(@3,QUEST)~
+DO ~IncrementGlobal("X3VieQuest","GLOBAL",1)AddJournalEntry(@50003,QUEST)~
 EXIT 
 
 CHAIN X3VSAGE gold 
 @83
-DO ~IncrementGlobal("X3VieQuest","GLOBAL",1)GivePartyGold(100)AddJournalEntry(@3,QUEST)~
+DO ~IncrementGlobal("X3VieQuest","GLOBAL",1)GivePartyGold(100)AddJournalEntry(@50003,QUEST)~
 EXIT 
 
 CHAIN X3VSAGE book_info2 

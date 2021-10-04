@@ -115,7 +115,7 @@ CHAIN X3EFATH thomas_wins
 == X3ECATH @44
 == X3EmiJ @45
 == X3EBRO @46
-DO ~AddJournalEntry(@14,QUEST_DONE)SetGlobal("X3EmiQuest","GLOBAL",11) 
+DO ~AddJournalEntry(@10014,QUEST_DONE)SetGlobal("X3EmiQuest","GLOBAL",11) 
 ActionOverride("X3ECH",EscapeArea())
 ActionOverride("X3ECATH",EscapeArea())
 ActionOverride("X3EGVJ",EscapeArea())ActionOverride("X3EDAR",EscapeArea())ActionOverride("X3EFATH",EscapeArea())EscapeArea()~ EXIT 
@@ -178,7 +178,7 @@ EXTERN X3EBRO duel_ring
 
 CHAIN X3EBRO duel_ring 
 @71
-DO ~AddJournalEntry(@15,QUEST)SetGlobal("X3EmiQuest","GLOBAL",6)
+DO ~AddJournalEntry(@10015,QUEST)SetGlobal("X3EmiQuest","GLOBAL",6)
 ActionOverride("X3EBRO",EscapeAreaMove("AR0406",1440,1928,SW))
 ActionOverride("X3EFATH",EscapeAreaMove("AR0406",1339,1912,SE))
 ActionOverride("X3ECH",EscapeArea())

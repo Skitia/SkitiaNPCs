@@ -56,10 +56,10 @@ CHAIN X3RB1 Gold
 DO ~TakePartyGold(500)~
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @15
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-3)
-DisplayStringNoNameDlg(Player1,@503)~
+DisplayStringNoNameDlg(Player1,@500503)~
 == X3HelJ IF ~IsValidForPartyDialogue("X3Hel")~ THEN @16 
 DO ~IncrementGlobal("X3HelApp","GLOBAL",-5)
-DisplayStringNoNameDlg(Player1,@206)~
+DisplayStringNoNameDlg(Player1,@200206)~
 EXIT 
 
 
@@ -103,7 +103,7 @@ CHAIN X3RB1 Trade
 @34
 END 
 IF ~~ DO ~TakePartyGold(1000)GiveItem("X3RGEM",Player1)ActionOverride("X3RB2",EscapeArea())ActionOverride("X3RB3",EscapeArea())ActionOverride("X3RB4",EscapeArea())
-ActionOverride("X3RB5",EscapeArea())ActionOverride("X3RB6",EscapeArea())EscapeArea()~ UNSOLVED_JOURNAL @34
+ActionOverride("X3RB5",EscapeArea())ActionOverride("X3RB6",EscapeArea())EscapeArea()~ UNSOLVED_JOURNAL @40034
 EXIT 
 
 CHAIN X3RB1 Afford 
@@ -116,5 +116,5 @@ CHAIN X3RB1 Scared
 = @38
 END 
 IF ~~ DO ~GiveItem("X3RGEM",Player1)ActionOverride("X3RB2",EscapeArea())ActionOverride("X3RB3",EscapeArea())ActionOverride("X3RB4",EscapeArea())
-ActionOverride("X3RB5",EscapeArea())ActionOverride("X3RB6",EscapeArea())EscapeArea()~ UNSOLVED_JOURNAL @34
+ActionOverride("X3RB5",EscapeArea())ActionOverride("X3RB6",EscapeArea())EscapeArea()~ UNSOLVED_JOURNAL @40034
 EXIT 

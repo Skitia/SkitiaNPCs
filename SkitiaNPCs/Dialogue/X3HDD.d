@@ -29,13 +29,13 @@ EXTERN X3HDD words
 CHAIN X3HelJ action 
 @11
 DO ~IncrementGlobal("X3HelApp","GLOBAL",6)
-DisplayStringNoNameDlg(Player1,@216)~
+DisplayStringNoNameDlg(Player1,@200216)~
 EXTERN X3HDD intimidate
 
 CHAIN X3HelJ regret 
 @12
 DO ~IncrementGlobal("X3HelApp","GLOBAL",-6)
-DisplayStringNoNameDlg(Player1,@206)~
+DisplayStringNoNameDlg(Player1,@200206)~
 EXTERN X3HDD give_up
 
 CHAIN X3HDD intimidate 

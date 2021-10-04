@@ -95,12 +95,12 @@ CHAIN X3EGVJ Von.9
 @33
 == X3EmiJ @34
 == X3EGVJ @35
-DO ~AddJournalEntry(@5,QUEST)SetGlobal("X3EGVJQuest","GLOBAL",1)~
+DO ~AddJournalEntry(@10005,QUEST)SetGlobal("X3EGVJQuest","GLOBAL",1)~
 EXIT  
 
 CHAIN X3EGVJ Von.8 
 @36
-DO ~AddJournalEntry(@5,QUEST)SetGlobal("X3EGVJQuest","GLOBAL",1)~
+DO ~AddJournalEntry(@10005,QUEST)SetGlobal("X3EGVJQuest","GLOBAL",1)~
 EXIT  
 
 CHAIN X3EGVJ Von.7
@@ -135,7 +135,7 @@ CHAIN X3EmiJ diplomacy_worked
 == X3EmiJ @46
 == X3EGVJ @47
 == X3EGVJ @48
-DO ~AddJournalEntry(@9,QUEST)SetGlobal("X3EGVJQuest","GLOBAL",3)SetGlobal("X3EGVJVote","GLOBAL",1)SetGlobal("X3EmiAppChange","GLOBAL",9)~
+DO ~AddJournalEntry(@10009,QUEST)SetGlobal("X3EGVJQuest","GLOBAL",3)SetGlobal("X3EGVJVote","GLOBAL",1)SetGlobal("X3EmiAppChange","GLOBAL",9)~
 EXIT 
 
 CHAIN X3EmiJ Myron_left 
@@ -151,7 +151,7 @@ CHAIN X3EGVJ quest_failed
 == X3EGVJ @52
 == X3EmiJ @53
 == X3EGVJ @54
-DO ~AddJournalEntry(@10,QUEST)SetGlobal("X3EGVJQuest","GLOBAL",3)~
+DO ~AddJournalEntry(@10010,QUEST)SetGlobal("X3EGVJQuest","GLOBAL",3)~
 EXIT 
 
 CHAIN IF ~Global("X3EGVJQuest","GLOBAL",3)GlobalLT("Chapter","GLOBAL",%bg2_chapter_6%)!Global("X3EGVJVote","GLOBAL",1)~ THEN X3EGVJ upset 

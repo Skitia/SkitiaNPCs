@@ -473,7 +473,7 @@ CHAIN X3EmiJ Drink2.4
 END 
 ++ @129 + Drink2.5 
 ++ @130 DO ~IncrementGlobal("X3EmiApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@113)~ + Drink2.6 
+DisplayStringNoNameDlg(Player1,@100113)~ + Drink2.6 
 ++ @131 + Drink2.7
 
 CHAIN X3EmiJ Drink2.5
@@ -501,7 +501,7 @@ END
 CHAIN X3EmiJ compliment
 @137
 DO ~IncrementGlobal("X3EmiApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@113)~
+DisplayStringNoNameDlg(Player1,@100113)~
 = @138
 END 
 +~HPPercentGT(Myself,54)!RandomNum(2,1)!Global("X3EmiRomanceActive","GLOBAL",2)~+ @139 + HealthHigh1 // Vary by health status. Emily gives health status, then checks the PC's health status, then returns to this dialogue branch.
@@ -570,64 +570,64 @@ CHAIN X3EmiJ HealthHigh1
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3EmiJ PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3EmiJ PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurt2
 
 CHAIN X3EmiJ HealthHighLove1 
 @151
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3EmiJ PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3EmiJ PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurtLove2
 
 CHAIN X3EmiJ HealthHigh2
 @152
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3EmiJ PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3EmiJ PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurt2
 
 CHAIN X3EmiJ HealthHighLove2
 @153
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3EmiJ PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3EmiJ PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurtLove2
 
 CHAIN X3EmiJ HealthLow1 
 @154
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3EmiJ PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3EmiJ PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurt2
 
 CHAIN X3EmiJ HealthLowLove1 
 @155
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3EmiJ PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3EmiJ PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurtLove2
 
 CHAIN X3EmiJ HealthLowLove2 
 @156
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3EmiJ PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3EmiJ PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurtLove2
 
 CHAIN X3EmiJ HealthLow2 
 @157
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3EmiJ PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3EmiJ PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3EmiJ PlayerHurt2
 
 CHAIN X3EmiJ PlayerHealthy1 
 @158
@@ -1359,7 +1359,7 @@ EXTERN X3Emi25J BathJoin.2
 
 CHAIN X3Emi25J compliment
 @137
-DO ~IncrementGlobal("X3EmiApp","GLOBAL",2)DisplayStringNoNameDlg(Player1,@113)~
+DO ~IncrementGlobal("X3EmiApp","GLOBAL",2)DisplayStringNoNameDlg(Player1,@100113)~
 = @138
 END 
 +~HPPercentGT(Myself,54)!RandomNum(2,1)!Global("X3EmiRomanceActive","GLOBAL",2)~+ @139 + HealthHigh1 // Vary by health status. Emily gives health status, then checks the PC's health status, then returns to this dialogue branch.
@@ -1422,64 +1422,64 @@ CHAIN X3Emi25J HealthHigh1
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Emi25J PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Emi25J PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurt2
 
 CHAIN X3Emi25J HealthHighLove1 
 @151
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Emi25J PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Emi25J PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurtLove2
 
 CHAIN X3Emi25J HealthHigh2
 @152
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Emi25J PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Emi25J PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurt2
 
 CHAIN X3Emi25J HealthHighLove2
 @153
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Emi25J PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Emi25J PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurtLove2
 
 CHAIN X3Emi25J HealthLow1 
 @154
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Emi25J PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Emi25J PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurt2
 
 CHAIN X3Emi25J HealthLowLove1 
 @155
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Emi25J PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Emi25J PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurtLove2
 
 CHAIN X3Emi25J HealthLowLove2 
 @156
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Emi25J PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Emi25J PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurtLove2
 
 CHAIN X3Emi25J HealthLow2 
 @157
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Emi25J PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Emi25J PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Emi25J PlayerHurt2
 
 CHAIN X3Emi25J PlayerHealthy1 
 @158
@@ -2097,7 +2097,7 @@ END
 ++ @363 + Story1.7
 ++ @364 + Story1.7 
 ++ @365 DO ~IncrementGlobal("X3HelApp","GLOBAL",-3)
-DisplayStringNoNameDlg(Player1,@203)~ + Story1.8
+DisplayStringNoNameDlg(Player1,@200203)~ + Story1.8
 
 CHAIN X3HelJ Story1.8
 @366
@@ -2110,10 +2110,10 @@ CHAIN X3HelJ Story1.7
 = @370
 END 
 ++ @371 DO ~IncrementGlobal("X3HelApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@213)~ + Story1.5 
+DisplayStringNoNameDlg(Player1,@200213)~ + Story1.5 
 ++ @372 + Story1.5
 ++ @373 DO ~IncrementGlobal("X3HelApp","GLOBAL",-3)
-DisplayStringNoNameDlg(Player1,@203)~ + Story1.6
+DisplayStringNoNameDlg(Player1,@200203)~ + Story1.6
 
 CHAIN X3HelJ Story1.5
 @374
@@ -2193,7 +2193,7 @@ CHAIN X3HelJ Story3
 = @404
 END 
 ++ @405 DO ~IncrementGlobal("X3HelApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@213)~ + Story3.1 
+DisplayStringNoNameDlg(Player1,@200213)~ + Story3.1 
 ++ @406 + Story3.2 
 ++ @407 + Story3.3
 
@@ -2231,32 +2231,32 @@ CHAIN X3HelJ HealthHigh1
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3HelJ PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3HelJ PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3HelJ PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3HelJ PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3HelJ PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3HelJ PlayerHurt2
 
 CHAIN X3HelJ HealthHigh2 
 @420
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3HelJ PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3HelJ PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3HelJ PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3HelJ PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3HelJ PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3HelJ PlayerHurt2
 
 CHAIN X3HelJ HealthLow1 
 @421
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3HelJ PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3HelJ PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3HelJ PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3HelJ PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3HelJ PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3HelJ PlayerHurt2
 
 CHAIN X3HelJ HealthLow2 
 @422
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3HelJ PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3HelJ PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3HelJ PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3HelJ PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3HelJ PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3HelJ PlayerHurt2
 
 CHAIN X3HelJ PlayerHealthy1 
 @423
@@ -2588,7 +2588,7 @@ END
 CHAIN X3HelJ HitFar 
 @517
 DO ~SetGlobal("X3Activity","LOCALS",1)IncrementGlobal("X3HelApp","GLOBAL",9)
-DisplayStringNoNameDlg(Player1,@219)~
+DisplayStringNoNameDlg(Player1,@200219)~
 EXTERN X3HelJ Activity.3
 
 CHAIN X3HelJ Activity.3 
@@ -2683,7 +2683,7 @@ END
 ++ @363 + Story1.7
 ++ @364 + Story1.7 
 ++ @365 DO ~IncrementGlobal("X3HelApp","GLOBAL",-3)
-DisplayStringNoNameDlg(Player1,@203)~ + Story1.8
+DisplayStringNoNameDlg(Player1,@200203)~ + Story1.8
 
 CHAIN X3Hel25J Story1.8
 @366
@@ -2696,10 +2696,10 @@ CHAIN X3Hel25J Story1.7
 = @370
 END 
 ++ @371 DO ~IncrementGlobal("X3HelApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@213)~ + Story1.5
+DisplayStringNoNameDlg(Player1,@200213)~ + Story1.5
 ++ @372 + Story1.5
 ++ @373 DO ~IncrementGlobal("X3HelApp","GLOBAL",-3)
-DisplayStringNoNameDlg(Player1,@203)~ + Story1.6
+DisplayStringNoNameDlg(Player1,@200203)~ + Story1.6
 
 CHAIN X3Hel25J Story1.5
 @374
@@ -2779,7 +2779,7 @@ CHAIN X3Hel25J Story3
 = @404
 END 
 ++ @405 DO ~IncrementGlobal("X3HelApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@213)~ + Story3.1 
+DisplayStringNoNameDlg(Player1,@200213)~ + Story3.1 
 ++ @406 + Story3.2 
 ++ @407 + Story3.3
 
@@ -2817,32 +2817,32 @@ CHAIN X3Hel25J HealthHigh1
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Hel25J PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Hel25J PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Hel25J PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Hel25J PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Hel25J PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Hel25J PlayerHurt2
 
 CHAIN X3Hel25J HealthHigh2 
 @420
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Hel25J PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Hel25J PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Hel25J PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Hel25J PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Hel25J PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Hel25J PlayerHurt2
 
 CHAIN X3Hel25J HealthLow1 
 @421
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Hel25J PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Hel25J PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Hel25J PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Hel25J PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Hel25J PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Hel25J PlayerHurt2
 
 CHAIN X3Hel25J HealthLow2 
 @422
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Hel25J PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Hel25J PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Hel25J PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Hel25J PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Hel25J PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Hel25J PlayerHurt2
 
 CHAIN X3Hel25J PlayerHealthy1 
 @423
@@ -2888,7 +2888,7 @@ END
 ++ @526 + advice8.1 
 ++ @527 + advice8.2
 ++ @528 DO ~IncrementGlobal("X3HelApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@213)~ + advice8.3
+DisplayStringNoNameDlg(Player1,@200213)~ + advice8.3
 
 CHAIN X3Hel25J advice8.1 
 @529
@@ -3010,7 +3010,7 @@ END
 CHAIN X3Hel25J HitFar 
 @517
 DO ~SetGlobal("X3Activity","LOCALS",1)IncrementGlobal("X3HelApp","GLOBAL",9)
-DisplayStringNoNameDlg(Player1,@219)~
+DisplayStringNoNameDlg(Player1,@200219)~
 EXTERN X3Hel25J Activity.3
 
 CHAIN X3Hel25J Activity.3 
@@ -3131,7 +3131,7 @@ END
 CHAIN X3KalJ compliment 
 @548
 DO ~IncrementGlobal("X3KalApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@313)~
+DisplayStringNoNameDlg(Player1,@300313)~
 = @549
 END 
 +~HPPercentGT(Myself,54)!RandomNum(2,1)!Global("X3KalRomanceActive","GLOBAL",2)~+ @139 + HealthHigh1 // Vary by health status. Emily gives health status, then checks the PC's health status, then returns to this dialogue branch.
@@ -3178,64 +3178,64 @@ CHAIN X3KalJ HealthHigh1
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3KalJ PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3KalJ PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3KalJ PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3KalJ PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3KalJ PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3KalJ PlayerHurt2
 
 CHAIN X3KalJ HealthHighLove1 
 @552
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3KalJ PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3KalJ PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3KalJ PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3KalJ PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3KalJ PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3KalJ PlayerHurtLove2
 
 CHAIN X3KalJ HealthHigh2
 @553
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3KalJ PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3KalJ PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3KalJ PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3KalJ PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3KalJ PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3KalJ PlayerHurt2
 
 CHAIN X3KalJ HealthHighLove2
 @554
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3KalJ PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3KalJ PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3KalJ PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3KalJ PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3KalJ PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3KalJ PlayerHurtLove2
 
 CHAIN X3KalJ HealthLow1 
 @555
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3KalJ PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3KalJ PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3KalJ PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3KalJ PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3KalJ PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3KalJ PlayerHurt2
 
 CHAIN X3KalJ HealthLowLove1 
 @556
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3KalJ PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3KalJ PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3KalJ PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3KalJ PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3KalJ PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3KalJ PlayerHurtLove2
 
 CHAIN X3KalJ HealthLowLove2 
 @557
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3KalJ PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3KalJ PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3KalJ PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3KalJ PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3KalJ PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3KalJ PlayerHurtLove2
 
 CHAIN X3KalJ HealthLow2 
 @558
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3KalJ PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3KalJ PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3KalJ PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3KalJ PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3KalJ PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3KalJ PlayerHurt2
 
 CHAIN X3KalJ PlayerHealthy1 
 @559
@@ -3875,7 +3875,7 @@ CHAIN X3KalJ DrinkPass3
 @748
 = @749
 DO ~IncrementGlobal("X3KalApp","GLOBAL",6)
-DisplayStringNoNameDlg(Player1,@313)~
+DisplayStringNoNameDlg(Player1,@300313)~
 END 
 +~Global("X3KalRomanceActive","GLOBAL",2)Global("X3Slept","LOCALS",2)~+ @750 + Sleep2 
 +~Global("X3KalRomanceActive","GLOBAL",2)!Global("X3Slept","LOCALS",2)~+ @750 + Sleep1
@@ -4028,7 +4028,7 @@ CHAIN X3Kal25J compliment
 @548
 = @549
 DO ~IncrementGlobal("X3KalApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@313)~
+DisplayStringNoNameDlg(Player1,@300313)~
 END 
 +~HPPercentGT(Myself,54)!RandomNum(2,1)!Global("X3KalRomanceActive","GLOBAL",2)~+ @139 + HealthHigh1 // Vary by health status. Emily gives health status, then checks the PC's health status, then returns to this dialogue branch.
 +~HPPercentGT(Myself,54)!RandomNum(2,1)Global("X3KalRomanceActive","GLOBAL",2)~+ @139 + HealthHighLove1 // Vary by health status. Emily gives health status, then checks the PC's health status, then returns to this dialogue branch.
@@ -4070,64 +4070,64 @@ CHAIN X3Kal25J HealthHigh1
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Kal25J PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Kal25J PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurt2
 
 CHAIN X3Kal25J HealthHighLove1 
 @552
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Kal25J PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Kal25J PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurtLove2
 
 CHAIN X3Kal25J HealthHigh2
 @553
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Kal25J PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Kal25J PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurt2
 
 CHAIN X3Kal25J HealthHighLove2
 @554
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Kal25J PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Kal25J PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurtLove2
 
 CHAIN X3Kal25J HealthLow1 
 @555
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Kal25J PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Kal25J PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurt2
 
 CHAIN X3Kal25J HealthLowLove1 
 @556
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Kal25J PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Kal25J PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurtLove2
 
 CHAIN X3Kal25J HealthLowLove2 
 @557
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Kal25J PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Kal25J PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurtLove2
 
 CHAIN X3Kal25J HealthLow2 
 @558
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Kal25J PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Kal25J PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Kal25J PlayerHurt2
 
 CHAIN X3Kal25J PlayerHealthy1 
 @559
@@ -4770,7 +4770,7 @@ END
 
 CHAIN X3RebJ Story1.4 
 @835
-DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",3)~
+DO ~DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3RebApp","GLOBAL",3)~
 EXTERN X3RebJ RestLate 
 
 CHAIN X3RebJ Story1.5 
@@ -4805,7 +4805,7 @@ END
 
 CHAIN X3RebJ Story2.3 
 @850
-DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",3)~
+DO ~DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3RebApp","GLOBAL",3)~
 EXTERN X3RebJ RestLate 
 
 CHAIN X3RebJ Story2.4 
@@ -4814,7 +4814,7 @@ EXTERN X3RebJ RestLate
 
 CHAIN X3RebJ Story2.5 
 @852
-DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",3)~
+DO ~DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3RebApp","GLOBAL",3)~
 EXTERN X3RebJ RestLate 
 
 CHAIN X3RebJ Story2.6 
@@ -4848,7 +4848,7 @@ END
 
 CHAIN X3RebJ Story3.3 
 @870
-DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",3)~
+DO ~DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3RebApp","GLOBAL",3)~
 EXTERN X3RebJ RestLate 
 
 CHAIN X3RebJ Story3.4 
@@ -4861,64 +4861,64 @@ CHAIN X3RebJ HealthHigh1
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3RebJ PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3RebJ PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3RebJ PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3RebJ PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3RebJ PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3RebJ PlayerHurt2
 
 CHAIN X3RebJ HealthHighLove1 
 @873
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3RebJ PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3RebJ PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3RebJ PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3RebJ PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3RebJ PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3RebJ PlayerHurtLove2
 
 CHAIN X3RebJ HealthHigh2
 @874
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3RebJ PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3RebJ PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3RebJ PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3RebJ PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3RebJ PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3RebJ PlayerHurt2
 
 CHAIN X3RebJ HealthHighLove2
 @875
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3RebJ PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3RebJ PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3RebJ PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3RebJ PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3RebJ PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3RebJ PlayerHurtLove2
 
 CHAIN X3RebJ HealthLow1 
 @876
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3RebJ PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3RebJ PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3RebJ PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3RebJ PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3RebJ PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3RebJ PlayerHurt2
 
 CHAIN X3RebJ HealthLowLove1 
 @877
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3RebJ PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3RebJ PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3RebJ PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3RebJ PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3RebJ PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3RebJ PlayerHurtLove2
 
 CHAIN X3RebJ HealthLowLove2 
 @878
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3RebJ PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3RebJ PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3RebJ PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3RebJ PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3RebJ PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3RebJ PlayerHurtLove2
 
 CHAIN X3RebJ HealthLow2 
 @879
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3RebJ PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3RebJ PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3RebJ PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3RebJ PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3RebJ PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3RebJ PlayerHurt2
 
 CHAIN X3RebJ PlayerHealthy1 
 @880
@@ -5030,7 +5030,7 @@ CHAIN X3RebJ advice2.1
 @892
 = @893
 = @894
-DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",1)~
+DO ~DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3RebApp","GLOBAL",1)~
 EXTERN X3RebJ RestLate 
 
 
@@ -5050,7 +5050,7 @@ END
 
 CHAIN X3RebJ advice3a.1 
 @900
-DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",1)~
+DO ~DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3RebApp","GLOBAL",1)~
 EXTERN X3RebJ RestLate 
 
 CHAIN X3RebJ advice3a.2
@@ -5070,7 +5070,7 @@ END
 
 CHAIN X3RebJ advice3b.1 
 @904
-DO ~DisplayStringNoNameDlg(Player1,@403)IncrementGlobal("X3RebApp","GLOBAL",-3)~
+DO ~DisplayStringNoNameDlg(Player1,@400403)IncrementGlobal("X3RebApp","GLOBAL",-3)~
 EXTERN X3RebJ RestLate 
 
 CHAIN X3RebJ advice3b.2
@@ -5092,12 +5092,12 @@ END
 
 CHAIN X3RebJ advice4.1
 @911
-DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",1)~
+DO ~DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3RebApp","GLOBAL",1)~
 EXTERN X3RebJ advice4.3
 
 CHAIN X3RebJ advice4.2 
 @912
-DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",1)~
+DO ~DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3RebApp","GLOBAL",1)~
 EXTERN X3RebJ advice4.3
 
 CHAIN X3RebJ advice4.3
@@ -5117,7 +5117,7 @@ EXTERN X3RebJ RestLate
 
 CHAIN X3RebJ advice6.2
 @919
-DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",3)~
+DO ~DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3RebApp","GLOBAL",3)~
 EXTERN X3RebJ RestLate 
 
 CHAIN X3RebJ advice6.3
@@ -5126,7 +5126,7 @@ EXTERN X3RebJ RestLate
 
 CHAIN X3RebJ compliment
 @921
-DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",1)~
+DO ~DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3RebApp","GLOBAL",1)~
 = @922
 END 
 +~HPPercentGT(Myself,54)!RandomNum(2,1)!Global("X3RebRomanceActive","GLOBAL",2)~+ @139 + HealthHigh1 // Vary by health status. Emily gives health status, then checks the PC's health status, then returns to this dialogue branch.
@@ -5409,7 +5409,7 @@ END
 
 CHAIN X3RebJ Record4 
 @1000
-DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",1)~
+DO ~DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3RebApp","GLOBAL",1)~
 EXTERN X3RebJ Record7
 
 CHAIN X3RebJ Record5 
@@ -5418,7 +5418,7 @@ EXTERN X3RebJ Record7
 
 CHAIN X3RebJ Record6 
 @1002
-DO ~DisplayStringNoNameDlg(Player1,@403)IncrementGlobal("X3RebApp","GLOBAL",-1)~
+DO ~DisplayStringNoNameDlg(Player1,@400403)IncrementGlobal("X3RebApp","GLOBAL",-1)~
 EXTERN X3RebJ Record7
 
 CHAIN X3RebJ Record7 
@@ -5430,7 +5430,7 @@ END
 
 CHAIN X3RebJ Record8 
 @1007
-DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",3)~
+DO ~DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3RebApp","GLOBAL",3)~
 EXTERN X3RebJ RestLate 
 
 CHAIN X3RebJ Record9 
@@ -5458,7 +5458,7 @@ EXTERN X3RebJ Record17
 
 CHAIN X3RebJ Record13 
 @1019
-DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",3)~
+DO ~DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3RebApp","GLOBAL",3)~
 EXTERN X3RebJ Record17 
 
 CHAIN X3RebJ Record14 
@@ -5467,12 +5467,12 @@ EXTERN X3RebJ Record17
 
 CHAIN X3RebJ Record15 
 @1021
-DO ~DisplayStringNoNameDlg(Player1,@403)IncrementGlobal("X3RebApp","GLOBAL",-2)~
+DO ~DisplayStringNoNameDlg(Player1,@400403)IncrementGlobal("X3RebApp","GLOBAL",-2)~
 EXTERN X3RebJ Record17 
 
 CHAIN X3RebJ Record16 
 @1022
-DO ~DisplayStringNoNameDlg(Player1,@403)IncrementGlobal("X3RebApp","GLOBAL",-2)~
+DO ~DisplayStringNoNameDlg(Player1,@400403)IncrementGlobal("X3RebApp","GLOBAL",-2)~
 EXTERN X3RebJ Record17 
 
 CHAIN X3RebJ Record17 
@@ -5582,17 +5582,17 @@ END
 
 CHAIN X3RebJ Activity4 
 @1057
-DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",3)~
+DO ~DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3RebApp","GLOBAL",3)~
 EXTERN X3RebJ Activity7 
 
 CHAIN X3RebJ Activity5
 @1058
-DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",2)~
+DO ~DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3RebApp","GLOBAL",2)~
 EXTERN X3RebJ Activity7 
 
 CHAIN X3RebJ Activity6
 @1059
-DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",1)~
+DO ~DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3RebApp","GLOBAL",1)~
 EXTERN X3RebJ Activity7
 
 CHAIN X3RebJ Activity7 
@@ -5720,7 +5720,7 @@ END
 
 CHAIN X3Reb25J Story1.4 
 @835
-DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",3)~
+DO ~DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3RebApp","GLOBAL",3)~
 EXTERN X3Reb25J RestLate 
 
 CHAIN X3Reb25J Story1.5 
@@ -5754,7 +5754,7 @@ END
 
 CHAIN X3Reb25J Story2.3 
 @850
-DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",3)~
+DO ~DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3RebApp","GLOBAL",3)~
 EXTERN X3Reb25J RestLate 
 
 CHAIN X3Reb25J Story2.4 
@@ -5763,7 +5763,7 @@ EXTERN X3Reb25J RestLate
 
 CHAIN X3Reb25J Story2.5 
 @852
-DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",3)~
+DO ~DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3RebApp","GLOBAL",3)~
 EXTERN X3Reb25J RestLate 
 
 CHAIN X3Reb25J Story2.6 
@@ -5797,7 +5797,7 @@ END
 
 CHAIN X3Reb25J Story3.3 
 @870
-DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",3)~
+DO ~DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3RebApp","GLOBAL",3)~
 EXTERN X3Reb25J RestLate 
 
 CHAIN X3Reb25J Story3.4 
@@ -5810,64 +5810,64 @@ CHAIN X3Reb25J HealthHigh1
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Reb25J PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Reb25J PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurt2
 
 CHAIN X3Reb25J HealthHighLove1 
 @873
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Reb25J PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Reb25J PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurtLove2
 
 CHAIN X3Reb25J HealthHigh2
 @874
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Reb25J PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Reb25J PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurt2
 
 CHAIN X3Reb25J HealthHighLove2
 @875
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Reb25J PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Reb25J PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurtLove2
 
 CHAIN X3Reb25J HealthLow1 
 @876
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Reb25J PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Reb25J PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurt2
 
 CHAIN X3Reb25J HealthLowLove1 
 @877
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Reb25J PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Reb25J PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurtLove2
 
 CHAIN X3Reb25J HealthLowLove2 
 @878
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Reb25J PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Reb25J PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurtLove2
 
 CHAIN X3Reb25J HealthLow2 
 @879
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Reb25J PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Reb25J PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Reb25J PlayerHurt2
 
 CHAIN X3Reb25J PlayerHealthy1 
 @880
@@ -5960,7 +5960,7 @@ END
 
 CHAIN X3Reb25J advice8.1 
 @1076
-DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",1)~
+DO ~DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3RebApp","GLOBAL",1)~
 EXTERN X3Reb25J RestLate 
 
 CHAIN X3Reb25J advice8.2
@@ -5981,7 +5981,7 @@ END
 
 CHAIN X3Reb25J advice9.1
 @1084
-DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",1)~
+DO ~DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3RebApp","GLOBAL",1)~
 EXTERN X3Reb25J RestLate 
 
 CHAIN X3Reb25J advice9.2 
@@ -6284,17 +6284,17 @@ END
 
 CHAIN X3Reb25J Activity4 
 @1057
-DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",3)~
+DO ~DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3RebApp","GLOBAL",3)~
 EXTERN X3Reb25J Activity7 
 
 CHAIN X3Reb25J Activity5
 @1058
-DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",2)~
+DO ~DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3RebApp","GLOBAL",2)~
 EXTERN X3Reb25J Activity7 
 
 CHAIN X3Reb25J Activity6
 @1059
-DO ~DisplayStringNoNameDlg(Player1,@413)IncrementGlobal("X3RebApp","GLOBAL",1)~
+DO ~DisplayStringNoNameDlg(Player1,@400413)IncrementGlobal("X3RebApp","GLOBAL",1)~
 EXTERN X3Reb25J Activity7
 
 CHAIN X3Reb25J Activity7 
@@ -6427,7 +6427,7 @@ END
 +~Global("X3VieRomanceActive","GLOBAL",2)RandomNum(3,3)~+ @99 + Kiss3
 +~Global("X3VieRomanceActive","GLOBAL",2)~+@309+ BathYes
 +~Global("X3Compliment","LOCALS",0)OR(2)Global("X3VieRomanceActive","GLOBAL",2)Global("X3VieRomanceActive","GLOBAL",1)~+  @1093 DO ~SetGlobal("X3Compliment","LOCALS",1)IncrementGlobal("X3VieApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@513)~ + compliment
+DisplayStringNoNameDlg(Player1,@500513)~ + compliment
 +~Global("X3VieRomanceActive","GLOBAL",2)~+ @1094 + Sleep5
 ++ @19 + RestExit 
 
@@ -6485,9 +6485,9 @@ CHAIN X3VieJ Story1.4
 END 
 ++ @1117 + Story1.9
 ++ @1118 DO ~IncrementGlobal("X3VieApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@513)~ + Story1.8
+DisplayStringNoNameDlg(Player1,@500513)~ + Story1.8
 ++ @1119 DO ~IncrementGlobal("X3VieApp","GLOBAL",2)
-DisplayStringNoNameDlg(Player1,@513)~ + Story1.7
+DisplayStringNoNameDlg(Player1,@500513)~ + Story1.7
 
 CHAIN X3VieJ Story1.9
 @1120
@@ -6548,7 +6548,7 @@ END
 ++ @1144 + Story2.6
 ++ @1145 + Story2.7
 ++ @1146 DO ~IncrementGlobal("X3VieApp","GLOBAL",2)
-DisplayStringNoNameDlg(Player1,@513)~ + Story2.8
+DisplayStringNoNameDlg(Player1,@500513)~ + Story2.8
 
 CHAIN X3VieJ Story2.6
 @1147
@@ -6614,9 +6614,9 @@ END
 +~Alignment("X3Vie",NEUTRAL)~+ @1176 + Story3.8A 
 +~!Alignment("X3Vie",NEUTRAL)~+ @1176 + Story3.8B
 ++ @1177 DO ~IncrementGlobal("X3VieApp","GLOBAL",2)
-DisplayStringNoNameDlg(Player1,@513)~ + Story3.9
+DisplayStringNoNameDlg(Player1,@500513)~ + Story3.9
 ++ @1178 DO ~IncrementGlobal("X3VieApp","GLOBAL",-1)
-DisplayStringNoNameDlg(Player1,@503)~ + Story3.10
+DisplayStringNoNameDlg(Player1,@500503)~ + Story3.10
  
 CHAIN X3VieJ Story3.8A
 @1179
@@ -6640,64 +6640,64 @@ CHAIN X3VieJ HealthHigh1
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3VieJ PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3VieJ PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3VieJ PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3VieJ PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3VieJ PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3VieJ PlayerHurt2
 
 CHAIN X3VieJ HealthHighLove1 
 @1184
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3VieJ PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3VieJ PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3VieJ PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3VieJ PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3VieJ PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3VieJ PlayerHurtLove2
 
 CHAIN X3VieJ HealthHigh2
 @1185
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3VieJ PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3VieJ PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3VieJ PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3VieJ PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3VieJ PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3VieJ PlayerHurt2
 
 CHAIN X3VieJ HealthHighLove2
 @1186
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3VieJ PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3VieJ PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3VieJ PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3VieJ PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3VieJ PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3VieJ PlayerHurtLove2
 
 CHAIN X3VieJ HealthLow1 
 @1187
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3VieJ PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3VieJ PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3VieJ PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3VieJ PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3VieJ PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3VieJ PlayerHurt2
 
 CHAIN X3VieJ HealthLowLove1 
 @1188
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3VieJ PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3VieJ PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3VieJ PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3VieJ PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3VieJ PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3VieJ PlayerHurtLove2
 
 CHAIN X3VieJ HealthLowLove2 
 @1189
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3VieJ PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3VieJ PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3VieJ PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3VieJ PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3VieJ PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3VieJ PlayerHurtLove2
 
 CHAIN X3VieJ HealthLow2 
 @1190
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3VieJ PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3VieJ PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3VieJ PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3VieJ PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3VieJ PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3VieJ PlayerHurt2
 
 CHAIN X3VieJ PlayerHealthy1 
 @1191
@@ -6802,10 +6802,10 @@ CHAIN X3VieJ advice2
 @1199
 END 
 ++ @1200 DO ~IncrementGlobal("X3VieApp","GLOBAL",-1)
-DisplayStringNoNameDlg(Player1,@503)~ + advice2.1 
+DisplayStringNoNameDlg(Player1,@500503)~ + advice2.1 
 ++ @1201 + advice2.1
 ++ @1202 DO ~IncrementGlobal("X3VieApp","GLOBAL",1)
-DisplayStringNoNameDlg(Player1,@513)~ + advice2.3
+DisplayStringNoNameDlg(Player1,@500513)~ + advice2.3
 
 CHAIN X3VieJ advice2.1 
 @1203
@@ -6870,7 +6870,7 @@ CHAIN X3VieJ advice4
 END 
 ++ @1222 + advice4.1 
 ++ @1223 DO ~IncrementGlobal("X3VieApp","GLOBAL",1)
-DisplayStringNoNameDlg(Player1,@513)~ + advice4.2
+DisplayStringNoNameDlg(Player1,@500513)~ + advice4.2
 ++ @1224 + advice4.3
 
 CHAIN X3VieJ advice4.1
@@ -7229,7 +7229,7 @@ CHAIN X3VieJ Win2
 @1312
 = @1313
 DO ~IncrementGlobal("X3VieApp","GLOBAL",6)
-DisplayStringNoNameDlg(Player1,@516)~
+DisplayStringNoNameDlg(Player1,@500516)~
 END 
 ++ @1314 DO ~SetGlobal("X3RestActivated","GLOBAL",0)RestParty()~ EXIT 
 +~Global("X3VieRomanceActive","GLOBAL",2)~+ @1315 + Win3 
@@ -7429,7 +7429,7 @@ END
 +~Global("X3VieRomanceActive","GLOBAL",2)RandomNum(3,3)~+ @99 + Kiss3
 +~Global("X3VieRomanceActive","GLOBAL",2)~+@309+ BathYes
 +~Global("X3Compliment","LOCALS",0)OR(2)Global("X3VieRomanceActive","GLOBAL",2)Global("X3VieRomanceActive","GLOBAL",1)~+  @1093 DO ~SetGlobal("X3Compliment","LOCALS",1)IncrementGlobal("X3VieApp","GLOBAL",1)
-DisplayStringNoNameDlg(Player1,@513)~ + compliment
+DisplayStringNoNameDlg(Player1,@500513)~ + compliment
 +~Global("X3VieRomanceActive","GLOBAL",2)~+ @1094 + Sleep5
 ++ @19 + RestExit 
 
@@ -7485,9 +7485,9 @@ CHAIN X3Vie25J Story1.4
 END 
 ++ @1117 + Story1.9
 ++ @1118 DO ~IncrementGlobal("X3VieApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@513)~ + Story1.8
+DisplayStringNoNameDlg(Player1,@500513)~ + Story1.8
 ++ @1119 DO ~IncrementGlobal("X3VieApp","GLOBAL",1)
-DisplayStringNoNameDlg(Player1,@513)~ + Story1.7
+DisplayStringNoNameDlg(Player1,@500513)~ + Story1.7
 
 CHAIN X3Vie25J Story1.9
 @1120
@@ -7548,7 +7548,7 @@ END
 ++ @1144 + Story2.6
 ++ @1145 + Story2.7
 ++ @1146 DO ~IncrementGlobal("X3VieApp","GLOBAL",1)
-DisplayStringNoNameDlg(Player1,@513)~ + Story2.8
+DisplayStringNoNameDlg(Player1,@500513)~ + Story2.8
 
 CHAIN X3Vie25J Story2.6
 @1147
@@ -7614,9 +7614,9 @@ END
 +~Alignment("X3Vie",NEUTRAL)~+ @1176 + Story3.8A 
 +~!Alignment("X3Vie",NEUTRAL)~+ @1176 + Story3.8B
 ++ @1177 DO ~IncrementGlobal("X3VieApp","GLOBAL",2)
-DisplayStringNoNameDlg(Player1,@513)~ + Story3.9
+DisplayStringNoNameDlg(Player1,@500513)~ + Story3.9
 ++ @1178 DO ~IncrementGlobal("X3VieApp","GLOBAL",-1)
-DisplayStringNoNameDlg(Player1,@503)~ + Story3.10
+DisplayStringNoNameDlg(Player1,@500503)~ + Story3.10
  
 CHAIN X3Vie25J Story3.8A
 @1179
@@ -7640,64 +7640,64 @@ CHAIN X3Vie25J HealthHigh1
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Vie25J PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Vie25J PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurt2
 
 CHAIN X3Vie25J HealthHighLove1 
 @1184
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Vie25J PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Vie25J PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurtLove2
 
 CHAIN X3Vie25J HealthHigh2
 @1185
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Vie25J PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Vie25J PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurt2
 
 CHAIN X3Vie25J HealthHighLove2
 @1186
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Vie25J PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Vie25J PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurtLove2
 
 CHAIN X3Vie25J HealthLow1 
 @1187
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Vie25J PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Vie25J PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurt2
 
 CHAIN X3Vie25J HealthLowLove1 
 @1188
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Vie25J PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Vie25J PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurtLove2
 
 CHAIN X3Vie25J HealthLowLove2 
 @1189
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Vie25J PlayerHealthyLove1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Vie25J PlayerHealthyLove2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurtLove1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurtLove2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurtLove1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurtLove2
 
 CHAIN X3Vie25J HealthLow2 
 @1190
 END 
 IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Vie25J PlayerHealthy1
 IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Vie25J PlayerHealthy2
-IF ~HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurt1
-IF ~HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurt2
+IF ~!HPPercentGT(Player1,54)RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurt1
+IF ~!HPPercentGT(Player1,54)!RandomNum(2,1)~ EXTERN X3Vie25J PlayerHurt2
 
 CHAIN X3Vie25J PlayerHealthy1 
 @1191

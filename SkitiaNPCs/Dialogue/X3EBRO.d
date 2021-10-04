@@ -200,7 +200,7 @@ DO ~ActionOverride("X3EBRO",DestroyItem("MINHP20"))~ EXIT
 //ChangeEnemyAlly(Myself,NEUTRAL)
 CHAIN IF ~Global("X3EmiQuest","GLOBAL",7)Global("X3EmiDuel","GLOBAL",1)Dead("X3Emi")~ THEN X3EBRO Emily_Died // (For good)
 @62
-DO ~AddJournalEntry(@16,QUEST_DONE)SetGlobal("X3EmiQuest","GLOBAL",10)AddexperienceParty(14875)~
+DO ~AddJournalEntry(@10016,QUEST_DONE)SetGlobal("X3EmiQuest","GLOBAL",10)AddexperienceParty(14875)~
 == X3EFATH @63
 == X3EBRO @64
 END 

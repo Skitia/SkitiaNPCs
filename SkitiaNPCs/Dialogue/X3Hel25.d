@@ -117,22 +117,22 @@ IF ~~ Scry.1
 SAY @35
 = @36
 ++ @37 DO ~IncrementGlobal("X3HelApp","GLOBAL",6)
-DisplayStringNoNameDlg(Player1,@216)~ + Scry.3 
+DisplayStringNoNameDlg(Player1,@200216)~ + Scry.3 
 ++ @38 DO ~IncrementGlobal("X3HelApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@213)~ + Scry.4 
+DisplayStringNoNameDlg(Player1,@200213)~ + Scry.4 
 ++ @39 DO ~IncrementGlobal("X3HelApp","GLOBAL",-6)
-DisplayStringNoNameDlg(Player1,@206)~ + Scry.5
+DisplayStringNoNameDlg(Player1,@200206)~ + Scry.5
 END 
 
 IF ~~ Scry.2
 SAY @40
 = @41
 ++ @42 DO ~IncrementGlobal("X3HelApp","GLOBAL",6)
-DisplayStringNoNameDlg(Player1,@216)~ + Scry.6
+DisplayStringNoNameDlg(Player1,@200216)~ + Scry.6
 ++ @43 DO ~IncrementGlobal("X3HelApp","GLOBAL",-9)
-DisplayStringNoNameDlg(Player1,@209)~ + Scry.7
+DisplayStringNoNameDlg(Player1,@200209)~ + Scry.7
 ++ @44 DO ~IncrementGlobal("X3HelApp","GLOBAL",-6)
-DisplayStringNoNameDlg(Player1,@206)~ + Scry.8
+DisplayStringNoNameDlg(Player1,@200206)~ + Scry.8
 END 
 
 IF ~~ Scry.3 

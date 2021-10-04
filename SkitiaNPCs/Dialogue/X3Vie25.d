@@ -90,7 +90,7 @@ DO ~SetGlobal("X3VieSummoned","GLOBAL",2)~
 END 
 ++ @28 + r2.1
 ++ @29 + r2.2
-++ @30 DO ~IncrementGlobal("X3VieApp","GLOBAL",-2)DisplayStringNoNameDlg(Player1,@503)~ + r3 
+++ @30 DO ~IncrementGlobal("X3VieApp","GLOBAL",-2)DisplayStringNoNameDlg(Player1,@500503)~ + r3 
 
 CHAIN X3Vie25 r2.1 
 @31

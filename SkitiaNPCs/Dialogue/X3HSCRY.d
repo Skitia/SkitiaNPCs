@@ -100,11 +100,11 @@ CHAIN X3HSCRY dead
 == X3Hel25J @37
 END 
 ++ @38 DO ~IncrementGlobal("X3HelApp","GLOBAL",6)
-DisplayStringNoNameDlg(Player1,@216)~ EXTERN X3Hel25J wonder2
+DisplayStringNoNameDlg(Player1,@200216)~ EXTERN X3Hel25J wonder2
 ++ @39 DO ~IncrementGlobal("X3HelApp","GLOBAL",-9)
-DisplayStringNoNameDlg(Player1,@209)~ EXTERN X3Hel25J hard2 
+DisplayStringNoNameDlg(Player1,@200209)~ EXTERN X3Hel25J hard2 
 ++ @40 DO ~IncrementGlobal("X3HelApp","GLOBAL",-6)
-DisplayStringNoNameDlg(Player1,@206)~ EXTERN X3Hel25J waste2
+DisplayStringNoNameDlg(Player1,@200206)~ EXTERN X3Hel25J waste2
 
 CHAIN X3Hel25J hard2
 @41

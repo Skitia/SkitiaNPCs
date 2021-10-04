@@ -13,7 +13,7 @@ EXIT
 CHAIN IF ~Global("X3VieQuest","GLOBAL",6)~ THEN X3VSAMIR greeting 
 @2
 END 
-++ @3 DO ~IncrementGlobal("X3VieQuest","GLOBAL",1)AddJournalEntry(@5,QUEST)~ + about 
+++ @3 DO ~IncrementGlobal("X3VieQuest","GLOBAL",1)AddJournalEntry(@50005,QUEST)~ + about 
 ++ @4 + miserable
 ++ @5 + duties
 

@@ -36,7 +36,7 @@ CHAIN X3Kal25 b4
 @11
 END 
 ++ @12 + b5
-++ @13 DO ~IncrementGlobal("X3KalApp","GLOBAL",-1)DisplayStringNoNameDlg(Player1,@303)~ + b6
+++ @13 DO ~IncrementGlobal("X3KalApp","GLOBAL",-1)DisplayStringNoNameDlg(Player1,@300303)~ + b6
 ++ @14 + b7
 
 

@@ -128,12 +128,12 @@ END
 IF ~IsValidForPartyDialogue("X3Hel")~ EXTERN X3HelJ HelgaComment
 IF ~!IsValidForPartyDialogue("X3Hel")IsValidForPartyDialogue("X3Vie")~ EXTERN X3VieJ VieComment
 +~PartyGoldGT(499)~+ @37 DO ~TakePartyGold(500)IncrementGlobal("X3EmiApp","GLOBAL",-3)
-DisplayStringNoNameDlg(Player1,@106)~ EXTERN X3HRL pay
+DisplayStringNoNameDlg(Player1,@100106)~ EXTERN X3HRL pay
 ++ @38 EXTERN X3HRL rejected
 +~CheckStatGT(LastTalkedToBy,15,CHR)~+ @39 EXTERN X3HRL reduced 
 +~CheckStatLT(LastTalkedToBy,16,CHR)~+ @39 EXTERN X3HRL noReduction
 ++ @30 DO ~TakePartyGold(500)IncrementGlobal("X3EmiApp","GLOBAL",3)
-DisplayStringNoNameDlg(Player1,@116)~  EXTERN X3HRL rejected 
+DisplayStringNoNameDlg(Player1,@100116)~  EXTERN X3HRL rejected 
 
 CHAIN X3HRL rejected  
 @40
@@ -143,12 +143,12 @@ CHAIN X3HelJ HelgaComment
 @41
 END  
 +~PartyGoldGT(499)~+ @37 DO ~TakePartyGold(500)IncrementGlobal("X3HelApp","GLOBAL",6)
-DisplayStringNoNameDlg(Player1,@216)~ EXTERN X3HRL pay
+DisplayStringNoNameDlg(Player1,@200216)~ EXTERN X3HRL pay
 ++ @38 EXTERN X3HRL rejected
 +~CheckStatGT(LastTalkedToBy,15,CHR)~+ @39 EXTERN X3HRL reduced 
 +~CheckStatLT(LastTalkedToBy,16,CHR)~+ @39 EXTERN X3HRL noReduction
 ++ @30 DO ~TakePartyGold(500)IncrementGlobal("X3HelApp","GLOBAL",-3)
-DisplayStringNoNameDlg(Player1,@203)~ EXTERN X3HRL rejected
+DisplayStringNoNameDlg(Player1,@200203)~ EXTERN X3HRL rejected
 
 CHAIN X3VieJ VieComment 
 @42
@@ -413,10 +413,10 @@ CHAIN X3HELJ potion_obtained
 @107
 END 
 ++ @108 DO ~IncrementGlobal("X3HelApp","GLOBAL",9)
-DisplayStringNoNameDlg(Player1,@219)~ + Helga_receive
+DisplayStringNoNameDlg(Player1,@200219)~ + Helga_receive
 +~Global("X3PoorMet","GLOBAL",3)~+ @109 + poor_man 
 ++ @110 DO ~IncrementGlobal("X3HelApp","GLOBAL",-9)
-DisplayStringNoNameDlg(Player1,@209)~ + Helga_not_receive
+DisplayStringNoNameDlg(Player1,@200209)~ + Helga_not_receive
 
 CHAIN X3HELJ Helga_not_receive
 @111
@@ -427,11 +427,11 @@ CHAIN X3HELJ poor_man
 @113
 END 
 ++ @114 DO ~IncrementGlobal("X3HelApp","GLOBAL",-3)
-DisplayStringNoNameDlg(Player1,@203)~ + sickly 
+DisplayStringNoNameDlg(Player1,@200203)~ + sickly 
 ++ @115 DO ~IncrementGlobal("X3HelApp","GLOBAL",-6)
-DisplayStringNoNameDlg(Player1,@206)~ + sickly 
+DisplayStringNoNameDlg(Player1,@200206)~ + sickly 
 ++ @116 DO ~IncrementGlobal("X3HelApp","GLOBAL",9)
-DisplayStringNoNameDlg(Player1,@219)~ + Helga_receive
+DisplayStringNoNameDlg(Player1,@200219)~ + Helga_receive
 
 CHAIN X3HELJ sickly 
 @117
@@ -468,13 +468,13 @@ IF ~!IsValidForPartyDialogue("X3Emi")!IsValidForPartyDialogue("X3Reb")~ EXTERN X
 CHAIN X3EmiJ approval_plus_E 
 @127
 DO ~IncrementGlobal("X3EmiApp","GLOBAL",9)
-DisplayStringNoNameDlg(Player1,@119)~
+DisplayStringNoNameDlg(Player1,@100119)~
 EXTERN X3HPOOR depart_happy 
 
 CHAIN X3RebJ approval_plus_R 
 @128
 DO ~IncrementGlobal("X3EmiApp","GLOBAL",9)
-DisplayStringNoNameDlg(Player1,@119)~
+DisplayStringNoNameDlg(Player1,@100119)~
 EXTERN X3HPOOR depart_happy 
 
 CHAIN X3HPOOR depart_happy  

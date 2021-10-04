@@ -108,7 +108,7 @@ CHAIN X3ECH thomas_instead
 == X3ECH @44
 == X3EmiJ @45
 == X3ECH @46
-DO ~AddJournalEntry(@3,QUEST)SetGlobal("X3ECHQuest","GLOBAL",1)~
+DO ~AddJournalEntry(@10003,QUEST)SetGlobal("X3ECHQuest","GLOBAL",1)~
 EXIT 
 
 CHAIN X3EmiJ so_terrible 
@@ -116,12 +116,12 @@ CHAIN X3EmiJ so_terrible
 == X3ECH @48
 == X3EmiJ @49
 == X3ECH @50
-DO ~AddJournalEntry(@3,QUEST)SetGlobal("X3ECHQuest","GLOBAL",1)~
+DO ~AddJournalEntry(@10003,QUEST)SetGlobal("X3ECHQuest","GLOBAL",1)~
 EXIT 
 
 CHAIN X3ECH return_later 
 @51
-DO ~AddJournalEntry(@3,QUEST)SetGlobal("X3ECHQuest","GLOBAL",1)~
+DO ~AddJournalEntry(@10003,QUEST)SetGlobal("X3ECHQuest","GLOBAL",1)~
 EXIT 
 
 CHAIN X3ECH my_support 
@@ -144,7 +144,7 @@ EXTERN X3EmiJ quest_Charmaine_end
 CHAIN X3EmiJ quest_Charmaine_end 
 @61
 == X3ECH @62
-DO ~AddJournalEntry(@4,QUEST)SetGlobal("X3ECHQuest","GLOBAL",2)SetGlobal("X3ECHVote","GLOBAL",1)SetGlobal("X3EmiAppChange","GLOBAL",9)~
+DO ~AddJournalEntry(@10004,QUEST)SetGlobal("X3ECHQuest","GLOBAL",2)SetGlobal("X3ECHVote","GLOBAL",1)SetGlobal("X3EmiAppChange","GLOBAL",9)~
 EXIT 
 
 CHAIN X3EmiJ romance_not_active

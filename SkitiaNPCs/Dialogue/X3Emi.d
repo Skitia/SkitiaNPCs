@@ -36,7 +36,7 @@ EXTERN X3EmiP VS.3
 CHAIN X3EmiP VS.3 
 @15
 END 
-IF ~~ DO ~JoinParty()SetGlobal("X3EmiKickedOut","LOCALS",0)~ SOLVED_JOURNAL @32
+IF ~~ DO ~JoinParty()SetGlobal("X3EmiKickedOut","LOCALS",0)~ SOLVED_JOURNAL @10032
 EXIT 
 
 CHAIN X3EmiP VS.4 

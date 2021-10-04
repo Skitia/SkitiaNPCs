@@ -79,7 +79,7 @@ EXTERN X3EDER Myron_fail
 
 CHAIN X3EDER Myron_fail
 @30
-DO ~AddJournalEntry(@6,QUEST)SetGlobal("X3EGVJTalkResult","GLOBAL",2)ActionOverride("X3EMYR",EscapeArea())EscapeArea()~ // 2 = Myron Left
+DO ~AddJournalEntry(@10006,QUEST)SetGlobal("X3EGVJTalkResult","GLOBAL",2)ActionOverride("X3EMYR",EscapeArea())EscapeArea()~ // 2 = Myron Left
 EXIT  
 
 CHAIN X3EmiJ care_not_Emily 
@@ -121,7 +121,7 @@ CHAIN X3EDER quest_success
 @43
 == X3EMYR @44
 == X3EDER @45
-DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",3)SetGlobal("X3EGVJTalkResult","GLOBAL",1)AddJournalEntry(@8,QUEST)ActionOverride("X3EMYR",EscapeArea())EscapeArea()~ // 1 = success!
+DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",3)SetGlobal("X3EGVJTalkResult","GLOBAL",1)AddJournalEntry(@10008,QUEST)ActionOverride("X3EMYR",EscapeArea())EscapeArea()~ // 1 = success!
 EXIT 
 
 CHAIN X3EMYR coin_lower_loan 
@@ -162,5 +162,5 @@ CHAIN X3EDER Derrick_decline
 == X3EMYR @56
 == X3EDER @57
 == X3EMYR @58
-DO ~SetGlobal("X3EGVJTalkResult","GLOBAL",3)AddJournalEntry(@7,QUEST)ActionOverride("X3EDER",EscapeArea())EscapeArea()~ // 3 = Derrick left
+DO ~SetGlobal("X3EGVJTalkResult","GLOBAL",3)AddJournalEntry(@10007,QUEST)ActionOverride("X3EDER",EscapeArea())EscapeArea()~ // 3 = Derrick left
 EXIT 

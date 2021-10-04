@@ -72,7 +72,7 @@ END
 
 CHAIN X3VG m4 
 @20 
-DO ~IncrementGlobal("X3VieApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@516)EscapeArea()SetGlobal("X3VieMet","GLOBAL",-1)
+DO ~IncrementGlobal("X3VieApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@500516)EscapeArea()SetGlobal("X3VieMet","GLOBAL",-1)
 Wait(3)
 ActionOverride("X3Vie",StartDialogueNoSet(Player1))~ EXIT 
 
@@ -81,8 +81,13 @@ CHAIN X3VG m5
 == X3Vie @22
 DO ~SetGlobal("X3VieMet","GLOBAL",-2)ActionOverride("X3VG",EscapeArea())MoveToPoint([1934.1863])MoveBetweenAreas("AR1005",[830.409],14)~ EXIT 
 
-CHAIN IF ~Global("X3VieMet","GLOBAL",-2)~ THEN X3Vie debt 
+CHAIN IF ~Global("X3VieMet","GLOBAL",-2)!AreaCheck("AR0700")~ THEN X3Vie debt 
 @23
+EXIT 
+
+CHAIN IF ~Global("X3VieMet","GLOBAL",-2)AreaCheck("AR0700")~ THEN X3Vie debtstuck
+@82
+DO ~MoveToPoint([1934.1863])MoveBetweenAreas("AR1005",[830.409],14)~
 EXIT 
 
 EXTEND_TOP PRISONK1 0 #2
@@ -106,7 +111,7 @@ EXIT
 
 CHAIN IF ~Global("X3VieMet","GLOBAL",-1)~ THEN X3Vie meet2 
 @28
-DO ~SetGlobal("X3VieMet","GLOBAL",1)IncrementGlobal("X3VieApp","GLOBAL",3)DisplayStringNoNameDlg(Player1,@513)~ // Finally, at 1.
+DO ~SetGlobal("X3VieMet","GLOBAL",1)IncrementGlobal("X3VieApp","GLOBAL",3)DisplayStringNoNameDlg(Player1,@500513)~ // Finally, at 1.
 END 
 IF ~!Global("X3ViePartyBG1","GLOBAL",1)~ EXTERN X3Vie name 
 +~Global("X3ViePartyBG1","GLOBAL",1)~+ @29 + joinagain
@@ -223,7 +228,7 @@ END
  	+ ~OR(3)Global("Chapter","GLOBAL",%bg2_chapter_4%)
 Global("Chapter","GLOBAL",%bg2_chapter_5%)
 Global("Chapter","GLOBAL",%bg2_chapter_7%)~ + @69 + rp2b
-++ @70 DO ~SetGlobal("X3VieRomanceActive","GLOBAL",3)IncrementGlobal("X3VieApp","GLOBAL",-12)DisplayStringNoNameDlg(Player1,@509)~ + leave 
+++ @70 DO ~SetGlobal("X3VieRomanceActive","GLOBAL",3)IncrementGlobal("X3VieApp","GLOBAL",-12)DisplayStringNoNameDlg(Player1,@500509)~ + leave 
 ++ @71 DO ~JoinParty()~ EXIT
 
 CHAIN X3VieP leave 

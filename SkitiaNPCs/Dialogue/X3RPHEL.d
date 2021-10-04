@@ -85,7 +85,7 @@ CHAIN X3RPHEL deal_confirmed
 @39
 == X3RebJ @40
 == X3RPHEL @41
-DO ~DisplayStringNoNameDlg(Player1,@409)IncrementGlobal("X3RebApp","GLOBAL",-27)AddJournalEntry(@11,QUEST)SetGlobal("X3RFAIL","GLOBAL",2)SetGlobal("X3RMSpell","GLOBAL",4)
+DO ~DisplayStringNoNameDlg(Player1,@400409)IncrementGlobal("X3RebApp","GLOBAL",-27)AddJournalEntry(@40011,QUEST)SetGlobal("X3RFAIL","GLOBAL",2)SetGlobal("X3RMSpell","GLOBAL",4)
 ActionOverride("X3RPHEL",DestroySelf())
 ActionOverride("X3RPIR4",DestroySelf())
 ActionOverride("X3RKID",DestroySelf())
@@ -105,7 +105,7 @@ CHAIN X3RPHEL nothing_else
 == X3RebJ @50
 == X3RPHEL @51
 == X3RM @52
-DO ~DisplayStringNoNameDlg(Player1,@409)IncrementGlobal("X3RebApp","GLOBAL",-27)SetGlobal("X3RMSpell","GLOBAL",3)~
+DO ~DisplayStringNoNameDlg(Player1,@400409)IncrementGlobal("X3RebApp","GLOBAL",-27)SetGlobal("X3RMSpell","GLOBAL",3)~
 EXIT 
 
 CHAIN X3RPHEL fight 
@@ -149,7 +149,7 @@ CHAIN X3RPHEL fight_2
 @77
 == X3RM @78
 == X3RPHEL @79
-DO ~DisplayStringNoNameDlg(Player1,@419)IncrementGlobal("X3RebApp","GLOBAL",9)ActionOverride("X3RM",Enemy())ActionOverride("X3RPHEL",Enemy())ActionOverride("X3RPIR4",Enemy())ActionOverride("PPDESH",Enemy())~
+DO ~DisplayStringNoNameDlg(Player1,@400419)IncrementGlobal("X3RebApp","GLOBAL",9)ActionOverride("X3RM",Enemy())ActionOverride("X3RPHEL",Enemy())ActionOverride("X3RPIR4",Enemy())ActionOverride("PPDESH",Enemy())~
 EXIT 
 
 CHAIN IF ~Dead("X3RPHEL")GlobalLT("X3RebQuest","GLOBAL",13)~ THEN X3RKID Talk 
@@ -168,7 +168,7 @@ CHAIN X3RebJ plan
 == X3RebJ @89
 == X3RKID @90
 == X3RebJ @91
-DO ~AddJournalEntry(@13,QUEST)SetGlobal("X3RebQuest","GLOBAL",13)~
+DO ~AddJournalEntry(@40013,QUEST)SetGlobal("X3RebQuest","GLOBAL",13)~
 EXIT 
 
 EXTEND_TOP CALAHA 17
@@ -193,7 +193,7 @@ END
 
 CHAIN CALAHA Raban3 
 @98
-DO ~SetGlobal("X3RebQuest","GLOBAL",14)AddJournalEntry(@14,QUEST)~
+DO ~SetGlobal("X3RebQuest","GLOBAL",14)AddJournalEntry(@40014,QUEST)~
 == X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN @99
 == CALAHA IF ~IsValidForPartyDialogue("X3Reb")~ THEN @100
 EXIT 
@@ -201,7 +201,7 @@ EXIT
 CHAIN IF ~GlobalGT("X3RebQuest","GLOBAL",12)~ THEN X3RKID End 
 @101
 END
-+~Global("X3RebQuest","GLOBAL",14)~+ @102 DO ~SetGlobal("X3RebQuest","GLOBAL",15)AddJournalEntry(@15,QUEST_DONE)~ + Go 
++~Global("X3RebQuest","GLOBAL",14)~+ @102 DO ~SetGlobal("X3RebQuest","GLOBAL",15)AddJournalEntry(@40015,QUEST_DONE)~ + Go 
 ++ @103 EXIT 
 
 CHAIN X3RKID Go 
@@ -219,7 +219,7 @@ CHAIN X3RebJ Goodbye
 == X3RKID @110
 == X3RebJ @111
 == X3RKID @112
-DO ~AddJournalEntry(@15,QUEST_DONE)DisplayStringNoNameDlg(Player1,@419)IncrementGlobal("X3RebApp","GLOBAL",12)EscapeArea()~ EXIT 
+DO ~AddJournalEntry(@40015,QUEST_DONE)DisplayStringNoNameDlg(Player1,@400419)IncrementGlobal("X3RebApp","GLOBAL",12)EscapeArea()~ EXIT 
 
 CHAIN IF ~True()~ THEN X3RKID OneLine3 
 @113

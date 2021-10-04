@@ -24,20 +24,20 @@ END
 CHAIN X3RebJ Pirate.4
 @11
 == X3RPIR1 @12
-DO ~AddJournalEntry(@10,QUEST)ActionOverride("X3RPIR2",Enemy())ActionOverride("X3RPIR3",Enemy())Enemy()~
+DO ~AddJournalEntry(@40010,QUEST)ActionOverride("X3RPIR2",Enemy())ActionOverride("X3RPIR3",Enemy())Enemy()~
 EXIT 
 
 CHAIN X3RPIR1 Pirate.3 
 @13
-DO ~AddJournalEntry(@10,QUEST)ActionOverride("X3RPIR2",Enemy())ActionOverride("X3RPIR3",Enemy())Enemy()~
+DO ~AddJournalEntry(@40010,QUEST)ActionOverride("X3RPIR2",Enemy())ActionOverride("X3RPIR3",Enemy())Enemy()~
 EXIT 
 
 CHAIN X3RPIR1 Pirate.2 
 @14
-DO ~AddJournalEntry(@10,QUEST)ActionOverride("X3RPIR2",Enemy())ActionOverride("X3RPIR3",Enemy())Enemy()~
+DO ~AddJournalEntry(@40010,QUEST)ActionOverride("X3RPIR2",Enemy())ActionOverride("X3RPIR3",Enemy())Enemy()~
 EXIT 
 
 CHAIN X3RPIR1 Pirate.1
 @15
- DO ~AddJournalEntry(@10,QUEST)ActionOverride("X3RPIR2",Enemy())ActionOverride("X3RPIR3",Enemy())Enemy()~
+ DO ~AddJournalEntry(@40010,QUEST)ActionOverride("X3RPIR2",Enemy())ActionOverride("X3RPIR3",Enemy())Enemy()~
 EXIT 
