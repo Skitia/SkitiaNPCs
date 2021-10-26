@@ -420,7 +420,7 @@ Who the responsibility of the house is due."~
 @415  = ~But this is...really that situation. So I want to say: Thank you. Thank you for taking me with you, for doing all of you could for me, for being a man that I could be happy to love.~
 @416  = ~I don't have anything witty or sarcastic to add. So I'll end with this: Let's finish him.~
 @417  = ~We did it, we won! I... think?~
-@418  = ~How did I... What happened? Did I die?! We were fighting and then...that pain. Worst. Pain. Ever. Still, there's nowhere else to go with you but forward, to whatever end there is.~ [X3EDID]
+@418  = ~How did I... What happened? Did I die?! We were fighting and then...that pain. Worst. Pain. Ever. Still, there's nowhere else to go with you but forward, to whatever end there is.~ 
 @419  = ~I'm almost out of ammunition for every creature that has been in our path to get to you. But I still have enough to put you down for good, Irenicus.~
 @420  = ~Right, I can tolerate a lot, really. But a vampire?! I'll not shame my family name and be in the presence of a monster! Nor my heritage, if I can help it.~
 @421  = ~Have I offended you, Emily?~
@@ -785,7 +785,7 @@ Who the responsibility of the house is due."~
 @780  = ~I'm here for you all the way, <CHARNAME>. I'll help you keep the will, I promise.~
 @781  = ~I guess we can believe.I mean, at the worst? You become a giant horrifying monster again. Lets...hope that doesn't happen.~
 @782  = ~No. You cannot just push me away like that, <CHARNAME>. Talk to me.~
-@783  = ~You know, I kind of wish I hadn't neglected some of my combat lessons before I started traveling.~ [X3ELS]
+@783  = ~You know, I kind of wish I hadn't neglected some of my combat lessons before I started traveling.~ [X3Blank]
 @784  = ~What do you mean? Your archery is spectacular.~
 @785  = ~Is that why you are such a burden?~
 @786  = ~You seem to be doing okay.~
@@ -811,12 +811,12 @@ Who the responsibility of the house is due."~
 @806  = ~Yes! I will totally get started. I can think of some definite changes to be made.~
 @807  = ~Someone kill me, please.~
 @808  = ~Well, if you're asking...heh, don't glare at me like that elf. You said it.~
-@809  = ~Do you ever think about her? Imoen, I mean.~ [X3ELS]
+@809  = ~Do you ever think about her? Imoen, I mean.~ [X3Blank]
 @810  = ~Of course I do. What kind of question is that?~
 @811  = ~All the time. I worry for her.~
 @812  = ~Not really. I'm sure she's fine.~
 @813  = ~I'd rather not talk about Imoen, Emily.~
-@814  = ~You and Imoen seem to get along. I think. Right?~ [X3ELS]
+@814  = ~You and Imoen seem to get along. I think. Right?~ [X3Blank]
 @815  = ~I'm kind of confused about your question, Emily.~
 @816  = ~We do, though I do worry for her.~
 @817  = ~Not really, she's annoying to me.~
@@ -847,7 +847,7 @@ Who the responsibility of the house is due."~
 @842  = ~That is what I believe too. I know I spend so much time thinking of something I'll not be able to do anything about for some time but...it bothers me.~
 @843  = ~That seems to be the truth. I just wish it was different.~
 @844  = ~I've...never been able to think that way. Never been able to be so cold and focused only on my own ambition. Maybe that's a fault, and I should but...it doesn't always feel right.~
-@845  = ~You know, if you think about it, if the kings and queens and councilors had a bit more active hand in things, they could send knights and soldiers to do some of the work we have done.~ [X3ELS]
+@845  = ~You know, if you think about it, if the kings and queens and councilors had a bit more active hand in things, they could send knights and soldiers to do some of the work we have done.~ [X3Blank]
 @846  = ~It seems more complicated than that to me.~
 @847  = ~Using adventurers seems to work well enough, doesn't it?~
 @848  = ~If they did, we wouldn't be making the money we did.~
@@ -875,7 +875,7 @@ Who the responsibility of the house is due."~
 @870  = ~I hope I get the chance someday to lead that way, at least.~ ~You know, <CHARNAME>, It's comforting talking to you. I could probably talk all day, but I shouldn't. Let's find time to chat later.~
 @871  = ~Maybe...after I have gotten experience, I might reconsider. But I really hope I can keep to my beliefs. I want to find a way to help if at all possible, even if others are uncomfortable with it at first.~
 @872  = ~That is what I think. Stepmother, well, I called her mother but...anyway, she believed differently, that people should figure things out on their own for most troubles. Thomas too, and sometimes father as well.~
-@873  = ~You know, there are so many beautiful temples in Amn. I've always prayed in several different ones as I traveled this region, but, I've always wondered who I felt closest too.~ [X3ELS]
+@873  = ~You know, there are so many beautiful temples in Amn. I've always prayed in several different ones as I traveled this region, but, I've always wondered who I felt closest too.~ [X3Blank]
 @874  = ~Are you very religious yourself, <CHARNAME>?~
 @875  = ~I certainly am as a paladin.~
 @876  = ~I am a cleric, Emily. I would hope I was.~
@@ -908,7 +908,7 @@ Who the responsibility of the house is due."~
 @903  = ~Honestly? They probably are. But times change, and so do the people. What Siamorphe advises should be taken to account. But I do not think I could live by everything that is suggested. I just think differently.~
 @904  = ~You're...faithless? That's...scary. But I guess it's better to be that than say you revere them but not follow their guidance and wishes.~
 @905  = ~Ooh, wishing to remain mysterious? Very well, <CHARNAME>. You can have your privacy.~
-@906  = ~Sune. That's who.~ [X3ELS]
+@906  = ~Sune. That's who.~ [X3Blank]
 @907  = ~What are you talking about?~
 @908  = ~What about Sune?~
 @909  = ~Emily, you are talking to yourself.~
@@ -932,7 +932,7 @@ Who the responsibility of the house is due."~
 @927  = ~What? I'm not averse t- wait, I mean, it's not just about kissing.~
 @928  = ~But you are missing out on so much!~
 @929  = ~Oh, definitely. There are other nobles in Tethyr that revere Sune as their house goddess. Just not mine. Or some of the other family friends.~
-@930  = ~Aah! No, no no!~ [X3ELS]
+@930  = ~Aah! No, no no!~ [X3Blank]
 @931  = ~Emily, it's just a nightmare. Are you all right?~
 @932  = ~Emily? What's going on?~
 @933  = ~(Ignore her and go back to sleep.)~
@@ -972,7 +972,7 @@ Who the responsibility of the house is due."~
 @967  = ~(She squeezes your hand back, before suddenly jumping away.)~
 @968  = ~(She gasps slightly at your hug, squeezing back, before moving away, a deep blush on her cheeks.)~
 @969  = ~Let's...er...I should get rest. Yes. rest. Thank you. Thank you truly.~
-@970  = ~We see so many dark things when we travel, but have you ever stopped to see some of the little beautiful things around, <CHARNAME>?~ [X3ELS]
+@970  = ~We see so many dark things when we travel, but have you ever stopped to see some of the little beautiful things around, <CHARNAME>?~ [X3Blank]
 @971  = ~If I can. There is a lot out there worth admiring.~
 @972  = ~Why? We're here to adventure, not to smell the flowers.~
 @973  = ~I'm not interested in talking right now, Emily.~
@@ -998,7 +998,7 @@ Who the responsibility of the house is due."~
 @993  = ~I'm so glad that you think I'm good at this. But...seriously, <CHARNAME>. Please don't lose your heart.~
 @994  = ~Maybe you don't now, but if they help you later, that is a good thing. We don't want you sinking into despair. Definitely bad for group morale when the leader is groaning and moaning and slumped over. Not that you do that. At all. I'm going to stop now.~
 @995  = ~Really? You don't see anything bright or uplifting about these small gestures. I'm not sure I can understand that point of view unless I was always grim and cynical. But you aren't that. I think.~
-@996  = ~So, endless walking, dry, plain tasting rations, getting shot at by bandits and monster spells, which will you miss the most when your adventures are over?~ [X3ELS]
+@996  = ~So, endless walking, dry, plain tasting rations, getting shot at by bandits and monster spells, which will you miss the most when your adventures are over?~ [X3Blank]
 @997  = ~None of them are quite appealing when you say it like that.~
 @998  = ~I think I would miss you above anything else.~
 @999  = ~I don't think I would stop adventuring anytime soon.~
@@ -1020,7 +1020,7 @@ Who the responsibility of the house is due."~
 @1015 = ~Right...useful. I guess I was thinking something else and wrong. Never mind me, then.~
 @1016 = ~Well, you have certainly achieved fame and glory.~
 @1017 = ~Just the money? It just seems that money eventually becomes meaningless, once you earn so much of it. You could do so much more.~
-@1018 = ~You are...amazing, you know that?~ [X3ELS]
+@1018 = ~You are...amazing, you know that?~ [X3Blank]
 @1019 = ~What makes you say that?~
 @1020 = ~I definitely know that.~
 @1021 = ~And?~
@@ -1059,7 +1059,7 @@ Who the responsibility of the house is due."~
 @1054 = ~Okay. Very. Awkward. I...am not sure why I am talking about this at all. Just...forget I said anything.~
 @1055 = ~Well then. I will stop stressing. I don't even know why panicking about it mattered. I guess I am just quirky sometimes.~
 @1056 = ~Let's just keep moving and...forget about this embarrassing moment.~
-@1057 = ~We're resting then? I thought...maybe I could explain myself now that I'm not so embarrassed and have had time to think.~ [X3ELS]
+@1057 = ~We're resting then? I thought...maybe I could explain myself now that I'm not so embarrassed and have had time to think.~ [X3Blank]
 @1058 = ~It's just words, Emily. They aren't difficult to speak.~
 @1059 = ~Sure, we have time now.~
 @1060 = ~I'd rather get some rest.~
@@ -1089,7 +1089,7 @@ Who the responsibility of the house is due."~
 @1084 = ~Yes...friends. That's...That's just what I want.~
 @1085 = ~Er, well, I'll prepare to settle in for rest. Sleep well.~
 @1086 = ~I guess it's not important anyway. Rest well.~
-@1087 = ~I've been thinking. And rethinking. And thinking some more.~ [X3ELS]
+@1087 = ~I've been thinking. And rethinking. And thinking some more.~ [X3Blank]
 @1088 = ~And what have you come up with?~
 @1089 = ~Are you still undecided?~
 @1090 = ~Look, no need to keep prattling on. I don't want to waste time with someone indecisive.~
@@ -1180,7 +1180,7 @@ Who the responsibility of the house is due."~
 @1175 = ~I don't know what to think about that. She's a good person, but...the opposite of me in some er, physical ways. I won't say I'm disappointed but...I'm glad we had this talk.~
 @1176 = ~Great! I'm glad we had this talk before things escalated and someone got their heart really hurt.~
 @1177 = ~*Sigh*. Friends. If...that is what you want, then of course. We can be friends.~
-@1178 = ~You're awake. Here, I got you something.~ [X3ELS]
+@1178 = ~You're awake. Here, I got you something.~ [X3Blank]
 @1179 = ~Is it food? I'm starved.~
 @1180 = ~Sure, show me.~
 @1181 = ~Show me later. We need to get moving.~
@@ -1206,7 +1206,7 @@ I never want it back. Keep it always, beloved.~
 @1198 = ~Adventure awaits, my beloved. And I'm so glad that we are sharing the experience together, even if it's not all sunshine and rainbows.~
 @1199 = ~That's okay. You don't have to say it.~
 @1200 = ~I...well, here, I've got a bit of a sweet cake. You can have it. I'll let you prepare and just get out of your way for now.~
-@1201 = ~I can't wait to show you the estate someday. There are all sorts of friends I'd love for you to meet.~ [X3ELS]
+@1201 = ~I can't wait to show you the estate someday. There are all sorts of friends I'd love for you to meet.~ [X3Blank]
 @1202 = ~The estate? You're talking about your home. That's a bit far from here.~
 @1203 = ~Right now we have tasks ahead of us. We can think of the future when the future is here.~
 @1204 = ~Aww, but thinking is half the fun. All right. I'll stop day dreaming.~
@@ -1234,7 +1234,7 @@ I never want it back. Keep it always, beloved.~
 @1226 = ~Because I will never stop showing you otherwise.~
 @1227 = ~Good, because...I'd probably make you do it. Now I don't have to feel guilty about it!~
 @1228 = ~I'm joking. Half. I would have really wanted you to go, even if people wouldn't be comfortable with your station or the like.~
-@1229 = ~Wow. So we survive spellhold, brave through the Underdark, enter a silver dragon's lair...and we are now drow. This is...crazy. Am I the only one?~ [X3ELS]
+@1229 = ~Wow. So we survive spellhold, brave through the Underdark, enter a silver dragon's lair...and we are now drow. This is...crazy. Am I the only one?~ [X3Blank]
 @1230 = ~Easy love. You'll have to start acting more like a drow once we enter the city.~
 @1231 = ~We've seen all sorts of wild things by this point, haven't we?~
 @1232 = ~You aren't the only one, no.~
@@ -1249,7 +1249,7 @@ I never want it back. Keep it always, beloved.~
 @1241 = ~I hope so. Because while I am putting up a strong face I am...very, very terrified of the dark.~
 @1242 = ~Mmm. This is...a bit strange, doing it not as ourselves entirely. I think I'll wait to do that again once we have our forms.~
 @1243 = ~All right. I'll keep my thoughts to myself, then.~
-@1244 = ~So only Irenicus remains then, now that Bodhi has fallen.~ [X3ELS]
+@1244 = ~So only Irenicus remains then, now that Bodhi has fallen.~ [X3Blank]
 @1245 = ~Indeed. And he will fall.~
 @1246 = ~Are you all right? You seem bothered.~
 @1247 = ~Let's not waste any time.~
@@ -1262,7 +1262,7 @@ I never want it back. Keep it always, beloved.~
 @1254 = ~We can't risk delaying any further, Emily.~
 @1255 = ~Well...it is your choice in the end. Just an idea! Either way, I'm ready for anything. Or as ready as you can be for something like this.~
 @1256 = ~Ooh, an idea of mine that gets approved. Well, I sure can't wait for this. Hopefully you pick a really nice an inn for us.~
-@1257 = ~(You're all settled in to an inn room for the night and about to darken the room when you hear a slight rap on your room door.~ [X3ELS]
+@1257 = ~(You're all settled in to an inn room for the night and about to darken the room when you hear a slight rap on your room door.~ [X3Blank]
 @1258 = ~It's unlocked. Come on in.~
 @1259 = ~Who is it?~
 @1260 = ~Go away, please.~
@@ -1315,7 +1315,7 @@ I never want it back. Keep it always, beloved.~
 @1307 = ~Rest well. (She gives you a peek on your cheek, before redressing herself and leaving the room.)~
 @1308 = ~This...is perfect, in a way. Because there is no one else I'd rather share my first time with.~
 @1309 = ~So am I...but I think my wanting and my love are stronger. I will lead us. Trust me.~
-@1310 = ~That...was some of the best rest I have had.~ [X3ELS]
+@1310 = ~That...was some of the best rest I have had.~ [X3Blank]
 @1311 = ~Well, I'm glad I could please.~
 @1312 = ~You are awake, beautiful.~
 @1313 = ~Aye. A pity that Irenicus still is out there.~
@@ -1374,12 +1374,12 @@ I never want it back. Keep it always, beloved.~
 @1366 = ~Thank you. I will stay and give you a chance. For now. Gods, I am gullible, but I hope that you are genuine.~
 @1367 = ~Did what you say to me before, was that only words, <CHARNAME>? Nothing has really changed. It's just as...unbearable as before.~
 @1368 = ~I have been such a fool for agreeing to stay. But that will change now. Goodbye, <CHARNAME>. I regret that we ever met.~
-@1369 = ~Yes? Is there something you need?~ [Emila]
+@1369 = ~Hey there.~ [emilcs3]
 @1370 = ~I have something I want to ask.~
 @1371 = ~Can I ask something private?~
 @1372 = ~Do you think you could improve one of our ranged weapons?~
 @1373 = ~Never mind.~
-@1374 = ~Hello there, <CHARNAME>.~ [X3EHello]
+@1374 = ~Emily Castilla, at your service.~ [X3EHello]
 @1375 = ~What do you want to talk about?~
 @1376 = ~Sure. Shoot your quivering question.~
 @1377 = ~You are from Tethyr, aren't you? Can you tell me a bit about it?~
@@ -1392,7 +1392,7 @@ I never want it back. Keep it always, beloved.~
 @1384 = ~I know you can fletch arrows. Can you also make bows and crossbows?~
 @1385 = ~Let's talk about something else.~
 @1386 = ~Never mind. Let's keep moving.~
-@1387 = ~Is there something else, then?~ [X3EITSE]
+@1387 = ~Is there something else, then?~ 
 @1388 = ~That's all I had to ask. Let's keep moving.~
 @1389 = ~Ooh. I'd love to. Where to begin...~
 @1390 = ~My homeland is south of Amn, and ruled by Queen Zaranda. There's large forests where the elves come their home, and rivers where we settle in some of our towns and cities, like Saradush. We have some rocky badlands and mountains and border the sea. There's a bit of everything in Tethyr, I like to say.~
@@ -1608,3 +1608,4 @@ I never want it back. Keep it always, beloved.~
 @1600 = ~Oh yes, I think we are quite done here.~
 @1601 = ~Your voice seems a bit funny.~
 @1602 = ~What? You don't like it? Sorry! I didn't *actually* mean to sound that way, let me just clear my throat. One moment...~
+

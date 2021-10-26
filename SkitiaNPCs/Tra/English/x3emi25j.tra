@@ -210,7 +210,7 @@
 @209  = ~I am still following you, <CHARNAME>. But doubting? I think that's too much to ask. But I'll still be here.~
 @210  = ~Thank you for listening, as silly as this is, this was nice. But let's get back to our ritual of fighting for our lives, hmm?~
 @211  = ~Hrm, but do we really have anytime perfect for idle chatter, truly? But, as you say, leader.~
-@212  = ~I am becoming worried for my homeland, my love. People are already dying and suffering from the atrocities and chaos.~ [X3ELS]
+@212  = ~I am becoming worried for my homeland, my love. People are already dying and suffering from the atrocities and chaos.~ [X3Blank]
 @213  = ~That is the cost of this war between Bhaalspawn.~
 @214  = ~We will help who we can, but my priority is to fulfill my destiny.~
 @215  = ~We can't do anything talking about it. Let's move.~
@@ -275,7 +275,7 @@
 @274  = ~Let's just...keep moving, before my doubts return.~
 @275  = ~That just makes my mother more right. It...disturbs me. It makes me worried for the future.~
 @276  = ~I...think I will, then. This is...so difficult to say, but...goodbye, <CHARNAME>.~
-@277  = ~I still can't believe it. Saradush...in ruins. The bodies...the blood...the people. My fellow countrymen and women...it's so hard to believe.~ [X3ELS]
+@277  = ~I still can't believe it. Saradush...in ruins. The bodies...the blood...the people. My fellow countrymen and women...it's so hard to believe.~ [X3Blank]
 @278  = ~It happened. I'm surprised you're not used to this by now.~
 @279  = ~It won't stop until there's only one of us left.~
 @280  = ~Be strong, my love. It is just one of many tests we'll have to get through.~
@@ -306,7 +306,7 @@
 @305  = ~We will. Once I'm done with you.~
 @306  = ~(Emily tugs you to the bedroll, excitedly wrapping herself around you as she moves to shed your clothes, grinning mischievously.)~
 @307  = ~You <CHARNAME>. It is always you. Always.~
-@308  = ~Every time I wake up next to you, I just like to watch your face. You have such a nice nose. And noses aren't often pretty. And eyelashes too.~ [X3ELS]
+@308  = ~Every time I wake up next to you, I just like to watch your face. You have such a nice nose. And noses aren't often pretty. And eyelashes too.~ [X3Blank]
 @309  = ~Nose and eyelashes?~
 @310  = ~It's not fair to admire me when I can't return the favor.~
 @311  = ~As nice as that is, we should get going.~
@@ -341,7 +341,7 @@
 @340  = ~(She squeezes your hand tightly, her eyes locking with yours as she gives you a swift kiss.)~
 @341  = ~Come, my dearest. We have more work to do, I reckon.~
 @342  = ~I...I do. I just hope things end differently, somehow.~
-@343  = ~I had such a pleasant dream last night. It was odd but welcome, given everything going on lately that was stressing me. So soothing and hopeful and bright in this bit of darkness.~ [X3ELS]
+@343  = ~I had such a pleasant dream last night. It was odd but welcome, given everything going on lately that was stressing me. So soothing and hopeful and bright in this bit of darkness.~ [X3Blank]
 @344  = ~Oh? Tell me about it.~
 @345  = ~I imagine all of your dreams are odd.~
 @346  = ~Well, you'll have to see if you can continue that dream later. We have to get going.~
@@ -368,7 +368,7 @@
 @367  = ~I understand. This can wait. We have plenty of time to talk about this later. I hope at least.~
 @368  = ~I...am a bit disappointed. I really hope you change your mind. I want to try to change your mind. But now isn't the time, I guess.~
 @369  = ~I think the others are about ready to move. Best we start going, hmm?~
-@370  = ~It's sad we had to kill Balthazar. I didn't like his monks much...but the man's philosophy and beliefs...he seemed a good man. It's just a shame he was so stubborn.~ [X3ELS]
+@370  = ~It's sad we had to kill Balthazar. I didn't like his monks much...but the man's philosophy and beliefs...he seemed a good man. It's just a shame he was so stubborn.~ [X3Blank]
 @371  = ~I wish we could have worked together.~
 @372  = ~We had little choice in the matter.~
 @373  = ~It seemed foolish to me. He would have wasted Bhaal's power.~
@@ -381,7 +381,7 @@
 @380  = ~Er...that I love you! And... We're almost through this. Yes. Almost. Yes... It's a bit...terrifying and exciting, is all.~
 @381  = ~Come on. Let's see this through.~
 @382  = ~R-right! Let's see this through.~
-@383  = ~...So this is really it. Or close to it, isn't it?~ [X3ELS]
+@383  = ~...So this is really it. Or close to it, isn't it?~ [X3Blank]
 @384  = ~It is. Are you ready?~
 @385  = ~One way or another.~
 @386  = ~Let's go and take my destiny.~
@@ -446,12 +446,12 @@
 @445  = ~Thank you. I will stay and give you a chance. For now. Gods, I am gullible, but I hope that you are genuine.~
 @446  = ~Did what you say to me before, was that only words, <CHARNAME>? Nothing has really changed. It's just as...unbearable as before.~
 @447  = ~I have been such a fool for agreeing to stay. But that will change now. Goodbye, <CHARNAME>. I regret that we ever met.~
-@448  = ~Yes? Is there something you need?~ [Emila]
+@448  = ~Hey there.~ [Emilcs3]
 @449  = ~I have something I want to ask.~
 @450  = ~Can I ask something private?~
 @451  = ~Do you think you could improve one of our ranged weapons?~
 @452  = ~Never mind.~
-@453  = ~Hello there, <CHARNAME>.~ [X3EHello]
+@453  = ~Emily Castilla, at your service.~ [X3EHello]
 @454  = ~What do you want to talk about?~
 @455  = ~Sure. Shoot your quivering question.~
 @456  = ~Emily, I bought this ring for you. I want you to be my wife, when there's time for us to be married.~
@@ -467,7 +467,7 @@
 @466  = ~I know you can fletch arrows. Can you also make bows and crossbows?~
 @467  = ~Let's talk about something else.~
 @468  = ~Never mind. Let's keep moving.~
-@469  = ~Is there something else, then?~ [X3EITSE]
+@469  = ~Is there something else, then?~ 
 @470  = ~That's all I had to ask. Let's keep moving.~
 @471  = ~My father made several trips to Saradush decades ago. All sorts of meetings between noble and royals alike would take place here.~
 @472  = ~It's a big trade city, and lots of farmers make their stops here. But if you look at it now, its hard to see any of that.~

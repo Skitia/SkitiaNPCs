@@ -17,7 +17,7 @@
 @16   = ~Good. Because your adventures are getting more and more dangerous. But the people we take down make it all worth it.~
 @17   = ~Ow! Maybe some healing first? I'm in a lot of pain.~
 @18   = ~That would definitely be appreciated.~
-@19   = ~Oh, hello there! Hrm, I don't know about this, but you seem slightly familiar.~ [X3Blank]
+@19   = ~Oh, hello there! Hrm, I don't know about this, but you seem slightly familiar.~ [X3EIntro]
 @20   = ~Did you want something? We are having a personal conversation. Leave us be, if you would be so polite.~
 @21   = ~Catherine, wait! That is them! They were there at the commotion! In person! I have *so* many questions for you.~
 @22   = ~Is that you Emily? It's been some time.~
