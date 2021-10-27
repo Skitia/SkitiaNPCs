@@ -3953,7 +3953,7 @@ ForceSpell(Myself,DRYAD_TELEPORT)
 ForceSpell("X3Reb",DRYAD_TELEPORT)
 Wait(1)
 SetGlobal("Deactivate0801","AR0800",3)
-DestroySelf()~ UNSOLVED_JOURNAL @31 EXIT
+DestroySelf()~ UNSOLVED_JOURNAL @40031 EXIT
 
 //Recorder untaken
 I_C_T C6BODHI 0 X3RebC6Bodhi0 
@@ -4058,7 +4058,7 @@ END
 CHAIN X3RFER body.11
 @1234
 END 
-IF ~~ DO ~GiveItemCreate("X3RFER",Player1,0,0,0)DestroySelf()~ UNSOLVED_JOURNAL @32
+IF ~~ DO ~GiveItemCreate("X3RFER",Player1,0,0,0)DestroySelf()~ UNSOLVED_JOURNAL @40032
 EXIT
 
 CHAIN X3RebJ DSR
