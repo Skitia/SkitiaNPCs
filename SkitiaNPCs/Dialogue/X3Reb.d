@@ -34,7 +34,7 @@ CHAIN X3RebP VS.3
 @16
 END 
 IF ~~ DO ~ActionOverride("X3RFER",DestroySelf())JoinParty()
-SetGlobal("X3RebKickedOut","LOCALS",0)~ SOLVED_JOURNAL @35
+SetGlobal("X3RebKickedOut","LOCALS",0)~ SOLVED_JOURNAL @40035
 EXIT 
 
 CHAIN X3RebP VS.4 
