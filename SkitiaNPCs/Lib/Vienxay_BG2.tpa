@@ -280,6 +280,21 @@ SAY NAME1 @923
 SAY NAME2 @923
 SAY DESC @924
 
+COPY_EXISTING ~%MOD_FOLDER%/Items/x3RingV.itm~ ~override/x3RingV.itm~
+SAY NAME1 @932
+SAY NAME2 @932
+SAY DESC @933
+    LPF ADD_ITEM_EQEFFECT
+    INT_VAR
+      opcode = 319
+	  target = 1
+	  timing = 2
+	  parameter2 = 11
+	  power = 1
+	  special = RESOLVE_STR_REF (@869)
+	STR_VAR
+	  resource = X3Vie
+END
 // Creatures 
 COPY ~%MOD_FOLDER%/Cre/X3VG.cre~ ~override/X3VG.cre~
   WRITE_ASCII 0x248 ~X3VG~ #8  //override script
