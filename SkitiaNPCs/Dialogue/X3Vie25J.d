@@ -342,7 +342,7 @@ COPY_TRANS FINSOL01 32
 
 CHAIN IF ~Global("X3Engagement","LOCALS",1)Global("X3VieRomanceActive","GLOBAL",2)~ THEN X3Vie25J engagement 
 @70
-DO ~IncrementGlobal("X3Engagement","LOCALS",1)~
+DO ~SetGlobal("X3Engagement","LOCALS",2)~
 END 
 ++ @71 + engagement_yes 
 ++ @72 + engagement_yes 
@@ -350,6 +350,7 @@ END
 
 CHAIN X3Vie25J engagement_yes 
 @74
+DO ~TransformItem("X3ERING","X3RINGV")~
 EXTERN X3Vie25J engagement_yes2 
 
 CHAIN X3Vie25J engagement_doubts
@@ -358,7 +359,6 @@ EXTERN X3Vie25J engagement_yes
 
 CHAIN X3Vie25J engagement_yes2 
 @76
-DO ~TransformItem("X3ERING","X3RINGV")~
 == X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN @77
 == X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN @78
 EXIT 
