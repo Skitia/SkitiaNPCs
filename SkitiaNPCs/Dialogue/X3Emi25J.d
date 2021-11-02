@@ -371,7 +371,7 @@ END
 I_C_T AMCLER01 8 X3EmiAMCLER01-8
 == X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")!IsValidForPartyDialogue("X3Hel")~ THEN @92
 DO ~IncrementGlobal("X3EmiApp","GLOBAL",9)
-DisplayStringNoNameDlg(Player1,@500519)~ 
+DisplayStringNoNameDlg(Player1,@100119)~ 
 == X3Vie25J IF ~Alignment("X3Vie",NEUTRAL_EVIL)IsValidForPartyDialogue("X3Vie")~ THEN @93
 DO ~IncrementGlobal("X3VieApp","GLOBAL",-4)
 DisplayStringNoNameDlg(Player1,@500506)~ 
@@ -1389,7 +1389,7 @@ END
 IF ~~ Break.6
 SAY @445
 //While it is a medium shown message, the increase is 15.
-IF ~~ DO ~SetGlobal("X3Break","LOCALS",2)SetGlobal("X3EmiApp","GLOBAL",-25)DisplayStringNoNameDlg(Player1,@500516)~
+IF ~~ DO ~SetGlobal("X3Break","LOCALS",2)SetGlobal("X3EmiApp","GLOBAL",-25)DisplayStringNoNameDlg(Player1,@100116)~
 EXIT 
 END 
 
