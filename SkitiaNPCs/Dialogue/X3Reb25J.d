@@ -5,14 +5,14 @@
 I_C_T GORAPP1 14 X3RebGORAPP1-14
 == X3Reb25J IF ~IsValidForPartyDialogue("X3Emi")GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ THEN @0
 DO ~IncrementGlobal("X3RebApp","GLOBAL",5)
-DisplayStringNoNameDlg(Player1,@100116)~
+DisplayStringNoNameDlg(Player1,@400416)~
 END 
 
 
 I_C_T GORAPP1 16 X3RebGORAPP1-16
 == X3Reb25J IF ~IsValidForPartyDialogue("X3Emi")GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ THEN @0
 DO ~IncrementGlobal("X3RebApp","GLOBAL",5)
-DisplayStringNoNameDlg(Player1,@100116)~
+DisplayStringNoNameDlg(Player1,@400416)~
 END 
 
 
@@ -246,7 +246,7 @@ END
 
 I_C_T MARLOWE 52 X3EmiMARLOWE-52 
 == X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")!IsValidForPartyDialogue("X3Emi")~ THEN @57
-DO ~IncrementGlobal("X3EmiApp","GLOBAL",-12)
+DO ~IncrementGlobal("X3RebApp","GLOBAL",-12)
 DisplayStringNoNameDlg(Player1,@400409)~ 
 == X3Vie25J IF ~Alignment("X3Vie",NEUTRAL_EVIL)IsValidForPartyDialogue("X3Vie")~ THEN @58
 DO ~IncrementGlobal("X3VieApp","GLOBAL",6)
