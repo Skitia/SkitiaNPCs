@@ -1321,7 +1321,7 @@ END
 
 
 I_C_T RENAL 22 X3EmiRenal22
-== X3EmiJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @279
+== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN @279
 END 
 
 I_C_T DHARLOT2 2 X3EmiDHARLOT2-2
