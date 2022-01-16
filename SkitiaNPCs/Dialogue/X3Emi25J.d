@@ -244,15 +244,15 @@ END
 
 I_C_T SARTHF1 12 X3VieSARTHF1
 == X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")!IsValidForPartyDialogue("X3Reb")~ THEN @55
-DO ~SetGlobal("X3EmiApp","GLOBAL",-6)DisplayStringNoNameDlg(Player1,@100106)~
+DO ~IncrementGlobal("X3EmiApp","GLOBAL",-6)DisplayStringNoNameDlg(Player1,@100106)~
 == X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")Alignment("X3Vie",NEUTRAL_EVIL)~ THEN @56
-DO ~SetGlobal("X3VieApp","GLOBAL",4)DisplayStringNoNameDlg(Player1,@500516)~
+DO ~IncrementGlobal("X3VieApp","GLOBAL",4)DisplayStringNoNameDlg(Player1,@500516)~
 == SARTHF1 @57
 END 
 
 I_C_T ORPHAN1 1 X3EmiORPHAN1-1
 == X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN @58
-DO ~SetGlobal("X3EmiApp","GLOBAL",-6)DisplayStringNoNameDlg(Player1,@100106)~
+DO ~IncrementGlobal("X3EmiApp","GLOBAL",-6)DisplayStringNoNameDlg(Player1,@100106)~
 == X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN @59
 DO ~SetGlobal("X3RebAppChange","GLOBAL",-5)DisplayStringNoNameDlg(Player1,@400406)~
 == ORPHAN1 @60
@@ -260,23 +260,23 @@ END
 
 I_C_T ORPHAN2 3 X3EmiORPHAN2-3
 == X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN @61
-DO ~SetGlobal("X3EmiApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@100116)~
+DO ~IncrementGlobal("X3EmiApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@100116)~
 == X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN @62
-DO ~SetGlobal("X3RebAppChange","GLOBAL",5)DisplayStringNoNameDlg(Player1,@400416)~
+DO ~IncrementGlobal("X3RebAppChange","GLOBAL",5)DisplayStringNoNameDlg(Player1,@400416)~
 == ORPHAN2 @63
 END
 //Player has to be evil for this, but still adding this in...
 I_C_T SARTEM01 16 X3EmiSARTEM01-16
 == X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN @64
-DO ~SetGlobal("X3EmiApp","GLOBAL",-6)DisplayStringNoNameDlg(Player1,@100106)~
+DO ~IncrementGlobal("X3EmiApp","GLOBAL",-6)DisplayStringNoNameDlg(Player1,@100106)~
 == X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN @65
-DO ~SetGlobal("X3EmiApp","GLOBAL",-4)DisplayStringNoNameDlg(Player1,@400406)~
+DO ~IncrementGlobal("X3EmiApp","GLOBAL",-4)DisplayStringNoNameDlg(Player1,@400406)~
 == SARTEM01 @66
 END
 
 I_C_T SARBUL05 2 X3EmiSarbul05-2 
 == X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN @67
-DO ~SetGlobal("X3EmiApp","GLOBAL",-5)DisplayStringNoNameDlg(Player1,@100106)~
+DO ~IncrementGlobal("X3EmiApp","GLOBAL",-5)DisplayStringNoNameDlg(Player1,@100106)~
 END
 
 
@@ -328,15 +328,15 @@ EXTERN SARVOLO 9
 
 I_C_T HGKAR01 10 X3EmiHGKAR01-10
 == X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN @79
-DO ~SetGlobal("X3EmiApp","GLOBAL",-9)DisplayStringNoNameDlg(Player1,@100109)~
+DO ~IncrementGlobal("X3EmiApp","GLOBAL",-9)DisplayStringNoNameDlg(Player1,@100109)~
 == X3Emi25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN @80
-DO ~SetGlobal("X3RebApp","GLOBAL",-7)DisplayStringNoNameDlg(Player1,@400409)~
+DO ~IncrementGlobal("X3RebApp","GLOBAL",-7)DisplayStringNoNameDlg(Player1,@400409)~
 == HGKAR01 @81
 END
 
 I_C_T YAGCON 5 X3EmiYAGCON-5
 == X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN @82
-DO ~SetGlobal("X3EmiApp","GLOBAL",-3)DisplayStringNoNameDlg(Player1,@100103)~
+DO ~IncrementGlobal("X3EmiApp","GLOBAL",-3)DisplayStringNoNameDlg(Player1,@100103)~
 END
 
 // Amkethran and Beyond 
@@ -356,14 +356,14 @@ END
 
 I_C_T AMMERC04 2 X3EmiAMMERC04
 == X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN @87
-DO ~SetGlobal("X3EmiApp","GLOBAL",-7)DisplayStringNoNameDlg(Player1,@100109)~
+DO ~IncrementGlobal("X3EmiApp","GLOBAL",-7)DisplayStringNoNameDlg(Player1,@100109)~
 END
 
 I_C_T AMASANA 3 X3RebAMASANA-3
 == X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN @88
-DO ~SetGlobal("X3EmiApp","GLOBAL",4)DisplayStringNoNameDlg(Player1,@100116)~
+DO ~IncrementGlobal("X3EmiApp","GLOBAL",4)DisplayStringNoNameDlg(Player1,@100116)~
 == X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN @89
-DO ~SetGlobal("X3RebApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@400416)~
+DO ~IncrementGlobal("X3RebApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@400416)~
 == X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")~ THEN @90
 == AMASANA @91
 END
