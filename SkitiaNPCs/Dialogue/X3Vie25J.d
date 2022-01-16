@@ -104,13 +104,13 @@ END
 
 I_C_T SARTHF1 13 X3VieSARTHF1-12
 == X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")Alignment("X3Vie",NEUTRAL)~ THEN @15
-DO ~SetGlobal("X3VieApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@500516)~
+DO ~IncrementGlobal("X3VieApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@500516)~
 == SARTHF1 @16
 END 
 
 I_C_T SARTHF1 12 X3VieSARTHF1-12
 == X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")Alignment("X3Vie",NEUTRAL_EVIL)!IsValidForPartyDialogue("X3Emi")!IsValidForPartyDialogue("X3Reb")~ THEN @17
-DO ~SetGlobal("X3VieApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@500516)~
+DO ~IncrementGlobal("X3VieApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@500516)~
 == SARTHF1 @18
 END 
 
