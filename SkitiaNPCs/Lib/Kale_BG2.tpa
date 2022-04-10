@@ -327,6 +327,9 @@ COMPILE	EVALUATE_BUFFER
 ~%MOD_FOLDER%/Scripts/X3KalV.baf~ 
 ~%MOD_FOLDER%/Scripts/X3KW1.baf~ 
 // Area Scripts 
+ COPY_EXISTING ~AR0332.are~ ~override~
+      WRITE_ASCII 0x94 ~AR0332~ #8 
+COMPILE ~%MOD_FOLDER%/Scripts/AR0332.baf~	
  EXTEND_BOTTOM ~ar0500.bcs~ ~%MOD_FOLDER%/Scripts/ar0500.baf~
  EXTEND_TOP ~CLEANSE.bcs~ ~%MOD_FOLDER%/Scripts/CLEANSE.baf~
   EXTEND_BOTTOM ~ar0400.bcs~ ~%MOD_FOLDER%/Scripts/ar0400.baf~
