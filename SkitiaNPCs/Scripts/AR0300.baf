@@ -6,11 +6,6 @@ THEN
 RESPONSE #100
 AddMapNote([3482.1124],@963) 
 SetGlobal("X3KGarrisionSpawns","AR0300",1)
-CreateCreature("X3KJIL",[3516.1153],SW)
-CreateCreature("X3KBRYCE",[3516.1153],SW)
-SmallWait(1)
-ActionOverride("X3KJIL",EscapeAreaMove("AR0332",273,369,SW))
-ActionOverride("X3KBRYCE",EscapeAreaMove("AR0332",596,191,S))
 Continue()
 END
 
