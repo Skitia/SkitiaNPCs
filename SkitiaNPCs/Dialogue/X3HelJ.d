@@ -888,13 +888,13 @@ I_C_T RIFTM01 8 X3RebRIFTM018
 END 
 
 I_C_T SASSAR 29 X3EmiJSASSAR29
-== X3HelJ IF ~IsValidForPartyDialogue("X3Hel")~ THEN @187
+== X3HelJ IF ~IsValidForPartyDialogue("X3Hel")~ THEN @188
 DO ~IncrementGlobal("X3HelApp","GLOBAL",-2)
 DisplayStringNoNameDlg(Player1,@200203)~
 END 
 
 I_C_T SASSAR 30 X3EmiJSASSAR30
-== X3HelJ IF ~IsValidForPartyDialogue("X3Hel")~ THEN @188
+== X3HelJ IF ~IsValidForPartyDialogue("X3Hel")~ THEN @187
 DO ~IncrementGlobal("X3HelApp","GLOBAL",4)
 DisplayStringNoNameDlg(Player1,@200216)~
 END 
