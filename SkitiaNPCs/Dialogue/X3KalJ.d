@@ -1960,7 +1960,7 @@ EXIT
 
 //Talk #7B
 
-CHAIN IF ~Global("X3KalTalk","LOCALS",14)!Dead("X3KC")~ THEN X3KalJ FriendshipTalk7B
+CHAIN IF ~GlobalGT("X3KalQuest","GLOBAL",8)Global("X3KalTalk","LOCALS",14)!Dead("X3KC")~ THEN X3KalJ FriendshipTalk7B
 @527
 DO ~ChangeAlignment("X3Kal",LAWFUL_NEUTRAL)IncrementGlobal("X3KalTalk","LOCALS",1)SetGlobal("X3KalAppChange","GLOBAL",6)~
 END  
