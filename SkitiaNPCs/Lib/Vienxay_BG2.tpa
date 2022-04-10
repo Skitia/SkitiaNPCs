@@ -7,6 +7,8 @@ LAF HANDLE_AUDIO
     sox_path = ~SkitiaNPCs/Audio/Vienxay~
 END
 
+ACTION_IF FILE_EXISTS_IN_GAME ~LUX3V.2da~ THEN BEGIN
+
 ADD_KIT ~X3VSM~
 
  // appended to CLASWEAP.2da
@@ -83,6 +85,7 @@ LAF qd_multiclass
 END
 
 
+
 //Spell
 COPY	"%MOD_FOLDER%/Spells/X3VSB.Bam" override
 COPY	"%MOD_FOLDER%/Spells/X3VSBLT.spl" override
@@ -100,6 +103,8 @@ COPY	"%MOD_FOLDER%/2da/LUX3V.2da" override
 	SAY NAME1 @867
 	SAY NAME2 @867
 	SAY 0x50 @868
+	
+END	
 ///SoA 
 
 COPY ~%MOD_FOLDER%/Cre/X3Vie.cre~ ~override/X3Vie.cre~
