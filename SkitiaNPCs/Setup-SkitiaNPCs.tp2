@@ -1,6 +1,6 @@
 BACKUP ~SkitiaNPCs\Backup~
 AUTHOR ~Skitia https://skitias-stories.com/contact.php~
-VERSION ~1.008~
+VERSION ~1.007~
 
 AUTO_TRA ~%MOD_FOLDER%/Tra/%s~
 
@@ -37,7 +37,7 @@ INCLUDE ~%MOD_FOLDER%/Lib/Helga_BG2.tpa~
 INCLUDE ~%MOD_FOLDER%/Lib/Kale_BG2.tpa~
 INCLUDE ~%MOD_FOLDER%/Lib/Recorder_BG2.tpa~
 INCLUDE ~%MOD_FOLDER%/Lib/Vienxay_BG2.tpa~
-
+INCLUDE ~%MOD_FOLDER%/Lib/Isaac_BG2.tpa~
 
 //Vampire events 
 EXTEND_TOP ~AR0809.bcs~ ~%MOD_FOLDER%/Scripts/AR0809.baf~
@@ -155,6 +155,10 @@ END ELSE BEGIN
   COMPILE ~%MOD_FOLDER%/Dialogue/FATESP.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/FATESP.tra~
 END	  
 
+////////////////
+////Crossmod////
+////////////////
+
 ACTION_IF FILE_EXISTS_IN_GAME ~L3PetsyB.dlg~
 THEN BEGIN
   PRINT @996
@@ -173,6 +177,29 @@ THEN BEGIN
 COMPILE ~%MOD_FOLDER%/Dialogue/Crossmod/Sirene.d~
 END 
 */
+
+//Wilson is special.
+
+PRINT ~Wilson interdia.2da append - set Wilson's banter file (BWILSON & BWILSO25)~
+
+APPEND ~interdia.2da~ ~WILSON BWILSON BWILSO25~
+               UNLESS ~WILSON~
+
+COPY_EXISTING ~pdialog.2da~ ~override~
+  REPLACE_TEXTUALLY ~^[ %TAB%]*WILSON[ %TAB%].+$~
+                    ~WILSON                 WILSONP                WILSONJ                WILSOND                WILSO25P               WILSO25J               WILSO25D               WILSON25~
+BUT_ONLY
+
+ACTION_IF NOT (FILE_EXISTS_IN_GAME ~BWILSON.dlg~) THEN BEGIN
+  COMPILE ~SkitiaNPCs/Dialogue/Crossmod/BWILSON.d~
+END
+
+ACTION_IF NOT (FILE_EXISTS_IN_GAME ~BWILSO25.dlg~) THEN BEGIN
+  COMPILE ~SkitiaNPCs/Dialogue/Crossmod/BWILSO25.d~
+END
+ 
+ PRINT @1010 
+COMPILE ~SkitiaNPCs/Dialogue/Crossmod/BWILSON.d~
 //All Optional Additions 
 
 BEGIN @998
@@ -350,7 +377,7 @@ COPY ~%MOD_FOLDER%/cre/X3EmiM.cre~ ~override/X3Emi.cre~
   SAY SELECT_RARE1 @633
   SAY SELECT_RARE2 @634
   SAY REACT_TO_DIE_GENERAL @564
-  WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~c0aa~))  
+  WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~c0aa2~))  
 
 COPY ~%MOD_FOLDER%/cre/X3EmiM25.cre~ ~override/X3Emi25.cre~
    SAY NAME1 @522
@@ -406,7 +433,7 @@ COPY ~%MOD_FOLDER%/cre/X3EmiM25.cre~ ~override/X3Emi25.cre~
   SAY SELECT_RARE1 @633
   SAY SELECT_RARE2 @634
   SAY REACT_TO_DIE_GENERAL @564
-  WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~c0aa~))  
+  WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~c0aa2~))  
 
 BEGIN @1007
 SUBCOMPONENT @1008
