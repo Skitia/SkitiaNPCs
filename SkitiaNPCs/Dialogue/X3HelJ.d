@@ -804,7 +804,7 @@ END
 I_C_T ANOMENJ 176 X3HelAnomenJ176
 == X3HelJ IF ~IsValidForPartyDialogue("X3Hel")~ THEN @167
 DO ~IncrementGlobal("X3HelApp","GLOBAL",-3)
-DisplayStringNoNameDlg(Player1,@200213)~ 
+DisplayStringNoNameDlg(Player1,@200203)~ 
 END 
 
 I_C_T MARIA 14 X3HelMARIA-14
