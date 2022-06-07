@@ -182,23 +182,19 @@ COPY ~%MOD_FOLDER%/Cre/X3Hel.cre~ ~override/X3Hel.cre~
   
   APPEND ~pdialog.2da~
 ~X3Hel       X3HelP             X3HelJ			X3HelD~
-UNLESS ~X3Hel ~
 UNLESS ~25POST~
 
 APPEND ~pdialog.2da~
 ~X3Hel        X3HelP             X3HelJ            X3HelD             X3Hel25P             X3Hel25J		X3Hel25D		X3Hel25~
-UNLESS ~X3Hel~
 IF ~25POST~
 
 APPEND ~interdia.2da~
 ~X3Hel       BX3Hel~
-UNLESS ~X3Hel~
 UNLESS ~25FILE~
 
 APPEND ~interdia.2da~
 ~X3Hel       BX3Hel       BX3Hel25~
-UNLESS ~X3Hel~
-IF ~25FILE~
+IF ~25FILE~ 
  //Epilogues
 COPY ~%MOD_FOLDER%/Epilogue/X3HelEp.2da~ ~override/X3Hel01.2da~
 REPLACE ~99999~ @51
