@@ -5298,6 +5298,7 @@ EXTERN X3RebJ Snuggle2
 
 CHAIN X3RebJ Snuggle2
 @965
+DO ~SetGlobal("X3RestActivated","GLOBAL",0)RestParty()~
 EXIT
 
 CHAIN X3RebJ Sleep1 
@@ -5603,6 +5604,7 @@ IF ~Global("X3RebRomanceActive","GLOBAL",2)~ EXTERN X3RebJ Activity9
 
 CHAIN X3RebJ Activity8 
 @1061
+DO ~SetGlobal("X3RestActivated","GLOBAL",0)RestParty()~ 
 EXIT 
 
 CHAIN X3RebJ Activity9
