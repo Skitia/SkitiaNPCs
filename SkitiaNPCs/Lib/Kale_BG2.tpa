@@ -207,22 +207,18 @@ COPY ~%MOD_FOLDER%/Cre/X3Kal25.cre~ ~override/X3Kal25.cre~
  
   APPEND ~pdialog.2da~
 ~X3Kal       X3KalP             X3KalJ			X3KalD~
-UNLESS ~X3Kal ~
 UNLESS ~25POST~
 
 APPEND ~pdialog.2da~
 ~X3Kal        X3KalP             X3KalJ            X3KalD             X3Kal25P             X3Kal25J		X3Kal25D		X3Kal25~
-UNLESS ~X3Kal~
 IF ~25POST~
 
 APPEND ~interdia.2da~
 ~X3Kal       BX3Kal~
-UNLESS ~X3Kal~
 UNLESS ~25FILE~
 
 APPEND ~interdia.2da~
 ~X3Kal       BX3Kal       BX3Kal25~
-UNLESS ~X3Kal~
 IF ~25FILE~ 
 
 //Epilogues
