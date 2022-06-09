@@ -1,6 +1,6 @@
 BACKUP ~SkitiaNPCs\Backup~
 AUTHOR ~Skitia https://skitias-stories.com/contact.php~
-VERSION ~1.008~
+VERSION ~1.007~
 
 AUTO_TRA ~%MOD_FOLDER%/Tra/%s~
 
@@ -37,7 +37,7 @@ INCLUDE ~%MOD_FOLDER%/Lib/Helga_BG2.tpa~
 INCLUDE ~%MOD_FOLDER%/Lib/Kale_BG2.tpa~
 INCLUDE ~%MOD_FOLDER%/Lib/Recorder_BG2.tpa~
 INCLUDE ~%MOD_FOLDER%/Lib/Vienxay_BG2.tpa~
-//INCLUDE ~%MOD_FOLDER%/Lib/Isaac_BG2.tpa~
+INCLUDE ~%MOD_FOLDER%/Lib/Isaac_BG2.tpa~
 
 //Vampire events 
 EXTEND_TOP ~AR0809.bcs~ ~%MOD_FOLDER%/Scripts/AR0809.baf~
@@ -202,6 +202,7 @@ END
 COMPILE ~SkitiaNPCs/Dialogue/Crossmod/BWILSON.d~
 //All Optional Additions 
 */
+/*
 BEGIN @998
 SUBCOMPONENT @999
 REQUIRE_COMPONENT ~ArtisansKitpack.tp2~ ~0~ @1000
@@ -434,7 +435,7 @@ COPY ~%MOD_FOLDER%/cre/X3EmiM25.cre~ ~override/X3Emi25.cre~
   SAY SELECT_RARE2 @634
   SAY REACT_TO_DIE_GENERAL @564
   WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~c0aa2~))  
-
+*/
 BEGIN @1007
 SUBCOMPONENT @1008
 
