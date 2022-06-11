@@ -37,7 +37,7 @@ INCLUDE ~%MOD_FOLDER%/Lib/Helga_BG2.tpa~
 INCLUDE ~%MOD_FOLDER%/Lib/Kale_BG2.tpa~
 INCLUDE ~%MOD_FOLDER%/Lib/Recorder_BG2.tpa~
 INCLUDE ~%MOD_FOLDER%/Lib/Vienxay_BG2.tpa~
-INCLUDE ~%MOD_FOLDER%/Lib/Isaac_BG2.tpa~
+//INCLUDE ~%MOD_FOLDER%/Lib/Isaac_BG2.tpa~
 
 //Vampire events 
 EXTEND_TOP ~AR0809.bcs~ ~%MOD_FOLDER%/Scripts/AR0809.baf~
