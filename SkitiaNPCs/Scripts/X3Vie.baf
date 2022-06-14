@@ -1,3 +1,12 @@
+//Test Class Change 
+IF 
+Global("X3VieClassChange","GLOBAL",1)
+THEN RESPONSE #100 
+SetGlobal("X3VieClassChange","GLOBAL",2)
+ChangeClass(Myself,THIEF)
+AddKit(SHADOWDANCER)
+END
+
 //Friendship Bonus 
 IF 
 InParty(Myself) 
