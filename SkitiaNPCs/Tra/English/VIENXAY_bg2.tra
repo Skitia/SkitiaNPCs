@@ -134,7 +134,7 @@ Advantages:
 - Slippery Mind: +1 bonus to saving throws
 - May cast Shadow Jump once per day. Gains one use at thief level 5 and an additional use every 5 levels thereafter.
 
-SHADOW JUMP: Manipulating shadow, the shadowmage teleports to the selected living creature, be it ally or enemy, unseen as per the invisibility spell. For the next twelve seconds, they gain +2 to their backstab modifier and remain unseen until they make an attack.
+SHADOW JUMP: Manipulating shadow, the shadowmage teleports to the selected living creature, be it ally or enemy, unseen as per the invisibility spell. For the next twelve seconds, they gain +2 to their backstab modifier and their thaco improves by %20 percent. They remain unseen until they make an attack or thte spell expires.
 
 Disadvantages: 
 - Alignment restricted to any non-lawful and non-good
