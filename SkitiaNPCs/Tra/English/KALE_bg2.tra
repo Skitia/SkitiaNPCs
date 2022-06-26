@@ -37,7 +37,7 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 
 
 @51 = ~Even when Kale's adventures with <CHARNAME> were over, his path home brought him constant reminders from the bards singing of their legend and commoners gossiping and sharing every detail. He thought himself truly in <CHARNAME>'s shadow until he finally arrived in Gullykin, where before him was a large statue of none other than himself.
- His kin had celebrated him like a hero of legend, and every ale and meal was free, and company frequently desired. Adventurers would beg him to join their companies, and invitations for his presence extended from all the realms. But the attention did not distract from what Kale had truly returned home for: his old love. It was there in his village he would handfast her,
+ His kin had celebrated him like a hero of legend, and every ale and meal was free, and company frequently desired. Adventurers would beg him to join their companies, and invitations for his presence extended from all the realms. But the attention did not distract from what Kale had truly returned home for: his old love Alora. It was there in his village he would handfast her,
   and begin his favorite legend of husband, father, and exaggerative story-teller. He passed at an old age, his grave marked with his name graced with a title from his greatest tale: Kale the Dragonslapper, immortalizing his mythical tall tale for all time.~
 
 @52 = ~Kale was not quite ready to put down his adventuring days even from his deep taste under <CHARNAME>'s shadow. When Mazzy formed the Fentan Knights, he was the first of its members, battling monsters across the realms while persistently chasing his leader's heart. Perhaps his greatest feat was leaping atop a rogue dragon its lair, and bringing his tall-tale of life and slapping it in the eye.
@@ -50,7 +50,7 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 @54 =  ~Kale and <CHARNAME> continued adventuring until their recognized and well told of everywhere where they went. So renown were they that their targets would flee and surrender before they even arrived to deal with them, or so Kale would say when asked. Eventually however, the yearning of home took Kale, and he and <CHARNAME> made the journey to Gullykin, where everyone from his community stepped out to greet the heroes of legend.
  It was here that Kale and <CHARNAME> were properly wed, in front of family and friends Kale had known all his life, and even strangers from all the way across the realms. Never before such a day had Gullykin been swarming with life. Afterwards, it was said they would retire to private lives, although every now and then a new wild tale would spin of the company of two venturing off into some new adventures, and a new chapter of their legend.~
 
-@55 = ~When <CHARNAME> ascended, Kale became disillusioned. Destiny, it seemed to him, was a fixed affair, but what was his purpose? He ventured to Gullykin, to retirement, ignoring the calls of neighbors eager to see the great hero and only departing to take care of his mother's needs. It was one such year however, that the village came under threat of a warlord eager to repeat the history of Meiritin. Standing alone against the marchers of malicious men, Kale battled them back on his own strength, rallying his people to crush the would be conquerors using all the lessons he had learned while in <CHARNAME>'s company to keep himself and his kin alive.
+@55 = ~When <CHARNAME> ascended, Kale became disillusioned. Destiny, it seemed to him, was a fixed affair, and it cared not about keeping him with the one he desired above all else. He ventured to Gullykin, to retirement, ignoring the calls of neighbors eager to see the great hero and only departing to take care of his mother's needs. It was one such year however, that the village came under threat of a warlord eager to repeat the history of Meiritin. Standing alone against the marchers of malicious men, Kale battled them back on his own strength, rallying his people to crush the would be conquerors using all the lessons he had learned while in <CHARNAME>'s company to keep himself and his kin alive.
  The battle's conclusion reignited his faith in himself, and he became a guardian of Gullykin and eventually its mayor, his first act to building a statue to his beloved, who even as a god, would always be his eternal source of inspiration.~
 
 @30099 = ~^0xFFFF00FFYou have established a deep bond with Kale. Your synergy has improved his capabilities.^-~
@@ -92,7 +92,7 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 	
 	Advantages:
 	-Hit Die: d12
-	-May use the Ward ability once per day. Gains one use at level 1, one use at level eight, and an additional use every eight levels thereafter.
+	-May use the Ward ability once per day. Gains one use every four levels. (Start at 1st level with one use.)
 	
 	WARD: Designates target as the ward for one turn. It does not stack with itself, and if the ward is changed, the previous ward loses their bonuses. 
 	Level 1: The ward receives +1 damage bonus and -1 THAC0. The warden receives penalties for the same amount, but gains 10% resistance to physical damage and regenerates 1 hitpoint per 6 seconds.
