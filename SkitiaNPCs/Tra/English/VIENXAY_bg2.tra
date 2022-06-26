@@ -80,7 +80,7 @@ In later years she would become a powerful if controversial political figure in 
 back artifacts and impressive tomes of power and knowledge, often with an apprentice or two willing to overlook her past. Her deeds eventually won her trust, and she won a trusted seat in Evermeet's court, until she was dismissed for giving the queen the most vicious rebuke of one of her new edicts. Some elves, they say, are just awful. Vienxay it seems, would always be one of them.~
 
 @53 = ~Vienxay continued her adventures with <CHARNAME> long after leaving Tethyr. There was always one more artifact, one more tome to be found, and Vienxay's thirst for power and knowledge was only matched by her love for <CHARNAME>. Their fame and legend would only grow, and on their wedding day in Baldur's Gate it was said the crowd was numbered in the ten thousands, full of thankful scholars, nobles, admirers, 
-and a few new apprentices of Vienxay's collection, who had eagerly sought her tutelage upon the closure of her adventures. <CHARNAME> would become an influential political figure with Vienxay always by his side...or insulting the local commoners. She gained an unpopular reputation checked only by her love for <CHARNAME>, but some elves were just awful like that, and Vienxay would always be one of them.~
+and a few new apprentices of Vienxay's collection, who had eagerly sought her tutelage upon the closure of her adventures. <CHARNAME> would become an influential political figure with Vienxay always by <PRO_HISHER> side...or insulting the local commoners. She gained an unpopular reputation checked only by her love for <CHARNAME>, but some elves were just awful like that, and Vienxay would always be one of them.~
 
 @54 = ~Vienxay would leave <CHARNAME>'s side only once, to return home to the island she had been banished from for so long. When she returned, she found and embraced the family she had missed and loved, and found little had changed, yet she herself had changed immensely.  She had gained what she had always wanted, but Evermeet was no longer her home. She would return to the only place that could be given such a title,
  and that was <CHARNAME>'s side. She bid farewell to them all and rejoined <PRO_HIMHER>, and it was said they would go on many adventures before settling down in Baldur's Gate, where they were married. <CHARNAME> would become an influential political figure in the city with Vienxay always by his side...or insulting the local nobility, who found her just awful. Some elves were like that, and Vienxay would always be one of them.~
@@ -134,7 +134,7 @@ Advantages:
 - Slippery Mind: +1 bonus to saving throws
 - May cast Shadow Jump once per day. Gains one use at thief level 5 and an additional use every 5 levels thereafter.
 
-SHADOW JUMP: Manipulating shadow, the shadowmage teleports to the selected living creature, be it ally or enemy, unseen as per the invisibility spell. For the next twelve seconds, they gain +2 to their backstab modifier and their thaco improves by %20 percent. They remain unseen until they make an attack or thte spell expires.
+SHADOW JUMP: Manipulating shadow, the shadowmage teleports to the selected living creature, be it ally or enemy, unseen as per the invisibility spell. For the next twelve seconds, they gain +2 to their backstab modifier and their thaco improves by %20 percent. They remain unseen until they make an attack or the spell expires.
 
 Disadvantages: 
 - Alignment restricted to any non-lawful and non-good
@@ -268,3 +268,9 @@ Equipped abilities:
 -An additional Level 7 and Level 8 Magic Slot.
 
 Weight: 1~
+@934 = ~Galinndan~
+@935 = ~Adrie~
+@936 = ~The Book of All Known and Attempted Magical Rituals~
+@937 = ~The Book of All Known and Attempted Magical Rituals extensively details all of the components that have gone into several different magical rites. Dates, names, components, and the outcome are listed, as well as the risks and setbacks that have occured for each ritual. A dull read, but it may be of interest to certain mages.~
+@938 = ~Sack of Magic Components~
+@939 = ~This sack contains enough magical components to satisfy the requirements for a powerful magical ritual. Within is all sorts of materials commonly used for the procedure, as well as for advanced spellcasting.~
