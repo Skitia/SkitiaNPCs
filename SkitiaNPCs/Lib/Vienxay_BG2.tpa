@@ -95,6 +95,7 @@ COPY	"%MOD_FOLDER%/Spells/X3VSBLT.spl" override
 //HLA 
 COPY	"%MOD_FOLDER%/2da/LUX3V.2da" override
 // Kit Fixes	
+	COPY	"%MOD_FOLDER%/Spells/X3VKit.spl" override
 	COPY	"%MOD_FOLDER%/Spells/X3VB1.spl" override
 	COPY	"%MOD_FOLDER%/Spells/X3VB2.spl" override	
 	COPY	"%MOD_FOLDER%/Spells/X3VB3.spl" override
@@ -221,22 +222,25 @@ COPY ~%MOD_FOLDER%/Cre/X3Vie25.cre~ ~override/X3Vie25.cre~
   SAY REACT_TO_DIE_GENERAL @915
   WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~X3VSM~))   
   
-  APPEND ~pdialog.2da~
+      APPEND ~pdialog.2da~
 ~X3Vie       X3VieP             X3VieJ			X3VieD~
+UNLESS ~X3Vie ~
 UNLESS ~25POST~
 
 APPEND ~pdialog.2da~
 ~X3Vie        X3VieP             X3VieJ            X3VieD             X3Vie25P             X3Vie25J		X3Vie25D		X3Vie25~
+UNLESS ~X3Vie~
 IF ~25POST~
 
 APPEND ~interdia.2da~
 ~X3Vie       BX3Vie~
+UNLESS ~X3Vie~
 UNLESS ~25FILE~
 
 APPEND ~interdia.2da~
 ~X3Vie       BX3Vie       BX3Vie25~
-IF ~25FILE~ 
-
+UNLESS ~X3Vie~
+IF ~25FILE~
 
 //Epilogues
 COPY ~%MOD_FOLDER%/Epilogue/X3VieEp.2da~ ~override/X3Vie01.2da~
@@ -281,7 +285,16 @@ COPY_EXISTING ~%MOD_FOLDER%/Items/X3VTOME2.itm~ ~override/X3VTOME2.itm~
 SAY NAME1 @923
 SAY NAME2 @923
 SAY DESC @924
-
+COPY_EXISTING ~%MOD_FOLDER%/Items/X3VBook.itm~ ~override/X3VBook.itm~
+SAY NAME1 @936
+SAY NAME2 @936
+SAY DESC @937
+COPY    "%MOD_FOLDER%/Items/GSACK01.bam" override 
+COPY    "%MOD_FOLDER%/Items/ISACK01.bam" override 
+COPY_EXISTING ~%MOD_FOLDER%/Items/X3VSack.itm~ ~override/X3VSack.itm~
+SAY NAME1 @938
+SAY NAME2 @938
+SAY DESC @939
 COPY_EXISTING ~%MOD_FOLDER%/Items/x3RingV.itm~ ~override/x3RingV.itm~
 SAY NAME1 @932
 SAY NAME2 @932
@@ -327,6 +340,18 @@ COPY ~%MOD_FOLDER%/Cre/X3VSamir.cre~ ~override/X3VSamir.cre~
   WRITE_ASCII 0x2cc ~X3VSamir~ #8   // Dialogue 
   SAY NAME1 @928
   SAY NAME2 @928  
+COPY ~%MOD_FOLDER%/Cre/X3VGal.cre~ ~override/X3VGal.cre~
+  WRITE_ASCII 0x248 ~X3VGal~ #8  //override script
+  WRITE_ASCII 0x280 ~X3VGal~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3VGal~ #8   // Dialogue 
+  SAY NAME1 @934
+  SAY NAME2 @934   
+COPY ~%MOD_FOLDER%/Cre/X3VAdrie.cre~ ~override/X3VAdrie.cre~
+  WRITE_ASCII 0x248 ~X3VAdrie~ #8  //override script
+  WRITE_ASCII 0x280 ~X3VAdrie~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3VAdrie~ #8   // Dialogue 
+  SAY NAME1 @935
+  SAY NAME2 @935    
 COPY ~%MOD_FOLDER%/Cre/X3VDROW.cre~ ~override/X3VDROW.cre~
   WRITE_ASCII 0x248 ~X3VDROW~ #8  //override script
   WRITE_ASCII 0x280 ~X3VDROW~ #32  //DV
