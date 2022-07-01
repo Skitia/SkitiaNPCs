@@ -983,7 +983,7 @@ END
 
 
 I_C_T EDWIN 1 X3EmiEDWIN1
-== X3EmiJ IF ~IsValidForPartyDialogue("X3Vie")Global("X3ViePartyBG1","GLOBAL",1)~ THEN @194
+== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")Global("X3EmiPartyBG1","GLOBAL",1)~ THEN @194
 == EDWIN @195
 END
 
