@@ -1887,6 +1887,7 @@ END
 //Hexxat Conflict 
 CHAIN IF ~Global("X3EmiHexxatConflict","LOCALS",1)~ THEN X3EmiJ DornConflict 
 @420
+DO ~SetGlobal("X3EmiHexxatConflict","LOCALS",0)~
 == HEXXATJ @421
 == X3EmiJ @422
 END 
@@ -1911,7 +1912,7 @@ EXTERN X3EmiJ DismissH
 
 CHAIN HEXXATJ Go_Hexxat 
 @430
-DO ~SetGlobal("X3EmiHexxatConflict","LOCALS",0)SetGlobal("OHH_hexxatjoined","LOCALS",0)
+DO ~SetGlobal("OHH_hexxatjoined","LOCALS",0)
 LeaveParty()
 SetLeavePartyDialogueFile()
 ChangeAIScript("",DEFAULT)
@@ -1929,6 +1930,7 @@ EXIT
 
 CHAIN IF ~Global("X3EmiDornConflict","LOCALS",1)~ THEN X3EmiJ DornConflict 
 @433
+DO ~SetGlobal("X3EmiDornConflict","LOCALS",0)~
 == DORNJ @434
 == X3EmiJ @435
 END 
@@ -1953,7 +1955,7 @@ EXTERN DORNJ Dismiss
 
 CHAIN DORNJ Go_Dorn 
 @440
-DO ~SetGlobal("X3EmiDornConflict","LOCALS",0)SetGlobal("OHH_dornjoined","LOCALS",0)
+DO ~SetGlobal("OHH_dornjoined","LOCALS",0)
 LeaveParty()
 SetLeavePartyDialogueFile()
 ChangeAIScript("",DEFAULT)EscapeAreaMove("AR0900",2556,3388,NE)~
