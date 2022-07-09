@@ -57,7 +57,7 @@ COPY "%MOD_FOLDER%/Spells/X3KW.bam" override
 COPY "SkitiaNPCs/Spells/X3KFKS.SPL" override 
 SAY NAME1 @714
 SAY NAME2 @714
-SAY DESC @715
+SAY 0x50 @715
 // Store 
 COPY ~%MOD_FOLDER%/Items/X3KP.STO~ override
 
