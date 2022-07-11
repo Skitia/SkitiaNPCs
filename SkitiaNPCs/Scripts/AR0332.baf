@@ -2,8 +2,8 @@ IF
 Global("X3KGarrisionSpawns","AR0332",0)
 Global("X3KalQuest","GLOBAL",3)
 THEN RESPONSE #100
-CreateCreature("X3KJIL",[3516.1153],SW)
-CreateCreature("X3KBRYCE",[3516.1153],SW)
+CreateCreature("X3KJIL",[362.341],SW)
+CreateCreature("X3KBRYCE",[404.466],SW)
 SetGlobal("X3KGarrisionSpawns","AR0332",1)
 Continue()
 END 
