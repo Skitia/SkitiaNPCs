@@ -224,7 +224,6 @@ IF
      Global("X3KalTalk","LOCALS",5)
 	 Global("X3KalTalk","LOCALS",7)
 	 Global("X3KalTalk","LOCALS",11)
-	 Global("X3KalTalk","LOCALS",13)
 THEN
   RESPONSE #100
 	IncrementGlobal("X3KalTalk","LOCALS",1)
