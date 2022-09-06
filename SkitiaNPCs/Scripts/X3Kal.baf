@@ -17,32 +17,6 @@ RealSetGlobalTimer("X3KalTalkTimer","GLOBAL",3300)
 SetGlobal("X3KalTalk","LOCALS",1)
 END 
 
-//Docks Talk 
-IF 
-Global("X3KSlumTalk","LOCALS",0)
-GlobalGT("Chapter","GLOBAL",%bg2_chapter_2%)
-InParty(Myself)
-AreaCheck("AR0900")
-THEN RESPONSE #100 
-SetGlobal("X3KSlumTalk","LOCALS",1)
-SetGlobalTimer("X3KalSlumTimer","GLOBAL",THREE_ROUNDS)
-END 
-
-IF 
-GlobalTimerExpired("X3KalSlumTimer","GLOBAL")
-InParty(Myself)
-IsValidForPartyDialogue(Myself)
-IsValidForPartyDialogue(Player1)
-See(Player1)
-CombatCounter(0)
-!See([ENEMY])
-Global("X3KSlumTalk","LOCALS",1)
-THEN RESPONSE #100 
-IncrementGlobal("X3KSlumTalk","LOCALS",1)
-StartDialogueNoSet(Player1)
-END 
-
-
 // Romance Check 
 IF 
 //Requirements 
