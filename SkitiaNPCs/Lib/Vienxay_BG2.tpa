@@ -224,22 +224,18 @@ COPY ~%MOD_FOLDER%/Cre/X3Vie25.cre~ ~override/X3Vie25.cre~
   
       APPEND ~pdialog.2da~
 ~X3Vie       X3VieP             X3VieJ			X3VieD~
-UNLESS ~X3Vie ~
 UNLESS ~25POST~
 
 APPEND ~pdialog.2da~
 ~X3Vie        X3VieP             X3VieJ            X3VieD             X3Vie25P             X3Vie25J		X3Vie25D		X3Vie25~
-UNLESS ~X3Vie~
 IF ~25POST~
 
 APPEND ~interdia.2da~
 ~X3Vie       BX3Vie~
-UNLESS ~X3Vie~
 UNLESS ~25FILE~
 
 APPEND ~interdia.2da~
 ~X3Vie       BX3Vie       BX3Vie25~
-UNLESS ~X3Vie~
 IF ~25FILE~
 
 //Epilogues
