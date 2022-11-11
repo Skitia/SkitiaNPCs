@@ -12,10 +12,10 @@ Continue()
 END
 
 IF 
-GlobalGT("Chapter","GLOBAL",17)
+GlobalGT("X3EmiMesSpawn","GLOBAL",0)
 Global("X3ECHSpawn","GLOBAL",1)
 THEN RESPONSE #100 
-SetGlobal("X3EGVJSpawn","GLOBAL",2)
+SetGlobal("X3ECHSpawn","GLOBAL",2)
 ActionOverride("X3ECH",DestroySelf())
 ActionOverride("X3EGOD",DestroySelf())
 Continue()
