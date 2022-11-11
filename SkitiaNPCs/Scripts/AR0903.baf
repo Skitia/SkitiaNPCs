@@ -13,7 +13,7 @@ Continue()
 END
 
 IF 
-GlobalGT("Chapter","GLOBAL",5)
+GlobalGT("X3EmiMesSpawn","GLOBAL",0)
 Global("X3ECHSpawn","GLOBAL",1)
 THEN RESPONSE #100 
 SetGlobal("X3ECHSpawn","GLOBAL",2)
