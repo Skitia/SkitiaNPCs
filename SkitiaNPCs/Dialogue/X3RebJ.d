@@ -4063,7 +4063,7 @@ EXIT
 
 CHAIN X3RebJ DSR
 @1235
-DO ~SetGlobal("X3DSRomance","GLOBAL",1)~
+DO ~SetGlobal("X3DSRomance","GLOBAL",1)SetGlobal("X3RebAppChange","GLOBAL",6)~
 = @1236
 = @1237
 END 
