@@ -3011,7 +3011,7 @@ EXIT
 
 CHAIN X3RebJ 6.Vienxay3 
 @875
-DO ~SetGlobal("X3VieRomanceActive","GLOBAL",3)~
+DO ~SetGlobal("X3RebRomanceActive","GLOBAL",3)~
 EXIT 
 
 CHAIN X3RebJ 6.2
