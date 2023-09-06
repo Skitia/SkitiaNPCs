@@ -1,0 +1,8 @@
+// Add to BOTTOM of AR0513 
+IF 
+InParty("X3Isa")
+Global("X3IsaContact","AR0513",0)
+THEN RESPONSE #100
+CreateCreature("X3ITrent",[1076.287],SW)
+SetGlobal("X3IsaContact","AR0513",1)
+END 

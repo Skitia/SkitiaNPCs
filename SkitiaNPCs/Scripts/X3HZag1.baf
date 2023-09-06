@@ -1,0 +1,8 @@
+IF 
+OR(2)
+GlobalTimerExpired("X3HZavatarQuestTimer","GLOBAL")
+GlobalGT("X3HZavatarQuest","GLOBAL",1)
+HasItem("X3HNote2",Myself)
+THEN RESPONSE #100
+DestroyItem("X3HNote2")
+END 

@@ -1,0 +1,65 @@
+IF 
+Global("X3IsaQuest","GLOBAL",6)
+Dead("X3IPHL")
+IsValidForPartyDialogue(Player1)
+See(Player1)
+CombatCounter(0)
+!See([ENEMY])
+THEN RESPONSE #100
+StartDialogueNoSet(Player1)
+END 
+
+
+IF 
+Die()
+Global("X3IPlanarHunterEnemy","GLOBAL",1)
+THEN RESPONSE #100
+AddJournalEntry(@6009,QUEST_DONE)
+END 
+
+
+  
+  IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    Allegiance(Myself,NEUTRAL)
+  THEN
+    RESPONSE #100
+	  ActionOverride("X3IMavis",Enemy()
+	  ActionOverride("X3IArbex",Enemy()
+	  ActionOverride("X3ITrent",Enemy()
+ END 
+
+
+IF 
+Global("X3IPlanarHunterEnemy","GLOBAL",1)
+Allegiance(Myself,NEUTRAL)
+THEN RESPONSE #100
+ChangeEnemyAlly(Myself,GOODBUTBLUE)
+ChangeEnemyAlly("X3ITrent",GOODBUTBLUE)
+END 
+
+IF 
+Dead("X3IArbex")
+Global("X3IMavisDeathLine1","LOCALS",0)
+THEN RESPONSE #100
+SetGlobal("X3IMavisDeathLine1","LOCALS",1)
+DisplayStringHead(Myself,@106)
+END 
+
+IF 
+Dead("X3ITrent")
+Global("X3IMavisDeathLine2","LOCALS",0)
+THEN RESPONSE #100
+SetGlobal("X3IMavisDeathLine2","LOCALS",1)
+DisplayStringHead(Myself,@107)
+END 
+
+IF 
+Dead("X3IPHL")
+Global("X3IMavisDeathLine3","LOCALS",0)
+THEN RESPONSE #100
+SetGlobal("X3IMavisDeathLine3","LOCALS",1)
+DisplayStringHead(Myself,@108)
+END 
+
+

@@ -1,0 +1,7 @@
+IF 
+See([PC])
+Range([PC],8)
+NumTimesTalkedTo(0)
+THEN RESPONSE #100
+Dialogue([PC])
+END 

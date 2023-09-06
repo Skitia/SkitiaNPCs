@@ -1,8 +1,22 @@
 IF
-Global("X3VieQuest","GLOBAL",5) // Only spawns if Vienxay knows to even do the quest.
+GlobalGT("X3VieQuest","GLOBAL",3)
+Global("X3VSAMIRSPAWN","AR2200",0) // Only spawns if Vienxay knows to even do the quest.
 THEN
 RESPONSE #100
-SetGlobal("X3VieQuest","GLOBAL",6)
+SetGlobal("X3VSAMIRSPAWN","AR2200",1)
 CreateCreature("X3VSAMIR",[3144.1661],15)
 Continue()
 END
+
+IF 
+OR(2) //Change to 3 once we set used tome global.
+//Or Party Used Tome 
+PartyHasItem("X3VTome")
+GlobalGT("X3VieQuest","GLOBAL",6)
+Global("X3VSAMIRSPAWN","AR2200",1)
+IsActive("X3VSamir")
+THEN RESPONSE #100
+SetGlobal("X3VSAMIRSPAWN","AR2200",2)
+ActionOverride("X3VSamir",DestroySelf())
+Continue()
+END 

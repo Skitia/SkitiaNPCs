@@ -1,3 +1,12 @@
+//Check if Player has scroll item from henchman. 
+IF 
+PartyHasItem("X3HNote2")
+Global("X3HelNoteCheck","GLOBAL",0)
+THEN RESPONSE #100 
+SetGlobal("X3HelNoteCheck","GLOBAL",1)
+AddJournalEntry(@20034,QUEST)
+END 
+
 // Spawning of Arena NPCs
 IF
 Global("X3HRLSpawn","GLOBAL",0)
@@ -76,6 +85,51 @@ FadeToColor([30.0],0)
 Wait(1)
 StartCutSceneMode()
 StartCutScene("X3HCut02")
+Continue()
+END 
+//Zavatar Died 
+IF 
+Dead("X3HZava")
+Global("X3HZavatarWon","GLOBAL",-1)
+THEN RESPONSE #100 
+SetGlobal("X3HZavatarWon","GLOBAL",2)
+Wait(1)
+FadeToColor([30.0],0)
+Wait(1)
+StartCutSceneMode()
+StartCutScene("X3HCut07")
+Continue()
+END 
+//Helga lost to Zavatar 
+IF 
+Dead("X3Hel")
+!Dead("X3Zava")
+Global("X3HZavatarWon","GLOBAL",-1)
+Global("X3HZavatarDuel","GlOBAL",1)
+THEN RESPONSE #100 
+SetGlobal("X3HZavatarWon","GLOBAL",1)
+ActionOverride("X3Hel",LeaveParty())
+Wait(2)
+FadeToColor([30.0],0)
+Wait(1)
+StartCutSceneMode()
+StartCutScene("X3HCut06")
+Continue()
+END 
+//Kale lost to Zavatar 
+IF 
+Dead("X3Kal")
+!Dead("X3Zava")
+Global("X3HZavatarWon","GLOBAL",-1)
+Global("X3HZavatarDuel","GlOBAL",2)
+THEN RESPONSE #100 
+SetGlobal("X3HZavatarWon","GLOBAL",1)
+ActionOverride("X3Kal",LeaveParty())
+Wait(2)
+FadeToColor([30.0],0)
+Wait(1)
+StartCutSceneMode()
+StartCutScene("X3HCut06")
 Continue()
 END 
 // Defeated everyone in second round 

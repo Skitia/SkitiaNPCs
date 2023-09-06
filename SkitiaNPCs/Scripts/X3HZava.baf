@@ -1,0 +1,6 @@
+IF 
+AreaCheck("AR0530")
+Allegiance(Myself,NEUTRAL)
+THEN RESPONSE #100 
+StartDialogueNoSet(Player1)
+END 

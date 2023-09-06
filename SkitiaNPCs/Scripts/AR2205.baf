@@ -1,8 +1,9 @@
 IF
-Global("X3VieQuest","GLOBAL",7) // Only spawns if Vienxay knows to even do the quest.
+GlobalGT("X3VieQuest","GLOBAL",3) // Only spawns if Vienxay knows to even do the quest.
+Global("X3VDROWSPAWN","AR2200",0)
 THEN
 RESPONSE #100
-SetGlobal("X3VieQuest","GLOBAL",8)
+SetGlobal("X3VDROWSPAWN","AR2200",1)
 CreateCreature("X3VDROW",[1362.855],15)
 CreateCreature("X3VDROW2",[1215.776],3)
 CreateCreature("X3VDROW3",[1597.769],9)

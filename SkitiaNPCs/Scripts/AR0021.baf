@@ -1,0 +1,11 @@
+// Add to TOP of AR0021
+IF
+	GlobalGT("X3VieQuest","GLOBAL",3)
+	Global("X3VadrieSpawn","AR0021",0)
+THEN
+	RESPONSE #100
+		SetGlobal("X3VAdrieSpawn","AR0021",1)
+		CreateCreature("X3VAdrie",[660.182],SW)  // Leader
+		Continue()
+END
+

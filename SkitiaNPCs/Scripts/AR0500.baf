@@ -1,3 +1,16 @@
+IF 
+Global("X3HZavatarSpawn","GLOBAL",2)
+THEN RESPONSE #100
+	SetGlobal("X3HZavatarSpawn","GLOBAL",3)
+	CreateCreature("X3HZava",[3576.3145],SW)
+	CreateCreature("X3HZag2",[3583.3197],SW)
+	MoveViewObject(Player1,INSTANT)
+	SmallWait(1)
+	SetInterrupt(TRUE)
+	FadeFromColor([15.0],0)
+	Wait(2)
+	ActionOverride("X3HZava",StartDialogueNoSet(Player1))
+END 
 //This can be added to the bottom, all it does is add a map marker for Chester's home.
 IF 
 Global("X3KalQuest","GLOBAL",7)
@@ -8,3 +21,25 @@ SetGlobal("X3KaleMapNote","AR0500",1)
 AddMapNote([2982.702],@964)
 Continue() 
 END
+
+IF 
+OR(3)
+PartyHasItem("X3HNote2")
+PartyHasItem("X3HNote4")
+Global("X3HZavatarQuest","GLOBAL",2)
+Global("X3HelgaMapNote","AR0500",0)
+THEN RESPONSE #100
+SetGlobal("X3HelgaMapNote","AR0500",1)
+AddMapNote([4014.1471],@1011)
+Continue() 
+END
+
+IF
+	PartyHasItem("X3HNote2")  // Message from Zavatar
+	Global("X3HelNoteCheck","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("X3HelNoteCheck","GLOBAL",1)
+		AddJournalEntry(122454,QUEST)  // Zavatar's henchman had another decoded note on their body. If we can crack it, we may deduce Jillian's location, or another clue.
+END
+

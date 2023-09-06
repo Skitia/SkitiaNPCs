@@ -1,0 +1,6 @@
+IF 
+Global("X3ItemSpawn","AR0907",0)
+THEN RESPONSE #100
+SetGlobal("X3ItemSpawn","AR0907",1)
+ActionOverride("Container10",CreateItem("X3EGem",0,0,0))
+END 

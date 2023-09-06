@@ -316,6 +316,7 @@ END
 // Vienxay Not Romanced or Romanced - Player Ascended & Still Exiled
 
 IF
+!Kit("X3Vie",SHADOWDANCER)
 Global("StartEndBios","AR6200",1)
 InParty("X3Vie")
 OR(2)
@@ -327,6 +328,25 @@ THEN
 RESPONSE #100
 SetGlobal("X3VieBio","GLOBAL",1)
 TextScreen("X3Vie01")
+SmallWait(1)
+Continue()
+END
+
+// Vienxay Not Romanced or Romanced - Player Ascended & Still Exiled, Shadowdancer
+
+IF
+Kit("X3Vie",SHADOWDANCER)
+Global("StartEndBios","AR6200",1)
+InParty("X3Vie")
+OR(2)
+!Global("X3VieRomanceActive","GLOBAL",2)
+Global("PlayerChoseEssence","GLOBAL",1)
+!Global("X3VEvermeetEnd","GLOBAL",1)
+Global("X3VieBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3VieBio","GLOBAL",1)
+TextScreen("X3Vie1S")
 SmallWait(1)
 Continue()
 END
@@ -417,3 +437,77 @@ SmallWait(1)
 Continue()
 END
 
+//Isaac Not Romance, Mavis Dead OR never sided with: Default Ending if playing ToB only.
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Isa")
+!Global("X3IsaRomanceActive","GLOBAL",2)
+OR(2)
+Dead("X3IMavis")
+!Global("X3IPlanarHunterEnemy","GLOBAL",1)
+Global("X3IsaBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3IsaBio","GLOBAL",1)
+TextScreen("X3IsaDM")
+SmallWait(1)
+Continue()
+END
+//Isaac Not Romanced, Mavis Alive, Not Purified
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Isa")
+!Global("X3IsaRomanceActive","GLOBAL",2)
+!Dead("X3IMavis")
+!Global("X3IMavisPureEpilogue","GLOBAL",1)
+Global("X3IsaBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3IsaBio","GLOBAL",1)
+TextScreen("X3IsaAM")
+SmallWait(1)
+Continue()
+END
+//Isaac Not Romanced, Mavis Alive, Purified
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Isa")
+!Global("X3IsaRomanceActive","GLOBAL",2)
+!Dead("X3IMavis")
+Global("X3IMavisPureEpilogue","GLOBAL",1)
+Global("X3IsaBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3IsaBio","GLOBAL",1)
+TextScreen("X3IsaPM")
+SmallWait(1)
+Continue()
+END
+//Isaac Romanced, Stayed
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Isa")
+Global("X3IsaRomanceActive","GLOBAL",2)
+!Global("PlayerChoseEssence","GLOBAL",1)
+Global("X3IsaBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3IsaBio","GLOBAL",1)
+TextScreen("X3IsaRS")
+SmallWait(1)
+Continue()
+END
+//Isaac Romance, Ascended
+IF
+Global("StartEndBios","AR6200",1)
+InParty("X3Isa")
+Global("X3IsaRomanceActive","GLOBAL",2)
+Global("PlayerChoseEssence","GLOBAL",1)
+Global("X3IsaBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("X3IsaBio","GLOBAL",1)
+TextScreen("X3IsaRA")
+SmallWait(1)
+Continue()
+END

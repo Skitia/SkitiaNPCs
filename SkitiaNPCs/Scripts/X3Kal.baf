@@ -36,6 +36,9 @@ InParty(Myself)
 !Global("X3EmiRomanceActive","GLOBAL",2) // In case she is recruited later.
 !Global("X3RebRomanceActive","GLOBAL",2)
 !Global("X3VieRomanceActive","GLOBAL",2)
+!Global("X3IsaRomanceActive","GLOBAL",2)
+!Global("NaliaRomanceActive","GLOBAL",2)
+!Global("PGNaliaRomanceActive","GLOBAL",2)
 !Global("DornRomanceActive","GLOBAL",2)
 !Global("HexxatRomanceActive","GLOBAL",2)
 !Global("L3PetsyRomanceActive","GLOBAL",2)
@@ -359,96 +362,150 @@ THEN
 		StartDialogNoSet([PC])
 END
 
+// Flirts
+IF
+InParty(Myself)
+Global("X3KalFlirtsStart","LOCALS",0)
+OR(2)
+Global("X3KalRomanceActive","GLOBAL",2)
+Global("X3KalRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("X3KalFlirtsStart","LOCALS",1)
+RealSetGlobalTimer("X3KalFlirtTimer","GLOBAL",300)
+END
+
+IF
+InParty(Myself)
+RealGlobalTimerExpired("X3KalFlirtTimer","GLOBAL")
+Global("X3KalFlirtsStart","LOCALS",0)
+Global("X3DisableFlirts","LOCALS",0)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+OR(3)
+Global("X3KalRomanceActive","GLOBAL",2)
+Global("X3KalRomanceActive","GLOBAL",1)
+See(Player1)
+CombatCounter(0)
+!See([ENEMY])
+THEN
+RESPONSE #100
+SetGlobal("X3KalStartFlirt","GLOBAL",1)
+END
+
+IF
+InParty(Myself)
+Global("X3KalStartFlirt","GLOBAL",1)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END
+
+IF
+InParty(Myself)
+RealGlobalTimerExpired("X3KalFlirtTimer","GLOBAL")
+Global("X3DisableFlirts","LOCALS",0)
+OR(2)
+Global("X3KalRomanceActive","GLOBAL",2)
+Global("X3KalRomanceActive","GLOBAL",1)
+!CombatCounter(0)
+THEN
+RESPONSE #100
+RealSetGlobalTimer("X3KalFlirtTimer","GLOBAL",600)
+END
 //Experience
 
 IF
-  Global("BD_JOINXP","LOCALS",0)
-  InParty(Myself)
-  XPGT(Player1,1249999)
-  XPLT(Myself,1250000)
+	Global("BD_JOINXP","LOCALS",0)
+	InParty(Myself)
+	XPGT(Player1,1249999)
+	XPLT(Myself,1250000)
 THEN
-  RESPONSE #100
-    SetInterrupt(FALSE)
-    SetGlobal("BD_JOINXP","LOCALS",1)
-    ChangeStat(Myself,XP,1250000,SET)
-    SetInterrupt(TRUE)
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_JOINXP","LOCALS",1)
+		ChangeStat(Myself,XP,1250000,SET)
+		SetInterrupt(TRUE)
 END
 
 IF
-  Global("BD_JOINXP","LOCALS",0)
-  InParty(Myself)
-  XPGT(Player1,999999)
-  XPLT(Myself,1000000)
+	Global("BD_JOINXP","LOCALS",0)
+	InParty(Myself)
+	XPGT(Player1,999999)
+	XPLT(Myself,1000000)
 THEN
-  RESPONSE #100
-    SetInterrupt(FALSE)
-    SetGlobal("BD_JOINXP","LOCALS",1)
-    ChangeStat(Myself,XP,1000000,SET)
-    SetInterrupt(TRUE)
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_JOINXP","LOCALS",1)
+		ChangeStat(Myself,XP,1000000,SET)
+		SetInterrupt(TRUE)
 END
 
 IF
-  Global("BD_JOINXP","LOCALS",0)
-  InParty(Myself)
-  XPGT(Player1,749999)
-  XPLT(Myself,750000)
+	Global("BD_JOINXP","LOCALS",0)
+	InParty(Myself)
+	XPGT(Player1,749999)
+	XPLT(Myself,750000)
 THEN
-  RESPONSE #100
-    SetInterrupt(FALSE)
-    SetGlobal("BD_JOINXP","LOCALS",1)
-    ChangeStat(Myself,XP,750000,SET)
-    SetInterrupt(TRUE)
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_JOINXP","LOCALS",1)
+		ChangeStat(Myself,XP,750000,SET)
+		SetInterrupt(TRUE)
 END
 
 IF
-  Global("BD_JOINXP","LOCALS",0)
-  InParty(Myself)
-  XPGT(Player1,499999)
-  XPLT(Myself,500000)
+	Global("BD_JOINXP","LOCALS",0)
+	InParty(Myself)
+	XPGT(Player1,499999)
+	XPLT(Myself,500000)
 THEN
-  RESPONSE #100
-    SetInterrupt(FALSE)
-    SetGlobal("BD_JOINXP","LOCALS",1)
-    ChangeStat(Myself,XP,500000,SET)
-    SetInterrupt(TRUE)
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_JOINXP","LOCALS",1)
+		ChangeStat(Myself,XP,500000,SET)
+		SetInterrupt(TRUE)
 END
 
 IF
-  Global("BD_JOINXP","LOCALS",0)
-  InParty(Myself)
-  XPGT(Player1,249999)
-  XPLT(Myself,250000)
+	Global("BD_JOINXP","LOCALS",0)
+	InParty(Myself)
+	XPGT(Player1,249999)
+	XPLT(Myself,250000)
 THEN
-  RESPONSE #100
-    SetInterrupt(FALSE)
-    SetGlobal("BD_JOINXP","LOCALS",1)
-    ChangeStat(Myself,XP,250000,SET)
-    SetInterrupt(TRUE)
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_JOINXP","LOCALS",1)
+		ChangeStat(Myself,XP,250000,SET)
+		SetInterrupt(TRUE)
 END
 
 IF
-  Global("BD_JOINXP","LOCALS",0)
-  InParty(Myself)
-  XPGT(Player1,124999)
-  XPLT(Myself,125000)
+	Global("BD_JOINXP","LOCALS",0)
+	InParty(Myself)
+	XPGT(Player1,124999)
+	XPLT(Myself,125000)
 THEN
-  RESPONSE #100
-    SetInterrupt(FALSE)
-    SetGlobal("BD_JOINXP","LOCALS",1)
-    ChangeStat(Myself,XP,125000,SET)
-    SetInterrupt(TRUE)
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_JOINXP","LOCALS",1)
+		ChangeStat(Myself,XP,125000,SET)
+		SetInterrupt(TRUE)
 END
 
 IF
-  Global("BD_JOINXP","LOCALS",0)
-  InParty(Myself)
-  XPLT(Player1,89001)
+	Global("BD_JOINXP","LOCALS",0)
+	InParty(Myself)
+	XPLT(Player1,89001)
 THEN
-  RESPONSE #100
-    SetInterrupt(FALSE)
-    SetGlobal("BD_JOINXP","LOCALS",1)
-    SetInterrupt(TRUE)
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_JOINXP","LOCALS",1)
+		SetInterrupt(TRUE)
 END
+
 
 //App Shifts 
 IF 

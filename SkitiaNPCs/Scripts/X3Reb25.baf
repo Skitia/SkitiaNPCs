@@ -348,3 +348,59 @@ CombatCounter(0)
 THEN RESPONSE #100 
 SetGlobal("X3BreakUp","LOCALS",0)
 END 
+
+
+
+// Flirts
+IF
+InParty(Myself)
+Global("X3RebFlirtsStart","LOCALS",0)
+OR(2)
+Global("X3RebRomanceActive","GLOBAL",2)
+Global("X3RebRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("X3RebFlirtsStart","LOCALS",1)
+RealSetGlobalTimer("X3RebFlirtTimer","GLOBAL",300)
+END
+
+IF
+InParty(Myself)
+RealGlobalTimerExpired("X3NaliaFlirtTimer","GLOBAL")
+Global("X3RebFlirtsStart","LOCALS",0)
+Global("X3DisableFlirts","LOCALS",0)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+OR(3)
+Global("X3RebRomanceActive","GLOBAL",2)
+Global("X3RebRomanceActive","GLOBAL",1)
+See(Player1)
+CombatCounter(0)
+!See([ENEMY])
+THEN
+RESPONSE #100
+SetGlobal("X3RebStartFlirt","GLOBAL",1)
+END
+
+IF
+InParty(Myself)
+Global("X3RebStartFlirt","GLOBAL",1)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END
+
+IF
+InParty(Myself)
+RealGlobalTimerExpired("X3RebFlirtTimer","GLOBAL")
+Global("X3DisableFlirts","LOCALS",0)
+OR(2)
+Global("X3RebRomanceActive","GLOBAL",2)
+Global("X3RebRomanceActive","GLOBAL",1)
+!CombatCounter(0)
+THEN
+RESPONSE #100
+RealSetGlobalTimer("X3RebFlirtTimer","GLOBAL",600)
+END

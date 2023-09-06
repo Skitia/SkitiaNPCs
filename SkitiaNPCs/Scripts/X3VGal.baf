@@ -1,0 +1,36 @@
+IF 
+   See([PC])
+   !See("X3VSage")
+   OR(2)
+   Global("X3VieQuest","GLOBAL",3)
+   Global("X3VGaveTome","GLOBAL",1)
+   Global("X3VGalConTrigger","GLOBAL",1)
+   Allegiance(Myself,NEUTRAL)
+  THEN
+    RESPONSE #100
+	StartDialogueNoSet([PC])	
+END 
+
+IF 
+Die()
+Global("X3VieQuest","GLOBAL",9)
+THEN RESPONSE #100
+SetGlobal("X3VieQuest","GLOBAL",10)
+DisplayStringHead(Myself,@96)
+END 
+
+IF 
+Dead("X3VSage")
+GlobalLT("X3VieQuest","GLOBAL",8)
+THEN RESPONSE #100 
+SetGlobal("X3VieQuest","GLOBAL",8) //He has no lines at 8, so there should be no fear of anything being going past this point.)
+DisplayStringHead(Myself,@75)
+Enemy()
+END 
+
+IF 
+Global("X3VINT","GLOBAL",1)
+THEN RESPONSE #100
+DestroySelf()
+END 
+

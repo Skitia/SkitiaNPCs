@@ -1,0 +1,41 @@
+IF 
+Global("X3HZavatarSpawn","GLOBAL",1)
+THEN RESPONSE #100 
+SetInterrupt(FALSE)ClearAllActions()FadeToColor([15.0],0)Wait(2)SetGlobal("X3HZavatarSpawn","GLOBAL",2)
+	ActionOverride("X3HZag1",MoveBetweenAreas("AR0500",[3520.3169],SW))
+	ActionOverride(Player2,LeaveAreaLUA("AR0500","",[3390.3321],NE))
+	ActionOverride(Player3,LeaveAreaLUA("AR0500","",[3313.3206],NE))
+	ActionOverride(Player4,LeaveAreaLUA("AR0500","",[2878.3427],NE))
+	ActionOverride(Player5,LeaveAreaLUA("AR0500","",[3264.3416],NE))
+	ActionOverride(Player6,LeaveAreaLUA("AR0500","",[3301.3237],NE))
+	ActionOverride(Player1,LeaveAreaLUA("AR0500","",[3392.3262],NE))
+END 
+
+IF 
+PartyHasItem("X3HNote2")
+Global("X3HelNoteCheck","GLOBAL",0)
+THEN RESPONSE #100 
+SetGlobal("X3HelNoteCheck","GLOBAL",1)
+AddJournalEntry(@20034,QUEST)
+END 
+
+IF 
+Global("X3HContactEscapeAttempt","GLOBAL",1)
+!InMyArea("X3HZag1")
+!Dead("X3HZag1")
+THEN RESPONSE #100 
+AddJournalEntry(@20033,QUEST_DONE)
+END 
+
+IF 
+Global("X3HelArvoraQuest","GLOBAL",3)
+Global("X3HContactSpawn","AR0511",0)
+THEN RESPONSE #100
+SetGlobal("X3HContactSpawn","AR0511",1)
+CreateCreature("X3HZag1",[861.940],NW)
+Wait(1)
+ActionOverride("X3HZag1",CreateItem("X3HNote2",0,0,0))
+Continue()
+END 
+
+

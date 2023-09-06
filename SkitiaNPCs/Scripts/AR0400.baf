@@ -1,4 +1,4 @@
-// Kale and Helga both use AR0400, but Kale's library installs it.
+// Kale, Helga, and Isaac all use AR0400, but Kale's library installs it.
 IF
 Global("X3KalSpawns","AR0400",0)
 // EET Checks.
@@ -21,3 +21,15 @@ SetGlobal("X3HPOORAlertSpawns","AR0400",1)
 CreateCreature("X3HPOOR",[1822.2729],SW)
 Continue()
 END 
+
+IF
+Global("X3IsaStart","GLOBAL",0)
+// EET Checks.
+GlobalLT("chapter","GLOBAL",20)
+!StateCheck("X3Isaac",STATE_REALLY_DEAD)
+THEN RESPONSE #100
+SetGlobal("X3IsaStart","GLOBAL",1)
+ForceRandomEncounter("AR0045")
+Continue()
+END 
+

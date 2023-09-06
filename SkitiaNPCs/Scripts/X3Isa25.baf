@@ -1,0 +1,227 @@
+
+//App Shifts 
+IF 
+InParty(Myself)
+Switch("X3IsaAppChange","GLOBAL")
+THEN RESPONSE #1
+SetGlobal("X3IsaAppChange","GLOBAL",0)
+IncrementGlobal("X3IsaApp","GLOBAL",-10)
+DisplayStringNoNameDlg(Player1,@600609)
+RESPONSE #2
+SetGlobal("X3IsaAppChange","GLOBAL",0)
+IncrementGlobal("X3IsaApp","GLOBAL",-8)
+DisplayStringNoNameDlg(Player1,@600609)
+RESPONSE #3
+SetGlobal("X3IsaAppChange","GLOBAL",0)
+IncrementGlobal("X3IsaApp","GLOBAL",-6)
+DisplayStringNoNameDlg(Player1,@600606)
+RESPONSE #4
+SetGlobal("X3IsaAppChange","GLOBAL",0)
+IncrementGlobal("X3IsaApp","GLOBAL",-4)
+DisplayStringNoNameDlg(Player1,@600606)
+RESPONSE #5
+SetGlobal("X3IsaAppChange","GLOBAL",0)
+IncrementGlobal("X3IsaApp","GLOBAL",-2)
+DisplayStringNoNameDlg(Player1,@600603)
+RESPONSE #6
+SetGlobal("X3IsaAppChange","GLOBAL",0)
+RESPONSE #7
+SetGlobal("X3IsaAppChange","GLOBAL",0)
+IncrementGlobal("X3IsaApp","GLOBAL",2)
+DisplayStringNoNameDlg(Player1,@600613)
+RESPONSE #8
+SetGlobal("X3IsaAppChange","GLOBAL",0)
+IncrementGlobal("X3IsaApp","GLOBAL",4)
+DisplayStringNoNameDlg(Player1,@600616)
+RESPONSE #9
+SetGlobal("X3IsaAppChange","GLOBAL",0)
+IncrementGlobal("X3IsaApp","GLOBAL",6)
+DisplayStringNoNameDlg(Player1,@600616)
+RESPONSE #10
+SetGlobal("X3IsaAppChange","GLOBAL",0)
+IncrementGlobal("X3IsaApp","GLOBAL",8)
+DisplayStringNoNameDlg(Player1,@600619)
+RESPONSE #11
+SetGlobal("X3IsaAppChange","GLOBAL",0)
+IncrementGlobal("X3IsaApp","GLOBAL",10)
+DisplayStringNoNameDlg(Player1,@600619)
+END 
+
+
+// If not in party, it should be reset with no approval changes. 
+IF 
+!InParty(Myself) 
+!Global("X3IsaAppChange","GLOBAL",0)
+THEN RESPONSE #100 
+SetGlobal("X3IsaAppChange","GLOBAL",0)
+END
+
+//Reset to 100 if past max/reward bonus stats.
+IF 
+GlobalGT("X3IsaApp","GLOBAL",100)
+InParty(Myself)
+Switch("X3IsaAppMaxBonus","GLOBAL")
+THEN RESPONSE #0
+SetGlobal("X3IsaApp","GLOBAL",100)
+SetGlobal("X3IsaAppMaxBonus","GLOBAL",1)
+ChangeStat(Myself,STR,1,ADD)
+ChangeStat(Myself,INT,1,ADD)
+DisplayStringNoNameDlg(Player1,@60099)
+RESPONSE #1 
+SetGlobal("X3IsaApp","GLOBAL",100)
+END 
+
+
+IF 
+GlobalLT("X3IsaApp","GLOBAL",-40)
+InParty(Myself)
+Switch("X3Leave","LOCALS")
+THEN RESPONSE #0
+SetGlobal("X3Break","LOCALS",1)
+StartDialogueNoSet(Player1)
+RESPONSE #2
+SetGlobal("X3Break","LOCALS",3)
+StartDialogueNoSet(Player1) // Leaves for Good
+END 
+
+//Reputation Changes 
+IF
+ReputationGT(Player1,16)
+Global("X3BadRepAppLoss","LOCALS",0)
+InParty(Myself)
+Alignment(Myself,LAWFUL_EVIL)
+THEN RESPONSE #100
+SetGlobal("X3BadRepAppLoss","LOCALS",1)
+IncrementGlobal("X3IsaApp","GLOBAL",-3)
+DisplayStringNoNameDlg(Player1,@600603)
+END
+IF
+ReputationGT(Player1,19)
+Alignment(Myself,LAWFUL_EVIL)
+Global("X3BadRepAppLoss","LOCALS",1)
+InParty(Myself)
+THEN RESPONSE #100
+SetGlobal("X3BadRepAppLoss","LOCALS",2)
+IncrementGlobal("X3IsaApp","GLOBAL",-6)
+DisplayStringNoNameDlg(Player1,@600606)
+END
+
+//Engagement Ring 
+IF 
+HasItemEquiped("X3ERing",Myself)
+Global("X3Engagement","LOCALS",0)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+CombatCounter(0)
+!See([ENEMY])
+THEN RESPONSE #100 
+IncrementGlobal("X3Engagement","LOCALS",1)
+StartDialogueNoSet(Player1)
+END  
+
+IF 
+HasItemEquiped("X3ERing",Myself)
+Global("X3Engagement","LOCALS",2)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+CombatCounter(0)
+!See([ENEMY])
+THEN RESPONSE #100 
+DisplayString("X3Isa",@983)
+ActionOverride(Player1,TakePartyItem("X3ERing"))
+END 
+
+//Approval Low/In Romance: Breakup Conversation
+IF 
+Global("X3IsaRomanceActive","GLOBAL",2)
+GlobalLT("X3IsaApp","GLOBAL",50)
+InParty(Myself)
+CombatCounter(0)
+!See([ENEMY])
+Global("X3BreakUp","LOCALS",0)
+THEN RESPONSE #100 
+SetGlobalTimer("X3BreakUp","GLOBAL",THREE_DAYS)
+SetGlobal("X3BreakUp","LOCALS",1)
+END 
+
+IF 
+GlobalTimerExpired("X3BreakUp","GLOBAL")
+Global("X3IsaRomanceActive","GLOBAL",2)
+GlobalLT("X3IsaApp","GLOBAL",50)
+See(Player1)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+CombatCounter(0)
+!AreaType(DUNGEON)
+!See([ENEMY])
+Global("X3BreakUp","LOCALS",1)
+THEN RESPONSE #100 
+SetGlobal("X3BreakUp","LOCALS",2)
+StartDialogueNoSet(Player1)
+END 
+
+IF 
+Global("X3BreakUp","LOCALS",1)
+GlobalTimerExpired("X3BreakUp","GLOBAL")
+GlobalGT("X3IsaApp","GLOBAL",49)
+InParty("X3Isa")
+CombatCounter(0)
+!See([ENEMY])
+THEN RESPONSE #100 
+SetGlobal("X3BreakUp","LOCALS",0)
+END 
+
+
+// Flirts
+IF
+InParty(Myself)
+Global("X3IsaFlirtsStart","LOCALS",0)
+OR(2)
+Global("X3IsaRomanceActive","GLOBAL",2)
+Global("X3IsaRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("X3IsaFlirtsStart","LOCALS",1)
+RealSetGlobalTimer("X3IsaFlirtTimer","GLOBAL",300)
+END
+
+IF
+InParty(Myself)
+RealGlobalTimerExpired("X3NaliaFlirtTimer","GLOBAL")
+Global("X3IsaFlirtsStart","LOCALS",0)
+Global("X3DisableFlirts","LOCALS",0)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+OR(3)
+Global("X3IsaRomanceActive","GLOBAL",2)
+Global("X3IsaRomanceActive","GLOBAL",1)
+See(Player1)
+CombatCounter(0)
+!See([ENEMY])
+THEN
+RESPONSE #100
+SetGlobal("X3IsaStartFlirt","GLOBAL",1)
+END
+
+IF
+InParty(Myself)
+Global("X3IsaStartFlirt","GLOBAL",1)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END
+
+IF
+InParty(Myself)
+RealGlobalTimerExpired("X3IsaFlirtTimer","GLOBAL")
+Global("X3DisableFlirts","LOCALS",0)
+OR(2)
+Global("X3IsaRomanceActive","GLOBAL",2)
+Global("X3IsaRomanceActive","GLOBAL",1)
+!CombatCounter(0)
+THEN
+RESPONSE #100
+RealSetGlobalTimer("X3IsaFlirtTimer","GLOBAL",600)
+END

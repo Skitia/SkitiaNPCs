@@ -8,7 +8,7 @@ THEN
 	Wait(3)
 	FadeFromColor([30.0],0)
 	Wait(1)
-	IncrementGlobal("X3VieQuest","GLOBAL",1)
+	IncrementGlobal("X3VieQuestStart","LOCALS",1)
 	Wait(1)
 	SetInterrupt(TRUE)
 	EndCutSceneMode()

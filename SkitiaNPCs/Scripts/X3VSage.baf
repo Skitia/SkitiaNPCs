@@ -1,0 +1,27 @@
+IF 
+HPLT(Myself,20)
+Global("X3VHelp","LOCALS",0)
+THEN RESPONSE #100
+DisplayStringHead(Myself,@109)
+SetGlobal("X3VHelp","LOCALS",1)
+END 
+
+IF
+AreaCheck("AR1105")
+OR(2)
+GlobalGT("X3VieQuest","GLOBAL",6)
+Global("X3VINT","GLOBAL",1)
+THEN RESPONSE #100 
+DestroySelf()
+END 
+
+IF 
+Global("X3VieQuest","GLOBAL",10)
+Dead("X3VGal")
+IsValidForPartyDialogue(Player1)
+CombatCounter(0)
+!See([ENEMY])
+THEN RESPONSE #100
+StartDialogueNoSet(Player1)
+END 
+

@@ -108,3 +108,31 @@ THEN
 		ActionOverride("X3Vie",LeaveParty())
 		SetGlobal("OHD_ritual","MYAREA",6)
 END
+
+//Isaac
+IF
+	Global("OHD_ritual","MYAREA",3)
+	IsOverMe("X3Isa")  // Isaac
+THEN
+	RESPONSE #100
+		SetGlobal("OHD_ritual","MYAREA",4)
+		SetGlobal("X3_ritual_target","MYAREA",5)
+END
+
+IF
+	Global("X3_ritual_target","MYAREA",4)
+	Global("OHD_ritual","MYAREA",5)
+THEN
+	RESPONSE #100
+		ClearAllActions()
+		DisplayStringHead("X3Isa",@1012)   
+		Wait(1)
+		ActionOverride("X3Isa",MakeUnselectable(5))
+		Wait(1)
+		CreateVisualEffectObject("SPFLESHS","X3Isa")  // Isaac
+		ForceSpell("X3Isa",HELL_HOLD)  // Isaac
+		Wait(1)
+		Kill("X3Isa")  // Isaac
+		ActionOverride("X3Isa",LeaveParty())
+		SetGlobal("OHD_ritual","MYAREA",6)
+END

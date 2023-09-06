@@ -1,0 +1,9 @@
+  IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    Allegiance(Myself,NEUTRAL)
+  THEN
+    RESPONSE #100
+	  ActionOverride("X3IMavis",Enemy()
+	  ActionOverride("X3IArbex",Enemy()
+	  ActionOverride("X3ITrent",Enemy()
+ END 

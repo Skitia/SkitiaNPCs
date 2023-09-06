@@ -1,0 +1,18 @@
+  IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    Allegiance(Myself,NEUTRAL)
+	OR(2)
+	InParty("X3Hel")
+	InParty("X3Kal")
+  THEN
+    RESPONSE #100
+      Enemy()
+	  ActionOverride("X3Hel",ChangeAIScript("",DEFAULT))
+	  ActionOverride("X3Hel",ChangeAIScript("",GENERAL))
+	  ActionOverride("X3Hel",LeaveParty())
+	  ActionOverride("X3Hel",Enemy())
+	  ActionOverride("X3Kal",ChangeAIScript("",DEFAULT))
+	  ActionOverride("X3Kal",ChangeAIScript("",GENERAL))
+	  ActionOverride("X3Kal",LeaveParty())
+	  ActionOverride("X3Kal",Enemy())	  
+ END 

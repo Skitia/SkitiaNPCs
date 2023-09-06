@@ -1,6 +1,8 @@
 
 IF
+OR(2)
 Contains("X3KBody",Myself)
+Contains("X3IBody",Myself)
 Global("X3CleanseVampire","AR1401",0)
 THEN
 RESPONSE #100
@@ -22,5 +24,25 @@ Wait(1)
 CreateVisualEffect("SPFLESHS",[2565.1677])
 Wait(1)
 MoveGlobal("AR1401","X3Kal",[2565.1677])  // And here's Kale!
+SetInterrupt(TRUE)
+END
+
+
+
+IF
+Contains("X3IBody",Myself)
+Contains("MISCBP",Myself)   // Bodhi's heart
+THEN
+RESPONSE #100
+SetInterrupt(FALSE) // We don't want this to be interrupted
+SetGlobal("X3CleanseVampire","AR1401",2)
+DestroyItem("X3IBody")      // the body mysteriously disappears
+DestroyItem("MISCBP")
+CreateVisualEffect("SPMETSW2",[2592.1701]) // some pretty visual effects
+CreateVisualEffect("SPMETSW2",[2645.1742])
+Wait(1)
+CreateVisualEffect("SPFLESHS",[2565.1677])
+Wait(1)
+MoveGlobal("AR1401","X3Isa",[2565.1677])  // And here's Isaac!
 SetInterrupt(TRUE)
 END

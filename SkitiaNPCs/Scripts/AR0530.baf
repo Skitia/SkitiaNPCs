@@ -1,0 +1,21 @@
+IF 
+OR(2)
+Dead("X3HZag1")
+Global("X3HZavatarQuest","GLOBAL",2)
+Global("X3HItemSpawn","AR0530",0)
+THEN RESPONSE #100
+SetGlobal("X3HItemSpawn","AR0530",1)
+ActionOverride("Chest1",CreateItem("X3Horb",0,0,0))
+END 
+
+IF 
+Dead("X3HZag1")
+!Dead("X3HZava")
+GlobalLT("X3HZavatarQuest","GLOBAL",2)
+Global("X3HZavatarAmbush","AR0530",0)
+THEN RESPONSE #100
+SetGlobal("X3HZavatarAmbush","AR0530",1)
+CreateCreature("X3HZava",[517.315],SW)
+CreateCreature("X3HZag2",[602.259],SW)
+Continue()
+END 

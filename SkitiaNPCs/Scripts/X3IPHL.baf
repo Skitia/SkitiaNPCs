@@ -1,0 +1,66 @@
+IF 
+Global("X3IMavisEnemy","GLOBAL",1)
+Dead("X3IMavis")
+Dead("X3IArbex")
+Dead("X3ITrent")
+THEN RESPONSE #100
+StartDialogueNoSet(Player1)
+END 
+
+IF 
+Global("X3IPlanarHunterEnemy","GLOBAL",1)
+Allegiance(Myself,NEUTRAL)
+THEN RESPONSE #100
+Enemy()
+ReallyForceSpell("X3IArbex",CLERIC_FINGER_OF_DEATH) 
+Wait(1)
+Kill("X3IArbex")
+END 
+
+  IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    Allegiance(Myself,NEUTRAL)
+  THEN
+    RESPONSE #100
+	SetGlobal("X3IPlanarHunterEnemy","GLOBAL",1)
+ END 
+
+
+IF 
+Global("X3IMavisEnemy","GLOBAL",1)
+Allegiance(Myself,NEUTRAL)
+THEN RESPONSE #100
+ChangeEnemyAlly(Myself,GOODBUTBLUE)
+END 
+
+
+IF 
+Die()
+Global("X3IMavisEnemy","GLOBAL",1)
+THEN RESPONSE #100
+AddJournalEntry(@6016,QUEST_DONE)
+END 
+
+IF 
+Dead("X3IArbex")
+Global("X3IPHLDeathLine1","LOCALS",0)
+THEN RESPONSE #100
+SetGlobal("X3IPHLDeathLine1","LOCALS",1)
+DisplayStringHead(Myself,@101)
+END 
+
+IF 
+Dead("X3ITrent")
+Global("X3IPHLDeathLine2","LOCALS",0)
+THEN RESPONSE #100
+SetGlobal("X3IPHLDeathLine2","LOCALS",1)
+DisplayStringHead(Myself,@100)
+END 
+
+IF 
+Dead("X3IMavis")
+Global("X3IPHLDeathLine3","LOCALS",0)
+THEN RESPONSE #100
+SetGlobal("X3IPHLDeathLine3","LOCALS",1)
+DisplayStringHead(Myself,@102)
+END 

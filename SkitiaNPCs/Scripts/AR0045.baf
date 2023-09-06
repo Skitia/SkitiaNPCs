@@ -1,0 +1,50 @@
+// Add to TOP of AR0045
+IF
+	OnCreation()
+	Global("X3IsaStart","GLOBAL",1)
+THEN
+	RESPONSE #100
+		FadeToColor([0.0],0)		
+		SetInterrupt(FALSE)
+		ClearAllActions()
+		StartCutSceneMode()
+		MultiPlayerSync()
+		Explore()
+		SetGlobal("X3IsaStart","GLOBAL",2)
+		CreateCreature("X3IPHF",[772.202],NE)  // Planar Hunter		
+		ActionOverride("X3IPHF",Polymorph("SLEEPING_MAN_HUMAN"))
+		SmallWait(1)
+		CreateCreature("X3IPHA",[489.396],NE)  // Planar Hunter
+		CreateCreature("X3IPHM",[736.297],NW) // Planar Hunter
+		CreateCreature("X3IPHR",[517.565],SW) // Planar Hunter
+		CreateCreature("X3IPHC",[711.413],SE)  // Planar Hunter
+		CreateCreature("X3ISA",[929.251],NW)  // Isaac	
+		CreateCreature("cutspy",[773.239],NE)  // Cutscene Sight	
+		SmallWait(1)
+		MoveViewObject("X3Isa",INSTANT)
+		SmallWait(1)
+		ActionOverride("X3IPHA",DestroyAllEquipment()) 
+		ActionOverride("X3IPHF",DestroyAllEquipment())  
+		ActionOverride("X3IPHM",DestroyAllEquipment()) 
+		ActionOverride("X3IPHR",DestroyAllEquipment()) 
+		ActionOverride("X3IPHC",DestroyAllEquipment()) 
+		Kill("X3IPHA")
+		Kill("X3IPHM")
+		Kill("X3IPHR")
+		Kill("X3IPHC")
+		SmallWait(1)
+		ApplyDamagePercent("X3ISA",50,MAGIC)
+		DestroyGroundPiles() 
+		SmallWait(1)
+		ActionOverride("X3Isa",PlayDeadInterruptable(60))	
+		SmallWait(1)
+		ActionOverride(Player1,JumpToPoint([543.830]))
+		ActionOverride(Player2,JumpToPoint([597.798]))
+		ActionOverride(Player3,JumpToPoint([588.881]))
+		ActionOverride(Player4,JumpToPoint([656.849]))
+		ActionOverride(Player5,JumpToPoint([617.908]))
+		ActionOverride(Player6,JumpToPoint([684.881]))
+		Wait(1)
+		StartCutScene("X3ICut10")
+END
+

@@ -1,8 +1,9 @@
 //Kale and Emily Abduction
 IF
-OR(2)
+OR(3)
 Global("X3EmiVampire","GLOBAL",1)
 Global("X3KalVampire","GLOBAL",1)
+Global("X3IsaVampire","GLOBAL",1)
 THEN
 RESPONSE #100
 SetGlobal("Deactivate0801","AR0800",3)

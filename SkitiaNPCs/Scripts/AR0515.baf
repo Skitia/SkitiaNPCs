@@ -1,26 +1,8 @@
-// Add to BOTTOM of AR0515
-IF
-	Global("X3Encounter","GLOBAL",2)
-	GlobalLT("Chapter","GLOBAL",%bg2_chapter_6%)
-THEN
-	RESPONSE #100
-		SetGlobal("X3Encounter","GLOBAL",3)
-		CreateCreature("X3EBOSS",[763.254],4)
-		CreateCreature("X3EMERM",[736.221],4)
-		CreateCreature("X3EMERA",[809.274],4)
-		CreateCreature("X3EPHL",[595.259],15)		
-		ActionOverride("X3EPHL",SetName(@966)
-		ActionOverride("X3EBOSS",SetName(@967)
-		Continue()
-END
-
+// Add to BOTTOM of AR0515 -> I don't think this file is used presently, this was cut content from Emily's quest.
 IF 
-	GlobalGT("Chapter","GLOBAL",%bg2_chapter_5%)
-	Exists("X3EBOSS")
-THEN RESPONSE #100 
-		ActionOverride("X3EBOSS",DestroySelf())
-		ActionOverride("X3EMERM",DestroySelf())
-		ActionOverride("X3EMERA",DestroySelf())
-		ActionOverride("X3EPHL",DestroySelf())
-		Continue()
+InParty("X3Isa")
+Global("X3IsaContact","AR0515",0)
+THEN RESPONSE #100
+CreateCreature("X3ITrent",[632.215],SE)
+SetGlobal("X3IsaContact","AR0515",1)
 END 

@@ -1,11 +1,5 @@
-//Test Class Change 
-IF 
-Global("X3VieClassChange","GLOBAL",1)
-THEN RESPONSE #100 
-SetGlobal("X3VieClassChange","GLOBAL",2)
-ChangeClass(Myself,THIEF)
-AddKit(SHADOWDANCER)
-END
+
+
 
 //Friendship Bonus 
 IF 
@@ -17,11 +11,18 @@ SetGlobal("X3VieAppBonus","LOCALS",1)
 IncrementGlobal("X3VieApp","GLOBAL",12)
 END 
 
+IF 
+Global("X3VieMet","GLOBAL",-1)
+THEN RESPONSE #100
+Wait(3)
+ActionOverride("X3Vie",StartDialogueNoSet(Player1))
+END
 
 // Tome Conversation #1 
 IF 
 InParty(Myself)
 GlobalGT("X3VieQuest","GLOBAL",4)
+!AreaCheck("AR0021")
 See(Player1)
 IsValidForPartyDialogue(Myself)
 IsValidForPartyDialogue(Player1)
@@ -30,7 +31,6 @@ CombatCounter(0)
 Global("X3VieQuestStart","LOCALS",0)
 THEN RESPONSE #100 
 IncrementGlobal("X3VieQuestStart","LOCALS",1)
-StartDialogueNoSet(Player1)
 END 
 
 
@@ -40,15 +40,48 @@ IF
 InParty(Myself)
 PartyHasItem("X3VTome1")
 See(Player1)
-!See("X3VDROW")
 IsValidForPartyDialogue(Myself)
 IsValidForPartyDialogue(Player1)
 CombatCounter(0)
 !See([ENEMY])
-Global("X3VieQuest","GLOBAL",8)
+Global("X3VieQuestStart","LOCALS",2)
 THEN RESPONSE #100 
-IncrementGlobal("X3VieQuest","GLOBAL",1)
+IncrementGlobal("X3VieQuestStart","LOCALS",1)
+END 
+
+IF 
+InParty(Myself)
+See(Player1)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+CombatCounter(0)
+!See([ENEMY])
+OR(2)
+Global("X3VieQuestStart","LOCALS",1)
+Global("X3VieQuestStart","LOCALS",3)
+THEN RESPONSE #100 
 StartDialogueNoSet(Player1)
+END 
+
+IF 
+Dead("X3VSage")
+Dead("X3VGal")
+Global("X3VieQuest","GLOBAL",10)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+CombatCounter(0)
+!See([ENEMY])
+THEN RESPONSE #100
+StartDialogueNoSet(Player1)
+END 
+
+IF 
+Global("X3VINT","GLOBAL",1)
+GlobalLT("X3VieQuest","GLOBAL",11)
+Global("X3VieQuestDone","LOCALS",0)
+THEN RESPONSE #100
+SetGlobal("X3VieQuestDone","LOCALS",1)
+AddJournalEntry(@50029,QUEST_DONE)
 END 
 
 // Romance Check 
@@ -360,7 +393,6 @@ END
 
 //Friendship Talk Fire 
 IF 
-	RealGlobalTimerExpired("X3VieTalkTimer","GLOBAL")
     IsValidForPartyDialogue(Myself)
 	IsValidForPartyDialogue(Player1)
     See(Player1)
@@ -492,7 +524,6 @@ THEN RESPONSE #0
 SetGlobal("X3VieApp","GLOBAL",100)
 SetGlobal("X3VieAppMaxBonus","GLOBAL",1)
 ChangeStat(Myself,DEX,1,ADD)
-ChangeStat(Myself,STR,1,ADD)
 DisplayStringNoNameDlg(Player1,@50099)
 RESPONSE #1 
 SetGlobal("X3VieApp","GLOBAL",100)
@@ -602,92 +633,147 @@ END
 //Experience
 
 IF
-  Global("BD_JOINXP","LOCALS",0)
-  InParty(Myself)
-  XPGT(Player1,1249999)
-  XPLT(Myself,1250000)
+	Global("BD_JOINXP","LOCALS",0)
+	InParty(Myself)
+	XPGT(Player1,1249999)
+	XPLT(Myself,1250000)
 THEN
-  RESPONSE #100
-    SetInterrupt(FALSE)
-    SetGlobal("BD_JOINXP","LOCALS",1)
-    ChangeStat(Myself,XP,1250000,SET)
-    SetInterrupt(TRUE)
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_JOINXP","LOCALS",1)
+		ChangeStat(Myself,XP,1250000,SET)
+		SetInterrupt(TRUE)
 END
 
 IF
-  Global("BD_JOINXP","LOCALS",0)
-  InParty(Myself)
-  XPGT(Player1,999999)
-  XPLT(Myself,1000000)
+	Global("BD_JOINXP","LOCALS",0)
+	InParty(Myself)
+	XPGT(Player1,999999)
+	XPLT(Myself,1000000)
 THEN
-  RESPONSE #100
-    SetInterrupt(FALSE)
-    SetGlobal("BD_JOINXP","LOCALS",1)
-    ChangeStat(Myself,XP,1000000,SET)
-    SetInterrupt(TRUE)
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_JOINXP","LOCALS",1)
+		ChangeStat(Myself,XP,1000000,SET)
+		SetInterrupt(TRUE)
 END
 
 IF
-  Global("BD_JOINXP","LOCALS",0)
-  InParty(Myself)
-  XPGT(Player1,749999)
-  XPLT(Myself,750000)
+	Global("BD_JOINXP","LOCALS",0)
+	InParty(Myself)
+	XPGT(Player1,749999)
+	XPLT(Myself,750000)
 THEN
-  RESPONSE #100
-    SetInterrupt(FALSE)
-    SetGlobal("BD_JOINXP","LOCALS",1)
-    ChangeStat(Myself,XP,750000,SET)
-    SetInterrupt(TRUE)
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_JOINXP","LOCALS",1)
+		ChangeStat(Myself,XP,750000,SET)
+		SetInterrupt(TRUE)
 END
 
 IF
-  Global("BD_JOINXP","LOCALS",0)
-  InParty(Myself)
-  XPGT(Player1,499999)
-  XPLT(Myself,500000)
+	Global("BD_JOINXP","LOCALS",0)
+	InParty(Myself)
+	XPGT(Player1,499999)
+	XPLT(Myself,500000)
 THEN
-  RESPONSE #100
-    SetInterrupt(FALSE)
-    SetGlobal("BD_JOINXP","LOCALS",1)
-    ChangeStat(Myself,XP,500000,SET)
-    SetInterrupt(TRUE)
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_JOINXP","LOCALS",1)
+		ChangeStat(Myself,XP,500000,SET)
+		SetInterrupt(TRUE)
 END
 
 IF
-  Global("BD_JOINXP","LOCALS",0)
-  InParty(Myself)
-  XPGT(Player1,249999)
-  XPLT(Myself,250000)
+	Global("BD_JOINXP","LOCALS",0)
+	InParty(Myself)
+	XPGT(Player1,249999)
+	XPLT(Myself,250000)
 THEN
-  RESPONSE #100
-    SetInterrupt(FALSE)
-    SetGlobal("BD_JOINXP","LOCALS",1)
-    ChangeStat(Myself,XP,250000,SET)
-    SetInterrupt(TRUE)
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_JOINXP","LOCALS",1)
+		ChangeStat(Myself,XP,250000,SET)
+		SetInterrupt(TRUE)
 END
 
 IF
-  Global("BD_JOINXP","LOCALS",0)
-  InParty(Myself)
-  XPGT(Player1,124999)
-  XPLT(Myself,125000)
+	Global("BD_JOINXP","LOCALS",0)
+	InParty(Myself)
+	XPGT(Player1,124999)
+	XPLT(Myself,125000)
 THEN
-  RESPONSE #100
-    SetInterrupt(FALSE)
-    SetGlobal("BD_JOINXP","LOCALS",1)
-    ChangeStat(Myself,XP,125000,SET)
-    SetInterrupt(TRUE)
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_JOINXP","LOCALS",1)
+		ChangeStat(Myself,XP,125000,SET)
+		SetInterrupt(TRUE)
 END
 
 IF
-  Global("BD_JOINXP","LOCALS",0)
-  InParty(Myself)
-  XPLT(Player1,89001)
+	Global("BD_JOINXP","LOCALS",0)
+	InParty(Myself)
+	XPLT(Player1,89001)
 THEN
-  RESPONSE #100
-    SetInterrupt(FALSE)
-    SetGlobal("BD_JOINXP","LOCALS",1)
-    SetInterrupt(TRUE)
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_JOINXP","LOCALS",1)
+		SetInterrupt(TRUE)
+END
+
+
+// Flirts
+IF
+InParty(Myself)
+Global("X3VieFlirtsStart","LOCALS",0)
+OR(2)
+Global("X3VieRomanceActive","GLOBAL",2)
+Global("X3VieRomanceActive","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("X3VieFlirtsStart","LOCALS",1)
+RealSetGlobalTimer("X3VieFlirtTimer","GLOBAL",300)
+END
+
+IF
+InParty(Myself)
+RealGlobalTimerExpired("X3NaliaFlirtTimer","GLOBAL")
+Global("X3VieFlirtsStart","LOCALS",0)
+Global("X3DisableFlirts","LOCALS",0)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+OR(3)
+Global("X3VieRomanceActive","GLOBAL",2)
+Global("X3VieRomanceActive","GLOBAL",1)
+See(Player1)
+CombatCounter(0)
+!See([ENEMY])
+THEN
+RESPONSE #100
+SetGlobal("X3VieStartFlirt","GLOBAL",1)
+END
+
+IF
+InParty(Myself)
+Global("X3VieStartFlirt","GLOBAL",1)
+IsValidForPartyDialogue(Myself)
+IsValidForPartyDialogue(Player1)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END
+
+IF
+InParty(Myself)
+RealGlobalTimerExpired("X3VieFlirtTimer","GLOBAL")
+Global("X3DisableFlirts","LOCALS",0)
+OR(2)
+Global("X3VieRomanceActive","GLOBAL",2)
+Global("X3VieRomanceActive","GLOBAL",1)
+!CombatCounter(0)
+THEN
+RESPONSE #100
+RealSetGlobalTimer("X3VieFlirtTimer","GLOBAL",600)
 END
 
 // Auto-kill romances

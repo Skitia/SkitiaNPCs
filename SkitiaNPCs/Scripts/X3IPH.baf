@@ -1,0 +1,31 @@
+IF 
+Global("X3IPlanarHunterEnemy","GLOBAL",1)
+Allegiance(Myself,NEUTRAL)
+THEN RESPONSE #100
+Enemy()
+END 
+
+  IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    Allegiance(Myself,NEUTRAL)
+  THEN
+    RESPONSE #100
+	SetGlobal("X3IPlanarHunterEnemy","GLOBAL",1)
+ END 
+
+
+IF 
+Global("X3IMavisEnemy","GLOBAL",1)
+Allegiance(Myself,NEUTRAL)
+THEN RESPONSE #100
+ChangeEnemyAlly(Myself,GOODBUTBLUE)
+END 
+
+IF 
+Global("X3IMavisEnemy","GLOBAL",1)
+Dead("X3IMavis")
+Dead("X3ITrent")
+Dead("X3IArbex")
+THEN RESPONSE #100
+EscapeArea()
+END 

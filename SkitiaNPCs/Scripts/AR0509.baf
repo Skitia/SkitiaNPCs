@@ -1,0 +1,32 @@
+IF 
+Global("X3HelArvoraQuest","GLOBAL",1)
+Global("X3HelArvSpawn","AR0509",0)
+OR(2)
+TimeOfDay(NIGHT)
+TimeOfDay(DUSK)
+THEN RESPONSE #100
+SetGlobal("X3HelArvSpawn","AR0509",1)
+CreateCreature("X3HArv",[632.385],SE)
+Continue() 
+END
+
+IF 
+Global("X3HelArvoraQuest","GLOBAL",1)
+!TimeOfDay(NIGHT)
+!TimeOfDay(DUSK)
+IsActive("X3HArv")
+THEN RESPONSE #100
+SetGlobal("X3HelArvSpawn","AR0509",0)
+Deactivate("X3HArv")
+END
+
+IF 
+Global("X3HelArvoraQuest","GLOBAL",1)
+OR(2)
+TimeOfDay(NIGHT)
+TimeOfDay(DUSK)
+!IsActive("X3HArv")
+THEN RESPONSE #100
+Activate("X3HArv")
+END
+

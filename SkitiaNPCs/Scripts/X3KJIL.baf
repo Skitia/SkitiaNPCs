@@ -8,6 +8,9 @@ AddJournalEntry(@30006,QUEST_DONE) // Quest is over because Jillian died.
 END 
 
 IF 
+OR(3)
+Global("X3HZavatarQuest","GLOBAL",2)
+Global("X3HZavatarQuest","GLOBAL",1)
 Global("X3KalQuest","GLOBAL",9)
 THEN RESPONSE #100
 StartDialogueNoSet(Player1)
@@ -46,3 +49,22 @@ THEN RESPONSE #100
 Wait(1)
 StartDialogueNoSet(Player1)
 END
+
+  IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    Allegiance(Myself,NEUTRAL)
+	OR(2)
+	InParty("X3Hel")
+	InParty("X3Kal")
+  THEN
+    RESPONSE #100
+      Enemy()
+	  ActionOverride("X3Hel",ChangeAIScript("",DEFAULT))
+	  ActionOverride("X3Hel",ChangeAIScript("",GENERAL))
+	  ActionOverride("X3Hel",LeaveParty())
+	  ActionOverride("X3Hel",Enemy())
+	  ActionOverride("X3Kal",ChangeAIScript("",DEFAULT))
+	  ActionOverride("X3Kal",ChangeAIScript("",GENERAL))
+	  ActionOverride("X3Kal",LeaveParty())
+	  ActionOverride("X3Kal",Enemy())	  
+ END 

@@ -1,4 +1,4 @@
-// Branwen's abduction, Amanautor's altar. Contains("O#BranB") means that there's Branwen's body inside.
+// Recorder's Bodhi Storyparts
 IF
 Contains("X3RBody","Container1") // Recorder's Body 
 !Contains("X3RGem","Container1")

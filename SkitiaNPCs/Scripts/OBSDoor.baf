@@ -1,0 +1,19 @@
+IF
+	Global("AR0400newOpenOnce","AR0400",0)  // Slums
+	PartyHasItem("X3IWard")  // Stone of Mimicry
+	Range(LastTrigger,30) // So it doesn't happen all the way across the map.
+	OR(2)
+		Global("PCSphere","GLOBAL",0)
+		Global("PCSphere","GLOBAL",1)
+THEN
+	RESPONSE #100
+		Unlock("DoorSphere")
+		TakePartyItem("X3IWard")
+		ApplySpell(LastTrigger,ZOMBIE_SICKNESS)  // SPIN899.SPL (No such index)
+		DisplayString(Myself,@69)  // ~The stone of mimicry dissolves as the door to the planar sphere opens before you.~
+		SetGlobal("TalkedToTolgerias","GLOBAL",1) // This allows us to fire a different line for Tolgerias.
+		SetGlobal("ObsDoorUnlocked","AR0400",1)  // Slums
+		SetGlobal("AR0400newOpenOnce","AR0400",1)  // Slums
+END
+
+
