@@ -10,20 +10,31 @@ DO ~SetGlobal("X3VEvermeetEnd","GLOBAL",-1)~
 END 
 ++ @5 DO ~IncrementGlobal("X3VieApp","GLOBAL",2)DisplayStringNoNameDlg(Player1,@500513)~  + torment 
 ++ @6 + consequences 
-+~ReputationGT(Player1,12)~+ @7 DO ~IncrementGlobal("X3VieApp","GLOBAL",3)DisplayStringNoNameDlg(Player1,@500513)~ + message
-+~ReputationLT(Player1,13)~+ @7 + no_message
++~Global("X3VGaveTome","GLOBAL",1)~+ @7 DO ~IncrementGlobal("X3VieApp","GLOBAL",3)DisplayStringNoNameDlg(Player1,@500513)~ + returnfavor
++~ReputationGT(Player1,12)!Global("X3VGaveTome","GLOBAL",1)~+ @7 DO ~IncrementGlobal("X3VieApp","GLOBAL",3)DisplayStringNoNameDlg(Player1,@500513)~ + message
++~ReputationLT(Player1,13)!Global("X3VGaveTome","GLOBAL",1)~+ @7 + no_message
 
 CHAIN X3VSAG25 torment 
 @8
 END 
-IF ~ReputationLT(Player1,13)~ EXTERN X3VSAG25 low_rep 
-IF ~ReputationGT(Player1,12)~ EXTERN X3VSAG25 normal_rep 
+IF ~Global("X3VGaveTome","GLOBAL",1)~ EXTERN X3VSAG25 saved_book
+IF ~ReputationLT(Player1,13)!Global("X3VGaveTome","GLOBAL",1)~ EXTERN X3VSAG25 low_rep 
+IF ~ReputationGT(Player1,12)!Global("X3VGaveTome","GLOBAL",1)~ EXTERN X3VSAG25 normal_rep 
 
 CHAIN X3VSAG25 consequences 
 @9
 END 
-IF ~ReputationLT(Player1,13)~ EXTERN X3VSAG25 low_rep 
-IF ~ReputationGT(Player1,12)~ EXTERN X3VSAG25 normal_rep 
+IF ~Global("X3VGaveTome","GLOBAL",1)~ EXTERN X3VSAG25 saved_book
+IF ~ReputationLT(Player1,13)!Global("X3VGaveTome","GLOBAL",1)~ EXTERN X3VSAG25 low_rep 
+IF ~ReputationGT(Player1,12)!Global("X3VGaveTome","GLOBAL",1)~ EXTERN X3VSAG25 normal_rep 
+
+CHAIN X3VSAG25 returnfavor 
+@63
+EXTERN X3Vie25J family_message
+
+CHAIN X3VSag25 saved_book
+@64
+EXTERN X3Vie25J family_message
 
 CHAIN X3VSAG25 message 
 @10
@@ -64,8 +75,20 @@ DO ~SetGlobal("X3VEvermeetEnd","GLOBAL",1)~
 == X3Vie25J @23
 == X3VSAG25 @24
 == X3Vie25J @25
-== X3VSAG25 @26
-== X3Vie25J @27
+END 
+IF ~Kit("X3Vie","SHADOWDANCER")~ EXTERN X3VSAG25 Shadowdancer
+IF ~!Kit("X3Vie","SHADOWDANCER")~ EXTERN X3VSAG25 Shadowmage 
+
+CHAIN X3VSAG25 Shadowdancer
+@65
+EXTERN X3Vie25J ExileLifted 
+
+CHAIN X3VSAG25 Shadowmage
+@26
+EXTERN X3Vie25J ExileLifted 
+
+CHAIN X3Vie25J ExileLifted
+@27
 == X3VSAG25 @28
 END 
 +~OR(2)Race(Player1,ELF)GlobalGT("X3VieApp","GLOBAL",25)~+ @29  EXTERN X3Vie25J staying

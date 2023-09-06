@@ -1,45 +1,122 @@
 BEGIN X3VSAMIR 
 BEGIN X3VDROW 
 // Contains all Underdark quest stuff for Vienxay
-CHAIN IF ~!Global("PlayerLooksLikeDrow","GLOBAL",1)PartyHasItem("X3VTOME1")~ THEN X3VSAMIR beg 
+CHAIN IF ~PartyHasItem("X3VSack")~ THEN X3VSAMIR sack 
 @0
+END 
+++ @1 + TellFirst
+++ @2 DO ~TakePartyItem("X3VSack")~ + TellSecond
+
+CHAIN X3VSamir TellSecond 
+@3
+EXTERN X3VSamir Freedom 
+
+CHAIN X3VSamir Freedom 
+@4
+DO ~AddJournalEntry(@50003,QUEST)CreateVisualEffectObject("spdimndr",Myself)
+Wait(2)DestroySelf()~
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN @10
+DO ~IncrementGlobal("X3RebAppChange","GLOBAL",9)~
+== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @11
+DO ~IncrementGlobal("X3VieAppChange","GLOBAL",9)~
 EXIT 
 
-CHAIN IF ~Global("PlayerLooksLikeDrow","GLOBAL",1)PartyHasItem("X3VTOME1")~ THEN X3VSAMIR pass 
+CHAIN X3VSamir TellFirst 
+@5
+END 
+++ @6 + Cruelness
+++ @2 DO ~TakePartyItem("X3VSack")~ + Freedom 
+
+CHAIN X3VSamir Cruelness 
+@7
+DO ~AddJournalEntry(@50003,QUEST)EscapeArea()~
+== X3EmiJ IF ~IsValidForPartyDialogue("X3Emi")~ THEN @8
+DO ~IncrementGlobal("X3EmiAppChange","GLOBAL",4)~
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN @9
+DO ~IncrementGlobal("X3RebAppChange","GLOBAL",3)~
+== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @11
+DO ~IncrementGlobal("X3VieAppChange","GLOBAL",9)~
+EXIT 
+
+
+
+
+
+CHAIN IF ~Global("PlayerLooksLikeDrow","GLOBAL",1)!PartyHasItem("X3VSack")NumTimesTalkedTo(0)~ THEN X3VSAMIR drowsee
 @1
-EXIT 
-
-
-CHAIN IF ~Global("X3VieQuest","GLOBAL",6)~ THEN X3VSAMIR greeting 
-@2
 END 
-++ @3 DO ~IncrementGlobal("X3VieQuest","GLOBAL",1)AddJournalEntry(@50005,QUEST)~ + about 
-++ @4 + miserable
-++ @5 + duties
+++ @56 + crazy
+++ @57 + cantell
+++ @58 + foolme
 
-CHAIN X3VSAMIR about 
-@6
-== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @7
+CHAIN IF ~!Global("PlayerLooksLikeDrow","GLOBAL",1)!PartyHasItem("X3VSack")NumTimesTalkedTo(0)~ THEN X3VSAMIR normalsee
+@77
 END 
-++ @8 + guild 
-++ @9 + miserable 
-++ @10 + duties 
+++ @56 + crazy
+++ @78 + cantell
+++ @58 + foolme
 
-CHAIN X3VSAMIR guild 
-@11
+CHAIN X3VSamir crazy 
+@59
+END 
+IF ~IsValidForPartyDialogue("X3Vie")~ EXTERN X3VieJ VienxayBranch
+IF ~!IsValidForPartyDialogue("X3Vie")Global("X3VieQuest","GLOBAL",5)~ EXTERN X3VSamir NoVienxayBranch
+
+CHAIN X3VSamir cantell 
+@60
+END 
+IF ~IsValidForPartyDialogue("X3Vie")~ EXTERN X3VieJ VienxayBranch
+IF ~!IsValidForPartyDialogue("X3Vie")~ EXTERN X3VSamir NoVienxayBranch
+
+CHAIN X3VSamir foolme
+@61
+END 
+IF ~IsValidForPartyDialogue("X3Vie")~ EXTERN X3VieJ VienxayBranch
+IF ~!IsValidForPartyDialogue("X3Vie")~ EXTERN X3VSamir NoVienxayBranch
+
+CHAIN X3VSamir NoVienxayBranch 
+@62
+END 
+++ @63 + RunAway
+++ @64 + WhatPower
+++ @65 + FreeHow
+++ @79 + NoTime 
+
+CHAIN X3VSamir NoTime 
+@80
+DO ~AddJournalEntry(@50005,QUEST)~ 
 EXIT 
 
-CHAIN X3VSAMIR miserable 
-@12
+CHAIN X3VSamir RunAway 
+@66
+EXTERN X3VSamir FreeHow 
+
+CHAIN X3VSamir WhatPower 
+@69
+EXTERN X3VSamir NoOneCame
+
+CHAIN X3VSamir NoOneCame
+@70
+EXTERN X3VSamir FreeHow 
+
+CHAIN X3VSamir FreeHow 
+@67
+= @68
+DO ~AddJournalEntry(@50005,QUEST)~ 
+== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @75
 EXIT 
 
-CHAIN X3VSAMIR duties 
-@13
+CHAIN X3VieJ VienxayBranch 
+@71
+== X3VSamir @72
+== X3VieJ @73
+== X3VSamir @74
+EXTERN X3VSamir NoOneCame
+
+CHAIN IF ~!PartyHasItem("X3VSack")!NumTimesTalkedTo(0)~ THEN X3VSAMIR nosack
+@76
 EXIT 
 
-CHAIN IF ~!PartyHasItem("X3VTOME1")~ THEN X3VSAMIR doom 
-@14
-EXIT 
 
 CHAIN IF ~True()~ THEN X3VDROW Greeting
 @15
@@ -89,7 +166,7 @@ EXIT
 
 CHAIN X3VDROW house 
 @37
-DO ~GiveItem("X3VTOME1",Player1)ActionOverride("X3VDROW2",EscapeArea())ActionOverride("X3VDROW3",EscapeArea())EscapeArea()~ 
+DO ~GiveItem("X3VSack",Player1)ActionOverride("X3VDROW2",EscapeArea())ActionOverride("X3VDROW3",EscapeArea())EscapeArea()~ 
 EXIT 
 
 CHAIN X3VDROW house_fail 
@@ -99,7 +176,7 @@ EXIT
 
 CHAIN X3VDROW strength 
 @39
-DO ~ActionOverride("X3VDROW2",EscapeArea())ActionOverride("X3VDROW3",EscapeArea())GiveItem("X3VTOME1",Player1)EscapeArea()~ EXIT 
+DO ~ActionOverride("X3VDROW2",EscapeArea())ActionOverride("X3VDROW3",EscapeArea())GiveItem("X3VSack",Player1)EscapeArea()~ EXIT 
 
 CHAIN X3VDROW strength_fail 
 @40
@@ -154,5 +231,5 @@ END
 
 CHAIN X3VDROW pay 
 @55
-DO ~ActionOverride("X3VDROW2",EscapeArea())ActionOverride("X3VDROW3",EscapeArea())GiveItem("X3VTOME1",Player1)EscapeArea()~
+DO ~ActionOverride("X3VDROW2",EscapeArea())ActionOverride("X3VDROW3",EscapeArea())GiveItem("X3VSack",Player1)EscapeArea()~
 EXIT 

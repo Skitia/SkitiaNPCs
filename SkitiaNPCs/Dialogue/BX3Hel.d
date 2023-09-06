@@ -632,7 +632,6 @@ CHAIN
 IF ~IsValidForPartyDialogue("X3Kal")
 IsValidForPartyDialogue("X3Hel")
 See("X3Kal")
-Global("X3KalRomanceActive","GLOBAL",1)
 Global("X3RebRomanceActive","GLOBAL",1)
 Global("X3EmiRomanceActive","GLOBAL",1) //
 Global("X3VieRomanceActive","GLOBAL",1)
@@ -642,8 +641,8 @@ DO ~SetGlobal("X3HelX3Kal1","LOCALS",3)~
 == BX3Kal @257
 == BX3Hel @258
 == BX3Kal @259
-== BX3Hel @260
-== BX3Kal @261
+== BX3Hel IF ~Global("X3KalRomanceActive","GLOBAL",1)~ THEN @260
+== BX3Kal IF ~Global("X3KalRomanceActive","GLOBAL",1)~ THEN @261
 == BX3Hel @262
 == BX3KAl @263
 == BX3Hel @264
@@ -735,7 +734,8 @@ DO ~SetGlobal("X3HelX3Vie1","LOCALS",1)~
 == BX3Hel @305
 == BX3Vie @306
 == BX3Hel @307
-== BX3Vie @308
+== BX3Vie IF ~!Kit("X3Vie",SHADOWDANCER)~ THEN @308
+== BX3Vie IF ~Kit("X3Vie",SHADOWDANCER)~ THEN @325
 EXIT 
 
 CHAIN 

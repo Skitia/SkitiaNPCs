@@ -322,6 +322,7 @@ CHAIN
 IF ~IsValidForPartyDialogue("X3Vie")
 IsValidForPartyDialogue("X3Reb")
 See("X3Vie")
+!Kit("X3Vie",SHADOWDANCER)
 Global("X3ReBX3VieToB1","LOCALS",1)~ THEN BX3Reb25 X3ReBX3Vie252
 @137
 DO ~SetGlobal("X3ReBX3VieToB1","LOCALS",2)~
@@ -330,4 +331,20 @@ DO ~SetGlobal("X3ReBX3VieToB1","LOCALS",2)~
 == BX3Vie25 @140
 == BX3Reb25 @141
 == BX3Vie25 @142
+EXIT 
+
+CHAIN 
+IF ~IsValidForPartyDialogue("X3Vie")
+IsValidForPartyDialogue("X3Reb")
+See("X3Vie")
+!Kit("X3Vie",SHADOWDANCER)
+Global("X3ReBX3VieToB1","LOCALS",1)~ THEN BX3Reb25 X3ReBX3Vie25S
+@143
+DO ~SetGlobal("X3ReBX3VieToB1","LOCALS",2)~
+== BX3Vie25 @144
+== BX3Reb25 @145
+== BX3Vie25 @146
+== BX3Reb25 @147
+== BX3Vie25 @148
+== BX3Reb25 @149
 EXIT 

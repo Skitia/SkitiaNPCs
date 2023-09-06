@@ -1,9 +1,37 @@
 BEGIN X3KJIL
 
+CHAIN IF ~OR(2)Global("X3HZavatarQuest","GLOBAL",1)Global("X3HZavatarQuest","GLOBAL",2)~ THEN X3KJil JillianFreed 
+@145
+DO ~SetGlobal("X3HZavatarQuest","GLOBAL",3)~
+== X3KalJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN @146
+== X3HelJ IF ~IsValidForPartyDialogue("X3Hel")~ THEN @147
+END 
+IF ~InMyArea("X3HArv")~ EXTERN X3HArv JillianArvora 
+IF ~!InMyArea("X3HArv")~ EXTERN X3KJil JillianNoArvora 
+
+CHAIN X3KJil JillianNoArvora 
+@148
+END 
+IF ~OR(2)!GlobalLT("X3KalQuest","GLOBAL",7)Global("X3JilQuestFail","GLOBAL",1)~ DO ~EscapeArea()~ EXIT 
+IF ~!Global("X3JilNPCKilled","GLOBAL",1)GlobalLT("X3KalQuest","GLOBAL",7)~ DO ~EscapeAreaMove("AR0332",273,369,SW)~ EXIT 
+
+
+CHAIN X3HArv JillianArvora
+@149
+== X3KJil @150
+== X3HArv @151
+== X3KJil @152
+END 
+IF ~OR(2)!GlobalLT("X3KalQuest","GLOBAL",7)Global("X3JilQuestFail","GLOBAL",1)~ DO ~EscapeArea()~ EXIT 
+IF ~!Global("X3JilNPCKilled","GLOBAL",1)GlobalLT("X3KalQuest","GLOBAL",7)~ DO ~EscapeAreaMove("AR0332",273,369,SW)~ EXIT 
+
+
+
+
 // In case the player killed any of the Suspect NPCs before an arrest was made.
 CHAIN IF ~GlobalLT("X3KalQuest","GLOBAL",6)OR(4)Dead("X3KC")Dead("X3KM")Dead("X3KD")Dead("X3KF")~ THEN X3KJIL quest_failed 
 @0
-DO ~AddJournalEntry(@30005,QUEST_DONE)EscapeArea()~
+DO ~AddJournalEntry(@30005,QUEST_DONE)SetGlobal("X3JilQuestFail","GLOBAL",1)EscapeArea()~
 EXIT 
 
 CHAIN IF ~IsValidForPartyDialogue("X3Kal")Global("X3KalQuest","GLOBAL",3)~ THEN X3KJIL quest_start
@@ -430,17 +458,17 @@ CHAIN X3KJIL wa_3
 @110
 END 
 IF ~IsValidForPartyDialogue("X3Kal")~ EXTERN X3KALJ wa_4
-IF ~!IsValidForPartyDialogue("X3Kal")~ DO ~EscapeArea()AddexperienceParty(3750)~ EXIT
+IF ~!IsValidForPartyDialogue("X3Kal")~ DO ~SetGlobal("X3JilQuestFail","GLOBAL",1)EscapeArea()AddexperienceParty(3750)~ EXIT
 
 CHAIN X3KALJ wa_4
 @111
 == X3KJIL @112
 == X3KJIL @113
 == X3KALJ @114
-DO ~ActionOverride("X3KJIL",EscapeArea()AddexperienceParty(3750)~
+DO ~SetGlobal("X3JilQuestFail","GLOBAL",1)ActionOverride("X3KJIL",EscapeArea()AddexperienceParty(3750)~
 EXIT 
 
-// Return from Chester, Chester not turned in or dead yet. 
+// Return from Chester, Chester not turned in yet or dead. 
 CHAIN IF ~GlobalGT("X3KalQuest","GLOBAL",6)GlobalLT("X3KalQuest","GLOBAL",9)Global("X3KalQuestAccuse","GLOBAL",2)~ THEN X3KJIL correct_accused 
 @115
 END 
@@ -449,6 +477,7 @@ END
 
 CHAIN X3KJIL chester_dead 
 @117
+DO ~SetGlobal("X3KalQuest","GLOBAL",8)~
 END 
 ++ @118 + justice_wanted 
 ++ @119 + done_too_much

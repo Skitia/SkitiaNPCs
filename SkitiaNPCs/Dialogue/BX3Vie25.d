@@ -102,10 +102,24 @@ CHAIN
 IF ~IsValidForPartyDialogue("Hexxat")
 IsValidForPartyDialogue("X3Vie")
 See("X3Vie")
-Global("X3VieHexxatToB","GLOBAL",0)~ THEN BHEXXA25 RebHexxat1
+!Kit("X3Vie",SHADOWDANCER)
+Global("X3VieHexxatToB","GLOBAL",0)~ THEN BHEXXA25 X3VieHexxat1
 @36
 DO ~SetGlobal("X3VieHexxatToB","GLOBAL",1)~
-== BX3Vie25 @37
+EXTERN BX3Vie25 X3VieHexxat1End
+
+CHAIN
+IF ~IsValidForPartyDialogue("Hexxat")
+IsValidForPartyDialogue("X3Vie")
+See("X3Vie")
+Kit("X3Vie",SHADOWDANCER)
+Global("X3VieHexxatToB","GLOBAL",0)~ THEN BHEXXA25 X3VieHexxat1S
+@123
+DO ~SetGlobal("X3VieHexxatToB","GLOBAL",1)~
+EXTERN BX3Vie25 X3VieHexxat1End
+
+CHAIN BX3Vie25 X3VieHexxat1End
+@37
 == BHEXXA25 @38
 == BX3Vie25 @39
 == BHEXXA25 @40
@@ -115,16 +129,32 @@ CHAIN
 IF ~IsValidForPartyDialogue("Jan")
 IsValidForPartyDialogue("X3Vie")
 See("Jan")
+!Kit("X3Vie",SHADOWDANCER)
 Global("X3VieJanToB","GLOBAL",0)~ THEN Bx3Vie25 X3VieJan1
 @41
 DO ~SetGlobal("X3VieJanToB","GLOBAL",1)~
-== BJAN25 @42
+EXTERN BJAN25 X3VieJan1End 
+//Shadowdancer
+CHAIN
+IF ~IsValidForPartyDialogue("Jan")
+IsValidForPartyDialogue("X3Vie")
+Kit("X3Vie",SHADOWDANCER)
+See("Jan")
+Global("X3VieJanToB","GLOBAL",0)~ THEN Bx3Vie25 X3VieJan1S
+@124
+DO ~SetGlobal("X3VieJanToB","GLOBAL",1)~
+EXTERN BJAN25 X3VieJan1End
+
+CHAIN BJAN25 X3VieJan1End 
+@42
 == Bx3Vie25 @43
 == BJAN25 @44
 == Bx3Vie25 @45
 == BJAN25 @46
 == Bx3Vie25 @47
 EXIT 
+
+
 
 // JAHEIRA #25
 CHAIN
@@ -180,7 +210,8 @@ See("X3Vie")
 Global("X3VieNALIAToB","GLOBAL",0)~ THEN BNALIA25 X3VieNALIA1
 @66
 DO ~SetGlobal("X3VieNALIAToB","GLOBAL",1)~
-== BX3Vie25 @67
+== BX3Vie25 IF ~!Kit("X3Vie",SHADOWDANCER)~ THEN @67
+== BX3Vie25 IF ~Kit("X3Vie",SHADOWDANCER)~ THEN @125
 == BNALIA25 @68
 == BX3Vie25 @69
 == BNALIA25 @70
@@ -213,9 +244,11 @@ Global("X3VieMINSC","GLOBAL",0)~ THEN BX3Vie25 X3VieMINSC1
 @78
 DO ~SetGlobal("X3VieMINSC","GLOBAL",1)~
 == BMINSC25 @79
-== BX3Vie25 @80
+== BX3Vie25 IF ~!Kit("X3Vie",SHADOWDANCER)~ THEN @80
+== BX3Vie25 IF ~!Kit("X3Vie",SHADOWDANCER)~ THEN @126
 == BMINSC25 @81
-== BX3Vie25 @82
+== BX3Vie25 IF ~!Kit("X3Vie",SHADOWDANCER)~ THEN @82
+== BX3Vie25 IF ~Kit("X3Vie",SHADOWDANCER)~ THEN @127
 EXIT 
 
 // Neera
@@ -223,6 +256,7 @@ CHAIN
 IF ~IsValidForPartyDialogue("Neera")
 IsValidForPartyDialogue("X3Vie")
 See("Neera")
+!Kit("X3Vie",SHADOWDANCER)
 Global("X3VieNeeraToB","GLOBAL",0)~ THEN BX3Vie25 X3VieNEERA1
 @83
 DO ~SetGlobal("X3VieNeeraToB","GLOBAL",1)~
@@ -235,6 +269,26 @@ DO ~SetGlobal("X3VieNeeraToB","GLOBAL",1)~
 == BNEERA25 @90
 == BX3Vie25 @91
 == BNEERA25 @92
+EXIT 
+
+// NeeraS
+CHAIN
+IF ~IsValidForPartyDialogue("Neera")
+IsValidForPartyDialogue("X3Vie")
+See("Neera")
+Kit("X3Vie",SHADOWDANCER)
+Global("X3VieNeeraToB","GLOBAL",0)~ THEN BX3Vie25 X3VieNEERA1
+@128
+DO ~SetGlobal("X3VieNeeraToB","GLOBAL",1)~
+== BNEERA25 @129
+== BX3Vie25 @130
+== BNEERA25 @131
+== BX3Vie25 @132
+== BNEERA25 @133
+== BX3Vie25 @134
+== BNEERA25 @135
+== BX3Vie25 @136
+== BNEERA25 @137
 EXIT 
 
 // Rasaad#1 
@@ -266,7 +320,8 @@ DO ~SetGlobal("X3VieSAREVOKToB","GLOBAL",1)~
 == BSAREV25 @103
 == BX3Vie25 @104
 == BSAREV25 @105
-== BX3Vie25 @106
+== BX3Vie25 IF ~!Kit("X3Vie",SHADOWDANCER)~ THEN @106
+== BX3Vie25 IF ~Kit("X3Vie",SHADOWDANCER)~ THEN @138
 == BSAREV25 @107
 == BX3Vie25 @108
 EXIT 
@@ -281,7 +336,8 @@ Global("X3VieValygarToB","GLOBAL",0)~ THEN BX3Vie25 X3VieValygar1
 @109 
 DO ~SetGlobal("X3VieValygarToB","GLOBAL",1)~
 == BVALYG25 @110
-== BX3Vie25 @111
+== BX3Vie25 IF ~!Kit("X3Vie",SHADOWDANCER)~ THEN @111
+== BX3Vie25 IF ~Kit("X3Vie",SHADOWDANCER)~ THEN @139
 == BVALYG25 IF ~!Alignment("X3Vie",NEUTRAL)~ THEN @112
 == BX3Vie25 IF ~!Alignment("X3Vie",NEUTRAL)~ THEN @113
 == BVALYG25 IF ~Alignment("X3Vie",NEUTRAL)~ THEN @114

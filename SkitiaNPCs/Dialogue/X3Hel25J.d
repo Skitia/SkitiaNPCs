@@ -282,15 +282,15 @@ CHAIN X3Hel25J 2.4
 END 
 ++ @80 DO ~IncrementGlobal("X3HelAppChange","GLOBAL",-1)~ + 2.5
 ++ @81 + 2.5
-+~InParty("X3Vie")~+ @82 + 2.6
++~InParty("X3Vie")!Kit("X3Vie",SHADOWDANCER)~+ @82 + 2.6
 +~InParty("X3Reb")~+ @83 + 2.7
 
 CHAIN X3Hel25J 2.5
 @84
 END 
-IF ~InParty("X3Vie")~ EXTERN X3Hel25J 2.6 
-IF ~!InParty("X3Vie")InParty("X3Reb")~ EXTERN X3Hel25J 2.7
-IF ~!InParty("X3Reb")!InParty("X3Vie")~ EXTERN X3Hel25J 2.8
+IF ~InParty("X3Vie")!Kit("X3Vie",SHADOWDANCER)~ EXTERN X3Hel25J 2.6 
+IF ~OR(2)!InParty("X3Vie")Kit("X3Vie",SHADOWDANCER)InParty("X3Reb")~ EXTERN X3Hel25J 2.7
+IF ~OR(2)!InParty("X3Vie")Kit("X3Vie",SHADOWDANCER)!InParty("X3Reb")~ EXTERN X3Hel25J 2.8
 
 CHAIN X3Hel25J 2.6
 @85

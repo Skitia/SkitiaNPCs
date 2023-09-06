@@ -100,24 +100,36 @@ EXIT
 //Alternate: Talked to Priest of Oghma First. 
 
 EXTEND_BOTTOM DOGHMA 0
+IF ~Global("X3VieQuest","GLOBAL",1)Global("X3VieQuest","LOCALS",0)IsValidForPartyDialogue("X3Vie")~ DO ~SetGlobal("X3VieQuest","LOCALS",1)~ EXTERN X3VieJ Vienxay_quest_priest
 + ~Global("X3RebVampire","GLOBAL",2)!Dead("X3RMOM")PartyHasItem("X3RBody")Global("X3RebVampTempleTalk","GLOBAL",0)~ + @38 DO ~SetGlobal("X3RebVampTempleTalk","GLOBAL",1)~ EXTERN X3RMOM Rec_Vamp
 + ~Global("X3RebVampire","GLOBAL",2)Dead("X3RMOM")PartyHasItem("X3RBody")Global("X3RebVampTempleTalk","GLOBAL",0)~ + @38 DO ~SetGlobal("X3RebVampTempleTalk","GLOBAL",1)~ EXTERN DOGHMA Rec_Vamp
++ ~OR(2)GlobalGT("X3VieQuest","GLOBAL",3)Global("X3RitualBook","GLOBAL",1)GLOBAL("X3RitualBook","LOCALS",0)~ + @88 DO ~SetGlobal("X3RitualBook","LOCALS",1)~ EXTERN DOGHMA Ritual
 END
 
 EXTEND_BOTTOM DOGHMA 3
+IF ~Global("X3VieQuest","GLOBAL",1)Global("X3VieQuest","LOCALS",0)IsValidForPartyDialogue("X3Vie")~ DO ~SetGlobal("X3VieQuest","LOCALS",1)~ EXTERN X3VieJ Vienxay_quest_priest
 + ~Global("X3RebVampire","GLOBAL",2)!Dead("X3RMOM")PartyHasItem("X3RBody")Global("X3RebVampTempleTalk","GLOBAL",0)~ + @38 DO ~SetGlobal("X3RebVampTempleTalk","GLOBAL",1)~ EXTERN X3RMOM Rec_Vamp
 + ~Global("X3RebVampire","GLOBAL",2)Dead("X3RMOM")PartyHasItem("X3RBody")Global("X3RebVampTempleTalk","GLOBAL",0)~ + @38 DO ~SetGlobal("X3RebVampTempleTalk","GLOBAL",1)~ EXTERN DOGHMA Rec_Vamp
++ ~OR(2)GlobalGT("X3VieQuest","GLOBAL",3)Global("X3RitualBook","GLOBAL",1)GLOBAL("X3RitualBook","LOCALS",0)~ + @88 DO ~SetGlobal("X3RitualBook","LOCALS",1)~ EXTERN DOGHMA Ritual
 END
 
 EXTEND_BOTTOM DOGHMA 7
+IF ~Global("X3VieQuest","GLOBAL",1)Global("X3VieQuest","LOCALS",0)IsValidForPartyDialogue("X3Vie")~ DO ~SetGlobal("X3VieQuest","LOCALS",1)~ EXTERN X3VieJ Vienxay_quest_priest
 + ~Global("X3RebVampire","GLOBAL",2)!Dead("X3RMOM")PartyHasItem("X3RBody")Global("X3RebVampTempleTalk","GLOBAL",0)~ + @38 DO ~SetGlobal("X3RebVampTempleTalk","GLOBAL",1)~ EXTERN X3RMOM Rec_Vamp
 + ~Global("X3RebVampire","GLOBAL",2)Dead("X3RMOM")PartyHasItem("X3RBody")Global("X3RebVampTempleTalk","GLOBAL",0)~ + @38 DO ~SetGlobal("X3RebVampTempleTalk","GLOBAL",1)~ EXTERN DOGHMA Rec_Vamp
++ ~OR(2)GlobalGT("X3VieQuest","GLOBAL",3)Global("X3RitualBook","GLOBAL",1)GLOBAL("X3RitualBook","LOCALS",0)~ + @88 DO ~SetGlobal("X3RitualBook","LOCALS",1)~ EXTERN DOGHMA Ritual
 END
 
 EXTEND_BOTTOM DOGHMA 9
+IF ~Global("X3VieQuest","GLOBAL",1)Global("X3VieQuest","LOCALS",0)IsValidForPartyDialogue("X3Vie")~ DO ~SetGlobal("X3VieQuest","LOCALS",1)~ EXTERN X3VieJ Vienxay_quest_priest
 + ~Global("X3RebVampire","GLOBAL",2)!Dead("X3RMOM")PartyHasItem("X3RBody")Global("X3RebVampTempleTalk","GLOBAL",0)~ + @38 DO ~SetGlobal("X3RebVampTempleTalk","GLOBAL",1)~ EXTERN X3RMOM Rec_Vamp
 + ~Global("X3RebVampire","GLOBAL",2)Dead("X3RMOM")PartyHasItem("X3RBody")Global("X3RebVampTempleTalk","GLOBAL",0)~ + @38 DO ~SetGlobal("X3RebVampTempleTalk","GLOBAL",1)~ EXTERN DOGHMA Rec_Vamp
++ ~OR(2)GlobalGT("X3VieQuest","GLOBAL",3)Global("X3RitualBook","GLOBAL",1)GLOBAL("X3RitualBook","LOCALS",0)~ + @88 DO ~SetGlobal("X3RitualBook","LOCALS",1)~ EXTERN DOGHMA Ritual
 END
+
+CHAIN DOGHMA Ritual 
+@89
+EXIT 
 
 CHAIN DOGHMA Rec_Vamp
 @39
@@ -167,16 +179,194 @@ CHAIN X3RMOM services
 @54
 END 
 IF ~Global("X3VieQuest","GLOBAL",1)IsValidForPartyDialogue("X3Vie")~ EXTERN X3VieJ Vienxay_quest
++~PartyHasItem("X3VBook")GlobalGT("X3RitualBook","LOCALS",0)~+ @147 DO ~TakePartyItem("X3VBook")~ + ReturnBook
++~HasItem("X3VBook","X3RMOM")!PartyHasItem("X3VBook")Global("X3RitualBook","LOCALS",2)~+ @148 DO ~SetGlobal("X3RitualBook","LOCALS",3)~ + GetBookAgain
++~PartyHasItem("X3HNote")Global("X3HZavatarQuest","GLOBAL",0)~+ @127 + FirstNote
++~PartyHasItem("X3HNote2")Global("X3HZavatarQuest","GLOBAL",1)~+ @128 + SecondNote
++ ~HasItem("X3VBook","X3RMOM")OR(2)GlobalGT("X3VieQuest","GLOBAL",3)Global("X3IsaQuest","GLOBAL",4)Global("X3RitualBook","LOCALS",0)~ + @88 DO ~SetGlobal("X3RitualBook","LOCALS",1)~ EXTERN X3RMOM Ritual
++ ~HasItem("X3VBook","X3RMOM")Global("X3RitualBook","LOCALS",1)Global("X3RMomDiscount","Global",0)~ + @157 EXTERN X3RMOM RitualReturn
++ ~HasItem("X3VBook","X3RMOM")Global("X3RitualBook","LOCALS",1)Global("X3RMomDiscount","Global",1)~ + @157 EXTERN X3RMOM RitualReturnDiscount
 +~PartyHasItem("X3KCHEES")~+ @55 DO ~TakePartyItem("X3KCHEES")~ + cheese 
 +~!GlobalTimerExpired("X3KResearch","GLOBAL")Global("X3KResearchTimer","LOCALS",1)~+ @56 + not_ready
 +~Global("X3VieQuest","GLOBAL",1)!IsValidForPartyDialogue("X3Vie")~+ @57 + sage
++~Global("RevealUmar","GLOBAL",1) OR(8)PartyHasItem("nalbdy")PartyHasItem("PGNalBod")PartyHasItem("X3KBody")PartyHasItem("X3IBody")PartyHasItem("miscbl")PartyHasItem("miscbm")PartyHasItem("miscbn")PartyHasItem("miscbo")~+ @158 + head_priest
 ++ @58 DO ~StartStore("doghma",LastTalkedToBy())~ EXIT  // Temple of Oghma
 ++ @59 EXIT 
 +~!IsGabber("X3Reb")~+ @60 + mom_does
 
+CHAIN X3RMOM head_priest 
+@159
+EXIT 
+
+CHAIN X3RMOM GetBookAgain 
+@152
+DO ~GiveItem("X3VBook",Player1)SetGlobal("X3RitualBook","LOCALS",3)~
+EXIT 
+
+
+CHAIN X3RMOM ReturnBook 
+@149
+END 
+IF ~Global("X3RitualBook","LOCALS",1)~ EXTERN X3RMOM ReturnHalfGold 
+IF ~!Global("X3RitualBook","LOCALS",1)~ EXTERN X3RMOM TakeBookBack 
+
+CHAIN X3RMOM ReturnHalfGold 
+@150
+DO ~GiveGoldForce(400)~
+EXTERN X3RMOM TakeBookBack 
+
+CHAIN X3RMOM TakeBookBack
+@151
+DO ~SetGlobal("X3RitualBook","LOCALS",2)~
+EXIT 
+
+
+CHAIN X3RMom FirstNote 
+@129
+END 
++~PartyGoldGT(499)~+ @130 + ServicesAccepted
++~!PartyGoldGT(499)~+ @131 + TranscribeLater
+++ @132 + TranscribeLater
++~IsValidForPartyDialogue("X3Reb")~+ @133 + Reduction
++~!IsValidForPartyDialogue("X3Reb")~+ @133 + NoReduction
+
+CHAIN X3RMom SecondNote
+@144
+END 
++~PartyGoldGT(249)~+ @130 + ServicesAccepted
++~!PartyGoldGT(249)~+ @131 + TranscribeLater
+++ @132 + TranscribeLater
++~IsValidForPartyDialogue("X3Reb")~+ @133 + Reduction
++~!IsValidForPartyDialogue("X3Reb")~+ @133 + NoReduction
+
+CHAIN X3RMom TranscribeLater 
+@135
+EXIT 
+
+CHAIN X3RMom NoReduction 
+@134
+END 
++~PartyGoldGT(499)~+ @130 + ServicesAccepted
++~!PartyGoldGT(499)~+ @131 + TranscribeLater
+++ @132 + TranscribeLater
+
+CHAIN X3RMom Reduction 
+@136
+== X3RebJ @138
+== X3RMom @146
+END 
++~PartyGoldGT(124)PartyHasItem("X3HNote2")~+ @130 + ServicesAccepted
++~PartyGoldGT(249)!PartyHasItem("X3HNote2")~+ @130 + ServicesAccepted
++~!PartyGoldGT(249)PartyHasItem("X3HNote2")~+ @131 + TranscribeLater
++~!PartyGoldGT(249)!PartyHasItem("X3HNote2")~+ @131 + TranscribeLater
+++ @132 + TranscribeLater
+
+CHAIN X3RMom ServicesAccepted 
+@139
+END 
+IF ~PartyHasItem("X3HNote2")~ EXTERN X3RMom TranscribeSecondNote
+IF ~!PartyHasItem("X3HNote2")~ EXTERN X3RMom TranscribeFirstNote
+
+CHAIN X3RMom TranscribeFirstNote 
+@140 
+DO ~TakePartyItem("X3HNote")GiveItemCreate("X3HNote3",Player1,0,0,0)DestroyItem("X3HNote")~
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN @141
+== JANJ IF ~IsValidForPartyDialogue("JAN")~ THEN @142
+== X3VieJ IF ~OR(2)IsValidForPartyDialogue("X3Reb")IsValidForPartyDialogue("JAN")IsValidForPartyDialogue("X3Vie")~ THEN @143
+EXIT 
+
+CHAIN X3RMom TranscribeSecondNote 
+@145
+DO ~TakePartyItem("X3HNote2")GiveItemCreate("X3HNote4",Player1,0,0,0)DestroyItem("X3HNote2")~
+EXIT 
+
+//Update this with quest checks.
+CHAIN X3RMOM Ritual
+@90
+END 
++~Global("X3IsaQuest","GLOBAL",4)~+ @91 + Tiefling   // ~We need it for a tiefling's attempt to cleanse her heritage from herself.~
++~GlobalGT("X3VieQuest","GLOBAL",3)~+ @92 + OldElvenSpell // ~We need it to perform an old elven spell.~
++~Global("X3IsaQuest","GLOBAL",4)~+ @93 + WhoThatIs  // ~I was asked to fetch it by Mavis.~
++~GlobalGT("X3VieQuest","GLOBAL",3)~+ @94 + MostComprehensive   // ~I was asked to fetch it by Sules'terim's apprentice, Galadin.~
+++ @95 + NotSureWhy   // ~I'm not sure why, we just need it.~
+
+CHAIN X3RMOM NotSureWhy
+@99
+EXTERN X3RMOM CanRelease
+
+CHAIN X3RMOM MostComprehensive 
+@97
+EXTERN X3RMOM CanRelease
+
+CHAIN X3RMOM WhoThatIs
+@96
+EXTERN X3RMOM CanRelease
+
+CHAIN X3RMOM OldElvenSpell
+@98
+EXTERN X3RMOM CanRelease
+
+
+CHAIN X3RMOM Tiefling
+@126
+EXTERN X3RMOM CanRelease
+
+CHAIN X3RMOM CanRelease
+@100
+END 
+IF ~GlobalGT("X3RebApp","GLOBAL",24)~ DO ~SetGlobal("X3RMomDiscount","Global",1)~ EXTERN X3RMom Discount
+IF ~!GlobalGT("X3RebApp","GLOBAL",24)~ EXTERN X3RMom NoDiscount
+
+CHAIN X3RMOM Discount 
+@101
+END 
++~PartyGoldGT(499)~+ @104 DO ~TakePartyGold(500)GiveItem("X3VBook",Player1)~ + GiveRitualBook
+++ @103 + OnlyOne
+++ @105 + NotEnoughFunds
+
+CHAIN X3RMOM NoDiscount 
+@102
+END 
++~PartyGoldGT(999)~+ @104 DO ~TakePartyGold(500)GiveItem("X3VBook",Player1)~ + GiveRitualBook
+++ @103 + OnlyOne
+++ @105 + NotEnoughFunds
+
+CHAIN X3RMOM RitualReturn
+@108
+END 
++~PartyGoldGT(999)~+ @104 DO ~TakePartyGold(500)GiveItem("X3VBook",Player1)~ + GiveRitualBook
+++ @103 + OnlyOne
+++ @105 + NotEnoughFunds
+
+CHAIN X3RMOM RitualReturnDiscount
+@109
+END 
++~PartyGoldGT(499)~+ @104 DO ~TakePartyGold(500)GiveItem("X3VBook",Player1)~ + GiveRitualBook
+++ @103 + OnlyOne
+++ @105 + NotEnoughFunds
+
+CHAIN X3RMom OnlyOne 
+@106
+END 
++~PartyGoldGT(999)!Global("X3RMomDiscount","Global",1)~+ @104 DO ~TakePartyGold(1000)GiveItem("X3VBook",Player1)~ + GiveRitualBook
++~PartyGoldGT(499)Global("X3RMomDiscount","Global",1)~+ @104 DO ~TakePartyGold(500)GiveItem("X3VBook",Player1)~ + GiveRitualBook
+++ @105 + NotEnoughFunds
+
+CHAIN X3RMom NotEnoughFunds 
+@107
+EXIT 
+
+CHAIN X3RMom GiveRitualBook 
+@110
+EXIT 
+
+CHAIN X3RMom CantAfford
+@107
+EXIT 
+
 CHAIN X3RMOM  mom_does 
 @61
-EXIT 
+EXTERN X3RMOM services 
 
 CHAIN X3RMOM not_ready 
 @62
@@ -243,3 +433,9 @@ CHAIN X3RMOM cheese
 DO ~SetGlobalTimer("X3KResearch","GLOBAL",ONE_HOUR)SetGlobal("X3KResearchTimer","LOCALS",1)AddJournalEntry(@30019,QUEST)~
 EXIT 
 
+CHAIN X3VieJ Vienxay_quest_priest 
+@153
+== DOGHMA @154
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN @155
+== X3VieJ @156
+EXIT 

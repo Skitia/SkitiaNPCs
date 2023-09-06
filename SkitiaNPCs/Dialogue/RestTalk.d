@@ -9,6 +9,7 @@ IF ~Global("X3RestInvite","GLOBAL",2)~ DO ~SetGlobal("X3RestInvite","GLOBAL",0)~
 IF ~Global("X3RestInvite","GLOBAL",3)~ DO ~SetGlobal("X3RestInvite","GLOBAL",0)~ EXTERN X3Rest KaleSet
 IF ~Global("X3RestInvite","GLOBAL",4)~ DO ~SetGlobal("X3RestInvite","GLOBAL",0)~ EXTERN X3Rest RecorderSet 
 IF ~Global("X3RestInvite","GLOBAL",5)~ DO ~SetGlobal("X3RestInvite","GLOBAL",0)~ EXTERN X3Rest VienxaySet
+//IF ~Global("X3RestInvite","GLOBAL",6)~ DO ~SetGlobal("X3RestInvite","GLOBAL",0)~ EXTERN X3Rest IsaacSet
 IF ~!GlobalGT("X3RestInvite","GLOBAL",0)~ EXTERN X3Rest restTalkNoSet
 
 CHAIN X3Rest restTalkNoSet
@@ -21,6 +22,7 @@ END
 +~IsValidForPartyDialogue("X3Kal")~+ @4 + KaleNoSet
 +~IsValidForPartyDialogue("X3Reb")~+ @5 + RecorderNoSet
 +~IsValidForPartyDialogue("X3Vie")~+ @6 + VienxayNoSet 
+//+~IsValidForPartyDialogue("X3Vie")~+ @1403 + IsaacNoSet 
 ++ @7 DO ~SetGlobal("X3RestActivated","GLOBAL",0)RestParty()~ EXIT 
 
 /*Emily*/
@@ -4018,7 +4020,8 @@ END
 +~!HPPercentGT(Myself,54)RandomNum(2,1)Global("X3KalRomanceActive","GLOBAL",2)~+ @139 + HealthLowLove2 // Vary by health status. Emily gives health status, then checks the PC's health status, then returns to this dialogue branch.
 +~Global("X3Story","LOCALS",0)~+ @140 DO ~SetGlobal("X3Story","LOCALS",1)~ + Story1 
 +~Global("X3Story","LOCALS",1)~+ @140 DO ~SetGlobal("X3Story","LOCALS",2)~ + Story2 
-+~Global("X3Story","LOCALS",2)~+ @140 DO ~SetGlobal("X3Story","LOCALS",3)~ + Story3 
++~Global("X3Story","LOCALS",2)~+ @140 DO ~SetGlobal("X3Story","LOCALS",3)~ + Story3
++~Global("X3KalRomanceActive","GLOBAL",2)Global("X3Kids","LOCALS",0)~+ @1383 DO ~SetGlobal("X3Kids","LOCALS",1)~ + Kids
 +~Global("X3Advice8","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_8%)~+ @141 DO ~SetGlobal("X3Advice8","LOCALS",1)~ + advice8 //Chapter 2 
 +~Global("X3Advice9","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_9%)~+ @141 DO ~SetGlobal("X3Advice9","LOCALS",1)~ + advice9 // Chapter 3 
 +~Global("X3KalRomanceActive","GLOBAL",2)~+ @142 + RestLove2
@@ -4041,6 +4044,7 @@ END
 +~Global("X3Story","LOCALS",0)~+ @140 DO ~SetGlobal("X3Story","LOCALS",1)~ + Story1 
 +~Global("X3Story","LOCALS",1)~+ @140 DO ~SetGlobal("X3Story","LOCALS",2)~ + Story2 
 +~Global("X3Story","LOCALS",2)~+ @140 DO ~SetGlobal("X3Story","LOCALS",3)~ + Story3 
++~Global("X3KalRomanceActive","GLOBAL",2)Global("X3Kids","LOCALS",0)~+ @1383 DO ~SetGlobal("X3Kids","LOCALS",1)~ + Kids
 +~Global("X3Advice8","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_8%)~+ @141 DO ~SetGlobal("X3Advice8","LOCALS",1)~ + advice8 //Chapter 2 
 +~Global("X3Advice9","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_9%)~+ @141 DO ~SetGlobal("X3Advice9","LOCALS",1)~ + advice9 // Chapter 3 
 +~Global("X3KalRomanceActive","GLOBAL",2)~+ @142 + RestLove2
@@ -4060,6 +4064,7 @@ END
 +~Global("X3Story","LOCALS",0)~+ @140 DO ~SetGlobal("X3Story","LOCALS",1)~ + Story1 
 +~Global("X3Story","LOCALS",1)~+ @140 DO ~SetGlobal("X3Story","LOCALS",2)~ + Story2 
 +~Global("X3Story","LOCALS",2)~+ @140 DO ~SetGlobal("X3Story","LOCALS",3)~ + Story3 
++~Global("X3KalRomanceActive","GLOBAL",2)Global("X3Kids","LOCALS",0)~+ @1383 DO ~SetGlobal("X3Kids","LOCALS",1)~ + Kids
 +~Global("X3Advice8","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_8%)~+ @141 DO ~SetGlobal("X3Advice8","LOCALS",1)~ + advice8 //Chapter 2 
 +~Global("X3Advice9","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_9%)~+ @141 DO ~SetGlobal("X3Advice9","LOCALS",1)~ + advice9 // Chapter 3 
 +~Global("X3KalRomanceActive","GLOBAL",2)~+ @142 + RestLove2
@@ -6377,8 +6382,8 @@ AreaCheck("AR0313")
 AreaCheck("AR1105")
 AreaCheck("AR2010")
 AreaCheck("AR1602")~ EXTERN X3VieJ Inn2
-IF ~RandomNumLT(6,4)AreaType(OUTDOOR)!GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ EXTERN X3VieJ Outdoor1 
-IF ~!RandomNumLT(6,4)AreaType(OUTDOOR)!GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ EXTERN X3VieJ Outdoor2
+IF ~RandomNumLT(6,4)AreaType(OUTDOOR)!GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)!Kit("X3Vie",SHADOWDANCER)~ EXTERN X3VieJ Outdoor1Shadowmage 
+IF ~!RandomNumLT(6,4)AreaType(OUTDOOR)!GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)Kit("X3Vie",SHADOWDANCER)~ EXTERN X3VieJ Outdoor1Shadowdancer
 IF ~OR(2)AreaCheck("AR5501")AreaCheck("AR5003")GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ EXTERN X3Vie25J Inn
 IF ~RandomNumLT(6,4)AreaType(OUTDOOR)GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ EXTERN X3Vie25J Outdoor1 
 IF ~!RandomNumLT(6,4)AreaType(OUTDOOR)GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ EXTERN X3Vie25J Outdoor2
@@ -6408,7 +6413,8 @@ AreaCheck("AR0313")
 AreaCheck("AR1105")
 AreaCheck("AR2010")
 AreaCheck("AR1602")~+ @1089 EXTERN X3VieJ Inn2
-+~RandomNumLT(6,4)AreaType(OUTDOOR)!GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~+ @1089 EXTERN X3VieJ Outdoor1 
++~RandomNumLT(6,4)AreaType(OUTDOOR)!GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)!Kit("X3Vie",SHADOWDANCER)~+ @1089 EXTERN X3VieJ Outdoor1Shadowmage 
++~RandomNumLT(6,4)AreaType(OUTDOOR)!GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)Kit("X3Vie",SHADOWDANCER)~+ @1089 EXTERN X3VieJ Outdoor1Shadowdancer 
 +~!RandomNumLT(6,4)AreaType(OUTDOOR)!GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~+ @1089 EXTERN X3VieJ Outdoor2 
 +~OR(2)AreaCheck("AR5501")AreaCheck("AR5003")GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~+ @1089 EXTERN X3Vie25J Inn
 +~RandomNumLT(6,4)AreaType(OUTDOOR)GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~+ @1089 EXTERN X3Vie25J Outdoor1 
@@ -7316,9 +7322,19 @@ END
 +~Global("X3Compliment","LOCALS",0)OR(2)Global("X3VieRomanceActive","GLOBAL",2)Global("X3VieRomanceActive","GLOBAL",1)~+  @1093 DO ~SetGlobal("X3Compliment","LOCALS",1)~ + compliment
 ++ @1286 + RestExit 
 // Vienxay Outdoor1 
-CHAIN X3VieJ Outdoor1
+CHAIN X3VieJ Outdoor1Shadowmage
 @1338
 = @1339
+END
+++ @13 + Talks 
+++ @1340 + Offer
++~Global("X3VieRomanceActive","GLOBAL",2)~+ @99 + KissOutdoor
++~Global("X3Compliment","LOCALS",0)OR(2)Global("X3VieRomanceActive","GLOBAL",2)Global("X3VieRomanceActive","GLOBAL",1)~+  @1093 DO ~SetGlobal("X3Compliment","LOCALS",1)~ + compliment
+++ @1341 + RestExit 
+
+CHAIN X3VieJ Outdoor1Shadowdancer
+@1381
+= @1382
 END
 ++ @13 + Talks 
 ++ @1340 + Offer
@@ -7420,7 +7436,8 @@ END
 CHAIN X3Vie25J Inn
 @1362
 == X3Vie25J IF ~AreaCheck("AR5003")~ THEN @1363
-== X3Vie25J IF ~!AreaCheck("AR5003")~ THEN @1364
+== X3Vie25J IF ~!AreaCheck("AR5003")!Kit("X3Vie",SHADOWDANCER)~ THEN @1364
+== X3Vie25J IF ~!AreaCheck("AR5003")Kit("X3Vie",SHADOWDANCER)~ THEN @1380
 END 
 ++ @13 + Talks 
 +~Global("X3VieRomanceActive","GLOBAL",2)RandomNum(3,1)~+ @1092 + Hug1 
@@ -7449,6 +7466,7 @@ END
 +~Global("X3Story","LOCALS",0)~+ @1097 DO ~SetGlobal("X3Story","LOCALS",1)~ + Story1 
 +~Global("X3Story","LOCALS",1)~+ @1097 DO ~SetGlobal("X3Story","LOCALS",2)~ + Story2 
 +~Global("X3Story","LOCALS",2)~+ @1097 DO ~SetGlobal("X3Story","LOCALS",3)~ + Story3 
++~Global("X3KalRomanceActive","GLOBAL",2)Global("X3Kids","LOCALS",0)~+ @1383 DO ~SetGlobal("X3Kids","LOCALS",1)~ + Kids
 +~Global("X3Advice8","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_8%)~+ @1098 DO ~SetGlobal("X3Advice8","LOCALS",1)~ + advice8
 +~Global("X3Advice9","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_9%)~+ @1098 DO ~SetGlobal("X3Advice9","LOCALS",1)~ + advice9 
 +~Global("X3VieRomanceActive","GLOBAL",2)~+ @1099 + RestLove2
@@ -7818,6 +7836,7 @@ END
 +~Global("X3Story","LOCALS",0)~+ @1097 DO ~SetGlobal("X3Story","LOCALS",1)~ + Story1 
 +~Global("X3Story","LOCALS",1)~+ @1097 DO ~SetGlobal("X3Story","LOCALS",2)~ + Story2 
 +~Global("X3Story","LOCALS",2)~+ @1097 DO ~SetGlobal("X3Story","LOCALS",3)~ + Story3 
++~Global("X3KalRomanceActive","GLOBAL",2)Global("X3Kids","LOCALS",0)~+ @1383 DO ~SetGlobal("X3Kids","LOCALS",1)~ + Kids
 +~Global("X3Advice8","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_8%)~+ @1098 DO ~SetGlobal("X3Advice8","LOCALS",1)~ + advice8
 +~Global("X3Advice9","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_9%)~+ @1098 DO ~SetGlobal("X3Advice9","LOCALS",1)~ + advice9 +~Global("X3VieRomanceActive","GLOBAL",2)~+ @1099 + RestLove2
 +~!Global("X3VieRomanceActive","GLOBAL",2)~+ @1100 + RestExit 
@@ -8112,3 +8131,217 @@ END
 +~Global("X3Compliment","LOCALS",0)OR(2)Global("X3VieRomanceActive","GLOBAL",2)Global("X3VieRomanceActive","GLOBAL",1)~+  @1093 DO ~SetGlobal("X3Compliment","LOCALS",1)~ + compliment
 +~Global("X3VieRomanceActive","GLOBAL",2)~+ @1094 + Sleep5
 ++ @19 + RestExit 
+
+//New Rest Talks Kale 
+
+CHAIN X3Kal25J Kids 
+@1384
+END 
+++ @1385 + Kids1 
+++ @1386 + Kids2 
+++ @1387 + Kids3
+
+CHAIN X3Kal25J Kids1
+@1388
+END 
+++ @1389 + RestLate 
+++ @1390 + Sleep2
+++ @1391 + RestLate
+
+CHAIN X3Kal25J Kids2
+@1392
+END
+++ @1393 + RestLate
+++ @1395 + Kids1
+
+CHAIN X3Kal25J Kids3 
+@1394
+END 
+++ @1396 + Kids6
+++ @1397 + Kids4 
+
+CHAIN X3Kal25J Kids4 
+@1398
+END 
+++ @1399 + Kids5 
+++ @1400 + Kids6 
+
+CHAIN X3Kal25J Kids6  
+@1401
+EXTERN X3Kal25J RestLate
+
+CHAIN X3Kal25J Kids5 
+@1401
+DO ~SetGlobal("X3KalRomanceActive","GLOBAL",3)RestParty()~
+EXIT 
+
+CHAIN X3Vie25J Kids
+@1412
+END 
+++ @1413 + Kids1 
+++ @1414 + Kids2 
+++ @1415 + Kids3 
+++ @1416 + Kids4
+
+CHAIN X3Vie25J Kids1 
+@1417
+END 
+++ @1433 + Kids5
+++ @1416 + Kids4
+++ @1418 + Kids3 
+
+CHAIN X3Vie25J Kids5 
+@1434 
+EXTERN X3Vie25J RestLate
+
+CHAIN X3Vie25J Kids2
+@1432
+EXTERN X3Vie25J RestLate
+
+CHAIN X3Vie25J Kids3 
+@1419
+EXTERN X3Vie25J Kids2 
+
+CHAIN X3Vie25J Kids4 
+@1420
+END 
+++ @1421 + Kids6 
+++ @1422 + Kids8 
+++ @1423 + Kids7
+
+CHAIN X3Vie25J Kids6 
+@1435
+EXTERN X3Vie25J RestLate
+
+CHAIN X3Vie25J Kids8 
+@1424
+EXTERN X3Vie25J Kids7 
+
+CHAIN X3Vie25J Kids7 
+@1426
+END 
+++ @1427 + Kids9
+++ @1428 + Kids2 
++~OR(2)Race(Player1,HUMAN)Race(Player1,HALFORC)~+ @1429 + Kids10 
+
+CHAIN X3Vie25J Kids9
+@1431
+EXTERN X3Vie25J RestLate
+
+CHAIN X3Vie25J Kids10
+@1430
+EXTERN X3Vie25J RestLate
+/*Isaac*/
+/*
+CHAIN X3Rest IsaacNoSet 
+@1404
+END 
+IF ~RandomNumLT(6,4)!GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)OR(10)
+AreaCheck("AR0704")
+AreaCheck("AR0709")
+AreaCheck("AR0406")
+AreaCheck("AR0513")
+AreaCheck("AR0509")
+AreaCheck("AR0021")
+AreaCheck("AR0313")
+AreaCheck("AR1105")
+AreaCheck("AR2010")
+AreaCheck("AR1602")~ EXTERN X3IsaJ Inn1
+IF ~RandomNum(6,4)!GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)OR(10)
+AreaCheck("AR0704")
+AreaCheck("AR0709")
+AreaCheck("AR0406")
+AreaCheck("AR0513")
+AreaCheck("AR0509")
+AreaCheck("AR0021")
+AreaCheck("AR0313")
+AreaCheck("AR1105")
+AreaCheck("AR2010")
+AreaCheck("AR1602")~ EXTERN X3IsaJ Inn2
+IF ~RandomNumGT(6,4)!GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)OR(10)
+AreaCheck("AR0704")
+AreaCheck("AR0709")
+AreaCheck("AR0406")
+AreaCheck("AR0513")
+AreaCheck("AR0509")
+AreaCheck("AR0021")
+AreaCheck("AR0313")
+AreaCheck("AR1105")
+AreaCheck("AR2010")
+AreaCheck("AR1602")~ EXTERN X3IsaJ Inn3
+IF ~RandomNumLT(6,4)AreaType(OUTDOOR)!GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ EXTERN X3IsaJ Outdoor1 
+IF ~!RandomNumLT(6,4)AreaType(OUTDOOR)!GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ EXTERN X3IsaJ Outdoor2
+IF ~OR(2)AreaCheck("AR5501")AreaCheck("AR5003")GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ EXTERN X3Isa25J Inn
+IF ~RandomNumLT(6,4)AreaType(OUTDOOR)GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ EXTERN X3Isa25J Outdoor1 
+IF ~!RandomNumLT(6,4)AreaType(OUTDOOR)GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ EXTERN X3Isa25J Outdoor2
+
+CHAIN X3Rest IsaacSet  
+@1405
+END 
++~RandomNumLT(6,4)!GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)OR(10)
+AreaCheck("AR0704")
+AreaCheck("AR0709")
+AreaCheck("AR0406")
+AreaCheck("AR0513")
+AreaCheck("AR0509")
+AreaCheck("AR0021")
+AreaCheck("AR0313")
+AreaCheck("AR1105")
+AreaCheck("AR2010")
+AreaCheck("AR1602")~+ @1406 EXTERN X3IsaJ Inn1
++~RandomNumLT(6,4)!GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)OR(10)
+AreaCheck("AR0704")
+AreaCheck("AR0709")
+AreaCheck("AR0406")
+AreaCheck("AR0513")
+AreaCheck("AR0509")
+AreaCheck("AR0021")
+AreaCheck("AR0313")
+AreaCheck("AR1105")
+AreaCheck("AR2010")
+AreaCheck("AR1602")~+ @1406 EXTERN X3IsaJ Inn2
++~RandomNumLT(6,4)AreaType(OUTDOOR)!GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~+ @1406 EXTERN X3IsaJ Outdoor1 
++~!RandomNumLT(6,4)AreaType(OUTDOOR)!GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~+ @1406 EXTERN X3IsaJ Outdoor2 
++~OR(2)AreaCheck("AR5501")AreaCheck("AR5003")GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~+ @1406 EXTERN X3Isa25J Inn
++~RandomNumLT(6,4)AreaType(OUTDOOR)GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~+ @1406 EXTERN X3Isa25J Outdoor1 
++~!RandomNumLT(6,4)AreaType(OUTDOOR)GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~+ @1406 EXTERN X3Isa25J Outdoor2 
+++ @7 DO ~SetGlobal("X3RestActivated","GLOBAL",0)RestParty()~ EXIT 
+
+CHAIN X3IsaJ Inn1 
+@1407
+= @1408
+END 
+++ @13 + Talks 
++~Global("X3IsaRomanceActive","GLOBAL",2)RandomNum(3,1)~+ @1409 + Hug1 
++~Global("X3IsaRomanceActive","GLOBAL",2)RandomNum(3,2)~+ @1409 + Hug2 
++~Global("X3IsaRomanceActive","GLOBAL",2)RandomNum(3,3)~+ @1409 + Hug3
++~Global("X3IsaRomanceActive","GLOBAL",2)RandomNum(3,1)~+ @99 + Kiss1 
++~Global("X3IsaRomanceActive","GLOBAL",2)RandomNum(3,2)~+ @99 + Kiss2  
++~Global("X3IsaRomanceActive","GLOBAL",2)RandomNum(3,3)~+ @99 + Kiss3
++~Global("X3IsaRomanceActive","GLOBAL",2)Global("X3Slept","LOCALS",2)~+ @309 + BathYes
++~Global("X3Compliment","LOCALS",0)OR(2)Global("X3IsaRomanceActive","GLOBAL",2)Global("X3IsaRomanceActive","GLOBAL",1)~+  @1410 DO ~SetGlobal("X3Compliment","LOCALS",1)~ + compliment
++~Global("X3IsaRomanceActive","GLOBAL",2)~+ @18  + Sleep1 // Same as below, except sets slept to 1.
+++ @19 + RestExit 
+
+CHAIN X3IsaJ Talks
+@1411
+END 
++~HPPercentGT(Myself,54)!RandomNum(2,1)!Global("X3IsaRomanceActive","GLOBAL",2)~+ @139 + HealthHigh1 // Vary by health status. Emily gives health status, then checks the PC's health status, then returns to this dialogue branch.
++~HPPercentGT(Myself,54)!RandomNum(2,1)Global("X3IsaRomanceActive","GLOBAL",2)~+ @139 + HealthHighLove1 // Vary by health status. Emily gives health status, then checks the PC's health status, then returns to this dialogue branch.
++~HPPercentGT(Myself,54)RandomNum(2,1)!Global("X3IsaRomanceActive","GLOBAL",2)~+ @139 + HealthHigh2 // Vary by health status. Emily gives health status, then checks the PC's health status, then returns to this dialogue branch.
++~HPPercentGT(Myself,54)RandomNum(2,1)Global("X3IsaRomanceActive","GLOBAL",2)~+ @139 + HealthHighLove2 // Vary by health status. Emily gives health status, then checks the PC's health status, then returns to this dialogue branch.
++~!HPPercentGT(Myself,54)!RandomNum(2,1)!Global("X3IsaRomanceActive","GLOBAL",2)~+ @139 + HealthLow1 // Vary by health status. Emily gives health status, then checks the PC's health status, then returns to this dialogue branch.
++~!HPPercentGT(Myself,54)!RandomNum(2,1)Global("X3IsaRomanceActive","GLOBAL",2)~+ @139 + HealthLowLove2 // Vary by health status. Emily gives health status, then checks the PC's health status, then returns to this dialogue branch.
++~!HPPercentGT(Myself,54)RandomNum(2,1)!Global("X3IsaRomanceActive","GLOBAL",2)~+ @139 + HealthLow2 // Vary by health status. Emily gives health status, then checks the PC's health status, then returns to this dialogue branch.
++~!HPPercentGT(Myself,54)RandomNum(2,1)Global("X3IsaRomanceActive","GLOBAL",2)~+ @139 + HealthLowLove2 // Vary by health status. Emily gives health status, then checks the PC's health status, then returns to this dialogue branch.
++~Global("X3Story","LOCALS",0)~+ @140 DO ~SetGlobal("X3Story","LOCALS",1)~ + Story1 
++~Global("X3Story","LOCALS",1)~+ @140 DO ~SetGlobal("X3Story","LOCALS",2)~ + Story2 
++~Global("X3Story","LOCALS",2)GlobalGT("X3IsaTalk","LOCALS",10)~+ @140 DO ~SetGlobal("X3Story","LOCALS",3)~ + Story3 
++~Global("X3Advice2","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_2%)~+ @141 DO ~SetGlobal("X3Advice2","LOCALS",1)~ + advice2 //Chapter 2 
++~Global("X3Advice3","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_3%)~+ @141 DO ~SetGlobal("X3Advice3","LOCALS",1)~ + advice3 // Chapter 3 
++~Global("X3Advice4","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_4%)~+ @141 DO ~SetGlobal("X3Advice4","LOCALS",1)~ + advice4 // Chapter 4
++~Global("X3Advice6","LOCALS",0)Global("Chapter","GLOBAL",%bg2_chapter_6%)~+ @141 DO ~SetGlobal("X3Advice6","LOCALS",1)~ + advice6 // Chapter 6 
++~Global("X3IsaRomanceActive","GLOBAL",2)~+ @142 + RestLove2
++~!Global("X3IsaRomanceActive","GLOBAL",2)~+ @143 + RestExit
+
+*/

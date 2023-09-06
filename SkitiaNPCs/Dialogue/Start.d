@@ -1,4 +1,4 @@
-// This file lists all of the dialogue extensions for the five NPCs. 
+// This file lists all of the dialogue extensions for the six recruitable NPCs
 
 BEGIN X3Emi 
 BEGIN BX3Emi
@@ -40,5 +40,12 @@ BEGIN X3Vie25
 BEGIN BX3Vie25
 BEGIN X3Vie25J
 BEGIN X3Vie25P
-
+BEGIN X3Isa 
+BEGIN BX3Isa
+BEGIN X3IsaJ 
+BEGIN X3IsaP 
+BEGIN X3Isa25
+BEGIN BX3Isa25
+BEGIN X3Isa25J 
+BEGIN X3Isa25P
 

@@ -512,14 +512,14 @@ CHAIN X3EmiP ru3
 == X3EmiP @176
 END 
 IF ~IsValidForPartyDialogue("X3Reb")~ EXTERN X3RebJ ru5
-IF ~!IsValidForPartyDialogue("X3Reb")~ DO ~SetGlobal("X3EmiKickedOut","LOCALS",0)ActionOverride("X3Emi",EscapeAreaMove("AR0704",531,622,SW))~ EXIT
+IF ~!IsValidForPartyDialogue("X3Reb")~ DO ~SetGlobal("X3EmiKickedOut","LOCALS",1)ActionOverride("X3Emi",EscapeAreaMove("AR0704",531,622,SW))~ EXIT
 
 CHAIN X3EmiP ru4 
 @177
 == X3EmiP @178
 END 
 IF ~IsValidForPartyDialogue("X3Reb")~ EXTERN X3RebJ ru5
-IF ~!IsValidForPartyDialogue("X3Reb")~ DO ~SetGlobal("X3EmiKickedOut","LOCALS",0)ActionOverride("X3Emi",EscapeAreaMove("AR0704",531,622,SW))~ EXIT
+IF ~!IsValidForPartyDialogue("X3Reb")~ DO ~SetGlobal("X3EmiKickedOut","LOCALS",1)ActionOverride("X3Emi",EscapeAreaMove("AR0704",531,622,SW))~ EXIT
 
 CHAIN X3RebJ ru5
 @147

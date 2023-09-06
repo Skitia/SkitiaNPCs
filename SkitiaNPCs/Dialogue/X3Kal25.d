@@ -76,6 +76,7 @@ DO ~JoinParty()~ EXIT
 
 CHAIN X3Kal25 r4 
 @28
+DO ~MoveToPointNoInterrupt([2327.1301])Face(3)~ 
 EXIT 
 
 

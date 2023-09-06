@@ -227,7 +227,7 @@ CHAIN IF ~Global("X3VieToBKickedOut","GLOBAL",1)Global("X3VieRomanceActive","GLO
 @71  
 END
 ++ @72 + pr.1
-+~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",0)~+ @66 DO ~SetGlobal("X3HelScryHelp","LOCALS",1)AddJournalEntry(@20014,QUEST)~ + Scry 
++~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",0)!Kit("X3Vie",SHADOWDANCER)~+ @66 DO ~SetGlobal("X3HelScryHelp","LOCALS",1)AddJournalEntry(@20014,QUEST)~ + Scry 
 +~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")!AreaCheck("AR4500")~+ @67  + ScryStartNotPlane
 +~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")AreaCheck("AR4500")~+ @67 DO ~EraseJournalEntry(@20014)~ + ScryStartPlane
 ++ @73 + p3 

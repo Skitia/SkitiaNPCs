@@ -218,7 +218,7 @@ END
 A_T_T SARPROVF 0 ~!Global("X3RebRomanceActive","GLOBAL",2)!Global("X3EmiRomanceActive","GLOBAL",2)!Global("X3KalRomanceActive","GLOBAL",2)!Global("X3VieRomanceActive","GLOBAL",2)~ DO 0
 
 EXTEND_BOTTOM SARPROVF 0
-IF ~Global("X3EmiRomanceActive","GLOBAL",2)~ EXTERN X3Emi25J SARPROVF-Care
+IF ~Global("X3EmiRomanceActive","GLOBAL",2)IsValidForPartyDialogue("X3Emi")~ EXTERN X3Emi25J SARPROVF-Care
 END
 
 CHAIN X3Emi25J SARPROVF-Care 
@@ -242,7 +242,7 @@ DO ~LeaveParty()Enemy()~
 == SARCNT01 @54
 END 
 
-I_C_T SARTHF1 12 X3VieSARTHF1
+I_C_T SARTHF1 12 X3EmiSARTHF1
 == X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")!IsValidForPartyDialogue("X3Reb")~ THEN @55
 DO ~IncrementGlobal("X3EmiApp","GLOBAL",-6)DisplayStringNoNameDlg(Player1,@100106)~
 == X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")Alignment("X3Vie",NEUTRAL_EVIL)~ THEN @56
@@ -306,19 +306,23 @@ EXTERN SARPRO01 12
 
 // Volo's obligatory interjection in Saradush.
 
-EXTEND_TOP SARVOLO 9 #2
-+ ~IsValidForPartyDialogue("X3Emi")!Global("X3EmiRomanceActive","GLOBAL",2)~ + @75 + X3EmiVoloBio1
-+ ~IsValidForPartyDialogue("X3Emi")Global("X3EmiRomanceActive","GLOBAL",2)~ + @75 + X3EmiVoloBio2
+EXTEND_BOTTOM SARVOLO 9
++ ~InParty("X3Emi")!Global("X3EmiRomanceActive","GLOBAL",2)~ + @75 + X3EmiVoloBio1
++ ~InParty("X3Emi")Global("X3EmiRomanceActive","GLOBAL",2)~ + @75 + X3EmiVoloBio2
 END
 
 CHAIN SARVOLO X3EmiVoloBio1
 @76
-EXTERN X3Emi25J X3EmiVoloBio
+END 
+IF ~!IsValidForPartyDialog("X3Emi")~ EXTERN SARVOLO 9
+IF ~IsValidForPartyDialog("X3Emi")~ EXTERN X3Emi25J X3EmiVoloBio
 
 
 CHAIN SARVOLO X3EmiVoloBio2
 @77
-EXTERN X3Emi25J X3EmiVoloBio
+END 
+IF ~!IsValidForPartyDialog("X3Emi")~ EXTERN SARVOLO 9
+IF ~IsValidForPartyDialog("X3Emi")~ EXTERN X3Emi25J X3EmiVoloBio
 
 CHAIN X3Emi25J X3EmiVoloBio
 @78
@@ -574,6 +578,7 @@ CHAIN X3Emi25J engagement_yes2
 DO ~TransformItem("X3ERING","X3RINGE")~
 == X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN @141
 == X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")~ THEN @142
+== X3Isa25J IF ~IsValidForPartyDialogue("X3Isa")~ THEN @650
 EXIT 
 
 
@@ -1284,6 +1289,170 @@ CHAIN X3Emi25J 7.12
 @408
 EXIT 
 
+
+//New Initiated Flirts: Romance Active = 2
+CHAIN IF ~Global("X3EmiFlirt","GLOBAL",1) Global("X3EmiRomanceActive","GLOBAL",1)~ THEN X3Emi25J flirt1
+@1604
+END 
+ IF ~~ DO ~SetGlobal("X3EmiStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3EmiFlirtTimer","GLOBAL",2700)~ + initiate2.1
+IF ~RandomNum(20,1)~ DO ~SetGlobal("X3EmiStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3EmiFlirtTimer","GLOBAL",2700)~ + initiate2.2
+IF ~RandomNum(20,2)~ DO ~SetGlobal("X3EmiStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3EmiFlirtTimer","GLOBAL",2700)~ + initiate2.3
+IF ~RandomNum(20,3)~ DO ~SetGlobal("X3EmiStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3EmiFlirtTimer","GLOBAL",2700)~ + initiate2.4
+IF ~RandomNum(20,4)~ DO ~SetGlobal("X3EmiStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3EmiFlirtTimer","GLOBAL",2700)~ + initiate2.5
+IF ~RandomNum(20,5) HPPercentLT("X3Emi",50) ~ DO ~SetGlobal("X3EmiStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3EmiFlirtTimer","GLOBAL",2700)~ + injured2A
+IF ~RandomNum(20,6)~ DO ~SetGlobal("X3EmiStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3EmiFlirtTimer","GLOBAL",2700)~ + initiate2.6
+IF ~RandomNum(20,7)Global("X3Slept","LOCALS",2)~ DO ~SetGlobal("X3EmiStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3EmiFlirtTimer","GLOBAL",2700)~ + initiate2.7
+IF ~RandomNum(20,8)~ DO ~SetGlobal("X3EmiStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3EmiFlirtTimer","GLOBAL",2700)~ + initiate2.8
+IF ~RandomNum(20,9) AreaType(DUNGEON)~ DO ~SetGlobal("X3EmiStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3EmiFlirtTimer","GLOBAL",2700)~ + dungeon2
+IF ~RandomNum(20,10)~ DO ~SetGlobal("X3EmiStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3EmiFlirtTimer","GLOBAL",2700)~ + initiate2.9
+IF ~RandomNum(20,11)~ DO ~SetGlobal("X3EmiStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3EmiFlirtTimer","GLOBAL",2700)~ + initiate2.10
+IF ~RandomNum(20,12)~ DO ~SetGlobal("X3EmiStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3EmiFlirtTimer","GLOBAL",2700)~ + initiate2.11
+IF ~RandomNum(20,13)Global("X3Slept","LOCALS",2)~ DO ~SetGlobal("X3EmiStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3EmiFlirtTimer","GLOBAL",2700)~ + initiate2.12
+IF ~RandomNum(20,14)Global("X3EmiPartyBG1","GLOBAL",1)~ DO ~SetGlobal("X3EmiStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3EmiFlirtTimer","GLOBAL",2700)~ + initiate2.13
+IF ~RandomNum(20,15) ReputationGT(Player1,16)~ DO ~SetGlobal("X3EmiStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3EmiFlirtTimer","GLOBAL",2700)~ + rep2
+IF ~RandomNum(20,16) HPPercentLT(Player1,75)~ DO ~SetGlobal("X3EmiStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3EmiFlirtTimer","GLOBAL",2700)~ + injured2B
+IF ~RandomNum(20,17)CheckStatGT(Player1,16,INT)~ DO ~SetGlobal("X3EmiStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3EmiFlirtTimer","GLOBAL",2700)~ + highint1
+IF ~RandomNum(20,18)OR(2)
+AreaCheck("AR5501")
+AreaCheck("AR5003")~ DO ~SetGlobal("X3EmiStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3EmiFlirtTimer","GLOBAL",2700)~ + initiate2.15
+IF ~RandomNum(20,19) OR(2)TimeOfDay(NIGHT)TimeOfDay(DUSK)~ DO ~SetGlobal("X3EmiStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3EmiFlirtTimer","GLOBAL",2700)~ + night2
+IF ~RandomNum(20,20)~ DO ~SetGlobal("X3EmiStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3EmiFlirtTimer","GLOBAL",2700)~ + initiate2.14
+
+CHAIN X3Emi25J initiate2.1 
+@1688
+EXIT 
+
+CHAIN X3Emi25J initiate2.2
+@1689
+EXIT 
+
+CHAIN X3Emi25J initiate2.3
+@1690
+== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @1691
+EXIT 
+
+CHAIN X3Emi25J initiate2.4
+@1692
+EXIT 
+
+CHAIN X3Emi25J initiate2.5
+@1693
+EXIT 
+
+CHAIN X3Emi25J injured2A 
+@1701
+EXIT 
+
+CHAIN X3Emi25J initiate2.7
+@1702
+EXIT 
+
+CHAIN X3Emi25J initiate2.8
+@1703
+EXIT 
+
+CHAIN X3Emi25J dungeon2
+@1704
+EXIT 
+
+CHAIN X3Emi25J initiate2.9
+@1705
+END 
+++ @1706 + initiate2.9A
+++ @1707 + initiate2.9B
+++ @1708 + initiate2.9C
+
+CHAIN X3Emi25J initiate2.9A
+@1709
+END 
+IF ~!NumInPartyGT(2)~ EXTERN X3Emi25J initiate2.9E
+IF ~NumInPartyGT(2)~ EXTERN X3Emi25J initiate2.9F
+
+CHAIN X3Emi25J initiate2.9B 
+@1710
+EXTERN X3Emi25J initiate2.9D
+
+CHAIN X3Emi25J initiate2.9C 
+@1711
+EXTERN X3Emi25J initiate2.9D
+
+CHAIN X3Emi25J initiate2.9D
+@1712
+END 
+IF ~!NumInPartyGT(2)~ EXTERN X3Emi25J initiate2.9E
+IF ~NumInPartyGT(2)~ EXTERN X3Emi25J initiate2.9F
+
+CHAIN X3Emi25J initiate2.9E 
+@1713
+EXIT
+
+CHAIN X3Emi25J initiate2.9F 
+@1714
+== X3HelJ IF ~IsValidForPartyDialogue("X3Hel")~ THEN @1715
+== X3KalJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN @1716
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN @1717
+== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @1718
+== X3IsaJ IF ~IsValidForPartyDialogue("X3Isa")~ THEN @1719
+EXTERN X3Emi25J initiate2.9E
+
+CHAIN X3Emi25J initiate2.6
+@1694
+= @1695
+== X3HelJ IF ~IsValidForPartyDialogue("X3Hel")~ THEN @1696
+== X3KalJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN @1697
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN @1698
+== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @1699
+== X3IsaJ IF ~IsValidForPartyDialogue("X3Isa")~ THEN @1700
+EXIT 
+
+CHAIN X3Emi25J initiate2.10
+@1720
+= @1721
+EXIT 
+
+CHAIN X3Emi25J initiate2.11
+@1722
+EXIT 
+
+CHAIN X3Emi25J initiate2.12
+@1723
+== X3HelJ IF ~IsValidForPartyDialogue("X3Hel")~ THEN @1724
+== X3KalJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN @1725
+== X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN @1726
+== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @1727
+== X3IsaJ IF ~IsValidForPartyDialogue("X3Isa")IsValidForPartyDialogue("X3Vie")~ THEN @1728
+== X3Emi25J IF ~OR(4)IsValidForPartyDialogue("X3Hel")IsValidForPartyDialogue("X3Kal")IsValidForPartyDialogue("X3Reb")IsValidForPartyDialogue("X3Vie")~ THEN @1729
+EXIT 
+
+CHAIN X3Emi25J initiate2.13
+@1730
+EXIT 
+
+CHAIN X3Emi25J rep2 
+@1731
+EXIT 
+
+CHAIN X3Emi25J injured2B 
+@1732
+EXIT 
+
+CHAIN X3Emi25J highint1 
+@1733 
+EXIT 
+
+CHAIN X3Emi25J initiate2.14
+@1736
+EXIT 
+
+CHAIN X3Emi25J initiate2.15
+@1734 
+== X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @1735
+EXIT 
+
+CHAIN X3Emi25J night2 
+@1737
+EXIT 
+
 // Group Kiss from PID 
 CHAIN X3Emi25J Group.Kiss 
 @409
@@ -1291,6 +1460,7 @@ CHAIN X3Emi25J Group.Kiss
 == X3Kal25J IF ~IsValidForPartyDialogue("X3Kal")~ THEN @411
 == X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN @412
 == X3Vie25J IF ~IsValidForPartyDialogue("X3Vie")~ THEN @413
+== X3Isa25J IF ~IsValidForPartyDialogue("X3Isa")~ THEN @649
 == X3Emi25J @414
 == X3Emi25J @415
 EXIT 
@@ -1408,6 +1578,7 @@ SAY @448
 +~!NumInPartyGT(2)~+ @450 + PersonalAlone.PID 
 // Requires the PC to have talked to Emily before about crafting. 
 +~Global("X3miCraft","LOCALS",1)~+ @451 + Craft.PID
++~Global("X3EmiRomanceActive","GLOBAL",2)~+ @1854 + Flirts2
 ++ @647 + FixString
 ++ @452 EXIT 
 END 
@@ -1418,6 +1589,7 @@ SAY @453
 +~NumInPartyGT(2)~+ @450 + PersonalGroup.PID 
 +~!NumInPartyGT(2)~+ @450 + PersonalAlone.PID 
 +~Global("X3miCraft","LOCALS",1)~+ @451 + Craft.PID
++~Global("X3EmiRomanceActive","GLOBAL",2)~+ @1854 + Flirts2
 ++ @647 + FixString
 ++ @452 EXIT 
 END  
@@ -1428,6 +1600,7 @@ SAY @454
 +~NumInPartyGT(2)~+ @450 + PersonalGroup.PID 
 +~!NumInPartyGT(2)~+ @450 + PersonalAlone.PID 
 +~Global("X3miCraft","LOCALS",1)~+ @451 + Craft.PID
++~Global("X3EmiRomanceActive","GLOBAL",2)~+ @1854 + Flirts2
 ++ @647 + FixString
 ++ @452 EXIT 
 END  
@@ -1972,6 +2145,516 @@ SAY @648
 IF ~~ DO ~ClearAllActions() 
       StartCutSceneMode() 
       StartCutScene("X3EReset")~ EXIT 
+END 
+
+IF ~~ Flirts2 
+SAY @1739
+++ @1740 DO ~SetGlobal("X3RestInvite","GLOBAL",1)~ + F.Night2
++~RandomNum(4,1)~+ @1483 + Kiss1
++~RandomNum(4,2)~+ @1483 + Kiss2
++~RandomNum(4,3)~+ @1483 + Kiss3
++~RandomNum(4,4)!NumInParty(2)~+ @1483 + Group.Kiss 
++~RandomNum(4,4)NumInParty(2)~+ @1483 + Alone.Kiss
++~RandomNum(4,1)~+ @1751 + Compliment1
++~RandomNum(4,2)~+ @1751 + Compliment2
++~RandomNum(4,3)~+ @1751 + Compliment3
++~RandomNum(4,4)~+ @1751 + Compliment4
++~RandomNum(4,1)~+ @1756 + Hug1R
++~RandomNum(4,2)~+ @1756 + Hug2
++~RandomNum(4,3)~+ @1756 + Hug3R
++~RandomNum(4,4)~+ @1756 + Hug4R
++~RandomNum(4,1)~+ @1764 + Hand1
++~RandomNum(4,2)~+ @1764 + Hand2
++~RandomNum(4,3)~+ @1764 + Hand3R
++~RandomNum(4,4)~+ @1764 + Hand4R
++~RandomNum(4,1)~+ @1764 + Massage1
++~RandomNum(4,2)~+ @1773 + Massage2
++~RandomNum(4,3)~+ @1773 + Massage3
++~RandomNum(4,4)~+ @1773 + Massage4R
++~RandomNum(4,1)~+ @1779 + Sugg1
++~RandomNum(4,2)~+ @1779 + Sugg2
++~RandomNum(4,3)~+ @1779 + Sugg3
++~RandomNum(4,4)Global("X3Slept","LOCALS",2)~+ @1779 + Sugg4S
++~RandomNum(4,4)!Global("X3Slept","LOCALS",2)~+ @1779 + Sugg4NS
++~RandomNum(4,1)~+ @1787 + Bottom1
++~RandomNum(4,2)~+ @1787 + Bottom2
++~RandomNum(4,3)~+ @1787 + Bottom3
++~RandomNum(4,4)~+ @1787 + Bottom4
++~RandomNum(4,1)~+ @1792 + Love1
++~RandomNum(4,2)~+ @1792 + Love2
++~RandomNum(4,3)~+ @1792 + Love3
++~RandomNum(4,4)~+ @1792 + Love4
++~RandomNum(2,1)Global("X3Slept","LOCALS",2)OR(10)AreaCheck("AR0704")
+AreaCheck("AR0709")
+AreaCheck("AR0406")
+AreaCheck("AR0513")
+AreaCheck("AR0509")
+AreaCheck("AR0021")
+AreaCheck("AR0313")
+AreaCheck("AR1105")
+AreaCheck("AR2010")
+AreaCheck("AR1602")~+ @1797 + Bath1
++~RandomNum(2,2)Global("X3Slept","LOCALS",2)OR(10)AreaCheck("AR0704")
+AreaCheck("AR0709")
+AreaCheck("AR0406")
+AreaCheck("AR0513")
+AreaCheck("AR0509")
+AreaCheck("AR0021")
+AreaCheck("AR0313")
+AreaCheck("AR1105")
+AreaCheck("AR2010")
+AreaCheck("AR1602")~+ @1797 + Bath2
++~RandomNum(2,1)Global("X3Slept","LOCALS",2)OR(3)AreaCheck("AR1100")
+AreaCheck("AR1200")
+AreaCheck("AR1700")~+ @1797 + Bath3
++~RandomNum(2,2)Global("X3Slept","LOCALS",2)OR(3)AreaCheck("AR1100")
+AreaCheck("AR1200")
+AreaCheck("AR1700")~+ @1797 + Bath4
++~RandomNum(4,1)~+ @1820 + Thank1
++~RandomNum(4,2)~+ @1820 + Thank2
++~RandomNum(4,3)~+ @1820 + Thank3
++~RandomNum(4,4)~+ @1820 + Thank4
++~RandomNum(4,1)~+ @1829 + Hair1
++~RandomNum(4,2)~+ @1829 + Hair2
++~RandomNum(4,3)~+ @1829 + Hair3
++~RandomNum(4,4)~+ @1829 + Hair4
++~RandomNum(4,1)!Race(Player1,GNOME)!Race(Player1,HALFLING)!Race(Player1,DWARF)~+ @1830 + Spin1
++~RandomNum(4,2)!Race(Player1,GNOME)!Race(Player1,HALFLING)!Race(Player1,DWARF)~+ @1830 + Spin2
++~RandomNum(4,3)!Race(Player1,GNOME)!Race(Player1,HALFLING)!Race(Player1,DWARF)~+ @1830 + Spin3
++~RandomNum(4,4)!Race(Player1,GNOME)!Race(Player1,HALFLING)!Race(Player1,DWARF)~+ @1830 + Spin4
++~RandomNum(4,1)~+ @1831 + Watch1
++~RandomNum(4,2)~+ @1831 + Watch2
++~RandomNum(4,3)~+ @1831 + Watch3
++~RandomNum(4,4)~+ @1831 + Watch4
++ ~Global("X3DisableFlirts","LOCALS",0)~ + @1832 DO ~SetGlobal("X3DisableFlirts","LOCALS",1)~ + Flirt.Stop
++ ~Global("X3DisableFlirts","LOCALS",1)~ + @1833 DO ~SetGlobal("X3DisableFlirts","LOCALS",0)~ + Flirt.Start
+END 
+
+IF ~~ F.Night1 
+SAY @1741
+IF ~~ EXIT 
+END 
+
+IF ~~ F.Night2 
+SAY @1742
+IF ~~ EXIT 
+END 
+
+IF ~~ Cheek1 
+SAY @1744
+IF ~~ EXIT 
+END 
+
+IF ~~ Cheek2 
+SAY @1745
+IF ~~ EXIT 
+END 
+
+IF ~~ Cheek3 
+SAY @1746
+IF ~~ EXIT 
+END 
+
+IF ~~ Cheek4
+SAY @1747
+IF ~~ EXIT 
+END 
+
+IF ~~ Kiss1 
+SAY @1748
+IF ~~ EXIT 
+END
+
+IF ~~ Kiss2 
+SAY @1749
+IF ~~ EXIT 
+END 
+
+
+IF ~~ Kiss3 
+SAY @1750
+IF ~~ EXIT 
+END 
+
+IF ~~ Compliment1 
+SAY @1752
+IF ~~ EXIT 
+END 
+
+IF ~~ Compliment2
+SAY @1753
+IF ~~ EXIT 
+END 
+
+IF ~~ Compliment3
+SAY @1754
+IF ~~ EXIT 
+END 
+
+IF ~~ Compliment4 
+SAY @1755
+IF ~~ EXIT 
+END 
+
+IF ~~ Hug1NR 
+SAY @1757
+IF ~~ EXIT 
+END 
+
+IF ~~ Hug1R 
+SAY @1758
+IF ~~ EXIT 
+END
+
+IF ~~ Hug2 
+SAY @1759
+IF ~~ EXIT 
+END
+
+IF ~~ Hug3NR 
+SAY @1760
+IF ~~ EXIT 
+END 
+
+IF ~~ Hug3R 
+SAY @1761
+IF ~~ EXIT 
+END 
+
+IF ~~ Hug4NR
+SAY @1762
+IF ~~ EXIT 
+END 
+
+IF ~~ Hug4R 
+SAY @1763
+IF ~~ EXIT 
+END 
+
+IF ~~ Hand1NR 
+SAY @1765
+= @1766
+IF ~~ EXIT 
+END 
+
+IF ~~ Hand1 
+SAY @1768
+IF ~~ EXIT 
+END
+
+IF ~~ Hand2 
+SAY @1767
+IF ~~ EXIT 
+END 
+
+IF ~~ Hand3NR 
+SAY @1769
+IF ~~ EXIT 
+END 
+
+IF ~~ Hand3R 
+SAY @1770
+IF ~~ EXIT 
+END 
+
+IF ~~ Hand4NR 
+SAY @1771
+IF ~~ EXIT 
+END 
+
+IF ~~ Hand4R 
+SAY @1772
+IF ~~ EXIT 
+END 
+
+IF ~~ Massage1 
+SAY @1774
+IF ~~ EXIT 
+END 
+
+IF ~~ Massage2 
+SAY @1775
+IF ~~ EXIT 
+END 
+
+IF ~~ Massage3 
+SAY @1776
+IF ~~ EXIT 
+END 
+
+IF ~~ Massage4NR 
+SAY @1777
+IF ~~ EXIT 
+END 
+
+IF ~~ Massage4R 
+SAY @1778
+IF ~~ EXIT 
+END 
+
+IF ~~ Sugg1 
+SAY @1779
+IF ~Global("X3Slept","LOCALS",2)~ + Sugg1R1
+IF ~!Global("X3Slept","LOCALS",2)~ + Sugg1R2
+END 
+
+IF ~~ Sugg1R1 
+SAY @1780
+IF ~~ 
+EXIT 
+END 
+
+IF ~~ Sugg1R2 
+SAY @1781
+IF ~~ 
+EXIT 
+END 
+
+IF ~~ Sugg2
+SAY @1783
+IF ~~ 
+EXIT 
+END 
+
+IF ~~ Sugg3
+SAY @1784
+IF ~~ 
+EXIT 
+END 
+
+IF ~~ Sugg4S
+SAY @1785
+IF ~~ 
+EXIT 
+END 
+
+IF ~~ Sugg4NS
+SAY @1786
+IF ~~ 
+EXIT 
+END 
+
+IF ~~ Bottom1 
+SAY @1788
+IF ~~
+EXIT 
+END 
+
+IF ~~ Bottom2
+SAY @1789
+IF ~~
+EXIT 
+END 
+
+IF ~~ Bottom3
+SAY @1790
+IF ~~
+EXIT 
+END 
+
+IF ~~ Bottom4
+SAY @1791
+IF ~~
+EXIT 
+END 
+
+IF ~~ Love1
+SAY @1793
+IF ~~
+EXIT 
+END 
+
+IF ~~ Love2
+SAY @1794
+IF ~~
+EXIT 
+END 
+
+IF ~~ Love3
+SAY @1795
+IF ~~
+EXIT 
+END 
+
+IF ~~ Love4
+SAY @1796
+IF ~~
+EXIT 
+END 
+
+IF ~~ Bath1 
+SAY @1798
+++ @1799 + Bath1A 
+++ @1800 + Bath1A 
+END 
+
+IF ~~ Bath1A 
+SAY @1801
+++ @1802 + Bath1B 
+++ @1803 + Bath1C 
+++ @1804 + Bath1D 
+END 
+
+IF ~~ Bath1D 
+SAY @1805
+IF ~~ + Bath1E 
+END 
+
+IF ~~ Bath1C
+SAY @1806
+IF ~~ + Bath1E 
+END 
+
+IF ~~ Bath1B 
+SAY @1807
+IF ~~ + Bath1F
+END 
+
+IF ~~ Bath1E 
+SAY @1808
+IF ~~ + Bath1F 
+END 
+
+IF ~~ Bath1F 
+SAY @1809
+IF ~~ EXIT 
+END 
+
+IF ~~ Bath2 
+SAY @1810
+= @1811
+= @1812
+IF ~~ EXIT 
+END 
+
+IF ~~ Bath3 
+SAY @1813
+= @1814
+= @1815
+= @1816
+IF ~~ EXIT 
+END 
+
+IF ~~ Bath4 
+SAY @1817
+= @1818
+= @1819
+IF ~~ EXIT 
+END
+
+IF ~~ Thank1 
+SAY @1821
+IF ~~ EXIT 
+END 
+
+IF ~~ Thank2
+SAY @1822
+IF ~~ EXIT 
+END 
+
+IF ~~ Thank3 
+SAY @1823
+IF ~~ EXIT 
+END 
+
+IF ~~ Thank4 
+SAY @1824
+IF ~~ EXIT 
+END 
+
+IF ~~ Hair1 
+SAY @1825
+IF ~~ EXIT 
+END 
+
+IF ~~ Hair2
+SAY @1826
+IF ~~ EXIT 
+END 
+
+IF ~~ Hair3 
+SAY @1827
+IF ~~ EXIT 
+END 
+
+IF ~~ Hair4 
+SAY @1828
+IF ~~ EXIT 
+END 
+
+IF ~~ Spin1 
+SAY @1834
+IF ~~ EXIT 
+END 
+
+IF ~~ Spin2 
+SAY @1835
+IF ~~ EXIT 
+END 
+
+IF ~~ Spin3 
+SAY @1836
+= @1837
+IF ~~ EXIT 
+END 
+
+IF ~~ Spin4 
+SAY @1838
+= @1839 
+IF ~~ EXIT 
+END 
+
+IF ~~ Watch1 
+SAY @1840 
+= @1841
+IF ~~ EXIT 
+END 
+
+IF ~~ Watch2 
+SAY @1842
+= @1843
+IF ~~ EXIT 
+END 
+
+IF ~~ Watch3 
+SAY @1844
+= @1845
+IF ~~ EXIT 
+END 
+
+IF ~~ Watch4 
+SAY @1846
+IF ~~ EXIT 
+END 
+
+IF ~~ Ring1
+SAY @1850
+IF ~~ EXIT 
+END 
+
+IF ~~ Ring2
+SAY @1851
+IF ~~ EXIT 
+END 
+
+IF ~~ Ring3
+SAY @1852
+IF ~~ EXIT 
+END 
+
+IF ~~ Ring4
+SAY @1853
+IF ~~ EXIT 
+END 
+
+IF ~~ Flirt.Stop 
+SAY @1847
+IF ~~ EXIT 
+END 
+
+IF ~~ Flirt.Start 
+SAY @1848
+IF ~~ EXIT 
 END 
 
 END 

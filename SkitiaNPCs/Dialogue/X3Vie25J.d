@@ -83,7 +83,7 @@ END
 //Saradush Interjects 
 
 EXTEND_BOTTOM SARPROVF 0
-IF ~Global("X3VieRomanceActive","GLOBAL",2)~ EXTERN X3Vie25J SARPROVF-Care
+IF ~Global("X3VieRomanceActive","GLOBAL",2)IsValidForPartyDialogue("X3Vie")~ EXTERN X3Vie25J SARPROVF-Care
 END
 
 CHAIN X3Vie25J SARPROVF-Care 
@@ -91,7 +91,7 @@ CHAIN X3Vie25J SARPROVF-Care
 EXTERN SARPROVF 1
 
 EXTEND_BOTTOM SARPROVM 0
-IF ~Global("X3VieRomanceActive","GLOBAL",2)~ EXTERN X3Vie25J SARPROVF-Care
+IF ~Global("X3VieRomanceActive","GLOBAL",2)IsValidForPartyDialogue("X3Vie")~ EXTERN X3Vie25J SARPROVF-Care
 END
 
 CHAIN X3Vie25J SARPROVM-Care 
@@ -149,19 +149,38 @@ EXTERN SARPRO01 12
 
 // Volo's obligatory interjection in Saradush.
 
-EXTEND_TOP SARVOLO 9 #2
-+ ~IsValidForPartyDialogue("X3Vie")!Global("X3VieRomanceActive","GLOBAL",2)~ + @27 + X3VieVoloBio1
-+ ~IsValidForPartyDialogue("X3Vie")Global("X3VieRomanceActive","GLOBAL",2)~ + @27 + X3VieVoloBio2
+EXTEND_BOTTOM SARVOLO 9
++ ~InParty("X3Vie")!Global("X3VieRomanceActive","GLOBAL",2)!Kit("X3Vie",SHADOWDANCER)~ + @27 + X3VieVoloBio1
++ ~InParty("X3Vie")Global("X3VieRomanceActive","GLOBAL",2)!Kit("X3Vie",SHADOWDANCER)~ + @27 + X3VieVoloBio2
++ ~InParty("X3Vie")!Global("X3VieRomanceActive","GLOBAL",2)Kit("X3Vie",SHADOWDANCER)~ + @27 + X3VieVoloBio1S
++ ~InParty("X3Vie")Global("X3VieRomanceActive","GLOBAL",2)Kit("X3Vie",SHADOWDANCER)~ + @27 + X3VieVoloBio2S
 END
 
 CHAIN SARVOLO X3VieVoloBio1
 @28
-EXTERN X3Vie25J X3VieVoloBio
+END 
+IF ~!IsValidForPartyDialogue("X3Vie")~ EXTERN SARVOLO 9
+IF ~IsValidForPartyDialogue("X3Vie")~ EXTERN X3Vie25J X3VieVoloBio
 
 
 CHAIN SARVOLO X3VieVoloBio2
 @29
-EXTERN X3Vie25J X3VieVoloBio
+END 
+IF ~!IsValidForPartyDialogue("X3Vie")~ EXTERN SARVOLO 9
+IF ~IsValidForPartyDialogue("X3Vie")~ EXTERN X3Vie25J X3VieVoloBio
+
+CHAIN SARVOLO X3VieVoloBio1S
+@515
+END 
+IF ~!IsValidForPartyDialogue("X3Vie")~ EXTERN SARVOLO 9
+IF ~IsValidForPartyDialogue("X3Vie")~ EXTERN X3Vie25J X3VieVoloBio
+
+
+CHAIN SARVOLO X3VieVoloBio2S
+@516
+END 
+IF ~!IsValidForPartyDialogue("X3Vie")~ EXTERN SARVOLO 9
+IF ~IsValidForPartyDialogue("X3Vie")~ EXTERN X3Vie25J X3VieVoloBio
 
 CHAIN X3Vie25J X3VieVoloBio
 @30
@@ -248,15 +267,15 @@ CHAIN X3Vie25J FinalChoice.1A
 @53
 = @54
 END 
-IF ~PartyHasItem("X3RingE")~ EXTERN X3Vie25J FinalChoice.3
-IF ~!PartyHasItem("X3RingE")~ EXTERN X3Vie25J FinalChoice.5
+IF ~PartyHasItem("X3RingV")~ EXTERN X3Vie25J FinalChoice.3
+IF ~!PartyHasItem("X3RingV")~ EXTERN X3Vie25J FinalChoice.5
 
 CHAIN X3Vie25J FinalChoice.1B
 @55
 = @56
 END 
-IF ~PartyHasItem("X3RingE")~ EXTERN X3Vie25J FinalChoice.4
-IF ~!PartyHasItem("X3RingE")~ EXTERN X3Vie25J FinalChoice.5
+IF ~PartyHasItem("X3RingV")~ EXTERN X3Vie25J FinalChoice.4
+IF ~!PartyHasItem("X3RingV")~ EXTERN X3Vie25J FinalChoice.5
 
 
 CHAIN X3Vie25J FinalChoice.3
@@ -280,9 +299,9 @@ COPY_TRANS FINSOL01 27
 CHAIN X3Vie25J FinalChoice.2 
 @61
 END 
-IF ~PartyHasItem("X3RingE")Alignment("X3Vie",NEUTRAL)~ EXTERN X3Vie25J FinalChoice.3
-IF ~PartyHasItem("X3RingE")!Alignment("X3Vie",NEUTRAL)~ EXTERN X3Vie25J FinalChoice.4
-IF ~!PartyHasItem("X3RingE")~ EXTERN X3Vie25J FinalChoice.5
+IF ~PartyHasItem("X3RingV")Alignment("X3Vie",NEUTRAL)~ EXTERN X3Vie25J FinalChoice.3
+IF ~PartyHasItem("X3RingV")!Alignment("X3Vie",NEUTRAL)~ EXTERN X3Vie25J FinalChoice.4
+IF ~!PartyHasItem("X3RingV")~ EXTERN X3Vie25J FinalChoice.5
 
 
 
@@ -322,8 +341,8 @@ END
 CHAIN X3Vie25J X3VieSolarStay1.1
 @67
 END
-IF ~PartyHasItem("X3RingE")~ EXTERN X3Vie25J StayChoice.1
-IF ~!PartyHasItem("X3RingE")~ EXTERN X3Vie25J StayChoice.2
+IF ~PartyHasItem("X3RingV")~ EXTERN X3Vie25J StayChoice.1
+IF ~!PartyHasItem("X3RingV")~ EXTERN X3Vie25J StayChoice.2
 
 
 CHAIN X3Vie25J StayChoice.1 
@@ -361,6 +380,7 @@ CHAIN X3Vie25J engagement_yes2
 @76
 == X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN @77
 == X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN @78
+== X3Isa25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN @523
 EXIT 
 
 
@@ -478,13 +498,28 @@ EXTERN X3Vie25J F2.5
 
 // Friendship Talk #3
 
-CHAIN IF ~Global("X3VieToBTalk","LOCALS",6)~ THEN X3Vie25J FriendshipTalk3 
+CHAIN IF ~Global("X3VieToBTalk","LOCALS",6)Kit("X3Vie",SHADOWDANCER)~ THEN X3Vie25J FriendshipTalk3 
 @124
 DO ~IncrementGlobal("X3VieToBTalk","LOCALS",1)SetGlobal("X3VieAppChange","GLOBAL",6)~
 END 
 ++ @125 + FT.1
 ++ @126 + FT.2 
 ++ @127 DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + FT.4
+//Shadowdancer Variation
+CHAIN IF ~Global("X3VieToBTalk","LOCALS",6)!Kit("X3Vie",SHADOWDANCER)~ THEN X3Vie25J FriendshipTalk3S 
+@517
+DO ~IncrementGlobal("X3VieToBTalk","LOCALS",1)SetGlobal("X3VieAppChange","GLOBAL",6)~
+END 
+++ @125 + FT.1
+++ @126 + FT.2 
+++ @518 DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + FT.4S
+
+CHAIN X3Vie25J FT.4S
+@519
+END 
+++ @144 + FT.3 
+++ @145 + FT.5 
+++ @146 + FT.3 
 
 CHAIN X3Vie25J FT.1 
 @128
@@ -712,14 +747,25 @@ EXIT
 // Vienxay's Gorion Wraith sequence.
 
 EXTEND_BOTTOM HGWRA01 18
-IF ~Global("X3VieRomanceActive","GLOBAL",2) InParty("X3Vie") See("X3Vie")~ EXTERN HGWRA01 X3VieWraith1
+IF ~Global("X3VieRomanceActive","GLOBAL",2) InParty("X3Vie") See("X3Vie") !Kit("X3Vie",SHADOWDANCER)~ EXTERN HGWRA01 X3VieWraith1
+IF ~Global("X3VieRomanceActive","GLOBAL",2) InParty("X3Vie") See("X3Vie") Kit("X3Vie",SHADOWDANCER)~ EXTERN HGWRA01 X3VieWraith1S
 END
 
 CHAIN HGWRA01 X3VieWraith1
 @221
 DO ~SetGlobal("X3LovedOne","GLOBAL",4)~
-== X3Vie25J @222
+EXTERN X3Vie25J X3VieWraith1End
+
+CHAIN HGWRA01 X3VieWraith1S
+@521
+DO ~SetGlobal("X3LovedOne","GLOBAL",4)~
+EXTERN X3Vie25J X3VieWraith1End
+
+CHAIN X3Vie25J X3VieWraith1End 
+@222
 EXTERN HGWRA01 24
+
+
 
 EXTEND_BOTTOM HGWRA01 24
 IF ~Global("X3LovedOne","GLOBAL",4)~ DO ~ClearAllActions() StartCutSceneMode() StartCutScene("X3VW1")~ EXIT
@@ -917,7 +963,8 @@ CHAIN X3Vie25J 4.N2
 = @298
 END 
 ++ @299 DO ~IncrementGlobal("X3VieAppChange","GLOBAL",2)~ + 4.N3 
-++ @300 DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + 4.N4 
++~Kit("X3Vie",SHADOWDANCER)~+ @300 DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + 4.N4 
++~!Kit("X3Vie",SHADOWDANCER)~+ @300 DO ~IncrementGlobal("X3VieAppChange","GLOBAL",1)~ + 4.N4S 
 ++ @301 + 4.N5
 
 CHAIN X3Vie25J 4.N3 
@@ -926,6 +973,10 @@ EXIT
 
 CHAIN X3Vie25J 4.N4 
 @303
+EXIT 
+
+CHAIN X3Vie25J 4.N4S 
+@520
 EXIT 
 
 CHAIN X3Vie25J 4.N5 
@@ -1097,6 +1148,147 @@ CHAIN X3Vie25J 7.7
 @368
 EXTERN X3Vie25J 7.6
 
+//New Initiated Flirts: Romance Active = 2
+CHAIN IF ~Global("X3VieFlirt","GLOBAL",1) Global("X3VieRomanceActive","GLOBAL",2)~ THEN X3Vie25J flirt2
+@1548
+END 
+ IF ~~ DO ~SetGlobal("X3VieStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3VieFlirtTimer","GLOBAL",2700)~ + initiate2.1
+IF ~RandomNum(20,1)Kit("X3Vie",SHADOWDANCER)~ DO ~SetGlobal("X3VieStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3VieFlirtTimer","GLOBAL",2700)~ + initiate2.2
+IF ~RandomNum(20,2)~ DO ~SetGlobal("X3VieStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3VieFlirtTimer","GLOBAL",2700)~ + initiate2.3
+IF ~RandomNum(20,3)~ DO ~SetGlobal("X3VieStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3VieFlirtTimer","GLOBAL",2700)~ + initiate2.4
+IF ~RandomNum(20,4)~ DO ~SetGlobal("X3VieStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3VieFlirtTimer","GLOBAL",2700)~ + initiate2.5
+IF ~RandomNum(20,5)HPPercentLT("X3Vie",50) ~ DO ~SetGlobal("X3VieStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3VieFlirtTimer","GLOBAL",2700)~ + injured2A
+IF ~RandomNum(20,6)~ DO ~SetGlobal("X3VieStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3VieFlirtTimer","GLOBAL",2700)~ + initiate2.6
+IF ~RandomNum(20,7)Global("X3Slept","LOCALS",2)~ DO ~SetGlobal("X3VieStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3VieFlirtTimer","GLOBAL",2700)~ + initiate2.7
+IF ~RandomNum(20,8)~ DO ~SetGlobal("X3VieStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3VieFlirtTimer","GLOBAL",2700)~ + initiate2.8
+IF ~RandomNum(20,9) AreaType(DUNGEON)~ DO ~SetGlobal("X3VieStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3VieFlirtTimer","GLOBAL",2700)~ + dungeon2
+IF ~RandomNum(20,10)~ DO ~SetGlobal("X3VieStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3VieFlirtTimer","GLOBAL",2700)~ + initiate2.9
+IF ~RandomNum(20,11)~ DO ~SetGlobal("X3VieStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3VieFlirtTimer","GLOBAL",2700)~ + initiate2.10
+IF ~RandomNum(20,12)~ DO ~SetGlobal("X3VieStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3VieFlirtTimer","GLOBAL",2700)~ + initiate2.11
+IF ~RandomNum(20,13)Global("X3Slept","LOCALS",2)~ DO ~SetGlobal("X3VieStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3VieFlirtTimer","GLOBAL",2700)~ + initiate2.12
+IF ~RandomNum(20,14)Global("X3ViePartyBG1","GLOBAL",1)~ DO ~SetGlobal("X3VieStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3VieFlirtTimer","GLOBAL",2700)~ + initiate2.13
+IF ~RandomNum(20,15)ReputationGT(Player1,16)!Alignment("X3Vie",NEUTRAL)~ DO ~SetGlobal("X3VieStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3VieFlirtTimer","GLOBAL",2700)~ + rep2
+IF ~RandomNum(20,16)HPPercentLT(Player1,75)~ DO ~SetGlobal("X3VieStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3VieFlirtTimer","GLOBAL",2700)~ + injured2B
+IF ~RandomNum(20,17)CheckStatGT(Player1,16,CHR)~ DO ~SetGlobal("X3VieStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3VieFlirtTimer","GLOBAL",2700)~ + highchr1
+IF ~RandomNum(20,18)OR(11)
+AreaCheck("AR0021")
+AreaCheck("AR0313")
+AreaCheck("AR0406")
+AreaCheck("AR0509")
+AreaCheck("AR0513")
+AreaCheck("AR0522")
+AreaCheck("AR0704")
+AreaCheck("AR0709")
+AreaCheck("AR1105")
+AreaCheck("AR1602")
+AreaCheck("AR2010") ~ DO ~SetGlobal("X3VieStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3VieFlirtTimer","GLOBAL",2700)~ + initiate2.15
+IF ~RandomNum(20,19) OR(2)TimeOfDay(NIGHT)TimeOfDay(DUSK)~ DO ~SetGlobal("X3VieStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3VieFlirtTimer","GLOBAL",2700)~ + night2
+IF ~RandomNum(20,20)~ DO ~SetGlobal("X3VieStartFlirt","GLOBAL",0) RealSetGlobalTimer("X3VieFlirtTimer","GLOBAL",2700)~ + initiate2.14 
+
+CHAIN X3Vie25J initiate2.1 
+@1507
+EXIT 
+
+CHAIN X3Vie25J initiate2.2 
+@1508 
+EXIT 
+
+CHAIN X3Vie25J initiate2.3 
+@1509
+== X3Kal25J IF ~IsValidForPartyDialogue("X3Kal")~ THEN @1510
+== X3Hel25J IF ~IsValidForPartyDialogue("X3Kal")IsValidForPartyDialogue("X3Hel")~ THEN @1511
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN @1512
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN @1513
+== X3Isa25J IF ~IsValidForPartyDialogue("X3Isa")~ THEN @1514
+EXIT 
+
+CHAIN X3Vie25J initiate2.4 
+@1515
+EXIT 
+
+CHAIN X3Vie25J initiate2.5 
+@1516
+EXIT 
+
+CHAIN X3Vie25J injured2A
+@1517
+== X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN @1518
+== X3Vie25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN @1519
+EXIT 
+
+CHAIN X3Vie25J initiate2.6 
+@1520
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN @1521
+== X3Kal25J IF ~IsValidForPartyDialogue("X3Kal")~ THEN @1522
+EXIT 
+
+CHAIN X3Vie25J initiate2.7
+@1523
+EXIT 
+
+CHAIN X3Vie25J initiate2.8
+@1524
+== X3Kal25J IF ~IsValidForPartyDialogue("X3Kal")~ THEN @1525
+== X3Vie25J IF ~IsValidForPartyDialogue("X3Kal")OR(2)IsValidForPartyDialogue("X3Hel")IsValidForPartyDialogue("X3Reb")~ THEN @1526
+== X3Kal25J IF ~IsValidForPartyDialogue("X3Kal")OR(2)IsValidForPartyDialogue("X3Hel")IsValidForPartyDialogue("X3Reb")~ THEN @1527
+== X3Reb25J IF ~IsValidForPartyDialogue("X3Kal")IsValidForPartyDialogue("X3Reb")~ THEN @1528
+== X3Hel25J IF ~IsValidForPartyDialogue("X3Kal")IsValidForPartyDialogue("X3Hel")~ THEN @1529
+== X3Kal25J IF ~IsValidForPartyDialogue("X3Kal")OR(2)IsValidForPartyDialogue("X3Hel")IsValidForPartyDialogue("X3Reb")~ THEN @1530
+EXIT 
+
+CHAIN X3Vie25J dungeon2 
+@1525
+EXIT 
+
+CHAIN X3Vie25J initiate2.9
+@1532 
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN @1533
+== X3Vie25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN @1534
+== X3Emi25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN @1535
+== X3Vie25J IF ~IsValidForPartyDialogue("X3Emi")~ THEN @1536
+EXIT 
+
+CHAIN X3Vie25J initiate2.10 
+@1537
+EXIT 
+
+CHAIN X3Vie25J initiate2.11 
+@1538 
+EXIT 
+
+CHAIN X3Vie25J initiate2.12 
+@1539
+= @1540
+EXIT 
+
+CHAIN X3Vie25J initiate2.13 
+@1541
+EXIT 
+
+CHAIN X3Vie25J rep2 
+@1542
+EXIT 
+
+CHAIN X3Vie25J injured2B 
+@1543
+EXIT 
+
+CHAIN X3Vie25J highchr1 
+@1544
+EXIT 
+
+CHAIN X3Vie25J night2 
+@1545
+EXIT 
+
+CHAIN X3Vie25J initiate2.14 
+@1546
+EXIT 
+
+CHAIN X3Vie25J initiate2.15 
+@1547
+EXIT 
+
 // Group Kiss from PID 
 CHAIN X3Vie25J Group.Kiss 
 @369
@@ -1104,6 +1296,7 @@ CHAIN X3Vie25J Group.Kiss
 == X3Hel25J IF ~IsValidForPartyDialogue("X3Hel")~ THEN @371
 == X3Kal25J IF ~IsValidForPartyDialogue("X3Kal")~ THEN @372
 == X3Reb25J IF ~IsValidForPartyDialogue("X3Reb")~ THEN @373
+== X3Isa25J IF ~IsValidForPartyDialogue("X3Isa")~ THEN @522
 == X3Vie25J @374
 == X3Vie25J @375
 EXIT
@@ -1250,12 +1443,13 @@ END
 // PID 
 IF ~IsGabber(Player1) CombatCounter(0) !Detect([ENEMY])!GlobalGT("X3EmiApp","GLOBAL",44)~ THEN BEGIN Normal.PID 
 SAY  @422
-+~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",0)~+ @423 DO ~SetGlobal("X3HelScryHelp","LOCALS",1)AddJournalEntry(@20015,QUEST)~ + Scry 
++~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",0)!Kit("X3Vie",SHADOWDANCER)~+ @423 DO ~SetGlobal("X3HelScryHelp","LOCALS",1)AddJournalEntry(@20015,QUEST)~ + Scry 
 +~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")!AreaCheck("AR4500")~+ @424 DO ~EraseJournalEntry(@20015)~ + ScryStartNotPlane
 +~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")AreaCheck("AR4500")~+ @424 DO ~EraseJournalEntry(@20015)~ + ScryStartPlane
 ++ @425 + Question.PID 
 +~NumInPartyGT(2)~+ @426 + PersonalGroup.PID 
 +~!NumInPartyGT(2)~+ @426 + PersonalAlone.PID 
++~Global("X3VieRomanceActive","GLOBAL",2)~+ @1549 + Flirts2
 ++ @513 + FixString
 ++ @427 EXIT 
 END 
@@ -1263,12 +1457,13 @@ END
 
 IF ~IsGabber(Player1) CombatCounter(0) !Detect([ENEMY])GlobalGT("X3EmiApp","GLOBAL",44)~ THEN BEGIN High.PID 
 SAY  @428
-+~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",0)~+ @423 DO ~SetGlobal("X3HelScryHelp","LOCALS",1)AddJournalEntry(@20015,QUEST)~ + Scry 
++~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",0)!Kit("X3Vie",SHADOWDANCER)~+ @423 DO ~SetGlobal("X3HelScryHelp","LOCALS",1)AddJournalEntry(@20015,QUEST)~ + Scry 
 +~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")!AreaCheck("AR4500")~+ @424 DO ~EraseJournalEntry(@20015)~ + ScryStartNotPlane
 +~Global("X3HelToBQuest","GLOBAL",3)Global("X3HelScryHelp","LOCALS",1)PartyHasItem("X3HGEM")AreaCheck("AR4500")~+ @424 DO ~EraseJournalEntry(@20015)~ + ScryStartPlane
 ++ @425 + Question.PID 
 +~NumInPartyGT(2)~+ @426 + PersonalGroup.PID 
 +~!NumInPartyGT(2)~+ @426 + PersonalAlone.PID 
++~Global("X3VieRomanceActive","GLOBAL",2)~+ @1549 + Flirts2
 ++ @513 + FixString
 ++ @427 EXIT 
 END 
@@ -1319,6 +1514,7 @@ SAY  @442
 ++ @443 + Question.PID 
 +~NumInPartyGT(2)~+ @444 + PersonalGroup.PID 
 +~!NumInPartyGT(2)~+ @444 + PersonalAlone.PID 
++~Global("X3VieRomanceActive","GLOBAL",2)~+ @1549 + Flirts2
 ++ @513 + FixString
 ++ @445 EXIT 
 END  
@@ -1520,6 +1716,441 @@ SAY @514
 IF ~~ DO ~ClearAllActions() 
       StartCutSceneMode() 
       StartCutScene("X3VReset")~ EXIT 
+END 
+
+IF ~~ Flirts2 
+SAY @1551
++~RandomNum(4,1)PartyHasItem("X3RingV")~+ @1651 + Ring1
++~RandomNum(4,2)PartyHasItem("X3RingV")~+ @1651 + Ring2
++~RandomNum(4,3)PartyHasItem("X3RingV")~+ @1651 + Ring3
++~RandomNum(4,4)PartyHasItem("X3RingV")~+ @1651 + Ring4
+++ @1552 DO ~SetGlobal("X3RestInvite","GLOBAL",5)~ + F.Night2
++~RandomNum(4,1)~+ @1600 + Kiss1
++~RandomNum(4,2)~+ @1600 + Kiss2
++~RandomNum(4,3)~+ @1600 + Kiss3
++~RandomNum(4,4)~+ @1600 + Kiss4
++~RandomNum(4,1)~+ @1559 + Cheek1
++~RandomNum(4,2)~+ @1559 + Cheek2
++~RandomNum(4,3)~+ @1559 + Cheek3
++~RandomNum(4,4)~+ @1559 + Cheek4
++~RandomNum(4,1)~+ @1560 + Compliment1
++~RandomNum(4,2)~+ @1560 + Compliment2
++~RandomNum(4,3)~+ @1560 + Compliment3
++~RandomNum(4,4)~+ @1560 + Compliment4
++~RandomNum(4,1)~+ @1565 + Hug1
++~RandomNum(4,2)~+ @1565 + Hug2
++~RandomNum(4,3)~+ @1565 + Hug3
++~RandomNum(4,4)~+ @1565 + Hug4
++~RandomNum(4,1)~+ @1570 + Hand1
++~RandomNum(4,2)~+ @1570 + Hand2
++~RandomNum(4,3)~+ @1570 + Hand3
++~RandomNum(4,4)~+ @1570 + Hand4
++~RandomNum(4,1)~+ @1584 + Poke1
++~RandomNum(4,2)~+ @1584 + Poke2
++~RandomNum(4,3)~+ @1584 + Poke3
++~RandomNum(4,4)~+ @1584 + Poke4
++~RandomNum(4,1)~+ @1579 + Thank1 
++~RandomNum(4,3)~+ @1579 + Thank2
++~RandomNum(4,4)~+ @1579 + Thank3
++~RandomNum(4,4)GlobalGT("X3VieQuest","GLOBAL",10)~+ @1579 + Thank4
++~RandomNum(4,4)!GlobalGT("X3VieQuest","GLOBAL",10)~+ @1579 + Thank5
++~RandomNum(4,1)~+ @1586 + Wink1 
++~RandomNum(4,2)~+ @1586 + Wink2 
++~RandomNum(4,3)~+ @1586 + Wink3
++~RandomNum(4,4)~+ @1586 + Wink4
++~RandomNum(4,1)~+ @1591 + Watch1
++~RandomNum(4,2)~+ @1591 + Watch2
++~RandomNum(4,3)~+ @1591 + Watch3
++~RandomNum(4,4)~+ @1591 + Watch4
++~RandomNum(4,1)Global("X3Slept","LOCALS",2)~+ @1607 + Press1
++~RandomNum(4,2)Global("X3Slept","LOCALS",2)~+ @1607 + Press2
++~RandomNum(4,3)Global("X3Slept","LOCALS",2)~+ @1607 + Press3
++~RandomNum(4,4)Global("X3Slept","LOCALS",2)~+ @1607 + Press4
++~RandomNum(4,1)Global("X3Slept","LOCALS",2)~+ @1617 + Sugg1
++~RandomNum(4,2)Global("X3Slept","LOCALS",2)~+ @1617 + Sugg2
++~RandomNum(4,3)Global("X3Slept","LOCALS",2)~+ @1617 + Sugg3
++~RandomNum(4,4)Global("X3Slept","LOCALS",2)~+ @1617 + Sugg4
++~RandomNum(4,1)~+ @1618 + Bottom1
++~RandomNum(4,2)!Global("X3Slept","LOCALS",2)~+ @1618 + Bottom2
++~RandomNum(4,2)Global("X3Slept","LOCALS",2)~+ @1618 + Bottom3
++~RandomNum(4,3)~+ @1618 + Bottom4
++~RandomNum(4,4)~+ @1618 + Bottom5
++~RandomNum(4,1)~+ @1624 + Love1 
++~RandomNum(4,2)~+ @1624 + Love2 
++~RandomNum(4,3)~+ @1624 + Love3
++~RandomNum(4,4)!GlobalGT("X3VieToBLoveTalk","LOCALS",14)~+ @1624 + Love4
++~RandomNum(4,4)GlobalGT("X3VieToBLoveTalk","LOCALS",14)~+ @1624 + Love5
++~RandomNum(2,1)Global("X3Slept","LOCALS",2)Global("X3Slept","LOCALS",2)OR(2)AreaCheck("AR5501")
+AreaCheck("AR5003")~+ @1630 + Bath1
++~RandomNum(2,2)Global("X3Slept","LOCALS",2)Global("X3Slept","LOCALS",2)OR(2)AreaCheck("AR5501")
+AreaCheck("AR5003")~+ @1630 + Bath2
++~RandomNum(2,1)Global("X3Slept","LOCALS",2)AreaCheck("AR1100")OR(3)
+AreaCheck("AR6100")
+AreaCheck("AR6300")
+AreaCheck("AR6400")~+ @1630 + Bath3
++~RandomNum(2,2)Global("X3Slept","LOCALS",2)OR(3)
+AreaCheck("AR6100")
+AreaCheck("AR6300")
+AreaCheck("AR6400")~+ @1630 + Bath4
++~Global("X3DisableFlirts","LOCALS",0)~ + @1596 DO ~SetGlobal("X3DisableFlirts","LOCALS",1)~ + Flirt.Stop
++~Global("X3DisableFlirts","LOCALS",1)~ + @1597 DO ~SetGlobal("X3DisableFlirts","LOCALS",0)~ + Flirt.Start
+END
+
+
+
+
+IF ~~ F.Night1 
+SAY @1523
+IF ~~ EXIT 
+END 
+
+IF ~~ F.Night2 
+SAY @1524
+IF ~~ EXIT 
+END 
+
+IF ~~ Cheek1  
+SAY @1556
+IF ~~ EXIT 
+END 
+
+IF ~~ Cheek2 
+SAY @1557
+IF ~~ EXIT 
+END 
+
+IF ~~ Cheek3 
+SAY @1558
+IF ~~ EXIT 
+END 
+
+IF ~~ Cheek4 
+SAY @1559
+IF ~~ EXIT 
+END 
+ 
+IF ~~ Compliment1 
+SAY @1561
+IF ~~ EXIT 
+END 
+
+IF ~~ Compliment2
+SAY @1562
+IF ~~ EXIT 
+END 
+
+IF ~~ Compliment3 
+SAY @1563
+IF ~~ EXIT 
+END 
+
+IF ~~ Compliment4 
+SAY @1564
+IF ~~ EXIT 
+END 
+
+IF ~~ Hug1 
+SAY @1566
+IF ~~ EXIT 
+END
+
+IF ~~ Hug2
+SAY @1567
+IF ~~ EXIT 
+END 
+
+IF ~~ Hug3 
+SAY @1568
+IF ~~ EXIT 
+END 
+
+IF ~~ Hug4 
+SAY @1569
+IF ~~ EXIT 
+END 
+
+IF ~~ Hand1 
+SAY @1571
+IF ~~ EXIT 
+END 
+
+IF ~~ Hand2 
+SAY @1572 
+IF ~~ EXIT 
+END 
+
+IF ~~ Hand3 
+SAY @1573 
+IF ~~ EXIT 
+END 
+
+IF ~~ Hand4 
+SAY @1574
+IF ~~ EXIT 
+END 
+
+IF ~~ Poke1 
+SAY @1575
+IF ~~ EXIT 
+END 
+
+IF ~~ Poke2 
+SAY @1576 
+IF ~~ EXIT 
+END 
+
+IF ~~ Poke3 
+SAY @1577 
+IF ~~ EXIT 
+END 
+
+IF ~~ Poke4
+SAY @1578
+IF ~~ EXIT 
+END 
+
+IF ~~ Thank1 
+SAY @1580
+IF ~~ EXIT 
+END 
+
+IF ~~ Thank2 
+SAY @1582 
+IF ~~ EXIT 
+END 
+
+IF ~~ Thank3 
+SAY @1583
+IF ~~ EXIT 
+END 
+
+IF ~~ Thank4 
+SAY @1581
+IF ~~ EXIT 
+END 
+
+IF ~~ Thank5 
+SAY @1585
+IF ~~ EXIT 
+END 
+
+IF ~~ Wink1 
+SAY @1587
+IF ~~ EXIT 
+END 
+
+IF ~~ Wink2 
+SAY @1588 
+IF ~~ EXIT 
+END 
+
+IF ~~ Wink3 
+SAY @1589 
+IF ~~ EXIT 
+END 
+
+IF ~~ Wink4
+SAY @1590
+IF ~~ EXIT 
+END 
+
+IF ~~ Watch1 
+SAY @1592
+IF ~~ EXIT 
+END 
+
+IF ~~ Watch2 
+SAY @1593 
+IF ~~ EXIT 
+END 
+
+IF ~~ Watch3 
+SAY @1594
+IF ~~ EXIT 
+END 
+
+IF ~~ Watch4 
+SAY @1595 
+IF ~~ EXIT 
+END 
+
+IF ~~ Flirt.Stop
+SAY @1598
+IF ~~ EXIT 
+END 
+
+IF ~~ Flirt.Start 
+SAY @1599
+IF ~~ EXIT 
+END  
+
+IF ~~ Kiss1 
+SAY @1600
+IF ~~ EXIT 
+END 
+
+IF ~~ Kiss2 
+SAY @1601 
+IF ~~ EXIT 
+END 
+
+IF ~~ Kiss3 
+SAY @1602
+= @1603
+IF ~~ EXIT 
+END 
+
+IF ~~ Kiss4 
+SAY @1604
+= @1605
+IF ~~ EXIT 
+END 
+
+IF ~~ Press1 
+SAY @1608
+IF ~~ EXIT 
+END 
+
+IF ~~ Press2
+SAY @1609
+IF ~~ EXIT 
+END 
+
+IF ~~ Press3 
+SAY @1610
+IF ~~ EXIT 
+END 
+
+IF ~~ Press4 
+SAY @1611 
+IF ~~ EXIT 
+END 
+
+IF ~~ Sugg1 
+SAY @1612
+IF ~~ EXIT 
+END 
+
+IF ~~ Sugg2 
+SAY @1613
+IF ~~ EXIT 
+END 
+
+IF ~~ Sugg3 
+SAY @1614
+IF ~~ EXIT 
+END 
+
+IF ~~ Sugg4 
+SAY @1615
+= @1616
+IF ~~ EXIT 
+END 
+
+IF ~~ Bottom1 
+SAY @1619
+IF ~~ EXIT 
+END 
+
+IF ~~ Bottom2 
+SAY @1620
+IF ~~ EXIT 
+END
+
+IF ~~ Bottom3 
+SAY @1621 
+IF ~~ EXIT 
+END 
+
+IF ~~ Bottom4 
+SAY @1622 
+IF ~~ EXIT 
+END 
+
+IF ~~ Bottom5 
+SAY @1623 
+IF ~~ EXIT 
+END  
+
+IF ~~ Love1 
+SAY @1625
+IF ~~ EXIT 
+END 
+
+IF ~~ Love2 
+SAY @1626
+IF ~~ EXIT 
+END 
+
+IF ~~ Love3 
+SAY @1627
+IF ~~ EXIT 
+END 
+
+IF ~~ Love4 
+SAY @1628
+IF ~~ EXIT 
+END 
+
+IF ~~ Love5 
+SAY @1629
+IF ~~ EXIT 
+END 
+
+IF ~~ Bath1 
+SAY @1631
+= @1632
+= @1633
+= @1634
+= @1635
+= @1636
+IF ~~ EXIT 
+END 
+
+IF ~~ Bath2 
+SAY @1637
+= @1638
+= @1639
+= @1640
+= @1641
+IF ~~ EXIT 
+END 
+
+IF ~~ Bath3 
+SAY @1642 
+= @1643
+= @1644
+= @1645
+= @1646
+IF ~~ EXIT 
+END 
+
+IF ~~ Bath4 
+SAY @1647
+= @1648
+= @1649
+= @1650
+IF ~~ EXIT 
+END 
+
+IF ~~ Ring1 
+SAY @1652
+IF ~~ EXIT 
+END 
+
+IF ~~ Ring2
+SAY @1653
+IF ~~ EXIT 
+END 
+
+IF ~~ Ring3 
+SAY @1654
+IF ~~ EXIT 
+END 
+
+IF ~~ Ring4 
+SAY @1655
+IF ~~ EXIT 
 END 
 
 END 

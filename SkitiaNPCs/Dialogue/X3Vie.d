@@ -66,22 +66,20 @@ EXTERN X3VG m2
 CHAIN X3VG m2 
 @16
 END 
-+~PartyGoldGT(599)~+  @17 DO ~TakePartyGold(600)~ + m4 
-++ @18 + m5 
-++ @19 + m5 
++~PartyGoldGT(599)~+  @17 DO ~SetGlobal("X3VieMet","GLOBAL",-1)TakePartyGold(600)~ + m4 
+++ @18 DO ~SetGlobal("X3VieMet","GLOBAL",-2)~ + m5 
+++ @19 DO ~SetGlobal("X3VieMet","GLOBAL",-2)~ + m5 
 
 CHAIN X3VG m4 
 @20 
-DO ~IncrementGlobal("X3VieApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@500516)EscapeArea()SetGlobal("X3VieMet","GLOBAL",-1)
-Wait(3)
-ActionOverride("X3Vie",StartDialogueNoSet(Player1))~ EXIT 
+DO ~IncrementGlobal("X3VieApp","GLOBAL",6)DisplayStringNoNameDlg(Player1,@500516)EscapeArea()~ EXIT 
 
 CHAIN X3VG m5 
 @21
 == X3Vie @22
-DO ~SetGlobal("X3VieMet","GLOBAL",-2)ActionOverride("X3VG",EscapeArea())MoveToPoint([1934.1863])MoveBetweenAreas("AR1005",[830.409],14)~ EXIT 
+DO ~ActionOverride("X3VG",EscapeArea())MoveToPoint([1934.1863])MoveBetweenAreas("AR1005",[830.409],14)~ EXIT 
 
-CHAIN IF ~Global("X3VieMet","GLOBAL",-2)!AreaCheck("AR0700")~ THEN X3Vie debt 
+CHAIN IF ~!Dead("PRISONK1")Global("X3VieMet","GLOBAL",-2)!AreaCheck("AR0700")~ THEN X3Vie debt 
 @23
 EXIT 
 
@@ -109,7 +107,17 @@ CHAIN PRISONK1 prison2
 @27 
 EXIT 
 
-CHAIN IF ~Global("X3VieMet","GLOBAL",-1)~ THEN X3Vie meet2 
+CHAIN IF ~Global("X3VieMet","GLOBAL",1)~ THEN X3Vie meet3 
+@48
+END 
+++ @49 + join 
+++ @50 + rejectagain 
+
+CHAIN X3Vie rejectagain 
+@51 
+EXIT 
+//This has to be at the bottom of all X3Vies, in case the prison guard is dead, as it will always be true henceforth.
+CHAIN IF ~OR(2)Dead("PRISONK1")Global("X3VieMet","GLOBAL",-1)~ THEN X3Vie meet2 
 @28
 DO ~SetGlobal("X3VieMet","GLOBAL",1)IncrementGlobal("X3VieApp","GLOBAL",3)DisplayStringNoNameDlg(Player1,@500513)~ // Finally, at 1.
 END 
@@ -160,17 +168,6 @@ CHAIN X3Vie reject
 @47
  DO ~EscapeAreaMove("AR0406",446,1515,NE)~ EXIT 
  
-CHAIN IF ~Global("X3VieMet","GLOBAL",1)~ THEN X3Vie meet3 
-@48
-END 
-++ @49 + join 
-++ @50 + rejectagain 
-
-CHAIN X3Vie rejectagain 
-@51 
-EXIT 
-
-
 //This very specific version of Vienxay's Post Party, presumably being removed for Imoen.
 CHAIN IF ~Global("X3VieKickedOut","LOCALS",0)AreaCheck("AR1512")InParty("IMOEN2")~ THEN X3VieP ImoenDepart
 @52

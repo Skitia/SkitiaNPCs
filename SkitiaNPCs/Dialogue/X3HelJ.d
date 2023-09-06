@@ -1131,6 +1131,7 @@ CHAIN X3HelJ spellhold.1
 == X3KalJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN @243
 == X3RebJ IF ~IsValidForPartyDialogue("X3Reb")~ THEN @244 
 == X3VieJ IF ~IsValidForPartyDialogue("X3Vie")~ THEN @245
+== X3IsaJ IF ~IsValidForPartyDialogue("X3Isa")~ THEN @656
 EXIT
 
 
@@ -2026,6 +2027,78 @@ EXTERN X3HelJ 10.6
 CHAIN X3HelJ 10.4 
 @543
 EXTERN X3HelJ 10.6 
+
+CHAIN IF ~Global("X3HelPotionTalk","LOCALS",1)~ THEN X3HelJ PotionDrunk
+@630
+DO ~SetGlobal("X3HelPotionTalk","LOCALS",2)~
+END 
+IF ~Global("X3HWIS","GLOBAL",1)~ EXTERN X3HelJ WisRoute
+IF ~Global("X3HCON","GLOBAL",1)~ EXTERN X3HelJ ConRoute
+
+CHAIN X3HelJ WisRoute 
+@632
+= @634
+== X3KalJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN @635
+== X3HelJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN @636
+EXTERN X3HelJ MeetArvoraQuest
+
+CHAIN X3HelJ ConRoute 
+@631
+= @633
+== X3KalJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN @637
+== X3HelJ IF ~IsValidForPartyDialogue("X3Kal")~ THEN @638
+EXTERN X3HelJ MeetArvoraQuest
+
+CHAIN X3HelJ MeetArvoraQuest 
+@639
+DO ~AddJournalEntry(@20024,QUEST)SetGlobal("X3HelArvoraQuest","GLOBAL",1)~
+EXIT 
+
+CHAIN IF ~Global("X3HelNoteCheck","GLOBAL",2)~ THEN X3HelJ SecondCodeTalk 
+@640
+DO ~SetGlobal("X3HelNoteCheck","GLOBAL",3)~
+= @641
+END 
+IF ~!IsValidForPartyDialogue("X3Reb")~ EXIT 
+IF ~IsValidForPartyDialogue("X3Reb")~ EXTERN X3RebJ TranslateOffer 
+
+CHAIN X3RebJ TranslateOffer 
+@642
+END 
+++ @643 + WithYourHelp 
+++ @644 + OnMyOwn
+
+CHAIN X3RebJ OnMyOwn 
+@645
+EXIT 
+
+CHAIN X3RebJ WithYourHelp 
+@646
+= @647
+END 
+++ @648 + WritingQuickly 
+++ @649 + IOweYou 
+++ @650 + YouAreUseful
+
+CHAIN X3RebJ WritingQuickly 
+@651
+EXTERN X3RebJ SearchStorehouse 
+
+CHAIN X3RebJ IOweYou 
+@652
+DO ~SetGlobal("X3RebAppChange","GLOBAL",9)~
+EXTERN X3RebJ SearchStorehouse 
+
+CHAIN X3RebJ YouAreUseful
+@653
+DO ~SetGlobal("X3RebAppChange","GLOBAL",3)~
+EXTERN X3RebJ SearchStorehouse 
+
+CHAIN X3RebJ SearchStorehouse 
+@654
+== X3HelJ @655
+EXIT 
+
 
 APPEND X3HelJ 
 

@@ -615,11 +615,12 @@ DO ~SetGlobal("X3RebYoshimo","GLOBAL",1)~
 == BX3Reb @263
 EXIT 
 
-//Vienxay
+//Vienxay Shadowmage
 CHAIN 
 IF ~IsValidForPartyDialogue("X3Vie")
 IsValidForPartyDialogue("X3Reb")
 See("X3Vie")
+!Kit("X3Vie",SHADOWDANCER)
 Global("X3RebX3Vie1","LOCALS",0)~ THEN BX3Reb X3RebX3Vie1
 @264
 DO ~SetGlobal("X3RebX3Vie1","LOCALS",1)~
@@ -636,6 +637,7 @@ CHAIN
 IF ~IsValidForPartyDialogue("X3Vie")
 IsValidForPartyDialogue("X3Reb")
 See("X3Vie")
+!Kit("X3Vie",SHADOWDANCER)
 Global("X3RebX3Vie1","LOCALS",1)~ THEN BX3Reb X3RebX3Vie2
 @272
 DO ~SetGlobal("X3RebX3Vie1","LOCALS",2)~
@@ -648,14 +650,49 @@ DO ~SetGlobal("X3RebX3Vie1","LOCALS",2)~
 == BX3Vie @279
 EXIT 
 
+//Vienxay Shadowdancer 
 CHAIN 
 IF ~IsValidForPartyDialogue("X3Vie")
 IsValidForPartyDialogue("X3Reb")
 See("X3Vie")
-Alignment("X3Vie",NEUTRAL)
-Global("X3RebX3Vie1","LOCALS",2)~ THEN BX3Reb X3RebX3Vie3
+Kit("X3Vie",SHADOWDANCER)
+Global("X3RebX3Vie1","LOCALS",0)~ THEN BX3Reb X3RebX3Vie1S
+@296
+DO ~SetGlobal("X3RebX3Vie1","LOCALS",1)~
+== BX3Vie @297
+== BX3Reb @298
+== BX3Vie @299
+== BX3Reb @300
+== BX3Vie @301
+== BX3Reb @302
+== BX3Vie @303
+EXIT 
+
+CHAIN 
+IF ~IsValidForPartyDialogue("X3Vie")
+IsValidForPartyDialogue("X3Reb")
+See("X3Vie")
+Kit("X3Vie",SHADOWDANCER)
+Global("X3RebX3Vie1","LOCALS",1)~ THEN BX3Reb X3RebX3Vie2S
+@304
+DO ~SetGlobal("X3RebX3Vie1","LOCALS",2)~
+== BX3Vie @305
+== BX3Reb @306
+== BX3Vie @307
+== BX3Reb @308
+== BX3Vie @309
+== BX3Reb @310
+== BX3Vie @311
+EXIT 
+
+CHAIN 
+IF ~IsValidForPartyDialogue("X3Vie")
+IsValidForPartyDialogue("X3Reb")
+See("X3Vie")
+Global("X3VieQuest","GLOBAL",12)
+Global("X3RebX3Vie2","LOCALS",0)~ THEN BX3Reb X3RebX3Vie3
 @280
-DO ~SetGlobal("X3RebX3Vie1","LOCALS",3)~
+DO ~SetGlobal("X3RebX3Vie2","LOCALS",1)~
 == BX3Vie @281
 == BX3Reb @282
 == BX3Vie @283
