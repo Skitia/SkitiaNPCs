@@ -93,7 +93,7 @@
 @980  = ~Heh. This will be a piece of cake.~
 @981  = ~Behold, my magic!~
 @982  = ~The final battle boys. Show them why we're the best dwarven band in the lands.~
-
+@983  = ~I am loyal to you, <CHARNAME>. But not *that* loyal.~
 @984  = ~Grr! Yer sense of humor is nay amusing, <CHARNAME>.~
 @985  = ~Nope. Not for me, mate.~
 @986  = ~I'll not die for Phelgrim. Not here!~
@@ -107,8 +107,8 @@
 @995  = ~Skitia NPCs for Baldur's Gate 2~
 @996  = ~Adding Petsy Crossmod~
 @997  = ~Adding Yvette Crossmod~
-@998  = ~Arcane Archer (Fighter Kit)~
-@999  = ~Emily Alternate Class: Arcane Archer Kit~
+@998  = ~Priest of Haelga (Fighter Multi-class)~
+@999  = ~Helga Alternate Class: Fighter/Priest of Haelga~
 @1000 = ~This component requires Artisan's Kitpack to be installed~
 
 @1003 = ~The estate was always a bit away from towns and cities. This is so...congested.~
@@ -119,3 +119,29 @@
 @1008 = ~Skitia NPCs: Romance Theme Soundtrack~
 @1009 = ~No Romance Theme Music~
 @1010 = ~Installing no music.~
+@1011 = ~Storage House~
+@1012 = ~Traitor! Death is only...peace.~
+@54 = ~Artisan's Kitpack: Invisible Blade~
+@55 = ~Artisan's Kitpack: (BG2) Give Isaac the Artisan's Kitpack version of Invisible Blade?~
+@59 = ~Skitia's Invisible Blade Kit (Default)~
+@1013 = ~Choose an alternate class for Kale?~
+@1014 = ~Vanguard (Requires Vanguard Kit to be installed)~
+@1015 = ~Barbarian~
+@1016 = ~Skitia's NPCs must be installed.~
+@1017 = ~Kapellmeister (Requires the Kapellmeister Kit to be installed)~
+@1018 = ~Choose an alternate class for Recorder?~
+@1019 = ~Lorekeeper tweak: Extend Mmnemonic Retrieval to match IWD Spell Progression?~
+@1020 = ~IWD Progression~
+@1021 = ~Alternate Kits (I.E.: Kale Vanguard, Recorder Keppelmeister, Helga F/C)~
+@1022 = ~Default Spell~
+@1023 = ~Helga Alt Portrait By Acifer~
+@1024 = ~Helga NWN Portrait~
+@1025 = ~Kale Alt Portrait By Acifer~ 
+@1026 = ~Kale NWN Portrait~
+@1027 = ~Vienxay Default Portrait by Crisshasart~
+@1028 = ~Vienxay Alt Portrait by Aeries1986~
+@1029 = ~Vienxay NWN Portrait~
+@1030 = ~Kale Portrait~
+@1031 = ~Vienxay Portrait~ 
+@1032 = ~Helga Portrait~
+@1033 = ~Alternative Portraits~

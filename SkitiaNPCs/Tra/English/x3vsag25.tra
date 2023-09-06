@@ -1,6 +1,6 @@
 @0    = ~If it isn't the exile, Vienxay Starlight.~
-@1    = ~Sage. It is surprising to see you here. Before you start, neither I nor <CHARNAME> do not require any information from you, and I do not want to hear more criticism about my life choices.~
-@2    = ~I only wish to say that your sisters miss you. Your youngest sister, Mina, is getting married, and laments that you cannot attend.~
+@1    = ~Sage Sules'terim. What are you doing in this place?~
+@2    = ~I am the last elf of the green island to have seen you, know who you look like, and thus, able to deliver big news. Your youngest sister, Mina, is getting married, and laments that you cannot join your family in attendance.~
 @3    = ~What? Ugh, this is so infuriating. Can there be no visiting exception?~
 @4    = ~Sometimes the decisions of one family member impacts them all. There is nothing to be done, only the living of the consequences you created for yourself.~
 @5    = ~Are you only speaking to bring more torment to Vienxay? Leave us alone, old elf.~
@@ -61,3 +61,6 @@
 @60   = ~Evermeet will be waiting for you, then. I wish you both well on your journey. May Father Corellon protect you.~
 @61   = ~I can barely walk around and do any sort of work here with those monks about. I may as well head back to the Green Isle at this rate.~
 @62   = ~Hello again! The world is so small it seems. Is Vienxay amongst you? If you know where she may be, ask her to come here. I have good news for her.~
+@63   = ~I owe you for helping get the Tome of Myth Drannor to Evermeet. I can grant you this favor.~
+@64   = ~I am thankful for helping get the Tome of Myth Drannor back to Evermeet. Despite my dislike of you, I could not have done that without you. I will tell your family you are well, and perhaps you will have other words you wish them to hear.~
+@65   =  ~Forgiven? No. But it was easy to convince the council that with your loss of magic, you were both no danger to the isle and a better citizen for it. Evermeet will welcome you back should you choose it, but you will still have to earn the forgiveness of the families who may still feel wronged.~

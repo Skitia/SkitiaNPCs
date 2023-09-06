@@ -1,0 +1,562 @@
+//Viconia1
+@0 = ~What would you do without <CHARNAME>'s protection, drow? I am surprised you are not hunted by those you left behind.~
+@1 = ~It is possible I am still sought, but the surface is vast and more dreadfully, has that horrible ball of light in the sky.~
+@2 = ~Not a fan of the sun, I take it?~
+@3 = ~Put your face in a ball of fire and call it pleasant, human.~
+@4 = ~It's beautiful, sometimes. Right at sunset. Another chance to do what you couldn't before.~
+@5 = ~Idle staring does not suit the drow. Nor does idle dreaming. We act, and we get what we want.~
+//Viconia2
+@6 = ~Planar Hunter, what would you do if I summoned a fiend?~
+@7 = ~Outside of <CHARNAME>'s company? Find the perfect spot to place a dagger in your neck.~
+@8 = ~And while I am with?~
+@9 = ~...You are testing my patience.~
+@10 = ~Ah, I have the answer. You are so loyal to <CHARNAME> you would sacrifice your own beliefs.~
+@11 = ~Oh no, Viconia. I would bide my time. Eventually <CHARNAME> will see you for who you are, and discard then. Then...then you should be afraid of me.~
+//Dorn 1
+@12 = ~You think you destroy your enemies out of righteousness Isaac. But no, it is out of fear.~
+@13 = ~You are not entirely wrong. I do fear for what those who place their lot with devils and demons will wrought upon the rest.~
+@14 = ~And so you try to kill them all. The blooded. The patron. The disciple. Indiscriminate. Tell me though, where is the blood but with your own?~
+@15 = ~You are trying to goad me. My loyalty, my honor, mean more to me than your insults, Dorn. Cease your words to me.~
+
+//Dorn 2
+@16 = ~Planar Hunter, where is my challenge? I long for it.~
+@17 = ~Speak to me no more. I have said there is no business between us.~
+@18 = ~Prove to me you are worth anything as a man, Isaac. Or is everything you stand for just empty declarations.~
+@19 = ~Perhaps you are the one with something to prove, Dorn. I found strength without ever relying on other entities. On fighting such entities. Perhaps one day you and I will have your desired battle. But right now? I have nothing to gain for it.~
+
+//Rasaad 1
+@20 = ~I don't understand. What is wrong with believing this "heresy" as you claim, Rasaad.~
+@21 = ~It's a lie, Isaac. Would we have others believe untruths?~
+@22 = ~What harm does it do?~
+@23 = ~I ask the same with your order's need to kill all of those with an outsider's blood.~
+@24 = ~It is not what they do, it is what they will do.~
+@25 = ~And is that not the same for this lie, for what harm it will do?~
+@26 = ~You have me there, Rasaad. Fair point.~
+
+// Rasaad 2
+
+@27 = ~You seem far removed from your Order of Planar Hunters, Isaac.~
+@28 = ~Our..."order", as you call us, is greatly diminished. The way back to our former glory lost to me.~
+@29 = ~I too, feel a distance from my sun soul brethren. The loss of my brother has changed me. I am not the man I once was.~
+@30 = ~Strange. I don't feel any different. Just bitter from all the failure.~
+@31 = ~I hope you find the way to light, Isaac.~
+
+// Rasaad 3 
+
+@32 = ~You did the right thing, Isaac. To let go of your need of revenge and see the truth through the cloud of deception.~
+@33 = ~Everything would have been different had I listened in the beginning. Believed her in the beginning. I was a poor partner to Mavis. Unloyal.~
+@34 = ~Loyalty is everything to me. I gave that all up on the thought that I was betrayed.~
+@35 = ~But in the end, you remained steadfast in your convictions.~
+@36 = ~Perhaps I did. But none of that eases my mind this day.~
+
+// Rasaad 3 alternate.
+
+@37 = ~I had feared what revenge would do to you, Isaac. You seem more shrouded in darkness than you ever have been.~
+@38 = ~Killing her was everything. Now...now I am a loyal follower to <CHARNAME>. Isn't that enough?~
+@39 = ~It does not seem as if that is enough for you, Isaac.~
+@40 = ~Are you wanting to hear that I regret it? That it leaves me empty? You'll get no satisfaction from me, Rasaad.~
+@41 = ~I only wish to see if you are okay, my friend.~
+@42 = ~I will be once you stop bothering me. Now leave me be.~
+
+//Jan 1
+@43 = ~I've heard you can run a good scam, Jan.~
+@44 = ~Now, what are you rattling on about? You seem to be a bit fuzzy in the head.~
+@45 = ~No need to be smart with me, Jan. Reminds me of family.~
+@46 = ~Perhaps you're thinking of my Uncle Gerhardt. He was always going on about his next big idea. He was wanting to make it big in the vegetable market, and was changing his parsnips to be blue, then sold them as a super vegetable.
+People were buying them as if they were a fine glass of mead. He had to run out of town not long after, though.~
+@47 = ~How did we go from talking about you, to talking about Gerhardt?~
+@48 = ~It just so happens that people didn't really have any appreciation of his vegetable medley. Speaking of, would you like to buy a parsnip?~
+@49 = ~And...now you're scamming me.~
+@50 = ~Well, let's not levy such wild accusations. I am an honest businessman!~
+@51 = ~This discussion was a waste of my time.~
+
+//Jan 2
+@52 = ~Why not just admit you run scams, Jan? Why this run around game? I'd rather be an honest thief than a liar.~
+@53 = ~That brings me back to another memory of Uncle Gerhardt. He wasn't a thief, actually. But he had started a corner on a new market, turnip mead. It sounded strange at first, but as soon as it got into the first lips, it was big all over. Of course that was until folks asked what was in it.~
+@54 = ~You're not getting to the point. This has nothing to do with my question.~
+@55 = ~I remember the crowd that formed like it was yesterday. Never reveal your secrets unless you enjoy excited mobs. Uncle Gerhardt swore up and down they were excited fans, of course, until they started throwing the same turnips they had broken out from the cellar. Honest thieves wasting good vegetables.~
+@56 = ~Is this a round about way to say you would rather be a liar?~
+@57 = ~I already told you, I'm just an honest merchant!~
+@58 = ~Why did I even get you started?~
+//Haerdalis 1
+@59 = ~My friendly leering owl, what fascinates you so that I find your gaze often upon me?~
+@60 = ~Don't be mistaken, tiefling. I keep my eye on you and nothing more.~
+@61 = ~Your gaze is no different than a prison's guards. We are both actors on the same stage.~
+@62 = ~I share a stage with you because I must. Were it different, I would see to it I stood alone.~
+@63 = ~A lone soloist's song needs the harmony of the extras.~
+@64 = ~If you must, then you can be the one that has laid down and died. There is nothing more I'd want.~
+//Haerdalis 2
+@65 = ~My leering owl, surely your gaze shall turn elsewhere, or else I may blush.~
+@66 = ~You travel through the planes. Why not go back to the one that was your home?~
+@67 = ~That is not so easy, Isaac. Indiscretions...lead to a journey elsewhere.~
+@68 = ~And now you infest these lands, the prime material plane.~
+@69 = ~Am I a disease, a roach in the supper pot? Do refuges and travelers not journey land to land, bringing fruits of trade and entertainment?~ 
+@70 = ~You aren't one of us. That's what matters.~
+@71 = ~Life ebbs and flows the same way in all planes. Places change, appearances change, but in every place an Isaac, in every world a Haer'dalis to play his counterpart.~
+//Haerdalis 3
+@72 = ~I find it most curious a Planar Hunter has seen so little of the planes.~
+@73 = ~I do not care about the world of our enemies. Just that they stay out of ours.~
+@74 = ~And how can you understand them if you do not see? You leer much, owl, but you comprehend so little of the grand stage.~
+@75 = ~There is nothing to see, there is nothing to fear. They are all dark, wicked lands.~
+@76 = ~They vary wildly in the most fascinating ways. Perhaps one night you shall take a greater part on a greater stage, and then you Isaac, shall see the haunting beauty of images not even capturable in dreams.~
+//Mazzy 1
+@77 = ~You fight with a lot of anger, Isaac. It is most unsettling. Any other time, you are...merely calm.~
+@78 = ~I am not a knight, Mazzy. I am not going to fight clean or fair or without emotion.~
+@79 = ~There have been foes that have been already dead that you have stabbed far more than necessary.~
+@80 = ~Sometimes, I just need to let it out. I suppose someone as uptight as yourself wouldn't understand.~
+@81 = ~There are other ways to express your emotions, Isaac. You do not need to keep it all inside.~
+@82 = ~I live as I live, Mazzy. Preach to another your wisdom.~
+@83 = ~I am here if you change your mind.~
+//Mazzy 2
+@84 = ~For a man who claims to hunt demons and devils, your order seems far from noble, Isaac. You prey on innocents just because they are different.~
+@85 = ~And what is the point of your rebuke, Mazzy?~
+@86 = ~You are a man who espouses virtues of loyalty and honor, which I respect. If you wish to be a good man, you must also fight the good fight.~
+@87 = ~I do not need another to judge what is good and what is right. That is all your type do, Mazzy. Judge and deliver. Our only difference is that we disagree.~
+@88 = ~I do not know if they are my order anymore. But there was a time when we would be praised for our actions even by folks like yourself. Perhaps that day come yet again.~
+// Yoshimo 1
+@89 = ~My friend, if I may provide a bit of helpful advice with trap wires, it is easier if you snap it close to the root as you can.~
+@90 = ~Yoshimo, I've done this for a long time. I know what I am doing.~
+@91 = ~Your finger seemed a bit bruised all. A painful past incident with a trap from what my eye saw.~
+@92 = ~Your concern is appreciated. But if I want help with traps, I'll ask.~
+@93 = ~I only wanted to give some advice to a fellow thief. We are all on the same side, are we not?~
+@94 = ~That remains to be seen.~
+
+
+// Yoshimo 2
+@95 = ~I see you have a preferene for the small knives, Isaac. Swift, silent, deadly. Your movements are an art of your own.~
+@96 = ~They are daggers. What is the compliment for?~
+@97 = ~Only an acknowledgement of your battle finesse, my friend. There is no need to be wary.~
+@98 = ~I am always wary. I wasn't in the past, and I was hurt for it, and lost my friends along the way.~
+@99 = ~You have mentioned little of your friends, Isaac.~
+@100 = ~There are gone, Yoshimo. What would be spoken would now be only memories.~
+
+//Edwin 1
+@101 = ~I am surprised that you of all people were on the Shadow Thieves' payroll.~
+@102 = ~I have power and skills and an appreciatable understanding of how they operate. They and anyone else would beg to have me.~
+@103 = ~Yet you are no thief, Edwin. No understanding of how to crack the lock, snap the trap, hide against the wall, and step without noise.~
+@104 = ~You say any of that as if magic cannot achieve anything a dimuitive thief can desire with a twirl of my fingers.~
+@105 = ~Hrmph. It's not the same. Feels like cheating, even. But I can't argue with that.~
+
+//Edwin 2
+@106 = ~You still haven't told me how you were able to join the Shadow Thieve's, Edwin.~
+@107 = ~Isaac, I will put the answer to that so even your mind can understand: the business is not yours.~
+@108 = ~Even if a dagger came out of nowhere, pressed against the skin of your neck, and the question was repeated?~
+@109 = ~You threaten me? How many times have your "planar hunters", as you call yourselves, failed to accomplish anything?~
+@110 = ~I almost wish you were planar blooded, Edwin. I would do more than just press the question.~
+@111 = ~Then be thankful I am not, and be gone. I do not want your blood smeared all over my robes.~
+
+//Edwin 3
+@112 = ~For a moment, Edwin, I had your greatness had hit a ceiling. Ha. How wrong I was.~
+@113 = ~What are you talking about, you bumbling fool?~
+@114 = ~With your new found "power", have you considered seducing marks? A thief has many ways to get what they want.~
+@115 = ~I have vastly considered kicking you in the- yes, that will do. When the time comes, that will do.~
+@116 = ~Nevermind. With your...eccentricness, I think you would seduce no one.~
+
+//Nalia 1
+@117 = ~You really want to help the poor, Nalia? You could offer up your estate's riches to everyone.~
+@118 = ~I wish it were that easy, Isaac.~
+@119 = ~It wouldn't make a difference. Besides, it's more fun to steal it than to beg for it.~
+@120 = ~They wouldn't have to steal if we found more ways to help them. We have the power to speak up and make changes, but no one wants to think beyond their land's own borders or their own problems.~
+@121 = ~Caused by us stealing from them and them begging for more guards.~
+@122 = ~Er- You aren't taking this very seriously, Isaac.~
+@123 = ~I am. Once they are robbed enough, I think we will have arrived at a resolution.~
+
+
+//Nalia 2
+@124 = ~Isaac, for a man of honor, you seem to almost romanticize theft.~
+@125 = ~The most daring skills come not from magic, but from the simple twists of fingers and carefully listening for the crack of the lock or the guard's footsteps.~
+@126 = ~I don't disagree with you about the excitement, just the reason.~
+@127 = ~I did it to survive once, Nalia. I didn't have to. But we saw it as a lucrative, good business for our family. There are guilds formed over such work. You can carve yourself a good life out of it.~
+@128 = ~The group you formed didn't have anything to do with thievery, though. Nor was it with your family.~
+@129 = ~Mavis was like family, at the time. But you are right. I saw a greater cause, like your need to help the poor, but less naive.~
+@130 = ~There is no need to be condenscending, Isaac. I just wanted to understand you more.~
+
+
+
+//Nalia 3
+@131 = ~You gave up on your training too early, Nalia. Your feet are like clanging metal when you walk and your trap detection is lackluster.~
+@132 = ~I dabbled, Isaac, but I'm a mage. I learned so I could sneak out of the castle at night.~
+@133 = ~Your family has rocks in their ears, then? That could explain how you got out.~
+@134 = ~Why do you have to be so rude to me? I have saved your life plenty of times now.~
+@135 = ~I don't like you Nalia. The poor don't need someone pitiying them when they can fend well enough on their own. I find the act patronizing.~
+@136 = ~I am just trying to help, Isaac. There are people starving, children who go hungry without food. Would you watch and do nothing? I thought you cared about honor.~
+@137 = ~I might. My honor extends only to who I serve and who I fight. Everyone else makes their own way.~
+
+//Anomen 1
+@138 = ~Perhaps you should leave your tiny play knives by your side and let the real warriors take the front line, Isaac.~
+@139 = ~I don't take the front line, "warrior", I take the back.~
+@140 = ~What sort of man of honor stabs his foes in the back?~
+@141 = ~My code of honor does not have to be your code of honor, Anomen. There is tactical reasoning in fighting from two sides. Would you remove our advantage?~
+@142 = ~I have no need of extra man fighting a foe I handle behind me, Isaac. Watch if you wish, my skill and faith will win without you.~
+
+//Anomen 2
+@143 = ~Isaac, I have heard your Planar Hunters seek righteous glory against the demons and devils, but in the Order's halls, they are merely a joke's expense.~
+@144 = ~Is there a point to this, Anomen?~
+@145 = ~You espouse honor. Would not the Order be a more fitting place for one who truly wishes to serve the cause of righteousness?~
+@146 = ~I have no desire to serve "righteousness.". That is only the battle of some rich noble with deep pockets. I serve the needs of a group, but for now, it is this one, and this group alone.~
+
+//Anomen 3
+@147 = ~What are your intentions with our leader, Anomen?~
+@148 = ~Intentions? You speak as if I am some vile rogue like yourself.~
+@149 = ~I have my eye on you, Anomen. You are a distraction that is not needed for <PRO_HIMHER>~
+@150 = ~Have your eye where you wish, Isaac. But I will not let your petty jealousy deter me.~
+
+//Emily 1
+@151 = ~We need a healer over here! Isaac, you're hurt bad.~
+@152 = ~Damn it, be quiet, Emily! I'm not weak I...ergh. I can take care of myself.~
+@153 = ~Fine, bleed on the ground for all I care.~
+@154 = ~I just need a potion. I'll stand up fine.~
+@155 = ~Just be more careful...and less hostile. We're on the same team, remember?~
+@156 = ~The thought hasn't left my head. Loath every moment of it.~
+@157 = ~You really need to learn how to make friends.~
+
+
+
+//Emily 2
+@158 = ~Why do you hate me so much? I've never hurt you, or any of your friends, at least if they weren't trying to hurt me.~
+@159 = ~Because you are unnatural. You don't belong here.~
+@160 = ~But I have no control of that. And we look similiar. We're people. Isn't that more important?~
+@161 = ~The purity of this world matters more to me. But I am not as zealous as my fellows. If I have to work with you to make this world better, than so be it.~
+@162 = ~I'd find that tolerable, but your vision of better kind of disturbs me, Isaac.~
+@163 = ~Because it doesn't include you in it?~
+@164 = ~We can start with that. And probably everything else about it, too.~
+
+//Emily 3
+@165 = ~I'm glad you saved Mavis, Isaac. You made a good choice.~
+@166 = ~I threw away my revenge. It still doesn't feel right.~
+@167 = ~You grew, too. Do you want to know what I think?~
+@168 = ~Not really, no.~
+@169 = ~Well, too bad! I think you've outgrown your own Planar Hunters. You're not like them. I think you want to believe what they did, but deep down, you're an honorable person who actually cares.~
+@170 = ~I would appreciate you not speak ill of the dead, Emily.~
+@171 = ~Right. Sorry. I just mean...well, thank you for saving her.~
+@172 = ~It wasn't for you. But if it makes you feel good, you're welcome.~
+@173 = ~And right when I think we make progress, you do that...thing, again.~
+
+//Emily 4
+@174 = ~You will make a fine, heir, Emily. Congratulations.~
+@175 = ~Are my ears not working? Did I just hear a compliment from Isaac?~
+@176 = ~Do you want to take it or not?~
+@177 = ~Thank you. Honestly. I just didn't think you cared. You've always been mean to me.~
+@178 = ~We've been together for a while. Seen eachother fail and succeed, protected eachother. It's hard for even you not to grow on me.~
+@179 = ~That is the nicest thing you've ever said. In the very little that you've said.~
+@180 = ~Just be careful. It's hard to climb up, but easy to topple down.~
+@181 = ~I will. I hope I will.~
+
+//Helga 1
+@182 = ~Do ye never eat, lad?~
+@183 = ~When I'm hungry.~
+@184 = ~...Are ye never hungry, lad?~
+@185 = ~I have other things on my mind than food.~
+@186 = ~He's crazy. Who doesn't think about food?~ // Kale
+@187 = ~Ye won't be in shape for the next battle if you don't eat. Have some of this. And I nay be asking.~
+@188 = ~If you insist.~
+@189 = ~This is...pretty good. Do you mind if I have more?~
+@190 = ~Have it all. Ye even thinner than the normal human twigs.~
+
+//Helga 2
+@191 = ~Thank you for the meal again, Helga. I appreciate it.~
+@192 = ~Aye, couldn't let ye starve yourself.~
+@193 = ~I've focused so much on getting justice that I have forgotten to take care of myself.~
+@194 = ~Aye, I know the feeling. Punishing yerself for past failures.~
+@195 = ~That is it, actually. I've watched too many people I care about die.~
+@196 = ~That's the business we choose. All we can do is fight harder.~
+@197 = ~I will. As hard as it takes.~
+
+//Helga 3 
+@198 = ~Clan life is very serious to dwarves, is it not?~
+@199 = ~Aye, especially for the oldest families and the powerful ones. Thanes and Kingships tend to stay in the family, unless ye got enough support to oust a clan, they be staying on top.~
+@200 = ~What about your clan? I've not heard you speak much of it.~
+@201 = ~We be free fighting spirits. Most who serve Haela are. There be dwarves and folk who need aid all over, nay just in the fort or home we born in.~
+@202 = ~You would be a good Planar Hunter, Helga. You and I are different, yet in some ways, I feel a kinship in our philosophies.~
+@203 = ~Bah. Yer honor is rubbish, yer insistence on being neat and orderly offensive...but aye, in other ways, I can see it.~
+@204 = ~You could stand to be a little neater, while we are on the subject. You eat like a pig.~
+@205 = ~Watch ye words, daggerman. I like ye, but I'll still hammer yer skull in if ye relate me to that animal.~
+
+//Helga 4
+@206 = ~You seem more leader than follower, Helga. Why do you follow <CHARNAME>?~
+@207 = ~Why do ye?~
+@208 = ~When I give my word, I give it fully. In exchange for aid, I offer service. I find it easy to follow.~
+@209 = ~I admit, it nay always be easy playing follower. But <CHARNAME> finds so many battles why would I ever contest it? Besides, their goals are a bit more dire than whatever direction I would throw this group in.~
+@210 = ~Fair enough, Helga. That answers my question.~
+
+// Imoen 1
+@211 = ~You don't have the desire of revenge that <CHARNAME> does.~
+@212 = ~Of course I want Irenicus, stopped, Isaac. Look at what he did to me.~
+@213 = ~I'm sorry. I just meant...you don't have the anger. The actual monstrosity.~
+@214 = ~I don't know how <PRO_HESHE> handles all of that. They're a lot stronger than I am. I'm just glad <PRO_HESHE>'s here with me.~
+
+// Imoen 2
+@215 = ~So how close are you and <CHARNAME>, Isaac?~
+@216 = ~You...say that as if you already in the know.~
+@217 = ~Come on, you can tell me. I can tell you some embarrasing stories about them?~
+@218 = ~How is a tortured woman still interested in gossip?~
+@219 = ~I just thought it would lighten the mood. I- I can't be angry or miserable every moment.~
+@220 = ~I see. Then I will gift your strength with some time to talk and listen later. But not now. We should focus.~
+
+//Hexxat 1
+@221 = ~You seem wary of me, Planar Hunter.~
+@222 = ~I am unsure how to treat you.~
+@223 = ~As a person, I would think, be appreciated most.~
+@224 = ~You aren't living. You aren't a person anymore, Hexxat.~
+@225 = ~Does one cease being a person when they die?~
+@226 = ~No. But when they "undie", that can change things.~
+
+//Hexxat 2
+@227 = ~What were you looking for in my things, Planar Hunter?~
+@228 = ~Signs of disloyalty.~
+@229 = ~And why would I keep them there?~
+@230 = ~Sometimes the biggest secrets are in the most obvious places.~
+@231 = ~And did you find what you were looking for?~
+@232 = ~No. Not yet. And so you shall have some trust, for now.~
+
+//Aerie 1
+@233 = ~What are the markings on your head, Aerie?~
+@234 = ~They are tattoos that represent who I am as an Avariel, Isaac, bestowed upon me by my people when I still lived amongst the avariel.~
+@235 = ~Are they like Vienxay's then?~ //IsValid Vienxay
+@236 = ~Mine are...less than desired, human.~ //IsValid Vienxay
+@237 = ~I am surprised you would still wear a reminder of home on your forehead, Aerie. I would think it difficult.~
+@238 = ~It is...very much, Isaac. It makes me sad, but I wouldn't remove it for anything.~
+@239 = ~I see. I hope I did not bring you pain, though this talk was enlightening.~
+@240 = ~No...you are nicer than you look Isaac. Thank you for being understanding.~
+
+//Aerie 2
+@241 = ~I...you seem nice, sometimes, Isaac. I don't understand why you would be one of these "Planar Hunters."~
+@242 = ~I am not just one of them, I founded them. Mavis and I found others, and formed a circle of leadership. Then the days grew dark.~
+@243 = ~But...but you hunt anyone. Even people that are innocent, like Haer'dalis, just because of their blood.~
+@244 = ~But...but you hunt anyone. Even people that are innocent, like Emily, just because of their blood.~
+@245 = ~But...but you hunt anyone. Even people that are innocent, like Sirene, just because of their blood.~
+@246 = ~But...but you hunt anyone. Even people that are innocent, just because of their blood.~
+@247 = ~He's not so innocent.~
+@248 = ~She's not so innocent.~
+@249 = ~He is not so wrong, my mourning dove. Let the hounds chase the cat, they will come yelping back at the cat's claws.~
+@250 = ~I mean he's not totally wrong. I did misbehave in Lady Liliana's Lady Lessons a few times. You would too if someone taught you something so pointless as how to sit in a skirt.~
+@251 = ~No one is so innocent.~
+@252 = ~But some people are just trying to live their lives, Isaac. Do they...deserve to be hunted like that?~
+@253 = ~Once I would have said yes. But I have grown less and less sure. Perhaps I am no longer what I created, Aerie.~
+@254 = ~It is not what they have done that is the cause of concern, but what they might do. And they might is dangerous enough.~
+
+//Neera 1
+@255 = ~Why do you keep looking at me like that, Isaac?~
+@256 = ~Like what?~
+@257 = ~Like *that*. Like you are right now.~
+@258 = ~Because you are a crazy wild mage that can kill us all in a moment's notice.~
+@259 = ~But I could also save you all. It's not all bad.~
+@260 = ~I have seen enough to make a judgement.~
+@261 = ~You'll come around. I know it!~
+
+//Neera 2
+@262 = ~Despite my judgements, you are a survivor, catering death with every cast. It is...crazy, but perhaps worthy of some respect.~
+@263 = ~So you *are* coming around.~
+@264 = ~Slowly. Living as long as I have next to you perhaps shows you can be...endured.~
+@265 = ~Some of it has been fun. Admit it!~
+@266 = ~This is as good as you'll get. Just don't kill us.~
+
+//Keldorn 1
+@267 = ~Aren't you getting a little old for all of this fighting, paladin?~
+@268 = ~Aye, it may very well be time for me to retire. But evil and the corruption that taints the world around me makes it difficult to rest.~
+@269 = ~You don't owe the people anything, Keldorn. Do as you please, not as they demand.~
+@270 = ~I have sworn a life of service, Isaac. As a man who prizes loyalty, you of all people should understand the sacrifice that comes with it.~
+@271 = ~Perhaps. I just would not have sworn such oaths to people who do not truly care about me.~
+@272 = ~Be careful with your words, Isaac, you slander good people of The Most Raidant Heart. I think it is best we let this conversation rest, before you further dishonor their name.~
+
+//Keldorn 2
+@273 = ~The Planar Hunters you formed were once spoken of with respect in the Order's Halls. I believe one of ours even fought by your side.~
+@274 = ~Once. Then we learned we had to fight as nasty as our enemies to win. Your order did not appreciate that.~
+@275 = ~Because we cannot associate those who would utilize every means necessary, immoral or moral, to achieve their goals. If you battle evil with evil, you are only replacing what you destroy.~
+@276 = ~Better the evil is of this world, than without, Keldorn.~
+@277 = ~I have learned the truth of that. I am trying to make ammends.~
+@278 = ~Then you will fall, Isaac. Fall by your own hubris and arrogance. By my sword, or by anothers.~
+@279 = ~I am glad you have come to see the wisdom of this, Isaac. It brings an old man hope.~
+
+//Keldorn 3
+@274 = ~Isaac, you should be proud. You turned aside your revenge and protected the woman you would have killed against the true evil. Well done.~
+@275 = ~I don't feel like I did anything well. I destroyed what I built.~
+@276 = ~The Planar Hunters can stand again, new, more noble members, bringing the good fight to true evil.~
+@277 = ~You sound very hopeful of that. I wish I had your enthusiasm, old man. But they are lost. Perhaps it is best they stay that way.~
+
+//Vienxay 1
+@278 = ~I fail to see your purpose in this party, Isaac. I do everything you do, and more.~
+@279 = ~I could say the same thing.~
+@280 = ~Please. You have no subtlety in your shadow steps.~
+@281 = ~I don't need to be subtle once I am ready to attack my target.~
+@282 = ~Whatever. Just admit my superiority.~
+@283 = ~This is no "whatever", Vienxay. We'll settle this someday.~
+
+//Vienxay 2
+@284 = ~Can you give me some distance when I work, Isaac? You disturb me.~
+@285 = ~How do I disturb you? I am barely in your proximity.~
+@286 = ~As the best detector of magical oddities and traps, I need to be undisturbed when I am searching.~
+@287 = ~There aren't even any dangers around. Why are you being like this?~
+@288 = ~This is over a prior offense. Multiple. Just stay out of my way, and let the master work.~
+
+//Vienxay 3 
+@289 = ~Your art has been improving, Isaac. Now you aren't an amateur anymore.~
+@290 = ~Are you capable of anything but insults?~
+@291 = ~That was a compliment. Why are you so angry?~
+@292 = ~Now I know why guards are so eager to arrest your. Your mouth.~
+@293 = ~Please, I think they would find my mouth quite delightful.~
+@294 = ~...Never. Speak. Again.~
+
+//Vienxay 4
+@295 = ~Well Isaac, it's high time I-~
+@296 = ~Vienxay, if this is another insult, put me down, or some half-snarky compliment, I don't want to hear it right now.~
+@297 = ~Please, I just want to see that I am glad you finally got your revenge. I know you have sought this for a long time.~
+@298 = ~You surprise me. But, thank you, Vienxay.~
+@299 = ~Even those inferior than my skill deserve congratulations every now and then.~
+@300 = ~*Sigh*. Whatever you say.~
+
+//Kale 1
+@301 = ~Sooo. Planar Hunter.~
+@302 = ~What, halfling?~
+@303 = ~I hear your group is going through a hard time. I've gained a bit of fame since, I could be your star member.~
+@304 = ~Even if I wanted to recruit you Kale, I wouldn't. You don't fit the type.~
+@305 = ~Aw, come on! Now there's a "type"?~
+@306 = ~There is. And as I said, you wouldn't fit. I don't think any halfling would.~
+@307 = ~Well, now we have a problem. You're saying no halfling is good enough!~
+@308 = ~Why did I even bother?~
+
+//Kale 2
+@309 = ~I'm not letting you off the hook, Isaac. Why wouldn't you recruit a halfling?~
+@310 = ~If you must know, I've just not met one that has the tenacity and willingness to do anything necessary to get the job done.~
+@311 = ~Well, why didn't you say that? You made it sound like we were the problem.~
+@312 = ~You were annoying me. It was easier to just be more general.~
+@313 = ~We're tougher than you think, mate. Underestimate us at your own risk.~
+
+//Kale 3
+@314 = ~Your father would be proud of you, Kale. You saw to it that Charles was punished.~
+@315 = ~Heh. I don't think he would have cared much at all. He left my life. I did it for my people.~
+@316 = ~Then your father was lucky you helped him at all, if he wasn't loyal to you.~
+@317 = ~I don't know about that, mate. But thanks for the words, eh?~
+
+//Kale 4
+@318 = ~Soooo.~
+@319 = ~Why do you begin every conversation with that damn word?~
+@320 = ~I can't help it. It's in my blood.~
+@321 = ~That makes no sense, Kale. What do you want?~
+@322 = ~Well, you and <CHARNAME>. Something you want to share about that?~
+@323 = ~No.~
+@324 = ~It's only polite to tell the group if you're seeing another member of the group. Along with some details.~
+@325 = ~No.~
+@326 = ~Not even a little something?~
+@327 = ~What do you think I am going to say?~
+@328 = ~Yeeees?~
+@329 = ~You got persistence. But what's private stays private.~
+
+//Minsc 1
+@330 = ~I understand you have a horse in this race as well, Minsc.~
+@331 = ~Minsc has no horse! Boo would like one, but Minsc might crush it with his big body.~
+@332 = ~I mean, you were captured with them. A prisoner of the enemy you puruse.~
+@333 = ~Minsc doesn't remember being captured with a horse, but he was a prisoner.~
+@334 = ~How many heads in the head have you taken?~
+@335 = ~Many, but Minsc doesn't go down, he rises right back up, and kicks evil right in the boots!~
+@336 = ~Remind me to never make you my enemy.~
+
+//Minsc 2
+@337 = ~I am jealous Minsc. I wish I could funnel my anger into a dangerous rage like yours.~
+@338 = ~Fighting evil makes Minsc mad. Anyone who hurts his friends, Minsc has to protect.~
+@339 = ~You speak simply, but your words are pure. You are unique Minsc. I should respect that more.~
+@340 = ~If you wish to be more like Minsc, perhaps we can get you a hamster. Not Boo though. Boo is Minsc's.~
+@341 = ~No thanks. I think I will let that be your special mark.~
+
+//Cernd 1
+@342 = ~Isaac, you let your hatred rage like uncontrollable wildfire. It is akin to an ember ignored in a campfire, that rages and grows until it engulfs the forest..~
+@343 = ~I don't have time for your druidic nonsense, Cernd. I'll take care of me, you take care of you.~
+@344 = ~Ignoring what I say does not remove the poison that is festering. Aid the ailment or it will move all through you and slowly rot you away.~
+@345 = ~I am not a plant, I am a man, and a capable one at that. I will not say it again, I take care of myself.~
+@346 = ~Death will claim everyone when he knocks on the tree's trunks, but for you, he will come knocking much sooner.~
+
+//Cernd 2
+@347 = ~You are like a wolf loyally serving the alpha in a pack, Isaac, yet conflicted by his own desires.~
+@348 = ~What makes you say this? Why are you speaking to me?~
+@349 = ~Your expression is often twisted in thought or some darkness. I thought you might give inner thoughts air to flow freely.~
+@350 = ~I have thoughts in me, and they do burden me. But these are my burdens, druid. Can I not carry them alone?~
+@351 = ~Alone, the tree has strength, but a group of trees fosters more life for animals under the canaopy than one could alone.~
+@352 = ~I will consider this. And if you wish to hear them, I may share them sometimes.~
+
+//Valygar 1
+@353 = ~Planar Hunter. I would have a word with you.~
+@354 = ~From one who gives words rarely? What do you have to say?~
+@355 = ~What are your views of magic? Your line of work has you hunting many an evil mage.~
+@356 = ~Mainly the diabolical. The terror some of them can conjure with their power, I've seen good friends die by their hands.~
+@357 = ~Then you agree, it is sinister and dangerous.~
+@358 = ~Magic has also saved our lives. But if it did not exist, it would not stop murder or crime. There would be something else taken its place.~
+@359 = ~A murderer will murder with magic or not. That is the way of this world.~
+
+//Valygar 2
+@360 = ~You are mage now, Isaac. I had thought you would want nothing to do with magic.~
+@361 = ~The situation requires any tool is necessary. Even something I do not necessarily cherish.~
+@362 = ~You become the very thing you fight, Isaac.~
+@363 = ~It doesn't matter. If that is what it takes, so be it.~
+@364 = ~Then you are not the man I thought you were. A shame.~
+
+//Jaheira 1
+@365 = ~Why aren't you angrier about Khalid? In your place, I would be doing nothing but hunting the one responsible.~
+@366 = ~Do you think I feel nothing, Isaac? That I am cold and heartless?~
+@367 = ~No I did not say that, I meant-~
+@368 = ~What would anger accomplish? It will not bring Khalid back! Watching you, it would only bring self-destruction.~
+@369 = ~I only meant to console you. My apologies.~
+@370 = ~Then I would choose your words more wisely, so that they are helpful, Planar Hunter.~
+
+//Jaheira 2
+@371 = ~For one who values loyalty, you sure know how to betray your own, Isaac.~
+@372 = ~Is this mockery? I would have thought you would be pleased with the choice made.~
+@373 = ~Your choice? You were bumbling about, indecisive, needing <CHARNAME> to choose for you.~
+@374 = ~They were our leader, and I trusted them. But I have my own voice, Jaheira.~
+@375 = ~And that is why I am not as pleased, Isaac. If you had used it, I would have had a different opinion.~
+@376 = ~I care not for your opinion. What's done is done.~
+
+//Korgan 1
+@377 = ~What petty excuse for a long-limbed are ye, Isaac? Ye can barely wield a blade.~
+@378 = ~Daggers are more effective for kiling people in their sleep.~
+@379 = ~An axes are good for cleaving ye from head to toe, ye imbecile.~
+@380 = ~I have no quarrel with you, Korgan. But if I ever do truly believe you mean harm to anyone here, I might be the one who slits that neck.~
+@381 = ~Walk on, coward. Ye don't have the spine to ever follow through on such a thing.~
+@382 = ~I can't stand you dwarf. If it weren't for <CHARNAME>, you and I would have long been at blows.~
+
+//Korgan 2
+@383 = ~Ha! What do the ladies say when ye show them the wee blade ye carry around, Planar Hunter?~
+@384 = ~I don't have time for your crude jokes, Korgan.~
+@385 = ~Nay anyone has time for the little you be providing as well.~
+@386 = ~*Sigh*. The things I must endure...~
+
+//Recorder 1
+@387 = ~You're not a fighter, Recorder. Not a survivor, or anyone with deep stakes in this. Why are you along with the group?~
+@388 = ~I recorded <CHARNAME>'s story when <PRO_HESHE> was in the north some time ago. Being up close like this makes it easier to make a record.~
+@389 = ~With all the arrow, magic, and blades we are bound to face, I doubt you or your records will make it to the end.~
+@390 = ~I know how to protect my materials, Isaac. And the church has taught me a lot of the weave to keep me safe. You don't have to worry.~
+@391 = ~I'm not worrying for you. I'm worrying for the sake of the group. We all have to protect you more due to your inexperience.~
+@392 = ~If I am a liability, then I will let <CHARNAME> address it with me. But have faith that I will do my utmost, no matter what may come, to help the group.~
+
+//Recorder 2 
+@411 = ~You look like you want to say something to me, Isaac. Or am I wrong?~
+@393 = ~I want to say I was wrong about you, Recorder. You are a not a soldier, but you are a survivor.~
+@394 = ~All because you know my past, now?~
+@395 = ~I erred and did not get to know you before judging me. Forgive me.~
+@396 = ~I do forgive you, Isaac. You don't have to apologize. I didn't mean to snap at you.~
+@397 = ~Still, you are so gentle. You don't belong out here. You deserve better things.~
+@398 = ~Better things have to be worked for. We are making those things, and when we are done, I'll have a product I can submit to the temple, and I will be proud of that.~
+@399 = ~If it goes well. For all of our sakes, I hope it does.~
+
+//Recorder 3
+@400 = ~You can rest easy, Recorder, now that he is dead.~
+@401 = ~I never cared about Phelgrim. Only Raban. And he is gone. I am a failure.~
+@402 = ~The mage that took him could still be found. Any man can be hunted.~
+@403 = ~No matter what happens, Isaac, I will never stop looking for Raban.~
+@404 = ~And I hope you find him.~
+@405 = ~I never cared about Phelgrim. Only Raban, and he is safe.~
+@406 = ~I still do not understand. Why did you try to kill your son originally?~
+@407 = ~I regret it now, but in that moment I saw the life he would have had, and it would have been horrible, unfit for anyone.~
+@408 = ~Men can endure hardship, for many years. Poverty, starvation, cruelty, it shapes us, but a life can still be managed.~
+@409 = ~I was selfish, I know. And I was selfish again for sending him off for now. But when this is over, I will find him, and never let him go.~
+@410 = ~I hope you get what you wish for.~
+
+
+
+//Recorder 4
+@401 = ~You don't have to look my way, Isaac. I will be fine.~
+@402 = ~You remind me of my sister. How you've endured and fought hard as any of us, with a heart that is too caring for the environment.~
+@403 = ~You've not told me much about your sister. I would not mind listening.~
+@404 = ~She died protecting our family in Neverwinter. She wasn't the strongest, or the fastest, but she was smart, bright, and had the memory of the thickest tomes of history.~
+@405 = ~I am sorry for what happened to your sister. But please, do not be so concerned. I can take care of myself.~
+@406 = ~You can, and you will have help. You of all people should make it through this.~
+@407 = ~You are sweet, Isaac. Sometimes, when I think I know, I see anotherside, and my thoughts shift. In the end, I am glad to have known you.~

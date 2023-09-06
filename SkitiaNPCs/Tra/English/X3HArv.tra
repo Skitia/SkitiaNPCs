@@ -1,0 +1,119 @@
+@0 = ~Most of the local halfling community here is livid after what Chester did leaked out from the Docks, and I'm doing all I can to keep them calm. We can talk after you help Jillian arrest him.~
+@1 = ~I am afraid I do not have time to chat. I will have to return to duty shortly.~
+@2 = ~Helga. I gave my answer, and I stand by it. I am not rejoining the Six Shields.~
+@3 = ~And ye nay have to. I just be here to show off me leg. Feels as if I was a young warrior again!~
+@4 = ~And ye nay have to. I came to apologize to ye, Arvora. I was pushy and selfish towards the end of our journey together. A right sour mood to ye, too. Ye nay deserve that.~
+@5 = ~As touching as that is, especially from you, it doesn't help me. I have puzzling troubles on my mind, Helga.~
+@6 = ~I've no time for your prideful boasting, Helga. I have puzzling troubles on my mind.~
+@7 = ~What can be troubling ye so bad ye'd rather sulk than listen to ol' Helga?~
+@8 = ~Jillian. She's missing. And supposedly it's my fault, even though I don't remember slighting this guy at all.~
+@9 = ~Hold up. Jillian was just helping me recently. Damn it. Does it have to do with the work she's on?~
+@10 = ~Not from what I understand. According to the kidnapper, we slighted him at some point when we were together as the Six Shields. Now he wants me to solve this message he gave me, find him, and duel him to win her back.~
+@11 = ~Bah! We be finding yer neice no problem. Who done it?~
+@12 = ~According to the kidnapper, we slighted him at some point when we were together as the Six Shields. Now he wants me to solve this message he gave me, find him, and duel him to win her back.~
+@13 = ~He calls himself, Zavatar. I don't remember a Zavatar. I only remember fighting monsters, not something intelligent enough to write a letter. I've no idea what we did to him.~
+@14 = ~Are you sure none of your enemies could write?~
+@15 = ~What if we take a look at this for you?~
+@16 = ~Well, tough luck.~
+@17 = ~I think that is enough conversation. We should get going.~
+@18 = ~I can't be sure, I'm not a monster expert, but I've never heard of a literate ogre or orc or such.~
+@19 = ~The magi, maybe. They be the only intelligent blokes out of the lot.~
+@20 = ~Could we see what they gave you?~
+@21 = ~Here's the letter with the strange message. It was just handed to me by a very terrified messenger. He was paid and told to deliver. Swore up and down they were not associated with this at all.~
+@22 = ~Take a read. What do you think of the little riddled message?~
+@23 = ~Well certainly. I would be delighted to have help. I can't do this on my own.~
+@24 = ~You really aren't going to help me? I'll find her myself, if that is what it takes.~
+@25 = ~Bah! <CHARNAME>, reconsider yer words and help this soul. Better yet, this may bring us to a fight, and fighting to save her neice be a good bloody fight.~
+@26 = ~I be sorry. Perhaps if she still be missing and <CHARNAME>'s got less on their plate, we can swing by and be of assist.~
+@27 = ~Missing people don't tend to stay both alive and missing long, Helga. But do what you will.~
+@28 = ~Come on, we're throwing away a chance to be heroes! Although I doubt she'd pay us much, she's kin, and we halflings help halflings.~
+@29 = ~Jillian is still missing. If you're here to help, I could use it.~
+@30 = ~If you still need help, we will assist.~
+@31 = ~I'm afraid I don't have time to help you.~
+@32 = ~Well, she's not going to find herself. I'll keep looking without you.~
+@33 = ~So what do you think of the little riddled message?~
+@34 = ~It's just gibberish. I can't make any sense of it.~
+@35 = ~It's likely a pattern. If we can decode it, we can figure out what they are trying to tell you, or where Jillian is.~
+@36 = ~I'm not sure. Anyone have any ideas?~
+//Anyone with high intelligence can guess.
+//Aerie
+@37 = ~Oh I don't know if I can be of much help with such a thing. But some of the words do look like they are repeating after the commas. Maybe that could mean 'and'.~
+//Edwin
+@38 = ~This an obvious ciphered message. (I would use one myself if I were concerned about any of you fools getting into my private business.) Find how to shift one letter, you can get them all.~
+//Haer'Dalis 
+@39 = ~Ah, a fun little game the hunter plays with the duck. If he wants us to find it, it would not be so difficult that we could not solve it. The letters around the punctuation will give you the first clues.~
+//Imoen, if she is somehow around.
+@40 = ~This is a Cipher isn't it? I remember reading about them in Candlekeep. You just have to figure out how far to shift a letter.~
+//Jan 
+@41 = ~Uncle Scratchy had some letters just like this on his desk. Not the most appropriate pieces of work, if you understand. They expressed a certain longing for the farmer across the way. She was married. So was Uncle Scratchy. Their spouses looked at them and thought they were making a new language! Ah, let's see...urnq. That sounds like head to me.~
+//Nalia 
+@42 = ~Some of the nobles use something like this to send secret messages. You just have to stare at it a little and it might make sense. If I had to guess, I think 'j' might be 'w'.~
+//Neera
+@43 = ~I don't understand why anyone would want to hide something they don't really want to hide. What's the point? In those long series of commas though, those are probably the passcodes. Once we figure out what they mean, one of them is the right word.~
+//Viconia 
+@44 = ~This is an obvious trap. The fool plays with words that are easily broken. Shift a few letters and his game will be revealed.~
+//Emily 
+@45 = ~This is a decoded message. If we can figure out the key, we can get the message. It ought to be simple, I have a feeling he wants to be found.~
+//Recorder 
+@46 = ~This is more of a puzzle than a riddle, or maybe the riddle is in the puzzle. I think if you shift the letters by thirteen, you can reveal its meaning.~
+//Vienxay 
+@47 = ~My idea is that this is all a waste of time. But if you must know, 'naq' is most definitely 'and'.~
+//Then:
+@48 = ~Whatever it says, its our only lead right now. I will question around and see if anyone has heard anything regarding Jillian. If you can figure out that letter, see where it leads you.~
+//One liner until you talk to Zavatar.
+@49 = ~Not a whisper about Jillian. This is puzzling, and very worrying.~
+//Post Zavatar talk, not saved Jillian talk.
+@50 = ~Have you heard anything? I'm at my wits end.~
+@51 = ~Zavatar says they have her, and will return her to us if we beat him in a duel.~
+@52 = ~Not yet, I'll update you later.~
+@53 = ~Pfft. When have I ever failed you, Arvora? We'll get this guy.~
+//Helga
+@54 = ~Seems the lout be mad we ruined his family farm real good when we took out the ettins that killed Gast. What's some property damage when we saved the damn roads from worse?~
+@55 = ~Jillian's life is on the line, Helga. What if this doesn't work?~
+@56 = ~Ye can rest assured lass, one way or another, Jillian will be back where she belongs.~
+//Post Zavatar Talk, and talked to Arvora once, also concluding line if Helga isn't in the party.
+@57 = ~Win for me. Jillian should come home.~
+//Helga or Kale died and failed the duel.
+@58 = ~What happened?~
+@59 = ~I'm sorry, Arvora. Just forget about her.~
+@60 = ~Jillian is lost, Arvora.~
+@61 = ~Zavatar won.~
+@62 = ~I...I should have not have let someone fight for me. This was my problem. I am so sorry.~
+@63 = ~I'll have to track him down. Maybe it's not too late, maybe it is, but I can't let another Six Shields death go unanswered. Goodbye. I won't involve you any further in this.~
+//Saved Jillian.
+@64 = ~Thank you. Jillian is safe now. I swore I would protect her after what happened with her parents. I'm glad you helped me keep my word.~
+//Helga
+@65 = ~Aye, we came through Arvora, just as I said I would.~
+@66 = ~I owe you everything, Helga. You and your friends. There's too much going on in the city right now to help you directly. Wars between criminals, rumors of vampires on the street. It's a mess out there.~
+//Helga Invalid.
+@67 = ~I owe you everything. There's too much going on in the city right now for me to help you directly. Wars between criminals, rumors of vampires on the street. It's a mess out there.~
+@68 = ~But I want you to have this. It will protect you out there. Think of it as me shielding you. And if it's not of use, maybe it will fetch a good sack of coins.~
+//Kale
+@69 = ~Thanks, Arvora. Keep an eye on Jills for us, eh?~
+//Helga
+@70 = ~Ye take care of yourself, lass. I be getting too old to swoop in for ye.~
+//General.
+@71 = ~Thank you again. May Yondalla bless you all.~
+//Farewell if Kale and Helga in party.
+@72 = ~Thank you Kale, Helga. Take care of your leader like you did me, you'll go far. May Yondalla bless you both.~
+@73 = ~If we get stuck, my mother at the Temple of Oghma could probably decipher this for a donation. Or we can try to decipher it ourselves. I know we can break the code if we put our head into it.~
+@74 = ~We made contact with Zavatar. He'll give us Jillian if we pay five thousand gold for her.~
+@75 = ~What kind of money does he think I make? I can give you five hundred. I need your help for this, I can't do it on my own.~
+@76 = ~I'll take your contribution. I'll muster the rest as quick as I can.~
+@77 = ~Keep your contribution. We'll be able to pay for her on our own.~
+@78 = ~You better come up with more then that, we're not paying for your mistakes.~
+@79 = ~That's all I have. Without you...she'll be lost.~
+@80 = ~I never agree to paying for the niece over breaking the lout's neck, but now ye be giving Arvora a hard time for this? Bah!~
+@81 = ~Is this the sort of person you want to be, <CHARNAME>? I had higher expectations, mate.~
+@82 = ~You are very kind. Do whatever you can, please.~
+@83 = ~Here, I hope this helps. Do whatever you can, please.~
+@84 = ~Save Jillian, please. She suffers enough.~
+@85 = ~You don't have to tell me. I already received another taunting letter from Zavatar about Jillian.~
+@86 = ~I won't rest. No matter how far I have to go, I will find my niece again. I should have always done this myself. I regret ever involving any of you.~
+// Jillian death catch
+@87 = ~I lost my niece, Helga. She was always tough and determined to make her way through a human-centric guard force, just like myself. I was always worried for her, but so proud. She was not supposed to pass before me.~
+@88 = ~I...I be giving you my deepest condolences, Arvora. I know ye were like a mother to her, and the two of ye were a force to be reckoned with together.~
+@89 = ~Thank you Helga. The Hound will guide her to the Green Fields. I must prepare for her rites of passage. Stay alive, Helga. We have lost enough.~
+@90 = ~Aye, I will fight hard or die as stubborn as I can, me friend.~
+@91 = ~We have the orb Jillian was sealed in.~
+@92 = ~Thank goodness! Please, free her from it right away!~

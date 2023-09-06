@@ -10,16 +10,17 @@ Siria of the Temple of Oghma has told us that the sage Sules'terim is on an acad
 
 @50003 = ~The Tome of Myth Drannor 
 
-Sules'terim has lost his notes from a pack of wolves somewhere in the Umar Hills. He may tell us about the tome after we find them for him.~
+Sules'terim expressed no interest in helping Vienxay return home, but his apprentice was of a different mind. If we help him find a lost old elven magic tome that was lost somewhere in Amn from Myth Drannor, and get him a book of rituals, he will help Vienxay return home.~
 
 @50004 = ~The Tome of Myth Drannor 
 
-Sules'terim told us the tale on how the tome of Myth Drannor was lost. He believes recovering it from the Underdark impossible, but if for some reason 
-we were ever able to retrieve it, he asks we return it to him.~
+Adrie told us the tale on how the tome of Myth Drannor was lost. She was on an expedition with several other elves and a human named Samir when they were ambushed by drow in the Forest of Tethir. He believes the human Samir was captured for slavery, while the elves were slain. Adrie fled for her life, guiltily leaving everyone to die. If the book is anywhere to be found, Adrie fears it is in the dreaded city of Ust Natha in the underdark.
+
+Our chance of recovering it is slim indeed. Galadin will not like this when he finds out.~
 
 @50005 = ~The Tome of Myth Drannor 
 
-We found Samir, one of the members of the expedition that lost the tome of Myth Drannor. An old slave now, he claims his master has the tome, who may be in the Male Fighters' Society.~
+We found Samir, one of the members of the expedition that lost the tome of Myth Drannor. An old slave now, he claims he knows where the tome is, but first wants his freedom. He believes he can teleport out if we can get some spell components his master uses in bartering with wizards. He may be in the Male Fighters' Society.~
 
 @50006 = ~The Tome of Myth Drannor 
 
@@ -37,7 +38,7 @@ She also admitted that her people would love it returned and stored, not destroy
 
 @50009 = ~The Tome of Myth Drannor 
 
-We returned the Tome of Myth Drannor to Sules'terim, and he was ecstatic. He rewarded us with a Tome of Elven Grace anyone of half-elven or elven blood could absorb, and this may one day allow Vienxay an opportunity to return to her people.~
+We defeated the power hungry Galadin, and Sules'terim will return the tome to its proper home in Evermeet. He rewarded Vienxay with a tome of his own for her sacrifice despite Galadin's betrayal. Perhaps through Sules'terim, there may be a path for her to return home someday.~
 // The below only occurs if the Tome of Myth Drannor was returned to Sules'terim, otherwise this cannot happen.
 @50010 = ~Evermeet: Vienxay Redeemed~
 
@@ -65,7 +66,57 @@ Due to Vienxay's actions in Faerûn and for returning the tome of Myth Drannor t
 
 Due to Vienxay's actions in Faerûn and for returning the tome of Myth Drannor to the Evermeet people, the sage Sules'terim informed Vienxay she was no longer exiled, but I pushed her to go anyway, not wanting her to choose love over never seeing her home and family again. I will miss her dearly.~
 
+@50018 = ~The Tome of Myth Drannor 
 
+We gave Galadin the book of rituals. We still need to find the elusive tome of Myth Drannor.~
+
+@50019 = ~The Tome of Myth Drannor 
+
+We gave Galadin the tome of Myth Drannor. We just need to find the book of rituals.~
+
+@50020 = ~The Tome of Myth Drannor 
+
+We gave Galadin both books that he needed. Ecstatic, he's asked we start the ritual right away. He's asked for Vienxay's help specifically. We should bring her to him.~
+
+@50021 = ~The Tome of Myth Drannor
+
+We informed Galadin about what happened to the book of Myth Drannor, but he did not seem at all dissapointed. He's demanded that we find it, and he won't help Vienxay until he has it.~
+
+@50022 = ~The Tome of Myth Drannor 
+
+We gave Galadin both books that he needed. Ecstatic, he's asked we start the ritual right away with Vienxay's aid. He asked us to follow him to a clearing west of Umar's Cave. What sort of magic will he conjure from the tome? We will find out.~
+
+@50023 = ~The Tome of Myth Drannor 
+
+We returned the book of Myth Drannor to Sules'terim, where he will return it to Evermeet. Galadin will be displeased that he did not get to taste the book's power, but Sules'terim was the more responsible choice.~
+
+@50024 = ~The Tome of Myth Drannor 
+
+We returned the book of Myth Drannor to Sules'terim in exchange for him voicing for the lifting of Vienxay's exile. While Galadin will be displeased, Sules'terim is the more responsible choice, and Vienxay still has a path for returning home someday with Sules'terim's influence. Hopefully, he can come through for her.~
+
+@50025 = ~The Tome of Myth Drannor 
+
+Sules'terim gave us his thanks despite what happened with Galadin. He returns to Evermeet, bringing the tome from Myth Drannor with him. Had Galadin triumphed, things would have been much worse for the elven island.~
+
+@50026 = ~The Tome of Myth Drannor 
+
+We used the Tome of Myth Drannor ourselves. The book is destroyed, but some of its power still manifests with the user. Sules'terim and Galadin will never know its fate.~
+
+@50027 = ~The Tome of Myth Drannor 
+
+Samir informed us he hid the tome around a cabin in the Forest of Tethyr to protect it from drow. With luck, it may still be there.~
+
+@50028 = ~The Tome of Myth Drannor 
+
+Sules'terim gave us his thanks despite what happened with Galadin. That goodwill was destroyed when we demanded he leave the tome with us. Yet Sules'terim showed us that it did not belong with him or the elven people, but with us. The intellectual boons of the tome are for our use now.~
+
+@50029 = ~The Tome of Myth Drannor 
+
+We have used the tome of Myth Drannor for ourselves, destroying it in the process while denying Sules'terim and Galadin the chance to ever have it for themselves. May the knowledge it grants come in use for us.~
+
+@50030 = ~The Tome of Myth Drannor 
+
+Galadin was killed attempting the ritual. Sules'terim was dissapointed with us, and wished to take the tome to return to Evermeet. But we believed he did not deserve it, and he attacked us.~
 
 @20015 = ~Helga's son
 Vienxay reluctantly admitted she could scry Berk, as long as she had a scrying crystal and was in the pocket plane. We should keep an eye out for any jewelers.~
@@ -77,19 +128,25 @@ Vienxay scried Berk and mentioned he was dead. We could tell Helga the truth or 
 In later years she would become a powerful if controversial political figure in Suldanessellar, until she was dismissed for the most colorful, vile language ever heard in the court to the queen over an edict she abhorrently despised. Some elves, they say, are just awful. Vienxay it seems, would always be one of them.~
 
 @52 = ~At the end of her journey with <CHARNAME>, Vienxay was overjoyed to return home at long last. But it was not the same place as she left it, and while she was forgiven, the people of Evermeet would not forget. She would not stay long, leaving to explore islands far to the west, occasionally returning to bringing 
-back artifacts and impressive tomes of power and knowledge, often with an apprentice or two willing to overlook her past. Her deeds eventually won her trust, and she won a trusted seat in Evermeet's court, until she was dismissed for giving the queen the most vicious rebuke of one of her new edicts. Some elves, they say, are just awful. Vienxay it seems, would always be one of them.~
+back artifacts and impressive trinkets of power, often with the company of her sisters who she had dearly missed. Her deeds eventually won the people's trust, and she won a coveted seat in Evermeet's court, until she was dismissed for giving the queen the most vicious rebuke of one of her new edicts. Some elves, they say, are just awful. Vienxay it seems, would always be one of them.~
 
-@53 = ~Vienxay continued her adventures with <CHARNAME> long after leaving Tethyr. There was always one more artifact, one more tome to be found, and Vienxay's thirst for power and knowledge was only matched by her love for <CHARNAME>. Their fame and legend would only grow, and on their wedding day in Baldur's Gate it was said the crowd was numbered in the ten thousands, full of thankful scholars, nobles, admirers, 
+@53 = ~Vienxay continued her adventures with <CHARNAME> long after leaving Tethyr. There was always one more artifact, one more lost secret to be found, and Vienxay's thirst for power and knowledge was only matched by her love for <CHARNAME>. Their fame and legend would only grow, and on their wedding day in Baldur's Gate it was said the crowd was numbered in the ten thousands, full of thankful scholars, nobles, admirers, 
 and a few new apprentices of Vienxay's collection, who had eagerly sought her tutelage upon the closure of her adventures. <CHARNAME> would become an influential political figure with Vienxay always by <PRO_HISHER> side...or insulting the local commoners. She gained an unpopular reputation checked only by her love for <CHARNAME>, but some elves were just awful like that, and Vienxay would always be one of them.~
 
 @54 = ~Vienxay would leave <CHARNAME>'s side only once, to return home to the island she had been banished from for so long. When she returned, she found and embraced the family she had missed and loved, and found little had changed, yet she herself had changed immensely.  She had gained what she had always wanted, but Evermeet was no longer her home. She would return to the only place that could be given such a title,
  and that was <CHARNAME>'s side. She bid farewell to them all and rejoined <PRO_HIMHER>, and it was said they would go on many adventures before settling down in Baldur's Gate, where they were married. <CHARNAME> would become an influential political figure in the city with Vienxay always by his side...or insulting the local nobility, who found her just awful. Some elves were like that, and Vienxay would always be one of them.~
 
 @55 = ~Vienxay and <CHARNAME> would journey to Vienxay's homeland, where her exile had ended at last. There, she would rejoin her family she had dearly missed, and it was there she and <CHARNAME> would be married, visited by elves from all across the realm, many wishing a glimpse of the great hero and the elf who had found redemption by his side. <CHARNAME> would rise to become an important member of the court, and Vienxay would 
-spend her time mentoring young mages eager to learn from her mastery of illusion and grasp shadow magic. But Evermeet did not bring the joy the rest of the realms had given to Vienxay's thirst, and she and <CHARNAME> would depart years later, though not before Vienxay caused a minor scandal amongst the nobility for a vicious public rebuke of the queen using rather colorful language. Some elves, they say, are just awful. Vienxay it seems, would always be one of them.~
+spend her time mentoring young elves eager to learn from her skills, hopeful to forge even a sliver of her own legend for themselves. But Evermeet did not bring the joy the rest of the realms had given to Vienxay's thirst, and she and <CHARNAME> would depart years later, though not before Vienxay caused a minor scandal amongst the nobility for a vicious public rebuke of the queen using rather colorful language. Some elves, they say, are just awful. Vienxay it seems, would always be one of them.~
 
 @56 = ~Vienxay immediately knew loneliness upon <CHARNAME>'s ascension, and with no other path to go, she set out to return to her homeland of Evermeet. For a time, she found joy, embracing the family she had thought she would never see again, and traveling amongst the trees and cities she had thought of every day in her banishment. But while Evermeet had not changed, it lacked the face that Vienxay had come to hold dearest.
 She would bid farewell to them all and travel the realms, mentoring mages across the realms and even of high courts and homes through the lessons she had learned by <CHARNAME>'s side. Eventually she would go on to found a school of magic in Baldur's Gate, at least until she caused such a scandal amongst the nobility they demanded her departure. Some elves they say, are just awful. Vienxay would always be one of them, but she would never forget the <PRO_MANWOMAN> that made her slightly less so.~
+//@51 Variation for Shadowdancer 
+@57 = ~Parting with <CHARNAME> brought Vienxay a sense of loneliness, amplified further by the loss of the magic she held dear. She sought to form a guild of thieves, but instead, they sought her, rogues of all races fascinated by her prowess with the dance of shadows and sleight of hand. Her apprentices became of such a great number that her guild rivaled the Shadow Thieves, nearly starting another guild war until Vienxay and the Shadow Thieve's leader came to an agreement of mutual existence and sometimes cooperation with one another. 
+In later years she would become a powerful if controversial political figure in Suldanessellar, until she was dismissed for the most colorful, vile language ever heard in the court to the queen over an edict she abhorrently despised. Some elves, they say, are just awful. Vienxay it seems, would always be one of them.~
+
+
+//Galadin Line 
 
 @50099 = ~^0xFFFF00FFYou have established a deep bond with Vienxay. Your synergy has improved her capabilities.^-~
 
@@ -131,10 +188,11 @@ She would bid farewell to them all and travel the realms, mentoring mages across
   
 Advantages: 
 - + 15% Bonus to Hide in Shadows and Move Silently
+- Umbral Empowerment: While hidden in shadow, the shadowmage gains +1 to their caster level and -1 to their casting speed.
 - Slippery Mind: +1 bonus to saving throws
 - May cast Shadow Jump once per day. Gains one use at thief level 5 and an additional use every 5 levels thereafter.
 
-SHADOW JUMP: Manipulating shadow, the shadowmage teleports to the selected living creature, be it ally or enemy, unseen as per the invisibility spell. For the next twelve seconds, they gain +2 to their backstab modifier and their thaco improves by %20 percent. They remain unseen until they make an attack or the spell expires.
+SHADOW JUMP: Manipulating shadow, the shadowmage teleports to the selected living creature, be it ally or enemy, unseen as per the invisibility spell. For the next three rounds, they gain +2 to their backstab modifier and their thaco improves by 20 percent. They remain unseen until they make an attack or the spell expires.
 
 Disadvantages: 
 - Alignment restricted to any non-lawful and non-good
@@ -157,7 +215,7 @@ Saving Throw: None
 This Shadow Magic spell is similar to magic missile. Shadowbolt creates three cold, airy missiles, which dart from the wizard to the intended target. 
 Each missile does 1d6+1 magic cold damage. Another missile is gained from level 8 and every level after up to 15, maxing at eleven missiles.~
 @867  = ~Shadow Jump~
-@868  = ~SHADOW JUMP: Manipulating shadow, the shadowmage teleports to the selected living creature, be it ally or enemy, unseen as per the invisibility spell. For the next twelve seconds, they gain +2 to their backstab modifier and remain unseen until they make an attack.~
+@868  = ~SHADOW JUMP: Manipulating shadow, the shadowmage teleports to the selected living creature, be it ally or enemy, unseen as per the invisibility spell. For the next three rounds, they gain +2 to their backstab modifier and their thaco improves by %20 percent. They remain unseen until they make an attack or the spell expires. Additionally, while the spell is active, they may make one additional jump to another target of their choosing. The second jump does not reapply invisibility.~
 @869  = ~Vienxay~
 @870  = ~Some elves are just awful, but Vienxay insists she is not one of them. She boasts of growing up in comfort and prominence, the eldest, most beautiful, and most intelligent of three sisters, gifted both with the weave and the shadow magic well known to the shadowdancer, which she used to great abandon. She then rants on about how a series of “misunderstandings” had her ousted from Evermeet and wandering the landscape by the scheming of her former mentor. She misses home terribly, both the comforts of her manor and the warmth of nearby family who were far more tolerable of her elf elitism than the human locals of the sword coast. But if the locals dare think they shall disrespect her, she says, they will quickly learn from their mistake.~
 @871  = ~I will not die here.~ [VienFear]
@@ -166,12 +224,12 @@ Each missile does 1d6+1 magic cold damage. Another missile is gained from level 
 @874  = ~Must we come to the aid of every commoner?~ [VienSer]
 @875  = ~I'm done here. Be fools if you wish but you do so without me.~ [VieBreak]
 @876  = ~A wise choice. I will bring us victory.~ [VienLead]
-@877  = ~I need to refresh my spells. Let us rest~ [VienRest]
+@877  = ~I need to refresh my spells. Let us rest~ [VienRest] // Use Let Us Rest X3VRest for Shadowdancer Version
 @878  = ~Ugh.~ [VienBore]
 @879  = ~You will regret crossing an elf.~ [VienCry1]
 @880  = ~Prepare to be destroyed!~ [VienCry2]
 @881  = ~No one faces me and lives.~ [VienCry3]
-@882  = ~My art and shadows will end you all.~ [VienCry4]
+@882  = ~My art and shadows will end you all.~ [VienCry4] //Use VienCry3 here as well for Shadowdancer Version
 @883  = ~With Vengeance!~ [VienCry5]
 @884  = ~Ugh!~ [VieDam]
 @885  = ~My power...was not...~ [VienDyng]
@@ -186,7 +244,7 @@ Each missile does 1d6+1 magic cold damage. Another missile is gained from level 
 @894  = ~Your desire?~ [VienCom3]
 @895  = ~My art is yours.~ [VienCom4]
 @896  = ~This is Vienxay.~ [VienCom5]
-@897  = ~You called the shadowmage?~ [VienCom6]
+@897  = ~You called the shadowmage?~ [VienCom6] // Yes for Shadowdancer version
 @898  = ~If that is your command.~ [VienAct1]
 @899  = ~Hrmph.~ [VienAct2]
 @900  = ~Done.~ [VienAct3]
@@ -200,7 +258,7 @@ Each missile does 1d6+1 magic cold damage. Another missile is gained from level 
 @908  = ~Do I look like I have room?~ [VienInv]
 @909  = ~My spell failed? Impossible!~ [VienSpel]
 @910  = ~It's done.~ [VienDone]
-@911  = ~None can see the shadowmage.~ [VienHide]
+@911  = ~None can see the shadowmage.~ [VienHide] //I walk for Shadowdancer version
 @912  = ~That's mine now.~ [X3VPick]
 @913  = ~Do you even appreciate my contributions?~ [VienRar1]
 @914  = ~I've no patience for this.~ [VienRar2]
@@ -268,9 +326,28 @@ Equipped abilities:
 -An additional Level 7 and Level 8 Magic Slot.
 
 Weight: 1~
-@934 = ~Galinndan~
+@934 = ~Galidan~
 @935 = ~Adrie~
 @936 = ~The Book of All Known and Attempted Magical Rituals~
 @937 = ~The Book of All Known and Attempted Magical Rituals extensively details all of the components that have gone into several different magical rites. Dates, names, components, and the outcome are listed, as well as the risks and setbacks that have occured for each ritual. A dull read, but it may be of interest to certain mages.~
 @938 = ~Sack of Magic Components~
 @939 = ~This sack contains enough magical components to satisfy the requirements for a powerful magical ritual. Within is all sorts of materials commonly used for the procedure, as well as for advanced spellcasting.~
+@940 = ~Shadow Displacement~
+@941 = ~SHADOW DISPLACEMENT: While SHADOW JUMP is active, the shadowmage may make one additional jump to another target within 180 feet of their sight. This does not reapply invisiblity.~
+@942 = ~Let us rest.~ [X3VRest]
+@943 = ~Dreaming Dagger~
+@944 = ~Rumored to be a gift from an archfey in the Lake of Dreams to an elf declared to be their honorary knight, this dagger shimmers with a warm gold. No matter how far it is thrown, the dreaming dagger always reappears to the user's hand with a shimmer of light. Whether the blade is merely re-created in the hand or teleports safely back into their grip is a secret of the spell.
+
+THAC0: +4
+Damage (melee): 1d4+4
+Damage (ranged): 1d4+4
+Damage Type (melee): Piercing
+Damage Type (ranged): Missile
+Speed Factor (melee): 1
+Speed Factor (ranged): 1
+Proficiency Type: Dagger
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 1~

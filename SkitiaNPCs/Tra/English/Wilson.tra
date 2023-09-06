@@ -1,0 +1,180 @@
+//Emily 1
+@0 = ~What do you think if we added a bow to your head Wilson?~
+@1 = ~Rff, groah?~
+@2 = ~Oh come on, you would look so adorable. We had a family dog, Rosie, and I put bows all over her. She was so cute!~
+@3 = ~Wff.~
+@4 = ~What about some ribbons? Something smooth and silky. We could wrap it around your neck. Ooh, maybe a bell too!~
+@5 = ~Wrr. Moan.~
+@6 = ~You are stubborn. You know you are naked, right? I'm pretty sure that's illegal.~
+@7 = ~Snorty-growl.~
+@8 = ~Okay, I guess bears are exempt to those kind of laws. For now. But we'll come back to this, Wilson!~
+//Emily 2
+@9 = ~My friend Recorder wears bows, you know.~
+@10 = ~Wrr. Snort.~
+@11 = ~No, not the bows you shoot with, the ones we talked about last time to make you adorable!~
+@12 = ~Rff, moan.~
+@13 = ~I don't think bears wear bows, Emily. I can't even get Gustav to wear much of anything.~ //Recorder 
+@14 = ~Well, you haven't tried hard enough, Recorder. I am not so easily dissuaded!~ //Emily 
+@15 = ~Now, look what I have here, Wilson, a pretty silky bow, just for you!~ // Emily 
+@16 = ~Grr, growl.~ 
+@17 = ~Just stay still, we'll see how it feels first, and the- hey! Don't tear it up with your teeth! I spent good coin on that material.~
+@18 = ~Roar, rrr.~
+@19 = ~Okay, okay. No ribbons for the vicious Wilson, then.~
+//ToB Emily 
+@20 = ~Snort. Sniff.~
+@21 = ~Hrm? What are you nosing at, Wilson?~
+@22 = ~Whimper-snuff. Groah.~
+@23 = ~The ribbon? It's torn from before. You...actually want it?~
+@24 = ~Moan. Growly-growl.~
+@25 = ~Here. I'll wrap it around you and...not bad! Even if it's torn up. Are you sure you don't want a new one?~
+@26 = ~Snort.~
+@27 = ~You're a sweet bear, Wilson. I'm glad we have you around.~
+//Helga 1 
+@28 = ~We need to get you armored up for fighting, Wilson.~
+@29 = ~Snort, grr.~
+@30 = ~Aye, ye be a beast in battle, but ye too vulnerable. Yer fur is only so thick.~
+@31 = ~Snuff. Snuff.~
+@32 = ~It be slowing you down a bit, but ye can handle it.~
+@33 = ~Roar, rrr.~
+@34 = ~Bah, if ye want to be naked, then be naked. Blasted bear.~
+@35 = ~Rff, wrr.~
+//Helga 2 
+@36 = ~Whimper-snuff. Groah.~
+@37 = ~Bah, stop sniffing my food stock. I be needing that for our dinner.~
+@38 = ~Snort. Sniff.~
+@39 = ~It ain't my job to feed ye, ask <CHARNAME>.~
+@40 = ~Whimper. Grr.~
+@41 = ~Bah, ye big baby. Here, have one bit of meat. But nay more! I need the rest for my stew.~
+//ToB Helga 
+@42 = ~Ye be the greatest battle beast I have ever fought beside, ye know that, Wilson?~
+@43 = ~Grr. Frr.~
+@44 = ~Aye, ye damn bear, ye have every reason to be proud of yerself. Ye are tougher than even some of the best bererks I know back home.~
+@45 = ~Snort, grr!~
+@46 = ~Aye, I'll  be sure to tell them all twice. Wilson be the legend of legends!~
+//Isaac 1
+@47 = ~I like animals like you. You are simple creatures, without the understanding of betrayal or throat-cutting deviousness.~
+@48 = ~Roar, grr. Snuff.~
+@49 = ~We should learn from the simple creatures, sometimes. Mankind has forgotten its simpler roots.~
+@50 = ~Rff. Roar.~
+@51 = ~To say simple is no insult to you, Wilson. No, I do admire you.~
+@52 = ~Rrr, rff.~
+@53 = ~I wonder if you even understand me? Still, this conversation is pleasant.~
+@54 = ~Snuff, snort.~
+//Isaac 2
+@55 = ~Dogs. Are bears like dogs?~
+@56 = ~Rff, groah?~
+@57 = ~Loyal. Pack mentality. Does this sound like you?~
+@58 = ~Grr. Growl.~
+@59 = ~No? You are loyal, but a pack bear...that does seem strange to me as well.~
+@60 = ~Roah, sniff.~
+@61 = ~Loyal is good enough to me. Here, have some of my meal, but just some.~
+@62 = ~Moan, rff. Grr.~
+@63 = ~And you ate everything. I should have known a bear could not practice restraint. Perhaps loyal is wrong as well.~
+//ToB Isaac 
+@64 = ~What is your future bear, when this is all over?~
+@65 = ~Snort. Rff.~
+@66 = ~You only think of today, don't you? Anything else is just unwelcome thoughts that take needed space away for surviving the now.~
+@67 = ~Groah.~
+@68 = ~Your simplicity is quite welcome, Wilson. A breath of fresh air next to the constant stress and thinking we must do. I am glad you are here.~
+@69 = ~Roar. Grr.~
+
+//Kale 1 
+@70 = ~All right, Wilson. You are going to be my mount.~
+@71 = ~Wrr, moan.~
+@72 = ~Don't be like that. You are the perfect, size, mate! I'll have fans all over! Kale, the Bear Rider! I'll get drinks for free everywhere we go.~
+@73 = ~Whimper.~
+@74 = ~And you'll get some free meat, I bet, too. You'll get treated better than any horse.~
+@75 = ~Snort. Sniff.~
+@76 = ~Eh, you're right. Would be bloody hard to find a saddle for you, you're a bit fat, mate.~
+@77 = ~Roar!~
+@78 = ~In an absolutely delightful way! Sheesh. You remind me of one my past loves when she was mad. Not a good memory, mate.~
+
+//Kale 2 
+@79 = ~All right, Wilson, we got to have a talk.~
+@80 = ~Rff, growl. Snuff.~
+@81 = ~I'm the number two in this party. You've been trying to outshadow me. We can't have that.~
+@82 = ~Whimper, groah.~
+@83 = ~I've got my eye on you, mate. Until you get a cloak, you aren't the number two!~
+@84 = ~Moan, snort. Sniff.~
+
+//Kale ToB 
+@85 = ~So, did I ever tell you the tale of how I slapped a dragon to death, Wilson?~
+@86 = ~Good gods, can the halfling not brag about anything else?~ // Vienxay
+@87 = ~Do what I do Wilson, just smile and pretend to like it, heehee.~ // Rebecca
+@88 = ~Kale, everyone knows that never happened.~ // Emily 
+@89 = ~Blast it Kale, don't ye entertain the bear with your nonsense!~ // Helga 
+@90 = ~I have. It will make you wish you never heard it.~ // Isaac
+@91 = ~Kale, that story does not have an ounce of truth in it.~ // Mazzy
+@92 = ~Pfft, I wasn't asking someone else!~ // Kale 
+@93 = ~Rff, groah?~ // Wilson
+@94 = ~Proudest achievement of my life, mate. It's all about how you wind the arm back. And you got to get it good in the eye. Don't let its breath intimidate you, just give it a gaze and cry: "Here comes halfling death!"~
+@95 = ~Wrr. Moan.~
+@96 = ~All right, "Here comes bear death!" for you if you ever do it. And then, bam! Poor guy screeched and whined and smacked its head down. One powerful slap, then two more to make sure it was down.~
+@97 = ~Snufflesniff. Groah.~
+@98 = ~Ha, I knew you had good taste, Wilson! You're not so bad after all.~
+
+//Recorder 1
+@99 = ~Growl. Grr.~
+@100 = ~Oh Gustav, don't bother the poor bear.~
+@101 = ~Wrr. Moan.~
+@102 = ~He is just curious at you. Normally the bears we get close to are...not so friendly.~
+@103 = ~Roah, sniff.~
+@104 = ~I think he's just worried I'm going to spend more time with you than him.~
+@105 = ~Grrr. Snort!~
+@106 = ~Heehee, I'll tell Gustav that. Except in less colorful language. You have quite the mouth, mister.~
+
+//Recorder 2 
+@107 = ~Can I tell you a dark secret, Wilson?~
+@108 = ~Snort, frr.~
+@109 = ~Sometimes, I think I don't deserve everything I have. I...feel like a failure, and I get knotted inside, and everything gets dark in my head.~
+@110 = ~Wrr?~
+@111 = ~But then I look at you, or Gustav. You don't say anything, but you listen, and you feel so comforting. You remind me I have friends, people who care about me. It gives me strength.~
+@112 = ~Moan, rff. Grr.~
+@113 = ~I adore you too, Wilson. I hope we both can get through this and live a long, happy life.~
+
+//Recorder ToB 
+@114 = ~Oh, your fur is such a mess, Wilson. Let me comb some of it out.~
+@115 = ~Growl, snort.~
+@116 = ~I'll be gentle as I can, I promise.~
+@117 = ~Roah, grr.~
+@118 = ~Oh, you are such a delight. Well behaved too, more than Gustav. I'll miss you when we go our seperate ways.~
+@119 = ~Moan. Rff.~
+@120 = ~Heehee, maybe you can stay with me. I just don't know if Gustav will like it.~
+@121 = ~Moan. Moan.~
+@122 = ~Or we can just not tell him. He's sleeping nice and peacefully any- Oh, look, that got him to wake up from his nap. And he's giving me the hissy fits already!~
+@123 = ~Snort. Roar.~
+@124 = ~Heehee, I'll cherish these memories, Wilson. I always will.~
+
+//Vienxay 1
+@125 = ~Grr, roar.~
+@126 = ~Can someone shut up this dirty mongrel?~
+@127 = ~Roar!~
+@128 = ~Please, you are hardly the refined animals we find in Evermeet. I could state so many prettier things.~
+@129 = ~Grr, growl!~
+@130 = ~If you take offense, then go do something about it. Just because you are an animal and a male doesn't mean you should slack off on your appearance.~
+@131 = ~Groah!~
+@132 = ~Oh whatever! Do as you please, then.~
+
+//Vienxay 2
+@133 = ~I have had enough of your breath, bear, it stinks.~
+@134 = ~Growl. Grrr.~
+@135 = ~Eat this. Yes, it is a plant, but it is fragrant enough to fix the problem.~
+@136 = ~GROWL.~
+@137 = ~Don't turn your head, eat it!~
+@138 = ~Raaaah!~
+@139 = ~Ugh, this is ridiculous! Why couldn't we have gotten a pet bird instead?~
+@140 = ~Growl. Snufflesniff.~
+
+//Vienxay ToB 
+@141 = ~We have a bear in the party, and you still aren't the dumbest creature I met.~
+@142 = ~Ye better not be talking about me, elf.~ // Helga 
+@143 = ~Well, you responded, so clearly I am.~ //Vienxay 
+@144 = ~Snort, frr.~
+@145 = ~Yes, you have some intelligence. Perhaps half as mine, but we all have to start somewhere.~
+@146 = ~Grr. Rrr.~
+@147 = ~I am just giving you the hard honesty you need to better yourself. Your parents aren't around, so someone has to do it.~
+@148 = ~Frr.~
+@149 = ~Yes, I know you are a grown bear! But you act like a baby sometimes.~
+@150 = ~Grrrrr!~
+@151 = ~Well, if you are going to throw an attitude at me, then you only prove the point!~
+@152 = ~Growl. Grr.~

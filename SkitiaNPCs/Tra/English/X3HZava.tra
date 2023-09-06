@@ -1,0 +1,71 @@
+//AR0400
+@0 = ~Looks who it is. The "champions" of uh...Rulendo's little kid's game was it? This is who Arvora has represent her? Look how little they are!~
+@1 = ~Enough games. Or I'll show you what happened to our enemies in the arena.~
+@2 = ~If you were watching, you'd know everyone was an adult.~
+@3 = ~Where is Jillian?~
+@4 = ~Ha! You are a class below Zavatar the Decapitator. High Priest of Tempus, and champion of many arenas, from the brutal pits in Luskan to the prestigious arenas of Hillsfar. I have never lost.~
+@5 = ~You should bow first. You are in the presence of a master gladiator, Zavatar the Decapitator, High Priestess of Tempus, and champion of many arenas. I have survived the brutal pits in Luskan and found glory in the prestigious arenas of Hillsfar. I have never lost.~
+@6 = ~What kind of stupid name is Zavatar?~
+@7 = ~And yet you stoop so low to kidnap a halfling.~
+@8 = ~I could add a loss to your record. Permamently.~ 
+@9 = ~Ha! Did you not hear the name Zavatar spoken to you just now?~
+@10 = ~The halfling daughter, niece? She was taken because she and her little crew messed up my dad's farm! The Ettins they lured made a mess of it. He had a good deal going with them until she showed up and got them storming out of their cave.~
+@11 = ~Zavatar is the name screamed by adoring fans, lovers, and his enemies's last breath. You're a waste of an enemy, but there's room for fans, lovers, and henchmen.~
+@12 = ~Bah, we needed that farm for cover. And what mad bloke make a deal with giants? Wait...that be when I injured me leg!~
+@13 = ~We lost Gast at that cave next to the farm. Those Ettins were harming good folk. Why in the bloody hells would you care about what happened to them?~
+@14 = ~They were stupid, but they kept the riff-raff off the farm. If you lot weren't monster chasing, maybe you wouldn't have gotten into trouble.~
+@15 = ~So this is what is going to happen, little ones. Arvora's got to pay for damages. You representing her, that means you pay. Then we give niece back, go our seperate ways.~
+@16 = ~You try anything stupid, you never see her again.~
+@17 = ~How much is the ransom?~ 
+@18 = ~How about I just kill you instead?~
+@19 = ~I'm not paying for anything.~
+@20 = ~Five thousand coins. That will cover our losses. Then you get her back. You don't pay now, we wait one day. Take longer, we find different buyer, slaver maybe.~
+@21 = ~Then you don't get her back. Zavatar only fights duels in grand arenas. A fight here is of no interest to him.~
+@22 = ~You challenge Zavatar to a duel? I fight to the death, and I ensure you stay dead when I am done. No rematches, no second chances. As it should be! Do you still have the courage to battle me?~
+@23 = ~Bah. I have had enough of this one's insults. Let's be seeing if your reputation is worth anything, and we fight for Jillian proper, one versus one. Unless you be a coward?~
+@24 = ~Pfft, you sure like to talk a lot, bloke. You claim to be such a good arena in the fighter, why don't you take the Kale on for the fate of Jillian? Unless you are chicken?~
+@25 = ~I don't know, Helga. I think he needs some halfling kicking. Let the dashing young me here show you how it's done.~
+@26 = ~Helga will fight you, and win. Name the place.~
+@27 = ~Kale will fight you, and win. Name the place.~
+@28 = ~I will fight you myself, and I will win. Name the place.~
+@29 = ~There's no need. You die, here and now.~
+@30 = ~Let's discuss the ransom instead.~
+@31 = ~Zavatar accepts your challenge. We fight where Rulendo hosted his battles. I will be there for one day. Don't come, she sold.~
+@32 = ~Five thousand gold. One day. Take longer, we find different buyer, slaver maybe. You have coins now, or you come back later?~
+@33 = ~Zavatar will show you why he is the Decapitator.~
+@34 = ~Take the coins. Now where is Jillian?~
+@35 = ~I'll be back with the sum.~
+@36 = ~I'm not paying you.~
+@37 = ~No difference to Zavatar. Wait one day, sell to someone else. Come back before if you wish to still buy.~
+@38 = ~Ah, Zavatar accepts gold from puny ones. Zavatar will be true to his word.~
+@39 = ~Jillian sealed in gem. In container in storehouse in this district. Maybe people there who guard many wares of Zavatar and others who are friends of thiers. You are not friend, so you kill them, you get her.~
+@40 = ~Zavatar says farewell to the champions of Rulendo's little kids game. Maybe one day Zavatar will decapitate you in bigger arenas.~
+@41 = ~You slow! Zavatar waited, you didn't come. Zavatar sold little halfling. Zavatar thus has no further interest with you.~
+@42 = ~You be paying for this! Rragh!~ // Destroy the item the other guy has in this instance only.
+@43 = ~You stole Jillian. Zavatar will kill you all for this!~ // Player saved Jillian before finding Zavatar (Jillian is placed as long as Zavatar is spoken to initially.)
+@44 = ~Ah, does your courage keep you? Or are you humbled by fear and willing to pay the ransom?~
+@45 = ~The fight is on, Zavatar.~
+@46 = ~We'll pay your gold.~
+@47 = ~I'm not ready yet.~
+@48 = ~You are taking too long. Hurry, or Zavatar sells.~
+@49 = ~Finally! Your blood shall wet me weapon, Zavatar.~
+@50 = ~Wish me luck, mate. Going to have to knock down this fellow a few inches.~
+@51 = ~I look forward to your defeat!~
+@52 = ~We should have crushed his skull. But if ye be paying, fine! Just nay daddle.~
+@53 = ~I would have liked to crush his head in. Let us be getting Jillian free before I give in to my rage.~
+
+//One Liner death.
+@54 = ~Zavatar...never...loses...~
+//One Liner. 
+@55 = ~Fool. Zavatar never loses.~
+//
+@56 = ~I speak to no one but Zavatar.~
+//Both of Zavatar's helpers dead when he tries to call them. Zavatar will use rage
+@57 = ~You have coin? Take any longer, Zavatar might sell to someone else.~
+@58 = ~Where is tiny halfling man? He scared? No talk to Zavatar until he come from his little hiding place!~
+@59 = ~Where is old tiny dwarf lady? She scared? No talk to Zavatar until she come from her little hiding place!~
+//Used if Zavatar died for guard.
+@60 = ~You think you're smart? Kill Zavatar's man, crack the location of the tiny halfling? No, you have chosen decapitation! Feel the wrath of Zavatar!~
+// Player fights in arena. 
+@61 = ~Then I challenge you to combat in an arena.~
+@62 = ~I'm not intimidated by you. You die here and now.~

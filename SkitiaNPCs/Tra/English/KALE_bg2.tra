@@ -88,24 +88,35 @@ While I had feared for some time that Bodhi's final revenge on me would be to ta
 
 @711  = ~warden~
 @712  = ~Warden~
-@713  = ~WARDEN: The warden is a warrior whose discipline and traditions center around fighting in pairs. The warden takes on the defensive role in the pair, while the ward receives elevated offensive prowess. Their remarkable protective talents come at the cost of the warden’s skill with weapons being inferior to other fighter traditions.
+@713  = ~WARDEN: The warden is a warrior whose discipline and traditions center around fighting in a pair. Their partner is known as their ward, and they situate themselves to elevate their ward's combat effectiveness. The warden meanwhile brings forth an incredible tenacity that rivals some of the most fierce barbarians, in place of sacrificing their offensive prowess.
 	
 	Advantages:
 	-Hit Die: d12
-	-May use the Ward ability once per day. Gains one use every four levels. (Start at 1st level with one use.)
+	-May use the Ward ability once per day.
 	
-	WARD: Designates target as the ward for one turn. It does not stack with itself, and if the ward is changed, the previous ward loses their bonuses. 
-	Level 1: The ward receives +1 damage bonus and -1 THAC0. The warden receives penalties for the same amount, but gains 10% resistance to physical damage and regenerates 1 hitpoint per 6 seconds.
-	Level 8: The ward receives +2 damage bonus and -2 THAC0. The warden receives penalties for the same amount, but gains 20% resistance to physical damage, and regenerates 1 hitpoint per 3 seconds.
-	Level 16: The ward receives +3 damage bonus and -3 THAC0. The warden receives penalties for the same amount, but gains 30% resistance to physical damage and regenerates 1 hitpoint per second.
-
+	WARD: Designates target as the ward. The bonuses last until the ward or warden's death, or a new ward is selected.
+	Level 1: The ward receives +1 damage bonus and -1 THAC0.
+	Level 8: The ward receives +1 damage bonus and -1 THAC0, and cannot be back stabbed. 
+	Level 12: The ward receives +1 damage bonus and -1 THAC0, cannot be back stabbed, and gains IRON WILL.
+	Level 16: The ward receives +1 damage bonus and -1 THAC0, cannot be back stabbed, gains IRON WILL, and receives +1 luck.
+	
+	-IRON WILL: Upon being subject to a spell that subjects the Warden to sleep, stunned, fear, or confusion, the warden has a 10% chance to snap out of the state every second that they are in it. At level 12, the one bestowed with ward also gains this effect.
+	
+	-Upon having 50% or less of base class hit points, activates Second Wind.
+	
+	SECOND WIND: The warden regenerates one hitpoint per second for 1 round per level. Second Wind can only be activated once every 2 hours.
+	
 	Disadvantages:
-	May only become specialized in ranged weapons, and may not exceed mastery in any other weapon.~
+	May only become proficient in ranged weapons, and may not exceed mastery in any other weapon.
+	May only put one point in two weapon style.~
 @714  = ~Ward~
-@715  = ~WARD: Designates target as the ward for one turn. It does not stack with itself, and if the ward is changed, the previous ward loses their bonuses. 
-Level 1: The ward receives +1 damage bonus and -1 THAC0. The warden receives penalties for the same amount, but gains 10% resistance to physical damage and regenerates 1 hitpoint per 6 seconds.
-Level 8: The ward receives +2 damage bonus and -2 THAC0. The warden receives penalties for the same amount, but gains 20% resistance to physical damage, and regenerates 1 hitpoint per 3 seconds.
-Level 16: The ward receives +3 damage bonus and -3 THAC0. The warden receives penalties for the same amount, but gains 30% resistance to physical damage and regenerates 1 hitpoint per second.
+@715  = ~WARD: Designates target as the ward. The bonuses last until the ward or warden's death, or a new ward is selected.
+	Level 1: The ward receives +1 damage bonus and -1 THAC0.
+	Level 8: The ward receives +1 damage bonus and -1 THAC0, and cannot be back stabbed. 
+	Level 12: The ward receives +1 damage bonus and -1 THAC0, cannot be back stabbed, and gains IRON WILL.
+	Level 16: The ward receives +1 damage bonus and -1 THAC0, cannot be back stabbed, gains IRON WILL, and receives +1 luck.
+	
+	-IRON WILL: At level 12, upon being subject to a spell that subjects the ward to sleep, stunned, fear, or confusion, the ward has a 10% chance to snap out of the state every second that they are in it.
 ~
 @716  = ~Kale's Father's Journal~
 @717  = ~The journal mostly contains details of shopping checklists and dry details of Percy's life. The last few entries however contain some interesting details of note.
@@ -206,3 +217,18 @@ STATISTICS:
 Usable By: 
 Kale~
 @778 = ~Kale whips his cloak away from your grasp. "Nope. Not parting with it for anything, mate."~
+@779 = ~Kale's Engagement Ring~
+@780 = ~Weaved in gold and with a heart signet, you gave this ring to Kale as a promise of marriage. Whether you will be able to deliver is up to fate.
+The ring's enchantments have taken affect with its wearer's acceptance, and they will surely help to keep Kale safer for the battles to come.
+
+STATISTICS:
+
+Equipped abilities:
+-Regenerates one hitpoint every six seconds 
+-Armor Class: +2
+-Save vs. Death: +3
+-Luck: +2
+
+Weight: 1~
+@781 = ~Iron Will~
+@782 = ~Second Wind~

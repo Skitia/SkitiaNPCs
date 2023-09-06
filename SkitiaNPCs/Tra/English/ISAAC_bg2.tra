@@ -1,0 +1,285 @@
+@0 = ~invisible blade~
+@1 = ~Invisible Blade~
+@2 = ~INVISIBLE BLADE: The invisible blade, sometimes called dagger masters, are deadly rogues who prefer to use tiny blades, especially daggers, in combat. Able to find the most lethal stabbing points, they enjoy a frightful reputation, able to kill skillfully and gracefully while forgoing the encumbrance of armor entirely.
+	
+	Advantages:
+	-May achieve grand mastery (5 slots) in dagger.
+	-While wielding a dagger, gains +5% critical chance and +1 to Thaco.
+	-Adds Intelligence to Armor Class in addition to Dexterity.
+	-May use the Bleeding Wound ability once per day. Gains one use at level four, and then every four levels thereafter.
+	
+	BLEEDING WOUND: Each successful hit within the next five rounds will cause additional 2d4 bleeding (piercing) damage after one round (does not stack). The number of rounds the additional bleeding damage occurs increases with level.
+
+	1st: 2d4 bleeding damage after 6 seconds (Save vs. Death negates.)
+	5th: 2d4 bleeding damage after every 6 seconds for 12 seconds. (Save vs. Death at -1 negates.)
+	9th: 2d4 bleeding damage after every 6 seconds for 18 seconds. (Save vs. Death at -2 negates.)
+	13th: 2d4 bleeding damage after every 6 seconds for 24 seconds. (Save vs. Death at -3 negates.)
+	
+	-May use the Uncanny Feint ability once per day. Gains one use at level one, and then every four levels thereafter.
+	
+	UNCANNY FEINT: Each successful hit within the next five rounds will surprise the enemy, lowering their missile and piercing armor by -1 for 4 rounds with no save, stacking. Additionally, if wielding a dagger, gain half an attack per round at level 7, and a full additional attack per round at level 15 for the duration. 
+
+	Disadvantages:
+	-May not wear any armor.
+	-May not wear gauntlets or bracers.
+	-May not use ranged weapons except throwing daggers and other thrown weapons.
+	-May only distribute 20 skill points per level among thieving skills.~
+@3 = ~Bleeding Wound~
+@4 = ~BLEEDING WOUND: Each successful hit within the next five rounds will cause additional 2d4 bleeding (piercing) damage after one round. The number of rounds the additional bleeding damage occurs increases with level.
+
+	1st: 2d4 bleeding damage after 6 seconds (Save vs. Death negates.)
+	5th: 2d4 bleeding damage after every 6 seconds for 12 seconds. (Save vs. Death at -1 negates.)
+	9th: 2d4 bleeding damage after every 6 seconds for 18 seconds. (Save vs. Death at -2 negates.)
+	13th: 2d4 bleeding damage after every 6 seconds for 24 seconds. (Save vs. Death at -3 negates.)~
+@5 = ~Uncanny Feint~
+@6 = ~UNCANNY FEINT: Each succesful hit within the next five rounds will suprise the enemy, lowering their missile and piercing armor by -1 for 4 rounds with no save, stacking. Additionally, if wielding a dagger, gain half an attack per round at level 7, and a full additional attack per round at level 15 for the duration.~
+@7 = ~Take flight.~ [X3IFear]
+@8 = ~I am proud to have pledged my loyalty.~ [X3IHappy]
+@9 = ~It is not so bad to think before we act.~ [X3IAnnoy]
+@10 = ~Beware of being the gentle soul.~ [X3ISer]
+@11 = ~It is past the time that we part ways.~ [X3IBreak]
+@12 = ~I will lead without question.~ [X3ILead]
+@13 = ~I grow weary. I must rest.~ [X3IRest]
+@14 = ~If we are to idle, share your thoughts with me.~ [X3Idle]
+@15 = ~Die!~ [X3IBat1]
+@16 = ~I'm afraid I have to kill you.~ [X3IBat2]
+@17 = ~No one will escape.~ [X3IBat3]
+@18 = ~This is the end of your life.~ [X3IBat4]
+@19 = ~Fight me!~ [X3IBat5]
+@20 = ~~ [X3IDam]
+@21 = ~...Death...is peace.~ [X3IDeath]
+@22 = ~Healing. Now.~ [X3IHeal]
+@23 = ~Listen well to what wanders in the undergrowth.~ [X3IFor]
+@24 = ~I am unused to such large crowds of people. It unsettles me.~ [X3ICity]
+@25 = ~Let us see what monstrosity awaits us down here.~ [X3IDun]
+@26 = ~Another day seen. Another day lived.~ [X3IDay]  
+@27 = ~Darkness, my old friend.~ [X3INight]
+@28 = ~What do you want?~ [X3ICom1]
+@29 = ~How can I be of service to you?~ [X3ICom2]
+@30 = ~Let us begin.~ [X3ICom3]
+@31 =  ~I am honored to serve.~ [X3ICom4]
+@32 = ~My blade is yours.~ [X3ICom5]
+@33 = ~The command?~ [X3ICom6]
+@34 = ~You shall have it.~ [X3IAct1]
+@35 = ~I am honored.~ [X3IAct2] 
+@36 = ~Without question.~ [X3IAct3]
+@37 = ~As you see fit.~ [X3IAct4]
+@38 = ~Done.~ [X3IAct5]
+@39 = ~Your will will be done.~ [X3IAct6]
+@40 = ~I can.~ [X3IAct7]
+@41 = ~Die!~ [X3ICrit]
+@42 = ~~ [X3ICritM]
+@43 = ~We must use a different approach.~ [X3Immune]
+@44 = ~There is nothing more I can carry.~ [X3Inv]
+@45 = ~My spell!~ [X3ISpell]
+@46 = ~Trap set.~ [X3ISpell]
+@47 = ~I am dark of shadow.~ [X3IHide]
+@48 = ~What do we have here?~ [X3IPick]
+@49 = ~I am your right hand.~ [X3IRare1]
+@50 = ~Loyalty above all else.~ [X3IRare2] 
+@51 = ~They will be mourned.~ [X3IDead]
+@52 = ~Isaac~
+@53 = ~Isaac speaks first of family when you ask about him. One of three children, his family knew poverty, and stealing was not condoned, but encouraged. One day he broke into a cellar in a wealthy wizard's home. The decorations and ritual circle painted the wizard as an infernalist, a coveter of demons, and in a cage, was a horned woman. Skinny and starved, she introduced herself as Mavis, and begged Isaac to release her. When Isaac opened that lock, it changed his life forever. They left and swore to destroy people like Mavis's former master, and lay the foundation for the guild of Planar Hunters. He went from a thief to a man with purpose, a slayer of demons and devils and their infernalist worshippers. Even if his relationship with Mavis detoriated, a part of him will always owe everything he has become to her.~
+@54 = ~Planar Hunter~
+@55 = ~Loyalty~
+@56 = ~Isaac's personal dagger has seen much use, old blood stains still noticeable on the handle. He can use it in melee or throw it, where it will always return to his hand a moment later.
+
+THAC0: +1
+Damage (melee): 1d4+1
+Damage (ranged): 1d4+1
+Damage Type (melee): Piercing
+Damage Type (ranged): Missile
+Speed Factor (melee): 1
+Speed Factor (ranged): 1
+Proficiency Type: Dagger
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 1~
+@57 = ~Staff of Missile Mastery~
+@58 = ~A favorite of the young duelist mage, this staff is decent in melee combat, and enhances protection against missiles. Most importantly, immunity to the magic missile spell, a favorite of duels. It can also cast a few magic missiles per day, freeing up the spellbook for other tricks.
+
+STATISTICS:
+
+Equipped abilities:
+– Protection as per the Sheild Spell
+
+Charge abilities:
+– Magic Missile three times per day, five missiles at 1d4+1 at a single target, no save.
+
+THAC0: +3
+Damage: 1d6+3 (crushing)
+Speed Factor: 1
+Proficiency Type: Quarterstaff
+Type: Two-handed
+Requires:
+ 5 Strength
+
+Weight: 4~
+@59 = ~Circlet of Defiance~
+@60 = ~This circlet bears upon the wielder protection against death spells, making it very useful against magic that can instantly defeat its target. It however, is useless against other methods of death, and has thus has still managed to pass through many hands and heads.
+
+STATISTICS:
+
+Equipped abilities:
+-Armor Class Bonus:+1
+-Protects against death spells, as per the spell death ward.
+-Does not protect against critical hits
+
+Weight: 1~
+@61 = ~Outsider's Bane~
+@62 = ~This weapon is little more than a mace of magical enchantment against most enemies. But it's true purpose is against planar entities, demons, devils, planetars and the plane-touched spawn of these creatures, being very effective at seeing them destroyed. Being an expensive process to craft, and with most of their numbers preferring swords, the Planar Hunters made very few of these, instead opting for their Swords of Purging, which were effective at slaying a more selective group of outsiders. Thus, these maces were only shared with the highest command.
+
+STATISTICS:
+
+THACO: +2,+5 against aasimar, tieflings, imps, solar, planetars, and demonic entities
+Damage: +2,+5 against aasimar, tieflings, imps, solar, planetars, and demonic entities 
+Speed Factor: 5
+Proficiency Type: Mace
+Type: Mace
+Requires: 
+10 Strength
+
+Weight: 10~
+
+@63 = ~Planar Hunter Demetria~
+@64 = ~Mavis~
+@65 = ~Arbex~
+@66 = ~Derrick Trent~
+@67 = ~Stone of Mimicry~
+@68 = ~The stone of mimicry is the ideal tool to break into a wizard's abode. They were created with the ability to mimick the pattern of access to grant entry. The idea sounds grand for a thief, and terrifying for a wizard, but fortunately, this has only proved effective on a few doors, and wizards have begun to craft their security with such devices in mind. Whether it will be enough to break into the Planar Sphere remains to be seen.~
+@69 = ~The stone of mimicry dissolves as the door to the planar sphere opens before you.~
+@70 = ~Planar Revealing Gem~
+@71 = ~The Planar Revealing Gem's were a special comission by the Planar Hunters to reveal outsider's blood in any individual. It has since to be known to have other uses, likely which piqued Mavis's interest in the item.~ 
+@72 = ~Arbex's Catalyst Device~
+@73 = ~This Catalyst Device made by Arbex was inspired by an experiment with electrical buzzing coils and Halruaan Airship energy sources. He combined them into a useful energy source for magic, and fashioned the gem to be worn as a circlet to assist with his work.
+How it works exactly depends very much on the user of the device and their own capabilities, though the circlet the gem is embedded on can only securely fit gnomes.
+
+STATISTICS:
+
+Charge abilities (All wielders, three times per day):
+-Sends out a pulse of electricity to target, dealing 10d6 electrical damage. Target may save vs spell to receive half.
+
+Equipped abilities (Artificer)
+– Amplifier: The Artificer gains 100% Electrical Resistance, and all electrical damage inflicted by the artificer is increased by 30%
+
+Equipped abilities (Illusionist)
+- Electrical Backbite: On being hit in melee range, the illusionist deals 1d6+2 damage back to attacker and reduces their electrical resistance by 10% for five rounds.
+
+Equipped abilities (Lorekeeper)
+- Charged Clarity: The Lorekeeper gains an additional arcane spell slot at levels 1, 2, 3, and 4.
+
+
+Weight: 1~
+@74 = ~Electrical Pulse~
+@75 = ~Isaac's Body~
+@76  = ~Isaac was captured by Bodhi and infected with vampirism, forcing you to slay him. There may be some way to revive him, though you don't know what it would be.~
+@77  = ~Isaac's Engagement Ring~
+@78  = ~Weaved in gold and with a heart signet, you gave this ring to Isaac as a promise of marriage. Whether you will be able to deliver is up to fate.
+The ring's enchantments have taken affect with its wearer's acceptance, and they will surely help to keep Isaac safer for the battles to come.
+
+STATISTICS:
+
+Equipped abilities:
+-Regenerates one hitpoint every six seconds 
+-Armor Class: +2
+-Save vs. Death: +3
+-An additional +1 Backstab Modifier
+
+Weight: 1~
+@60062 = ~The Final Battle with Bodhi.
+
+Bodhi appeared in an ambush shortly before I reached her haven, warning me that she was aware of my pursuit and stealing from me the one person that is dearest to my heart: Isaac.  Before she vanished and unleashed more of her undead creations upon me, Bodhi warned me that if I continue I will lose even more than I thought possible.  I cannot give up on the Rhynn Lanthorn... but now the life and immortal soul of the one I love is at stake, as well!~
+
+@60063 = ~The Final Battle with Bodhi.
+
+While I had feared for some time that Bodhi's final revenge on me would be to take away Isaac forever, it seems that the information in the lorebook was right... Amaunator's idol has restored Isaac not only to life, but has removed the vampiric curse from him, as well.~
+
+//
+@600603  = ~^RIsaac slightly disapproves.^-~
+@600606  = ~^RIsaac disapproves.^-~
+@600609  = ~^RIsaac greatly disapproves.^-~
+@600613  = ~^GIsaac slightly approves^-~
+@600616  = ~^GIsaac approves^-~
+@600619  = ~^GIsaac greatly approves^-~
+@60099   = ~^0xFFFF00FFYou have established a deep bond with Isaac. Your synergy has improved his capabilities.^-~
+//Epilogues
+//Mavis Dead, Not Romanced  
+@101 = ~After the events of the Bhaalspawn Saga, Isaac returned to restore the Planar Hunters. They were broken, beaten, and of much smaller size than when Isaac first joined <CHARNAME> long ago. But without Mavis as his target, he lost the passion for what he did, and for a while returned to his thieving roots. It was not until a town called for help against an infernalist conjuring a great balor that Isaac found himself working alongside the planar hunters he had reformed once more. They were hopeful it would inspire him back to the fold as their leader, but for Isaac, it cemented that he was no longer one of them, not without the one he started it all with. He left them after the threat was handled, and was never seen again.~
+//Mavis Alive, Not Romanced
+@102 = ~After the events of the Bhaalspawn Saga, Isaac returned to his first love, Mavis, and they settled down in a small city in Amn. They had a child together, and Isaac found the life of a father peaceful until he was hunted by the very organization he founded, Planar Hunters more fanatical than those that came before them. It was by one of them Isaac died, protecting the life of the woman he had wanted so long to take. It was a death he would have wanted it no other way.~
+//Mavis purified, not romanced, special ending.
+@103 = ~After the events of the Bhaalspawn Saga, Isaac reunited with his former partner, Mavis. He found a new purpose in offering her purification project to the rest of the world. Anyone burdened by their planar blood could finally find freedom from their unwanted gift. This made enemies however, and he found himself fighting demon and devil fathers who did not wish their essence removed from the prime world. It was by one of them Isaac died protecting Mavis, the life he had wanted for so long to take. It was a death he would have wanted it no other way.~
+//Heir Romanced Not Ascended. 
+@104 = ~The time after the Bhaalspawn Saga was a time for Isaac to find purpose. No longer planar hunter, no longer vengeance-seeker, he followed <CHARNAME> along on their adventures, always by <PRO_HISHER> side. Their thirst only slowed when they gave Isaac his first child, and he soon found a new role as father to fulfill the emptiness in his heart. He would disappear from public life, letting <CHARNAME> take the focus, but every now and then some swore they saw a second shadow not far from the form of <CHARNAME>, just making out a nearly invisible blade ever standing ready to protect them.~
+//Romance Ascended
+@105 = ~Isaac was more lost than ever after his love ascended. Feeling as if he was without purpose, he wandered aimlessly through the realms, thieving to survive, and finding trouble wherever he went. One day he came across a town troubled by an infernalist who conjured a great balor, and Isaac found himself rallying the militia and fighting like a Planar Hunter once more. It was then that Isaac understood he would always stand opposed against worshippers of the diabolical, and has hunted them down ever since.~
+@6000 = ~Mavis~ 
+@6001 = ~Mavis
+
+Isaac has enrolled our assistance in hunting Mavis, who we found had killed his original company he was with. His last hope is a contact in Delosar's inn named Derrick Trent, who may have Mavis's current whereabouts.~
+
+@6002 = ~Mavis 
+
+Derrick Trent has made a deal for the information regarding Mavis's location. He has asked for us to clear the Planar Sphere of danger so he can safely take a look inside. He has stated he has no interest in gaining the Sphere for himself, but it remains to see if he can be trusted. He has confirmed that Valygar should be able to open the Planar Sphere's door.~
+
+@6003 = ~Mavis 
+
+Derrick Trent has made a deal for the information regarding Mavis's location. He has asked for us to clear the Planar Sphere of danger so he can safely take a look inside. He has stated he has no interest in gaining the Sphere for himself, but it remains to see if he can be trusted. He has stated that a man named Valygar should be able to open the Planar Sphere's door, and we could learn of his location if we speak to Tolgerias, a cowled wizard hunting him. Alternatively, a shopkeeper in the southeast Slums may sell a stone of mimicry that could get us inside.~
+
+@6004 = ~Mavis 
+
+We have told Derrick Trent that the Planar Sphere is clear. He asks us to meet us inside, where he will confirm our work is done and then tell us about Mavis's whereabouts.~
+
+@6005 = ~Mavis 
+
+We met Derrick Trent in the Planar Sphere, only for him to reveal that he had already arranged Mavis and her companion Arbex to meet us there. After some tension and listening to Mavis's side of things, I have agreed to help her. Despite long having the desire to kill her, Isaac seems okay with this choice for now.~
+
+@6006 = ~Mavis 
+
+We gave Mavis the planar revealing gem. She still needs the book of rituals to proceed with her spell.~
+
+@6007 = ~Mavis 
+
+We gave Mavis the book of rituals. She still needs the planar revealing gem to proceed with her spell.~
+
+@6008 = ~Mavis 
+
+We gave Mavis everything she needs for her spell. All that remains is to witness her magic in action.~
+
+@6009 = ~Mavis 
+
+We failed to protect Mavis, falling in the battle against Demetria, having never achieved her dream of being a normal woman.~
+
+@6010 = ~Mavis 
+
+We turned against Mavis and helped Demetria take her down. Isaac at last has his revenge, after great loss. Hopefully it is the choice that he truly wanted.~
+
+@6011 = ~Mavis 
+
+We protected Mavis and turned against Demetria. Alas, with Arbex's death, she will remain a tiefling for the rest of her days.~
+
+@6012 = ~Mavis 
+
+We protected Mavis and turned against Demetria. We offered Aura's aid help finish Arbex's work. We will need the magic components and Arbex's Catalyst Device from Arbex's belongings to resume the spell if we don't have them already.~
+
+@6013 = ~Mavis 
+
+We protected Mavis and turned against Demetria. We offered Jan's aid to help finish Arbex's work. We will need the magic components and Arbex's Catalyst Device from Arbex's belongings to resume the spell if we don't have them already.~
+
+@6014 = ~Mavis 
+
+We protected Mavis and turned against Demetria. We offered Recorder's aid to help finish Arbex's work. We will need the magic components and Arbex's Catalyst Device from Arbex's belongings to resume the spell if we don't have them already.~
+
+@6015 = ~Mavis 
+
+The spell was a success, and Mavis is free of her taint, and full of a dream to bring such freedom to others. No doubt this will likely attract trouble to her, but we wish her the best.~
+
+@6016 = ~Mavis 
+
+We failed to protect Demetria while we battled Mavis together. The Planar Hunters will surely suffer more for it.~
+
+@6017 = ~Mavis 
+
+We were kicked out of the Planar Sphere. There will be no way to continue our task.~

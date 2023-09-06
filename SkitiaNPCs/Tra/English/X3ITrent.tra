@@ -1,0 +1,53 @@
+@0 = ~I'm expecting someone. I'd rather not be distracted.~
+@1 = ~Isaac. What good fortune graces me with your presence?~
+@2 = ~Only one, Derrick. Mavis bested us once again. I've joined up with <CHARNAME> here to track her down.~
+@3 = ~Ah, Isaac, how many people are you going to kill on this mad quest of yours? Though...they look more capable than your usual batch. Making a serious effort this time?~
+@4 = ~I don't have time for your mockery, Derrick. You came through for me once. Can you do it again?~
+@5 = ~For a price, a heftier one this time. Not easy to track the same person down twice without getting caught.~
+@6 = ~I'm not willing to pay gold for your vengeful crusade, Isaac.~
+@7 = ~How much are we talking?~
+@8 = ~How about we trade a favor instead of gold?~
+@9 = ~I wasn't going to ask. But thank you for showing your lack of investment in my cause.~
+@10 = ~Oh fear not. The price isn't gold. Though it is something valuable.~
+@11 = ~That was precisely what I was thinking. Great minds think alike.~
+@12 = ~There is a remarkable Planar Sphere that has appeared in the slums. Every wizard is obessed with what it can offer. I do not want it for myself, but if it could be made to enter safely, I would like to see the inside of it.~
+@13 = ~Clear the Planar Sphere of any danger within, and I will tell you suicidal lot where Mavis is.~
+@14 = ~I have no love for any other wizard to see the Sphere as some sort of researching grounds.~
+@15 = ~Ah, Valygar Corthala. Yes, I know who you are. I register your displeasure of my deal. It is however, the only one I am offering.~
+@16 = ~And what if we decide to beat the location out of you?~
+@17 = ~If Isaac believed that would work, I think he would have already tried. I am certain I am the last hope for Isaac to know anything about Mavis. And so, we play by my terms. Not yours.~
+@18 = ~How would we even get inside?~
+@19 = ~I've no interest in doing this for you.~
+@20 = ~Very well, we'll be back when its done.~
+@21 = ~Then Isaac will never know. I know that will internally kill him, so you are going to change your mind, so you may as well do this.~
+@22 = ~Corthala can see to that. When you're done with the task, I will await you here.~
+@23 = ~Corthala can get you inside the Sphere. When you're done with the task, I will await you here.~ 
+@24 = ~The blood of a Corthala can get you inside the Sphere. There is one named Valygar Corthala. If the cowled wizards haven't got to him first, he could get you in. Dead, alive, your choice. I hear the mage hunting him, Tolgerias, is in the Council building in the Government District.~
+@25 = ~Alternatively, there is a shopkeeper who deals with stolen goods in the southeast corner of the Slums. Ask her about the stone of mimicry. It sometimes helps her open certain warded doors in houses for her "restocking", so to speak.~
+@26 = ~If she has some left, I believe it could work against the Planar Sphere door. It's old enough to be worth a try. When you're done with the task, I will await you here.~
+@27 = ~Have you done as I have asked?~
+@28 = ~The Planar Sphere is secured.~
+@29 = ~No, we have not.~
+@30 = ~Then I will keep waiting.~
+@31 = ~Excellent. I will head over now to take a look. We can speak more inside the sphere.~
+@32 = ~What about Mavis, Derrick?~
+@33 = ~I will tell you everything once you meet me in the Sphere, Isaac. I should confirm your work, after all. Fear not, your patience will be rewarded.~
+@34 = ~This place is far more sophisticated than I thought. Impressive, indeed.~
+@35 = ~Will you tell us where we can find Mavis now?~
+@36 = ~Once Isaac arrives, he will know everything he needs.~
+@37 = ~I'm glad you like the place.~
+@38 = ~If you're done here, tell us what we want to know.~
+@39 = ~Indeed! I could spend a lifetime here learning everything and it still would not be enough. But, I believe I owe you information, yes?~
+@40 = ~I am going to do more than just tell you where Mavis is. I am going to show you.~ // Cast True Seeing Spell, reveal Mavis/Arbex.
+//One liner while Mavis is alive going forward.
+@41 = ~Our business is concluded. But Mavis's is just beginning.~
+//One liner while Mavis is dead going forward.
+@42 = ~It is a shame that Mavis fell. Without her and Arbex, her vision for the future is gone, and mine as well. If only we could go back to make a better outcome. Alas.~
+@43 = ~The Planar Sphere is already clear.~
+@44 = ~I'm afraid the Cowled Wizards kicked us out of the Sphere.~
+@45 = ~With your access to the sphere revoked, I am afraid I cannot help you. Isaac, you are on your own.~
+@46 = ~Derrick Trent, I can't do this without you.~
+@47 = ~And I have no incentive. All I can say is let her go, Isaac. There is nothing to be gained by keeping the rage inside you. Goodbye.~
+
+
+

@@ -21,6 +21,26 @@
 @20020 = ~Recorder scried Berk and mentioned he was dead. We could tell Helga the truth or lie to her.~
 @20021 = ~We informed Helga that Berk was dead. She was bereaved and didn't desire to talk of it further.~
 @20022 = ~We lied to Helga and told her that Berk was alive. She was overjoyed, though one wonders how long the truth will stay hidden from her.~
+//Arvora quest line.
+@20023 = ~Arvora's Plight~
+@20024 = ~Helga expressed a desire to meet with Arvora after our triumph in Rulendo's Gauntlet. She mentioned that Arvora could be found in the Five Flagons Inn in the evenings.~
+@20025 = ~Having little appetite for Helga's conversation, Arvora quickly interrupted Helga and let her know her neice was kidnapped by someone named 'Zavatar' over an unnamed slight she did. She gave us a note he left. If we can decrypt it, we might find where she is hidden.~
+@20026 = ~We solved the note's riddle and found a contact of Zavatar. After giving him the password, he is leading us to Zavatar. Hopefully this isn't a trap.~
+@20027 = ~We attacked Zavatar and his henchman. Wherever Jillian is, we'll have to figure out how to get her back without their information.~
+@20028 = ~We killed Zavatar, and his henchman surrendered, telling us Jillian is sealed in a gem, which we can find in a storagehouse in the Bridge District.~
+@20029 = ~Jillian is freed from the orb. We should inform Arvora our task is complete.~
+@20030 = ~Arvora was pleased that Jillian was brought back to her. She gave us a suit of armor suited for smaller folk, and wished us well.~
+@20031 = ~Helga was killed in Zavatar's duel. Zavatar has ensured she won't walk again. She and Jillian are lost to us.~
+@20032 = ~Kale was killed in Zavatar's duel. Zavatar has ensured he won't walk again. He and Jillian are lost to us.~
+@20032 = ~Zavatar informed us he would give Jillian back if a ransom of 5000 gold was paid to him within a day. We'll either have to gather the funds or find another way to save Jillian.~
+@20033 = ~We could not solve the note and let Zavatar's henchman escape. Jillian is lost to us now.~
+@20034 = ~Zavatar's henchman had another decoded note on their body. If we can crack it, we may deduce Jillian's location, or another clue.~
+@20035 = ~We were too late in our efforts to rescue Jillian. Zavatar sold Jillian, and she is lost to us.~
+@20036 = ~After speaking to Zavatar, he agreed to a duel with Helga. We need to meet him with Helga in the Copper Coronet within a day, or he will sell Jillian.~
+@20037 = ~After speaking to Zavatar, he agreed to a duel with Kale. We need to meet him with Kale in the Copper Coronet within a day, or he will sell Jillian.~
+@20038 = ~After speaking to Zavatar, he agreed to a duel with me. I need to meet him in the Copper Coronet within a day, or he will sell Jillian.~
+@20039 = ~Zavatar was defeated in a duel, and his henchman informed us Jillian is sealed in a gem, which we can find in a storagehouse in the Bridge District.~
+@20040 = ~Arvora was too grieved over Jillian's death to be interested in any conversation. Perhaps things would have been different if she was still alive.~
 //Epilogues: Default  
 @51 = ~The time in <CHARNAME>'s company did nothing to sate Helga's endless hunger for battle. Wherever she trekked, blood and bodies followed, and her battle lust was admired as much as it was feared. She trekked briefly to Torstultok, but the ruins and gold only brought her a brief satisfaction for her need of action. She would head north, where she became known as Hallowed Crimson, and assisted in the safe passage of dwarves into the newly reclaimed Mithral Hall. She would die years later, defending her kin against a legion of orcs in the war to follow. Her actions during the battle would inspire generations of dwarves to come, and some even believed that she ascended to the side of Haela Brightaxe herself. Where the Luckmaiden be, so the Bloodmaiden followed.~
 //Epilogues: Told the truth of Berk
@@ -60,11 +80,11 @@
 @500519  = ~^GVienxay greatly approves^-~
 
 @633  = ~Priest of Haela~
-@634  = ~PRIEST OF HAELA: Renown among the dwarves for their risk-taking, berserker tendencies, clerics of Haela Brightaxe are loved and feared for their fury when they enter the fray, able to shrug off and deliver dangerous strikes. Most are female, called Kaxanar, or blood maidens, and their name is very much earned in their pleasure in seeking out battle wherever it may be. 
+@634  = ~PRIEST OF HAELA: Renowned among the dwarves for their risk-taking, berserker tendencies, clerics of Haela Brightaxe are loved and feared for their fury when they enter the fray, able to shrug off and deliver dangerous strikes. Most are female, called Kaxanar, or blood maidens, and their name is very much earned in their pleasure in seeking out battle wherever it may be. 
 
 Advantages: 
 
--May Cast Hurl Stone Once Per Day. Gains one use at level one and an additional use every five levels thereafter. 
+-May cast Hurl Stone once per day. Gains one use at level one and an additional use every five levels thereafter. 
 
 HURL STONE: The priest creates a magical stone the size of their palm, which flies out of their hand and into the intended target. The stone does 1d6 direct magic damage per five levels with no save, although it does not bypass magic resistance. If the creature fails a save vs spell, they are also knocked down for two rounds.
 
@@ -204,3 +224,76 @@ Weight: 1~
 @703  = ~Berk~
 @704  = ~Gigi~
 @705  = ~Abermon~
+@706 = ~Zavatar~
+@707 = ~Zavatar's Morningstar~
+@708 = ~This morning star was the oddly favored weapon of the gladiator Zavatar, who boasts the nickname the "Decapitator" with a weapon that favors crushing. It is three times heavier than the typical morningstar, and requires more strength to wield. In return, the weapon hits much harder, guaranteed to crush bones in the hands of a strong wielder.
+
+STATISTICS:
+
+THAC0: +2
+Damage: 2d4+5 (crushing)
+Speed Factor: 5
+Proficiency Type: Flail/Morning Star
+Type: One-handed
+Requires:
+ 15 Strength
+
+Weight: 30~
+@709 = ~Mercenary~
+@710 = ~Armor of Resilience +3~
+@711 = ~This was originally the armor of Hagrin Thickbeard, a stout dwarf defender who always charged in first with a well tended, thick mane of hair. The armor protected him and his proud beard from all sorts of magical elements, as he had a particular fear of magic ruining his appearance. He wore it in every battle but one, when he passed this armor to his unrequited love, before charging to a fight he knew he would not return from. The armor is molded specifically for the small-folk, and can only be worn by gnomes, halflings, and dwarves.
+
+STATISTICS:
+
+Equipped abilities:
+– Acid Resistance: +20%
+– Cold Resistance: +20%
+– Electric Resistance: +20%
+– Fire Resistance: +20%
+
+Armor Class: 1 (-1 vs. crushing, 0 vs. piercing and missile)
+Requires:
+ 8 Strength
+
+Weight: 15~
+@712  = ~Message to Arvora~
+@713  = ~For retribution against the murder of my father, I have taken your neice. She shall not die however, if you play my game, and then duel for her life. Decode my little riddle to find my waiting henchman and several possible passcodes. Give the correct code to my henchman, and he will lead you to me. Wrong, and you will never her again. The longer you take, the more she will suffer, until I may just take her life instead of yours. 
+
+Gb svaq zr, urnq nobir gur prvyvat va lbhe urnq. Gurer, va gur ebbz, lbh jvyy svaq zl urapuzna arne uvf orq. Tvir uvz gur nafjre gb guvf: juvpu jbeq qbrf abg orybat? Oenjy, Punatr, Pybire, Cebcre, Fnperq, Fgbar, Friragl, Fjvat, Gheavc, Geniry, Lbea. Tvir gur pbeerpg nafjre, naq ur jvyy yrnq lbh gb zr. Jebat, naq lbh jvyy arire ure ntnva.
+
+See you soon, 
+
+Zavatar~
+@714 = ~Contact~
+@715 = ~Message to Arvora (Decoded)~
+@716 = ~For retribution against the murder of my father, I have taken your neice. She shall not die however, if you play my game, and then duel for her life. Decode my little riddle to find my waiting henchman and several possible passcodes. Give the correct code to my henchman, and he will lead you to me. Wrong, and you will never her again. The longer you take, the more she will suffer, until I may just take her life instead of yours. 
+
+To find me, head above the ceiling in your head. There, in the room, you will find my henchman near his bed. Give him the answer to this: which word does not belong? Brawl, Change, Clover, Proper, Sacred, Stone, Seventy, Swing, Turnip, Travel, Yorn. Give the correct answer, and he will lead you to me. Wrong, and you will never her again.
+
+See you soon, 
+
+Zavatar~
+@717 = ~Message from Zavatar~ 
+@718 = ~Or pnershy jvgu gur frnyrq beo. Vs vg oernxf be vf hfrq, gur unysyvat pna rfpncr. Fur'f frnyrq va n pbagnvare vafvqr n qvfpergr fgbentr ubhfr va gur Oevqtr Qvfgevpg. Vs jr qba'g trg gur sbby Neiben gb cnl hc, jr pna svaq n fynire gb cnl n tbbq sbeghar, unysyvatf ner tbbq ng ernpuvat va gvtug cynprf nsgre nyy.~
+@719 = ~Message from Zavatar (Decoded)~
+@720 = ~Be careful with the sealed orb. If it breaks or is used, the halfling can escape. She's sealed in a container inside a discrete storage house in the Bridge District. If we don't get the fool Arvora to pay up, we can find a slaver to pay a good fortune, halflings are good at reaching in tight places after all.~
+@721 = ~Sealing Orb~
+@722 = ~An ordinary gem turned into a magical prison, these are often purchased from wicked wizards for a high price to capture and transport targets for bounty hunters that can afford it. Unlike an imprisonment spell, the seal does not last forever, but typically lasts more than long enough for a bounty hunter to ensure their job is completed. To free whoever is within, simply place in your quick slot.~
+@723 = ~Fighter / Priest of Haela~
+@724 = ~FIGHTER/PRIEST OF HAELA: This character can use the abilities of a Fighter and Priest of Haela, though are limited to the weapons allowed by the cleric's ethos. They may specialize in, but not master, any weapon they can use.
+
+PRIEST OF HAELA: Renowned amongst the dwarves for their risk-taking, berserker tendencies, clerics of Haela Brightaxe are loved and feared for their fury when they enter the fray, able to shrug off and deliver dangerous strikes. Most are female, called Kaxanar, or blood maidens, and their name is very much earned in their pleasure in seeking out battle wherever it may be. 
+
+Advantages: 
+
+-May cast Hurl Stone once per day. Gains a use at level one, level five, and an additional use every five levels thereafter. 
+
+HURL STONE: The priest creates a magical stone the size of their palm, which flies out of their hand and into the intended target. The stone does 1d6 magic damage per five levels with no save, although it does not bypass magic resistance. If the creature fails a save vs spell, they are knocked down to the ground for two rounds.
+
+-May Cast Flamebolt Once Per Day. Gains one use at level one, level ten, and an additional use every ten levels thereafter. 
+
+FLAMEBOLT: The priest calls forth a holy two-handed blade of flame named after Haela Brightaxe's favored weapon. The caster is treated as a fighter with mastery in the weapon. The magic weapon does 1d10+1 fire damage per 5 levels, with a THACO bonus of 3. The blade acts at a speed factor of nine and lasts for one turn.
+
+Disadvantages:
+-Dwarf only. 
+-May only be CN, CG, and NG.~

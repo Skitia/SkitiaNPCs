@@ -64,7 +64,7 @@ It appears Recorder transferred her own soul into Gustav, her ferret. The Temple
 We've recovered a purple iolite. We can take this to an altar in the North Forest to try to recover Recorder.~
 
 @40035 = ~Miraculously, the gem and altar worked and Recorder with myself once more! Recorder seems shaken by her experience with death, though quite grateful for her return.~
-
+//Non Romanced: Did not save Raban.
 @51 = ~The recording of the tale of <CHARNAME> was not the end of Recorder's own story. For years, she would restlessly scour the realms, seeking the whereabouts of her lost son, Raban. She traveled from city to city, from pirate den to slaver hide out, hoping the next slave she freed held the face of her child.  
 She stumbled upon a small group of children taken captive in Sembia in one of her searches, and realized they had no family to return to. She took them back to her own home, and taught them to read and write, to play music, and the life lessons she had learned through the journey she had recorded so intimately in her travels with <CHARNAME>. Raising them gave her a gift, a joy of motherhood she had thought all but lost forever. 
 She never found Raban, but she at last found forgiveness and peace for herself.~ 
@@ -76,7 +76,7 @@ But no inn nor promising plea of curious bard could keep her from her destinatio
 In time Recorder conceived <CHARNAME>'s daughter, forcing her to pause her search for a while. It was in the years that followed of raising her little girl that she finally found the second chance she sought to forgive herself, teaching her all of life's lessons and joys she never could with her first. Even still, she and <CHARNAME> never stopped looking for Raban, and never would.~
 //Romance: Saved Raban Male
 @54 = ~Before Recorder and <CHARNAME> even returned to the temple of Oghma in Althkata, the tales of their adventures had spread far and wide. But there was one last trek still for the couple. They would journey to Ulgoth's Beard, where they would reunite with Recorder's son, Raban. It was there, where everything was back in place in Recorder's life, that they would marry. In time they would have another child, a daughter, and Recorder would found a new school in what was once the Ulcaster Ruins while, teaching promising bards and loremasters, who were always eager
-for the chance to meet the most special of guests to occasional show up, her spouse. Recorder left the life of adventuring herself soon after, but her wisdom and experience created a new generation of bards to record the history still yet to come..~
+for the chance to meet the most special of guests to occasionally show up, her spouse. Recorder left the life of adventuring herself soon after, but her wisdom and experience created a new generation of bards to record the history still yet to come.~
 //Romance: Default Female 
 @55 = ~Before Recorder and <CHARNAME> even returned to the temple of Oghma in Althkata, the tales of their adventures had spread far and wide. But there was still one great task that they sought to do. After they were married, for the next several years, they searched far and wide for Raban, Recorder's lost son. Their adventures decimated the slave trade in Western Faerûn, and there was no slaver's den or hideout safe in the realms in their search. 
 In time they would take care of a child they rescued from slavers in Sembia, which forced them to pause their search for a while to raise the girl properly. It was in the years that followed of raising her adopted daughter that she finally found the second chance she sought to forgive herself, teaching her all of life's lessons and joys she never could with her first. Even still, she and <CHARNAME> never stopped looking for Raban, and never would.~
@@ -86,8 +86,6 @@ for the chance to meet the most special of guests to occasional show up, her spo
 //Romance: Saved Raban but <CHARNAME> ascended 
 @57 = ~The recording of the tale of <CHARNAME>'s ascension was not the end of Recorder's own story. After she returned to Althkata to presented all she had seen and written in her travels, there was one last great trek to make. Alone, she made the journey to Ulgoth's Beard, greeted on the road by young bards eager to learn her craft or hear her retell stories she had witnessed with her own eyes. 
 But no inn nor promising plea of curious bard could keep her from her destination: her son, Raban. The meeting was the most joyous moment of her life, and they would spend the years until his adulthood catching up on precious stolen time. It is said after he came of age and left to see the world that she traveled to Beregost, and built a new school in what was once the Ulcaster Ruins, where she taught promising bards and loremasters, and shared songs dedicated to her beloved. In time she would pass in a ripe old age, but her recorded work would be immortalized in libraries across the realms forever.~
-
-//Romance: Saved Raban: Player chose to ascend (Slight variation of Non-Romanced: Saved Raban)
 
 //Romance: 
 //Max Approval Bonus Message 
@@ -138,6 +136,10 @@ SONATA: This song provides varying levels of intelligence, save bonuses, and min
 Level 1: +1 Int, +1 Saves vs Spells, Immunity to Charm and Sleep. 
 Level 15: +2 Int, +2 Saves vs Spells, Immunity to Charm, Sleep, and Rigid/Feeblemind.
 Level 20: +3 Int, +3 Saves vs Spells, Immunity to Charm, Sleep, Rigid/Feeblemind and Confusion
+
+- May cast Mnenomic Retrieval once per day. Gains one use at level 4 and every 4 levels thereafter.
+
+MNEMONIC RETRIEVAL: This spell enables the caster's target to bring back to memory 1 arcane spell and/or 1 divine spell that has been previously cast. If no spells have been cast yet, nothing happens. Mmenomic Retrieval can only recall a spell up to the spell level the Lorekeeper is capable of casting. Thus the Lorekeeper can thus only recall 4th-level spells or lower at level 10, and is capped at 6th level spells or lower at level 16.
 
 Disadvantages:
 - No Pickpocketing Skill.
@@ -296,3 +298,25 @@ Weight: 1~
 @859  = ~Aerik~
 @860  = ~Phelgrim~
 @861  = ~Bandit~
+//New Spell 
+@862  = ~Mmenomic Retrieval~
+@863  = ~Mmenomic Retrieval
+
+Sphere: Knowledge, Creation
+Range: 0
+Duration: Instant
+Casting Time: 5
+Area of Effect: Target
+Saving Throw: None
+
+This spell enables the caster to bring back to memory 1 arcane spell and/or 1 divine spell that has been previously cast. If no spells have been cast yet, nothing happens. Mmenomic Retrieval can only recall a spell up to the spell level the Lorekeeper is capable of casting. Thus the Lorekeeper can thus only recall 4th-level spells or lower at level 10, and is capped at 6th level spells or lower at level 16.~
+@864  = ~Mmenomic Retrieval
+
+Sphere: Knowledge, Creation
+Range: 0
+Duration: Instant
+Casting Time: 5
+Area of Effect: Target
+Saving Throw: None
+
+This spell enables the caster to bring back to memory 1 arcane spell and/or 1 divine spell that has been previously cast. If no spells have been cast yet, nothing happens. Mmenomic Retrieval can only recall a spell up to the spell level the Lorekeeper is capable of casting. Thus the Lorekeeper can thus only recall 4th-level spells or lower at level 10, and is capped at 8th level spells or lower at level 28.~
