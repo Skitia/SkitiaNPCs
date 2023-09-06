@@ -1,0 +1,443 @@
+LOAD_TRA ~%MOD_FOLDER%/Tra/%LANGUAGE%/ISAAC_bg2.tra~
+LAF HANDLE_AUDIO
+  STR_VAR
+    audio_path = ~SkitiaNPCs/Audio/Isaac~
+    oggdec_path = ~SkitiaNPCs/Audio~
+    sox_path = ~SkitiaNPCs/Audio/Isaac~
+END
+ADD_KIT ~X3EIB~
+
+	~X3EIB 1 1 1 1 1 1 1 1~
+ // appended column-wise to WEAPPROF.2da
+//11                                T   S           F   Q             S S
+//10                                W   C           L   U             W I
+//9                         B L S   O   I   W       A   A             O N
+//8                         A O H   H   M   A       I   R C   S       R G
+//7         L S           M S N O   A   I   R     H L   T R L H     2 D L 2                 E E E E E E E E E E E
+//6         _ _       S   I T G R   N K T D H     A M   E O O O     H A E W E E E E E E E E X X X X X X X X X X X
+//5         S S   S B P   S A S T   D A A A A   S L O   R S N R   S A N W E X X X X X X X X T T T T T T T T T T T
+//4         W W   P L I   S R W S   E T R G M C P B R M S S G T D L N D E A T T T T T T T T R R R R R R R R R R R
+//3         O O B E U K A I D O W A D A W G M L E E N A T B B B A I D S A P R R R R R R R R A A A A A A A A A A A
+//2         R R O A N E X L S R O X S N A E E U A R I C A O O O R N E H P O A A A A A A A A 1 1 1 1 1 1 1 1 1 1 2
+//1         D D W R T D E E W D R E W A K R R B R D N E F W W W T G D I O N 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0
+ ~X3EIB	    1 1 0 0 0 0 0 1 0 1 1 0 0 1 1 5 0 1 0 0 0 0 1 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+
+ 	~X3EIB 9 12 9 12 9 9~
+	~X3EIB 0 0 0 0 0 0~
+	~X3EIB 0 0 0 0 0 0~
+    ~X3EIB 0 0 0 0 0 0~
+	~X3EIB 0 1 1 1 1 1 1 1 1~
+	~X3EIB 1       1       1       0       0       0~
+	~%MOD_FOLDER%/2da/X3EIBcl.2da~
+	~K_T_H K_T_E K_T_HE K_T_G K_T_HL K_T_D K_T_HO~
+	~0x00000004     4~
+	~Th0~
+	 ~* * * BAG20 RING06 RING31 * BOOT01 AMUL19 * BELT06 * * * POTN52,5 POTN4,2 POTN14,5 * SW1H27 STAF08~
+
+	SAY @0
+	SAY @1
+	SAY @2
+LAF fl#add_kit_ee
+
+
+// The below sets some more variables.		
+	STR_VAR
+		kit_name = ~X3EIB~ 
+		clswpbon = ~1 0 3~
+		backstab = ~2 2 2 2 3 3 3 3 4 4 4 4 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5~
+		sneakatt = ~2 2 2 2 3 3 3 3 4 4 4 4 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5~
+		hpclass = ~hprog~
+		thiefskl = ~40 20~
+		clsrcreq = ~1 1 1 1 1 1 1~ // This is character generation race choices.
+END
+COPY	"%MOD_FOLDER%/Items/IMISC75.BAM" override
+//Portait Icon.
+DEFINE_ACTION_FUNCTION cd_new_portrait_icon
+  INT_VAR string = 0
+  STR_VAR bam_file = "****"
+  RET     icon
+  BEGIN
+
+  COPY_EXISTING ~statdesc.2da~ ~override~
+    COUNT_2DA_ROWS 3 count
+    READ_2DA_ENTRY (count - 1) 0 3 icon
+    SET icon += 1
+
+  APPEND ~statdesc.2da~ ~%icon% %string% %bam_file%~ UNLESS ~%bam_file%~
+
+END
+
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Feint~) STR_VAR bam_file = IMISC75 RET IMISC75 = icon END
+
+COPY	"%MOD_FOLDER%/Spells/x3eint.eff" override
+COPY	"%MOD_FOLDER%/Spells/x3eint.spl" override
+COPY	"%MOD_FOLDER%/Spells/x3eint1.spl" override
+COPY	"%MOD_FOLDER%/Spells/x3ekit.spl" override
+COPY	"%MOD_FOLDER%/Spells/x3ethaco.eff" override
+COPY	"%MOD_FOLDER%/Spells/x3ecrit.eff" override
+COPY	"%MOD_FOLDER%/Spells/x3edag.spl" override
+COPY	"%MOD_FOLDER%/Spells/x3ebleed.eff" override
+COPY	"%MOD_FOLDER%/Spells/x3ebleed.spl" override
+COPY	"%MOD_FOLDER%/Spells/x3eibsp1.spl" override
+SAY NAME1 @3 
+SAY NAME2 @3
+SAY 0x50  @4
+COPY	"%MOD_FOLDER%/Spells/x3eac.eff" override
+COPY	"%MOD_FOLDER%/Spells/x3eacm.eff" override
+COPY	"%MOD_FOLDER%/Spells/x3eaprh.eff" override
+COPY	"%MOD_FOLDER%/Spells/x3eapr1.eff" override
+
+COPY	"%MOD_FOLDER%/Spells/x3efeint.spl" override
+SAY NAME1 @5
+SAY NAME2 @5
+SAY 0x50  @6
+LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = IMISC75 END
+
+
+//Chain Lightning *2
+//100% Electrical Resistance (Increment) Increased Electrical Attack Damage 40% - Artificer
+// Electrical Bite Back, Reduces Attacker's Electrical Resistance by 5% per Hit.
+//Charged Clarity ->Extra 1st, 2nd, 3rd, and 4th level Spell.
+
+COPY	"%MOD_FOLDER%/Spells/X3IAura.eff" override
+//0x1c is the Target IDs field
+WRITE_SHORT 0x1C (IDS_OF_SYMBOL (~kit~ ~C0Aura~)) 
+COPY	"%MOD_FOLDER%/Spells/X3IAur2.eff" override
+//0x1c is the Target IDs field
+WRITE_SHORT 0x1C (IDS_OF_SYMBOL (~kit~ ~C0Aura~)) 
+COPY	"%MOD_FOLDER%/Spells/X3IAur3.eff" override
+//0x1c is the Target IDs field
+WRITE_SHORT 0x1C (IDS_OF_SYMBOL (~kit~ ~C0Aura~)) 
+COPY	"%MOD_FOLDER%/Spells/X3IAurR.eff" override
+COPY	"%MOD_FOLDER%/Spells/X3IAurE.eff" override
+COPY	"%MOD_FOLDER%/Spells/X3IAurI.eff" override
+COPY	"%MOD_FOLDER%/Spells/X3IReb.eff" override
+WRITE_SHORT 0x1C (IDS_OF_SYMBOL (~kit~ ~X3Bard~)) 
+COPY	"%MOD_FOLDER%/Spells/X3IRebS.eff" override
+COPY	"%MOD_FOLDER%/Spells/X3IBite.eff" override
+COPY	"%MOD_FOLDER%/Spells/X3IBite.spl" override
+
+COPY	"%MOD_FOLDER%/Spells/X3IBolt.spl" override
+SAY NAME1 @74
+SAY NAME2 @74
+COPY_EXISTING "%MOD_FOLDER%/Items/X3IArt.itm" override
+SAY NAME1 @72
+SAY NAME2 @72
+SAY DESC  @73
+COPY	"%MOD_FOLDER%/Items/bdidag04.BAM" override
+COPY	"%MOD_FOLDER%/Items/x3iblade.itm" override
+SAY NAME2 @55
+SAY DESC  @56
+
+COPY	"%MOD_FOLDER%/Items/x3IStaff.itm" override
+SAY NAME2 @57
+SAY DESC  @58
+
+COPY	"%MOD_FOLDER%/Items/x3IHead.itm" override
+SAY NAME2 @59
+SAY DESC  @60
+COPY	"%MOD_FOLDER%/Items/x3IMP.eff" override
+COPY	"%MOD_FOLDER%/Items/x3IPLAN.eff" override
+COPY	"%MOD_FOLDER%/Items/x3IDPLAN.eff" override
+COPY	"%MOD_FOLDER%/Items/x3IDEMT.eff" override
+COPY	"%MOD_FOLDER%/Items/x3ISOL.eff" override
+COPY	"%MOD_FOLDER%/Items/x3IASOL.eff" override
+COPY	"%MOD_FOLDER%/Items/x3IAS.eff" override
+COPY	"%MOD_FOLDER%/Items/x3ITIEFT.eff" override
+COPY	"%MOD_FOLDER%/Items/X3IMace.itm" override
+SAY NAME1 @61
+SAY NAME2 @61
+SAY DESC  @62
+COPY	"%MOD_FOLDER%/Items/X3IWard.itm" override
+SAY NAME1 @67
+SAY NAME2 @67
+SAY DESC  @68
+
+COPY_EXISTING "%MOD_FOLDER%/Items/X3EGem.itm" override
+SAY NAME1 @70
+SAY NAME2 @70
+SAY DESC  @71
+
+COPY ~%MOD_FOLDER%/items/X3IBody.bam~ ~override/X3IBody.bam~
+COPY ~%MOD_FOLDER%/items/X3IBody.itm~ ~override/X3IBody.itm~
+SAY NAME1 @75
+SAY NAME2 @75
+SAY DESC @76
+
+COPY_EXISTING ~%MOD_FOLDER%/Items/x3RingI.itm~ ~override/x3RingI.itm~
+SAY NAME1 @584
+SAY NAME2 @584
+SAY DESC @585 
+    LPF ADD_ITEM_EQEFFECT
+    INT_VAR
+      opcode = 319
+	  target = 1
+	  timing = 2
+	  parameter2 = 11
+	  power = 1
+	  special = RESOLVE_STR_REF (@52)
+	STR_VAR
+	  resource = X3Isa
+END
+
+
+//Portraits
+		COPY ~%MOD_FOLDER%/portraits/IsaacL.bmp~ ~override/IsaacL.bmp~
+		COPY ~%MOD_FOLDER%/portraits/IsaacM.bmp~ ~override/IsaacM.bmp~
+
+COPY ~%MOD_FOLDER%/cre/X3Isa.cre~ ~override/X3Isa.cre~
+  SAY NAME1 @52 //~Isaac~
+  SAY NAME2 @52 //~Isaac~
+  WRITE_ASCII 0x248 ~X3Isa~ #8  //override script
+  WRITE_ASCII 0x280 ~X3Isa~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3Isa~ #8   //pre-joining dialogue file
+  WRITE_ASCII 0X34 ~IsaacM~ #8   //small portrait
+  WRITE_ASCII 0x3c ~IsaacL~ #8   //medium portrait
+  SAY BIO @53 
+  SAY MORALE @7
+  SAY HAPPY @8
+  SAY UNHAPPY_ANNOYED @9
+  SAY UNHAPPY_SERIOUS @10
+  SAY UNHAPPY_BREAKING_POINT @11
+  SAY LEADER @12
+  SAY TIRED @13
+  SAY BORED @14
+  SAY BATTLE_CRY1 @15
+  SAY BATTLE_CRY2 @16
+  SAY BATTLE_CRY3 @17
+  SAY BATTLE_CRY4 @18
+  SAY BATTLE_CRY5 @19
+  SAY DAMAGE @20
+  SAY DYING @21
+  SAY HURT @22
+  SAY AREA_FOREST @23
+  SAY AREA_CITY @24
+  SAY AREA_DUNGEON @25
+  SAY AREA_DAY @26
+  SAY AREA_NIGHT @27
+  SAY SELECT_COMMON1 @28
+  SAY SELECT_COMMON2 @29
+  SAY SELECT_COMMON3 @30
+  SAY SELECT_COMMON4 @31
+  SAY SELECT_COMMON5 @32
+  SAY SELECT_COMMON6 @33
+  SAY SELECT_ACTION1 @34
+  SAY SELECT_ACTION2 @35 
+  SAY SELECT_ACTION3 @36
+  SAY SELECT_ACTION4 @37
+  SAY SELECT_ACTION5 @38
+  SAY SELECT_ACTION6 @39
+  SAY SELECT_ACTION7 @40
+  SAY CRITICAL_HIT @41
+  SAY CRITICAL_MISS @42
+  SAY TARGET_IMMUNE @43
+  SAY INVENTORY_FULL @44
+  SAY SPELL_DISRUPTED @45
+  SAY SET_A_TRAP @46
+  SAY HIDDEN_IN_SHADOWS @47
+  SAY PICKED_POCKET @48
+  SAY SELECT_RARE1 @49
+  SAY SELECT_RARE2 @50
+  SAY REACT_TO_DIE_GENERAL @51
+  WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~X3EIB~)) 
+  
+COPY ~%MOD_FOLDER%/cre/X3Isa25.cre~ ~override/X3Isa25.cre~
+  SAY NAME1 @52 //~Isaac~
+  SAY NAME2 @52 //~Isaac~
+  WRITE_ASCII 0x248 ~X3Isa25~ #8  //override script
+  WRITE_ASCII 0x280 ~X3Isa~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3Isa25~ #8   //pre-joining dialogue file
+  WRITE_ASCII 0X34 ~IsaacM~ #8   //small portrait
+  WRITE_ASCII 0x3c ~IsaacL~ #8   //medium portrait
+  SAY BIO @53 
+  SAY MORALE @7
+  SAY HAPPY @8
+  SAY UNHAPPY_ANNOYED @9
+  SAY UNHAPPY_SERIOUS @10
+  SAY UNHAPPY_BREAKING_POINT @11
+  SAY LEADER @12
+  SAY TIRED @13
+  SAY BORED @14
+  SAY BATTLE_CRY1 @15
+  SAY BATTLE_CRY2 @16
+  SAY BATTLE_CRY3 @17
+  SAY BATTLE_CRY4 @18
+  SAY BATTLE_CRY5 @19
+  SAY DAMAGE @20
+  SAY DYING @21
+  SAY HURT @22
+  SAY AREA_FOREST @23
+  SAY AREA_CITY @24
+  SAY AREA_DUNGEON @25
+  SAY AREA_DAY @26
+  SAY AREA_NIGHT @27
+  SAY SELECT_COMMON1 @28
+  SAY SELECT_COMMON2 @29
+  SAY SELECT_COMMON3 @30
+  SAY SELECT_COMMON4 @31
+  SAY SELECT_COMMON5 @32
+  SAY SELECT_COMMON6 @33
+  SAY SELECT_ACTION1 @34
+  SAY SELECT_ACTION2 @35 
+  SAY SELECT_ACTION3 @36
+  SAY SELECT_ACTION4 @37
+  SAY SELECT_ACTION5 @38
+  SAY SELECT_ACTION6 @39
+  SAY SELECT_ACTION7 @40
+  SAY CRITICAL_HIT @41
+  SAY CRITICAL_MISS @42
+  SAY TARGET_IMMUNE @43
+  SAY INVENTORY_FULL @44
+  SAY SPELL_DISRUPTED @45
+  SAY SET_A_TRAP @46
+  SAY HIDDEN_IN_SHADOWS @47
+  SAY PICKED_POCKET @48
+  SAY SELECT_RARE1 @49
+  SAY SELECT_RARE2 @50
+  SAY REACT_TO_DIE_GENERAL @51
+  WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~X3EIB~)) 
+//Dialogue 2da apppends  
+    APPEND ~pdialog.2da~
+~X3Isa       X3IsaP             X3IsaJ			X3IsaD~
+UNLESS ~X3Isa~
+UNLESS ~25POST~
+
+APPEND ~pdialog.2da~
+~X3Isa        X3IsaP             X3IsaJ            X3IsaD             X3Isa25P             X3Isa25J		X3Isa25D		X3Isa25~
+UNLESS ~X3Isa~
+IF ~25POST~
+
+APPEND ~interdia.2da~
+~X3Isa       BX3Isa~
+UNLESS ~X3Isa~
+UNLESS ~25FILE~
+
+APPEND ~interdia.2da~
+~X3Isa       BX3Isa       BX3Isa25~
+UNLESS ~X3Isa~
+IF ~25FILE~
+//QUEST 
+ADD_JOURNAL TITLE (@6000) @6001 @6002 @6003 @6004 @6005 @6006 @6007 @6008 @6009 @6010 @6011 @6012 @6013 @6014 @6015 @6016 @6017 USING ~%MOD_FOLDER%/Tra/english/Isaac_bg2.tra~ // Mavis
+
+//Epilogues 
+//Dead Mavis or Mavis never sided with
+COPY ~%MOD_FOLDER%/Epilogue/X3IsaEp.2da~ ~override/X3IsaDM.2da~
+REPLACE ~99999~ @101
+//Alive Mavis, not Purified
+COPY ~%MOD_FOLDER%/Epilogue/X3IsaEp.2da~ ~override/X3IsaAM.2da~
+REPLACE ~99999~ @102
+//Purified Mavis and Alive
+COPY ~%MOD_FOLDER%/Epilogue/X3IsaEp.2da~ ~override/X3IsaPM.2da~
+REPLACE ~99999~ @103
+//Romance Stayed
+COPY ~%MOD_FOLDER%/Epilogue/X3IsaEp.2da~ ~override/X3IsaRS.2da~
+REPLACE ~99999~ @104
+//Romance
+COPY ~%MOD_FOLDER%/Epilogue/X3IsaEp.2da~ ~override/X3IsaRA.2da~
+REPLACE ~99999~ @105
+
+//Creatures 
+
+COPY ~%MOD_FOLDER%/cre/X3IPHL.cre~ ~override/X3IPHL.cre~
+  SAY NAME1 @63 //~Planar Hunter Demetria~
+  SAY NAME2 @63 //~Planar Hunter Demetria~
+  WRITE_ASCII 0x248 ~X3IPHL~ #8  //override script
+  WRITE_ASCII 0x280 ~X3IPHL~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3IPHL~ #8   //pre-joining dialogue file
+
+COPY ~%MOD_FOLDER%/cre/X3IPHA.cre~ ~override/X3IPHA.cre~
+  SAY NAME1 @54 //~Planar Hunter~
+  SAY NAME2 @54 //~Planar Hunter~
+  WRITE_ASCII 0x248 ~X3IPH~ #8  //override script
+  WRITE_ASCII 0x280 ~X3IPHA~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3IPH~ #8   //pre-joining dialogue file
+  
+COPY ~%MOD_FOLDER%/cre/X3IPHC.cre~ ~override/X3IPHC.cre~
+  SAY NAME1 @54 //~Planar Hunter~
+  SAY NAME2 @54 //~Planar Hunter~
+  WRITE_ASCII 0x248 ~X3IPH~ #8  //override script
+  WRITE_ASCII 0x280 ~X3IPHC~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3IPH~ #8   //pre-joining dialogue file 
+  
+COPY ~%MOD_FOLDER%/cre/X3IPHF.cre~ ~override/X3IPHF.cre~
+  SAY NAME1 @54 //~Planar Hunter~
+  SAY NAME2 @54 //~Planar Hunter~
+  WRITE_ASCII 0x248 ~X3IPH~ #8  //override script
+  WRITE_ASCII 0x280 ~X3IPHF~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3IPH~ #8   //pre-joining dialogue file
+    
+  
+COPY ~%MOD_FOLDER%/cre/X3IPHM.cre~ ~override/X3IPHM.cre~
+  SAY NAME1 @54 //~Planar Hunter~
+  SAY NAME2 @54 //~Planar Hunter~
+  WRITE_ASCII 0x248 ~X3IPH~ #8  //override script
+  WRITE_ASCII 0x280 ~X3IPHM~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3IPH~ #8   //pre-joining dialogue file
+   
+COPY ~%MOD_FOLDER%/cre/X3IPHR.cre~ ~override/X3IPHR.cre~
+  SAY NAME1 @54 //~Planar Hunter~
+  SAY NAME2 @54 //~Planar Hunter~
+  WRITE_ASCII 0x248 ~X3IPH~ #8  //override script
+  WRITE_ASCII 0x280 ~X3IPHR~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3IPH~ #8   //pre-joining dialogue file
+  
+COPY ~%MOD_FOLDER%/cre/X3IMAVIS.cre~ ~override/X3IMAVIS.cre~
+  SAY NAME1 @64 //~Mavis~
+  SAY NAME2 @64 //~Mavis~
+  WRITE_ASCII 0x248 ~X3IMAVIS~ #8  //override script
+  WRITE_ASCII 0x280 ~X3IMAVIS~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3IMAVIS~ #8   //pre-joining dialogue file
+  
+COPY ~%MOD_FOLDER%/cre/X3IARBEX.cre~ ~override/X3IARBEX.cre~
+  SAY NAME1 @65 //~Arbex~
+  SAY NAME2 @65 //~Arbex~
+  WRITE_ASCII 0x248 ~X3IARBEX~ #8  //override script
+  WRITE_ASCII 0x280 ~X3IARBEX~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3IARBEX~ #8   //pre-joining dialogue file  
+  
+COPY ~%MOD_FOLDER%/cre/X3ITRENT.cre~ ~override/X3ITRENT.cre~
+  SAY NAME1 @66 //~Derrick Trent~
+  SAY NAME2 @66 //~Derrick Trent~
+  WRITE_ASCII 0x248 ~X3IARBEX~ #8  //override script
+  WRITE_ASCII 0x280 ~X3ITRENT~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3ITRENT~ #8   //pre-joining dialogue file    
+COPY ~%MOD_FOLDER%/Cre/X3IsaV.cre~ ~override/X3IsaV.cre~
+  WRITE_ASCII 0x248 ~X3IsaV~ #8  //override script
+  WRITE_ASCII 0x280 ~X3IsaV~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3IsaV~ #8   // Dialogue 
+  SAY NAME1 @52
+  SAY NAME2 @52   
+  // Area scripts
+      EXTEND_TOP ~AR0045.bcs~ ~%MOD_FOLDER%/Scripts/AR0045.baf~ EVAL 
+	    EXTEND_BOTTOM ~ar0513.bcs~ ~%MOD_FOLDER%/Scripts/ar0513.baf~ 
+		    EXTEND_BOTTOM ~ar0907.bcs~ ~%MOD_FOLDER%/Scripts/ar0907.baf~ 
+	//DoorScript 
+	EXTEND_BOTTOM ~OBSDoor.bcs~ ~%MOD_FOLDER%/Scripts/OBSDoor.baf~
+  // Cutscene Scripts 
+  COMPILE ~%MOD_FOLDER%/Scripts/X3ICut10.baf~ USING   ~%MOD_FOLDER%/tra/%s/X3Cut.tra~
+   COMPILE ~%MOD_FOLDER%/Scripts/X3ICut11.baf~ USING   ~%MOD_FOLDER%/tra/%s/X3Cut.tra~
+      COMPILE ~%MOD_FOLDER%/Scripts/X3ICut2A.baf~ USING   ~%MOD_FOLDER%/tra/%s/X3Cut.tra~
+	     COMPILE ~%MOD_FOLDER%/Scripts/X3ICut3J.baf~ USING   ~%MOD_FOLDER%/tra/%s/X3Cut.tra~
+		    COMPILE ~%MOD_FOLDER%/Scripts/X3ICut4R.baf~ USING   ~%MOD_FOLDER%/tra/%s/X3Cut.tra~
+  //Creature Scripts 
+      COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Scripts/X3Isa.baf~ 
+	        COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Scripts/X3Isa25.baf~ 
+   COMPILE ~%MOD_FOLDER%/Scripts/X3IMavis.baf~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3IMavis.tra~
+   COMPILE ~%MOD_FOLDER%/Scripts/X3IMavCL.baf~
+   COMPILE ~%MOD_FOLDER%/Scripts/X3IArbex.baf~
+    COMPILE ~%MOD_FOLDER%/Scripts/X3IPH.baf~
+	COMPILE ~%MOD_FOLDER%/Scripts/X3IPHL.baf~  USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3IPHL.tra~
+COMPILE	EVALUATE_BUFFER  ~%MOD_FOLDER%/Scripts/X3IBodhi.baf~ 
+~%MOD_FOLDER%/Scripts/X3IsaV.baf~ 
+~%MOD_FOLDER%/Scripts/X3IW1.baf~ 	
+~%MOD_FOLDER%/Scripts/X3IReset.baf~ 	
+  //Dialogue 
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/X3Isa.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3Isa.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/X3Isa25.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3Isa25.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/X3IsaJ.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3IsaJ.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/X3Isa25J.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3Isa25J.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/X3ITrent.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3ITrent.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/X3IMavis.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3IMavis.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/X3IPHL.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3IPHL.tra~
+
+LOAD_TRA ~%MOD_FOLDER%/Tra/%LANGUAGE%/setup.tra~

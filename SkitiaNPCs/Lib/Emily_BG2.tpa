@@ -437,13 +437,13 @@ COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Scripts/X3ECath.baf~
 ~%MOD_FOLDER%/Scripts/X3ECut03.baf~ 
 ~%MOD_FOLDER%/Scripts/X3ECut04.baf~ 
 ~%MOD_FOLDER%/Scripts/X3ECut05.baf~ 
+~%MOD_FOLDER%/Scripts/X3CSkip.baf~ // Contains skipped cutscene instructions.
 ~%MOD_FOLDER%/Scripts/X3EBodhi.baf~ 
 ~%MOD_FOLDER%/Scripts/X3EW1.baf~ 
 ~%MOD_FOLDER%/Scripts/X3EReset.baf~ 
 // Area Scripts 
 
-  EXTEND_TOP ~ar0704.bcs~ ~%MOD_FOLDER%/Scripts/ar0704.baf~
-  EXTEND_BOTTOM ~ar0515.bcs~ ~%MOD_FOLDER%/Scripts/ar0515.baf~  
+  EXTEND_TOP ~ar0704.bcs~ ~%MOD_FOLDER%/Scripts/ar0704.baf~ 
 ACTION_IF GAME_IS ~eet~ BEGIN
   EXTEND_BOTTOM ~ar1006.bcs~ ~%MOD_FOLDER%/Scripts/EET/ar1006.baf~ 
   EXTEND_BOTTOM ~ar1000.bcs~ ~%MOD_FOLDER%/Scripts/EET/ar1000.baf~ 

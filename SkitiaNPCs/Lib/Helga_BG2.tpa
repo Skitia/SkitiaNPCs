@@ -30,7 +30,7 @@ ADD_KIT ~X3cleric~
 	~X3cleric 0 0 0 1 0 0 1 1 0~
 	~X3cleric 0 0 0 0 0 0~
 	~%MOD_FOLDER%/2da/X3helcl.2da~
-	~~ /*Set this to ~K_C_D~ and not ~~ if you want to play it.*/
+	~K_C_D~ /*Set this to ~K_C_D~ and not ~~ if you want to play it.*/
 	~0x00080000 3~
 	~CL0~
 	~* * * * * * * * * * * * * * * * * * *  *~
@@ -46,6 +46,59 @@ LAF fl#add_kit_ee
 		hpclass = ~HPPRS~
 		clsrcreq = ~0 0 0 1 0 0 0~
 		clasthac = ~0~
+END
+
+ADD_KIT ~X3HFC~
+	~X3HFC 1 1 1 1 1 1 1 1~
+ // appended column-wise to WEAPPROF.2da
+//11                                T   S           F   Q             S S
+//10                                W   C           L   U             W I
+//9                         B L S   O   I   W       A   A             O N
+//8                         A O H   H   M   A       I   R C   S       R G
+//7         L S           M S N O   A   I   R     H L   T R L H     2 D L 2                 E E E E E E E E E E E
+//6         _ _       S   I T G R   N K T D H     A M   E O O O     H A E W E E E E E E E E X X X X X X X X X X X
+//5         S S   S B P   S A S T   D A A A A   S L O   R S N R   S A N W E X X X X X X X X T T T T T T T T T T T
+//4         W W   P L I   S R W S   E T R G M C P B R M S S G T D L N D E A T T T T T T T T R R R R R R R R R R R
+//3         O O B E U K A I D O W A D A W G M L E E N A T B B B A I D S A P R R R R R R R R A A A A A A A A A A A
+//2         R R O A N E X L S R O X S N A E E U A R I C A O O O R N E H P O A A A A A A A A 1 1 1 1 1 1 1 1 1 1 2
+//1         D D W R T D E E W D R E W A K R R B R D N E F W W W T G D I O N 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0
+ ~X3HFC	0 0 0 0 2 2 0 2 0 0 0 0 0 0 0 0 2 2 0 0 2 2 2 0 0 0 0 2 2 2 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+
+ 	~X3HFC 8 3 12 9 9 7~
+	~X3HFC 0 0 0 0 0 0~
+	~X3HFC 0 0 0 0 0 0~
+    ~X3HFC 0 0 0 0 17 0~
+	~X3HFC 0 0 0 1 0 0 1 1 0~
+	~X3HFC 0 0 0 0 0 0~
+	~%MOD_FOLDER%/2da/X3helcl.2da~
+	 ~K_FC_D~ //Set this to ~K_C_D~ and not ~~ if you want to play it.
+
+ // usability flags, added to the end of the KITLIST.2da entry
+ ~0x00080000 8~
+
+ // HLA table to use; see LUABBR.2da
+ ~FC0~ // Will need to have a custom one that incorporates both Shadowdancer and Mage abilities. 
+
+ // list of starting equipment for PCs starting in ToB. Appended column-wise to 25STWEAP.2da
+ ~* * * * * * * * * * * * * * * * * * *  *~
+ // Lower, mixed, and help kit names and descriptions, added to KITLIST.2da
+ SAY @723
+ SAY @723
+ SAY @724 
+
+LAF fl#add_kit_ee
+  STR_VAR
+		kit_name = X3HFC
+		clswpbon = ~1 1 3~
+		hpclass = ~HPFC~
+		clsrcreq = ~0 0 0 1 0 0 0~
+END
+LAF qd_multiclass
+	STR_VAR
+		kit_name = X3HFC
+		kit_clab = X3helcl
+		base_class = ~P~
+		mc_dir = ~%MOD_FOLDER%/spells~
 END
 
 COPY	"%MOD_FOLDER%/Spells/X3HBolt.spl" override
@@ -182,19 +235,23 @@ COPY ~%MOD_FOLDER%/Cre/X3Hel.cre~ ~override/X3Hel.cre~
   
   APPEND ~pdialog.2da~
 ~X3Hel       X3HelP             X3HelJ			X3HelD~
+UNLESS ~X3Hel ~
 UNLESS ~25POST~
 
 APPEND ~pdialog.2da~
 ~X3Hel        X3HelP             X3HelJ            X3HelD             X3Hel25P             X3Hel25J		X3Hel25D		X3Hel25~
+UNLESS ~X3Hel~
 IF ~25POST~
 
 APPEND ~interdia.2da~
 ~X3Hel       BX3Hel~
+UNLESS ~X3Hel~
 UNLESS ~25FILE~
 
 APPEND ~interdia.2da~
 ~X3Hel       BX3Hel       BX3Hel25~
-IF ~25FILE~ 
+UNLESS ~X3Hel~
+IF ~25FILE~
  //Epilogues
 COPY ~%MOD_FOLDER%/Epilogue/X3HelEp.2da~ ~override/X3Hel01.2da~
 REPLACE ~99999~ @51
@@ -204,7 +261,7 @@ REPLACE ~99999~ @52
  // Journal Entries 
 ADD_JOURNAL TITLE (@20001) @20002 @20003 @20004 @20005 @20006 @20007 @20008 @20009 @20010 USING ~%MOD_FOLDER%/Tra/english/Helga_bg2.tra~ // Rulendo's Gauntlet 
 ADD_JOURNAL TITLE (@20011) @20012 @20013 @20014 @20015 @20016 @20017 @20018 @20019 @20020 @20021 @20022 USING ~%MOD_FOLDER%/Tra/english/Helga_bg2.tra~ // Helga's Son  
-  
+ADD_JOURNAL TITLE (@20023) @20024 @20025 @20026 @20027 @20028 @20029 @20030 @20031 @20032 @20033 @20034 @20035 @20036 @20037 @20038 @20039 @20040 USING ~%MOD_FOLDER%/Tra/english/Helga_bg2.tra~ // Arvora's Plight.  
   // Portraits 
   		COPY ~%MOD_FOLDER%/Portraits/X3HelL.bmp~ ~override/X3HelL.bmp~
 		COPY ~%MOD_FOLDER%/Portraits/X3HelM.bmp~ ~override/X3HelM.bmp~
@@ -234,6 +291,36 @@ SAY NAME1 @635
 SAY NAME2 @635
 SAY DESC  @686
 
+COPY	"%MOD_FOLDER%/Items/X3HMS.itm" override
+SAY NAME1 @707
+SAY NAME2 @707
+SAY DESC  @708
+
+COPY	"%MOD_FOLDER%/Items/X3HMAIL.itm" override
+SAY NAME1 @710
+SAY NAME2 @710
+SAY DESC  @711
+
+COPY	"%MOD_FOLDER%/Items/X3HNote.itm" override
+SAY NAME1 @712
+SAY NAME2 @712
+SAY DESC  @713
+
+COPY_EXISTING	~%MOD_FOLDER%/Items/X3HNote.itm~ ~override/X3HNote2.itm~
+SAY NAME1 @717
+SAY NAME2 @717
+SAY DESC  @718
+
+COPY_EXISTING	~%MOD_FOLDER%/Items/X3HNote.itm~ ~override/X3HNote3.itm~
+SAY NAME1 @715
+SAY NAME2 @715
+SAY DESC  @716
+
+COPY_EXISTING	~%MOD_FOLDER%/Items/X3HNote.itm~ ~override/X3HNote4.itm~
+SAY NAME1 @719
+SAY NAME2 @719
+SAY DESC  @720
+
 COPY_EXISTING ~%MOD_FOLDER%/Items/X3HPC.itm~ ~override/X3HPC.itm~
 SAY NAME1 @687
 SAY NAME2 @687
@@ -246,7 +333,11 @@ COPY_EXISTING ~%MOD_FOLDER%/Items/X3HGEM.itm~ ~override/X3HGEM.itm~
 SAY NAME1 @691
 SAY NAME2 @691
 SAY DESC @692	
-
+COPY_EXISTING ~%MOD_FOLDER%/Items/X3Horb.itm~ ~override/X3Horb.itm~
+SAY NAME1 @721
+SAY NAME2 @721
+SAY DESC @722	
+SAY 0x50 @722
 		// Creatures 
 COPY ~%MOD_FOLDER%/Cre/X3HARV.cre~ ~override/X3HARV.cre~
   WRITE_ASCII 0x248 ~X3HARV~ #8  //override script
@@ -332,6 +423,24 @@ COPY ~%MOD_FOLDER%/Cre/X3HSCRY.cre~ ~override/X3HSCRY.cre~
   WRITE_ASCII 0x2cc ~X3HSCRY~ #8   // Dialogue   
   SAY NAME1 @705
   SAY NAME2 @705    
+COPY ~%MOD_FOLDER%/Cre/X3HZAVA.cre~ ~override/X3HZAVA.cre~
+  WRITE_ASCII 0x280 ~X3HZAVA~ #32  //DV
+  WRITE_ASCII 0x248 ~X3HZAVA~ #8  //override script
+  WRITE_ASCII 0x2cc ~X3HZAVA~ #8   // Dialogue   
+  SAY NAME1 @706
+  SAY NAME2 @706    
+COPY ~%MOD_FOLDER%/Cre/X3HZAG.cre~ ~override/X3HZAG1.cre~
+  WRITE_ASCII 0x280 ~X3HZAG1~ #32  //DV
+  WRITE_ASCII 0x248 ~X3HZAG1~ #8  //override script
+  WRITE_ASCII 0x2cc ~X3HZAG1~ #8   // Dialogue   
+  SAY NAME1 @714
+  SAY NAME2 @714      
+ COPY ~%MOD_FOLDER%/Cre/X3HZAG.cre~ ~override/X3HZAG2.cre~
+  WRITE_ASCII 0x280 ~X3HZAG2~ #32  //DV
+  WRITE_ASCII 0x248 ~X3HZAG2~ #8  //override script
+  WRITE_ASCII 0x2cc ~X3HZAG2~ #8   // Dialogue   
+  SAY NAME1 @709
+  SAY NAME2 @709   
 // Creature Scripts 
 COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Scripts/X3Hel.baf~ 
 ~%MOD_FOLDER%/Scripts/X3HelD.baf~ 
@@ -342,13 +451,23 @@ COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Scripts/X3Hel.baf~
 ~%MOD_FOLDER%/Scripts/X3HDD.baf~ 
 ~%MOD_FOLDER%/Scripts/X3HRL.baf~
 ~%MOD_FOLDER%/Scripts/X3HSON.baf~
+~%MOD_FOLDER%/Scripts/X3HZava.baf~
+~%MOD_FOLDER%/Scripts/X3HZag1.baf~
+~%MOD_FOLDER%/Scripts/X3HArv.baf~
 // Area Scripts 
 /*Helga does use AR0400, if there is a change in Kale's script that changes his spawn point, uncomment the below */
 //EXTEND_TOP ~ar0400.bcs~ ~%MOD_FOLDER%/Scripts/ar0400.baf~
   EXTEND_TOP ~ar0709.bcs~ ~%MOD_FOLDER%/Scripts/ar0709.baf~
+    EXTEND_TOP ~ar0709.bcs~ ~%MOD_FOLDER%/Scripts/ar0709.baf~
     EXTEND_TOP ~ar0406.bcs~ ~%MOD_FOLDER%/Scripts/ar0406.baf~
+	COPY_EXISTING ~AR0509.are~ ~override~
+      WRITE_ASCII 0x94 ~AR0509~ #8 
+	  COMPILE ~%MOD_FOLDER%/Scripts/ar0509.baf~
+		    EXTEND_TOP ~ar0511.bcs~ ~%MOD_FOLDER%/Scripts/ar0511.baf~
+			    EXTEND_TOP ~ar0530.bcs~ ~%MOD_FOLDER%/Scripts/ar0530.baf~
     EXTEND_BOTTOM ~ar5000.bcs~ ~%MOD_FOLDER%/Scripts/ar5000.baf~	
 	    EXTEND_TOP ~ar5500.bcs~ ~%MOD_FOLDER%/Scripts/ar5500.baf~
+		  EXTEND_TOP ~ar0509.bcs~ ~%MOD_FOLDER%/Scripts/ar0509.baf~
 	// Helga uses AR5501, but Vienxay already grabs this file. Uncomment if that changes.
 //		    EXTEND_BOTTOM ~ar5501.bcs~ ~%MOD_FOLDER%/Scripts/ar5501.baf~
  // Cutscenes 
@@ -357,6 +476,8 @@ COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Scripts/X3HCut01.baf~
 ~%MOD_FOLDER%/Scripts/X3HCut03.baf~ 
 ~%MOD_FOLDER%/Scripts/X3HCut04.baf~ 
 ~%MOD_FOLDER%/Scripts/X3HCut05.baf~ //Cutscene if Scrier does the spell
+~%MOD_FOLDER%/Scripts/X3HCut06.baf~
+~%MOD_FOLDER%/Scripts/X3HCut07.baf~
   //Dialogue 
 COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3Hel.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3Hel.tra~
 COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3Hel25.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3Hel25.tra~
@@ -369,7 +490,11 @@ COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/BX3Hel.d~ USING ~%MOD_FOLDER%/tra
 COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3HelJ.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3HelJ.tra~
 COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/BX3Hel25.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/BX3Hel25.tra~
 COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3Hel25J.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3Hel25J.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3HArv.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3HArv.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3HZag1.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3HZag1.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3HZava.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3HZava.tra~
 
+/*
 PRINT ~Choose a portrait for Helga (check mod folder for portraits):~
 
 PRINT ~Please choose one of the following:
@@ -390,5 +515,5 @@ END
 		COPY ~%MOD_FOLDER%/Portraits/X3HelM.bmp~ ~override/X3HelM.bmp~
       PRINT ~Portrait: Alt NWN Portrait~
 	  END
-	  
+*/	  
 LOAD_TRA ~%MOD_FOLDER%/Tra/%LANGUAGE%/setup.tra~

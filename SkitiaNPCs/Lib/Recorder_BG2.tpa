@@ -82,7 +82,11 @@ COPY "%MOD_FOLDER%/Spells/X3RDOOR.SPL" override
 SAY NAME1 @786
 SAY NAME2 @786
 SAY DESC @787
-
+//New Spell 
+COPY    "%MOD_FOLDER%/Spells/X3RMEM.spl" override 
+SAY NAME1 @862
+SAY NAME2 @862
+SAY 0x50 @863
 
 //Items 
 COPY	"%MOD_FOLDER%/Items/CX3BRD02.bam" override

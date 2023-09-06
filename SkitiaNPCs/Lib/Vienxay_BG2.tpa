@@ -92,10 +92,16 @@ COPY	"%MOD_FOLDER%/Spells/X3VSBLT.spl" override
 	SAY NAME1 @865
 	SAY NAME2 @865
 	SAY 0x50 @866 
+	
+COPY	"%MOD_FOLDER%/Spells/X3VTitl.spl" override
+LPF ALTER_EFFECT INT_VAR match_opcode = 290 parameter1 = RESOLVE_STR_REF (@863) END
 //HLA 
 COPY	"%MOD_FOLDER%/2da/LUX3V.2da" override
-// Kit Fixes	
+// Kit Spells and Fixes	
 	COPY	"%MOD_FOLDER%/Spells/X3VKit.spl" override
+	COPY	"%MOD_FOLDER%/Spells/X3Vinv.eff" override
+	COPY	"%MOD_FOLDER%/Spells/X3Vinv.spl" override
+	COPY	"%MOD_FOLDER%/Spells/X3VinvB.spl" override
 	COPY	"%MOD_FOLDER%/Spells/X3VB1.spl" override
 	COPY	"%MOD_FOLDER%/Spells/X3VB2.spl" override	
 	COPY	"%MOD_FOLDER%/Spells/X3VB3.spl" override
@@ -104,7 +110,15 @@ COPY	"%MOD_FOLDER%/2da/LUX3V.2da" override
 	SAY NAME1 @867
 	SAY NAME2 @867
 	SAY 0x50 @868
-	
+
+	//Shadow Displacement
+	COPY	"%MOD_FOLDER%/Spells/X3VDoor.spl" override	
+	SAY NAME1 @940
+	SAY NAME2 @940
+	SAY 0x50 @941	
+	//Galadin's Spell 
+	COPY	"%MOD_FOLDER%/Spells/X3VAVA.SPL" override
+	COPY	"%MOD_FOLDER%/Spells/X3VAVA2.SPL" override
 END	
 ///SoA 
 
@@ -224,23 +238,30 @@ COPY ~%MOD_FOLDER%/Cre/X3Vie25.cre~ ~override/X3Vie25.cre~
   
       APPEND ~pdialog.2da~
 ~X3Vie       X3VieP             X3VieJ			X3VieD~
+UNLESS ~X3Vie ~
 UNLESS ~25POST~
 
 APPEND ~pdialog.2da~
 ~X3Vie        X3VieP             X3VieJ            X3VieD             X3Vie25P             X3Vie25J		X3Vie25D		X3Vie25~
+UNLESS ~X3Vie~
 IF ~25POST~
 
 APPEND ~interdia.2da~
 ~X3Vie       BX3Vie~
+UNLESS ~X3Vie~
 UNLESS ~25FILE~
 
 APPEND ~interdia.2da~
 ~X3Vie       BX3Vie       BX3Vie25~
+UNLESS ~X3Vie~
 IF ~25FILE~
 
 //Epilogues
 COPY ~%MOD_FOLDER%/Epilogue/X3VieEp.2da~ ~override/X3Vie01.2da~
 REPLACE ~99999~ @51
+
+COPY ~%MOD_FOLDER%/Epilogue/X3VieEp.2da~ ~override/X3Vie1S.2da~
+REPLACE ~99999~ @57
 
 COPY ~%MOD_FOLDER%/Epilogue/X3VieEp.2da~ ~override/X3Vie02.2da~
 REPLACE ~99999~ @52
@@ -258,7 +279,7 @@ COPY ~%MOD_FOLDER%/Epilogue/X3VieEp.2da~ ~override/X3Vie05.2da~
 REPLACE ~99999~ @56
 
 // Journal Entries 
-ADD_JOURNAL TITLE (@50000) @50001 @50002 @50003 @50004 @50005 @50006 @50007 @50008 @50009 USING ~%MOD_FOLDER%/Tra/english/Vienxay_bg2.tra~ // SoA Tome Quest
+ADD_JOURNAL TITLE (@50000) @50001 @50002 @50003 @50004 @50005 @50006 @50007 @50008 @50009 @50018 @50019 @50020 @50021 @50022 @50023 @50024 @50025 @50026 @50027 @50028 @50029 @50030 USING ~%MOD_FOLDER%/Tra/english/Vienxay_bg2.tra~ // SoA Tome Quest
 ADD_JOURNAL TITLE (@50010) @50011 @50012 @50013 @50014 @50016 @50017 USING ~%MOD_FOLDER%/Tra/english/Vienxay_bg2.tra~ // ToB Sage Meeting (Affects Ending)
 
 	// Items 
@@ -291,6 +312,10 @@ COPY_EXISTING ~%MOD_FOLDER%/Items/X3VSack.itm~ ~override/X3VSack.itm~
 SAY NAME1 @938
 SAY NAME2 @938
 SAY DESC @939
+COPY_EXISTING ~%MOD_FOLDER%/Items/X3VDag.itm~ ~override/X3VDag.itm~
+SAY NAME1 @943
+SAY NAME2 @943
+SAY DESC @944
 COPY_EXISTING ~%MOD_FOLDER%/Items/x3RingV.itm~ ~override/x3RingV.itm~
 SAY NAME1 @932
 SAY NAME2 @932
@@ -313,11 +338,6 @@ COPY ~%MOD_FOLDER%/Cre/X3VG.cre~ ~override/X3VG.cre~
   WRITE_ASCII 0x2cc ~X3VG~ #8   // Dialogue 
   SAY NAME1 @925
   SAY NAME2 @925
-COPY ~%MOD_FOLDER%/Cre/X3VWolf.cre~ ~override/X3VWolf.cre~
-  WRITE_ASCII 0x248 ~X3VWolf~ #8  //override script
-  WRITE_ASCII 0x280 ~X3VWolf~ #32  //DV
-  SAY NAME1 @926
-  SAY NAME2 @926  
 COPY ~%MOD_FOLDER%/Cre/X3VSage.cre~ ~override/X3VSage.cre~
   WRITE_ASCII 0x248 ~X3VSage~ #8  //override script
   WRITE_ASCII 0x280 ~X3VSage~ #32  //DV
@@ -378,62 +398,46 @@ COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Scripts/X3VG.baf~
 ~%MOD_FOLDER%/Scripts/X3Vie.baf~ 
 ~%MOD_FOLDER%/Scripts/X3VieD.baf~ 
 ~%MOD_FOLDER%/Scripts/X3VReset.baf~ 
-~%MOD_FOLDER%/Scripts/X3VSag25.baf~ 
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Scripts/X3VGal.baf~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3VGal.tra~ 
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Scripts/X3VSamir.baf~ 
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Scripts/X3VSage.baf~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3VSage.tra~ 
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Scripts/X3VSag25.baf~ 
+~%MOD_FOLDER%/Scripts/X3VFIGHT.BAF~ 
 // Cutscenes 
 ~%MOD_FOLDER%/Scripts/X3VBodhi.baf~ 
 ~%MOD_FOLDER%/Scripts/X3VCut01.baf~ 
 ~%MOD_FOLDER%/Scripts/X3VCut02.baf~ // For Helga Spell
-~%MOD_FOLDER%/Scripts/X3VW1.baf~ 
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Scripts/X3VCut03.baf~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3Cut.tra~ // For Galadin Ritual
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Scripts/X3VCut04.baf~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3Cut.tra~ // For Galadin Ritual
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Scripts/X3VCut05.baf~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3Cut.tra~ // For Galadin Ritual
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Scripts/X3VW1.baf~ 
 // Area Scripts 
-
+ COPY_EXISTING ~ar0021.are~ ~override~
+      WRITE_ASCII 0x94 ~ar0021~ #8 
+COMPILE ~%MOD_FOLDER%/Scripts/ar0021.baf~	
   EXTEND_TOP ~ar0700.bcs~ ~%MOD_FOLDER%/Scripts/ar0700.baf~
   EXTEND_BOTTOM ~ar0800.bcs~ ~%MOD_FOLDER%/Scripts/ar0800.baf~
     EXTEND_BOTTOM ~ar1100.bcs~ ~%MOD_FOLDER%/Scripts/ar1100.baf~
     EXTEND_BOTTOM ~ar2200.bcs~ ~%MOD_FOLDER%/Scripts/ar2200.baf~	
     EXTEND_BOTTOM ~ar2205.bcs~ ~%MOD_FOLDER%/Scripts/ar2205.baf~	
+    EXTEND_BOTTOM ~ar2600.bcs~ ~%MOD_FOLDER%/Scripts/ar2600.baf~		
 	EXTEND_BOTTOM ~ar5501.bcs~ ~%MOD_FOLDER%/Scripts/ar5501.baf~
   
   //Dialogue 
 COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3Vie.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3Vie.tra~
 COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3Vie25.d~	 USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3Vie25.tra~
 COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3VSage.d~  USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3VSage.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3VGal.d~  USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3VGal.tra~
 COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3VSAG25.d~  USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3VSAG25.tra~
+ // Contains Samir and X3Drow's dialogue. 
 COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3VSamir.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3VSamir.tra~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3Vadrie.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3Vadrie.tra~
 COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/BX3Vie.d~	 USING ~%MOD_FOLDER%/tra/%LANGUAGE%/BX3Vie.tra~
 COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3VieJ.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3VieJ.tra~
 COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/BX3Vie25.d~	 USING ~%MOD_FOLDER%/tra/%LANGUAGE%/BX3Vie25.tra~
 COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3Vie25J.d~	 USING ~%MOD_FOLDER%/tra/%LANGUAGE%/X3Vie25J.tra~
- // Contains Samir and X3Drow's dialogue. 
- 
-   // Portraits 
-PRINT ~Choose a portrait for Vienxay (check mod folder for portraits):~
-
-PRINT ~Please choose one of the following:
-[1] Default by Crisshasart
-[2] Alt by Aeries1986
-[3] Old Version (NWN)~
-
-OUTER_SPRINT ~portrait~ ~placeholder_value~
-OUTER_WHILE (!(IS_AN_INT ~portrait~) OR (~portrait~ > 0x3) OR (~portrait~ < 0x1)) BEGIN
-  ACTION_READLN ~portrait~
-END
-      ACTION_IF ("portrait" = 1) THEN BEGIN
 		COPY ~%MOD_FOLDER%/Portraits/VienxayL.bmp~ ~override/X3VieL.bmp~
 		COPY ~%MOD_FOLDER%/Portraits/VienxayM.bmp~ ~override/X3VieM.bmp~
 		COPY ~%MOD_FOLDER%/Portraits/VienxayS.bmp~ ~override/X3VieS.bmp~
-      PRINT ~Portrait: Default by Crisshasart~
-	  END
-      ACTION_IF ("portrait" = 2) THEN BEGIN
-		COPY ~%MOD_FOLDER%/Portraits/AltVienxayL.bmp~ ~override/X3VieL.bmp~
-		COPY ~%MOD_FOLDER%/Portraits/AltVienxayM.bmp~ ~override/X3VieM.bmp~
-		COPY ~%MOD_FOLDER%/Portraits/AltVienxayS.bmp~ ~override/X3VieS.bmp~
-      PRINT ~Portrait: Alt by Aeries1986~
-	  END
-      ACTION_IF ("portrait" = 3) THEN BEGIN
-		COPY ~%MOD_FOLDER%/Portraits/OldVienxayL.bmp~ ~override/X3VieL.bmp~
-		COPY ~%MOD_FOLDER%/Portraits/OldVienxayM.bmp~ ~override/X3VieM.bmp~
-		COPY ~%MOD_FOLDER%/Portraits/OldVienxayS.bmp~ ~override/X3VieS.bmp~
-      PRINT ~Portrait: Old Version (NWN)~
-	  END
 
 LOAD_TRA ~%MOD_FOLDER%/Tra/%LANGUAGE%/setup.tra~

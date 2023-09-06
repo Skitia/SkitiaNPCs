@@ -21,7 +21,7 @@ ADD_KIT ~X3KFK~
 //3         O O B E U K A I D O W A D A W G M L E E N A T B B B A I D S A P R R R R R R R R A A A A A A A A A A A
 //2         R R O A N E X L S R O X S N A E E U A R I C A O O O R N E H P O A A A A A A A A 1 1 1 1 1 1 1 1 1 1 2
 //1         D D W R T D E E W D R E W A K R R B R D N E F W W W T G D I O N 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0
- ~X3KFK	    3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 2 2 2 2 2 2 2 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+ ~X3KFK	    3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 1 1 1 1 2 2 2 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
 
  	~X3KFK 9 12 12 3 3 9~
 	~X3KFK 0 0 0 0 0 0~
@@ -46,19 +46,60 @@ LAF fl#add_kit_ee
 		kit_name = ~X3KFK~ // Same as your ADD KIT line. 
 /* The first two lines dictate fighter thaco bonuses. You want 1 where I have both zeros for fighters to generate their bonus thaco/attacks per round. The third number is thaco penalty,
 this activates on weapons you are not proficient in. Standard here is three. */
-		clswpbon = ~1 0 2~		
+		clswpbon = ~1 1 2~		
 		numwslot = ~4~ // This determines the number of non-off hand weapon slots you have. You can have up to four of these.
 		hpclass = ~HPBARB~ // Bards use the rogue hit point table. You can make your own, but it's easiest to use already existing hit point progressions. 
 		clsrcreq = ~1 1 1 1 1 1 1~ // This is character generation race choices.
 END
 
 // Spells 
+//Portait Icon.
+DEFINE_ACTION_FUNCTION cd_new_portrait_icon
+  INT_VAR string = 0
+  STR_VAR bam_file = "****"
+  RET     icon
+  BEGIN
+
+  COPY_EXISTING ~statdesc.2da~ ~override~
+    COUNT_2DA_ROWS 3 count
+    READ_2DA_ENTRY (count - 1) 0 3 icon
+    SET icon += 1
+
+  APPEND ~statdesc.2da~ ~%icon% %string% %bam_file%~ UNLESS ~%bam_file%~
+
+END
+
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@781) STR_VAR bam_file = X3KW RET X3KW = icon END
+
 COPY "%MOD_FOLDER%/Spells/X3KW.bam" override 
 COPY "SkitiaNPCs/Spells/X3KFKS.SPL" override 
 SAY NAME1 @714
 SAY NAME2 @714
 SAY 0x50 @715
+LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = X3KW END
+
+
+COPY "%MOD_FOLDER%/Spells/X3KREG.EFF" override 
+COPY "%MOD_FOLDER%/Spells/X3KIMM.SPL" override 
+COPY "%MOD_FOLDER%/Spells/X3KWIL.SPL" override 
+COPY "%MOD_FOLDER%/Spells/X3KCON.SPL" override 
+COPY "%MOD_FOLDER%/Spells/X3KREG.SPL" override 
+  LPF ALTER_EFFECT INT_VAR
+      match_opcode = 139 parameter1 = RESOLVE_STR_REF (@782)
+END
+
+COPY "%MOD_FOLDER%/Spells/X3KDIE.EFF" override 
+COPY "%MOD_FOLDER%/Spells/X3KDIE.SPL" override 
+COPY "%MOD_FOLDER%/Spells/X3KCON2.SPL" override 
+COPY "%MOD_FOLDER%/Spells/X3KCURE.EFF" override 
+COPY "%MOD_FOLDER%/Spells/X3KCURE.SPL" override 
+  LPF ALTER_EFFECT INT_VAR
+      match_opcode = 139 parameter1 = RESOLVE_STR_REF (@781)
+END
+COPY "%MOD_FOLDER%/Spells/X3KCON3.SPL" override 
+
 // Store 
+
 COPY ~%MOD_FOLDER%/Items/X3KP.STO~ override
 
 //Items 
@@ -88,6 +129,22 @@ COPY ~%MOD_FOLDER%/items/X3KBody.itm~ ~override/X3KBody.itm~
 SAY NAME1 @722
 SAY NAME2 @722
 SAY DESC @723
+
+COPY_EXISTING ~%MOD_FOLDER%/Items/x3RingK.itm~ ~override/x3RingK.itm~
+SAY NAME1 @779
+SAY NAME2 @779
+SAY DESC @780
+    LPF ADD_ITEM_EQEFFECT
+    INT_VAR
+      opcode = 319
+	  target = 1
+	  timing = 2
+	  parameter2 = 11
+	  power = 1
+	  special = RESOLVE_STR_REF (@724)
+	STR_VAR
+	  resource = X3Kal
+END
 
 // Character SoA
 
