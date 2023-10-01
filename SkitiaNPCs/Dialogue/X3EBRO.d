@@ -62,7 +62,7 @@ DO ~SetGlobal("X3EmiAppChange","GLOBAL",5)~
 == X3EBRO @22
 EXTERN X3EBRO exit_area 
 
-CHAIN IF ~GlobalLT("Chapter","GLOBAL",%bg2_chapter_6%)!IsValidForPartyDialogue("X3Emi")~ THEN X3EBRO first_meeting_no_Emily
+CHAIN IF ~GlobalLT("X3EmiQuest","GLOBAL",6)GlobalLT("Chapter","GLOBAL",%bg2_chapter_6%)!IsValidForPartyDialogue("X3Emi")~ THEN X3EBRO first_meeting_no_Emily
 @23
 DO ~ActionOverride("X3EDAR",EscapeArea())EscapeArea()~
 EXIT 
