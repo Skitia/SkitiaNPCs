@@ -7,7 +7,7 @@ CHAIN IF ~True()~ THEN X3EDAR one_liner
 EXIT 
 
 // Happens after handling the merchant's quest, one way or another. 
-CHAIN IF ~GlobalLT("Chapter","GLOBAL",%bg2_chapter_6%)IsValidForPartyDialogue("X3Emi")~ THEN X3EBRO first_meeting 
+CHAIN IF ~GlobalLT("X3EmiQuest","GLOBAL",6)GlobalLT("Chapter","GLOBAL",%bg2_chapter_6%)IsValidForPartyDialogue("X3Emi")~ THEN X3EBRO first_meeting 
 @1
 == X3EmiJ @2
 END 
