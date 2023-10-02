@@ -410,7 +410,7 @@ COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Scripts/X3VW1.baf~
 // Area Scripts 
  COPY_EXISTING ~ar0021.are~ ~override~
       WRITE_ASCII 0x94 ~ar0021~ #8 
-COMPILE ~%MOD_FOLDER%/Scripts/ar0021.baf~	
+EXTEND_BOTTOM ~ar0021.bcs~ ~%MOD_FOLDER%/Scripts/ar0021.baf~	
   EXTEND_TOP ~ar0700.bcs~ ~%MOD_FOLDER%/Scripts/ar0700.baf~
   EXTEND_BOTTOM ~ar0800.bcs~ ~%MOD_FOLDER%/Scripts/ar0800.baf~
     EXTEND_BOTTOM ~ar1100.bcs~ ~%MOD_FOLDER%/Scripts/ar1100.baf~
