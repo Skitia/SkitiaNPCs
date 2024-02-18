@@ -87,10 +87,8 @@ IF
     See(Player1)
     CombatCounter(0)
     !See([ENEMY])
-	OR(2)
 	Global("X3EmiToBLoveTalk","LOCALS",1)	
-	Global("X3EmiToBLoveTalk","LOCALS",9)
-THEN RESPONSE #100 
+	THEN RESPONSE #100 
 	IncrementGlobal("X3EmiToBLoveTalk","LOCALS",1)	
 END 	
 //Wraith Talk 
@@ -174,6 +172,20 @@ IF
 	Global("X3EmiToBLoveTalk","LOCALS",9)	
 THEN RESPONSE #100 
 	IncrementGlobal("X3EmiToBLoveTalk","LOCALS",1)	
+END
+
+IF
+	Global("BalthazarFights","GLOBAL",1)
+	Global("X3EmiRomanceActive","GLOBAL",2)
+	IfValidForPartyDialog(Myself)
+	IfValidForPartyDialog(Player1)
+	See(Player1)
+	CombatCounter(0)
+	!See([ENEMY])
+	Global("X3EmiToBLoveTalk","LOCALS",9)
+THEN
+	RESPONSE #100
+		SetGlobal("X3EmiToBLoveTalk","LOCALS",11)
 END
 //Post Talk Final Challenge
 IF 
