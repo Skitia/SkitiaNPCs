@@ -458,7 +458,6 @@ COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Scripts/X3Hel.baf~
 /*Helga does use AR0400, if there is a change in Kale's script that changes his spawn point, uncomment the below */
 //EXTEND_TOP ~ar0400.bcs~ ~%MOD_FOLDER%/Scripts/ar0400.baf~
   EXTEND_TOP ~ar0709.bcs~ ~%MOD_FOLDER%/Scripts/ar0709.baf~
-    EXTEND_TOP ~ar0709.bcs~ ~%MOD_FOLDER%/Scripts/ar0709.baf~
     EXTEND_TOP ~ar0406.bcs~ ~%MOD_FOLDER%/Scripts/ar0406.baf~
 	COPY_EXISTING ~AR0509.are~ ~override~
       WRITE_ASCII 0x94 ~AR0509~ #8 
