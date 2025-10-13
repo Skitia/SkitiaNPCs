@@ -184,7 +184,7 @@ CHAIN X3VSage VienxayForgiveness
 = @79
 == X3VieJ @80
 == X3VSage @81
-DO ~GiveItem("X3VTome2","X3Vie")PickUpItem("X3VTome1")AddJournalEntry(@50009,QUEST_DONE)EscapeArea()~
+DO ~GiveItem("X3VTome2","X3Vie")PickUpItem("X3VTome1")SetGlobal("X3VieQuest","GLOBAL",12)AddJournalEntry(@50009,QUEST_DONE)EscapeArea()~
 EXIT 
 
 //Keep this at the bottom.
