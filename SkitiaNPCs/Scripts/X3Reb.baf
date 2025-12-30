@@ -1,3 +1,4 @@
+
 //Friendship Bonus 
 IF 
 InParty(Myself) 
@@ -317,7 +318,7 @@ IF
     !See([ENEMY])
 	AreaType(OUTDOOR)
 	!AreaType(CITY)
-	Global("X3RebFerretTransform","GLOBAL",2)
+	Global("X3RebVampire","GLOBAL",3)
 	Global("X3RebRomanceActive","GLOBAL",2)
 	Global("X3RebLoveTalk","LOCALS",29)
 THEN RESPONSE #100 
