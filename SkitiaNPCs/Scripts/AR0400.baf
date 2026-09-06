@@ -21,7 +21,7 @@ SetGlobal("X3HPOORAlertSpawns","AR0400",1)
 CreateCreature("X3HPOOR",[1822.2729],SW)
 Continue()
 END 
-
+/*
 IF
 Global("X3IsaStart","GLOBAL",0)
 // EET Checks.
@@ -32,4 +32,4 @@ SetGlobal("X3IsaStart","GLOBAL",1)
 ForceRandomEncounter("AR0045")
 Continue()
 END 
-
+*/
