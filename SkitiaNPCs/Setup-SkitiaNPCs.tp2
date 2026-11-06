@@ -25,6 +25,11 @@ LANGUAGE ~English~
          ~English~
          ~%MOD_FOLDER%/Tra/English/setup.tra~
 
+LANGUAGE ~Schinese~
+         ~schinese~
+         ~%MOD_FOLDER%/Tra/schinese/setup.tra~
+
+
 BEGIN @995 
 
 
