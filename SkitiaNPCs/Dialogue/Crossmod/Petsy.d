@@ -53,7 +53,7 @@ DO ~SetGlobal("X3EmiPetsy","GLOBAL",3)~
 == BX3Emi @25
 == L3PetsyB @26
 == BX3Emi @27
-== L3Petsy @28
+== L3PetsyB @28
 == BX3Emi @29
 EXIT 
 
@@ -231,7 +231,7 @@ DO ~SetGlobal("X3KalPetsy","GLOBAL",2)~
 == BX3Kal @100
 == L3PetsyB @101
 == BX3Kal @102
-== L3Petsy @103
+== L3PetsyB @103
 == BX3Kal @104
 EXIT 
 //Petsy-Kale #3
